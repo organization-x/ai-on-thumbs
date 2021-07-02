@@ -121,8 +121,14 @@ const LessonData = [
   {
     key: '15',
     title: "Add Rectangles Around Faces",
-    description: `We want to draw rectangles around the faces. The following code is exactly how it looks like. (x,y,w,h) is a pair where x and y are the coordinates of the top left corner of the rectangles for each face and w and h are the height and width. For each pair in the sequence of identified faces, use the cv2.rectangle function to draw a rectangle around it. The cv2.rectangle function takes the picture, the x and y coordinates of the top left corner and bottom left corner, the RGB color, and thickness of rectangle border.`
+    description: `We want to draw rectangles around the faces. The following code is exactly how it looks like. (x,y,w,h) is a pair where x and y are the coordinates of the top left corner of the rectangles for each face and w and h are the height and width. For each pair in the sequence of identified faces, use the cv2.rectangle function to draw a rectangle around it. The cv2.rectangle function takes the picture, the x and y coordinates of the top left corner and bottom left corner, the RGB color, and thickness of rectangle border.`,
     code: `# Draw a rectangle around the faces\nfor (x, y, w, h) in faces:\ncv2.rectangle(picture, (x, y), (x+w, y+h), (0, 255, 0), 2)`
+  },
+  {
+    key: '16',
+    title: "Show the Image",
+    description: `Finally, the function cv2_imshow is used to display the picture to the screen including the rectangles drawn`,
+    code: `#show the image with the rectangle drawn around it\ncv2_imshow(picture)`
   },
 ];
 export default function Lessons({navigation}) {
