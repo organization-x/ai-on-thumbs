@@ -42,61 +42,61 @@ const LessonData = [
     key: '3',
     title: 'What is a library/Dependency? ',
     description:'You can think of a library as a bunch of external functions you can get and then use without programming them yourself. \n A function is just a series of code with a specific purpose that runs when you call it. Functions often have parameters, or inputs, that you pass into the function. For example, you pass the text you want to print out into your printer. \n To get these functions, you need to use an **import** statement to import, or get, these functions from an external source or folder. \n For example, if there is a library called tree that has a bunch of functions for growing trees, such as water plant and give soil, then you can get these functions by importing the library.',
-    image: require("../assets/01_01.png"),
+    image: require("../assets/01_03.png"),
   },
   {
     key: '4',
     title: 'Dependencies',
     description:'First we will import the dependencies, or libraries, necessary for this project. The dependencies are OpenCV for the face detector, skimage for reading an image from a url, and cv2_imshow for displaying the image in this notebook.',
     code: "#import dependencies \n import cv2 \n from skimage import io \n from google.colab.patches import cv2_imshow",
-    image: require("../assets/01_01.png"),
+    image: require("../assets/01_04.png"),
   },
   {
     key: '5',
     title: "What is a Variable?",
     description: "A variable is a box in which you can store different values. For example, you can store text, numbers, or even sequences of numbers/text in a variable. To assign a value to a variable, you use the single equal sign, or '='",
-    image: require("../assets/01_01.png"),
+    image: require("../assets/01_05.png"),
   },
   {
     key: '6',
     title: "Getting the Classifier and Image URL",
     description: "Here we will get the face detector, or CascadeClassifier object from the OpenCV library and store it in the faceCascade variable. \n An object is a little bit like a variable but has its own attributes and functions. For example, lets say we have a dog object. That dog has attributes, for example its color and breed, and functions like barking and sitting. The CascadeClassifier has important functions we will use later like detecting faces!",
-    image: require("../assets/01_01.png"),
+    image: require("../assets/01_08.jpg"),
   },
   {
     key: '7',
     title: "Getting the Classifier and Image URL",
     description: "Here we will get the face detector, or CascadeClassifier object from the OpenCV library and store it in the faceCascade variable. \n An object is a little bit like a variable but has its own attributes and functions. For example, lets say we have a dog object. That dog has attributes, for example its color and breed, and functions like barking and sitting. The CascadeClassifier has important functions we will use later like detecting faces!",
     code: "#get the cascade classifier from the cv2 filepath\nfaceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')",
-    image: require("../assets/01_01.png"),
+    image: require("../assets/01_07.png"),
   },
   {
     key: '8',
     title: "Getting the Classifier",
     description: "Here we will get the face detector, or CascadeClassifier object from the OpenCV library and store it in the faceCascade variable. \n An object is a little bit like a variable but has its own attributes and functions. For example, lets say we have a dog object. That dog has attributes, for example its color and breed, and functions like barking and sitting. The CascadeClassifier has important functions we will use later like detecting faces!",
     code: "#get the cascade classifier from the cv2 filepath\nfaceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')",
-    image: require("../assets/01_01.png")
+    image: require("../assets/01_08.jpg")
   },
   {
     key: '9',
     title: "Getting the Image URL",
     description: "We then put the image address/url of the image in a variable called url. The example url below is an image of a group of four people. If you want, you can also upload a picture of yourself to google colab and put the filepath instead of the url to run facial detection on images from your own computer.",
     code: "#url of the image\nurl = 'https://image.shutterstock.com/image-photo/young-successful-team-four-business-260nw-289449125.jpg'",
-    image: require("../assets/01_01.png")
+    image: require("../assets/01_09.png")
   },
   {
     key: '10',
     title: "Converting to OpenCV format",
     description: "However, we need to convert it to OpenCV format because we are using the OpenCV classifier. The io image comes in RGB color format and we convert it to BGR as that is the default for opencv. We use the cvtColor function to do this and pass in the parameters of the picture we want to convert and the new format",
     code: "#turn the image to cv2 BGR format \n picture = cv2.cvtColor(picture, cv2.COLOR_RGB2BGR)",
-    image: require("../assets/01_01.png")
+    image: require("../assets/01_10.jpg")
   },
   {
     key: '11',
     title: "Converting to Grayscale",
     description: "We also need to convert the image to grayscale, as the OpenCV model only works on grayscale faces. We use the same function as before to do this, except we use the format BGR2GRAY to convert the BGR format to grayscale.",
     code: "#convert picture to grayscale \n gray = cv2.cvtColor(picture, cv2.COLOR_BGR2GRAY)",
-    image: require("../assets/01_01.png")
+    image: require("../assets/01_11.jpg")
   },
   {
     key: '12',
@@ -106,7 +106,7 @@ const LessonData = [
     minNeighbors is one of the most important parameters in the model. Remember, the image is first split into many small sections before classification. If minNeighbors is 5, there must be 5 other parts, or sections, of a face around a certain section if that section can be classified as part of a face (because usually one part of the face is surrounded by other parts). If you make minNeighbors larger, than the model will be much more sure about the faces it detects but it might miss some faces. If you make this smaller, the model will detect more faces but it will also make more mistakes. \n
     minSize is the minimum size a face must be in order for it to be viable for detection.`,
     code: "# Detect faces in the image\nfaces = faceCascade.detectMultiScale(\ngray,\nscaleFactor=1.1,\nminNeighbors=5,\nminSize=(30, 30),\nflags = cv2.CASCADE_SCALE_IMAGE\n)",
-    image: require("../assets/01_01.png"),
+    image: require("../assets/01_05.png"),
   },
   {
     key: '13',
@@ -116,7 +116,7 @@ const LessonData = [
     minNeighbors is one of the most important parameters in the model. Remember, the image is first split into many small sections before classification. If minNeighbors is 5, there must be 5 other parts, or sections, of a face around a certain section if that section can be classified as part of a face (because usually one part of the face is surrounded by other parts). If you make minNeighbors larger, than the model will be much more sure about the faces it detects but it might miss some faces. If you make this smaller, the model will detect more faces but it will also make more mistakes. \n
     minSize is the minimum size a face must be in order for it to be viable for detection.`,
     code: "# Detect faces in the image\n faces = faceCascade.detectMultiScale(\ngray,\nscaleFactor=1.1,\nminNeighbors=5,\nminSize=(30, 30),\nflags = cv2.CASCADE_SCALE_IMAGE\n)",
-    image: require("../assets/01_01.png")
+    image: require("../assets/01_07.png")
   },
   {
     key: '14',
@@ -127,7 +127,7 @@ const LessonData = [
     
     We then use string formatting to print out len(faces) along with the text. String formatting starts with a "f" character at the beginning of the string and places whatever variables you want to print out in curly braces.`,
     code: `#print the number of faces found\nprint(f"Found {len(faces)} faces!")`,
-    image: require("../assets/01_01.png")
+    image: require("../assets/01_09.png")
   },
   {
     key: '15',
@@ -141,7 +141,7 @@ const LessonData = [
     title: "Show the Image",
     description: `Finally, the function cv2_imshow is used to display the picture to the screen including the rectangles drawn`,
     code: `#show the image with the rectangle drawn around it\ncv2_imshow(picture)`,
-    image: require("../assets/01_01.png")
+    image: require("../assets/01_04.png")
   },
 ];
 export default function Lessons({navigation}) {
@@ -164,10 +164,11 @@ export default function Lessons({navigation}) {
       navigation.navigate("Try")
     }
     else{
+      explosion.current.start()
       flatListRef.current.scrollToIndex({animated: true, index: index+1});
       setIndex(prev=>prev+1)
     }
-    //explosion.current.start()
+    
   }
   const renderItem = React.useCallback(
     ({ item }) => {
@@ -178,7 +179,7 @@ export default function Lessons({navigation}) {
             <InfoCard item={item}/>
             <TextInput label="Code" mode="outlined" multiline selectionColor="black"
             theme={{ colors: { primary: 'black'}}}
-            underlineColor="transparent" autoCapitalize={"none"} style={{height:100, width:"90%"}} />
+            underlineColor="transparent" autoCapitalize={"none"} style={{height:80, width:"90%"}} />
         </View>
       );
     },
@@ -227,14 +228,14 @@ export default function Lessons({navigation}) {
         </View>
       </View>
       <ActionButton title={"Continue"} onPress={()=>handleScroll()}/>
-      {/* <ConfettiCannon
+      <ConfettiCannon
         count={100}
         origin={{x: 200, y: 0}}
         autoStart={false}
         ref={ref => (explosion.current = ref)}
         fallSpeed={2000}
         fadeOut
-      /> */}
+      />
       {/*  */}
     </Background>
   );
