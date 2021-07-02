@@ -6,7 +6,7 @@ export default function ActionButton({ title, icon, style, ...props }) {
   return (
     <TouchableOpacity activeOpacity={0.5} style={[styles.button, style]}
       {...props}>
-        {icon?icon:null}<Text style={styles.text}>{title}</Text>
+        <Text style={styles.text}>{title}</Text>{icon?icon:null}
       </TouchableOpacity>
   )
 }
@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     width:"95%",
     paddingVertical:25,
     borderRadius:20,
+    flexDirection:'row',
     shadowOffset: {
         width: 0,
         height: 4
