@@ -10,7 +10,8 @@ import { Camera } from 'expo-camera';
 import Toast from '../components/Toast';
 import * as FileSystem from 'expo-file-system';
 const axios = require('axios')
-
+import * as MediaLibrary from 'expo-media-library';
+import * as Permissions from 'expo-permissions';
 
 export default function Try({navigation}) {
   const [hasPermission, setHasPermission] = useState(null);
@@ -21,7 +22,6 @@ export default function Try({navigation}) {
   const [imageBase64, setImageBase64] = useState(null);
   const camera = useRef(null)
   const [loading, setLoading] = useState(true);
-  
   useEffect(() => {
         (async () => {
         const { status } = await Camera.requestPermissionsAsync();
@@ -38,9 +38,12 @@ export default function Try({navigation}) {
                     "base_64":base64
                   })
                   .then(function (response) {
-                    console.log(JSON.parse(response.config.data).base_64);
-                    setImageBase64(JSON.parse(response.config.data).base_64)
-                    setLoading(false)
+                        //console.log(response)
+                        const base_64 = JSON.parse(response.config.data).base_64
+                        //console.log(base64);
+                        setImageBase64(base_64)
+                        console.log(base_64)
+                        setLoading(false)
                   })
             }
         })();
@@ -73,12 +76,10 @@ export default function Try({navigation}) {
         <Header style= {[styles.left_align]}>Try it out!</Header>
         <FootPrint style={styles.left_align}>Use your own product in real life!</FootPrint>
         <ActionButton style={{marginTop:20}} onPress={()=>hasPermission?openCamera():setToast({ type: 'error', message: "Go to settings to enable the camera."})} title="Open Camera" icon={<AntDesign name="camera" style={{marginLeft:5}} size={30} color="black" />}/>
-        {capturedImage?
+        <FootPrint style={{marginTop:10}}>{loading?"Result is loading.":"Result is complete."}</FootPrint>
+        {imageBase64?
         <View style={styles.imageContainer}>
-            <FootPrint>{loading?"Result is loading.":"Result is complete."}</FootPrint>
-            <Image
-          style={{width: 300, height: 400, marginTop:10}}
-          source={{uri: imageBase64?`data:image/jpeg;base64,${imageBase64}`:capturedImage.uri}}/>
+            <Image style={{width: 300, height: 400, marginTop:10}} source={{uri: `data:image/png;base64,${imageBase64}`}}/>
         </View>:null}
         <View style={styles.buttonView}>
             <ActionButton onPress={()=>navigation.navigate("Ad")} title="Done"/>

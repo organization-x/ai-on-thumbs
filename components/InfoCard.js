@@ -21,12 +21,12 @@ const styles = StyleSheet.create({
         backgroundColor: "#55CE8C",
         marginTop: 10,
         marginBottom: 30,
-        
+        paddingBottom:300,
         borderRadius:10,
         paddingVertical:20,
         paddingHorizontal:40,
         marginHorizontal:10,
-        maxHeight:"40%"
+        maxHeight:"40%" 
     },
     title:{
         color:"black",

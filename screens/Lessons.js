@@ -8,6 +8,8 @@ import {
   FlatList,
   Image,
   useWindowDimensions,
+  KeyboardAvoidingView,
+  ScrollView,
 } from 'react-native';
 import {
   ScalingDot,
@@ -152,9 +154,9 @@ export default function Lessons({navigation}) {
     }
     else{
       flatListRef.current.scrollToIndex({animated: true, index: index+1});
-      setIndex(prev=>prev+1)
+      explosion.current.start();
+      setIndex(prev=>prev+1);
     }
-    //explosion.current.start()
   }
   const renderItem = React.useCallback(
     ({ item }) => {
@@ -174,25 +176,25 @@ export default function Lessons({navigation}) {
   const keyExtractor = React.useCallback((item) => item.key, []);
   return (
     <Background>
-      <FlatList
-        ref={flatListRef}
-        data={LessonData}
-        keyExtractor={keyExtractor}
-        scrollEnabled={true}
-        showsHorizontalScrollIndicator={false}
-        onScroll={Animated.event(
-          [{ nativeEvent: { contentOffset: { x: scrollX } } }],
-          {
-            useNativeDriver: false,
-          }
-        )}
-        style={{height:"100%"}}
-        pagingEnabled
-        horizontal
-        decelerationRate={'normal'}
-        scrollEventThrottle={16}
-        renderItem={renderItem}
-      />
+        <FlatList
+          ref={flatListRef}
+          data={LessonData}
+          keyExtractor={keyExtractor}
+          scrollEnabled={true}
+          showsHorizontalScrollIndicator={false}
+          onScroll={Animated.event(
+            [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+            {
+              useNativeDriver: false,
+            }
+          )}
+          style={{height:"100%"}}
+          pagingEnabled
+          horizontal
+          decelerationRate={'normal'}
+          scrollEventThrottle={16}
+          renderItem={renderItem}
+        />
       <View style={styles.text}>
         <View style={styles.dotContainer}>
           <ExpandingDot
@@ -214,15 +216,14 @@ export default function Lessons({navigation}) {
         </View>
       </View>
       <ActionButton title={"Continue"} onPress={()=>handleScroll()}/>
-      {/* <ConfettiCannon
+      <ConfettiCannon
         count={100}
         origin={{x: 200, y: 0}}
         autoStart={false}
         ref={ref => (explosion.current = ref)}
         fallSpeed={2000}
         fadeOut
-      /> */}
-      {/*  */}
+      />
     </Background>
   );
 };
