@@ -1,17 +1,17 @@
 import React from 'react'
-import { Text, StyleSheet, View } from 'react-native'
+import { Text, StyleSheet, ScrollView } from 'react-native'
 import FootPrint from "../components/FootPrint.js"
 
 export default function InfoCard({item}){
     return (
-        <View style={styles.infoBox}>
+        <ScrollView style={styles.infoBox} contentContainerStyle={{justifyContent: "center",}}>
             <FootPrint style={styles.title}>
                 {item.title}
             </FootPrint>
             <FootPrint style={styles.description}>
                 {item.description}
             </FootPrint>
-        </View>
+        </ScrollView>
     )
 }
 
@@ -21,11 +21,12 @@ const styles = StyleSheet.create({
         backgroundColor: "#55CE8C",
         marginTop: 10,
         marginBottom: 30,
-        justifyContent: "center",
+        
         borderRadius:10,
         paddingVertical:20,
         paddingHorizontal:40,
-        marginHorizontal:10
+        marginHorizontal:10,
+        maxHeight:"40%"
     },
     title:{
         color:"black",

@@ -32,8 +32,6 @@ const styles = StyleSheet.create({
       marginVertical: 50,
     },
     buttonView:{
-        flex:1,
-        width:"100%",
         justifyContent:"center",
         alignItems:"flex-end",
         flexDirection:'row',

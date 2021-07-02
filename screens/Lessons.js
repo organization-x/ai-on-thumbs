@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useCallback } from 'react';
 import {
   StyleSheet,
   View,
@@ -18,8 +19,10 @@ import ActionButton from '../components/ActionButton';
 import Background from '../components/Background';
 import InfoCard from '../components/InfoCard'
 import Header from "../components/Header"
+import { TextInput } from 'react-native-paper';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import IDE from '../components/Ide';
+import FootPrint from '../components/FootPrint';
 const LessonData = [
   {
     key: '1',
@@ -39,7 +42,6 @@ const LessonData = [
     key: '3',
     title: 'What is a library/Dependency? ',
     description:'You can think of a library as a bunch of external functions you can get and then use without programming them yourself. \n A function is just a series of code with a specific purpose that runs when you call it. Functions often have parameters, or inputs, that you pass into the function. For example, you pass the text you want to print out into your printer. \n To get these functions, you need to use an **import** statement to import, or get, these functions from an external source or folder. \n For example, if there is a library called tree that has a bunch of functions for growing trees, such as water plant and give soil, then you can get these functions by importing the library.',
-    image: require("../assets/01_03.png")
     
   },
   {
@@ -108,33 +110,56 @@ const LessonData = [
   },
   {
     key: '14',
-    title: "Display the Results",
-    description: `We execute the detectMultiScale method (a function of the faceCascade object we created before) to detect the faces. \n The first input is the grayscale image we want to use for detection.
-    scaleFactor is used if the image is too large and we make it smaller by a factor of 1.1 as the face detector can only detect faces in a certain range of sizes.\n
-    minNeighbors is one of the most important parameters in the model. Remember, the image is first split into many small sections before classification. If minNeighbors is 5, there must be 5 other parts, or sections, of a face around a certain section if that section can be classified as part of a face (because usually one part of the face is surrounded by other parts). If you make minNeighbors larger, than the model will be much more sure about the faces it detects but it might miss some faces. If you make this smaller, the model will detect more faces but it will also make more mistakes. \n
-    minSize is the minimum size a face must be in order for it to be viable for detection.`,
-    code: "# Detect faces in the image\n faces = faceCascade.detectMultiScale(\ngray,\nscaleFactor=1.1,\nminNeighbors=5,\nminSize=(30, 30),\nflags = cv2.CASCADE_SCALE_IMAGE\n)"
+    title: "Display Number of Faces Found",
+    description: `The display will first output the length of the list of faces, or the number of faces, to the user. This uses python's built in "print" function that can output text or variables. \n\n
+
+    To find the length of a sequence, we use the len() function passing in the parameter of faces, which is the sequence we want to find the length of.\n\n
+    
+    We then use string formatting to print out len(faces) along with the text. String formatting starts with a "f" character at the beginning of the string and places whatever variables you want to print out in curly braces.`,
+    code: `#print the number of faces found\nprint(f"Found {len(faces)} faces!")`
+  },
+  {
+    key: '15',
+    title: "Add Rectangles Around Faces",
+    description: `We want to draw rectangles around the faces. The following code is exactly how it looks like. (x,y,w,h) is a pair where x and y are the coordinates of the top left corner of the rectangles for each face and w and h are the height and width. For each pair in the sequence of identified faces, use the cv2.rectangle function to draw a rectangle around it. The cv2.rectangle function takes the picture, the x and y coordinates of the top left corner and bottom left corner, the RGB color, and thickness of rectangle border.`
+    code: `# Draw a rectangle around the faces\nfor (x, y, w, h) in faces:\ncv2.rectangle(picture, (x, y), (x+w, y+h), (0, 255, 0), 2)`
   },
 ];
-const Lessons = () => {
+export default function Lessons({navigation}) {
   const flatListRef = React.useRef()
   const explosion = React.useRef()
   const { width } = useWindowDimensions();
-  const [index, setIndex] = React.useState(1)
+  const [index, setIndex] = React.useState(0)
+  const [codeString, setCodeString] = React.useState(()=>{
+    let array = []
+    for (let index = 0; index < LessonData.length; index++) {
+      array.push("")
+    }
+    return array
+  })
   const scrollX = React.useRef(new Animated.Value(0)).current;
   function handleScroll(){
     console.log(index)
-    flatListRef.current.scrollToOffset({ animated: true, offset: width*index })
-    if(index<LessonData.length){setIndex(prev=>prev+1)}
+    //check that result is good
+    if(index+1>LessonData.length-1){
+      navigation.navigate("Try")
+    }
+    else{
+      flatListRef.current.scrollToIndex({animated: true, index: index+1});
+      setIndex(prev=>prev+1)
+    }
     //explosion.current.start()
   }
   const renderItem = React.useCallback(
     ({ item }) => {
       return (
         <View style={[styles.itemContainer, { width: width }]}>
-            <Header>Course {index}</Header>
+            <FootPrint style={{color:"black", }}>Lesson {item.key}</FootPrint>
             {item.image?<Image resizeMode="cover" source={item.image} style={styles.image}/>:null}
-          <InfoCard item={item}/>
+            <InfoCard item={item}/>
+            <TextInput label="Code" mode="outlined" multiline selectionColor="black"
+            theme={{ colors: { primary: 'black'}}}
+            underlineColor="transparent" autoCapitalize={"none"} style={{height:100, width:"90%"}} />
         </View>
       );
     },
@@ -143,10 +168,11 @@ const Lessons = () => {
   const keyExtractor = React.useCallback((item) => item.key, []);
   return (
     <Background>
-      {/* <FlatList
+      <FlatList
         ref={flatListRef}
         data={LessonData}
         keyExtractor={keyExtractor}
+        scrollEnabled={true}
         showsHorizontalScrollIndicator={false}
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { x: scrollX } } }],
@@ -160,8 +186,7 @@ const Lessons = () => {
         decelerationRate={'normal'}
         scrollEventThrottle={16}
         renderItem={renderItem}
-      /> */}
-      <IDE text="Hello"/>
+      />
       <View style={styles.text}>
         <View style={styles.dotContainer}>
           <ExpandingDot
@@ -191,6 +216,7 @@ const Lessons = () => {
         fallSpeed={2000}
         fadeOut
       /> */}
+      {/*  */}
     </Background>
   );
 };
@@ -217,5 +243,3 @@ const styles = StyleSheet.create({
       borderRadius:10
   }
 });
-
-export default Lessons;
