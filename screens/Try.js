@@ -8,7 +8,10 @@ import ActionButton from "../components/ActionButton";
 import { AntDesign } from '@expo/vector-icons';
 import { Camera } from 'expo-camera';
 import Toast from '../components/Toast';
- 
+import * as FileSystem from 'expo-file-system';
+const axios = require('axios')
+
+
 export default function Try({navigation}) {
   const [hasPermission, setHasPermission] = useState(null);
   const [type, setType] = useState(Camera.Constants.Type.back);
@@ -18,6 +21,7 @@ export default function Try({navigation}) {
   const [imageBase64, setImageBase64] = useState(null);
   const camera = useRef(null)
   const [loading, setLoading] = useState(true);
+  
   useEffect(() => {
         (async () => {
         const { status } = await Camera.requestPermissionsAsync();
@@ -25,6 +29,22 @@ export default function Try({navigation}) {
         
         })();
     }, []);
+    useEffect(() => {
+        (async () => {
+            setLoading(true)
+            if(capturedImage && capturedImage.uri){
+                const base64 = await FileSystem.readAsStringAsync(capturedImage.uri, { encoding: 'base64' });
+                axios.post('http://python-detect-faces.herokuapp.com/image', {
+                    "base_64":base64
+                  })
+                  .then(function (response) {
+                    console.log(JSON.parse(response.config.data).base_64);
+                    setImageBase64(JSON.parse(response.config.data).base_64)
+                    setLoading(false)
+                  })
+            }
+        })();
+    }, [capturedImage]);
 
     if (hasPermission === null) {
         return <Background style={{justifyContent:"center"}}><ActivityIndicator size={100}/></Background>;
@@ -35,7 +55,6 @@ export default function Try({navigation}) {
     async function takePhoto(){
             if (!camera.current) return
             const photo = await camera.current.takePictureAsync();
-            console.log(photo);
             setCapturedImage(photo);
             setStartCamera(false);
     }
@@ -59,7 +78,7 @@ export default function Try({navigation}) {
             <FootPrint>{loading?"Result is loading.":"Result is complete."}</FootPrint>
             <Image
           style={{width: 300, height: 400, marginTop:10}}
-          source={{uri: capturedImage.uri}}/>
+          source={{uri: imageBase64?`data:image/jpeg;base64,${imageBase64}`:capturedImage.uri}}/>
         </View>:null}
         <View style={styles.buttonView}>
             <ActionButton onPress={()=>navigation.navigate("Ad")} title="Done"/>
@@ -88,6 +107,6 @@ const styles = StyleSheet.create({
         margin:30,
         flex:1,
         width:'100%',
-        alignItems:"center"
+        alignItems:"center",
     }
 });
