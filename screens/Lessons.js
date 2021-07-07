@@ -23,6 +23,7 @@ import { TextInput } from 'react-native-paper';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import IDE from '../components/Ide';
 import FootPrint from '../components/FootPrint';
+import Toast from '../components/Toast';
 const LessonData = [
   {
     key: '1',
@@ -145,8 +146,9 @@ const LessonData = [
   },
 ];
 export default function Lessons({navigation}) {
-  const flatListRef = React.useRef()
-  const explosion = React.useRef()
+  const flatListRef = React.useRef();
+  const explosion = React.useRef();
+  const [toast, setToast] = React.useState({ value: '', type: '' });
   const { width } = useWindowDimensions();
   const [index, setIndex] = React.useState(0)
   const [codeString, setCodeString] = React.useState(()=>{
@@ -164,12 +166,14 @@ export default function Lessons({navigation}) {
       navigation.navigate("Try")
     }
     else{
-      explosion.current.start()
+      //explosion.current.start()
+      setToast({ type: 'error', message: "Wrong answer. Please try again."})
       flatListRef.current.scrollToIndex({animated: true, index: index+1});
       setIndex(prev=>prev+1)
     }
     
   }
+    
   const renderItem = React.useCallback(
     ({ item }) => {
       return (
@@ -194,6 +198,9 @@ export default function Lessons({navigation}) {
         keyExtractor={keyExtractor}
         scrollEnabled={true}
         showsHorizontalScrollIndicator={false}
+        getItemLayout={(data, index) => (
+          {length: width, offset: width * index, index}
+        )}
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { x: scrollX } } }],
           {
@@ -228,15 +235,15 @@ export default function Lessons({navigation}) {
         </View>
       </View>
       <ActionButton title={"Continue"} onPress={()=>handleScroll()}/>
-      <ConfettiCannon
-        count={100}
-        origin={{x: 200, y: 0}}
-        autoStart={false}
-        ref={ref => (explosion.current = ref)}
-        fallSpeed={2000}
-        fadeOut
-      />
-      {/*  */}
+    {/* <ConfettiCannon
+      count={100}
+      origin={{x: 200, y: 0}}
+      autoStart={false}
+      ref={ref => (explosion.current = ref)}
+      fallSpeed={2000}
+      fadeOut
+    /> */}
+    <Toast {...toast} onDismiss={() => setToast({ value: '', type: toast.type })} />
     </Background>
   );
 };
