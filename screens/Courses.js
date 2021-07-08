@@ -19,8 +19,11 @@ export default function Courses({navigation}) {
         <FootPrint style= {styles.left_align}>No Experience Required</FootPrint>
         <FlatList
           data={DATA}
-          renderItem={(item)=><CourseCard item={item.item} onPress={()=>navigation.navigate("Lessons")}/>}
+          renderItem={(item)=><CourseCard item={item.item} onPress={()=>navigation.navigate("Lessons", {
+            courseId:item.item.id
+          })}/>}
           keyExtractor={item => item.id}
+
         />
     </Background>
   );

@@ -9,7 +9,7 @@ export default function Toast({ type = 'error', message, onDismiss }) {
     <View style={styles.container}>
       <Snackbar
         visible={message}
-        duration={4000}
+        duration={2000}
         onDismiss={onDismiss}
         style={{
           backgroundColor:

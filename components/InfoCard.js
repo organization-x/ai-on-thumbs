@@ -20,13 +20,12 @@ const styles = StyleSheet.create({
         borderRadius: 4,
         backgroundColor: "#55CE8C",
         marginTop: 10,
-        marginBottom: 30,
-        paddingBottom:300,
+        marginBottom: 10,
         borderRadius:10,
         paddingVertical:20,
         paddingHorizontal:40,
         marginHorizontal:10,
-        maxHeight:"40%" 
+        maxHeight:"30%" 
     },
     title:{
         color:"black",

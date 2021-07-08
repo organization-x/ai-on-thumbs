@@ -8,6 +8,7 @@ import Courses from "./screens/Courses"
 import Lessons from "./screens/Lessons"
 import Try from "./screens/Try"
 import Ad from "./screens/Ad"
+
 const Stack = createStackNavigator()
 export default function App() {
   return (
