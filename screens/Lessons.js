@@ -25,6 +25,7 @@ import ConfettiCannon from 'react-native-confetti-cannon';
 import IDE from '../components/Ide';
 import FootPrint from '../components/FootPrint';
 import Toast from '../components/Toast';
+import ProgressCircle from 'react-native-progress-circle';
 const LessonData = [
   {
     key: '1',
@@ -32,8 +33,17 @@ const LessonData = [
     description:'In just a couple, simple lines of code you will be able to build your very own face detector where you can input a image url and the face detector will draw boxes around the faces before displaying the results of AI face detection.',
     image: require("../assets/01_01.png"),
     question: 'How does a for loop start?',
-    multipleChoice: {'one':'sheee', 'two':'while', 'three':'herd', 'four':'A display of the image with only faces and everything else cropped out'},
-    correctAnswer: 'sheee',
+    multipleChoice: {'one':'a', 'two':'while', 'three':'herd', 'four':'A display of the image with only faces and everything else cropped out'},
+    correctAnswer: 'while',
+  },
+  {
+    key: '2',
+    title: "Let's Build An AI Face Detector! 🤖",
+    description:'In just a couple, simple lines of code you will be able to build your very own face detector where you can input a image url and the face detector will draw boxes around the faces before displaying the results of AI face detection.',
+    image: require("../assets/01_01.png"),
+    question: 'How does a for loop start?',
+    multipleChoice: {'one':'a', 'two':'while', 'three':'herd', 'four':'A display of the image with only faces and everything else cropped out'},
+    correctAnswer: 'while',
   },
 ];
 export default function Lessons({route, navigation}) {
@@ -50,16 +60,18 @@ export default function Lessons({route, navigation}) {
     if(advance){
       //check that result is good
       explosion.current.start()
-      if(index+1>LessonData.length-1){
-        navigation.navigate("Try")
-      }
-      else{
-        flatListRef.current.scrollToIndex({animated: true, index: index+1});
-        setIndex(prev=>prev+1)
-      }
     }
     else{
         setToast({ type: 'error', message: "Wrong answer. Please try again."})
+    }
+  }
+  function moveToNextLesson(){
+    if(index+1>LessonData.length-1){
+      navigation.navigate("Try")
+    }
+    else{
+      flatListRef.current.scrollToIndex({animated: true, index: index+1});
+      setIndex(prev=>prev+1)
     }
   }
     
@@ -67,7 +79,17 @@ export default function Lessons({route, navigation}) {
     ({ item }) => {
       return (
         <View style={[styles.itemContainer, { width: width }]}>
-            <Header>Lesson {item.key}</Header>
+            <View style={{position:"absolute", top:0, zIndex:2, right:3.5}}>
+              <ProgressCircle
+                percent={parseInt(item.key)/LessonData.length*100}
+                radius={40}
+                borderWidth={6}
+                color="#98D7B4"
+                shadowColor="#999"
+                bgColor="#fff">
+                  <Header style={{fontSize:30}}>{item.key}</Header>
+            </ProgressCircle>
+          </View>
             {item.image?<Image resizeMode="cover" source={item.image} style={styles.image}/>:null}
             <InfoCard item={item}/>
             <MultipleChoice item={item} setAdvance={setAdvance} handleScroll={handleScroll}/>
@@ -94,7 +116,7 @@ export default function Lessons({route, navigation}) {
             useNativeDriver: false,
           }
         )}
-        style={{height:"100%", backgroundColor:"green"}}
+        style={{flex:1}}
         pagingEnabled
         horizontal
         decelerationRate={'normal'}
@@ -104,28 +126,14 @@ export default function Lessons({route, navigation}) {
       
       <ConfettiCannon
       count={100}
-      origin={{x: 200, y: 0}}
+      origin={{x: 200, y: -100}}
       autoStart={false}
       ref={ref => (explosion.current = ref)}
-      fallSpeed={2000}
-      fadeOut
-    />
+      fallSpeed={1000}
+      fadeOut onAnimationEnd={()=>moveToNextLesson()}
+      />
     <Toast {...toast} onDismiss={() => setToast({ value: '', type: toast.type })} />
-          <ExpandingDot
-            data={LessonData}
-            expandingDotWidth={30}
-            scrollX={scrollX}
-            inActiveDotColor={'#55CE8C'}
-            activeDotColor={'#1FBD67'}
-            inActiveDotOpacity={0.5}
-            dotStyle={{
-              width: 10,
-              height: 10,
-              borderRadius: 5,
-              marginHorizontal: 3,
-
-            }}
-          />
+          
     </Background>
   );
 };
@@ -142,13 +150,13 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     borderRadius: 20,
-    flex:1
+    flex:6
   },
   image:{
-      width:400,
-      height:200,
+      flex:1,
+      width: '92%',
       borderWidth:5,
       borderRadius:10,
       margin: 10,
-  }
+  },
 });

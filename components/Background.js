@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyleSheet, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView, Platform } from 'react-native';
+import { getStatusBarHeight } from 'react-native-status-bar-height'
 export default function Background({children, style}) {
     return (
         <SafeAreaView style={[styles.background, style]}>
@@ -13,6 +14,7 @@ const styles = StyleSheet.create({
       flex: 1,
       width: '100%',
       backgroundColor: "#F3F3F3",
-      alignItems:"center"
+      alignItems:"center",
+      marginTop: Platform.OS === "android" ? getStatusBarHeight() : 0,
     },
 })

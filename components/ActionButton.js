@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     width:"95%",
     paddingVertical:25,
     borderRadius:20,
+    marginBottom:10,
     flexDirection:'row',
     shadowOffset: {
         width: 0,

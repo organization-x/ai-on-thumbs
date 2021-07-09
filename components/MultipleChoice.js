@@ -12,7 +12,9 @@ export default function MultipleChoice({ item, handleScroll }) {
     }
     return (
         <View style={styles.overall}>
-            <Text style={styles.text}>{item.question}</Text>
+            <View style={{ flex:.8, flexDirection:"row", alignItems:"center", justifyContent:'center' }}>
+                <Text style={styles.text}>{item.question}</Text>
+            </View>
             <View style={styles.container}>
                 <View style={styles.column}>
                     <Choice title={item.multipleChoice.one} onPress={() => {checkAdvance(item.correctAnswer, item.multipleChoice.one)}} />
@@ -30,20 +32,19 @@ export default function MultipleChoice({ item, handleScroll }) {
 
 const styles = StyleSheet.create({
     text:{
-        fontSize:30,
-        fontWeight: 'bold',
-        alignSelf:"center"
+        fontSize:25,
+        fontWeight: '600',
+        textAlign:"center",
+        flex:1,
     },
     container:{
         flexDirection:'row',
-        flex:1,
-        justifyContent:"center"
+        justifyContent:"center",
+        flex:4,
+        alignItems:"center",
     },
     overall:{
-        justifyContent:"flex-end",
-        maxWidth:"100%",
+        borderRadius:10,
         flex:1,
-        backgroundColor:"red",
-        borderRadius:10
-    }
+    },
   });

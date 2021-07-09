@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 18,
     color: "#6F6F6F",
-    fontWeight:"500"
+    fontWeight:"500",
+    marginBottom:10,
   },
 })
