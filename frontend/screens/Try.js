@@ -104,7 +104,7 @@ export default function Try({navigation}) {
     <Background>
         <Header style= {[styles.left_align]}>Try it out!</Header>
         <FootPrint style={styles.left_align}>Use your own product in real life!</FootPrint>
-        <ActionButton onPress={()=>hasPermission?openCamera():setToast({ type: 'error', message: "Go to settings to enable the camera."})} title="Open Camera" icon={<AntDesign name="camera" style={{marginLeft:5}} size={30} color="black" />}/>
+        <ActionButton onPress={Analytics.record('User Tried Product'),()=>hasPermission?openCamera():setToast({ type: 'error', message: "Go to settings to enable the camera."})} title="Open Camera" icon={<AntDesign name="camera" style={{marginLeft:5}} size={30} color="black" />}/>
          {loading?<ActivityIndicator size="large" color='#409C69' style={{marginTop:"50%"}}/>:imageBase64?
          <View style={styles.imageContainer}>
             <Image style={{width: 300, height: 400, marginTop:10}} source={{uri: `data:image/png;base64,${imageBase64}`}}/>

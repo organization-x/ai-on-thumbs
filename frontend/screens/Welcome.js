@@ -12,7 +12,7 @@ export default function Welcome({navigation}) {
         <Header style= {[styles.left_align]}>Learn AI {"\n"}with Your Thumbs</Header>
         <FootPrint style={styles.left_align}>Built by Teenagers for Teenagers</FootPrint>
         <View style={styles.buttonView}>
-            <ActionButton onPress={()=>navigation.navigate("Courses")} title="Start learning AI"/>
+            <ActionButton onPress={()=>navigation.navigate("Courses"), Analytics.record('User passed Welcome Screen')} title="Start learning AI"/>
         </View>
     </Background>
   );

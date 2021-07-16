@@ -8,9 +8,16 @@ import Courses from "./screens/Courses"
 import Lessons from "./screens/Lessons"
 import Try from "./screens/Try"
 import Ad from "./screens/Ad"
+import Amplify, { Analytics } from 'aws-amplify';
+import config from './aws-exports'
+Amplify.configure(config);
+
 
 const Stack = createStackNavigator()
 export default function App() {
+  componentDidMount(); {
+    Analytics.record('User opened application')
+  }
   return (
     <NavigationContainer>
           <Stack.Navigator
