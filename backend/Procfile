@@ -1,1 +1,0 @@
-web: gunicorn face_detect.wsgi --log-file -

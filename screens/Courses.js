@@ -4,14 +4,6 @@ import Background from '../components/Background';
 import Header from '../components/Header';
 import FootPrint from '../components/FootPrint';
 import CourseCard from '../components/CourseCard';
-const DATA = [
-  {
-    id: "01",
-    title: '01 Face Detection in Python',
-    description: "Learn how to detect faces using the opencv library and python. No prior experience required.",
-    require: require("../assets/01_course.jpg"),
-  }
-];
 export default function Courses({navigation}) {
 
   const [courses, setCourses] = useState([])
@@ -36,7 +28,7 @@ export default function Courses({navigation}) {
         <FootPrint style= {styles.left_align}>No Experience Required</FootPrint>
         <FlatList
           data={courses}
-          renderItem={(item)=><CourseCard item={item.item} onPress={()=>navigation.navigate("Lessons", {
+          renderItem={(item)=><CourseCard item={item.item} onPress={Analytics.record('User clicked on Course 1'), ()=>navigation.navigate("Lessons", {
             courseId:item.item.id
           })}/>}
           keyExtractor={item => item.id.toString()}
