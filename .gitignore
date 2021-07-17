@@ -105,3 +105,12 @@ dist
 
 .DS_Store
 .idea
+.expo
+.expo-shared
+.expo/*
+.expo-shared/*
+.expo/settings.json
+.expo/README.md
+.expo/packager-info.json
+.expo-shared/README.md
+.expo-shared/assets.json
