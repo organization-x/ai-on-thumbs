@@ -114,3 +114,7 @@ dist
 .expo/packager-info.json
 .expo-shared/README.md
 .expo-shared/assets.json
+ios/
+ios/*
+android/
+android/*
