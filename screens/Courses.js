@@ -9,7 +9,7 @@ export default function Courses({navigation}) {
   const [courses, setCourses] = useState([])
 
   const get_courses = async () => {
-    var res = await fetch("http://rohanjoshi2.herokuapp.com/courses", {headers: {
+    var res = await fetch("https://invite.ai-camp.org/courses", {headers: {
       "Content-type": "application/json",
       "Accept": "application/json",
     }})
@@ -32,7 +32,6 @@ export default function Courses({navigation}) {
             courseId:item.item.id
           })}/>}
           keyExtractor={item => item.id.toString()}
-
         />
     </Background>
   );

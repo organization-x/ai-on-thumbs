@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   View,
-  Text,
   Animated,
   FlatList,
   Image,
@@ -10,26 +9,13 @@ import {
   StyleSheet,
   ActivityIndicator
 } from 'react-native';
-import {
-  ScalingDot,
-  SlidingBorder,
-  ExpandingDot,
-  SlidingDot,
-} from 'react-native-animated-pagination-dots';
-import ActionButton from '../components/ActionButton';
 import Background from '../components/Background';
 import InfoCard from '../components/InfoCard'
 import Header from "../components/Header"
 import MultipleChoice from "../components/MultipleChoice"
-import { TextInput } from 'react-native-paper';
 import ConfettiCannon from 'react-native-confetti-cannon';
-import IDE from '../components/Ide';
-import FootPrint from '../components/FootPrint';
 import Toast from '../components/Toast';
 import ProgressCircle from 'react-native-progress-circle';
-
-
-
 
 export default function Lessons({route, navigation}) {
   const { courseId } = route.params;
@@ -38,12 +24,11 @@ export default function Lessons({route, navigation}) {
   const [toast, setToast] = React.useState({ value: '', type: '' });
   const { width } = useWindowDimensions();
   const [index, setIndex] = React.useState(0);
-  const [advance, setAdvance] = React.useState();
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const [lessonData, setLessonData] = useState(null)
   
   const get_course = async (courseId) => {
-    var res = await fetch("http://rohanjoshi2.herokuapp.com/course", {
+    var res = await fetch("https://invite.ai-camp.org/course", {
     method: "POST",
     body: JSON.stringify({
       course: courseId,
@@ -53,23 +38,24 @@ export default function Lessons({route, navigation}) {
       "Accept": "application/json",
     }})
     var data = await res.json()
-    //console.log(data.course_lessons)
     setLessonData(data.course_lessons)
   }
   
   useEffect(() => {
     get_course(courseId)
   }, [])
+
   function handleScroll(advance){
-    console.log(index)
+    //console.log(index)
     if(advance){
-      //check that result is good
+      //confetti if answer is correct
       explosion.current.start()
     }
     else{
-        setToast({ type: 'error', message: "Wrong answer. Please try again."})
+      setToast({ type: 'error', message: "Wrong answer. Please try again."})
     }
   }
+
   function moveToNextLesson(){
     if(index+1>lessonData.length-1){
       navigation.navigate("Try")
@@ -80,12 +66,13 @@ export default function Lessons({route, navigation}) {
     }
   }
   
-  
   const keyExtractor = React.useCallback((item) => item.key.toString(), []);
   if(!lessonData){
-    return (<View style = {{justifyContent: 'center', alignItems: 'center', flex:1}}>
-              <ActivityIndicator size = 'large' color = 'green' />
-          </View>)
+    return (
+      <View style = {{justifyContent: 'center', alignItems: 'center', flex:1}}>
+        <ActivityIndicator size = 'large' color = 'green' />
+      </View>
+    );
   }
   const renderItem = ({ item }) => {
     return (
@@ -99,8 +86,8 @@ export default function Lessons({route, navigation}) {
               shadowColor="#999"
               bgColor="#fff">
                 <Header style={{fontSize:30}}>{item.key}</Header>
-          </ProgressCircle>
-        </View>
+            </ProgressCircle>
+          </View>
           {item.image?<Image resizeMode="cover" source={{uri: item.image}} style={styles.image}/>:null}
           <InfoCard item={item}/>
           <MultipleChoice item={item} setAdvance={setAdvance} handleScroll={handleScroll}/>
@@ -163,11 +150,11 @@ const styles = StyleSheet.create({
     zIndex:1,
   },
   image:{
-      flex:1,
-      width: '92%',
-      borderWidth:5,
-      borderRadius:10,
-      margin: 10,
-      zIndex:0,
+    flex:1,
+    width: '92%',
+    borderWidth:5,
+    borderRadius:10,
+    margin: 10,
+    zIndex:0,
   },
 });
