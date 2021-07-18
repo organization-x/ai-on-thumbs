@@ -1,13 +1,17 @@
-import React from 'react'
-import {Text, Button, StyleSheet, TouchableOpacity} from 'react-native'
+import React from 'react';
+import {Text, StyleSheet, TouchableOpacity} from 'react-native';
+
 export default function Choice({ title, style, icon, ...props }) {
-    return (
-        <TouchableOpacity activeOpacity={0.5} style={[styles.button]}
-            {...props}>
-        <Text style={styles.text}>{title}</Text>{icon?icon:null}
-      </TouchableOpacity>
-    )
-}
+	return (
+		<TouchableOpacity 
+			activeOpacity={0.5} 
+			style={styles.button}
+			{...props}
+		>
+			<Text style={styles.text}>{title}</Text>{icon ? icon : null}
+		</TouchableOpacity>
+	);
+};
 
 const styles = StyleSheet.create({
     button: {
@@ -29,4 +33,4 @@ const styles = StyleSheet.create({
       shadowColor: "rgba(0, 0, 0, 0.25)",
       shadowOpacity: 1
     },
-})
+});
