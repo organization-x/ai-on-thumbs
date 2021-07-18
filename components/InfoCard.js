@@ -1,10 +1,10 @@
-import React from 'react'
-import { Text, StyleSheet, ScrollView } from 'react-native'
-import FootPrint from "../components/FootPrint.js"
+import React from 'react';
+import { StyleSheet, ScrollView } from 'react-native';
+import FootPrint from "../components/FootPrint.js";
 
-export default function InfoCard({item}){
+export default function InfoCard({ item }){
     return (
-        <ScrollView style={styles.infoBox} contentContainerStyle={{justifyContent: "center",}}>
+        <ScrollView style={styles.infoBox} contentContainerStyle={{ justifyContent: "center" }}>
             <FootPrint style={styles.title}>
                 {item.title}
             </FootPrint>
@@ -12,8 +12,8 @@ export default function InfoCard({item}){
                 {item.description}
             </FootPrint>
         </ScrollView>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
     infoBox: {
@@ -43,4 +43,4 @@ const styles = StyleSheet.create({
         color:"black",
         marginBottom:50,
     }
-})
+});

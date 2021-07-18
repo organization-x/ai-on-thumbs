@@ -1,19 +1,20 @@
-import React from 'react'
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import FootPrint from './FootPrint';
 import Header from './Header';
-export default function CourseCard({item, onPress}) {        
 
+export default function CourseCard({ item, onPress }) {        
     return (
         <TouchableOpacity activeOpacity={0.5} style={styles.container} onPress={onPress}>
             <Header style={styles.title}>{item.title}</Header>
             <View style={styles.footer}>
                 <FootPrint style={styles.footerText}>{item.description}</FootPrint>
-                <Image resizeMode="cover" style={styles.image} source={{uri: item.image}}/>
+                <Image resizeMode="cover" style={styles.image} source={{ uri: item.image }}/>
             </View>
         </TouchableOpacity>
-    )
-}
+    );
+};
+
 const styles = StyleSheet.create({
     container:{
         backgroundColor:"#55CE8C",
@@ -49,4 +50,4 @@ const styles = StyleSheet.create({
     footerText:{
         maxWidth: "70%"
     }
-  })
+});
