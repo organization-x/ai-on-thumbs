@@ -25,11 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Run a multi-line script
+      - name: JS Linting
         run: |
           npm i
-          npm install eslint
-
-      # Runs a set of commands using the runners shell
-      - name: ESLint (JS/TS) Action
-        uses: iCrawl/action-eslint@v1
+          npm install standard --global
+          standard
