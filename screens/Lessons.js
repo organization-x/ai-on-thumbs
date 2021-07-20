@@ -28,11 +28,7 @@ export default function Lessons({route, navigation}) {
 	const [lessonData, setLessonData] = useState(null);
 	
 	const get_course = async (courseId) => {
-		const res = await fetch("https://invite.ai-camp.org/course", {
-			method: "POST",
-			body: JSON.stringify(
-				{ course: courseId }
-			),
+		const res = await fetch(`https://invite.ai-camp.org/course/${courseId}`, {
 			headers: {
 				"Content-type": "application/json",
 				"Accept": "application/json"
@@ -90,7 +86,7 @@ export default function Lessons({route, navigation}) {
 				
 				{item.image?<Image resizeMode="cover" source={{ uri: item.image }} style={styles.image}/>:null}
 				<InfoCard item={item}/>
-				<MultipleChoice item={item} setAdvance={setAdvance} handleScroll={handleScroll}/>
+				<MultipleChoice item={item} handleScroll={handleScroll}/>
 			</View>
 		);
 	}
