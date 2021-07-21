@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "ai-on-thumbs",
-    "slug": "ai-on-thumbs",
+    "name": "aionthumbs",
+    "slug": "aionthumbs",
     "owner": "ai-camp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -20,15 +20,15 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.aicamp.aionthumbs",
-      "googleServicesFile": "./GoogleService-Info.plist"
+      "googleServicesFile": "./analytics/GoogleService-Info.plist"
     },
     "android": {
+      "package": "com.aicamp.aionthumbs",
+      "googleServicesFile": "./analytics/google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.aicamp.aionthumbs",
-      "googleServicesFile": "./google-services.json"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -5,7 +5,9 @@ import Logo from '../components/Logo';
 import Header from '../components/Header';
 import FootPrint from '../components/FootPrint';
 import ActionButton from "../components/ActionButton";
+import * as Analytics from 'expo-firebase-analytics';
 
+Analytics.setCurrentScreen('Welcome');
 export default function Welcome({navigation}) {
 	return (
 		<Background>
