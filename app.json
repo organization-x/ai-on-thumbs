@@ -3,7 +3,7 @@
     "name": "aionthumbs",
     "slug": "aionthumbs",
     "owner": "ai-camp",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -20,11 +20,11 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.aicamp.aionthumbs",
-      "googleServicesFile": "./analytics/GoogleService-Info.plist"
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "package": "com.aicamp.aionthumbs",
-      "googleServicesFile": "./analytics/google-services.json",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
