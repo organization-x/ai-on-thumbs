@@ -179,18 +179,18 @@ export default function Login({navigation, setUsernameVar}){
 
         {
         //if the user authentication failed, display the message
-        failedLogin ? 
-        <Text style={styles.failedLoginStyle}>
+        (failedLogin) ? 
+        (<Text style={styles.failedLoginStyle}>
           You may have entered the wrong username or password, please try again
-        </Text>:null
+        </Text>):null
         }
 
         {
         //if the django backend signup field validation failed, display what the user did wrong
-        failedSignUp!='' ? 
-        <Text style={styles.failedLoginStyle}>
+        (failedSignUp)!='' ? 
+        (<Text style={styles.failedLoginStyle}>
           {failedSignUp}
-        </Text>:null
+        </Text>):null
         }
 
         <View style={styles.checkboxContainer}>
@@ -210,7 +210,7 @@ export default function Login({navigation, setUsernameVar}){
         <Button 
           title="Login"
           style={styles.button}
-          onPress={onLoginPress(navigation, username, email, password, isLogin, setFailedLogin, setFailedSignUp, setUsernameVar)}
+          onPress={()=>{onLoginPress(navigation, username, email, password, isLogin, setFailedLogin, setFailedSignUp, setUsernameVar)}}
         />
         </View>
 
