@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import FootPrint from '../components/FootPrint';
 import ActionButton from "../components/ActionButton";
 
-export default function Welcome({navigation}) {
+export default function Welcome({navigation, usernameVar}) {
 	return (
 		<Background>
 			<Logo style={styles.logo}/>
