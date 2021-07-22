@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import * as SecureStore from 'expo-secure-store';
 import { useEffect } from 'react';
 
+//send POST request to backend to create user based on username, password, and email entered
 async function createUser(username, email, password, setFailedSignUp){
 
   const res = await fetch("https://invite.ai-camp.org/create", {
@@ -17,18 +18,26 @@ async function createUser(username, email, password, setFailedSignUp){
 
   });
 
-  var res_text = await res.text();
+  //convert user creation response to text
+  const res_text = await res.text();
+
+  //if user is not successfully created, display in a text component what the user did wrong
   if (res_text!="User Successfully Created"){
     setFailedSignUp(res_text);
   }
 }
 
+//save the username in SecureStore for persistent login
 async function save(username) {
   await SecureStore.setItemAsync("isAuthenticated", username);
 }
 
+//check if the user has been previously authenticated
 async function getAuthenticated() {
+
+  //this should set the result of the query as the username if previously authenticated
   let result = await SecureStore.getItemAsync("isAuthenticated");
+
   if (result) {
     return result;
   } else {
@@ -36,7 +45,7 @@ async function getAuthenticated() {
   }
 }
 
-
+//authenticate the username and password through the backend API through a post request
 async function authUser(username, password, navigation, setFailedLogin, setUsernameVar){
   const res = await fetch("https://invite.ai-camp.org/auth", {
     method: 'POST',
@@ -48,25 +57,56 @@ async function authUser(username, password, navigation, setFailedLogin, setUsern
     },
   });
 
+  //convert the response to text
   const res_text = await res.text();
 
+  /* If the backend API successfully authenticated the user, store the username in SecureStore. Once stored, navigate to the welcome screen of the app. If not successfully authenticated, display that the authentication
+  has not succeeded */
+  
   if (res_text=="User Is Authenticated"){
+
     save(username);
     setUsernameVar(username);
     navigation.navigate("Welcome");
+
   } else {
+
     setFailedLogin(true);
+
   }
 
 }
 
+//when the login button is pressed
+function onLoginPress(navigation, username, email, password, isLogin, setFailedLogin, setFailedSignUp, setUsernameVar){
+
+  /*if the user is signing up, send a create user post request to the backend. Otherwise,
+  authenticate the user */
+  
+  if (isLogin==false){
+    createUser(username, email, password, setFailedSignUp)
+  } else {
+    authUser(username, password, navigation, setFailedLogin, setUsernameVar)
+  }
+  
+}
+
+//Checkbox functional component that acts as a radio button (whether the user wants to sign up or login)
 function MyCheckbox({isLogin, setIsLogin, original_value}) {
 
   function onCheckmarkPress() {
+
+    /*only if the checkbox is not checked should you be able to click it 
+    (when its value doesn't match isLogin) since that is how a radio button acts */
     if (isLogin==(!original_value)){
       setIsLogin(!isLogin);
     }
+
   }
+
+  /* For the checkbox, the original value is whether the box is checked in the beginning. The Login box is
+  checked by default and the Signup box is not checked. If the original value is true, then the box is the Login box and thus should be checked when isLogin is true. Otherwise, if it is the Signup box, then it should be checked when isLogin is false. This acts like a radio button, since expo
+  doesn't support prebuilt radio button components. */
 
   return (
     <Pressable
@@ -79,29 +119,34 @@ function MyCheckbox({isLogin, setIsLogin, original_value}) {
 
 export default function Login({navigation, setUsernameVar}){
 
-   const [username, onChangeUsername] = useState('');
-   const [email, onChangeEmail] = useState('');
-   const [password, onChangePassword] = useState('');
+  //username, email, and password storing states
+  const [username, onChangeUsername] = useState('');
+  const [email, onChangeEmail] = useState('');
+  const [password, onChangePassword] = useState('');
 
-   const [isLogin, setIsLogin] = useState(true);
+  //whether the user wants to login or sign up
+  const [isLogin, setIsLogin] = useState(true);
 
-   const [failedLogin, setFailedLogin] = useState(false);
+  //state to store whether user authentication or user sign up failed
+  const [failedLogin, setFailedLogin] = useState(false);
+  const [failedSignUp, setFailedSignUp] = useState(null);
 
-   const [failedSignUp, setFailedSignUp] = useState(null);
-
+  //state to store whether the user has been previously authenticated on the app
   const [authenticated, setAuthenticated] = useState('');
 
-
-  
+    /*If the user has been previously authenticated, navigate to welcome screen 
+    with the variable usernameVar as the username of the authenticated user */
     useEffect(()=>{
-      setAuthenticated(getAuthenticated());
-      if (authenticated!="Not Authenticated"){
-        setUsernameVar(authenticated);
-        navigation.navigate("Welcome");
+      async function persistLogin(){
+        setAuthenticated(await getAuthenticated());
+        if (authenticated!="Not Authenticated"){
+          setUsernameVar(authenticated);
+          navigation.navigate("Welcome");
+        }
       }
+      persistLogin();
     });
   
-
     return (
       <SafeAreaView>
 
@@ -112,7 +157,9 @@ export default function Login({navigation, setUsernameVar}){
           placeholder="Username"
         />
 
-        { (isLogin==false) ? (
+        { 
+        //If the user is signing up, then show the email field, otherwise hide it
+        (isLogin==false) ? (
         <TextInput
           style={styles.input}
           onChangeText={onChangeEmail}
@@ -131,13 +178,19 @@ export default function Login({navigation, setUsernameVar}){
         />
 
         {
+        //if the user authentication failed, display the message
         failedLogin ? 
-        (<Text style={styles.failedLoginStyle}>You may have entered the wrong username or password, please try again</Text>):null
+        <Text style={styles.failedLoginStyle}>
+          You may have entered the wrong username or password, please try again
+        </Text>:null
         }
 
         {
+        //if the django backend signup field validation failed, display what the user did wrong
         failedSignUp!='' ? 
-        (<Text style={styles.failedLoginStyle}>{failedSignUp}</Text>):null
+        <Text style={styles.failedLoginStyle}>
+          {failedSignUp}
+        </Text>:null
         }
 
         <View style={styles.checkboxContainer}>
@@ -157,7 +210,7 @@ export default function Login({navigation, setUsernameVar}){
         <Button 
           title="Login"
           style={styles.button}
-          onPress={()=>{(isLogin==false) ? createUser(username, email, password, setFailedSignUp):authUser(username, password, navigation, setFailedLogin, setUsernameVar)}}
+          onPress={onLoginPress(navigation, username, email, password, isLogin, setFailedLogin, setFailedSignUp, setUsernameVar)}
         />
         </View>
 
