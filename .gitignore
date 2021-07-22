@@ -118,3 +118,6 @@ ios/
 ios/*
 android/
 android/*
+.vscode/settings.json
+.vscode/
+.vscode/*

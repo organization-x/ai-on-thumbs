@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "Ai-Go",
-    "slug": "ai-go",
-    "version": "1.0.0",
+    "name": "aionthumbs",
+    "slug": "aionthumbs",
+    "owner": "ai-camp",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -17,9 +18,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.aicamp.aionthumbs",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
+      "package": "com.aicamp.aionthumbs",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
