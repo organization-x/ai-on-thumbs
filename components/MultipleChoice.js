@@ -12,7 +12,7 @@ export default function MultipleChoice({ item, handleScroll }) {
     }
     return (
         <View style={styles.overall}>
-            <View style={{ flex: 0.8, flexDirection: "row", alignItems: "center", justifyContent: 'center' }}>
+            <View style={styles.question}>
                 <Text style={styles.text}>{item.question}</Text>
             </View>
             <View style={styles.container}>
@@ -59,5 +59,11 @@ const styles = StyleSheet.create({
     overall:{
         borderRadius:10,
         flex:1,
-    }
+    },
+    question: {
+        flex: 0.8, 
+        flexDirection: "row", 
+        alignItems: "center", 
+        justifyContent: 'center' 
+    },
 });

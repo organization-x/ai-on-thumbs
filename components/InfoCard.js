@@ -17,13 +17,14 @@ export default function InfoCard({ item }){
 
 const styles = StyleSheet.create({
     infoBox: {
+        width: "90%",
         borderRadius: 4,
         backgroundColor: "#55CE8C",
         marginTop: 10,
         borderRadius:10,
         paddingVertical:20,
         paddingHorizontal:40,
-        marginHorizontal:10,
+        marginTop:10,
         flex:1,
         maxHeight:"30%",
         shadowOffset: {

@@ -71,7 +71,7 @@ export default function Lessons({route, navigation}) {
 	const renderItem = ({ item }) => {
 		return (
 			<View style={[ styles.itemContainer, { width: width } ]}>
-				<View style={{ position: "absolute", top: 0, zIndex: 2, right: 3.5 }}>
+				<View style={styles.progresscircle}>
 					<ProgressCircle
 						percent={parseInt(item.key) / lessonData.length * 100}
 						radius={40}
@@ -154,5 +154,11 @@ const styles = StyleSheet.create({
     borderRadius:10,
     margin: 10,
     zIndex:0,
+  },
+  progresscircle: {
+	position: "absolute",
+	top: 0, 
+	zIndex: 2, 
+	right: 3.5,
   },
 });

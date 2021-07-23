@@ -97,11 +97,7 @@ export default function Try({navigation}) {
 	if(startCamera){
 		return(
 			<Camera
-				style={{ 
-					flex: 1, 
-					width:"100%", 
-					alignItems:"center", 
-					justifyContent:"flex-end" }}
+				style={styles.camera}
 				ref={ (r) => { camera.current = r }
 			}>
 				<ActionButton 
@@ -130,7 +126,7 @@ export default function Try({navigation}) {
 			/>
 				{ loading ? <ActivityIndicator size="large" color='#409C69' style={{marginTop:"50%"}}/>:imageBase64?
 				<View style={styles.imageContainer}>
-				<Image style={{width: 300, height: 400, marginTop:10}} source={{uri: `data:image/png;base64,${imageBase64}`}}/>
+				<Image style={styles.image} source={{uri: `data:image/png;base64,${imageBase64}`}}/>
 				</View>:null}
 
 			<View style={styles.buttonView}>
@@ -162,5 +158,16 @@ const styles = StyleSheet.create({
         flex:1,
         width:'100%',
         alignItems:"center",
-    }
+    },
+	camera:{
+		flex: 1, 
+		width:"100%", 
+		alignItems:"center", 
+		justifyContent:"flex-end"
+	},
+	image: {
+		width: '90%', 
+		height: "150%", 
+		marginTop:10
+	},
 });
