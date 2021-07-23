@@ -29,6 +29,7 @@ export default function Courses({navigation}) {
 			<FootPrint style= {styles.left_align}>No Experience Required</FootPrint>
 
 			<FlatList
+				style={styles.list}
 				data={courses}
 				renderItem={(item) => 
 					<CourseCard item={item.item} onPress={() => { 
@@ -48,5 +49,8 @@ const styles = StyleSheet.create({
       alignSelf:"flex-start",
       marginLeft:10,
       marginVertical:2,
+  },
+  	list:{
+	  width: "90%",
   },
 });

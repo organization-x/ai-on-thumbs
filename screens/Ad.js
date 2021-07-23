@@ -19,14 +19,14 @@ export default function Ad({navigation}) {
 		}}/>
 		<View style={styles.buttonView}>
 			<ActionButton 
-				style={{ width: "45%", marginRight: 10 }} 
+				style={styles.button1} 
 				onPress={() => Linking.openURL('https://ai-camp.org')} 
 				title="Learn More"/>
 
 			<ActionButton 
-				style={{ width: "45%" }} 
+				style={styles.button2} 
 				onPress={() => navigation.navigate("Courses")} 
-				title="Return Home"/>
+				title="Home"/>
 		</View>
 		</Background>
 	);
@@ -45,5 +45,15 @@ const styles = StyleSheet.create({
       justifyContent:"center",
       alignItems:"flex-end",
       flexDirection:'row',
-    }
+	  marginTop:20,
+    },
+	button1:{
+		width: "45%",
+		marginRight: 10,
+		maxHeight: '90%',
+	},
+	button2:{
+		width: "45%",
+		maxHeight: '90%',
+	},
 });
