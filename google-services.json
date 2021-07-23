@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "68883112408",
+    "project_id": "ai-on-thumbs",
+    "storage_bucket": "ai-on-thumbs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68883112408:android:a918a879faf40ece6f12ad",
+        "android_client_info": {
+          "package_name": "com.aicamp.aionthumbs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68883112408-pso2kg0vb1bc7d49v2uoo2io1q51jb4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAENZLr-0NmqSpD334qM0WE7KyW9siOF_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68883112408-pso2kg0vb1bc7d49v2uoo2io1q51jb4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
