@@ -5,9 +5,10 @@ import * as SecureStore from 'expo-secure-store';
 import { useEffect } from 'react';
 
 //send POST request to backend to create user based on username, password, and email entered
-async function createUser(username, email, password, setFailedSignUp){
+async function createUser(username, email, password){
 
   const res = await fetch("https://invite.ai-camp.org/create", {
+
     method: 'POST',
     body: JSON.stringify(
       { username: username, email: email, password: password }
@@ -21,10 +22,7 @@ async function createUser(username, email, password, setFailedSignUp){
   //convert user creation response to text
   const res_text = await res.text();
 
-  //if user is not successfully created, display in a text component what the user did wrong
-  if (res_text!="User Successfully Created"){
-    setFailedSignUp(res_text);
-  }
+  return res_text
 }
 
 //save the username in SecureStore for persistent login
@@ -43,10 +41,12 @@ async function getAuthenticated() {
   } else {
     return 'Not Authenticated';
   }
+
 }
 
 //authenticate the username and password through the backend API through a post request
-async function authUser(username, password, navigation, setFailedLogin, setUsernameVar){
+async function authUser(username, password){
+
   const res = await fetch("https://invite.ai-camp.org/auth", {
     method: 'POST',
     body: JSON.stringify(
@@ -59,60 +59,33 @@ async function authUser(username, password, navigation, setFailedLogin, setUsern
 
   //convert the response to text
   const res_text = await res.text();
-
-  /* If the backend API successfully authenticated the user, store the username in SecureStore. Once stored, navigate to the welcome screen of the app. If not successfully authenticated, display that the authentication
-  has not succeeded */
   
-  if (res_text=="User Is Authenticated"){
+  return res_text
 
-    save(username);
-    setUsernameVar(username);
-    navigation.navigate("Welcome");
-
-  } else {
-
-    setFailedLogin(true);
-
-  }
-
-}
-
-//when the login button is pressed
-function onLoginPress(navigation, username, email, password, isLogin, setFailedLogin, setFailedSignUp, setUsernameVar){
-
-  /*if the user is signing up, send a create user post request to the backend. Otherwise,
-  authenticate the user */
-  
-  if (isLogin==false){
-    createUser(username, email, password, setFailedSignUp)
-  } else {
-    authUser(username, password, navigation, setFailedLogin, setUsernameVar)
-  }
-  
 }
 
 //Checkbox functional component that acts as a radio button (whether the user wants to sign up or login)
-function MyCheckbox({isLogin, setIsLogin, original_value}) {
+function MyCheckbox({isLoginChecked, setIsLoginChecked, defaultChecked}) {
 
   function onCheckmarkPress() {
 
     /*only if the checkbox is not checked should you be able to click it 
-    (when its value doesn't match isLogin) since that is how a radio button acts */
-    if (isLogin==(!original_value)){
-      setIsLogin(!isLogin);
+    (when its value doesn't match isLoginChecked) since that is how a radio button acts */
+    if (isLoginChecked==(!defaultChecked)){
+      setIsLoginChecked(!isLoginChecked);
     }
 
   }
 
-  /* For the checkbox, the original value is whether the box is checked in the beginning. The Login box is
-  checked by default and the Signup box is not checked. If the original value is true, then the box is the Login box and thus should be checked when isLogin is true. Otherwise, if it is the Signup box, then it should be checked when isLogin is false. This acts like a radio button, since expo
+  /* For the checkbox, defaultChecked is whether the box is checked in the beginning. The Login box is
+  checked by default and the Signup box is not checked. If defaultChecked is true, then the box is the Login box and thus should be checked when isLoginChecked is true. Otherwise, if it is the Signup box, then it should be checked when isLoginChecked is false. This acts like a radio button, since expo
   doesn't support prebuilt radio button components. */
 
   return (
     <Pressable
-      style={[styles.checkboxBase, (original_value ? isLogin==true : isLogin==false) && styles.checkboxChecked]}
+      style={[styles.checkboxBase, (defaultChecked ? isLoginChecked==true : isLoginChecked==false) && styles.checkboxChecked]}
       onPress={onCheckmarkPress}>
-      {(original_value ? isLogin==true : isLogin==false) && <Ionicons name="checkmark" size={24} color="white" />}
+      {(defaultChecked ? isLoginChecked==true : isLoginChecked==false) && <Ionicons name="checkmark" size={24} color="white" />}
     </Pressable>
   );
 }
@@ -125,14 +98,47 @@ export default function Login({navigation, setUsernameVar}){
   const [password, onChangePassword] = useState('');
 
   //whether the user wants to login or sign up
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLoginChecked, setIsLoginChecked] = useState(true);
 
   //state to store whether user authentication or user sign up failed
-  const [failedLogin, setFailedLogin] = useState(false);
-  const [failedSignUp, setFailedSignUp] = useState(null);
+  const [errorMsg, setErrorMsg] = useState('');
 
   //state to store whether the user has been previously authenticated on the app
   const [authenticated, setAuthenticated] = useState('');
+
+  //when the login button is pressed
+  async function onLoginPress(){
+
+    /*if the user is signing up, send a create user post request to the backend. Otherwise,
+    authenticate the user */
+    
+    if (isLoginChecked==false){
+
+      const res = await createUser(username, email, password);
+
+      //if the user is successfully created, output that. Otherwise, output the reason it is not successful
+      setErrorMsg(res);
+
+    } else {
+
+      //authenticate the user
+      const res = await authUser(username, password)
+
+      /* If the backend API successfully authenticated the user, store the username in SecureStore. Once stored, navigate to the welcome screen of the app. If not successfully authenticated, display that the authentication has not succeeded */
+
+      if (res=="User Is Authenticated"){
+
+        await save(username);
+        setUsernameVar(username);
+        navigation.navigate("Welcome");
+
+      } else {
+        setErrorMsg("You may have entered the wrong username or password, please try again")
+      }
+
+    }
+    
+  }
 
     /*If the user has been previously authenticated, navigate to welcome screen 
     with the variable usernameVar as the username of the authenticated user */
@@ -159,7 +165,7 @@ export default function Login({navigation, setUsernameVar}){
 
         { 
         //If the user is signing up, then show the email field, otherwise hide it
-        (isLogin==false) ? (
+        (isLoginChecked==false) ? (
         <TextInput
           style={styles.input}
           onChangeText={onChangeEmail}
@@ -167,7 +173,6 @@ export default function Login({navigation, setUsernameVar}){
           placeholder="Email"
         /> ):null
         }
-        
 
         <TextInput
           style={styles.input}
@@ -178,28 +183,20 @@ export default function Login({navigation, setUsernameVar}){
         />
 
         {
-        //if the user authentication failed, display the message
-        (failedLogin) ? 
-        (<Text style={styles.failedLoginStyle}>
-          You may have entered the wrong username or password, please try again
-        </Text>):null
-        }
-
-        {
-        //if the django backend signup field validation failed, display what the user did wrong
-        (failedSignUp)!='' ? 
-        (<Text style={styles.failedLoginStyle}>
-          {failedSignUp}
+        //if the user is not authenticated or there is an error message on sign up
+        (errorMsg)!='' ? 
+        (<Text style={styles.errorMsgStyle}>
+          {errorMsg}
         </Text>):null
         }
 
         <View style={styles.checkboxContainer}>
           
-          <MyCheckbox isLogin={isLogin} setIsLogin={setIsLogin} original_value={true}/> 
+          <MyCheckbox isLoginChecked={isLoginChecked} setIsLoginChecked={setIsLoginChecked} defaultChecked={true}/> 
 
           <Text style={styles.checkboxLabel}>Log In</Text>
 
-          <MyCheckbox isLogin={isLogin} setIsLogin={setIsLogin} original_value={false}/> 
+          <MyCheckbox isLoginChecked={isLoginChecked} setIsLoginChecked={setIsLoginChecked} defaultChecked={false}/> 
 
           <Text style={styles.checkboxLabel}>Sign Up</Text>
         
@@ -210,7 +207,7 @@ export default function Login({navigation, setUsernameVar}){
         <Button 
           title="Login"
           style={styles.button}
-          onPress={()=>{onLoginPress(navigation, username, email, password, isLogin, setFailedLogin, setFailedSignUp, setUsernameVar)}}
+          onPress={()=>{onLoginPress()}}
         />
         </View>
 
@@ -246,8 +243,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  failedLoginStyle: {
-    color: "red",
+  errorMsgStyle: {
+    color: "blue",
     fontSize: 20,
     textAlign: "center",
     justifyContent: "center",
