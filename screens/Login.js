@@ -20,9 +20,9 @@ async function createUser(username, email, password){
   });
 
   //convert user creation response to text
-  const res_text = await res.text();
+  const resText = await res.text();
 
-  return res_text
+  return resText
 }
 
 //save the username in SecureStore for persistent login
@@ -58,9 +58,9 @@ async function authUser(username, password){
   });
 
   //convert the response to text
-  const res_text = await res.text();
+  const resText = await res.text();
   
-  return res_text
+  return resText
 
 }
 
