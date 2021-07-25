@@ -11,21 +11,13 @@ import Ad from "./screens/Ad";
 const Stack = createStackNavigator();
 
 export default function App() {
-
-	const [usernameVar, setUsernameVar] = useState('');
-
   	return (
     	<NavigationContainer>
           	<Stack.Navigator
-				initialRouteName="Login"
+				initialRouteName="Welcome"
 				screenOptions={{ headerShown: false } 
 			}>
-				<Stack.Screen name="Login">
-					{(props) => <Login {...props} setUsernameVar={setUsernameVar}/>}
-				</Stack.Screen>
-				<Stack.Screen name="Welcome">
-					{(props) => <Welcome {...props} usernameVar={usernameVar}/>}
-				</Stack.Screen>
+				<Stack.Screen name="Welcome" component={Welcome} />
 				<Stack.Screen name="Courses" component={Courses} />
 				<Stack.Screen name="Lessons" component={Lessons} />
 				<Stack.Screen name="Try" component={Try} />
