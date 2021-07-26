@@ -15,7 +15,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['react', 'import'],
+  plugins: ['react', 'react-native'],
   ignorePatterns: ['node_modules/'],
   rules: {
     'react/prop-types': 0,
