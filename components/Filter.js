@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import { Text, View, StyleSheet, Image, Platform, Dimensions } from 'react-native';
+import { Text, View, StyleSheet, Image, Platform } from 'react-native';
 import Draggable from 'react-native-draggable';
 
-export default function Filter({navigation}){
+export default function Filter(){
 
     //location of the draggable filter (x,y) coordinates
     const [dragX, setDragX] = useState(0);
@@ -30,7 +30,7 @@ export default function Filter({navigation}){
             <View style={styles.dragContainer} onLayout={(event) => {
 
                 //get dimensions of container and
-                var {x, y, width, height} = event.nativeEvent.layout;
+                let {x, y, width, height} = event.nativeEvent.layout;
                 setDragContainerDim({width: width, height: height, x: x, y: y});
                 
             }}>
