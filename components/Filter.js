@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Text, View, StyleSheet, Image, Platform } from 'react-native';
 import Draggable from 'react-native-draggable';
 
-export default function Filter(){
+export default function Filter( { originalImage, filterImage, distThreshold, targetLocation} ){
   
   //location of the draggable filter (x,y) coordinates
   const [dragX, setDragX] = useState(0);
@@ -67,7 +67,9 @@ export default function Filter(){
           }} 
 
           /*When using ios, you can use the children parameter to have more customization over the filter image */
-          children={   Platform.OS==="ios" || "web"  ?    (<Image style={{width: 70, height: 50}} source={require('../assets/filter_drawing.png')}/>) : null}
+          children={ (Platform.OS==="ios" || "web")  
+              ? (<Image style={{width: 70, height: 50}} source={require('../assets/filter_drawing.png')}/>) 
+              : null}
 
         />
 
