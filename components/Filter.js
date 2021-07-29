@@ -12,8 +12,8 @@ export default function Filter () {
   const [yDist, setYDist] = useState(100)
 
   // height and width of image (used to perform calculations for target of draggable filter)
-  const [imageWidth, setImageWidth] = useState(300)
-  const [imageHeight, setImageHeight] = useState(200)
+  const imageWidth = 300
+  const imageHeight = 200
 
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
@@ -39,38 +39,34 @@ export default function Filter () {
 
         {/* Draggable filter */}
         <Draggable
-
           imageSource={require('../assets/filter_drawing.png')}
-
           // size of draggable filter for android
           renderSize={35}
-
           // original starting point of the filter on the image (top left corner)
           x={dragContainerDim.width / 2 - imageWidth / 2}
           y={dragContainerDim.height / 2 - imageHeight / 2}
-
           /* set the minimum and maximum bounds where the draggable item can go to the bounds of the actual image */
           maxX={dragContainerDim.width / 2 + imageWidth / 2}
           minX={dragContainerDim.width / 2 - imageWidth / 2}
           minY={dragContainerDim.height / 2 - imageHeight / 2}
           maxY={dragContainerDim.height / 2 + imageHeight / 2}
-
           /* set the draggable filter's state location when the user releases the filter. Calculate the distance between the filter and the nose bridge (where the filter 'similarity' is highest) */
           onDragRelease={(e) => {
-            setDragX(e.nativeEvent.pageX),
-            setDragY(e.nativeEvent.pageY),
-
+            setDragX(e.nativeEvent.pageX)
+            setDragY(e.nativeEvent.pageY)
             // target of filter is near the middle of the image (nose bridge)
-            setXDist(Math.abs(dragContainerDim.width / 2 - dragX)),
+            setXDist(Math.abs(dragContainerDim.width / 2 - dragX))
             setYDist(Math.abs(dragContainerDim.height / 1.1 - dragY))
           }}
+        >
 
-          /* When using ios, you can use the children parameter to have more customization over the filter image */
-          children={(Platform.OS === 'ios' || 'web')
-            ? (<Image style={{ width: 70, height: 50 }} source={require('../assets/filter_drawing.png')} />)
-            : null}
-
-        />
+          {
+            /* When using ios, you can use the children parameter to have more customization over the filter image */
+            (Platform.OS === 'ios' || Platform.OS === 'web')
+              ? (<Image style={{ width: 70, height: 50 }} source={require('../assets/filter_drawing.png')} />)
+              : null
+          }
+        </Draggable>
 
       </View>
 
