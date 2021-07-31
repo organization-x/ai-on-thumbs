@@ -27,6 +27,10 @@ export default function Welcome ({ navigation, usernameVar }) {
           onPress={() => navigation.navigate('Courses')}
           title='Start learning AI'
         />
+        <ActionButton
+          onPress={() => navigation.navigate('magnifytest')}
+          title='Magnify tesst'
+        />
 
       </View>
     </Background>

@@ -6,6 +6,7 @@ import Courses from './screens/Courses'
 import Lessons from './screens/Lessons'
 import Try from './screens/Try'
 import Ad from './screens/Ad'
+import magnifytest from './screens/magnifytest'
 
 const Stack = createStackNavigator()
 
@@ -17,6 +18,7 @@ export default function App () {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name='Welcome' component={Welcome} />
+        <Stack.Screen name='magnifytest' component={magnifytest} />
         <Stack.Screen name='Courses' component={Courses} />
         <Stack.Screen name='Lessons' component={Lessons} />
         <Stack.Screen name='Try' component={Try} />
