@@ -7,11 +7,20 @@ import {
   Animated
 } from 'react-native'
 
+// component takes 6 args
+// src (req): source of normal image
+// magSrc (req): source of image to be viewed glass
+// mag (opt): x of magnification
+// width (opt): width of component
+// height (opt): height of component
+// radius (opt): radius of the glass
+
 export default function MagnifyGlass({src, magSrc, mag=1, width=300, height=400, radius=40}) {
   // coordinates to place glass in center
   const centerX = width / 2 - radius;
   const centerY = height / 2 - radius;
 
+  // relative coord for glass img to align it with the normal img instead of the glass's coords
   const magCenterX = -1 * (( width / 2 ) * mag - radius);
   const magCenterY = -1 * (( height / 2 ) * mag - radius);
 
@@ -94,7 +103,7 @@ export default function MagnifyGlass({src, magSrc, mag=1, width=300, height=400,
         {...panResponder.panHandlers}
         style={[panStyle, styles.glass, glassDimension]}
       >
-      {/* pseudo zoom image */}
+      {/* image in glass */}
         <Image
           style={[styles.zoomImage, zoomImgDimension]}
           source={magSrc}>
