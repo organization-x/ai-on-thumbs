@@ -4,62 +4,84 @@ import {
   View,
   Image,
   PanResponder,
-  Animated,
-  Text
+  Animated
 } from 'react-native'
 
-export default function MagnifyGlass({src, magSrc, mag=1}) {
-  const [ zoomX, setZoomX ] = useState(0);
-  const [ zoomY, setZoomY ] = useState(0);
+export default function MagnifyGlass({src, magSrc, mag=1, width=300, height=400, radius=40}) {
+  // coordinates to place glass in center
+  const centerX = width / 2 - radius;
+  const centerY = height / 2 - radius;
 
-  const pan = useRef(new Animated.ValueXY({x: 100, y: 200})).current;
+  const magCenterX = -1 * (( width / 2 ) * mag - radius);
+  const magCenterY = -1 * (( height / 2 ) * mag - radius);
+
+  // shifts the background image of the glass opposite to the glass's movement
+  const [ shiftX, setShiftX ] = useState(magCenterX);
+  const [ shiftY, setShiftY ] = useState(magCenterY);
+
+  // tracks the glass's coordinates
+  const pan = useRef(new Animated.ValueXY({x: centerX, y: centerY})).current;
+
+  // uses panResponder api to track dragging movementss
   const panResponder = useRef(
     PanResponder.create({
-      onMoveShouldSetPanResponder: () => true,
+      onMoveShouldSetPanResponder: (e, gestureState) => {
+        // prevents onMove event if the touch is only a tap
+        return Math.abs(gestureState.dx) >= 1 || Math.abs(gestureState.dy) >= 1;
+      },
       onPanResponderGrant: () => {
         pan.setOffset({
           x: pan.x._value,
           y: pan.y._value
         });
       },
-      onPanResponderMove: Animated.event(
-        [
-          null,
-          { dx: pan.x, dy: pan.y }
-        ],
-        {
-          useNativeDriver: false,
-          listener: (event, gesture) => {
-            setZoomX(zoomX - gesture.moveX);
-            setZoomY(zoomY - gesture.moveY);
-          }
-        }
-      ),
+      onPanResponderMove: (event, gesture) => {
+        // set the shift for the glass
+        pan.x.setValue(gesture.dx);
+        pan.y.setValue(gesture.dy);
+        // move the pixel img in opposite direction for effect
+        setShiftX(shiftX - gesture.dx * mag);
+        setShiftY(shiftY - gesture.dy * mag);
+      },
       onPanResponderRelease: () => {
         pan.flattenOffset();
+
+        // reset image and glass to center position
+        Animated.spring(
+          pan, // Auto-multiplexed
+          { toValue: { x: centerX, y: centerY }, useNativeDriver: false } // Back to zero
+        ).start();
+        setShiftX(magCenterX);
+        setShiftY(magCenterY);
       }
     })
   ).current;
 
-  const dragListener = (event, gesture) => {
-    console.log(event.nativeEvent.locationX);
+  // for glass's movements
+  const panStyle = { transform: [{ translateX: pan.x }, { translateY: pan.y }] };
+
+  // for size of images and glass
+  const zoomImgDimension = {
+    width: width * mag,
+    height: height * mag,
+    top: shiftY,
+    left: shiftX
   };
 
-  const panStyle = { transform: [{ translateX: pan.x }, { translateY: pan.y }] };
-  const zoomImgDimension = {
-    width: 300 * mag,
-    height: 400 * mag,
-    top: zoomY,
-    left: zoomX
-    // transform: [
-    //   { translateX: pan.x },
-    //   { translateY: pan.y }
-    // ]
+  const magContainerDimension = {
+    width: width,
+    height: height
+  };
+
+  const glassDimension = {
+    width: radius * 2,
+    height: radius * 2,
+    borderRadius: radius
   };
 
   return (
     // component container
-    <View style={styles.magContainer}>
+    <View style={[styles.magContainer, magContainerDimension]}>
 
       {/* background image */}
       <Image
@@ -70,11 +92,10 @@ export default function MagnifyGlass({src, magSrc, mag=1}) {
       {/* magnifying glass */}
       <Animated.View
         {...panResponder.panHandlers}
-        style={[panStyle, styles.glass]}
+        style={[panStyle, styles.glass, glassDimension]}
       >
       {/* pseudo zoom image */}
         <Image
-          {...panResponder.panHandlers}
           style={[styles.zoomImage, zoomImgDimension]}
           source={magSrc}>
         </Image>
@@ -85,20 +106,14 @@ export default function MagnifyGlass({src, magSrc, mag=1}) {
   );
 };
 
-const circleRadius = 30;
-
 const styles = StyleSheet.create({
   magContainer: {
-    width: 300,
-    height: 400,
     position: 'relative'
   },
   normalImage: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
+    width: '100%',
+    height: '100%',
+    alignSelf: 'center',
     resizeMode: 'cover',
     zIndex: -1
   },
@@ -108,13 +123,10 @@ const styles = StyleSheet.create({
     zIndex: 10
   },
   glass: {
-    width: circleRadius * 2,
-    height: circleRadius * 2,
-    borderRadius: circleRadius,
     borderColor: 'white',
     borderWidth: 3,
     zIndex: 20,
-    position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    position: 'absolute'
   }
 });
