@@ -96,7 +96,9 @@ export default function Filter () {
       {/* If the inverted distance is lower than a certain threshold for both x and y coordinates, then display the answer (which the user got correct) */}
       <Text style={styles.paragraph}>
         {
-          (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5) ? ('The filter matches up closest to the nose bridge because it is a vertical line!') : ''
+          (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5)
+            ? ('The filter matches up closest to the nose bridge because it is a vertical line!')
+            : ''
         }
       </Text>
 
