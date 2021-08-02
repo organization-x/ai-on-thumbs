@@ -15,59 +15,59 @@ import {
 // height (opt): height of component
 // radius (opt): radius of the glass
 
-export default function MagnifyGlass({src, magSrc, mag=1, width=300, height=400, radius=40}) {
+export default function MagnifyGlass ({ src, magSrc, mag = 1, width = 300, height = 400, radius = 40 }) {
   // coordinates to place glass in center
-  const centerX = width / 2 - radius;
-  const centerY = height / 2 - radius;
+  const centerX = width / 2 - radius
+  const centerY = height / 2 - radius
 
   // relative coord for glass img to align it with the normal img instead of the glass's coords
-  const magCenterX = -1 * (( width / 2 ) * mag - radius);
-  const magCenterY = -1 * (( height / 2 ) * mag - radius);
+  const magCenterX = -1 * ((width / 2) * mag - radius)
+  const magCenterY = -1 * ((height / 2) * mag - radius)
 
   // shifts the background image of the glass opposite to the glass's movement
-  const [ shiftX, setShiftX ] = useState(magCenterX);
-  const [ shiftY, setShiftY ] = useState(magCenterY);
+  const [shiftX, setShiftX] = useState(magCenterX)
+  const [shiftY, setShiftY] = useState(magCenterY)
 
   // tracks the glass's coordinates
-  const pan = useRef(new Animated.ValueXY({x: centerX, y: centerY})).current;
+  const pan = useRef(new Animated.ValueXY({ x: centerX, y: centerY })).current
 
   // uses panResponder api to track dragging movementss
   const panResponder = useRef(
     PanResponder.create({
       onMoveShouldSetPanResponder: (e, gestureState) => {
         // prevents onMove event if the touch is only a tap
-        return Math.abs(gestureState.dx) >= 1 || Math.abs(gestureState.dy) >= 1;
+        return Math.abs(gestureState.dx) >= 1 || Math.abs(gestureState.dy) >= 1
       },
       onPanResponderGrant: () => {
         pan.setOffset({
           x: pan.x._value,
           y: pan.y._value
-        });
+        })
       },
       onPanResponderMove: (event, gesture) => {
         // set the shift for the glass
-        pan.x.setValue(gesture.dx);
-        pan.y.setValue(gesture.dy);
+        pan.x.setValue(gesture.dx)
+        pan.y.setValue(gesture.dy)
         // move the pixel img in opposite direction for effect
-        setShiftX(shiftX - gesture.dx * mag);
-        setShiftY(shiftY - gesture.dy * mag);
+        setShiftX(shiftX - gesture.dx * mag)
+        setShiftY(shiftY - gesture.dy * mag)
       },
       onPanResponderRelease: () => {
-        pan.flattenOffset();
+        pan.flattenOffset()
 
         // reset image and glass to center position
         Animated.spring(
           pan, // Auto-multiplexed
           { toValue: { x: centerX, y: centerY }, useNativeDriver: false } // Back to zero
-        ).start();
-        setShiftX(magCenterX);
-        setShiftY(magCenterY);
+        ).start()
+        setShiftX(magCenterX)
+        setShiftY(magCenterY)
       }
     })
-  ).current;
+  ).current
 
   // for glass's movements
-  const panStyle = { transform: [{ translateX: pan.x }, { translateY: pan.y }] };
+  const panStyle = { transform: [{ translateX: pan.x }, { translateY: pan.y }] }
 
   // for size of images and glass
   const zoomImgDimension = {
@@ -75,18 +75,18 @@ export default function MagnifyGlass({src, magSrc, mag=1, width=300, height=400,
     height: height * mag,
     top: shiftY,
     left: shiftX
-  };
+  }
 
   const magContainerDimension = {
     width: width,
     height: height
-  };
+  }
 
   const glassDimension = {
     width: radius * 2,
     height: radius * 2,
     borderRadius: radius
-  };
+  }
 
   return (
     // component container
@@ -95,25 +95,25 @@ export default function MagnifyGlass({src, magSrc, mag=1, width=300, height=400,
       {/* background image */}
       <Image
         style={styles.normalImage}
-        source={src}>
-      </Image>
+        source={src}
+      />
 
       {/* magnifying glass */}
       <Animated.View
         {...panResponder.panHandlers}
         style={[panStyle, styles.glass, glassDimension]}
       >
-      {/* image in glass */}
+        {/* image in glass */}
         <Image
           style={[styles.zoomImage, zoomImgDimension]}
-          source={magSrc}>
-        </Image>
+          source={magSrc}
+        />
 
       </Animated.View>
     </View>
 
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   magContainer: {
@@ -138,4 +138,4 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     position: 'absolute'
   }
-});
+})
