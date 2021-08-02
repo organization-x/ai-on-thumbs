@@ -39,7 +39,7 @@ export default function Filter () {
 
         {/* Draggable filter */}
         <Draggable
-          imageSource={require('../assets/filter_drawing.png')}
+          imageSource={require('../assets/filter_drawing2.png')}
           // size of draggable filter for android
           renderSize={35}
           // original starting point of the filter on the image (top left corner)
@@ -63,7 +63,7 @@ export default function Filter () {
           {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
-              ? (<Image style={{ width: 70, height: 50 }} source={require('../assets/filter_drawing.png')} />)
+              ? (<Image style={{ width: 70, height: 50 }} source={require('../assets/filter_drawing2.png')} />)
               : null
           }
         </Draggable>
@@ -77,12 +77,26 @@ export default function Filter () {
         {
           Math.min(Math.round(1 / (xDist + yDist) * 200), 100)
         }
+
+      </Text>
+
+      {/* If found, then set the large number equation (since the target has been found) Otherwise, set the equation based on whether the filter is on the face */}
+      <Text style={styles.equation}>
+        Current Example Equation:
+        {
+
+          (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5)
+            ? '255*10+255*10+0*-10+0*-10 = large number'
+            : (((dragContainerDim.width / 2 - dragX) >= imageWidth / 6 || (dragContainerDim.width / 2 - dragX <= -1 * imageWidth / 6))
+                ? '255*0+255*0+(-10)*0+(-10)*0=0'
+                : '255*10+255*10+255*-10+255*-10 = 0')
+        }
       </Text>
 
       {/* If the inverted distance is lower than a certain threshold for both x and y coordinates, then display the answer (which the user got correct) */}
       <Text style={styles.paragraph}>
         {
-          (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5) ? 'The filter matches up closest to the nose bridge because it is a vertical line!' : ''
+          (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5) ? ('The filter matches up closest to the nose bridge because it is a vertical line!') : ''
         }
       </Text>
 
@@ -107,5 +121,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     textAlign: 'center',
     alignItems: 'center'
+  },
+  equation: {
+    fontSize: 16,
+    fontStyle: 'italic',
+    textAlign: 'center'
   }
 })
