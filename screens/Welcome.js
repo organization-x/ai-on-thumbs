@@ -1,51 +1,41 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
-import Background from '../components/Background'
-import Logo from '../components/Logo'
-import Header from '../components/Header'
-import FootPrint from '../components/FootPrint'
-import ActionButton from '../components/ActionButton'
-import * as Analytics from 'expo-firebase-analytics'
+import { StyleSheet, View, Image } from 'react-native'
+import LessonHeader from '../components/LessonHeader'
+import LessonButton from '../components/LessonButton'
+import { LinearGradient } from 'expo-linear-gradient'
+// import * as Analytics from 'expo-firebase-analytics'
 
-Analytics.setCurrentScreen('Welcome')
+// Analytics.setCurrentScreen('Welcome')
 export default function Welcome ({ navigation }) {
   return (
-    <Background>
-      <Logo style={styles.logo} />
-
-      <Header style={styles.left_align}>
-        Learn AI {'\n'}with Your Thumbs
-      </Header>
-
-      <FootPrint style={styles.left_align}>
-        Built by Teenagers for Teenagers
-      </FootPrint>
+    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+      <Image style={styles.logo} source={require('../assets/ai-on-thumbs-logo.png')} />
+      <LessonHeader>
+        AI on Thumbs
+      </LessonHeader>
 
       <View style={styles.buttonView}>
 
-        <ActionButton
-          onPress={() => navigation.navigate('Courses')}
-          title='Start learning AI'
-        />
+        <LessonButton navigation={navigation} nextScreen='ZoomScreen' buttonColor='#32B59D' buttonText='Get Started' isStart />
 
       </View>
-    </Background>
+    </LinearGradient>
   )
 }
 
 const styles = StyleSheet.create({
-  left_align: {
-    alignSelf: 'flex-start',
-    marginLeft: 10,
-    marginVertical: 5
-  },
   logo: {
-    marginVertical: 50
+    width: 150,
+    height: 150,
+    marginTop: 70
   },
   buttonView: {
-    flex: 1,
-    width: '100%',
-    justifyContent: 'flex-end',
-    alignItems: 'center'
+    marginTop: 150
+  },
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    flex: 1
   }
 })

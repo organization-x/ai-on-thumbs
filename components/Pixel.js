@@ -7,7 +7,6 @@ export default function PixelSlider () {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Pixels Are Just Numbers!</Text>
       <View style={[styles.box, { backgroundColor: `rgb(${pixelColor},${pixelColor},${pixelColor})` }]}>
         <Text style={styles.number}>{Math.floor(pixelColor)}</Text>
       </View>
@@ -28,7 +27,6 @@ export default function PixelSlider () {
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    backgroundColor: 'cornflowerblue',
     padding: 8
   },
   box: {
@@ -37,8 +35,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
-    width: 100,
-    height: 100
+    width: 125,
+    height: 125
   },
   paragraph: {
     margin: 24,

@@ -5,15 +5,12 @@ import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/R
 export default function Zoom () {
   return (
     <View style={styles.container}>
-      <View style={styles.explanation}>
-        <Text style={styles.title_text}>Investigate Yourself!</Text>
-      </View>
 
       <View style={styles.zoomableWrapper}>
         <ReactNativeZoomableView
           zoomEnabled
           maxZoom={30}
-          minZoom={1}
+          minZoom={0.8}
           zoomStep={0.25}
           initialZoom={1}
           bindToBorders
@@ -24,11 +21,10 @@ export default function Zoom () {
             resizeMode='stretch'
             source={require('../assets/image.png')}
           />
+          <Text>As you zoom in, the tiny pixels should become larger and more defined.</Text>
         </ReactNativeZoomableView>
       </View>
-      <View style={styles.explanation}>
-        <Text style={styles.title_text}>Zoom In to See Tiny Pixels</Text>
-      </View>
+
     </View>
   )
 }
