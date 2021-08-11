@@ -7,7 +7,6 @@ export default function PixelSlider () {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Pixels Are Just Numbers!</Text>
       <View style={[styles.box, { backgroundColor: `rgb(${pixelColor},${pixelColor},${pixelColor})` }]}>
         <Text style={styles.number}>{Math.floor(pixelColor)}</Text>
       </View>
@@ -20,7 +19,6 @@ export default function PixelSlider () {
         onValueChange={value => setPixelColor(value)}
       />
 
-      <Text style={styles.paragraph}>Grayscale pixel values range from 0 (black, low intensity) to 255 (white, high intensity)</Text>
     </View>
   )
 }
@@ -28,23 +26,15 @@ export default function PixelSlider () {
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    backgroundColor: 'cornflowerblue',
-    padding: 8
+    marginVertical: '20%'
   },
   box: {
-    marginTop: 50,
     marginBottom: 50,
     textAlign: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
-    width: 100,
-    height: 100
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 20,
-    fontStyle: 'italic'
-
+    width: 125,
+    height: 125
   },
   number: {
     fontSize: 50,

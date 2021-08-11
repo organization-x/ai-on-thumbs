@@ -6,6 +6,8 @@ import Courses from './screens/Courses'
 import Lessons from './screens/Lessons'
 import Try from './screens/Try'
 import Ad from './screens/Ad'
+import ZoomScreen from './screens/course1/ZoomScreen'
+import PixelScreen from './screens/course1/PixelScreen'
 
 const Stack = createStackNavigator()
 
@@ -17,6 +19,8 @@ export default function App () {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name='Welcome' component={Welcome} />
+        <Stack.Screen name='ZoomScreen' component={ZoomScreen} />
+        <Stack.Screen name='PixelScreen' component={PixelScreen} />
         <Stack.Screen name='Courses' component={Courses} />
         <Stack.Screen name='Lessons' component={Lessons} />
         <Stack.Screen name='Try' component={Try} />
