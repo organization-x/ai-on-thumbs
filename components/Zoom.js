@@ -5,7 +5,7 @@ import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/R
 export default function Zoom () {
   return (
     <View style={styles.container}>
-
+      
       <View style={styles.zoomableWrapper}>
         <ReactNativeZoomableView
           zoomEnabled
@@ -18,10 +18,8 @@ export default function Zoom () {
         >
           <Image
             style={styles.image}
-            resizeMode='stretch'
             source={require('../assets/image.png')}
           />
-          <Text>As you zoom in, the tiny pixels should become larger and more defined.</Text>
         </ReactNativeZoomableView>
       </View>
 
@@ -33,7 +31,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#e7e7e7',
-    paddingBottom: 30
   },
   explanation: {
     backgroundColor: '#6f80ff',
@@ -53,7 +50,7 @@ const styles = StyleSheet.create({
   },
   zoomView: {
     padding: 10,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
   },
   image: {
     marginBottom: 10,

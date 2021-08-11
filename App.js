@@ -6,8 +6,8 @@ import Courses from './screens/Courses'
 import Lessons from './screens/Lessons'
 import Try from './screens/Try'
 import Ad from './screens/Ad'
-import ZoomScreen from './screens/ZoomScreen'
-import PixelScreen from './screens/PixelScreen'
+import ZoomScreen from './screens/course1/ZoomScreen'
+import PixelScreen from './screens/course1/PixelScreen'
 
 const Stack = createStackNavigator()
 

@@ -21,21 +21,19 @@ const styles = StyleSheet.create({
 
   backButton: {
     marginHorizontal: 20,
-    width: '40%',
+    width: '44%',
     marginTop: 10,
     paddingTop: 10,
     paddingBottom: 10,
-    paddingHorizontal: 15,
     borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#fff'
   },
   backText: {
     color: '#fff',
     textAlign: 'center',
     paddingLeft: 10,
     paddingRight: 10,
-    fontSize: 20
+    fontSize: 20,
+    fontWeight: 'bold',
   }
 
 })

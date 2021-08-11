@@ -19,7 +19,6 @@ export default function PixelSlider () {
         onValueChange={value => setPixelColor(value)}
       />
 
-      <Text style={styles.paragraph}>Grayscale pixel values range from 0 (black, low intensity) to 255 (white, high intensity)</Text>
     </View>
   )
 }
@@ -27,22 +26,15 @@ export default function PixelSlider () {
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    padding: 8
+    marginVertical: '20%',
   },
   box: {
-    marginTop: 50,
     marginBottom: 50,
     textAlign: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
     width: 125,
-    height: 125
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 20,
-    fontStyle: 'italic'
-
+    height: 125,
   },
   number: {
     fontSize: 50,
