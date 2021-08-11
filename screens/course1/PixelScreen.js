@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import PixelSlider from '../../components/Pixel'
 import Tip from '../../components/Tip'
 import LessonHeader from '../../components/LessonHeader'
@@ -13,11 +13,11 @@ export default function PixelScreen ({ navigation }) {
       <LessonHeader>Pixel Ranges</LessonHeader>
       <Tip tipText='Move slider to change pixel number' />
 
-      <View style={{flex: 1}}>
-        <PixelSlider/>
+      <View style={{ flex: 1 }}>
+        <PixelSlider />
       </View>
 
-      <ParagraphBox text={"Grayscale pixel values range from 0 (black) to 255 (white)"}/>
+      <ParagraphBox text='Grayscale pixel values range from 0 (black) to 255 (white)' />
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='ZoomScreen' buttonColor='#8976C2' buttonText='Back' />
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 27,
-    paddingVertical: 17,
+    paddingVertical: 17
   },
   footerButtons: {
     marginBottom: 10,

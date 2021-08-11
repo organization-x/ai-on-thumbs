@@ -1,11 +1,11 @@
 import React from 'react'
-import { View, Image, Text, StyleSheet } from 'react-native'
+import { View, Image, StyleSheet } from 'react-native'
 import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView'
 
 export default function Zoom () {
   return (
     <View style={styles.container}>
-      
+
       <View style={styles.zoomableWrapper}>
         <ReactNativeZoomableView
           zoomEnabled
@@ -30,7 +30,7 @@ export default function Zoom () {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#e7e7e7',
+    backgroundColor: '#e7e7e7'
   },
   explanation: {
     backgroundColor: '#6f80ff',
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   zoomView: {
     padding: 10,
-    backgroundColor: '#fff',
+    backgroundColor: '#fff'
   },
   image: {
     marginBottom: 10,

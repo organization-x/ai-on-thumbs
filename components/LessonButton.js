@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     paddingTop: 10,
     paddingBottom: 10,
-    borderRadius: 10,
+    borderRadius: 10
   },
   backText: {
     color: '#fff',
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   }
 
 })

@@ -26,7 +26,7 @@ export default function PixelSlider () {
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    marginVertical: '20%',
+    marginVertical: '20%'
   },
   box: {
     marginBottom: 50,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     width: 125,
-    height: 125,
+    height: 125
   },
   number: {
     fontSize: 50,
