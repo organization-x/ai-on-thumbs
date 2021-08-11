@@ -19,8 +19,8 @@ export default function ZoomScreen ({ navigation }) {
       <ParagraphBox text='As you zoom in, the tiny pixels should become larger and more defined.' />
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Welcome' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='PixelScreen' buttonColor='#32B59D' buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='MagnifyScreen' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )
@@ -29,8 +29,8 @@ export default function ZoomScreen ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 27,
-    paddingVertical: 17
+    paddingHorizontal: 20,
+    paddingVertical: 15
   },
   zoomView: {
     flex: 1
@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'space-between'
   }
 })

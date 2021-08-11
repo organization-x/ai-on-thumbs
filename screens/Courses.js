@@ -1,56 +1,69 @@
-import React, { useState, useEffect } from 'react'
-import { StyleSheet, FlatList } from 'react-native'
-import Background from '../components/Background'
-import Header from '../components/Header'
-import FootPrint from '../components/FootPrint'
+import React from 'react'
+import { StyleSheet, Text, ScrollView } from 'react-native'
+
 import CourseCard from '../components/CourseCard'
+import { LinearGradient } from 'expo-linear-gradient'
 
-export default function Courses ({ navigation }) {
-  const [courses, setCourses] = useState([])
-
-  const get_courses = async () => {
-    const res = await fetch('https://invite.ai-camp.org/courses', {
-      headers: {
-        'Content-type': 'application/json',
-        Accept: 'application/json'
-      }
-    })
-    const data = await res.json()
-    const new_courses = await data.courses
-    setCourses(new_courses)
-  }
-
-  useEffect(() => { get_courses() }, [])
-
+export default function CoursesScreen ({ navigation }) {
   return (
-    <Background>
-      <Header style={styles.left_align}>Courses</Header>
-      <FootPrint style={styles.left_align}>No Experience Required</FootPrint>
-
-      <FlatList
-        style={styles.list}
-        data={courses}
-        renderItem={(item) =>
-          <CourseCard
-            item={item.item} onPress={() => {
-              navigation.navigate('Lessons', {
-                courseId: item.item.id
-              })
-            }}
-          />}
-        keyExtractor={item => item.id.toString()}
-      />
-    </Background>
+    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+      <Text style={styles.header}>Courses</Text>
+      <ScrollView style={styles.courseList}>
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='ZoomScreen'
+          gradColors={['#8233C5', '#F02FE2']}
+          title='Getting Started'
+          desc='Learn AI with zero coding experience. This course will teach you how to learn.'
+        />
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='ZoomScreen'
+          gradColors={['#8233C5', '#3C4687']}
+          title='Face Detection in Python'
+          desc='Learn AI with zero coding experience. This course will teach you how to learn.'
+        />
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='ZoomScreen'
+          gradColors={['#607CEA', '#3C4687']}
+          title='Computer Vision Basics'
+          desc='Learn AI with zero coding experience. This course will teach you how to learn.'
+        />
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='ZoomScreen'
+          gradColors={['#32B59D', '#3C4687']}
+          title='Natural Language Basics'
+          desc='Learn AI with zero coding experience. This course will teach you how to learn.'
+        />
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='ZoomScreen'
+          gradColors={['#4FCF6E', '#32B59D']}
+          title='Data Science Basics'
+          desc='Learn AI with zero coding experience. This course will teach you how to learn.'
+        />
+      </ScrollView>
+    </LinearGradient>
   )
 }
 
 const styles = StyleSheet.create({
-  left_align: {
-    alignSelf: 'flex-start',
-    marginLeft: 10,
-    marginVertical: 2
+  container: {
+    flex: 1,
+    paddingHorizontal: 27,
+    paddingVertical: 17
   },
-  list: {
-    width: '90%'
+  header: {
+    textAlign: 'left',
+    fontSize: 35,
+    color: 'white',
+    fontWeight: 'bold',
+    marginTop: 40,
+    marginBottom: 20
+  },
+  courseList: {
+    flexDirection: 'column'
   }
 })

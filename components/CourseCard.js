@@ -1,53 +1,45 @@
 import React from 'react'
-import { StyleSheet, View, Image, TouchableOpacity } from 'react-native'
-import FootPrint from './FootPrint'
-import Header from './Header'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
 
-export default function CourseCard ({ item, onPress }) {
+export default function CourseCard ({ navigation, lessonScreen, gradColors, title, desc }) {
   return (
-    <TouchableOpacity activeOpacity={0.5} style={styles.container} onPress={onPress}>
-      <Header style={styles.title}>{item.title}</Header>
-      <View style={styles.footer}>
-        <FootPrint style={styles.footerText}>{item.description}</FootPrint>
-        <Image resizeMode='cover' style={styles.image} source={{ uri: item.image }} />
-      </View>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={() => navigation.navigate(lessonScreen)}
+      style={styles.cardTouchableContainer}
+    >
+      <LinearGradient
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        colors={gradColors}
+        style={styles.cardGradientContainer}
+      >
+        <Text style={styles.courseTitle}>{title}</Text>
+        <Text style={styles.courseDesc}>{desc}</Text>
+      </LinearGradient>
     </TouchableOpacity>
+
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#55CE8C',
-    borderRadius: 20,
-    padding: 20,
-    width: '100%',
-    shadowOffset: {
-      width: 0,
-      height: 4
-    },
-    shadowRadius: 1,
-    shadowColor: 'rgba(0, 0, 0, 0.25)',
-    shadowOpacity: 1,
+  cardTouchableContainer: {
+    borderRadius: 12,
+    overflow: 'hidden',
     marginBottom: 20
   },
-  image: {
-    width: 100,
-    height: 100,
-    borderRadius: 200,
-    marginLeft: 10
+  cardGradientContainer: {
+    padding: 20
   },
-  title: {
-    fontSize: 25,
-    color: 'black',
+  courseTitle: {
+    fontSize: 22,
     fontWeight: 'bold',
+    color: 'white',
     marginBottom: 10
   },
-  footer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    width: '100%'
-  },
-  footerText: {
-    maxWidth: '70%'
+  courseDesc: {
+    fontSize: 15,
+    color: 'white'
   }
 })

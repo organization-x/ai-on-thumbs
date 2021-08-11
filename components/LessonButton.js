@@ -1,14 +1,32 @@
 import React from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
 
-export default function LessonButton ({ navigation, nextScreen, buttonText, buttonColor }) {
+export default function LessonButton ({ style, navigation, nextScreen, buttonText, buttonColor }) {
+  let gradColor
+  // allows gradient or uniform bg colors
+  // grad: ['c1', 'c2']
+  // unif: 'c1'
+  if (typeof buttonColor === 'string') {
+    gradColor = [buttonColor, buttonColor]
+  } else {
+    gradColor = buttonColor
+  }
+
   return (
     <TouchableOpacity
       onPress={() => navigation.navigate(nextScreen)}
-      style={[styles.backButton, { backgroundColor: buttonColor }]}
+      style={[styles.backButton, style]}
       underlayColor='#fff'
     >
-      <Text style={styles.backText}>{buttonText}</Text>
+      <LinearGradient
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        colors={gradColor}
+        style={styles.gradientContainer}
+      >
+        <Text style={styles.backText}>{buttonText}</Text>
+      </LinearGradient>
     </TouchableOpacity>
   )
 }
@@ -18,20 +36,18 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center'
   },
-
+  gradientContainer: {
+    paddingVertical: 10,
+    paddingHorizontal: 10
+  },
   backButton: {
-    marginHorizontal: 20,
-    width: '44%',
-    marginTop: 10,
-    paddingTop: 10,
-    paddingBottom: 10,
-    borderRadius: 10
+    width: '47%',
+    borderRadius: 10,
+    overflow: 'hidden'
   },
   backText: {
     color: '#fff',
     textAlign: 'center',
-    paddingLeft: 10,
-    paddingRight: 10,
     fontSize: 20,
     fontWeight: 'bold'
   }

@@ -174,9 +174,11 @@ export default function Login ({ navigation, setUsernameVar }) {
       {
         // if the user is not authenticated or there is an error message on sign up
         (errorMsg) !== ''
-          ? (<Text style={styles.errorMsgStyle}>
-            {errorMsg}
-          </Text>)
+          ? (
+            <Text style={styles.errorMsgStyle}>
+              {errorMsg}
+            </Text>
+            )
           : null
       }
 
