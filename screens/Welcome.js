@@ -45,6 +45,6 @@ const styles = StyleSheet.create({
     flex: 1
   },
   welcomeBtn: {
-    width: 200
+    width: 230
   }
 })

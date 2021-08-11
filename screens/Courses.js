@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   courseList: {
-    flexDirection: 'column'
+    flexDirection: 'column',
+    minHeight: 200
   }
 })
