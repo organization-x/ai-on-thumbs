@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
   logo: {
     height: '30%',
     marginVertical: 20,
-    textAlign: 'center'
   },
   buttonView: {
     flexDirection: 'row',
