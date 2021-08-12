@@ -16,12 +16,12 @@ export default function ActionButton ({ title, icon, style, ...props }) {
 
 const styles = StyleSheet.create({
   button: {
-    alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#1FBD67',
+    backgroundColor: '#8976C2',
     width: '95%',
     paddingVertical: 25,
     borderRadius: 20,
+    marginHorizontal: 20,
     marginBottom: 10,
     flexDirection: 'row',
     shadowOffset: {
@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 1
   },
   text: {
+    color: 'white',
     fontWeight: '600',
-    fontSize: 30
+    fontSize: 25
   }
 })

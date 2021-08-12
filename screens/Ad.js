@@ -1,22 +1,21 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
-import Background from '../components/Background'
-import Logo from '../components/Logo'
-import Header from '../components/Header'
+import { StyleSheet, View, Image } from 'react-native'
+import LessonHeader from '../components/LessonHeader'
 import ActionButton from '../components/ActionButton'
-import InfoCard from '../components/InfoCard'
+import ParagraphBox from '../components/ParagraphBox'
 import * as Linking from 'expo-linking'
+import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Ad ({ navigation }) {
   return (
-    <Background>
-      <Header style={styles.left_align}>Great Job!</Header>
-      <Logo style={styles.logo} />
-      <InfoCard item={{
-        title: 'Join AI-Camp!',
-        description: 'AI Camp teaches future leaders about coding, AI, how to learn, and how to work through creating impressive AI products and tech internships. Our students learn real skills. Not only do they learn real engineering and data skills and get hired at tech companies, they also learn how to use data to make decisions and how to build deep relationships with people.'
-      }}
-      />
+    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+
+      <LessonHeader style={styles.left_align}>You Completed the Course!</LessonHeader>
+
+      <Image style={styles.logo} source={require('../assets/ai-on-thumbs-logo.png')} />
+
+      <ParagraphBox text='AI Camp teaches students about coding, AI, and tech internships. Build your own AI Product with a team and deploy it into the real world with AI instructors.' />
+
       <View style={styles.buttonView}>
         <ActionButton
           style={styles.button1}
@@ -30,32 +29,36 @@ export default function Ad ({ navigation }) {
           title='Home'
         />
       </View>
-    </Background>
+
+    </LinearGradient>
   )
 }
 
 const styles = StyleSheet.create({
   left_align: {
     alignSelf: 'flex-start',
-    marginLeft: 10,
     marginVertical: 5
   },
   logo: {
-    marginVertical: 50
+    height: '30%',
+    marginVertical: 20,
   },
   buttonView: {
-    justifyContent: 'center',
-    alignItems: 'flex-end',
     flexDirection: 'row',
     marginTop: 20
   },
   button1: {
     width: '45%',
-    marginRight: 10,
     maxHeight: '90%'
   },
   button2: {
     width: '45%',
     maxHeight: '90%'
+  },
+  container: {
+    flex: 1,
+    paddingHorizontal: 30,
+    paddingVertical: 15,
+    alignItems: 'center'
   }
 })

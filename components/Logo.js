@@ -5,7 +5,7 @@ export default function Logo ({ style }) {
   return (
     <Image
       resizeMode='contain'
-      source={require('../assets/aicam-icon.png')}
+      source={require('../assets/ai-on-thumbs-logo.png')}
       style={[styles.image, style]}
     />
   )

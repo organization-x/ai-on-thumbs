@@ -4,9 +4,11 @@ import { getStatusBarHeight } from 'react-native-status-bar-height'
 
 export default function Background ({ children, style }) {
   return (
+
     <SafeAreaView style={[styles.background, style]}>
       {children}
     </SafeAreaView>
+
   )
 }
 

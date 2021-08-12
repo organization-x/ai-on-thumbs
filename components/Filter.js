@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Text, View, StyleSheet, Image, Platform } from 'react-native'
 import Draggable from 'react-native-draggable'
 
-export default function Filter () {
+export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
   // location of the draggable filter (x,y) coordinates
   const [dragX, setDragX] = useState(0)
   const [dragY, setDragY] = useState(0)
@@ -18,12 +18,21 @@ export default function Filter () {
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
+  useEffect(() => {
+    /* If found, then set the large number equation (since the target has been found) Otherwise, set the equation based on whether the filter is on the face */
+
+    if (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5){
+      setEquation('255*10+255*10+0*-10+0*-10=5100!')
+    } else if (((dragContainerDim.width / 2 - dragX) >= dragContainerDim.width / 6) || (dragContainerDim.width / 2 - dragX <= -1 * dragContainerDim.width / 6)){
+      setEquation('255*0+255*0+(-10)*0+(-10)*0=0')
+    } else {
+      setEquation('255*10+255*10+255*-10+255*-10=0')
+    }
+  })
+
   return (
 
     <View style={styles.container}>
-
-      {/* title of screen */}
-      <Text style={styles.paragraph}>Filter on Image</Text>
 
       {/* View that contains an image and a draggable filter ron top of it */}
       <View
@@ -35,7 +44,10 @@ export default function Filter () {
       >
 
         {/* main image of face */}
-        <Image style={{ width: imageWidth, height: imageHeight }} source={require('../assets/grayscale_face_image.jpg')} />
+        <Image
+          style={{ width: imageWidth, height: imageHeight }}
+          source={require('../assets/grayscale_face_image.jpg')}
+        />
 
         {/* Draggable filter */}
         <Draggable
@@ -52,11 +64,11 @@ export default function Filter () {
           maxY={dragContainerDim.height / 2 + imageHeight / 2}
           /* set the draggable filter's state location when the user releases the filter. Calculate the distance between the filter and the nose bridge (where the filter 'similarity' is highest) */
           onDragRelease={(e) => {
-            setDragX(e.nativeEvent.pageX)
-            setDragY(e.nativeEvent.pageY)
+            setDragX(e.nativeEvent.pageX - imageXOffset)
+            setDragY(e.nativeEvent.pageY - imageYOffset)
             // target of filter is near the middle of the image (nose bridge)
             setXDist(Math.abs(dragContainerDim.width / 2 - dragX))
-            setYDist(Math.abs(dragContainerDim.height / 1.1 - dragY))
+            setYDist(Math.abs(dragContainerDim.height / 1.8 - dragY))
           }}
         >
 
@@ -80,25 +92,12 @@ export default function Filter () {
 
       </Text>
 
-      {/* If found, then set the large number equation (since the target has been found) Otherwise, set the equation based on whether the filter is on the face */}
-      <Text style={styles.equation}>
-        Current Example Equation:
-        {
-
-          (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5)
-            ? '255*10+255*10+0*-10+0*-10 = large number'
-            : (((dragContainerDim.width / 2 - dragX) >= imageWidth / 6 || (dragContainerDim.width / 2 - dragX <= -1 * imageWidth / 6))
-                ? '255*0+255*0+(-10)*0+(-10)*0=0'
-                : '255*10+255*10+255*-10+255*-10 = 0')
-        }
-      </Text>
-
       {/* If the inverted distance is lower than a certain threshold for both x and y coordinates, then display the answer (which the user got correct) */}
       <Text style={styles.paragraph}>
         {
           (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5)
-            ? ('The filter matches up closest to the nose bridge because it is a vertical line!')
-            : ''
+            ? ('The filter matches up closest to the nose bridge because it is a vertical white line!')
+            : 'The filter has still not matched with the correct facial feature'
         }
       </Text>
 
@@ -108,14 +107,14 @@ export default function Filter () {
 
 const styles = StyleSheet.create({
   container: {
+    marginVertical: 20,
     justifyContent: 'center',
     paddingTop: 15,
-    backgroundColor: '#ecf0f1',
     padding: 8
   },
   paragraph: {
-    margin: 24,
-    fontSize: 24,
+    marginVertical: 8,
+    fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center'
   },
