@@ -66,7 +66,7 @@ export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
             setDragY(e.nativeEvent.pageY - imageYOffset)
             // target of filter is near the middle of the image (nose bridge)
             setXDist(Math.abs(dragContainerDim.width / 2 - dragX))
-            setYDist(Math.abs(dragContainerDim.height / 2 - dragY))
+            setYDist(Math.abs(dragContainerDim.height / 1.8 - dragY))
           }}
         >
 
@@ -109,7 +109,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingTop: 15,
     padding: 8,
-    flex: 1
   },
   paragraph: {
     marginVertical: 8,
