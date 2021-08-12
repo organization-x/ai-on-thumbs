@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Text, View, StyleSheet, Image, Platform, PixelRatio } from 'react-native'
+import { Text, View, StyleSheet, Image, Platform } from 'react-native'
 import Draggable from 'react-native-draggable'
-import ParagraphBox from './ParagraphBox'
 
-export default function Filter ( { setEquation, imageXOffset, imageYOffset } ) {
+export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
   // location of the draggable filter (x,y) coordinates
   const [dragX, setDragX] = useState(0)
   const [dragY, setDragY] = useState(0)
@@ -19,16 +18,14 @@ export default function Filter ( { setEquation, imageXOffset, imageYOffset } ) {
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
-  useEffect(()=>{
+  useEffect(() => {
     /* If found, then set the large number equation (since the target has been found) Otherwise, set the equation based on whether the filter is on the face */
-          
 
     (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5)
       ? setEquation('255*10+255*10+0*-10+0*-10=5100!')
       : (((dragContainerDim.width / 2 - dragX) >= dragContainerDim.width / 6 || (dragContainerDim.width / 2 - dragX <= -1 * dragContainerDim.width / 6))
           ? setEquation('255*0+255*0+(-10)*0+(-10)*0=0')
           : setEquation('255*10+255*10+255*-10+255*-10=0'))
-            
   })
 
   return (
@@ -45,9 +42,10 @@ export default function Filter ( { setEquation, imageXOffset, imageYOffset } ) {
       >
 
         {/* main image of face */}
-        <Image style={{ width: imageWidth, height: imageHeight }}
-        
-        source={require('../assets/grayscale_face_image.jpg')} />
+        <Image
+          style={{ width: imageWidth, height: imageHeight }}
+          source={require('../assets/grayscale_face_image.jpg')}
+        />
 
         {/* Draggable filter */}
         <Draggable
@@ -64,8 +62,8 @@ export default function Filter ( { setEquation, imageXOffset, imageYOffset } ) {
           maxY={dragContainerDim.height / 2 + imageHeight / 2}
           /* set the draggable filter's state location when the user releases the filter. Calculate the distance between the filter and the nose bridge (where the filter 'similarity' is highest) */
           onDragRelease={(e) => {
-            setDragX(e.nativeEvent.pageX-imageXOffset)
-            setDragY(e.nativeEvent.pageY-imageYOffset)
+            setDragX(e.nativeEvent.pageX - imageXOffset)
+            setDragY(e.nativeEvent.pageY - imageYOffset)
             // target of filter is near the middle of the image (nose bridge)
             setXDist(Math.abs(dragContainerDim.width / 2 - dragX))
             setYDist(Math.abs(dragContainerDim.height / 2 - dragY))
@@ -88,20 +86,18 @@ export default function Filter ( { setEquation, imageXOffset, imageYOffset } ) {
         Current Similarity Match:
         {
           Math.min(Math.round(1 / (xDist + yDist) * 200), 100)
-        } 
+        }
 
       </Text>
 
-            {/* If the inverted distance is lower than a certain threshold for both x and y coordinates, then display the answer (which the user got correct) */}
-            <Text style={styles.paragraph}>
+      {/* If the inverted distance is lower than a certain threshold for both x and y coordinates, then display the answer (which the user got correct) */}
+      <Text style={styles.paragraph}>
         {
           (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5)
             ? ('The filter matches up closest to the nose bridge because it is a vertical white line!')
             : 'The filter has still not matched with the correct facial feature'
         }
       </Text>
-
-
 
     </View>
   )
@@ -112,7 +108,8 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     justifyContent: 'center',
     paddingTop: 15,
-    padding: 8
+    padding: 8,
+    flex: 1
   },
   paragraph: {
     marginVertical: 8,
