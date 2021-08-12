@@ -1,12 +1,15 @@
 import React from 'react'
 import { StyleSheet, SafeAreaView, Platform } from 'react-native'
 import { getStatusBarHeight } from 'react-native-status-bar-height'
+import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Background ({ children, style }) {
   return (
+
     <SafeAreaView style={[styles.background, style]}>
-      {children}
+        {children}
     </SafeAreaView>
+    
   )
 }
 
