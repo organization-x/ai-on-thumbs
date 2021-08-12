@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     justifyContent: 'center',
     paddingTop: 15,
-    padding: 8,
+    padding: 8
   },
   paragraph: {
     marginVertical: 8,
