@@ -20,8 +20,8 @@ export default function PixelScreen ({ navigation }) {
       <ParagraphBox text='Grayscale pixel values range from 0 (black) to 255 (white)' />
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='ZoomScreen' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Welcome' buttonColor='#32B59D' buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='MagnifyScreen' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Welcome' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )
@@ -30,12 +30,12 @@ export default function PixelScreen ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 27,
-    paddingVertical: 17
+    paddingHorizontal: 20,
+    paddingVertical: 15
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'space-between'
   }
 })

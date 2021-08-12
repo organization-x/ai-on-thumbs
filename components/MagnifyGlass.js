@@ -15,7 +15,11 @@ import {
 // height (opt): height of component
 // radius (opt): radius of the glass
 
-export default function MagnifyGlass ({ src, magSrc, mag = 1, width = 300, height = 400, radius = 40 }) {
+export default function MagnifyGlass ({ src, magSrc, mag = 1, radius = 40 }) {
+  // dynamically adjust width and height
+  const [width, setWidth] = useState(400)
+  const [height, setHeight] = useState(300)
+
   // coordinates to place glass in center
   const centerX = width / 2 - radius
   const centerY = height / 2 - radius
@@ -77,20 +81,21 @@ export default function MagnifyGlass ({ src, magSrc, mag = 1, width = 300, heigh
     left: shiftX
   }
 
-  const magContainerDimension = {
-    width: width,
-    height: height
-  }
-
   const glassDimension = {
     width: radius * 2,
     height: radius * 2,
     borderRadius: radius
   }
 
+  const onLayout = (event) => {
+    const { width, height } = event.nativeEvent.layout
+    setWidth(width)
+    setHeight(height)
+  }
+
   return (
     // component container
-    <View style={[styles.magContainer, magContainerDimension]}>
+    <View onLayout={onLayout} style={[styles.magContainer]}>
 
       {/* background image */}
       <Image
@@ -117,7 +122,8 @@ export default function MagnifyGlass ({ src, magSrc, mag = 1, width = 300, heigh
 
 const styles = StyleSheet.create({
   magContainer: {
-    position: 'relative'
+    position: 'relative',
+    flex: 1
   },
   normalImage: {
     width: '100%',

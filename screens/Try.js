@@ -131,7 +131,7 @@ export default function Try ({ navigation }) {
         : imageBase64
           ? <View style={styles.imageContainer}>
             <Image style={styles.image} source={{ uri: `data:image/png;base64,${imageBase64}` }} />
-          </View>
+            </View>
           : null}
 
       <View style={styles.buttonView}>

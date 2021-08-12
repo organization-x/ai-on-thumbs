@@ -12,8 +12,8 @@ export default function ParagraphBox ({ text }) {
 const styles = StyleSheet.create({
   box: {
     marginVertical: 20,
-    backgroundColor: '#968AFC',
-    borderRadius: 15,
+    backgroundColor: '#8378e8',
+    borderRadius: 10,
     padding: 15
   },
   paragraph: {

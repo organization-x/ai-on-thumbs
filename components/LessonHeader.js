@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
   header: {
     marginTop: 30,
     justifyContent: 'center',
-    textAlign: 'center',
-    fontSize: 40,
+    textAlign: 'left',
+    fontSize: 35,
     color: 'white',
     fontWeight: 'bold'
   }
