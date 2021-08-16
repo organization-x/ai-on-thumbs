@@ -18,14 +18,14 @@ export default function Tip ({ tipText }) {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 20,
+    marginVertical: 13,
     backgroundColor: '#6357C9',
     borderRadius: 15,
     padding: 15
   },
   explanation: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 18,
     marginTop: 10
   },
   tip: {

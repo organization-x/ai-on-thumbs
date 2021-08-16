@@ -8,6 +8,7 @@ import Courses from './screens/Courses'
 import ZoomScreen from './screens/course1/ZoomScreen'
 import PixelScreen from './screens/course1/PixelScreen'
 import MagnifyScreen from './screens/course1/MagnifyScreen'
+import CalcContrastScreen from './screens/course1/CalcContrastScreen'
 import FilterScreen from './screens/course1/FilterScreen'
 
 const Stack = createStackNavigator()
@@ -24,6 +25,7 @@ export default function App () {
         <Stack.Screen name='ZoomScreen' component={ZoomScreen} />
         <Stack.Screen name='MagnifyScreen' component={MagnifyScreen} />
         <Stack.Screen name='PixelScreen' component={PixelScreen} />
+        <Stack.Screen name='CalcContrastScreen' component={CalcContrastScreen} />
         <Stack.Screen name='FilterScreen' component={FilterScreen} />
         <Stack.Screen name='Ad' component={Ad} />
       </Stack.Navigator>

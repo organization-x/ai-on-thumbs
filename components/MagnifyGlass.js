@@ -17,12 +17,12 @@ import {
 
 export default function MagnifyGlass ({ src, magSrc, mag = 1, radius = 40 }) {
   // dynamically adjust width and height
-  const [width, setWidth] = useState(400)
-  const [height, setHeight] = useState(300)
+  const [width, setWidth] = useState(120)
+  const [height, setHeight] = useState(120)
 
   // coordinates to place glass in center
-  const centerX = width / 2 - radius
-  const centerY = height / 2 - radius
+  const centerX = width / 2 - radius - 3
+  const centerY = height / 2 - radius - 3
 
   // relative coord for glass img to align it with the normal img instead of the glass's coords
   const magCenterX = -1 * ((width / 2) * mag - radius)
