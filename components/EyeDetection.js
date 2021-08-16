@@ -18,16 +18,13 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
-  useEffect(()=>{
-    
-    if (Math.round(1 / xDist * 100) > 4.2 && Math.round((1 / yDist * 100)) > 4.2){
+  useEffect(() => {
+    if (Math.round(1 / xDist * 100) > 4.2 && Math.round((1 / yDist * 100)) > 4.2) {
       setFilterText('The filter matches up closest to the eyes because they form a horizontal line!')
       setFound(true)
-
     } else {
       setFilterText('The filter has still not matched with the correct facial feature')
     }
-  
   })
 
   return (
@@ -52,10 +49,8 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
         {/* Draggable filter */}
         <Draggable
           imageSource={require('../assets/horizontal_filter.png')}
-
-          disabled={found ? true : false}
-
-          animatedViewProps={{opacity: 0.5}}
+          disabled={!!found}
+          animatedViewProps={{ opacity: 0.5 }}
           // size of draggable filter for android
           renderSize={50}
           // original starting point of the filter on the image (top left corner)

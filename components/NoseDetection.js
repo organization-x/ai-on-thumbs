@@ -18,16 +18,13 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
-  useEffect(()=>{
-    
-    if (Math.round(1 / xDist * 100) > 4.2 && Math.round((1 / yDist * 100)) > 4.2){
+  useEffect(() => {
+    if (Math.round(1 / xDist * 100) > 4.2 && Math.round((1 / yDist * 100)) > 4.2) {
       setFilterText('The filter matches up closest to the nose bridge because it forms a vertical line!')
       setFound(true)
-
     } else {
       setFilterText('You detected the eyes in this region. Are there any other features here?')
     }
-  
   })
 
   return (
@@ -52,10 +49,8 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
         {/* Draggable filter */}
         <Draggable
           imageSource={require('../assets/vertical_filter.png')}
-
-          disabled={found ? true : false}
-
-          animatedViewProps={{opacity: 0.5}}
+          disabled={!!found}
+          animatedViewProps={{ opacity: 0.5 }}
           // size of draggable filter for android
           renderSize={45}
           // original starting point of the filter on the image (top left corner)

@@ -21,9 +21,9 @@ export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
   useEffect(() => {
     /* If found, then set the large number equation (since the target has been found) Otherwise, set the equation based on whether the filter is on the face */
 
-    if (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5){
+    if (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5) {
       setEquation('255*10+255*10+0*-10+0*-10=5100!')
-    } else if (((dragContainerDim.width / 2 - dragX) >= dragContainerDim.width / 6) || (dragContainerDim.width / 2 - dragX <= -1 * dragContainerDim.width / 6)){
+    } else if (((dragContainerDim.width / 2 - dragX) >= dragContainerDim.width / 6) || (dragContainerDim.width / 2 - dragX <= -1 * dragContainerDim.width / 6)) {
       setEquation('255*0+255*0+(-10)*0+(-10)*0=0')
     } else {
       setEquation('255*10+255*10+255*-10+255*-10=0')

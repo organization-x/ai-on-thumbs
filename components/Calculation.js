@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Text, View, StyleSheet, Image, Platform, ViewBase } from 'react-native'
+import { View, StyleSheet, Image, Platform } from 'react-native'
 import Draggable from 'react-native-draggable'
 
 export default function Calculation ({ setCalculations, imageXOffset, imageYOffset }) {
@@ -18,11 +18,10 @@ export default function Calculation ({ setCalculations, imageXOffset, imageYOffs
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
+  /* Invert the distance between the filter and its target. The smaller the distance the higher the 'calculations' because calculations become more complex (attention cascade.) Also, round to the nearest integer and then min with a large number because sometimes inversion can cause division by a very small number (and thus grow to infinity). */
 
-    /* Invert the distance between the filter and its target. The smaller the distance the higher the 'calculations' because calculations become more complex (attention cascade.) Also, round to the nearest integer and then min with a large number because sometimes inversion can cause division by a very small number (and thus grow to infinity). */
-
-  useEffect(()=>{
-    setCalculations(Math.round((Math.min(100389197,Math.max(((1 / (xDist + yDist) * 50000)**2) , 1829))/100) ** 1.4).toLocaleString('en'))   ;
+  useEffect(() => {
+    setCalculations(Math.round((Math.min(100389197, Math.max(((1 / (xDist + yDist) * 50000) ** 2), 1829)) / 100) ** 1.4).toLocaleString('en'))
   })
 
   return (
@@ -40,21 +39,18 @@ export default function Calculation ({ setCalculations, imageXOffset, imageYOffs
 
         {/* main image of face */}
         <Image
-          style={{ width: imageWidth, height: imageHeight}}
+          style={{ width: imageWidth, height: imageHeight }}
           source={require('../assets/obama_face_img.png')}
         />
-        
+
         {/* Draggable filter */}
         <Draggable
-
           imageSource={require('../assets/red_box.png')}
-         
           // size of draggable filter for android
           renderSize={130}
           // original starting point of the filter on the image (top left corner)
           x={dragContainerDim.width / 2 - imageWidth / 2}
           y={dragContainerDim.height / 2 - imageHeight / 2}
-
           /* set the minimum and maximum bounds where the draggable item can go to the bounds of the actual image */
           maxX={dragContainerDim.width / 2 + imageWidth / 2}
           minX={dragContainerDim.width / 2 - imageWidth / 2}
@@ -68,10 +64,9 @@ export default function Calculation ({ setCalculations, imageXOffset, imageYOffs
             setXDist(Math.abs(dragContainerDim.width / 1.88 - dragX))
             setYDist(Math.abs(dragContainerDim.height / 2.2 - dragY))
           }}
-          
-          animatedViewProps={{opacity: 0.3}}
+          animatedViewProps={{ opacity: 0.3 }}
         >
-                      {
+          {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
               ? (<Image style={{ width: 120, height: 140 }} source={require('../assets/red_box.png')} />)
@@ -79,8 +74,7 @@ export default function Calculation ({ setCalculations, imageXOffset, imageYOffs
           }
         </Draggable>
 
-
-    </View>
+      </View>
     </View>
   )
 }
@@ -102,12 +96,12 @@ const styles = StyleSheet.create({
   dragContainer: {
     justifyContent: 'center',
     textAlign: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   equation: {
     fontSize: 16,
     fontStyle: 'italic',
     textAlign: 'center'
-  },
+  }
 
 })

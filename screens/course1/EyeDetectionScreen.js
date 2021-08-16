@@ -8,13 +8,12 @@ import ParagraphBox from '../../components/ParagraphBox'
 import { LinearGradient } from 'expo-linear-gradient'
 
 export default function EyeDetectionScreen ({ navigation }) {
-
   const [imageXOffset, setImageXOffset] = useState(0)
   const [imageYOffset, setImageYOffset] = useState(0)
 
-  const [filterText, setFilterText] = useState('');
+  const [filterText, setFilterText] = useState('')
 
-  const [found, setFound] = useState(false);
+  const [found, setFound] = useState(false)
 
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
@@ -36,7 +35,7 @@ export default function EyeDetectionScreen ({ navigation }) {
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Calculation' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='NoseDetectionScreen' buttonColor={found ? ['#32B59D', '#3AC55B'] : '#808080'} buttonText={found ? 'Continue' : "Not Found"} />
+        <LessonButton navigation={navigation} nextScreen='NoseDetectionScreen' buttonColor={found ? ['#32B59D', '#3AC55B'] : '#808080'} buttonText={found ? 'Continue' : 'Not Found'} />
       </View>
     </LinearGradient>
   )
