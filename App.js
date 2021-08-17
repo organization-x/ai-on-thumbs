@@ -29,8 +29,8 @@ export default function App () {
         <Stack.Screen name='ZoomScreen' component={ZoomScreen} />
         <Stack.Screen name='MagnifyScreen' component={MagnifyScreen} />
         <Stack.Screen name='PixelScreen' component={PixelScreen} />
-        <Stack.Screen name="FaceDetectionBasics" component={FaceDetectionBasics} />
-        <Stack.Screen name="HowContrastWorks" component={HowContrastWorks} />
+        <Stack.Screen name='FaceDetectionBasics' component={FaceDetectionBasics} />
+        <Stack.Screen name='HowContrastWorks' component={HowContrastWorks} />
         <Stack.Screen name='Calculation' component={CalculationScreen} />
         <Stack.Screen name='FaceFoundScreen' component={FaceFoundScreen} />
         <Stack.Screen name='EyeDetectionScreen' component={EyeDetectionScreen} />

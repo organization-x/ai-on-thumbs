@@ -14,7 +14,7 @@ export default function FaceDetectionBasics ({ navigation }) {
 
       <View style={[styles.imageContainer]}>
 
-          <Image source={require('../../assets/detection_basics.png')} style={{flex: 1, width: '100%'}}/>
+        <Image source={require('../../assets/detection_basics.png')} style={{ flex: 1, width: '100%' }} />
 
       </View>
 

@@ -14,7 +14,7 @@ export default function HowContrastWorks ({ navigation }) {
 
       <View style={[styles.imageContainer]}>
 
-          <Image source={require('../../assets/how_contrast_works.png')} style={{flex: 1, width: '100%'}}/>
+        <Image source={require('../../assets/how_contrast_works.png')} style={{ flex: 1, width: '100%' }} />
 
       </View>
 
