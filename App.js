@@ -12,6 +12,8 @@ import CalculationScreen from './screens/course1/CalculationScreen'
 import EyeDetectionScreen from './screens/course1/EyeDetectionScreen'
 import NoseDetectionScreen from './screens/course1/NoseDetectionScreen'
 import FaceFoundScreen from './screens/course1/FaceFoundScreen'
+import HowContrastWorks from './screens/course1/HowContrastWorks'
+import FaceDetectionBasics from './screens/course1/FaceDetectionBasics'
 
 const Stack = createStackNavigator()
 
@@ -27,6 +29,8 @@ export default function App () {
         <Stack.Screen name='ZoomScreen' component={ZoomScreen} />
         <Stack.Screen name='MagnifyScreen' component={MagnifyScreen} />
         <Stack.Screen name='PixelScreen' component={PixelScreen} />
+        <Stack.Screen name="FaceDetectionBasics" component={FaceDetectionBasics} />
+        <Stack.Screen name="HowContrastWorks" component={HowContrastWorks} />
         <Stack.Screen name='Calculation' component={CalculationScreen} />
         <Stack.Screen name='FaceFoundScreen' component={FaceFoundScreen} />
         <Stack.Screen name='EyeDetectionScreen' component={EyeDetectionScreen} />
