@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     height: '30%',
-    marginVertical: 20,
+    marginVertical: 20
   },
   buttonView: {
     flexDirection: 'row',

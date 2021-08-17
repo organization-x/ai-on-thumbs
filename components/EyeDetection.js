@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Text, View, StyleSheet, Image, Platform } from 'react-native'
 import Draggable from 'react-native-draggable'
 
-export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
+export default function EyeDetection ({ found, setFound, setFilterText, imageXOffset, imageYOffset }) {
   // location of the draggable filter (x,y) coordinates
   const [dragX, setDragX] = useState(0)
   const [dragY, setDragY] = useState(0)
@@ -13,20 +13,17 @@ export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
 
   // height and width of image (used to perform calculations for target of draggable filter)
   const imageWidth = 300
-  const imageHeight = 200
+  const imageHeight = 350
 
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
   useEffect(() => {
-    /* If found, then set the large number equation (since the target has been found) Otherwise, set the equation based on whether the filter is on the face */
-
-    if (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5) {
-      setEquation('255*10+255*10+0*-10+0*-10=5100!')
-    } else if (((dragContainerDim.width / 2 - dragX) >= dragContainerDim.width / 6) || (dragContainerDim.width / 2 - dragX <= -1 * dragContainerDim.width / 6)) {
-      setEquation('255*0+255*0+(-10)*0+(-10)*0=0')
+    if (Math.round(1 / xDist * 100) > 4.2 && Math.round((1 / yDist * 100)) > 4.2) {
+      setFilterText('The filter matches up closest to the eyes because they form a horizontal line!')
+      setFound(true)
     } else {
-      setEquation('255*10+255*10+255*-10+255*-10=0')
+      setFilterText('The filter has still not matched with the correct facial feature')
     }
   })
 
@@ -46,14 +43,16 @@ export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
         {/* main image of face */}
         <Image
           style={{ width: imageWidth, height: imageHeight }}
-          source={require('../assets/grayscale_face_image.jpg')}
+          source={require('../assets/obama_face_img.png')}
         />
 
         {/* Draggable filter */}
         <Draggable
-          imageSource={require('../assets/filter_drawing2.png')}
+          imageSource={require('../assets/horizontal_filter.png')}
+          disabled={!!found}
+          animatedViewProps={{ opacity: 0.5 }}
           // size of draggable filter for android
-          renderSize={35}
+          renderSize={50}
           // original starting point of the filter on the image (top left corner)
           x={dragContainerDim.width / 2 - imageWidth / 2}
           y={dragContainerDim.height / 2 - imageHeight / 2}
@@ -67,22 +66,20 @@ export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
             setDragX(e.nativeEvent.pageX - imageXOffset)
             setDragY(e.nativeEvent.pageY - imageYOffset)
             // target of filter is near the middle of the image (nose bridge)
-            setXDist(Math.abs(dragContainerDim.width / 2 - dragX))
-            setYDist(Math.abs(dragContainerDim.height / 1.8 - dragY))
+            setXDist(Math.abs(dragContainerDim.width / 1.88 - dragX))
+            setYDist(Math.abs(dragContainerDim.height / 2.5 - dragY))
           }}
         >
 
           {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
-              ? (<Image style={{ width: 70, height: 50 }} source={require('../assets/filter_drawing2.png')} />)
+              ? (<Image style={{ width: 90, height: 90 }} source={require('../assets/horizontal_filter.png')} />)
               : null
           }
         </Draggable>
 
       </View>
-
-      {/* Invert the distance between the filter and its target. The smaller the distance the higher the 'similarity' Also, round to the nearest integer and then min with 100 because sometimes inversion can cause division by a very small number (and thus grow to infinity) */}
 
       <Text style={styles.paragraph}>
         Current Similarity Match:
@@ -90,15 +87,6 @@ export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
           Math.min(Math.round(1 / (xDist + yDist) * 200), 100)
         }
 
-      </Text>
-
-      {/* If the inverted distance is lower than a certain threshold for both x and y coordinates, then display the answer (which the user got correct) */}
-      <Text style={styles.paragraph}>
-        {
-          (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 5)
-            ? ('The filter matches up closest to the nose bridge because it is a vertical white line!')
-            : 'The filter has still not matched with the correct facial feature'
-        }
       </Text>
 
     </View>
