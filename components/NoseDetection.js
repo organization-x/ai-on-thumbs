@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Text, View, StyleSheet, Image, Platform } from 'react-native'
+import { Text, View, StyleSheet, Image, Platform, Dimensions } from 'react-native'
 import Draggable from 'react-native-draggable'
 
 export default function NoseDetection ({ found, setFound, setFilterText, imageXOffset, imageYOffset }) {
@@ -12,8 +12,8 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
   const [yDist, setYDist] = useState(100)
 
   // height and width of image (used to perform calculations for target of draggable filter)
-  const imageWidth = 300
-  const imageHeight = 350
+  const imageWidth = Dimensions.get('window').width / 1.5
+  const imageHeight = Dimensions.get('window').height / 3
 
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
@@ -74,7 +74,7 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
           {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
-              ? (<Image style={{ width: 77, height: 60 }} source={require('../assets/vertical_filter.png')} />)
+              ? (<Image style={ styles.filter } source={require('../assets/vertical_filter.png')} />)
               : null
           }
         </Draggable>
@@ -96,9 +96,7 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
 const styles = StyleSheet.create({
   container: {
     marginVertical: 20,
-    justifyContent: 'center',
-    paddingTop: 15,
-    padding: 8
+    justifyContent: 'center'
   },
   paragraph: {
     marginVertical: 8,
@@ -115,5 +113,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontStyle: 'italic',
     textAlign: 'center'
+  },
+  filter: {
+    width: Dimensions.get('window').width / 6,
+    height: Dimensions.get('window').height / 8,
+    resizeMode: 'contain'
   }
 })

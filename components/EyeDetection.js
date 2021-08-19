@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Text, View, StyleSheet, Image, Platform } from 'react-native'
+import { Text, View, StyleSheet, Image, Platform, Dimensions } from 'react-native'
 import Draggable from 'react-native-draggable'
 
 export default function EyeDetection ({ found, setFound, setFilterText, imageXOffset, imageYOffset }) {
@@ -12,8 +12,8 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
   const [yDist, setYDist] = useState(100)
 
   // height and width of image (used to perform calculations for target of draggable filter)
-  const imageWidth = 300
-  const imageHeight = 350
+  const imageWidth = Dimensions.get('window').width / 1.5
+  const imageHeight = Dimensions.get('window').height / 3
 
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
@@ -66,15 +66,15 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
             setDragX(e.nativeEvent.pageX - imageXOffset)
             setDragY(e.nativeEvent.pageY - imageYOffset)
             // target of filter is near the middle of the image (nose bridge)
-            setXDist(Math.abs(dragContainerDim.width / 1.88 - dragX))
-            setYDist(Math.abs(dragContainerDim.height / 2.5 - dragY))
+            setXDist(Math.abs(dragContainerDim.width / 1.6 - dragX))
+            setYDist(Math.abs(dragContainerDim.height / 3.2 - dragY))
           }}
         >
 
           {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
-              ? (<Image style={{ width: 90, height: 90 }} source={require('../assets/horizontal_filter.png')} />)
+              ? (<Image style={ styles.filterImage } source={require('../assets/horizontal_filter.png')} />)
               : null
           }
         </Draggable>
@@ -115,5 +115,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontStyle: 'italic',
     textAlign: 'center'
+  },
+  filterImage: {
+    width: Dimensions.get('window').width / 5,
+    height: Dimensions.get('window').height / 6,
+    resizeMode: 'contain'
   }
 })
