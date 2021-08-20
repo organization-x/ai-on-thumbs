@@ -19,7 +19,7 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
   useEffect(() => {
-    if (Math.round(1 / xDist * 100) > 4.2 && Math.round((1 / yDist * 100)) > 4.2) {
+    if (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 4.4) {
       setFilterText('The filter matches up closest to the nose bridge because it forms a vertical line!')
       setFound(true)
     } else {
@@ -54,27 +54,27 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
           // size of draggable filter for android
           renderSize={45}
           // original starting point of the filter on the image (top left corner)
-          x={dragContainerDim.width / 2 - imageWidth / 4}
+          x={dragContainerDim.width / 2 - imageWidth / 4.5}
           y={dragContainerDim.height / 2 - imageHeight / 2.4}
           /* set the minimum and maximum bounds where the draggable item can go to the bounds of the actual image */
-          maxX={dragContainerDim.width / 2 + imageWidth / 3.1}
-          minX={dragContainerDim.width / 2 - imageWidth / 4}
-          minY={dragContainerDim.height / 2 - imageHeight / 2.4}
+          maxX={dragContainerDim.width / 2 + imageWidth / 3.4}
+          minX={dragContainerDim.width / 2 - imageWidth / 4.5}
+          minY={dragContainerDim.height / 2 - imageHeight / 2.31 - ((1 / Dimensions.get('window').height) ** 7 * (10 ** 20.45))}
           maxY={dragContainerDim.height / 2 + imageHeight / 15}
           /* set the draggable filter's state location when the user releases the filter. Calculate the distance between the filter and the nose bridge (where the filter 'similarity' is highest) */
           onDragRelease={(e) => {
             setDragX(e.nativeEvent.pageX - imageXOffset)
             setDragY(e.nativeEvent.pageY - imageYOffset)
             // target of filter is near the middle of the image (nose bridge)
-            setXDist(Math.abs(dragContainerDim.width / 1.88 - dragX))
-            setYDist(Math.abs(dragContainerDim.height / 2.3 - dragY))
+            setXDist(Math.abs(dragContainerDim.width / 1.78 - dragX))
+            setYDist(Math.abs(dragContainerDim.height / 2.4 - dragY))
           }}
         >
 
           {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
-              ? (<Image style={ styles.filter } source={require('../assets/vertical_filter.png')} />)
+              ? (<Image style={styles.filterImage} source={require('../assets/vertical_filter.png')} />)
               : null
           }
         </Draggable>
@@ -96,7 +96,9 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
 const styles = StyleSheet.create({
   container: {
     marginVertical: 20,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingTop: 15,
+    padding: 8
   },
   paragraph: {
     marginVertical: 8,
@@ -114,9 +116,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     textAlign: 'center'
   },
-  filter: {
-    width: Dimensions.get('window').width / 6,
-    height: Dimensions.get('window').height / 8,
-    resizeMode: 'contain'
+  filterImage: {
+    width: Dimensions.get('window').width / 7,
+    height: Dimensions.get('window').width / 9.33
   }
 })

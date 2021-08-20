@@ -61,15 +61,15 @@ export default function Calculation ({ setCalculations, imageXOffset, imageYOffs
             setDragX(e.nativeEvent.pageX - imageXOffset)
             setDragY(e.nativeEvent.pageY - imageYOffset)
             // target of filter is near the middle of the image (nose bridge)
-            setXDist(Math.abs(dragContainerDim.width / 1.6 - dragX))
-            setYDist(Math.abs(dragContainerDim.height / 1.8 - dragY))
+            setXDist(Math.abs(dragContainerDim.width / 2 - dragX))
+            setYDist(Math.abs(dragContainerDim.height / 2.3 - dragY))
           }}
           animatedViewProps={{ opacity: 0.3 }}
         >
           {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
-              ? (<Image style={ styles.filterImage } source={require('../assets/red_box.png')} />)
+              ? (<Image style={styles.filterImage} source={require('../assets/red_box.png')} />)
               : null
           }
         </Draggable>
@@ -102,9 +102,8 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   filterImage: {
-    width: Dimensions.get('window').width / 2.5,
-    height: Dimensions.get('window').height / 4.5,
-    resizeMode: 'contain'
+    width: Dimensions.get('window').width / 3.9,
+    height: Dimensions.get('window').width / 3.3
   }
 
 })
