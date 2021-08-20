@@ -32,7 +32,7 @@ export default function RedComplexityScreen2 ({ navigation }) {
           answers={['yes', 'no']}
           correctAnswer='no'
           cols={2}
-          handleChoice={()=>{}}
+          handleChoice={() => {}}
         />
       </View>
 

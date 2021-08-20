@@ -18,7 +18,7 @@ export default function RedComplexityScreen1 ({ navigation }) {
         <Text style={styles.interactiveTitle}>Integral Image</Text>
         <IntImageAnim
           boxes={['a', 'b', 'c', 'd']}
-          animate={true}
+          animate
           style={styles.interactiveComponent}
         />
         <Text style={styles.interactiveCaption}>Areas: A, B, C, & D</Text>

@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 
 import IntImageAnim from '../../components/IntImageAnim'
-import GridMCQ from '../../components/GridMCQ'
 import Tip from '../../components/Tip'
 import LessonHeader from '../../components/LessonHeader'
 import LessonButton from '../../components/LessonButton'

@@ -5,11 +5,10 @@ import { Animated, Easing, StyleSheet, View, Text } from 'react-native'
 // boxes: array of which boxes ['a','b','c','d'] to include
 // animate: whether to animate fadein-fadeout effects
 
-export default function IntImageAnim({ boxes, animate=true, style }) {
-
+export default function IntImageAnim ({ boxes, animate = true, style }) {
   // sets correct opacity value
   const getFadeValue = (letter) => {
-    if(boxes.includes(letter)) {
+    if (boxes.includes(letter)) {
       return useRef(new Animated.Value(animate ? 0 : 1)).current
     }
     return 0
@@ -23,7 +22,7 @@ export default function IntImageAnim({ boxes, animate=true, style }) {
 
     // add animations for each box if it's in boxes
     for (let i = 0; i < fades.length; i++) {
-      if(boxes.includes(fades[i].letter)) {
+      if (boxes.includes(fades[i].letter)) {
         animations.push(
           Animated.timing(fades[i].fade, {
             toValue: 1,
@@ -63,7 +62,7 @@ export default function IntImageAnim({ boxes, animate=true, style }) {
 
   // run animations if animate=true
   let AnimateLoop
-  if(animate) {
+  if (animate) {
     AnimateLoop = useRef(
       Animated.loop(
         Animated.sequence(
@@ -80,14 +79,13 @@ export default function IntImageAnim({ boxes, animate=true, style }) {
   }
 
   useEffect(() => {
-    if(animate) {
+    if (animate) {
       AnimateLoop.start()
       // prevent loop from running after leaving screen
       // edit: this does not stop the loop for some reason. leave it for now
       return () => AnimateLoop.stop()
     }
   })
-
 
   return (
     <View style={[styles.container, styles.shadow, style]}>
@@ -97,35 +95,40 @@ export default function IntImageAnim({ boxes, animate=true, style }) {
         {
           opacity: aFade
         }
-      ]}>
+      ]}
+      >
         <Text style={[styles.Txt, styles.aTxt]}>A</Text>
 
         <Animated.View style={[styles.box, styles.bBox, styles.shadow,
           {
             opacity: bFade
           }
-        ]}>
+        ]}
+        >
           <Text style={[styles.Txt, styles.bTxt]}>B</Text>
         </Animated.View>
         <Animated.View style={[styles.box, styles.cBox, styles.shadow,
           {
             opacity: cFade
           }
-        ]}>
+        ]}
+        >
           <Text style={[styles.Txt, styles.cTxt]}>C</Text>
         </Animated.View>
         <Animated.View style={[styles.dBox, styles.shadow,
           {
             opacity: dFade
           }
-        ]}>
+        ]}
+        >
           <Text style={[styles.Txt, styles.dTxt]}>D</Text>
         </Animated.View>
         <Animated.View style={[styles.box, styles.eBox, styles.shadow,
           {
             opacity: eFade
           }
-        ]}>
+        ]}
+        >
           <Text style={[styles.Txt]}>E</Text>
         </Animated.View>
       </Animated.View>
@@ -207,7 +210,7 @@ const styles = StyleSheet.create({
   contTxt: {
     position: 'absolute',
     right: 10,
-    bottom: 10,
+    bottom: 10
   },
   aTxt: {
     position: 'absolute',

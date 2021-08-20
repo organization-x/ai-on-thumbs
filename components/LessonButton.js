@@ -2,7 +2,7 @@ import React from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 
-export default function LessonButton ({ style, navigation, nextScreen, buttonText, buttonColor, enabled=true, actOpacity=0.3 }) {
+export default function LessonButton ({ style, navigation, nextScreen, buttonText, buttonColor, enabled = true, actOpacity = 0.3 }) {
   let gradColor
   // allows gradient or uniform bg colors
   // grad: ['c1', 'c2']

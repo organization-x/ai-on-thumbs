@@ -15,15 +15,15 @@ export default function CalcContrastScreen ({ navigation }) {
   const { width } = Dimensions.get('window')
 
   let imgWidth = width - 40
-  if(width < 400) {
+  if (width < 400) {
     imgWidth = 200
   }
 
   const handleAnswer = ({ correct }) => {
-    if(correct) {
+    if (correct) {
       setParaText('Success! You are getting this!')
       setCanContinue(true)
-    } else if(!canContinue) {
+    } else if (!canContinue) {
       setParaText('Not quite. Maybe you missed something. Try again!')
     }
   }
@@ -39,7 +39,7 @@ export default function CalcContrastScreen ({ navigation }) {
           source={require('../../assets/calcContrastFilter.png')}
         />
 
-        <View style={{flex: 0, borderRadius: 10, overflow: 'hidden'}}>
+        <View style={{ flex: 0, borderRadius: 10, overflow: 'hidden' }}>
           <GridMCQ
             answers={['41', '36', '-27', '45']}
             correctAnswer='41'
@@ -48,7 +48,6 @@ export default function CalcContrastScreen ({ navigation }) {
           />
         </View>
       </View>
-
 
       <ParagraphBox
         text={paraText}
@@ -64,7 +63,8 @@ export default function CalcContrastScreen ({ navigation }) {
           }
           actOpacity={canContinue ? 0.3 : 1}
           buttonText={canContinue ? 'Continue' : 'Not answered'}
-          enabled={canContinue} />
+          enabled={canContinue}
+        />
       </View>
     </LinearGradient>
   )
