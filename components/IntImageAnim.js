@@ -1,6 +1,10 @@
 import React, { useRef, useEffect } from 'react'
 import { Animated, Easing, StyleSheet, View, Text } from 'react-native'
 
+// figure of an Integral Image
+// boxes: array of which boxes ['a','b','c','d'] to include
+// animate: whether to animate fadein-fadeout effects
+
 export default function IntImageAnim({ boxes, animate=true, style }) {
 
   // sets correct opacity value
@@ -13,6 +17,7 @@ export default function IntImageAnim({ boxes, animate=true, style }) {
 
   // returns an array of the animation sequence
   const getAnimations = (fades) => {
+    // initialize animations array with starting delay
     const animations = [Animated.delay(500)]
     const fadeOutAnimations = []
 
@@ -78,7 +83,7 @@ export default function IntImageAnim({ boxes, animate=true, style }) {
     if(animate) {
       AnimateLoop.start()
       // prevent loop from running after leaving screen
-      // edit: this does not stop the loop for some reason
+      // edit: this does not stop the loop for some reason. leave it for now
       return () => AnimateLoop.stop()
     }
   })
