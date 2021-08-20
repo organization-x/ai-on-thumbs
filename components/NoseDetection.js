@@ -12,8 +12,8 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
   const [yDist, setYDist] = useState(100)
 
   // height and width of image (used to perform calculations for target of draggable filter)
-  const imageWidth = Dimensions.get('window').width/1.5
-  const imageHeight = Dimensions.get('window').height/3
+  const imageWidth = Dimensions.get('window').width / 1.5
+  const imageHeight = Dimensions.get('window').height / 3
 
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
@@ -59,7 +59,7 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
           /* set the minimum and maximum bounds where the draggable item can go to the bounds of the actual image */
           maxX={dragContainerDim.width / 2 + imageWidth / 3.4}
           minX={dragContainerDim.width / 2 - imageWidth / 4.5}
-          minY={dragContainerDim.height / 2 - imageHeight / 2.31-((1/Dimensions.get('window').height)**7 * (10**20.45))}
+          minY={dragContainerDim.height / 2 - imageHeight / 2.31 - ((1 / Dimensions.get('window').height) ** 7 * (10 ** 20.45))}
           maxY={dragContainerDim.height / 2 + imageHeight / 15}
           /* set the draggable filter's state location when the user releases the filter. Calculate the distance between the filter and the nose bridge (where the filter 'similarity' is highest) */
           onDragRelease={(e) => {
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
   dragContainer: {
     justifyContent: 'center',
     textAlign: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   equation: {
     fontSize: 16,

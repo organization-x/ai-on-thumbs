@@ -69,7 +69,7 @@ export default function Calculation ({ setCalculations, imageXOffset, imageYOffs
           {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
-              ? (<Image style={ styles.filterImage } source={require('../assets/red_box.png')} />)
+              ? (<Image style={styles.filterImage} source={require('../assets/red_box.png')} />)
               : null
           }
         </Draggable>
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
   },
   filterImage: {
     width: Dimensions.get('window').width / 3.9,
-    height: Dimensions.get('window').width / 3.3,
+    height: Dimensions.get('window').width / 3.3
   }
 
 })

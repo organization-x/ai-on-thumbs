@@ -13,7 +13,7 @@ export default function Zoom () {
           minZoom={0.8}
           zoomStep={0.25}
           initialZoom={1}
-          bindToBorders={true}
+          bindToBorders
           style={styles.zoomView}
         >
           <Image

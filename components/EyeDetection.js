@@ -12,7 +12,7 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
   const [yDist, setYDist] = useState(100)
 
   // height and width of image (used to perform calculations for target of draggable filter)
-  const imageWidth = Dimensions.get("window").width / 1.5
+  const imageWidth = Dimensions.get('window').width / 1.5
   const imageHeight = Dimensions.get('window').height / 3
 
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   filterImage: {
-    width: Dimensions.get('window').width / 4.7, 
+    width: Dimensions.get('window').width / 4.7,
     height: Dimensions.get('window').width / 4.7
   }
 })
