@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     color: 'white',
-    fontSize: 18
+    fontSize: 20
   }
 })
