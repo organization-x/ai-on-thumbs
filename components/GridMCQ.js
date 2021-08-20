@@ -65,7 +65,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    position: 'relative'
+    position: 'relative',
+    borderRadius: 5,
+    overflow: 'hidden'
   },
   choice: {
     backgroundColor: '#6357C9',

@@ -10,6 +10,9 @@ import PixelScreen from './screens/course1/PixelScreen'
 import MagnifyScreen from './screens/course1/MagnifyScreen'
 import CalcContrastScreen from './screens/course1/CalcContrastScreen'
 import FilterScreen from './screens/course1/FilterScreen'
+import RedComplexityScreen1 from './screens/course1/RedComplexityScreen1'
+import RedComplexityScreen2 from './screens/course1/RedComplexityScreen2'
+import RedComplexityScreen3 from './screens/course1/RedComplexityScreen3'
 
 const Stack = createStackNavigator()
 
@@ -27,6 +30,9 @@ export default function App () {
         <Stack.Screen name='PixelScreen' component={PixelScreen} />
         <Stack.Screen name='CalcContrastScreen' component={CalcContrastScreen} />
         <Stack.Screen name='FilterScreen' component={FilterScreen} />
+        <Stack.Screen name='RedComplexityScreen1' component={RedComplexityScreen1} />
+        <Stack.Screen name='RedComplexityScreen2' component={RedComplexityScreen2} />
+        <Stack.Screen name='RedComplexityScreen3' component={RedComplexityScreen3} />
         <Stack.Screen name='Ad' component={Ad} />
       </Stack.Navigator>
     </NavigationContainer>

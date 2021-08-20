@@ -14,6 +14,11 @@ export default function CalcContrastScreen ({ navigation }) {
 
   const { width } = Dimensions.get('window')
 
+  let imgWidth = width - 40
+  if(width < 400) {
+    imgWidth = 200
+  }
+
   const handleAnswer = ({ correct }) => {
     if(correct) {
       setParaText('Success! You are getting this!')
@@ -30,7 +35,7 @@ export default function CalcContrastScreen ({ navigation }) {
 
       <View style={styles.interactive}>
         <Image
-          style={[styles.figure, { height: width - 40 }]}
+          style={[styles.figure, { width: imgWidth, height: imgWidth }]}
           source={require('../../assets/calcContrastFilter.png')}
         />
 
@@ -53,7 +58,7 @@ export default function CalcContrastScreen ({ navigation }) {
         <LessonButton navigation={navigation} nextScreen='PixelScreen' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton
           navigation={navigation}
-          nextScreen='FilterScreen'
+          nextScreen='RedComplexityScreen1'
           buttonColor={
             canContinue ? ['#32B59D', '#3AC55B'] : '#d3d3d3'
           }
@@ -74,7 +79,8 @@ const styles = StyleSheet.create({
   interactive: {
     flex: 1,
     borderRadius: 7,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    alignItems: 'center'
   },
   footerButtons: {
     marginBottom: 10,
@@ -85,7 +91,7 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
     width: '100%',
     marginHorizontal: 'auto',
-    borderRadius: 10,
+    borderRadius: 8,
     overflow: 'hidden',
     marginBottom: 20
   }
