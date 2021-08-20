@@ -25,12 +25,12 @@ const styles = StyleSheet.create({
   },
   explanation: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 18,
     marginTop: 10
   },
   tip: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold'
   }
 })

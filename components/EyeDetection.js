@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Text, View, StyleSheet, Image, Platform } from 'react-native'
+import { Text, View, StyleSheet, Image, Platform, Dimensions } from 'react-native'
 import Draggable from 'react-native-draggable'
 
 export default function EyeDetection ({ found, setFound, setFilterText, imageXOffset, imageYOffset }) {
@@ -12,14 +12,14 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
   const [yDist, setYDist] = useState(100)
 
   // height and width of image (used to perform calculations for target of draggable filter)
-  const imageWidth = 300
-  const imageHeight = 350
+  const imageWidth = Dimensions.get('window').width / 1.5
+  const imageHeight = Dimensions.get('window').height / 3
 
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
   useEffect(() => {
-    if (Math.round(1 / xDist * 100) > 4.2 && Math.round((1 / yDist * 100)) > 4.2) {
+    if (Math.round(1 / xDist * 100) >= 4 && Math.round((1 / yDist * 100)) >= 6) {
       setFilterText('The filter matches up closest to the eyes because they form a horizontal line!')
       setFound(true)
     } else {
@@ -66,7 +66,7 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
             setDragX(e.nativeEvent.pageX - imageXOffset)
             setDragY(e.nativeEvent.pageY - imageYOffset)
             // target of filter is near the middle of the image (nose bridge)
-            setXDist(Math.abs(dragContainerDim.width / 1.88 - dragX))
+            setXDist(Math.abs(dragContainerDim.width / 1.78 - dragX))
             setYDist(Math.abs(dragContainerDim.height / 2.5 - dragY))
           }}
         >
@@ -74,7 +74,7 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
           {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
-              ? (<Image style={{ width: 90, height: 90 }} source={require('../assets/horizontal_filter.png')} />)
+              ? (<Image style={styles.filterImage} source={require('../assets/horizontal_filter.png')} />)
               : null
           }
         </Draggable>
@@ -86,7 +86,6 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
         {
           Math.min(Math.round(1 / (xDist + yDist) * 200), 100)
         }
-
       </Text>
 
     </View>
@@ -115,5 +114,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontStyle: 'italic',
     textAlign: 'center'
+  },
+  filterImage: {
+    width: Dimensions.get('window').width / 4.7,
+    height: Dimensions.get('window').width / 4.7
   }
 })

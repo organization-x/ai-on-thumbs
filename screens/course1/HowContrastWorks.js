@@ -14,7 +14,7 @@ export default function HowContrastWorks ({ navigation }) {
 
       <View style={[styles.imageContainer]}>
 
-        <Image source={require('../../assets/how_contrast_works.png')} style={{ flex: 1, width: '100%' }} />
+        <Image source={require('../../assets/how_contrast_works.png')} style={{ flex: 1, resizeMode: 'contain', width: '100%' }} />
 
       </View>
 
@@ -36,11 +36,8 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 1,
-    marginVertical: 20,
     justifyContent: 'center',
-    alignItems: 'center',
-    paddingTop: 15,
-    padding: 8
+    alignItems: 'center'
   },
   footerButtons: {
     marginBottom: 10,

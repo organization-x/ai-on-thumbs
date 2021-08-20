@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     justifyContent: 'center',
     textAlign: 'left',
-    fontSize: 35,
+    fontSize: 30,
     color: 'white',
     fontWeight: 'bold'
   }
