@@ -29,8 +29,8 @@ export default function RedComplexityScreen2 ({ navigation }) {
         <Text style={styles.questionTxt}>D = A - B - C</Text>
         <Text style={[styles.questionTxt, { marginBottom: 10 }]}>Does this Work?</Text>
         <GridMCQ
-          answers={['yes', 'no']}
-          correctAnswer='no'
+          answers={['Yes', 'No']}
+          correctAnswer='No'
           cols={2}
           handleChoice={() => {}}
         />

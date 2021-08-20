@@ -27,7 +27,7 @@ export default function RedComplexityScreen1 ({ navigation }) {
       <ParagraphBox text='An integral image allow us to quickly sum the pixel values in a given area' />
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='FilterScreen' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Calculation' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='RedComplexityScreen2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>

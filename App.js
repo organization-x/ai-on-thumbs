@@ -20,7 +20,6 @@ import FaceFoundScreen from './screens/course1/FaceFoundScreen'
 import HowContrastWorks from './screens/course1/HowContrastWorks'
 import FaceDetectionBasics from './screens/course1/FaceDetectionBasics'
 
-
 const Stack = createStackNavigator()
 
 export default function App () {

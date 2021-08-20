@@ -8,7 +8,7 @@ export default function CoursesScreen ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
       <Text style={styles.header}>Courses</Text>
-      <ScrollView style={styles.courseList}>
+      <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
         <CourseCard
           navigation={navigation}
           lessonScreen='ZoomScreen'

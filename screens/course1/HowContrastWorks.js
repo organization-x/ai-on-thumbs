@@ -22,7 +22,7 @@ export default function HowContrastWorks ({ navigation }) {
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='FaceDetectionBasics' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Calculation' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='CalcContrastScreen' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )

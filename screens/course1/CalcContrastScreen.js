@@ -15,7 +15,7 @@ export default function CalcContrastScreen ({ navigation }) {
   const { width } = Dimensions.get('window')
 
   let imgWidth = width - 40
-  if (width < 400) {
+  if (width < 370) {
     imgWidth = 200
   }
 
@@ -54,10 +54,10 @@ export default function CalcContrastScreen ({ navigation }) {
       />
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='PixelScreen' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='HowContrastWorks' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton
           navigation={navigation}
-          nextScreen='RedComplexityScreen1'
+          nextScreen='Calculation'
           buttonColor={
             canContinue ? ['#32B59D', '#3AC55B'] : '#d3d3d3'
           }
