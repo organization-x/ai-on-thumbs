@@ -121,3 +121,4 @@ android/*
 .vscode/settings.json
 .vscode/
 .vscode/*
+start_simulators.sh
