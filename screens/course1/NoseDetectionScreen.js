@@ -35,7 +35,14 @@ export default function NoseDetectionScreen ({ navigation }) {
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='EyeDetectionScreen' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='FaceFoundScreen' buttonColor={found ? ['#32B59D', '#3AC55B'] : '#808080'} buttonText={found ? 'Continue' : 'Not Found'} />
+        <LessonButton
+          navigation={navigation}
+          nextScreen='FaceFoundScreen'
+          buttonColor={found ? ['#32B59D', '#3AC55B'] : '#808080'}
+          buttonText={found ? 'Continue' : 'Not Found'}
+          enabled={found}
+          actOpacity={found ? 0.3 : 1}
+        />
       </View>
     </LinearGradient>
   )

@@ -34,8 +34,15 @@ export default function EyeDetectionScreen ({ navigation }) {
       <ParagraphBox text={`${filterText}`} />
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Calculation' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='NoseDetectionScreen' buttonColor={found ? ['#32B59D', '#3AC55B'] : '#808080'} buttonText={found ? 'Continue' : 'Not Found'} />
+        <LessonButton navigation={navigation} nextScreen='RedComplexityScreen3' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton
+          navigation={navigation}
+          nextScreen='NoseDetectionScreen'
+          buttonColor={found ? ['#32B59D', '#3AC55B'] : '#808080'}
+          buttonText={found ? 'Continue' : 'Not Found'}
+          enabled={found}
+          actOpacity={found ? 0.3 : 1}
+        />
       </View>
     </LinearGradient>
   )
