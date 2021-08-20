@@ -129,12 +129,12 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     alignSelf: 'center',
-    resizeMode: 'contain',
+    resizeMode: 'cover',
     zIndex: -1
   },
   zoomImage: {
     position: 'relative',
-    resizeMode: 'contain',
+    resizeMode: 'cover',
     zIndex: 10
   },
   glass: {

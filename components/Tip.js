@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   tip: {
     color: 'white',
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold'
   }
 })

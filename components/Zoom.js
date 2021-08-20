@@ -30,7 +30,7 @@ export default function Zoom () {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'transparent'
+    backgroundColor: '#e7e7e7'
   },
   explanation: {
     backgroundColor: '#6f80ff',
@@ -45,19 +45,18 @@ const styles = StyleSheet.create({
     color: '#fff'
   },
   zoomableWrapper: {
-    flex: 1,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    flex: 1
   },
   zoomView: {
     padding: 10,
-    backgroundColor: 'transparent'
+    backgroundColor: '#fff'
   },
   image: {
-    resizeMode: 'contain',
-    marginBottom: 0,
+    marginBottom: 10,
+    height: '80%',
     flex: 1,
-    width: '100%',
-    height: '80%'
+    width: '100%'
   },
   caption: {
     alignSelf: 'center',
