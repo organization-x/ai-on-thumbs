@@ -16,6 +16,7 @@ export default function CoursesScreen ({ navigation }) {
           title='Getting Started'
           desc='Learn AI with zero coding experience. This course will teach you how to learn.'
         />
+        {/*
         <CourseCard
           navigation={navigation}
           lessonScreen='ZoomScreen'
@@ -44,6 +45,7 @@ export default function CoursesScreen ({ navigation }) {
           title='Data Science Basics'
           desc='Learn AI with zero coding experience. This course will teach you how to learn.'
         />
+        */}
       </ScrollView>
     </LinearGradient>
   )
