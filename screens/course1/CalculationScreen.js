@@ -32,7 +32,7 @@ export default function CalculationScreen ({ navigation }) {
       <ParagraphBox text={`Calculations: ${calculations}. ${'\n'}As you get closer to the face, there are more calculations to make sure the section is a face`} />
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='PixelScreen' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='HowContrastWorks' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='EyeDetectionScreen' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>

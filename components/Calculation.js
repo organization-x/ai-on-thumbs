@@ -61,8 +61,8 @@ export default function Calculation ({ setCalculations, imageXOffset, imageYOffs
             setDragX(e.nativeEvent.pageX - imageXOffset)
             setDragY(e.nativeEvent.pageY - imageYOffset)
             // target of filter is near the middle of the image (nose bridge)
-            setXDist(Math.abs(dragContainerDim.width / 1.6 - dragX))
-            setYDist(Math.abs(dragContainerDim.height / 1.7 - dragY))
+            setXDist(Math.abs(dragContainerDim.width / 2 - dragX))
+            setYDist(Math.abs(dragContainerDim.height / 2.3 - dragY))
           }}
           animatedViewProps={{ opacity: 0.3 }}
         >
