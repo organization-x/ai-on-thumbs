@@ -27,13 +27,13 @@
       "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#8A8AF4"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "",
+    "description": "Learn AI with just your thumbs!",
     "githubUrl": "https://github.com/organization-x/ai-on-thumbs"
   }
 }
