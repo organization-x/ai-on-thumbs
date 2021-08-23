@@ -21,11 +21,25 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
   useEffect(() => {
     if (Math.round(1 / xDist * 100) > 5 && Math.round((1 / yDist * 100)) > 4.4) {
       setFilterText('The filter matches up closest to the nose bridge because it forms a vertical line!')
+      setInitialX(dragContainerDim.width / 2.29)
+      setInitialY(Dimensions.get('window').height > 800 ? dragContainerDim.height / 4 : dragContainerDim.height / 5)
       setFound(true)
     } else {
+      setInitialX(dragContainerDim.width / 2 - imageWidth / 4.5)
+      setInitialY(dragContainerDim.height / 2 - imageHeight / 2.4)
       setFilterText('You detected the eyes in this region. Are there any other features here?')
     }
   })
+
+  const [initialX, setInitialX] = useState()
+  const [initialY, setInitialY] = useState()
+
+  const [shouldRender, setshouldRender] = React.useState(true)
+
+  React.useEffect(() => {
+    setshouldRender(false)
+    setTimeout(() => setshouldRender(true), 5)
+  }, [initialX, initialY])
 
   return (
 
@@ -45,39 +59,45 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
           style={{ width: imageWidth, height: imageHeight }}
           source={require('../assets/obama_face_img_v2.png')}
         />
+        {
 
-        {/* Draggable filter */}
-        <Draggable
-          imageSource={require('../assets/vertical_filter.png')}
-          disabled={!!found}
-          animatedViewProps={{ opacity: 0.5 }}
+        shouldRender
+        /* Draggable filter */
+          ? <Draggable
+              imageSource={require('../assets/vertical_filter.png')}
+              disabled={!!found}
+              animatedViewProps={{ opacity: 0.5 }}
           // size of draggable filter for android
-          renderSize={45}
+              renderSize={45}
           // original starting point of the filter on the image (top left corner)
-          x={dragContainerDim.width / 2 - imageWidth / 4.5}
-          y={dragContainerDim.height / 2 - imageHeight / 2.4}
+              x={initialX}
+              y={initialY}
           /* set the minimum and maximum bounds where the draggable item can go to the bounds of the actual image */
-          maxX={dragContainerDim.width / 2 + imageWidth / 3.4}
-          minX={dragContainerDim.width / 2 - imageWidth / 4.5}
-          minY={dragContainerDim.height / 2 - imageHeight / 2.31 - ((1 / Dimensions.get('window').height) ** 7 * (10 ** 20.45))}
-          maxY={dragContainerDim.height / 2 + imageHeight / 15}
+              maxX={dragContainerDim.width / 2 + imageWidth / 3.4}
+              minX={dragContainerDim.width / 2 - imageWidth / 4.5}
+              minY={dragContainerDim.height / 2 - imageHeight / 2.31 - ((1 / Dimensions.get('window').height) ** 7 * (10 ** 20.45))}
+              maxY={dragContainerDim.height / 2 + imageHeight / 15}
           /* set the draggable filter's state location when the user releases the filter. Calculate the distance between the filter and the nose bridge (where the filter 'similarity' is highest) */
-          onDragRelease={(e) => {
-            setDragX(e.nativeEvent.pageX - imageXOffset)
-            setDragY(e.nativeEvent.pageY - imageYOffset)
-            // target of filter is near the middle of the image (nose bridge)
-            setXDist(Math.abs(dragContainerDim.width / 1.78 - dragX))
-            setYDist(Math.abs(dragContainerDim.height / 2.4 - dragY))
-          }}
-        >
+              onDragRelease={(e) => {
+                setDragX(e.nativeEvent.pageX - imageXOffset)
+                setDragY(e.nativeEvent.pageY - imageYOffset)
+                // target of filter is near the middle of the image (nose bridge)
+                setXDist(Math.abs(dragContainerDim.width / 1.78 - dragX))
+                setYDist(Math.abs(dragContainerDim.height / 2.4 - dragY))
+              }}
+            >
 
-          {
+            {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
               ? (<Image style={styles.filterImage} source={require('../assets/vertical_filter.png')} />)
               : null
-          }
-        </Draggable>
+            }
+
+            </Draggable>
+          : null
+
+        }
 
       </View>
 
