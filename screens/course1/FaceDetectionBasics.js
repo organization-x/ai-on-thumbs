@@ -22,7 +22,7 @@ export default function FaceDetectionBasics ({ navigation }) {
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='PixelScreen' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='HowContrastWorks' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='DetectingFeaturesScreen' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Text, View, StyleSheet, Image, Platform, Dimensions } from 'react-native'
 import Draggable from 'react-native-draggable'
 
-export default function EyeDetection ({ found, setFound, setFilterText, imageXOffset, imageYOffset }) {
+export default function DetectingFeatures ({ found, setFound, setSimilarity, imageXOffset, imageYOffset }) {
   // location of the draggable filter (x,y) coordinates
   const [dragX, setDragX] = useState(0)
   const [dragY, setDragY] = useState(0)
@@ -15,19 +15,21 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
   const imageWidth = Dimensions.get('window').width / 1.5
   const imageHeight = Dimensions.get('window').height / 3
 
+  const [filterText, setFilterText] = useState('')
+
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
   useEffect(() => {
     if (Math.round(1 / xDist * 100) >= 4 && Math.round((1 / yDist * 100)) >= 6) {
-      setFilterText('The filter matches up closest to the eyes because they form a horizontal line!')
+      setFilterText(`Success! ${'\n'} The filter has identified a feature.`)
       setInitialX(dragContainerDim.width / 2.5)
       setInitialY(Dimensions.get('window').height > 800 ? dragContainerDim.height / 7.8 : dragContainerDim.height / 14)
       setFound(true)
     } else {
       setInitialX(dragContainerDim.width / 2 - imageWidth / 2)
       setInitialY(dragContainerDim.height / 2 - imageHeight / 2)
-      setFilterText('The filter has still not matched with the correct facial feature')
+      setFilterText('No feature identified yet')
     }
   })
 
@@ -84,6 +86,7 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
                 // target of filter is near the middle of the image (nose bridge)
                 setXDist(Math.abs(dragContainerDim.width / 1.78 - dragX))
                 setYDist(Math.abs(dragContainerDim.height / 2.5 - dragY))
+                setSimilarity(`Current Similarity Match: ${Math.min(Math.round(1 / (xDist + yDist) * 200), 100)}`)
               }}
             >
 
@@ -100,10 +103,7 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
       </View>
 
       <Text style={styles.paragraph}>
-        Current Similarity Match:
-        {
-          Math.min(Math.round(1 / (xDist + yDist) * 200), 100)
-        }
+        {filterText}
       </Text>
 
     </View>
@@ -121,7 +121,8 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     fontSize: 18,
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
+    lineHeight: 30
   },
   dragContainer: {
     justifyContent: 'center',
