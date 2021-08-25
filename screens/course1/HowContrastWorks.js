@@ -21,7 +21,7 @@ export default function HowContrastWorks ({ navigation }) {
       <ParagraphBox text='Contrast is the difference between the light and dark areas in a section.' />
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='FaceDetectionBasics' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='DetectingFeaturesScreen' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='CalcContrastScreen' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>

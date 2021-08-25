@@ -19,6 +19,7 @@ import NoseDetectionScreen from './screens/course1/NoseDetectionScreen'
 import FaceFoundScreen from './screens/course1/FaceFoundScreen'
 import HowContrastWorks from './screens/course1/HowContrastWorks'
 import FaceDetectionBasics from './screens/course1/FaceDetectionBasics'
+import DetectingFeaturesScreen from './screens/course1/DetectingFeaturesScreen'
 
 const Stack = createStackNavigator()
 
@@ -40,6 +41,7 @@ export default function App () {
         <Stack.Screen name='RedComplexityScreen2' component={RedComplexityScreen2} />
         <Stack.Screen name='RedComplexityScreen3' component={RedComplexityScreen3} />
         <Stack.Screen name='FaceDetectionBasics' component={FaceDetectionBasics} />
+        <Stack.Screen name="DetectingFeaturesScreen" component={DetectingFeaturesScreen} />
         <Stack.Screen name='HowContrastWorks' component={HowContrastWorks} />
         <Stack.Screen name='Calculation' component={CalculationScreen} />
         <Stack.Screen name='FaceFoundScreen' component={FaceFoundScreen} />
