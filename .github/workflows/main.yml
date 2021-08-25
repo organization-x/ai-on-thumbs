@@ -27,5 +27,5 @@ jobs:
 
       - name: JS Linting
         run: |
-          sudo npm install -g standard
-          standard
+          sudo npm install -g standardx
+          standardx
