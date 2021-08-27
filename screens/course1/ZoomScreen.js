@@ -13,7 +13,7 @@ export default function ZoomScreen ({ navigation }) {
       <LessonHeader>Images are Pixels</LessonHeader>
       <Tip tipText='Zoom in to see individual pixels' />
       <View style={styles.zoomView}>
-        <Zoom imageFile="../assets/image.png"/>
+        <Zoom />
       </View>
 
       <ParagraphBox text='As you zoom in, the tiny pixels should become larger and more defined.' />
