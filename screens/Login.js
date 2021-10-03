@@ -5,7 +5,7 @@ import * as SecureStore from 'expo-secure-store'
 
 // send POST request to backend to create user based on username, password, and email entered
 async function createUser (username, email, password) {
-  const res = await fetch('https://invite.ai-camp.org/create', {
+  const res = await fetch('https://app.ai-camp.org/create', {
 
     method: 'POST',
     body: JSON.stringify(
@@ -42,7 +42,7 @@ async function getAuthenticated () {
 
 // authenticate the username and password through the backend API through a post request
 async function authUser (username, password) {
-  const res = await fetch('https://invite.ai-camp.org/auth', {
+  const res = await fetch('https://app.ai-camp.org/auth', {
     method: 'POST',
     body: JSON.stringify(
       { username: username, password: password }

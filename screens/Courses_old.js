@@ -1,3 +1,5 @@
+// Pending Deletion
+
 import React, { useState, useEffect } from 'react'
 import { StyleSheet, FlatList } from 'react-native'
 import Background from '../components/Background'
@@ -9,7 +11,7 @@ export default function Courses ({ navigation }) {
   const [courses, setCourses] = useState([])
 
   const get_courses = async () => {
-    const res = await fetch('https://invite.ai-camp.org/courses', {
+    const res = await fetch('https://app.ai-camp.org/courses', {
       headers: {
         'Content-type': 'application/json',
         Accept: 'application/json'
