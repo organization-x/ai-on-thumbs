@@ -1,3 +1,5 @@
+// Pending Deletion
+
 import * as React from 'react'
 import { useEffect, useState } from 'react'
 import {
@@ -28,7 +30,7 @@ export default function Lessons ({ route, navigation }) {
   const [lessonData, setLessonData] = useState(null)
 
   const get_course = async (courseId) => {
-    const res = await fetch(`https://invite.ai-camp.org/course/${courseId}`, {
+    const res = await fetch(`https://app.ai-camp.org/course/${courseId}`, {
       headers: {
         'Content-type': 'application/json',
         Accept: 'application/json'
