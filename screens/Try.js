@@ -1,3 +1,5 @@
+// Pending Refactor
+
 import React, { useEffect, useState, useRef } from 'react'
 import { StyleSheet, View, ActivityIndicator, Image } from 'react-native'
 import Background from '../components/Background'
@@ -36,7 +38,7 @@ export default function Try ({ navigation }) {
   const sendFaceRequest = async (image_string) => {
     let res
     try {
-      res = await fetch('https://invite.ai-camp.org/image',
+      res = await fetch('https://app.ai-camp.org/image',
         {
           method: 'POST',
           body: JSON.stringify(

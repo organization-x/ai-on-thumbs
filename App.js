@@ -3,23 +3,33 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import Welcome from './screens/Welcome'
-import Ad from './screens/Ad'
 import Courses from './screens/Courses'
-import ZoomScreen from './screens/course1/ZoomScreen'
-import PixelScreen from './screens/course1/PixelScreen'
-import MagnifyScreen from './screens/course1/MagnifyScreen'
-import CalcContrastScreen from './screens/course1/CalcContrastScreen'
-import FilterScreen from './screens/course1/FilterScreen'
-import RedComplexityScreen1 from './screens/course1/RedComplexityScreen1'
-import RedComplexityScreen2 from './screens/course1/RedComplexityScreen2'
-import RedComplexityScreen3 from './screens/course1/RedComplexityScreen3'
-import CalculationScreen from './screens/course1/CalculationScreen'
-import EyeDetectionScreen from './screens/course1/EyeDetectionScreen'
-import NoseDetectionScreen from './screens/course1/NoseDetectionScreen'
-import FaceFoundScreen from './screens/course1/FaceFoundScreen'
-import HowContrastWorks from './screens/course1/HowContrastWorks'
-import FaceDetectionBasics from './screens/course1/FaceDetectionBasics'
-import DetectingFeaturesScreen from './screens/course1/DetectingFeaturesScreen'
+
+// course 1 imports
+import Course1Intro from './screens/course_1/1_intro'
+import Course1FaceFinder from './screens/course_1/2_face_finder'
+import Course1HowFindFaces from './screens/course_1/3_how_find_faces'
+import Course1Info1 from './screens/course_1/4_info_1'
+import Course1Info2 from './screens/course_1/5_info_2'
+import Course1Brightness1 from './screens/course_1/6_brightness_1'
+import Course1Brightness2 from './screens/course_1/6_brightness_2'
+import Course1Info3 from './screens/course_1/5_info_3'
+import Course1Info4 from './screens/course_1/5_info_4'
+import Course1Magnify from './screens/course_1/10_magnify'
+import Course1Info5 from './screens/course_1/5_info_5'
+import Course1HumanVsComputer from './screens/course_1/12_human_vs_computer'
+import Course1Info6 from './screens/course_1/5_info_6'
+import Course1Info7 from './screens/course_1/5_info_7'
+import Course1Info8 from './screens/course_1/5_info_8'
+import Course1Info9 from './screens/course_1/5_info_9'
+import Course1FaceParts from './screens/course_1/17_face_parts'
+import Course1Congrats from './screens/course_1/18_congrats'
+import Course1Review from './screens/course_1/19_review'
+import Course1Rating from './screens/course_1/20_rating'
+import Course1EmailPrompt from './screens/course_1/21_email_prompt'
+import Course1Complete from './screens/course_1/22_complete'
+
+// course 2 imports
 
 const Stack = createStackNavigator()
 
@@ -32,22 +42,33 @@ export default function App () {
       >
         <Stack.Screen name='Welcome' component={Welcome} />
         <Stack.Screen name='Courses' component={Courses} />
-        <Stack.Screen name='ZoomScreen' component={ZoomScreen} />
-        <Stack.Screen name='MagnifyScreen' component={MagnifyScreen} />
-        <Stack.Screen name='PixelScreen' component={PixelScreen} />
-        <Stack.Screen name='CalcContrastScreen' component={CalcContrastScreen} />
-        <Stack.Screen name='FilterScreen' component={FilterScreen} />
-        <Stack.Screen name='RedComplexityScreen1' component={RedComplexityScreen1} />
-        <Stack.Screen name='RedComplexityScreen2' component={RedComplexityScreen2} />
-        <Stack.Screen name='RedComplexityScreen3' component={RedComplexityScreen3} />
-        <Stack.Screen name='FaceDetectionBasics' component={FaceDetectionBasics} />
-        <Stack.Screen name='DetectingFeaturesScreen' component={DetectingFeaturesScreen} />
-        <Stack.Screen name='HowContrastWorks' component={HowContrastWorks} />
-        <Stack.Screen name='Calculation' component={CalculationScreen} />
-        <Stack.Screen name='FaceFoundScreen' component={FaceFoundScreen} />
-        <Stack.Screen name='EyeDetectionScreen' component={EyeDetectionScreen} />
-        <Stack.Screen name='NoseDetectionScreen' component={NoseDetectionScreen} />
-        <Stack.Screen name='Ad' component={Ad} />
+
+        {/* course 1 screen stack */}
+        <Stack.Screen name='Course1Intro' component={Course1Intro} />
+        <Stack.Screen name='Course1FaceFinder' component={Course1FaceFinder} />
+        <Stack.Screen name='Course1HowFindFaces' component={Course1HowFindFaces} />
+        <Stack.Screen name='Course1Info1' component={Course1Info1} />
+        <Stack.Screen name='Course1Info2' component={Course1Info2} />
+        <Stack.Screen name='Course1Brightness1' component={Course1Brightness1} />
+        <Stack.Screen name='Course1Brightness2' component={Course1Brightness2} />
+        <Stack.Screen name='Course1Info3' component={Course1Info3} />
+        <Stack.Screen name='Course1Info4' component={Course1Info4} />
+        <Stack.Screen name='Course1Magnify' component={Course1Magnify} />
+        <Stack.Screen name='Course1Info5' component={Course1Info5} />
+        <Stack.Screen name='Course1HumanVsComputer' component={Course1HumanVsComputer} />
+        <Stack.Screen name='Course1Info6' component={Course1Info6} />
+        <Stack.Screen name='Course1Info7' component={Course1Info7} />
+        <Stack.Screen name='Course1Info8' component={Course1Info8} />
+        <Stack.Screen name='Course1Info9' component={Course1Info9} />
+        <Stack.Screen name='Course1FaceParts' component={Course1FaceParts} />
+        <Stack.Screen name='Course1Congrats' component={Course1Congrats} />
+        <Stack.Screen name='Course1Review' component={Course1Review} />
+        <Stack.Screen name='Course1Rating' component={Course1Rating} />
+        <Stack.Screen name='Course1EmailPrompt' component={Course1EmailPrompt} />
+        <Stack.Screen name='Course1Complete' component={Course1Complete} />
+
+        {/* course 2 screen stack */}
+
       </Stack.Navigator>
     </NavigationContainer>
   )
