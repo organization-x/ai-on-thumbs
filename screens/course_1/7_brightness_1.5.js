@@ -1,0 +1,1 @@
+// Now, tap the pixel that has the largest value!
