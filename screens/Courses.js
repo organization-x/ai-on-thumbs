@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default function CoursesScreen ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <Text style={styles.header}>Your AI Journey</Text>
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
         <CourseCard

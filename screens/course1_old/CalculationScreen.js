@@ -14,7 +14,7 @@ export default function CalculationScreen ({ navigation }) {
   const [imageYOffset, setImageYOffset] = useState(0)
 
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <LessonHeader>Total Calculations</LessonHeader>
       <Tip tipText='Drag to see how many calculations are performed on a certain part.' />
 

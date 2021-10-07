@@ -9,7 +9,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default function ZoomScreen ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <LessonHeader>Images are Pixels</LessonHeader>
       <Tip tipText='Zoom in to see individual pixels' />
       <View style={styles.zoomView}>

@@ -16,7 +16,7 @@ export default function EyeDetectionScreen ({ navigation }) {
   const [found, setFound] = useState(false)
 
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <LessonHeader>Detection Time</LessonHeader>
       <Tip tipText='Drag to see which face feature the filter matches with' />
 

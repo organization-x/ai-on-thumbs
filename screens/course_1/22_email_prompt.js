@@ -10,7 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Course1Intro ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/ai-on-thumbs-logo.png')} />
         <Text style={styles.text}>Continue your journey by going to ai-camp.org</Text>

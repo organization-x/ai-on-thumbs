@@ -16,7 +16,7 @@ export default function NoseDetectionScreen ({ navigation }) {
   const [found, setFound] = useState(false)
 
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <LessonHeader>Detection Time</LessonHeader>
       <Tip tipText='Different filters scan for other features on the face.' />
 
