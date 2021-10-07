@@ -12,7 +12,7 @@ export default function Course1Intro ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
       <View style={styles.interactive}>
-      <Image style={styles.logo} resizeMode={'contain'} source={require('../../assets/ai-on-thumbs-logo.png')} />
+        <Image style={styles.logo} resizeMode='contain' source={require('../../assets/ai-on-thumbs-logo.png')} />
         <Text style={styles.text}>Continue your journey by going to ai-camp.org</Text>
       </View>
       <View style={styles.emailPrompt}>
@@ -20,7 +20,7 @@ export default function Course1Intro ({ navigation }) {
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Brightness2' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Info4' buttonColor={['#32B59D', '#3AC55B']} buttonText="Continue" />
+        <LessonButton navigation={navigation} nextScreen='Course1Info4' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    textShadowOffset: {width: 2, height: 2},
+    textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     marginTop: '20%',
     textAlign: 'center',
@@ -61,4 +61,3 @@ const styles = StyleSheet.create({
     marginVertical: '20%'
   }
 })
-

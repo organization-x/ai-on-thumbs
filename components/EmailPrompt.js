@@ -8,7 +8,7 @@ export default function EmailPrompt () {
   function logEmail (email) {
     console.log(email)
   }
-  const [text, setText] = useState('');
+  const [text, setText] = useState('')
   return (
     <Shadow distance={4} offset={[2, 2]}>
       <LinearGradient colors={['#3421A6', '#6D298A']} style={styles.container}>

@@ -16,7 +16,7 @@ export default function Course1Intro ({ navigation }) {
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Info3' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Magnify' buttonColor={['#32B59D', '#3AC55B']} buttonText="Continue" />
+        <LessonButton navigation={navigation} nextScreen='Course1Magnify' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    textShadowOffset: {width: 2, height: 2},
+    textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     marginTop: '15%',
     textAlign: 'center',
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    textShadowOffset: {width: 2, height: 2},
+    textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     marginTop: '65%',
     textAlign: 'center',

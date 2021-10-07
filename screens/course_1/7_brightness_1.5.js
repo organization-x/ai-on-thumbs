@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course1Brightness1Point5 () {
   return (
-      <Text>7_brightness_1.5.js</Text>
+    <Text>7_brightness_1.5.js</Text>
   )
 }

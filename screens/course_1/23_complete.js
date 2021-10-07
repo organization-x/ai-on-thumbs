@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course1Complete () {
   return (
-      <Text>23_complete.js</Text>
+    <Text>23_complete.js</Text>
   )
 }
