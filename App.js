@@ -9,25 +9,27 @@ import Courses from './screens/Courses'
 import Course1Intro from './screens/course_1/1_intro'
 import Course1FaceFinder from './screens/course_1/2_face_finder'
 import Course1HowFindFaces from './screens/course_1/3_how_find_faces'
+import Course1PinchZoom from './screens/course_1/3.5_pinch_zoom.js'
 import Course1Info1 from './screens/course_1/4_info_1'
 import Course1Info2 from './screens/course_1/5_info_2'
 import Course1Brightness1 from './screens/course_1/6_brightness_1'
-import Course1Brightness2 from './screens/course_1/6_brightness_2'
-import Course1Info3 from './screens/course_1/5_info_3'
-import Course1Info4 from './screens/course_1/5_info_4'
-import Course1Magnify from './screens/course_1/10_magnify'
-import Course1Info5 from './screens/course_1/5_info_5'
-import Course1HumanVsComputer from './screens/course_1/12_human_vs_computer'
-import Course1Info6 from './screens/course_1/5_info_6'
-import Course1Info7 from './screens/course_1/5_info_7'
-import Course1Info8 from './screens/course_1/5_info_8'
-import Course1Info9 from './screens/course_1/5_info_9'
-import Course1FaceParts from './screens/course_1/17_face_parts'
-import Course1Congrats from './screens/course_1/18_congrats'
-import Course1Review from './screens/course_1/19_review'
-import Course1Rating from './screens/course_1/20_rating'
-import Course1EmailPrompt from './screens/course_1/21_email_prompt'
-import Course1Complete from './screens/course_1/22_complete'
+import Course1Brightness1Point5 from './screens/course_1/7_brightness_1.5'
+import Course1Brightness2 from './screens/course_1/8_brightness_2'
+import Course1Info3 from './screens/course_1/9_info_3'
+import Course1Info4 from './screens/course_1/10_info_4'
+import Course1Magnify from './screens/course_1/11_magnify'
+import Course1Info5 from './screens/course_1/12_info_5'
+import Course1HumanVsComputer from './screens/course_1/13_human_vs_computer'
+import Course1Info6 from './screens/course_1/14_info_6'
+import Course1Info7 from './screens/course_1/15_info_7'
+import Course1Info8 from './screens/course_1/16_info_8'
+import Course1Info9 from './screens/course_1/17_info_9'
+import Course1FaceParts from './screens/course_1/18_face_parts'
+import Course1Congrats from './screens/course_1/19_congrats'
+import Course1Review from './screens/course_1/20_review'
+import Course1Rating from './screens/course_1/21_rating'
+import Course1EmailPrompt from './screens/course_1/22_email_prompt'
+import Course1Complete from './screens/course_1/23_complete'
 
 // course 2 imports
 
@@ -47,9 +49,11 @@ export default function App () {
         <Stack.Screen name='Course1Intro' component={Course1Intro} />
         <Stack.Screen name='Course1FaceFinder' component={Course1FaceFinder} />
         <Stack.Screen name='Course1HowFindFaces' component={Course1HowFindFaces} />
+        <Stack.Screen name='Course1PinchZoom' component={Course1PinchZoom} />
         <Stack.Screen name='Course1Info1' component={Course1Info1} />
         <Stack.Screen name='Course1Info2' component={Course1Info2} />
         <Stack.Screen name='Course1Brightness1' component={Course1Brightness1} />
+        <Stack.Screen name='Course1Brightness1.5' component={Course1Brightness1Point5} />
         <Stack.Screen name='Course1Brightness2' component={Course1Brightness2} />
         <Stack.Screen name='Course1Info3' component={Course1Info3} />
         <Stack.Screen name='Course1Info4' component={Course1Info4} />
