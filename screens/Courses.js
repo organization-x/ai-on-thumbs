@@ -2,50 +2,35 @@ import React from 'react'
 import { StyleSheet, Text, ScrollView } from 'react-native'
 
 import CourseCard from '../components/CourseCard'
+import CourseAd from '../components/CourseAd'
 import { LinearGradient } from 'expo-linear-gradient'
 
 export default function CoursesScreen ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
-      <Text style={styles.header}>Courses</Text>
+      <Text style={styles.header}>Your AI Journey</Text>
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
         <CourseCard
           navigation={navigation}
-          lessonScreen='ZoomScreen'
+          lessonScreen='Course1EmailPrompt'
           gradColors={['#8233C5', '#F02FE2']}
-          title='Getting Started'
-          desc='Learn AI with zero coding experience. This course will teach you how to learn.'
+          title='Intro to Facial Recognition'
+          desc='This lesson will teach you how to see through the "eyes" of a computer, and the first steps for facial recognition.'
+          ratingandduration='Beginner: 5 minutes'
         />
-        {/*
         <CourseCard
           navigation={navigation}
           lessonScreen='ZoomScreen'
           gradColors={['#8233C5', '#3C4687']}
-          title='Face Detection in Python'
-          desc='Learn AI with zero coding experience. This course will teach you how to learn.'
+          title='Facial Recognition, part 2'
+          desc='This lesson will teach you how facial recognition works using a real-life algorithm, starting right from where we left off in lesson 1.'
+          ratingandduration='Beginner: 10 minutes'
         />
-        <CourseCard
-          navigation={navigation}
-          lessonScreen='ZoomScreen'
-          gradColors={['#607CEA', '#3C4687']}
-          title='Computer Vision Basics'
-          desc='Learn AI with zero coding experience. This course will teach you how to learn.'
+        <CourseAd
+          gradColors={['#5D4672', '#A193A8']}
+          title='Want to learn more about AI?'
+          desc='Immerse yourself in artificial intelligence and learn to build incredible real-world AI products at ai-camp.org. No prior experience necessary!'
         />
-        <CourseCard
-          navigation={navigation}
-          lessonScreen='ZoomScreen'
-          gradColors={['#32B59D', '#3C4687']}
-          title='Natural Language Basics'
-          desc='Learn AI with zero coding experience. This course will teach you how to learn.'
-        />
-        <CourseCard
-          navigation={navigation}
-          lessonScreen='ZoomScreen'
-          gradColors={['#4FCF6E', '#32B59D']}
-          title='Data Science Basics'
-          desc='Learn AI with zero coding experience. This course will teach you how to learn.'
-        />
-        */}
       </ScrollView>
     </LinearGradient>
   )
@@ -58,7 +43,7 @@ const styles = StyleSheet.create({
     paddingVertical: 17
   },
   header: {
-    textAlign: 'left',
+    textAlign: 'center',
     fontSize: 35,
     color: 'white',
     fontWeight: 'bold',

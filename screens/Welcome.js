@@ -1,18 +1,13 @@
 import React from 'react'
-import { StyleSheet, View, Image } from 'react-native'
-import LessonHeader from '../components/LessonHeader'
+import { StyleSheet, View, Image, Text } from 'react-native'
 import LessonButton from '../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
-// import * as Analytics from 'expo-firebase-analytics'
 
-// Analytics.setCurrentScreen('Welcome')
 export default function Welcome ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <Image style={styles.logo} source={require('../assets/ai-on-thumbs-logo.png')} />
-      <LessonHeader>
-        AI on Thumbs
-      </LessonHeader>
+      <Image style={styles.logo} resizeMode={'contain'} source={require('../assets/ai-on-thumbs-logo.png')} />
+      <Text style={styles.text}>If you have thumbs,{"\n"}you can learn AI.</Text>
 
       <View style={styles.buttonView}>
 
@@ -31,9 +26,15 @@ export default function Welcome ({ navigation }) {
 
 const styles = StyleSheet.create({
   logo: {
-    width: 150,
-    height: 150,
+    height: 140,
     marginTop: 70
+  },
+  text: {
+    marginTop: '20%',
+    fontSize: 30,
+    fontFamily: 'Avenir',
+    color: 'white',
+    textAlign: 'center'
   },
   buttonView: {
     marginTop: 150
@@ -45,6 +46,6 @@ const styles = StyleSheet.create({
     flex: 1
   },
   welcomeBtn: {
-    width: 230
+    width: 150
   }
 })
