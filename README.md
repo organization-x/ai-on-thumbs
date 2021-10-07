@@ -1,2 +1,2 @@
 # ai-on-thumbs
-Create simple AI products using your thumbs.
+Explore AI concepts using just your thumbs.
