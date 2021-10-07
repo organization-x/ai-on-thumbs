@@ -7,28 +7,28 @@ import { LinearGradient } from 'expo-linear-gradient'
 import MagnifyGlass from '../../components/MagnifyGlass'
 import LessonButton from '../../components/LessonButton'
 
-export default function Course1Magnify ({navigation}) {
-  const smallScreen = Dimensions.get('window').height < 700;
+export default function Course1Magnify ({ navigation }) {
+  const smallScreen = Dimensions.get('window').height < 700
 
   return (
-      <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-        <Text style={smallScreen ? smallStyles.instructTxt : styles.instructTxt}>To get the feeling of a computer when it sees a photo, use the magnifier over the photo.</Text>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+      <Text style={smallScreen ? smallStyles.instructTxt : styles.instructTxt}>To get the feeling of a computer when it sees a photo, use the magnifier over the photo.</Text>
 
-        <View style={styles.interactive}>
-          <MagnifyGlass
-            src={require('../../assets/abe.png')}
-            magSrc={require('../../assets/abePx.png')}
-            mag={smallScreen ? 2 : 1.3}
-            radius={60}
-          />
-        </View>
-        <Text style={smallScreen ? smallStyles.captionTxt : styles.captionTxt}>Can you tell the difference between eyes and noses yet?</Text>
+      <View style={styles.interactive}>
+        <MagnifyGlass
+          src={require('../../assets/abe.png')}
+          magSrc={require('../../assets/abePx.png')}
+          mag={smallScreen ? 2 : 1.3}
+          radius={60}
+        />
+      </View>
+      <Text style={smallScreen ? smallStyles.captionTxt : styles.captionTxt}>Can you tell the difference between eyes and noses yet?</Text>
 
-        <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course1Info4' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course1Info5' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>
-      </LinearGradient>
+      <View style={styles.footerButtons}>
+        <LessonButton navigation={navigation} nextScreen='Course1Info4' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Info5' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+      </View>
+    </LinearGradient>
   )
 }
 
