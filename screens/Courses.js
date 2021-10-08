@@ -12,7 +12,7 @@ export default function CoursesScreen ({ navigation }) {
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
         <CourseCard
           navigation={navigation}
-          lessonScreen='Course1Info5'
+          lessonScreen='Course1Info6'
           gradColors={['#8233C5', '#F02FE2']}
           title='Intro to Facial Recognition'
           desc='This lesson will teach you how to see through the "eyes" of a computer, and the first steps for facial recognition.'
