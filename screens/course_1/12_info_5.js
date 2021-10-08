@@ -1,22 +1,24 @@
 // We really need to appreciate the computer world.
-// TODO: insert image
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Image } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 
-export default function Course1Intro ({ navigation }) {
+export default function Course1Info5 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+      <Image resizeMode='cover' source={require('../../assets/high-def-assets/ocean.png')} style={styles.backgroundImage} />
       <View style={styles.interactive}>
         <Text style={styles.text}>We really need to appreciate the computer world.</Text>
       </View>
-      <View style={styles.bottomText}>
-        <Text style={styles.altText}>An ocean of numbers, numbers, and numbers...</Text>
-      </View>
+
+        <View style={styles.bottomText}>
+          <Text style={styles.altText}>An ocean of numbers, numbers, and numbers...</Text>
+        </View>
+        
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Magnify' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
@@ -30,6 +32,13 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  backgroundImage: {
+    flex: 1,
+    marginTop: '140%',
+    position: 'absolute',
+    overflow: 'visible',
+    height: '50%'
   },
   interactive: {
     borderRadius: 7,

@@ -8,7 +8,7 @@ import EmailPrompt from '../../components/EmailPrompt'
 
 import { LinearGradient } from 'expo-linear-gradient'
 
-export default function Course1Intro ({ navigation }) {
+export default function Course1EmailPrompt ({ navigation }) {
   function renderInputs () {
     return (
       <ScrollView
