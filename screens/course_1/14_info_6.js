@@ -19,8 +19,8 @@ export default function Course1Info4 ({ navigation }) {
         <Image source={require('../../assets/high-def-assets/computerhand.png')} resizeMode='contain' style={styles.hand}/>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1Info3' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Magnify' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Info7' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )
