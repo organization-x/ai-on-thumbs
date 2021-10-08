@@ -1,7 +1,7 @@
 // Continue your journey by going to ai-camp.org
 
 import React from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
+import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollView } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
@@ -9,15 +9,30 @@ import EmailPrompt from '../../components/EmailPrompt'
 import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Course1Intro ({ navigation }) {
+  function renderInputs () {
+    return (
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+      >
+        <View style={styles.emailPrompt}>
+          <EmailPrompt />
+        </View>
+      </ScrollView>
+    )
+  }
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/ai-on-thumbs-logo.png')} />
         <Text style={styles.text}>Continue your journey by going to ai-camp.org</Text>
       </View>
-      <View style={styles.emailPrompt}>
-        <EmailPrompt />
-      </View>
+      {Platform.OS === 'android' ? (
+        renderInputs()
+      ) : (
+        <KeyboardAvoidingView behavior="padding">
+          {renderInputs()}
+        </KeyboardAvoidingView>
+      )}
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Brightness2' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course1Info4' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
@@ -53,11 +68,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   footerButtons: {
+    marginTop: '20%',
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
   emailPrompt: {
-    marginVertical: '20%'
+   //
   }
 })
