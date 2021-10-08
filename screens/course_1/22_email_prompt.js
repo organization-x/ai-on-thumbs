@@ -34,8 +34,8 @@ export default function Course1EmailPrompt ({ navigation }) {
         </KeyboardAvoidingView>
       )}
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1Brightness2' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Info4' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='Course1Rating' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Complete' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )
