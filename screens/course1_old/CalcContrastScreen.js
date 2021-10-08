@@ -29,7 +29,7 @@ export default function CalcContrastScreen ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <LessonHeader>Calculating Contrast</LessonHeader>
       <Tip tipText='Select the correct filter contrast' />
 

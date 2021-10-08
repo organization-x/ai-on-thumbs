@@ -8,7 +8,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default function FaceDetectionBasics ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <LessonHeader>Face Detection Basics</LessonHeader>
       <Tip tipText='Eyes + Ears + Nose + Mouth = Face?' />
 

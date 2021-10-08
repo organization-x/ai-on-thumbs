@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course1HumanVsComputer () {
   return (
-      <Text>13_human_vs_computer.js</Text>
+    <Text>13_human_vs_computer.js</Text>
   )
 }
