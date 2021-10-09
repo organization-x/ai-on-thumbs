@@ -6,7 +6,7 @@ import { Shadow } from 'react-native-shadow-2'
 import LottieView from 'lottie-react-native'
 
 async function createUser (email) {
-  const res = await fetch('http://192.168.1.78:8000/sub', {
+  const res = await fetch('https://app.ai-camp.org/sub', {
 
     method: 'POST',
     body: JSON.stringify(
