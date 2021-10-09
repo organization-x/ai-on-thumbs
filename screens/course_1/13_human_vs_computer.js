@@ -46,7 +46,7 @@ export default function Course1HumanVsComputer ({ navigation }) {
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Info5' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Info6' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )

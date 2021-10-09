@@ -20,6 +20,7 @@ import Course1Info4 from './screens/course_1/10_info_4'
 import Course1Magnify from './screens/course_1/11_magnify'
 import Course1Info5 from './screens/course_1/12_info_5'
 import Course1HumanVsComputer from './screens/course_1/13_human_vs_computer'
+import Course1HumanVsComputer2 from './screens/course_1/13.5_human_vs_computer2'
 import Course1Info6 from './screens/course_1/14_info_6'
 import Course1Info7 from './screens/course_1/15_info_7'
 import Course1Info8 from './screens/course_1/16_info_8'
@@ -60,6 +61,7 @@ export default function App () {
         <Stack.Screen name='Course1Magnify' component={Course1Magnify} />
         <Stack.Screen name='Course1Info5' component={Course1Info5} />
         <Stack.Screen name='Course1HumanVsComputer' component={Course1HumanVsComputer} />
+        <Stack.Screen name='Course1HumanVsComputer2' component={Course1HumanVsComputer2} />
         <Stack.Screen name='Course1Info6' component={Course1Info6} />
         <Stack.Screen name='Course1Info7' component={Course1Info7} />
         <Stack.Screen name='Course1Info8' component={Course1Info8} />

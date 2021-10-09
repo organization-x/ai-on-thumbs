@@ -1,7 +1,7 @@
 // R.I.P. We feel for you.
 
 import React from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
+import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   hand: {
     marginBottom: '10%',
     alignSelf: 'center',
-    height: 450
+    height: (Dimensions.get('window').width)
   },
   footerButtons: {
     marginBottom: 10,
