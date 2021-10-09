@@ -14,7 +14,7 @@ export default function Course1EmailPrompt ({ navigation }) {
       <ScrollView
         showsVerticalScrollIndicator={false}
       >
-        <View style={styles.emailPrompt}>
+        <View>
           <EmailPrompt />
         </View>
       </ScrollView>
@@ -74,8 +74,5 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
-  },
-  emailPrompt: {
-    //
   }
 })

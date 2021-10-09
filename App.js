@@ -5,6 +5,14 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Welcome from './screens/Welcome'
 import Courses from './screens/Courses'
 
+import * as Sentry from 'sentry-expo';
+
+Sentry.init({
+  dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
+  enableInExpoDevelopment: true,
+  debug: true,
+})
+
 // course 1 imports
 import Course1Intro from './screens/course_1/1_intro'
 import Course1FaceFinder from './screens/course_1/2_face_finder'

@@ -20,7 +20,7 @@ export default function CoursesScreen ({ navigation }) {
         />
         <CourseCard
           navigation={navigation}
-          lessonScreen='ZoomScreen'
+          lessonScreen='Course1Intro'
           gradColors={['#8233C5', '#3C4687']}
           title='Facial Recognition, part 2'
           desc='This lesson will teach you how facial recognition works using a real-life algorithm, starting right from where we left off in lesson 1.'

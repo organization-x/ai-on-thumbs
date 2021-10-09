@@ -4,6 +4,7 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, Modal, View } from 'reac
 import { LinearGradient } from 'expo-linear-gradient'
 import { Shadow } from 'react-native-shadow-2'
 import LottieView from 'lottie-react-native'
+import * as Sentry from 'sentry-expo'
 
 async function createUser (email) {
   const res = await fetch('https://app.ai-camp.org/sub', {
@@ -41,7 +42,6 @@ export default function EmailPrompt () {
       setModalVisible(false)
     }, 2000)
   }
-
   return (
     <Shadow distance={4} offset={[2, 2]}>
       <LinearGradient colors={['#3421A6', '#6D298A']} style={styles.container}>
@@ -81,7 +81,7 @@ export default function EmailPrompt () {
           </View>
           <View style={styles.flexSmall}>
             <TouchableOpacity
-              onPress={() => { onLoginPress() }}
+              onPress={() => { onLoginPress().catch((err) => { Sentry.captureException(err) }) }}
               style={[styles.submitButton]}
               underlayColor='#fff'
             >
