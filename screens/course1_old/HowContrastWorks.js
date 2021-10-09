@@ -8,7 +8,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default function HowContrastWorks ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <LessonHeader>How It Works</LessonHeader>
       <Tip tipText='Filters look for contrast (e.g B﹠W)' />
 
