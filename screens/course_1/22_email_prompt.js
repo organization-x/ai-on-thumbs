@@ -9,17 +9,15 @@ import EmailPrompt from '../../components/EmailPrompt'
 import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Course1EmailPrompt ({ navigation }) {
-  function renderInputs () {
-    return (
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-      >
-        <View>
-          <EmailPrompt />
-        </View>
-      </ScrollView>
-    )
-  }
+  const renderInputs = (
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <EmailPrompt />
+      </View>
+    </ScrollView>
+  )
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
@@ -28,11 +26,11 @@ export default function Course1EmailPrompt ({ navigation }) {
       </View>
       {Platform.OS === 'android'
         ? (
-            renderInputs()
+            renderInputs
           )
         : (
           <KeyboardAvoidingView behavior='padding'>
-            {renderInputs()}
+            {renderInputs}
           </KeyboardAvoidingView>
           )}
       <View style={styles.footerButtons}>

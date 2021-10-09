@@ -9,8 +9,8 @@ import * as Sentry from 'sentry-expo';
 
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
-  enableInExpoDevelopment: true,
-  debug: true,
+  enableInExpoDevelopment: false,
+  debug: false,
 })
 
 // course 1 imports

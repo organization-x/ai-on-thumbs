@@ -13,9 +13,10 @@ export default function Course1HumanVsComputer ({ navigation }) {
   const [isEnabled, setIsEnabled] = useState(false)
   const toggleSwitch = () => setIsEnabled(previousState => !previousState)
   let src
-  isEnabled === true
-    ? src = require('../../assets/high-def-assets/pixelizedlincoln.png')
-    : src = require('../../assets/high-def-assets/normallincoln.png')
+  if(isEnabled === true)
+    src = require('../../assets/high-def-assets/pixelizedlincoln.png')
+  else
+    src = require('../../assets/high-def-assets/normallincoln.png')
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <ScrollView scrollEnabled={false}>
