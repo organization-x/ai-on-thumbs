@@ -26,13 +26,15 @@ export default function Course1EmailPrompt ({ navigation }) {
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/ai-on-thumbs-logo.png')} />
         <Text style={styles.text}>Continue your journey by going to ai-camp.org</Text>
       </View>
-      {Platform.OS === 'android' ? (
-        renderInputs()
-      ) : (
-        <KeyboardAvoidingView behavior="padding">
-          {renderInputs()}
-        </KeyboardAvoidingView>
-      )}
+      {Platform.OS === 'android'
+        ? (
+            renderInputs()
+          )
+        : (
+          <KeyboardAvoidingView behavior='padding'>
+            {renderInputs()}
+          </KeyboardAvoidingView>
+          )}
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Rating' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course1Complete' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
@@ -74,6 +76,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   emailPrompt: {
-   //
+    //
   }
 })

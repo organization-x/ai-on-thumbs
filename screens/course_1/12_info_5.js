@@ -15,10 +15,10 @@ export default function Course1Info5 ({ navigation }) {
         <Text style={styles.text}>We really need to appreciate the computer world.</Text>
       </View>
 
-        <View style={styles.bottomText}>
-          <Text style={styles.altText}>An ocean of numbers, numbers, and numbers...</Text>
-        </View>
-        
+      <View style={styles.bottomText}>
+        <Text style={styles.altText}>An ocean of numbers, numbers, and numbers...</Text>
+      </View>
+
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Magnify' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />

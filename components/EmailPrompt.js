@@ -10,7 +10,7 @@ async function createUser (email) {
 
     method: 'POST',
     body: JSON.stringify(
-      { 'email': email }
+      { email: email }
     ),
     headers: {
       'Content-type': 'application/json'
@@ -30,15 +30,14 @@ export default function EmailPrompt () {
   async function onLoginPress () {
     const res = await createUser(email)
 
-    if (res === 'OK'){
+    if (res === 'OK') {
       setModalVisible(true)
       CloseModalAfterDelay()
     }
-
   }
-  
+
   function CloseModalAfterDelay () {
-    setTimeout(function(){
+    setTimeout(function () {
       setModalVisible(false)
     }, 2000)
   }
@@ -47,16 +46,16 @@ export default function EmailPrompt () {
     <Shadow distance={4} offset={[2, 2]}>
       <LinearGradient colors={['#3421A6', '#6D298A']} style={styles.container}>
         <Modal
-          animationType="slide"
-          transparent={true}
+          animationType='slide'
+          transparent
           visible={modalVisible}
           onRequestClose={() => {
-            setModalVisible(!modalVisible);
+            setModalVisible(!modalVisible)
           }}
         >
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
-              <LottieView source={require('../assets/1818-success-animation.json')} autoPlay={true} loop={false} />
+              <LottieView source={require('../assets/1818-success-animation.json')} autoPlay loop={false} />
             </View>
           </View>
         </Modal>
@@ -119,16 +118,16 @@ const styles = StyleSheet.create({
   },
   centeredView: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   modalView: {
     margin: 20,
-    backgroundColor: "white",
+    backgroundColor: 'white',
     borderRadius: 20,
     padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
+    alignItems: 'center',
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 2

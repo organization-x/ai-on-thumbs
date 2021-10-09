@@ -7,7 +7,7 @@ import LessonButton from '../../components/LessonButton'
 
 export default function Course1Intro ({ navigation }) {
   return (
-    <ImageBackground source={require("../../assets/high-def-assets/objectregbackground.png")} style={styles.container}>
+    <ImageBackground source={require('../../assets/high-def-assets/objectregbackground.png')} style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.text}>To understand how facial recognition works, we will first learn about how computers interpret faces.</Text>
       </View>

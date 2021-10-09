@@ -4,7 +4,7 @@ import { StyleSheet, View, Image, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
-export default function Course1Complete ( { navigation }) {
+export default function Course1Complete ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <Image style={styles.logo} source={require('../../assets/ai-on-thumbs-logo.png')} />
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    textShadowOffset:  { width: 2, height: 2 },
+    textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     marginTop: '10%',
     textAlign: 'center',
