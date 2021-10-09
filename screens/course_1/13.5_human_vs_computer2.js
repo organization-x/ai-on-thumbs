@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   image: {
     alignSelf: 'center',
     marginVertical: '10%',
-    height: (Dimensions.get('window').width/1.2)
+    height: (Dimensions.get('window').width / 1.2)
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
