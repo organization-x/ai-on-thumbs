@@ -1,5 +1,3 @@
-//October 9, 2021
-
 import React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
