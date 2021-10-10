@@ -14,10 +14,10 @@ export default function Course1HumanVsComputer ({ navigation }) {
   const toggleSwitch = () => setIsEnabled(previousState => !previousState)
   let src
   if(isEnabled === true) {
-    src = require('../../assets/high-def-assets/pixelizedlincoln.png')
+    src = require('../../assets/course_1/pixelizedlincoln.png')
   }
   else {
-    src = require('../../assets/high-def-assets/normallincoln.png')
+    src = require('../../assets/course_1/normallincoln.png')
   }
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>

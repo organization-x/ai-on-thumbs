@@ -55,7 +55,7 @@ export default function EmailPrompt () {
         >
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
-              <LottieView source={require('../assets/1818-success-animation.json')} autoPlay loop={false} />
+              <LottieView source={require('../assets/course_1/1818-success-animation.json')} autoPlay loop={false} />
             </View>
           </View>
         </Modal>

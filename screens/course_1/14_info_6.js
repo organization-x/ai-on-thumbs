@@ -16,7 +16,7 @@ export default function Course1Info4 ({ navigation }) {
         <Text style={styles.smallText}>*caresses computer*</Text>
       </View>
       <View>
-        <Image source={require('../../assets/high-def-assets/computerhand.png')} resizeMode='contain' style={styles.hand} />
+        <Image source={require('../../assets/course_1/computerhand.png')} resizeMode='contain' style={styles.hand} />
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer' buttonColor='#8976C2' buttonText='Back' />
