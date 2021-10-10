@@ -41,6 +41,8 @@ import Course1EmailPrompt from './screens/course_1/22_email_prompt'
 import Course1Complete from './screens/course_1/23_complete'
 
 // course 2 imports
+import Course2Intro from './screens/course_2/3_intro_and_opening'
+
 
 const Stack = createStackNavigator()
 
@@ -48,11 +50,13 @@ export default function App () {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName='Welcome'
+        // initialRouteName='Welcome'
         screenOptions={{ headerShown: false }}
       >
+        <Stack.Screen name='Course2Intro' component={Course2Intro} />
         <Stack.Screen name='Welcome' component={Welcome} />
         <Stack.Screen name='Courses' component={Courses} />
+        
 
         {/* course 1 screen stack */}
         <Stack.Screen name='Course1Intro' component={Course1Intro} />
@@ -82,6 +86,8 @@ export default function App () {
         <Stack.Screen name='Course1Complete' component={Course1Complete} />
 
         {/* course 2 screen stack */}
+        
+
 
       </Stack.Navigator>
     </NavigationContainer>
