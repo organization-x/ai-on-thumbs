@@ -8,7 +8,7 @@ export default function Course2Intro ({ navigation }) {
   return (
     <ImageBackground source={require('../../assets/high-def-assets/objectregbackground.png')} style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.text}>Welcome to your second lesson in facial recognition.</Text>
+        <Text style={styles.text}>Welcome to your second lesson in facial recognition!</Text>
         <Text style={styles.text}>Let's review what we learned last time.</Text>
       </View>
       <View style={styles.footerButtons}>
@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {
-    marginTop: '20%',
+    marginTop: '15%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 50,
+    fontSize: 45,
     fontWeight: 'bold'
   },
   footerButtons: {
