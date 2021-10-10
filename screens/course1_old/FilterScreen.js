@@ -14,7 +14,7 @@ export default function FilterScreen ({ navigation }) {
   const [imageYOffset, setImageYOffset] = useState(0)
 
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <LessonHeader>Filter on Image</LessonHeader>
       <Tip tipText='Drag the filter to see where it matches.' />
 

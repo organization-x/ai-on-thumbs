@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course1FaceFinder () {
   return (
-      <Text>2_face_finder.js</Text>
+    <Text>2_face_finder.js</Text>
   )
 }

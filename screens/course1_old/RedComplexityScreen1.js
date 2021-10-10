@@ -10,7 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default function RedComplexityScreen1 ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <LessonHeader>Reducing Complexity</LessonHeader>
       <Tip tipText='We need to reduce calculations' />
 

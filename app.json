@@ -34,6 +34,21 @@
       "favicon": "./assets/favicon.png"
     },
     "description": "Learn AI with just your thumbs!",
-    "githubUrl": "https://github.com/organization-x/ai-on-thumbs"
+    "githubUrl": "https://github.com/organization-x/ai-on-thumbs",
+    "plugins": [
+      "sentry-expo"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "ai-camp",
+            "project": "ai-on-thumbs",
+            "authToken": "8193e0875b3a49e2b0990257d269a9fee2c01a44b30a4f11a7ae2f481ba13b93"
+          }
+        }
+      ]
+    }
   }
 }

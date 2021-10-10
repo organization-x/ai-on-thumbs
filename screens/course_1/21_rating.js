@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course1Rating () {
   return (
-      <Text>21_rating.js</Text>
+    <Text>21_rating.js</Text>
   )
 }

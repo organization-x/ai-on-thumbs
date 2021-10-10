@@ -5,6 +5,14 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Welcome from './screens/Welcome'
 import Courses from './screens/Courses'
 
+import * as Sentry from 'sentry-expo';
+
+Sentry.init({
+  dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
+  enableInExpoDevelopment: false,
+  debug: false,
+})
+
 // course 1 imports
 import Course1Intro from './screens/course_1/1_intro'
 import Course1FaceFinder from './screens/course_1/2_face_finder'
@@ -20,6 +28,7 @@ import Course1Info4 from './screens/course_1/10_info_4'
 import Course1Magnify from './screens/course_1/11_magnify'
 import Course1Info5 from './screens/course_1/12_info_5'
 import Course1HumanVsComputer from './screens/course_1/13_human_vs_computer'
+import Course1HumanVsComputer2 from './screens/course_1/13.5_human_vs_computer2'
 import Course1Info6 from './screens/course_1/14_info_6'
 import Course1Info7 from './screens/course_1/15_info_7'
 import Course1Info8 from './screens/course_1/16_info_8'
@@ -60,6 +69,7 @@ export default function App () {
         <Stack.Screen name='Course1Magnify' component={Course1Magnify} />
         <Stack.Screen name='Course1Info5' component={Course1Info5} />
         <Stack.Screen name='Course1HumanVsComputer' component={Course1HumanVsComputer} />
+        <Stack.Screen name='Course1HumanVsComputer2' component={Course1HumanVsComputer2} />
         <Stack.Screen name='Course1Info6' component={Course1Info6} />
         <Stack.Screen name='Course1Info7' component={Course1Info7} />
         <Stack.Screen name='Course1Info8' component={Course1Info8} />
