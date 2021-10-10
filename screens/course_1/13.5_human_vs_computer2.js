@@ -17,7 +17,7 @@ export default function Course1HumanVsComputer2 ({ navigation }) {
           <Text style={styles.text}>See how different the worlds we live in are?</Text>
         </View>
 
-        <Image resizeMode='contain' source={require('../../assets/high-def-assets/combolincoln.png')} style={styles.image} />
+        <Image resizeMode='contain' source={require('../../assets/course_1/combolincoln.png')} style={styles.image} />
         <Text style={styles.smallText}>Through examples like this, we will grow our understanding and appreciation for computers.</Text>
       </ScrollView>
 
