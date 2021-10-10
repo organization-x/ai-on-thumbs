@@ -1,4 +1,4 @@
-// Lesson Review
+// DO YOU HAVE THUMBS?
 
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
@@ -7,21 +7,18 @@ import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 
-export default function Course1Review ({ navigation }) {
+export default function Course1Welcome1 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.bigText}>Lesson Review</Text>
-        <Text style={styles.boldText}>1</Text>
-        <Text style={styles.text}>Photos are composed of smaller parts: pixels.</Text>
-        <Text style={styles.boldText}>2</Text>
-        <Text style={styles.text}>Computers see pixels as a matrix of numbers. The brighter the pixel, the larger the number!</Text>
-        <Text style={styles.text}>3</Text>
-        <Text style={styles.text}>Computers use facial features to help them detect faces.</Text>
+        <Text style={styles.biggestText}>DO</Text>
+        <Text style={styles.bigText}>YOU</Text>
+        <Text style={styles.smallText}>HAVE</Text>
+        <Text style={styles.smallerText}>THUMBS?</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1Congrats' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Rating' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Yes' />
+        <LessonButton navigation={navigation} nextScreen='Course1Welcome2' buttonColor={['#32B59D', '#3AC55B']} buttonText='No' />
       </View>
     </LinearGradient>
   )
@@ -39,33 +36,44 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     alignItems: 'center'
   },
-  text: {
+  smallestText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '15%',
+    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 30
+    fontSize: 60,
+    fontWeight: 'bold'
   },
-  boldText: {
+  smallText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '15%',
+    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: 105,
     fontWeight: 'bold'
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '65%',
+    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 50,
+    fontSize: 135,
+    fontWeight: 'bold'
+  },
+  biggestText: {
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+    marginTop: '40%',
+    textAlign: 'center',
+    color: 'white',
+    fontSize: 200,
     fontWeight: 'bold'
   },
   footerButtons: {
@@ -74,4 +82,3 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   }
 })
-
