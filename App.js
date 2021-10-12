@@ -74,7 +74,7 @@ const Stack = createStackNavigator()
 export default function App () {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Welcome' screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName='Welcome' screenOptions={{ headerShown: false }} >
         <Stack.Screen name='Welcome' component={Welcome} />
         <Stack.Screen name='Courses' component={Courses} />
 
@@ -143,5 +143,5 @@ export default function App () {
 
       </Stack.Navigator>
     </NavigationContainer>
-  )
+  );
 }
