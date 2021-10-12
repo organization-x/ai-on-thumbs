@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course1EmailPrompt () {
   return (
-      <Text>22_email_prompt.js</Text>
+    <Text>22_email_prompt.js</Text>
   )
 }

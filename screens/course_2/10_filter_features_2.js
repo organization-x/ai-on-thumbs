@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2FilterFeatures2 () {
   return (
-      <Text>10_filter_features_2.js</Text>
+    <Text>10_filter_features_2.js</Text>
   )
 }

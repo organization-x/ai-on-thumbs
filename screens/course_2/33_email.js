@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2Email () {
   return (
-      <Text>33_email.js</Text>
+    <Text>33_email.js</Text>
   )
 }

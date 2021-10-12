@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2InterpretPictures () {
   return (
-      <Text>5_interpret_pictures.js</Text>
+    <Text>5_interpret_pictures.js</Text>
   )
 }

@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2OceanNumbers () {
   return (
-      <Text>6_ocean_numbers.js</Text>
+    <Text>6_ocean_numbers.js</Text>
   )
 }

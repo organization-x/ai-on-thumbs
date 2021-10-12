@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2SearchingAlgorithmMark () {
   return (
-      <Text>27_searching_algorithm_mark.js</Text>
+    <Text>27_searching_algorithm_mark.js</Text>
   )
 }

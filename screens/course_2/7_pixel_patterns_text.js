@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2PixelPatternsText () {
   return (
-      <Text>7_pixel_Patterns_text.js</Text>
+    <Text>7_pixel_Patterns_text.js</Text>
   )
 }

@@ -1,9 +1,9 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import LessonButton from '../../components/LessonButton';
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
+import LessonButton from '../../components/LessonButton'
 
-export default function Course2ScanAll1({ navigation }) {
+export default function Course2ScanAll1 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.textSection}>
@@ -31,24 +31,24 @@ export default function Course2ScanAll1({ navigation }) {
         />
       </View>
     </LinearGradient>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingVertical: 15
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   textSection: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   mainText: {
     marginVertical: 10,
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 40,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   secondText: {
     marginVertical: 10,
@@ -69,6 +69,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
-  },
-});
+    fontSize: 40
+  }
+})

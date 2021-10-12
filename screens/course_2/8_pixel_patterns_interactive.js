@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2PixelPatternsInteractive () {
   return (
-      <Text>8_pixel_patterns_interactive.js</Text>
+    <Text>8_pixel_patterns_interactive.js</Text>
   )
 }

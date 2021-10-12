@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2GettingHangAlgorithms () {
   return (
-      <Text>26_getting_hang_algorithms.js</Text>
+    <Text>26_getting_hang_algorithms.js</Text>
   )
 }

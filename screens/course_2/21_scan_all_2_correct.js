@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2ScanAll2Correct () {
   return (
-      <Text>21_scan_all_2_correct.js</Text>
+    <Text>21_scan_all_2_correct.js</Text>
   )
 }

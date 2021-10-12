@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2Selfie () {
   return (
-      <Text>34_selfie.js</Text>
+    <Text>34_selfie.js</Text>
   )
 }

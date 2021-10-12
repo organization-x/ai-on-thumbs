@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2AppStoreReview () {
   return (
-      <Text>32_app_store_review.js</Text>
+    <Text>32_app_store_review.js</Text>
   )
 }

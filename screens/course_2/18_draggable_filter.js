@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2DraggableFilter () {
   return (
-      <Text>18_draggable_filter.js</Text>
+    <Text>18_draggable_filter.js</Text>
   )
 }

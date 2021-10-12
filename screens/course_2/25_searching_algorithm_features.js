@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2SearchingAlgorithmFeatures () {
   return (
-      <Text>25_searching_algorithm_features.js</Text>
+    <Text>25_searching_algorithm_features.js</Text>
   )
 }

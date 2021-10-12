@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2Contrast3 () {
   return (
-      <Text>14_contrast_3.js</Text>
+    <Text>14_contrast_3.js</Text>
   )
 }

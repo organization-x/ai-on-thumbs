@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course1Magnify () {
   return (
-      <Text>11_magnify.js</Text>
+    <Text>11_magnify.js</Text>
   )
 }

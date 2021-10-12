@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course2ScanAll5 () {
   return (
-      <Text>24_review_3.js</Text>
+    <Text>24_review_3.js</Text>
   )
 }
