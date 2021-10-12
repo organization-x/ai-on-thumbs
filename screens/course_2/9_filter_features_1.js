@@ -1,7 +1,10 @@
-import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import LessonButton from "../../components/LessonButton";
+
+// Turns out the patterns in our facial features are distinctive
+
+import React from "react"
+import { View, Text, StyleSheet, Button } from "react-native"
+import { LinearGradient } from "expo-linear-gradient"
+import LessonButton from "../../components/LessonButton"
 
 export default function Filter_features({ navigation }) {
   return (
@@ -35,24 +38,24 @@ export default function Filter_features({ navigation }) {
       </View>
     </View> 
     </LinearGradient>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 10,
-    paddingVertical: 15,
+    paddingVertical: 15
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-between"
   },
   textSection: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "center"
   },
   mainText: {
     marginVertical: 5,
@@ -64,7 +67,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "white",
     fontSize: 30,
-    fontWeight: "bold",
+    fontWeight: "bold"
   },
   secondText: {
     marginVertical: 10,
@@ -75,6 +78,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "white",
     fontSize: 25,
-    fontWeight : 'bold',
+    fontWeight : 'bold'
   }
-});
+})

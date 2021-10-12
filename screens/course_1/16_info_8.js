@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course1Info8 () {
   return (
-      <Text>16_info_8.js</Text>
+    <Text>16_info_8.js</Text>
   )
 }

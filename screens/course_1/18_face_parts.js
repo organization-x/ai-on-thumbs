@@ -5,6 +5,6 @@ import Text from 'react-native'
 
 export default function Course1FaceParts () {
   return (
-      <Text>18_face_parts.js</Text>
+    <Text>18_face_parts.js</Text>
   )
 }
