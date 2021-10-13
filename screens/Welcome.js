@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 export default function Welcome ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <Image style={styles.logo} resizeMode='contain' source={require('../assets/ai-on-thumbs-logo.png')} />
+      <Image style={styles.logo} resizeMode='contain' source={require('../assets/stock/ai-on-thumbs-logo.png')} />
       <Text style={styles.text}>If you have thumbs,{'\n'}you can learn AI.</Text>
 
       <View style={styles.buttonView}>
