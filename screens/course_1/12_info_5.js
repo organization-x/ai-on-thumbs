@@ -10,7 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 export default function Course1Info5 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <Image resizeMode='cover' source={require('../../assets/high-def-assets/ocean.png')} style={styles.backgroundImage} />
+      <Image resizeMode='cover' source={require('../../assets/course_1/ocean.png')} style={styles.backgroundImage} />
       <View style={styles.interactive}>
         <Text style={styles.text}>We really need to appreciate the computer world.</Text>
       </View>

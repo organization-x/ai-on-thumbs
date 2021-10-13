@@ -10,7 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 export default function Course1Congrats ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <ImageBackground source={require('../../assets/course1/confetti.png')} style={styles.container}>
+      <ImageBackground source={require('../../assets/course_1/confetti.png')} style={styles.container}>
         <View style={styles.interactive}>
           <Text style={styles.bigText}>Congrats!</Text>
           <Text style={styles.text}>You just learned all about how computers see. You also learned an important insight into facial recognition!</Text>
