@@ -14,7 +14,7 @@ export default function Ad ({ navigation }) {
 
       <LessonHeader style={styles.left_align}>You Completed the Course!</LessonHeader>
 
-      <Image style={styles.logo} source={require('../assets/ai-on-thumbs-logo.png')} />
+      <Image style={styles.logo} source={require('../assets/stock/ai-on-thumbs-logo.png')} />
 
       <ParagraphBox text='AI Camp teaches students about coding, AI, and tech internships. Build your own AI Product with a team and deploy it into the real world with AI instructors.' />
 
