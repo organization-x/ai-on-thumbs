@@ -16,8 +16,8 @@ export default function MagnifyScreen ({ navigation }) {
 
       <View style={styles.interactive}>
         <MagnifyGlass
-          src={require('../../assets/course_1/normallincoln.png')}
-          magSrc={require('../../assets/course_1/pixelizedlincoln.png')}
+          src={require('../../assets/abe.png')}
+          magSrc={require('../../assets/abePx.png')}
           mag={1}
           radius={50}
         />
