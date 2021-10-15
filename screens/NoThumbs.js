@@ -11,7 +11,7 @@ export default function NoThumbs ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
-        <Image style={styles.image} source={require('../assets/stock/nothumb.png')} resizeMode={'cover'}/>
+        <Image style={styles.image} source={require('../assets/stock/nothumb.png')} resizeMode='cover' />
         <Text style={styles.biggestText}>We’re sorry if you don’t have thumbs.</Text>
         <Text style={styles.biggestText}>But, our point is that everyone can learn AI!</Text>
         <Text style={styles.smallText}>AI is not a mystical or evil thing, tap continue to open the world of AI.</Text>

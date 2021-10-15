@@ -14,10 +14,10 @@ export default function Welcome ({ navigation }) {
       if (value !== 'true') {
         SecureStore.setItemAsync('hasSeenThumbs', 'true')
         setFirstLaunch(false)
-      } 
+      }
     }).catch((err) => { Sentry.captureException(err) })
   }
-  
+
   firstLaunchCheck()
 
   if (!isFirstLaunch) {

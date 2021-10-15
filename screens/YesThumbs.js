@@ -11,7 +11,7 @@ export default function YesThumbs ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
-        <Image style={styles.image} source={require('../assets/stock/thumbsup.png')} resizeMode={'cover'}/>
+        <Image style={styles.image} source={require('../assets/stock/thumbsup.png')} resizeMode='cover' />
         <Text style={styles.biggestText}>You have thumbs?</Text>
         <Text style={styles.biggestText}>Then you can learn AI!</Text>
         <Text style={styles.smallText}>AI is not a mystical or evil thing, tap continue to open the world of AI.</Text>

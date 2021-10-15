@@ -15,16 +15,16 @@ export default function Course1Brightness1Point5 ({ navigation }) {
       <View style={styles.interactive}>
         <Text style={styles.biggestText}>Now, tap the pixel that has the largest value!</Text>
         <View style={styles.flexRow}>
-          <Pressable onPress={() => changeText('Not quite :(')} >
-            <Image source={require('../../assets/course_1/000000square.png')} resizeMode={'contain'} />
+          <Pressable onPress={() => changeText('Not quite :(')}>
+            <Image source={require('../../assets/course_1/000000square.png')} resizeMode='contain' />
           </Pressable>
 
           <Pressable onPress={() => changeText('Not quite :(')}>
-            <Image source={require('../../assets/course_1/4D4D4Dsquare.png')} resizeMode={'contain'} />
+            <Image source={require('../../assets/course_1/4D4D4Dsquare.png')} resizeMode='contain' />
           </Pressable>
-          
+
           <Pressable onPress={() => changeText('Perfect!')}>
-            <Image source={require('../../assets/course_1/FFFFFFsquare.png')} resizeMode={'contain'} />
+            <Image source={require('../../assets/course_1/FFFFFFsquare.png')} resizeMode='contain' />
           </Pressable>
         </View>
         <Text style={styles.smallText}>{text}</Text>
@@ -34,7 +34,7 @@ export default function Course1Brightness1Point5 ({ navigation }) {
             <Text style={styles.smallestText}>The brighter the pixel is, the bigger the value!</Text>
             )
           : (
-            null
+              null
             )}
 
       </View>

@@ -15,7 +15,7 @@ export default function Course1Brightness1 ({ navigation }) {
       <View style={styles.interactive}>
         <Text style={styles.biggestText}>Each pixel has a value that represents how bright it is.</Text>
         <View style={styles.imageContainer}>
-          <Image style={styles.image} source={require('../../assets/course_1/pixelcontrast.png')} resizeMode={'contain'} />
+          <Image style={styles.image} source={require('../../assets/course_1/pixelcontrast.png')} resizeMode='contain' />
         </View>
         <Text style={styles.smallText}>If a pixel has a larger number, the computer will know that the pixel is brighter.</Text>
       </View>
@@ -66,9 +66,9 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    width: (Dimensions.get('window').width/1.2)
+    width: (Dimensions.get('window').width / 1.2)
   },
   imageContainer: {
-    height: (Dimensions.get('window').width/1.2)
+    height: (Dimensions.get('window').width / 1.2)
   }
 })
