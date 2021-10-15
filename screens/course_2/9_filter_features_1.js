@@ -24,14 +24,14 @@ export default function Filter_features({ navigation }) {
 
         <LessonButton
           navigation = {navigation}
-          nextScreen = ""
+          nextScreen = "8_pixel_patterns_interactive.js"
           buttonColor = "#8976C2"
           buttonText = "Back"
         />
 
         <LessonButton
           navigation={navigation}
-          nextScreen = ""
+          nextScreen = "10_filter_features_2.js"
           buttonColor = {["#32B59D", "#3AC55B"]}
           buttonText = "Continue"
         />
