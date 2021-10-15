@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { StyleSheet, View, Image, Text } from 'react-native'
 import LessonButton from '../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
@@ -8,14 +8,16 @@ import * as Sentry from 'sentry-expo'
 export default function Welcome ({ navigation }) {
   const [next, setNext] = useState(null)
 
-  SecureStore.getItemAsync('hasSeenThumbs').then(value => {
-    if (value !== 'true') {
-      SecureStore.setItemAsync('hasSeenThumbs', 'true')
-      setNext('Courses')
-    } else {
-      setNext('Thumbs')
-    }
-  }).catch((err) => { Sentry.captureException(err) })
+  useEffect(() => {
+    SecureStore.getItemAsync('hasSeenThumbs').then(value => {
+      if (value !== 'true') {
+        SecureStore.setItemAsync('hasSeenThumbs', 'true')
+        setNext('Courses')
+      } else {
+        setNext('Thumbs')
+      }
+    }).catch((err) => { Sentry.captureException(err) })
+  }, [])
 
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
