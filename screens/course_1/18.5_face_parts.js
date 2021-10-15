@@ -120,11 +120,8 @@ export default function Course1FaceParts2 ({navigation}) {
         }
       }
     }
-
-    
-
-
   }
+  
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
     <Text style={styles.bigText}>{upperScreenText} </Text>

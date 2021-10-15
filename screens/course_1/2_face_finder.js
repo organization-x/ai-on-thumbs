@@ -4,7 +4,7 @@ import React from 'react'
 import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
-import { render } from 'react-dom'
+
 
 export default function Course1Complete ({ navigation }) {
   const [numCorrectFaces, setNumCorrectFaces] = React.useState(0)
