@@ -16,7 +16,10 @@ export default function Welcome ({ navigation }) {
       } else {
         setNext('Thumbs')
       }
-    }).catch((err) => { Sentry.captureException(err) })
+    }).catch((err) => { 
+      Sentry.captureException(err)
+      setNext('Courses')
+    })
   }, [])
 
   return (
