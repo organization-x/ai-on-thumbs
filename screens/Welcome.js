@@ -6,25 +6,16 @@ import * as SecureStore from 'expo-secure-store'
 import * as Sentry from 'sentry-expo'
 
 export default function Welcome ({ navigation }) {
-  let next
-  const [isFirstLaunch, setFirstLaunch] = useState(true)
+  const [next, setNext] = useState(null)
 
-  async function firstLaunchCheck () {
-    SecureStore.getItemAsync('hasSeenThumbs').then(value => {
-      if (value !== 'true') {
-        SecureStore.setItemAsync('hasSeenThumbs', 'true')
-        setFirstLaunch(false)
-      }
-    }).catch((err) => { Sentry.captureException(err) })
-  }
-
-  firstLaunchCheck()
-
-  if (!isFirstLaunch) {
-    next = 'Courses'
-  } else if (isFirstLaunch) {
-    next = 'Thumbs'
-  }
+  SecureStore.getItemAsync('hasSeenThumbs').then(value => {
+    if (value !== 'true') {
+      SecureStore.setItemAsync('hasSeenThumbs', 'true')
+      setNext('Courses')
+    } else {
+      setNext('Thumbs')
+    }
+  }).catch((err) => { Sentry.captureException(err) })
 
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
@@ -36,8 +27,10 @@ export default function Welcome ({ navigation }) {
         <LessonButton
           navigation={navigation}
           nextScreen={next}
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Get Started'
+          buttonColor={next ? ['#32B59D', '#3AC55B'] : '#808080'}
+          buttonText={next ? 'Get Started' : 'Loading...'}
+          enabled={next}
+          actOpacity={next ? 0.3 : 1}
           style={styles.welcomeBtn}
         />
 

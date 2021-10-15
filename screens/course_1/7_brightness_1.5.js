@@ -29,7 +29,7 @@ export default function Course1Brightness1Point5 ({ navigation }) {
         </View>
         <Text style={styles.smallText}>{text}</Text>
 
-        {text !== null
+        {text
           ? (
             <Text style={styles.smallestText}>The brighter the pixel is, the bigger the value!</Text>
             )
