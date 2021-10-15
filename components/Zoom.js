@@ -1,13 +1,12 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import { View, Image, StyleSheet } from 'react-native'
 import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView'
 
-export default function Zoom ( {setCurrentZoom} ) {
+export default function Zoom ({ setCurrentZoom }) {
+  const zoomableViewRef = useRef(null)
 
-  const zoomableViewRef=useRef(null)
-
-  function setNewZoom(event, gestureState, zoomableViewEventObject) {
-    setCurrentZoom(zoomableViewEventObject.zoomLevel);
+  function setNewZoom (event, gestureState, zoomableViewEventObject) {
+    setCurrentZoom(zoomableViewEventObject.zoomLevel)
   }
 
   return (

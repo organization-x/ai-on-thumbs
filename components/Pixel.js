@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import Slider from '@react-native-community/slider'
 
-export default function PixelSlider ( {setPixelValue} ) {
+export default function PixelSlider ({ setPixelValue }) {
   const [pixelColor, setPixelColor] = useState(0)
 
   return (
@@ -16,7 +16,10 @@ export default function PixelSlider ( {setPixelValue} ) {
         maximumValue={255}
         minimumTrackTintColor='#FFFFFF'
         maximumTrackTintColor='#000000'
-        onValueChange={value => {setPixelColor(value), setPixelValue(value)}}
+        onValueChange={value => {
+          setPixelColor(value)
+          setPixelValue(value)
+        }}
       />
 
     </View>
