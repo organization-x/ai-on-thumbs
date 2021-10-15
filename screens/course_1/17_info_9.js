@@ -4,16 +4,14 @@ First, computers need to know what features compose a face.
 
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
-
 import LessonButton from '../../components/LessonButton'
-
 import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Course1Info9 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.text}><i>First, computers need to know what features compose a face.</i></Text>
+        <Text style={styles.text}>First, computers need to know what features compose a face.</Text>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Info8' buttonColor='#8976C2' buttonText='Back' />
