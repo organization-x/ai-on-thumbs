@@ -4,6 +4,22 @@ import LessonButton from '../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Welcome ({ navigation }) {
+  const [next, setNext] = useState(null)
+
+  useEffect(() => {
+    SecureStore.getItemAsync('hasSeenThumbs').then(value => {
+      if (value !== 'true') {
+        SecureStore.setItemAsync('hasSeenThumbs', 'true')
+        setNext('Courses')
+      } else {
+        setNext('Thumbs')
+      }
+    }).catch((err) => {
+      Sentry.captureException(err)
+      setNext('Courses')
+    })
+  }, [])
+
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <Image style={styles.logo} resizeMode='contain' source={require('../assets/stock/ai-on-thumbs-logo.png')} />
