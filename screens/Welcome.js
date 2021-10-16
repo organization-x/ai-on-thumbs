@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { StyleSheet, View, Image, Text } from 'react-native'
 import LessonButton from '../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+import * as SecureStore from 'expo-secure-store'
+import * as Sentry from 'sentry-expo'
 
 export default function Welcome ({ navigation }) {
   const [next, setNext] = useState(null)
@@ -29,9 +31,11 @@ export default function Welcome ({ navigation }) {
 
         <LessonButton
           navigation={navigation}
-          nextScreen='Courses'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Get Started'
+          nextScreen={next}
+          buttonColor={next ? ['#32B59D', '#3AC55B'] : '#808080'}
+          buttonText={next ? 'Get Started' : 'Loading...'}
+          enabled={next}
+          actOpacity={next ? 0.3 : 1}
           style={styles.welcomeBtn}
         />
 
