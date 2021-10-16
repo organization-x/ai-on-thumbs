@@ -56,21 +56,21 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   logo: {
-    height: height/7,
-    marginTop: height/12
+    height: height / 7,
+    marginTop: height / 12
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: height/15,
+    marginTop: height / 15,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/23,
+    fontSize: height / 23,
     fontWeight: 'bold'
   },
   footerButtons: {
-    marginTop: height/10,
+    marginTop: height / 10,
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'

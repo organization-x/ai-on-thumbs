@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/20,
+    fontSize: height / 20,
     fontWeight: 'bold'
   },
   bigText: {
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     marginTop: '40%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/5,
+    fontSize: height / 5,
     fontWeight: 'bold'
   },
   footerButtons: {

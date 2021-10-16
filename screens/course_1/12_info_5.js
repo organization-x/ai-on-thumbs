@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   bottomText: {
     flex: 1,
-    marginTop: height/3,
+    marginTop: height / 3,
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center'
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     marginTop: '50%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/20,
+    fontSize: height / 20,
     fontWeight: 'bold'
   },
   altText: {

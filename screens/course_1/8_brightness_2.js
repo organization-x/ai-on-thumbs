@@ -14,13 +14,13 @@ export default function Course1Brightness2 ({ navigation }) {
   const [pixelValue, setPixelValue] = useState(0)
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <TopLessonParagraph style={styles.text} >Now, slide the bar to change pixel value and see its brightness change!</TopLessonParagraph>
+      <TopLessonParagraph style={styles.text}>Now, slide the bar to change pixel value and see its brightness change!</TopLessonParagraph>
 
       <View style={{ flex: 1 }}>
         <PixelSlider setPixelValue={setPixelValue} />
       </View>
 
-      <BottomLessonParagraph style={styles.text} >{(pixelValue >= 255) ? 'Pure Awesomeness! \n Great Job!' : '\n\n\n'}</BottomLessonParagraph>
+      <BottomLessonParagraph style={styles.text}>{(pixelValue >= 255) ? 'Pure Awesomeness! \n Great Job!' : '\n\n\n'}</BottomLessonParagraph>
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Brightness1.5' buttonColor='#8976C2' buttonText='Back' />
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   text: {
-    marginTop: height/20,
-    fontSize: height/35
+    marginTop: height / 20,
+    fontSize: height / 35
   }
 })

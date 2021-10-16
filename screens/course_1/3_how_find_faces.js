@@ -12,13 +12,13 @@ const height = Dimensions.get('window').height
 export default function Course1HowFindFaces ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <TopLessonParagraph style={styles.text} >So how does a {'\n'} computer detect a face? </TopLessonParagraph>
+      <TopLessonParagraph style={styles.text}>So how does a {'\n'} computer detect a face? </TopLessonParagraph>
 
       <View style={styles.zoomView}>
-        <Image source={require('../../assets/course_1/markcubanface.png')} style={styles.cubanImage} resizeMode={'contain'} />
+        <Image source={require('../../assets/course_1/markcubanface.png')} style={styles.cubanImage} resizeMode='contain' />
       </View>
 
-      <BottomLessonParagraph style={styles.text} >To understand that, we first need to understand how a computer sees photos.</BottomLessonParagraph>
+      <BottomLessonParagraph style={styles.text}>To understand that, we first need to understand how a computer sees photos.</BottomLessonParagraph>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1FaceFinder' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course1PinchZoom' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
@@ -48,6 +48,6 @@ const styles = StyleSheet.create({
     width: (Dimensions.get('window').width / 1.5)
   },
   text: {
-    fontSize: height/35
+    fontSize: height / 35
   }
 })

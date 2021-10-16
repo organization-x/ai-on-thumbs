@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    marginTop: height/3
+    marginTop: height / 3
   },
   text: {
     flex: 1,

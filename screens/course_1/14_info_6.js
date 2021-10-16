@@ -41,29 +41,29 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {
-    marginTop: height/16,
+    marginTop: height / 16,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   bigText: {
-    marginTop: height/8,
+    marginTop: height / 8,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/15,
+    fontSize: height / 15,
     fontWeight: 'bold'
   },
   smallText: {
-    marginTop: height/30,
+    marginTop: height / 30,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/35
+    fontSize: height / 35
   },
   hand: {
-    marginBottom: height/8,
+    marginBottom: height / 8,
     alignSelf: 'center',
-    height: (Dimensions.get('window').width/1.5)
+    height: (Dimensions.get('window').width / 1.5)
   },
   footerButtons: {
     marginBottom: 10,

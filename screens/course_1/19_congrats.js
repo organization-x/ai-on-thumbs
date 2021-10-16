@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     marginTop: '15%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/22
+    fontSize: height / 22
   },
   boldText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     marginTop: '15%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   bigText: {

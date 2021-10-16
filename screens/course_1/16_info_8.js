@@ -1,5 +1,5 @@
 /*
-That’s a great question! 
+That’s a great question!
 For this lesson, we will focus on the first thing computers need to know to detect a face. Any guesses?
 */
 
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     marginTop: '15%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/25
+    fontSize: height / 25
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     marginTop: '30%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/19,
+    fontSize: height / 19,
     fontWeight: 'bold'
   },
   footerButtons: {

@@ -34,12 +34,12 @@ const styles = StyleSheet.create({
     marginVertical: '10%'
   },
   box: {
-    marginBottom: height/30,
+    marginBottom: height / 30,
     textAlign: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
-    width: width/1.5,
-    height: width/1.5
+    width: width / 1.5,
+    height: width / 1.5
   },
   number: {
     fontSize: 50,

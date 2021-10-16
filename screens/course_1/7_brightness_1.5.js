@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'black',
-    fontSize: height/30,
+    fontSize: height / 30,
     fontWeight: 'bold',
     marginTop: '20%'
   },
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'black',
-    fontSize: height/35,
+    fontSize: height / 35,
     fontWeight: 'bold',
     marginTop: '20%'
   },
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     marginTop: '20%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   footerButtons: {
@@ -100,6 +100,6 @@ const styles = StyleSheet.create({
     marginTop: '30%'
   },
   image: {
-    width: width/3.5
+    width: width / 3.5
   }
 })

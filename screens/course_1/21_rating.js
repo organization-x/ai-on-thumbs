@@ -51,8 +51,8 @@ export default function Course1Rating ({ navigation }) {
 
 const styles = {
   logo: {
-    height: height/7,
-    marginTop: height/12
+    height: height / 7,
+    marginTop: height / 12
   },
   container: {
     flex: 1,
@@ -66,14 +66,14 @@ const styles = {
     paddingVertical: '40%'
   },
   starView: {
-    marginTop: height/20
+    marginTop: height / 20
   },
   subText: {
     color: 'white',
     fontStyle: 'italic',
-    fontSize: height/35,
+    fontSize: height / 35,
     textAlign: 'center',
-    marginTop: height/40
+    marginTop: height / 40
   },
   button: {
     alignItems: 'center',

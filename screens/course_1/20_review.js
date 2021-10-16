@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/30
+    fontSize: height / 30
   },
   boldText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   bigText: {
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/18,
+    fontSize: height / 18,
     fontWeight: 'bold'
   },
   footerButtons: {
@@ -77,4 +77,3 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   }
 })
-

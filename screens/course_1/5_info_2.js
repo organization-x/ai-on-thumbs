@@ -40,19 +40,19 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: height/9,
+    marginTop: height / 9,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/20
+    fontSize: height / 20
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: height/5,
+    marginTop: height / 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/15,
+    fontSize: height / 15,
     fontWeight: 'bold'
   },
   footerButtons: {

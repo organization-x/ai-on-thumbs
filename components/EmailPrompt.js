@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, TextInput, TouchableOpacity, Modal, View, Dimensions} from 'react-native'
+import { StyleSheet, Text, TextInput, TouchableOpacity, Modal, View, Dimensions } from 'react-native'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import { Shadow } from 'react-native-shadow-2'
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     height: 60,
     borderRadius: 10,
     overflow: 'hidden',
-    marginHorizontal: height/150
+    marginHorizontal: height / 150
   },
   textInput: {
     justifyContent: 'flex-start',

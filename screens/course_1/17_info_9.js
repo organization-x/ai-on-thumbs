@@ -39,19 +39,19 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: height/3,
+    marginTop: height / 3,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/20
+    fontSize: height / 20
   },
   italicText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: height/3,
+    marginTop: height / 3,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/20,
+    fontSize: height / 20,
     fontStyle: 'italic'
   },
   footerButtons: {
