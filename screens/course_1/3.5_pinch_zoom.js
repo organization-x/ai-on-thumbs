@@ -19,10 +19,10 @@ export default function Course1PinchZoom ({ navigation }) {
         <Zoom setCurrentZoom={setCurrentZoom} />
       </View>
 
-      <BottomLessonParagraph>{(currentZoom > 1.8) ? 'Great \n Now you know photos are made up of pixels' : '\n\n\n'}</BottomLessonParagraph>
+      <BottomLessonParagraph>{(currentZoom > 1.8) ? 'Great! \n\n Now you know photos are made up of tiny pixels' : '\n\n\n'}</BottomLessonParagraph>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Info4' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='Course1Info1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )

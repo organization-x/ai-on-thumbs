@@ -11,7 +11,7 @@ export default function Course1Info9 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.text}>First, computers need to know what features compose a face.</Text>
+        <Text style={styles.text}>First, computers need to know what <Text style={styles.italicText}>features</Text> compose a face.</Text>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Info8' buttonColor='#8976C2' buttonText='Back' />
@@ -37,20 +37,20 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '15%',
+    marginTop: '90%',
     textAlign: 'center',
     color: 'white',
     fontSize: 40
   },
-  bigText: {
+  italicText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '65%',
+    marginTop: '90%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 60,
-    fontWeight: 'bold'
+    fontSize: 40,
+    fontStyle: 'italic'
   },
   footerButtons: {
     marginBottom: 10,

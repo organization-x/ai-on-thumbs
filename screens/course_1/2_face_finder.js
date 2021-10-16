@@ -109,14 +109,16 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'black',
-    marginBottom: '5%',
-    fontSize: 18
+    marginTop: '10%',
+    fontSize: 20,
+    fontWeight: 'bold'
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     marginTop: '15%',
+    marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
     fontSize: 24,

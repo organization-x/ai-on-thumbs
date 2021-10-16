@@ -10,6 +10,7 @@ export default function TopLessonParagraph ({ children, style }) {
 const styles = StyleSheet.create({
   header: {
     marginTop: 60,
+    fontWeight: 'bold',
     justifyContent: 'center',
     textAlign: 'center',
     fontSize: 28,

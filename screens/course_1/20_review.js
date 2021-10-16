@@ -16,7 +16,7 @@ export default function Course1Review ({ navigation }) {
         <Text style={styles.text}>Photos are composed of smaller parts: pixels.</Text>
         <Text style={styles.boldText}>2</Text>
         <Text style={styles.text}>Computers see pixels as a matrix of numbers. The brighter the pixel, the larger the number!</Text>
-        <Text style={styles.text}>3</Text>
+        <Text style={styles.boldText}>3</Text>
         <Text style={styles.text}>Computers use facial features to help them detect faces.</Text>
       </View>
       <View style={styles.footerButtons}>
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '15%',
+    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
     fontSize: 30
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '15%',
+    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
     fontSize: 40,
@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '65%',
+    marginTop: '20%',
+    marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
     fontSize: 50,
