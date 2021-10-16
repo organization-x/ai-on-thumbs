@@ -26,7 +26,7 @@ export default function Zoom ({ setCurrentZoom }) {
         >
           <Image
             style={styles.image}
-            source={require('../assets/image.png')}
+            source={require('../assets/high-def-assets/markcubanpixelated_large.png')}
           />
         </ReactNativeZoomableView>
       </View>
