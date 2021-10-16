@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { StyleSheet, View, Image, Text } from 'react-native'
 import LessonButton from '../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+import * as SecureStore from 'expo-secure-store'
+import * as Sentry from 'sentry-expo'
 
 export default function Welcome ({ navigation }) {
+  const [next, setNext] = useState(null)
+
+  useEffect(() => {
+    SecureStore.getItemAsync('hasSeenThumbs').then(value => {
+      if (value !== 'true') {
+        SecureStore.setItemAsync('hasSeenThumbs', 'true')
+        setNext('Courses')
+      } else {
+        setNext('Thumbs')
+      }
+    }).catch((err) => {
+      Sentry.captureException(err)
+      setNext('Courses')
+    })
+  }, [])
+
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <Image style={styles.logo} resizeMode='contain' source={require('../assets/stock/ai-on-thumbs-logo.png')} />
@@ -13,9 +31,11 @@ export default function Welcome ({ navigation }) {
 
         <LessonButton
           navigation={navigation}
-          nextScreen='Courses'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Get Started'
+          nextScreen={next}
+          buttonColor={next ? ['#32B59D', '#3AC55B'] : '#808080'}
+          buttonText={next ? 'Get Started' : 'Loading...'}
+          enabled={next}
+          actOpacity={next ? 0.3 : 1}
           style={styles.welcomeBtn}
         />
 

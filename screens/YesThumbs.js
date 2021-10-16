@@ -1,25 +1,23 @@
-/*
-That’s a great question!
-For this lesson, we will focus on the first thing computers need to know to detect a face. Any guesses?
-*/
+// DO YOU HAVE THUMBS?
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Image } from 'react-native'
 
-import LessonButton from '../../components/LessonButton'
+import LessonButton from '../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 
-export default function Course1Info8 ({ navigation }) {
+export default function YesThumbs ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.text}>That’s a great question!</Text>
-        <Text style={styles.text}>For this lesson, we will focus on the first thing computers need to know to detect a face. Any guesses?</Text>
+        <Image style={styles.image} source={require('../assets/stock/thumbsup.png')} resizeMode='cover' />
+        <Text style={styles.biggestText}>You have thumbs?</Text>
+        <Text style={styles.biggestText}>Then you can learn AI!</Text>
+        <Text style={styles.smallText}>AI is not a mystical or evil thing, tap continue to open the world of AI.</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1Info7' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Info9' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='Courses' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )
@@ -37,28 +35,30 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     alignItems: 'center'
   },
-  text: {
+  smallText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '15%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40
+    fontSize: 30,
+    marginTop: '20%'
   },
-  bigText: {
+  biggestText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '65%',
+    marginTop: '20%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 60,
+    fontSize: 35,
     fontWeight: 'bold'
   },
   footerButtons: {
     marginBottom: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+    alignItems: 'center'
+  },
+  image: {
+    marginTop: '30%'
   }
 })
