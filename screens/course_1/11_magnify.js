@@ -12,17 +12,19 @@ export default function Course1Magnify ({ navigation }) {
 
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <Text style={smallScreen ? smallStyles.instructTxt : styles.instructTxt}>To get the feeling of a computer when it sees a photo, use the magnifier over the photo.</Text>
+      <View style={styles.mainContent}>
+        <Text style={smallScreen ? smallStyles.instructTxt : styles.instructTxt}>To get the feeling of a computer when it sees a photo, use the magnifier over the photo.</Text>
 
-      <View style={styles.interactive}>
-        <MagnifyGlass
-          src={require('../../assets/course_1/normallincoln.png')}
-          magSrc={require('../../assets/course_1/pixelizedlincoln.png')}
-          mag={smallScreen ? 2 : 1.3}
-          radius={60}
-        />
+        <View style={styles.interactive}>
+          <MagnifyGlass
+            src={require('../../assets/course_1/normallincoln.png')}
+            magSrc={require('../../assets/course_1/pixelizedlincoln.png')}
+            mag={smallScreen ? 2 : 1.3}
+            radius={60}
+          />
+        </View>
+        <Text style={smallScreen ? smallStyles.captionTxt : styles.captionTxt}>Can you tell the difference between eyes and noses yet?</Text>
       </View>
-      <Text style={smallScreen ? smallStyles.captionTxt : styles.captionTxt}>Can you tell the difference between eyes and noses yet?</Text>
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Info4' buttonColor='#8976C2' buttonText='Back' />
@@ -43,6 +45,9 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     maxHeight: 400
+  },
+  mainContent: {
+    flex: 1
   },
   footerButtons: {
     marginBottom: 10,
