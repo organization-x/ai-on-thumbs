@@ -32,7 +32,6 @@ import Course1Info7 from './screens/course_1/15_info_7'
 import Course1Info8 from './screens/course_1/16_info_8'
 import Course1Info9 from './screens/course_1/17_info_9'
 import Course1FaceParts from './screens/course_1/18_face_parts'
-import Course1FaceParts2 from './screens/course_1/18.5_face_parts'
 import Course1Congrats from './screens/course_1/19_congrats'
 import Course1Review from './screens/course_1/20_review'
 import Course1Rating from './screens/course_1/21_rating'
@@ -83,7 +82,6 @@ export default function App () {
         <Stack.Screen name='Course1Info8' component={Course1Info8} />
         <Stack.Screen name='Course1Info9' component={Course1Info9} />
         <Stack.Screen name='Course1FaceParts' component={Course1FaceParts} />
-        <Stack.Screen name='Course1FaceParts2' component={Course1FaceParts2} />
         <Stack.Screen name='Course1Congrats' component={Course1Congrats} />
         <Stack.Screen name='Course1Review' component={Course1Review} />
         <Stack.Screen name='Course1Rating' component={Course1Rating} />
