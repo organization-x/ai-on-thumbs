@@ -3,22 +3,22 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 
-import LessonButton from '../components/LessonButton'
+import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 
-export default function Thumbs ({ navigation }) {
+export default function Course1Welcome1 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.biggestText}>DO</Text>
         <Text style={styles.bigText}>YOU</Text>
         <Text style={styles.smallText}>HAVE</Text>
-        <Text style={styles.smallestText}>THUMBS?</Text>
+        <Text style={styles.smallerText}>THUMBS?</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='NoThumbs' buttonColor='#8976C2' buttonText='No' />
-        <LessonButton navigation={navigation} nextScreen='YesThumbs' buttonColor={['#32B59D', '#3AC55B']} buttonText='Yes' />
+        <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Yes' />
+        <LessonButton navigation={navigation} nextScreen='Course1Welcome2' buttonColor={['#32B59D', '#3AC55B']} buttonText='No' />
       </View>
     </LinearGradient>
   )
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
+    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
     fontSize: 60,
@@ -49,6 +50,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
+    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
     fontSize: 105,
@@ -58,6 +60,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
+    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
     fontSize: 135,
@@ -67,7 +70,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '20%',
+    marginTop: '40%',
     textAlign: 'center',
     color: 'white',
     fontSize: 200,

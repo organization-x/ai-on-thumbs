@@ -5,10 +5,6 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Welcome from './screens/Welcome'
 import Courses from './screens/Courses'
 
-import Thumbs from './screens/Thumbs'
-import NoThumbs from './screens/NoThumbs'
-import YesThumbs from './screens/YesThumbs'
-
 import * as Sentry from 'sentry-expo'
 
 // course 1 imports
@@ -58,9 +54,6 @@ export default function App () {
       >
         <Stack.Screen name='Welcome' component={Welcome} />
         <Stack.Screen name='Courses' component={Courses} />
-        <Stack.Screen name='Thumbs' component={Thumbs} />
-        <Stack.Screen name='NoThumbs' component={NoThumbs} />
-        <Stack.Screen name='YesThumbs' component={YesThumbs} />
 
         {/* course 1 screen stack */}
         <Stack.Screen name='Course1Intro' component={Course1Intro} />
