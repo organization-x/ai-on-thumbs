@@ -1,11 +1,14 @@
 // Now, tap the pixel that has the largest value!
 
 import React, { useState } from 'react'
-import { StyleSheet, View, Text, Image, Pressable } from 'react-native'
+import { StyleSheet, View, Text, Image, Pressable, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course1Brightness1Point5 ({ navigation }) {
   const [text, changeText] = useState(null)
@@ -15,15 +18,15 @@ export default function Course1Brightness1Point5 ({ navigation }) {
         <Text style={styles.biggestText}>Now, tap the pixel that has the largest value!</Text>
         <View style={styles.flexRow}>
           <Pressable onPress={() => changeText('Not quite :(')}>
-            <Image source={require('../../assets/course_1/000000square.png')} resizeMode='contain' />
+            <Image style={styles.image} source={require('../../assets/course_1/000000square.png')} resizeMode='contain' />
           </Pressable>
 
           <Pressable onPress={() => changeText('Not quite :(')}>
-            <Image source={require('../../assets/course_1/4D4D4Dsquare.png')} resizeMode='contain' />
+            <Image style={styles.image} source={require('../../assets/course_1/4D4D4Dsquare.png')} resizeMode='contain' />
           </Pressable>
 
           <Pressable onPress={() => changeText('Perfect!')}>
-            <Image source={require('../../assets/course_1/FFFFFFsquare.png')} resizeMode='contain' />
+            <Image style={styles.image} source={require('../../assets/course_1/FFFFFFsquare.png')} resizeMode='contain' />
           </Pressable>
         </View>
         <Text style={styles.smallText}>{text}</Text>
@@ -63,7 +66,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'black',
-    fontSize: 30,
+    fontSize: height/30,
     fontWeight: 'bold',
     marginTop: '20%'
   },
@@ -73,7 +76,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'black',
-    fontSize: 25,
+    fontSize: height/35,
     fontWeight: 'bold',
     marginTop: '20%'
   },
@@ -84,7 +87,7 @@ const styles = StyleSheet.create({
     marginTop: '20%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 35,
+    fontSize: height/25,
     fontWeight: 'bold'
   },
   footerButtons: {
@@ -95,5 +98,8 @@ const styles = StyleSheet.create({
   flexRow: {
     flexDirection: 'row',
     marginTop: '30%'
+  },
+  image: {
+    width: width/3.5
   }
 })

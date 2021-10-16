@@ -3,9 +3,11 @@ First, computers need to know what features compose a face.
 */
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Course1Info9 ({ navigation }) {
   return (
@@ -37,19 +39,19 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '90%',
+    marginTop: height/3,
     textAlign: 'center',
     color: 'white',
-    fontSize: 40
+    fontSize: height/20
   },
   italicText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '90%',
+    marginTop: height/3,
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height/20,
     fontStyle: 'italic'
   },
   footerButtons: {

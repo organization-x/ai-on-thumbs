@@ -1,12 +1,14 @@
 // Continue your journey by going to ai-camp.org
 
 import React from 'react'
-import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollView } from 'react-native'
+import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollView, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
 
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Course1EmailPrompt ({ navigation }) {
   const renderInputs = (
@@ -54,21 +56,21 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   logo: {
-    height: 140,
-    marginTop: 70
+    height: height/7,
+    marginTop: height/12
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '20%',
+    marginTop: height/15,
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height/23,
     fontWeight: 'bold'
   },
   footerButtons: {
-    marginTop: '20%',
+    marginTop: height/10,
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'

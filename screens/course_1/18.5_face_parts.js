@@ -1,10 +1,12 @@
 // Our faces have some unique features that stand out and make them recognizable.
 
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground, Alert} from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
-import ImageMapper from 'react-native-image-mapper';
+import ImageMapper from 'react-native-image-mapper'
+
+const height = Dimensions.get('window').height
 
 export default function Course1FaceParts2 ({navigation}) {
   const [lowerScreenText, setLowerScreenText] = React.useState(' ')
@@ -164,9 +166,9 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'black',
-    marginTop: '25%',
+    marginTop: height/8,
     marginBottom: '5%',
-    fontSize: 18
+    fontSize: height/40
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -175,7 +177,7 @@ const styles = StyleSheet.create({
     marginTop: '15%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 25,
+    fontSize: height/35,
     fontWeight: 'bold'
   },
   footerButtons: {

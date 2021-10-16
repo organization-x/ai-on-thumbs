@@ -1,11 +1,13 @@
 // Lesson Review
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Course1Review ({ navigation }) {
   return (
@@ -46,7 +48,7 @@ const styles = StyleSheet.create({
     marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 30
+    fontSize: height/30
   },
   boldText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
     marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height/25,
     fontWeight: 'bold'
   },
   bigText: {
@@ -66,7 +68,7 @@ const styles = StyleSheet.create({
     marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 50,
+    fontSize: height/18,
     fontWeight: 'bold'
   },
   footerButtons: {

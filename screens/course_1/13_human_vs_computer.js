@@ -3,11 +3,13 @@
 // We really need to appreciate the computer world.
 
 import React, { useState } from 'react'
-import { StyleSheet, View, Text, Image, Switch, ScrollView } from 'react-native'
+import { StyleSheet, View, Text, Image, Switch, ScrollView, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Course1HumanVsComputer ({ navigation }) {
   const [isEnabled, setIsEnabled] = useState(false)
@@ -26,7 +28,7 @@ export default function Course1HumanVsComputer ({ navigation }) {
           <Text style={styles.text}>Toggle the switch to shift between human vision and computer vision.</Text>
         </View>
 
-        <Image source={src} style={styles.image} />
+        <Image source={src} style={styles.image} resizeMode={'contain'} />
 
         <View style={styles.flexRow}>
           <View style={styles.flexLeft}>
@@ -85,7 +87,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   image: {
-    marginVertical: '10%'
+    marginVertical: '10%',
+    height: height/3
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -94,7 +97,7 @@ const styles = StyleSheet.create({
     marginTop: '20%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 30,
+    fontSize: height/30,
     fontWeight: 'bold'
   },
   smallText: {

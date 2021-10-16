@@ -37,39 +37,19 @@ export default function Zoom ({ setCurrentZoom }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'transparent'
-  },
-  explanation: {
-    backgroundColor: '#6f80ff',
-    paddingTop: 48,
-    paddingBottom: 14,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignContent: 'center'
-  },
-  title_text: {
-    fontSize: 20,
-    color: '#fff'
+    flex: 1
   },
   zoomableWrapper: {
     flex: 1,
     overflow: 'hidden'
   },
   zoomView: {
-    padding: 10,
-    backgroundColor: 'transparent'
+    padding: 10
   },
   image: {
     resizeMode: 'contain',
-    marginBottom: 0,
     flex: 1,
     width: '100%',
     height: '80%'
-  },
-  caption: {
-    alignSelf: 'center',
-    fontSize: 10,
-    color: '#444'
   }
 })

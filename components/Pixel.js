@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, Dimensions } from 'react-native'
 import Slider from '@react-native-community/slider'
+
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function PixelSlider ({ setPixelValue }) {
   const [pixelColor, setPixelColor] = useState(0)
@@ -11,7 +14,6 @@ export default function PixelSlider ({ setPixelValue }) {
         <Text style={styles.number}>{Math.floor(pixelColor)}</Text>
       </View>
       <Slider
-        style={styles.slider}
         minimumValue={0}
         maximumValue={255}
         minimumTrackTintColor='#FFFFFF'
@@ -29,25 +31,19 @@ export default function PixelSlider ({ setPixelValue }) {
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    marginVertical: '20%'
+    marginVertical: '10%'
   },
   box: {
-    marginBottom: 50,
+    marginBottom: height/30,
     textAlign: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
-    width: 250,
-    height: 250
+    width: width/1.5,
+    height: width/1.5
   },
   number: {
     fontSize: 50,
     color: 'orange',
-    textAlign: 'center'
-  },
-  header: {
-    fontWeight: 'bold',
-    marginTop: 30,
-    fontSize: 24,
     textAlign: 'center'
   }
 })
