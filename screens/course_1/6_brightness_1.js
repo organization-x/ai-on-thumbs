@@ -1,7 +1,5 @@
 // Each pixel has a value that represents how bright it is.
 
-// NoThumbs
-
 import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
 

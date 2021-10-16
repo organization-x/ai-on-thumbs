@@ -1,5 +1,4 @@
 // Now, tap the pixel that has the largest value!
-// Each pixel has a value that represents how bright it is.
 
 import React, { useState } from 'react'
 import { StyleSheet, View, Text, Image, Pressable } from 'react-native'

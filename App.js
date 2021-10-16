@@ -58,6 +58,7 @@ export default function App () {
       >
         <Stack.Screen name='Welcome' component={Welcome} />
         <Stack.Screen name='Courses' component={Courses} />
+
         <Stack.Screen name='Thumbs' component={Thumbs} />
         <Stack.Screen name='NoThumbs' component={NoThumbs} />
         <Stack.Screen name='YesThumbs' component={YesThumbs} />
