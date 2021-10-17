@@ -1,10 +1,12 @@
 // To show computers how facial recognition is done, tap on all the faces in the picture below.
 
 import React from 'react'
-import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions} from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
+const deviceWidth = Dimensions.get('window').width;
+const deviceHeight = Dimensions.get('window').height;
 
 export default function Course1Complete ({ navigation }) {
   const [numCorrectFaces, setNumCorrectFaces] = React.useState(0)
@@ -57,6 +59,7 @@ export default function Course1Complete ({ navigation }) {
     return (
       <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
         <Text style={styles.bigText}>To show computers how facial recognition is done, tap on all the faces in the pictures below. </Text>
+        <View style={{flex:1}}>
         <View style={styles.rowContainer}>
           <TouchableOpacity 
           onPress={() => handlePress(0)}  
@@ -82,7 +85,8 @@ export default function Course1Complete ({ navigation }) {
         </View>
         <View style={styles.footerButtons}>
           <LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+          <LessonButton navigation={navigation} nextScreen='Course1FaceParts2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        </View>
         </View>
       </LinearGradient>
     )
@@ -95,13 +99,15 @@ const styles = StyleSheet.create({
     paddingVertical: 15
   },
   rowContainer: {
+    flex : 1.5,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    alignContent: 'center',
+    justifyContent: 'center'
   },
   image: {
-    height: 150,
-    width: 150,
-    marginTop: 15
+    flex : 1,
+    aspectRatio : 1, 
+    margin: 10,
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
