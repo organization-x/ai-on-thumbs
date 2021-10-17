@@ -85,7 +85,7 @@ export default function Course1Complete ({ navigation }) {
         </View>
         <View style={styles.footerButtons}>
           <LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course1FaceParts2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+          <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> 
         </View>
         </View>
       </LinearGradient>
