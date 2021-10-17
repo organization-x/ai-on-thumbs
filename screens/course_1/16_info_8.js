@@ -1,14 +1,16 @@
 /*
-That’s a great question! 
+That’s a great question!
 For this lesson, we will focus on the first thing computers need to know to detect a face. Any guesses?
 */
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Course1Info8 ({ navigation }) {
   return (
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
     marginTop: '15%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40
+    fontSize: height / 25
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
     marginTop: '30%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 45,
+    fontSize: height / 19,
     fontWeight: 'bold'
   },
   footerButtons: {

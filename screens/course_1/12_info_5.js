@@ -1,11 +1,13 @@
 // We really need to appreciate the computer world.
 
 import React from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
+import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Course1Info5 ({ navigation }) {
   return (
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
   },
   bottomText: {
     flex: 1,
-    marginTop: '50%',
+    marginTop: height / 3,
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center'
@@ -59,7 +61,7 @@ const styles = StyleSheet.create({
     marginTop: '50%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 50,
+    fontSize: height / 20,
     fontWeight: 'bold'
   },
   altText: {

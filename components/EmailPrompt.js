@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, TextInput, TouchableOpacity, Modal, View } from 'react-native'
+import { StyleSheet, Text, TextInput, TouchableOpacity, Modal, View, Dimensions } from 'react-native'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import { Shadow } from 'react-native-shadow-2'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
+
+const height = Dimensions.get('window').height
 
 async function createUser (email) {
   const res = await fetch('https://app.ai-camp.org/sub', {
@@ -156,7 +158,7 @@ const styles = StyleSheet.create({
     height: 60,
     borderRadius: 10,
     overflow: 'hidden',
-    marginHorizontal: '12%'
+    marginHorizontal: height / 150
   },
   textInput: {
     justifyContent: 'flex-start',

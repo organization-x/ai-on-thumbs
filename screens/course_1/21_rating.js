@@ -1,7 +1,7 @@
 // Did you have fun learning AI with us?
 
 import React, { useState } from 'react'
-import { Text, Image, View, TouchableOpacity } from 'react-native'
+import { Text, Image, View, TouchableOpacity, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import StarRating from 'react-native-star-rating'
@@ -19,6 +19,8 @@ async function sendFeedback (rating) {
     })
   })
 }
+
+const height = Dimensions.get('window').height
 
 export default function Course1Rating ({ navigation }) {
   const [starCount, setStarCount] = useState(0)
@@ -49,8 +51,8 @@ export default function Course1Rating ({ navigation }) {
 
 const styles = {
   logo: {
-    height: 140,
-    marginTop: 70
+    height: height / 7,
+    marginTop: height / 12
   },
   container: {
     flex: 1,
@@ -64,14 +66,14 @@ const styles = {
     paddingVertical: '40%'
   },
   starView: {
-    marginTop: 50
+    marginTop: height / 20
   },
   subText: {
     color: 'white',
     fontStyle: 'italic',
-    fontSize: 20,
+    fontSize: height / 35,
     textAlign: 'center',
-    marginTop: 20
+    marginTop: height / 40
   },
   button: {
     alignItems: 'center',

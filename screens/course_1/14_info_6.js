@@ -7,6 +7,8 @@ import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 
+const height = Dimensions.get('window').height
+
 export default function Course1Info4 ({ navigation }) {
   return (
     <LinearGradient colors={['#370098', '#160535']} style={styles.container}>
@@ -39,29 +41,29 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {
-    marginTop: '15%',
+    marginTop: height / 16,
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   bigText: {
-    marginTop: '30%',
+    marginTop: height / 8,
     textAlign: 'center',
     color: 'white',
-    fontSize: 60,
+    fontSize: height / 15,
     fontWeight: 'bold'
   },
   smallText: {
-    marginTop: '5%',
+    marginTop: height / 30,
     textAlign: 'center',
     color: 'white',
-    fontSize: 20
+    fontSize: height / 35
   },
   hand: {
-    marginBottom: '10%',
+    marginBottom: height / 8,
     alignSelf: 'center',
-    height: (Dimensions.get('window').width)
+    height: (Dimensions.get('window').width / 1.5)
   },
   footerButtons: {
     marginBottom: 10,

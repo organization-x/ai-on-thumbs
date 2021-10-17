@@ -5,7 +5,6 @@ import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
-
 export default function Course1Complete ({ navigation }) {
   const [numCorrectFaces, setNumCorrectFaces] = React.useState(0)
   const [disableTopLeft, setDisableTopLeft] = React.useState(false)
@@ -22,10 +21,10 @@ export default function Course1Complete ({ navigation }) {
     if (num === 0) {
       setNumCorrectFaces(numCorrectFaces + 1)
       setDisableTopLeft(true)
-      setSourceTopLeft(require('../../assets/course_1/greentreeface.png')) //replace image with same image with the green filter on it
+      setSourceTopLeft(require('../../assets/course_1/greentreeface.png')) // replace image with same image with the green filter on it
       setText()
     } else if (num === 1) {
-      setNumCorrectFaces(numCorrectFaces + 1);
+      setNumCorrectFaces(numCorrectFaces + 1)
       setDisableTopRight(true)
       setSourceTopRight(require('../../assets/course_1/greenmemeface.png'))
       setText()
@@ -33,9 +32,9 @@ export default function Course1Complete ({ navigation }) {
       setDisableBottomLeft(true)
       setSourceBottomLeft(require('../../assets/course_1/redmoonface.png'))
       if (numCorrectFaces !== 3) {
-        setLowerScreenText('Not quite, even though some of us see a face on the moon :) Try a different photo!');
+        setLowerScreenText('Not quite, even though some of us see a face on the moon :) Try a different photo!')
       }
-    } else if (num === 3 ) {
+    } else if (num === 3) {
       setNumCorrectFaces(numCorrectFaces + 1)
       setDisableBottomRight(true)
       setSourceBottomRight(require('../../assets/course_1/greenveggieface.png'))
@@ -44,48 +43,48 @@ export default function Course1Complete ({ navigation }) {
   }
 
   const setText = () => {
-    const facesLeft = 2 - numCorrectFaces;
-    if (facesLeft > 1){
+    const facesLeft = 2 - numCorrectFaces
+    if (facesLeft > 1) {
       setLowerScreenText('There are ' + facesLeft + ' faces remaining.')
-    }else if (facesLeft === 1){
+    } else if (facesLeft === 1) {
       setLowerScreenText('There is ' + facesLeft + ' face remaining.')
-    }else if (facesLeft === 0){
+    } else if (facesLeft === 0) {
       setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap continue to learn why.')
     }
   }
 
-    return (
-      <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-        <Text style={styles.bigText}>To show computers how facial recognition is done, tap on all the faces in the pictures below. </Text>
-        <View style={styles.rowContainer}>
-          <TouchableOpacity 
-          onPress={() => handlePress(0)}  
-          disabled={disableTopLeft} 
-          >
-            <Image style={styles.image} source={sourceTopLeft}/>
-          </TouchableOpacity>
+  return (
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+      <Text style={styles.bigText}>To show computers how facial recognition is done, tap on all the faces in the pictures below. </Text>
+      <View style={styles.rowContainer}>
+        <TouchableOpacity
+          onPress={() => handlePress(0)}
+          disabled={disableTopLeft}
+        >
+          <Image style={styles.image} source={sourceTopLeft} />
+        </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => handlePress(1)} disabled={disableTopRight}>
-            <Image style={styles.image} source={sourceTopRight}/>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.rowContainer}>
-          <TouchableOpacity onPress={() => handlePress(2)} disabled={disableBottomLeft}>
-            <Image style={styles.image} source={sourceBottomLeft}/>
-          </TouchableOpacity >
-          <TouchableOpacity onPress={() => handlePress(3)} disabled={disableBottomRight}>
-            <Image style={styles.image} source={sourceBottomRight}/>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.container}>
+        <TouchableOpacity onPress={() => handlePress(1)} disabled={disableTopRight}>
+          <Image style={styles.image} source={sourceTopRight} />
+        </TouchableOpacity>
+      </View>
+      <View style={styles.rowContainer}>
+        <TouchableOpacity onPress={() => handlePress(2)} disabled={disableBottomLeft}>
+          <Image style={styles.image} source={sourceBottomLeft} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handlePress(3)} disabled={disableBottomRight}>
+          <Image style={styles.image} source={sourceBottomRight} />
+        </TouchableOpacity>
+      </View>
+      <View style={styles.container}>
         <Text style={styles.text}> {lowerScreenText} </Text>
-        </View>
-        <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>
-      </LinearGradient>
-    )
+      </View>
+      <View style={styles.footerButtons}>
+        <LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+      </View>
+    </LinearGradient>
+  )
 }
 
 const styles = StyleSheet.create({

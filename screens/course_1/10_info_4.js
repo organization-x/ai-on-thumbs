@@ -1,11 +1,13 @@
 // Precisely! A photo is just a matrix of numbers to a computer.
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Course1Info4 ({ navigation }) {
   return (
@@ -38,19 +40,19 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '15%',
+    marginTop: height / 20,
     textAlign: 'center',
     color: 'white',
-    fontSize: 40
+    fontSize: height / 23
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '65%',
+    marginTop: height / 3,
     textAlign: 'center',
     color: 'white',
-    fontSize: 60,
+    fontSize: height / 15,
     fontWeight: 'bold'
   },
   footerButtons: {

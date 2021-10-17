@@ -7,6 +7,8 @@ import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 
+const height = Dimensions.get('window').height
+
 export default function Course1Brightness1 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'black',
-    fontSize: 30,
+    fontSize: height / 35,
     fontWeight: 'bold',
     marginTop: '5%'
   },
@@ -54,7 +56,7 @@ const styles = StyleSheet.create({
     marginTop: '20%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 35,
+    fontSize: height / 30,
     fontWeight: 'bold'
   },
   footerButtons: {
