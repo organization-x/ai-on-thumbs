@@ -1,13 +1,17 @@
 // Our faces have some unique features that stand out and make them recognizable.
 
 import React from 'react'
+
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
+
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import ImageMapper from 'react-native-image-mapper'
 
+
 const deviceHeight = Dimensions.get('window').height
 const imageDimension = deviceHeight * 0.35
+
 
 export default function Course1FaceParts2 ({ navigation }) {
   const [lowerScreenText, setLowerScreenText] = React.useState(' ')
@@ -81,6 +85,7 @@ export default function Course1FaceParts2 ({ navigation }) {
     const indexInState = selectedAreaId.indexOf(item.id)
     if (indexInState !== -1) {
       setSelectedAreaId([...selectedAreaId.slice(0, indexInState), ...selectedAreaId.slice(indexInState + 1)])
+
       if (idx === 0) {
         setLowerScreenText('You have unselected the left eye. Please be sure to reselect it.')
       } else if (idx === 1) {

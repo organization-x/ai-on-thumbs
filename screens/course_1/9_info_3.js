@@ -1,11 +1,13 @@
 // so does this mean computers see photos as just a matrix of numbers?
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Course1Info3 ({ navigation }) {
   return (
@@ -41,7 +43,7 @@ const styles = StyleSheet.create({
     marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 50,
+    fontSize: height / 20,
     fontWeight: 'bold'
   },
   bigText: {
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
     marginTop: '40%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 150,
+    fontSize: height / 5,
     fontWeight: 'bold'
   },
   footerButtons: {

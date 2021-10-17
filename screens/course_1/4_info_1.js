@@ -1,11 +1,13 @@
 // But now, do you think computers can also see tiny pixels?
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Course1Info1 ({ navigation }) {
   return (
@@ -31,13 +33,14 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    alignItems: 'center'
+    marginTop: height / 3
   },
   text: {
+    flex: 1,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '90%',
+    textAlignVertical: 'center',
     textAlign: 'center',
     color: 'white',
     fontSize: 40,

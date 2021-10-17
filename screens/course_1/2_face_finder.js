@@ -24,7 +24,7 @@ export default function Course1Complete ({ navigation }) {
       setSourceTopLeft(require('../../assets/course_1/greentreeface.png'))
       setText()
     } else if (num === 1) {
-      setNumCorrectFaces(numCorrectFaces + 1);
+      setNumCorrectFaces(numCorrectFaces + 1)
       setDisableTopRight(true)
       setSourceTopRight(require('../../assets/course_1/greenmemeface.png'))
       setText()
@@ -57,32 +57,32 @@ export default function Course1Complete ({ navigation }) {
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <Text style={styles.bigText}>To show computers how facial recognition is done, tap on all the faces in the pictures below. </Text>
       <View style={{ flex:1 }}>
-      <View style={styles.rowContainer}>
-        <TouchableOpacity 
-        onPress={() => handlePress(0)}  
-        disabled={disableTopLeft} 
-        >
-          <Image style={styles.image} source={sourceTopLeft} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => handlePress(1)} disabled={disableTopRight}>
-          <Image style={styles.image} source={sourceTopRight} />
-        </TouchableOpacity>
-      </View>
-      <View style={styles.rowContainer}>
-        <TouchableOpacity onPress={() => handlePress(2)} disabled={disableBottomLeft}>
-          <Image style={styles.image} source={sourceBottomLeft} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => handlePress(3)} disabled={disableBottomRight}>
-          <Image style={styles.image} source={sourceBottomRight} />
-        </TouchableOpacity>
-      </View>
-      <View style={styles.container}>
-        <Text style={styles.text}> {lowerScreenText} </Text>
-      </View>
-      <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> 
-      </View>
+        <View style={styles.rowContainer}>
+          <TouchableOpacity 
+          onPress={() => handlePress(0)}  
+          disabled={disableTopLeft} 
+          >
+            <Image style={styles.image} source={sourceTopLeft} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => handlePress(1)} disabled={disableTopRight}>
+            <Image style={styles.image} source={sourceTopRight} />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.rowContainer}>
+          <TouchableOpacity onPress={() => handlePress(2)} disabled={disableBottomLeft}>
+            <Image style={styles.image} source={sourceBottomLeft} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => handlePress(3)} disabled={disableBottomRight}>
+            <Image style={styles.image} source={sourceBottomRight} />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.text}> {lowerScreenText} </Text>
+        </View>
+        <View style={styles.footerButtons}>
+          <LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
+          <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> 
+        </View>
       </View>
     </LinearGradient>
     )

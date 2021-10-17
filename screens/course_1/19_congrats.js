@@ -1,11 +1,13 @@
 // Congrats! You just learned all about how computers see. You also learned an important insight into facial recognition!
 
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground } from 'react-native'
+import { StyleSheet, View, Text, ImageBackground, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Course1Congrats ({ navigation }) {
   return (
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
     marginTop: '15%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40
+    fontSize: height / 22
   },
   boldText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
     marginTop: '15%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   bigText: {
