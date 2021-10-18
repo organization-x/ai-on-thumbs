@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-
+import { useFonts } from 'expo-font'
 import Welcome from './screens/Welcome'
 import Courses from './screens/Courses'
 
@@ -50,6 +50,13 @@ Sentry.init({
 const Stack = createStackNavigator()
 
 export default function App () {
+  const [loaded] = useFonts({
+    Avenir: require('./assets/fonts/Avenir.ttf'),
+  });
+
+  if (!loaded) {
+    return null;
+  }
   return (
     <NavigationContainer>
       <Stack.Navigator
