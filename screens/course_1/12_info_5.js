@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     flex: 1,
-    marginTop: '140%',
+    marginTop: height/1.6,
     position: 'absolute',
     overflow: 'visible',
     height: '50%'
