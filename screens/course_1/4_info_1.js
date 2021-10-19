@@ -11,7 +11,7 @@ export default function Course1Info1 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.text}>But now, do you think computers can also see tiny pixels?</Text>
+        <Text style={styles.bigText}>But now, do you think computers can also see tiny pixels?</Text>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1PinchZoom' buttonColor='#8976C2' buttonText='Back' />
@@ -49,8 +49,11 @@ const styles = StyleSheet.create({
     marginTop: '65%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 60,
-    fontWeight: 'bold'
+    fontSize: 50,
+    fontWeight: 'bold',
+    marginRight: '5%',
+    marginLeft: '5%'
+    
   },
   footerButtons: {
     marginBottom: 10,

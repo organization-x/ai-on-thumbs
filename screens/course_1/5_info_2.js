@@ -47,10 +47,12 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '65%',
+    marginTop: '50%',
+    marginRight: '5%',
+    marginLeft: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 60,
+    fontSize: 50,
     fontWeight: 'bold'
   },
   footerButtons: {

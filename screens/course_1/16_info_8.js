@@ -14,7 +14,7 @@ export default function Course1Info8 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.text}>That’s a great question!</Text>
+        <Text style={styles.bigText}>That’s a great question!</Text>
         <Text style={styles.text}>For this lesson, we will focus on the first thing computers need to know to detect a face. Any guesses?</Text>
       </View>
       <View style={styles.footerButtons}>
@@ -50,10 +50,10 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '65%',
+    marginTop: '35%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 60,
+    fontSize: 45,
     fontWeight: 'bold'
   },
   footerButtons: {
