@@ -3,7 +3,7 @@ import React from "react"
 import { StyleSheet, Text, View, SafeAreaView, Image, Button, Alert } 
     from 'react-native';
 import { LinearGradient } from "expo-linear-gradient"
-import LessonButton from "./LessonButton"
+import LessonButton from "../../components/LessonButton"
 
 export default function App ({ navigation }) {
 
