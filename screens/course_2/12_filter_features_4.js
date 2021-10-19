@@ -20,14 +20,14 @@ export default function Course2FilterFeatures4({ navigation }) {
 
         <LessonButton
           navigation = {navigation}
-          nextScreen = "11_filter_features_3"
+          nextScreen = "Course2FilterFeatures3"
           buttonColor = "#8976C2"
           buttonText = "Back"
         />
 
         <LessonButton
           navigation={navigation}
-          nextScreen = "13_filter_features_5"
+          nextScreen = "Course2FilterFeatures5"
           buttonColor = {["#32B59D", "#3AC55B"]}
           buttonText = "Let's find out!"
         />
