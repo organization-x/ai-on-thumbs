@@ -1,4 +1,4 @@
-// The computer scans for pixel patterns in the photo that best matches the structure of the filter.
+// The computer scans for pixel patterns in the photo
 
 import React from "react"
 import { View, Text, Image , StyleSheet, Button } from "react-native"
@@ -18,13 +18,13 @@ export default function Course2FilterFeatures3({ navigation }) {
       <View style={styles.footerButtons}> 
         <LessonButton
           navigation = {navigation}
-          nextScreen = "10_filter_features_2"
+          nextScreen = "Course2FilterFeatures2"
           buttonColor = "#8976C2"
           buttonText = "Back"
         />
         <LessonButton
           navigation={navigation}
-          nextScreen = "12_filter_features_4"
+          nextScreen = "Course2FilterFeatures4"
           buttonColor = {["#32B59D", "#3AC55B"]}
           buttonText = "Continue"
         />
@@ -87,4 +87,3 @@ const styles = StyleSheet.create({
     paddingVertical : 0
   }
 })
-
