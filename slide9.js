@@ -1,12 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
 import React from "react"
-import { StyleSheet, Text, View, SafeAreaView, Image, Button, Alert } 
+import { StyleSheet, Text, SafeAreaView} 
     from 'react-native';
 import { LinearGradient } from "expo-linear-gradient"
 import LessonButton from "../../components/LessonButton"
 
 export default function App ({ navigation }) {
-
   return (
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
     <SafeAreaView style = {styles.container}> 
@@ -20,21 +18,18 @@ export default function App ({ navigation }) {
       </SafeAreaView>
 
       <SafeAreaView style={styles.footerButtons}>
-
       <LessonButton
           navigation = {navigation}
           nextScreen = "8_pixel_patterns_interactive.js"
           buttonColor = "#8976C2"
           buttonText = "Back"
         />
-
         <LessonButton
           navigation={navigation}
           nextScreen = "10_filter_features_2.js"
           buttonColor = {["#32B59D", "#3AC55B"]}
           buttonText = "Continue"
         />
-
       </SafeAreaView>
     </SafeAreaView> 
     </LinearGradient>
