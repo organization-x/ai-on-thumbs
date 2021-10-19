@@ -8,8 +8,10 @@ export default function Course1Complete ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <Image style={styles.logo} source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
-      <Text style={styles.bigText}> You've completed your first lesson! </Text>
-      <Text style={styles.text}> Continue to lesson 2 to learn more and you’ll get a chance to upload a picture to see Face Detection in action. </Text>
+      <View style={{flex: 1}}>
+        <Text style={styles.bigText}> You've completed your first lesson! </Text>
+        <Text style={styles.text}> Continue to lesson 2 to learn more and you’ll get a chance to upload a picture to see Face Detection in action. </Text>
+      </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1EmailPrompt' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Courses' buttonColor={['#32B59D', '#3AC55B']} buttonText='Back to home' />
