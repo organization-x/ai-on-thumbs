@@ -22,9 +22,10 @@ export default function CoursesScreen ({ navigation }) {
           navigation={navigation}
           lessonScreen='Course1Intro'
           gradColors={['#8233C5', '#3C4687']}
+          disabled={true}
           title='Facial Recognition, part 2'
-          desc='This lesson will teach you how facial recognition works using a real-life algorithm, starting right from where we left off in lesson 1.'
-          ratingandduration='Beginner: 10 minutes'
+          desc='This lesson will teach you how facial recognition works using a real-life algorithm, starting right from where we left off last lesson.'
+          ratingandduration='Coming soon!'
         />
         <CourseAd
           gradColors={['#5D4672', '#A193A8']}
