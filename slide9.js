@@ -1,6 +1,5 @@
 import React from "react"
-import { StyleSheet, Text, SafeAreaView} 
-    from 'react-native';
+import { StyleSheet, Text, SafeAreaView} from 'react-native'
 import { LinearGradient } from "expo-linear-gradient"
 import LessonButton from "../../components/LessonButton"
 
@@ -33,7 +32,7 @@ export default function App ({ navigation }) {
       </SafeAreaView>
     </SafeAreaView> 
     </LinearGradient>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
