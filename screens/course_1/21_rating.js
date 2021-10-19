@@ -67,7 +67,7 @@ const styles = {
   },
   starView: {
     marginTop: height / 20,
-    flex: 1,
+    flex: 1
   },
   subText: {
     color: 'white',
