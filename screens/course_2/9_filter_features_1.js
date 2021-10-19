@@ -1,4 +1,3 @@
-
 // Turns out the patterns in our facial features are distinctive
 
 import React from "react"
@@ -24,14 +23,14 @@ export default function Filter_features({ navigation }) {
 
         <LessonButton
           navigation = {navigation}
-          nextScreen = "8_pixel_patterns_interactive.js"
+          nextScreen = "Course2PixelPatternsInteractive"
           buttonColor = "#8976C2"
           buttonText = "Back"
         />
 
         <LessonButton
           navigation={navigation}
-          nextScreen = "10_filter_features_2.js"
+          nextScreen = "Course2FilterFeatures2"
           buttonColor = {["#32B59D", "#3AC55B"]}
           buttonText = "Continue"
         />
