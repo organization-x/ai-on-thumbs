@@ -7,8 +7,10 @@ import { LinearGradient } from 'expo-linear-gradient'
 export default function Course1Complete ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={{ alignItems:'center', flex: 1}}>
+      <View style={{ alignItems: 'center'}}>
       <Image style={styles.logo} source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
+      </View>
+      <View style={{flex: 1}}>
         <Text style={styles.bigText}> You've completed your first lesson! </Text>
         <Text style={styles.text}> Continue to lesson 2 to learn more and you’ll get a chance to upload a picture to see Face Detection in action. </Text>
       </View>
