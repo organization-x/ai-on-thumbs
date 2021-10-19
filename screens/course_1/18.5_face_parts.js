@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     flex: 2,
-    marginTop: 30
+    marginTop: deviceHeight/15
   },
   footerButtons: {
     marginBottom: 10,

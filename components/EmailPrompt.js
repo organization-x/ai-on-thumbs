@@ -22,7 +22,6 @@ async function createUser (email) {
   })
 
   const resText = await res.text()
-  console.log(resText)
   return resText
 }
 
