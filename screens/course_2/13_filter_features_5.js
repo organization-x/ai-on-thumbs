@@ -21,13 +21,13 @@ export default function Course2FilterFeatures5({ navigation }) {
       <View style={styles.footerButtons}> 
         <LessonButton
           navigation = {navigation}
-          nextScreen = "12_filter_features_4"
+          nextScreen = "Course2FilterFeatures4"
           buttonColor = "#8976C2"
           buttonText = "Back"
         />
         <LessonButton
           navigation={navigation}
-          nextScreen = "14_contrast_1.js"
+          nextScreen = "Course2Contrast1"
           buttonColor = {["#32B59D", "#3AC55B"]}
           buttonText = "Continue"
         />
