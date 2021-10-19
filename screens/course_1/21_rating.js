@@ -8,10 +8,9 @@ import StarRating from 'react-native-star-rating'
 import TopLessonParagraph from '../../components/TopLessonParagraph'
 
 async function sendFeedback (rating) {
-  await fetch('https://ai-camp.org/set-rating', {
+  await fetch('https://app.ai-camp.org/set-rating', {
     method: 'POST',
     headers: {
-      Accept: 'application/json',
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
@@ -36,10 +35,10 @@ export default function Course1Rating ({ navigation }) {
           selectedStar={(rating) => setStarCount(rating)}
           fullStarColor='yellow'
         />
+        <TouchableOpacity style={styles.button} onPress={() => { sendFeedback(starCount) }}>
+          <Text>Send Feedback</Text>
+        </TouchableOpacity>
       </View>
-      <TouchableOpacity style={styles.button} onPress={() => { sendFeedback(starCount) }}>
-        <Text>Send Feedback</Text>
-      </TouchableOpacity>
       <Text style={styles.subText}>We told you that if you have thumbs, you can learn AI</Text>
       <View style={styles.footerButtons}>
         <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course1Review' buttonColor='#8976C2' buttonText='Back' />
@@ -63,10 +62,12 @@ const styles = {
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    paddingVertical: '40%'
+    justifyContent: 'space-between',
+    marginVertical: '50%'
   },
   starView: {
-    marginTop: height / 20
+    marginTop: height / 20,
+    flex: 1,
   },
   subText: {
     color: 'white',
