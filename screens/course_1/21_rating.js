@@ -1,14 +1,16 @@
 // Did you have fun learning AI with us?
 
 import React, { useState } from 'react'
-import { Text, Image, View, TouchableOpacity, Dimensions } from 'react-native'
+import { Text, Image, View, TouchableOpacity, Dimensions, Modal } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import StarRating from 'react-native-star-rating'
 import TopLessonParagraph from '../../components/TopLessonParagraph'
+import LottieView from 'lottie-react-native'
+import * as Sentry from 'sentry-expo'
 
 async function sendFeedback (rating) {
-  await fetch('https://app.ai-camp.org/set-rating', {
+  const res = await fetch('https://app.ai-camp.org/set-rating', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -17,12 +19,32 @@ async function sendFeedback (rating) {
       rating: rating
     })
   })
+
+  const resText = await res.text()
+  return resText
 }
 
 const height = Dimensions.get('window').height
 
 export default function Course1Rating ({ navigation }) {
   const [starCount, setStarCount] = useState(0)
+  const [modalVisible, setModalVisible] = useState(false)
+
+  async function onFeedbackPress () {
+    const res = await sendFeedback(starCount)
+
+    if (res === 'OK') {
+      setModalVisible(true)
+      CloseModalAfterDelay()
+    }
+  }
+
+  function CloseModalAfterDelay () {
+    setTimeout(function () {
+      setModalVisible(false)
+    }, 2000)
+  }
+
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
@@ -35,10 +57,24 @@ export default function Course1Rating ({ navigation }) {
           selectedStar={(rating) => setStarCount(rating)}
           fullStarColor='yellow'
         />
-        <TouchableOpacity style={styles.button} onPress={() => { sendFeedback(starCount) }}>
+        <TouchableOpacity style={styles.button} onPress={() => { onFeedbackPress().catch((err) => { Sentry.captureException(err) }) }}>
           <Text>Send Feedback</Text>
         </TouchableOpacity>
       </View>
+      <Modal
+        animationType='slide'
+        transparent
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible)
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <LottieView source={require('../../assets/course_1/1818-success-animation.json')} autoPlay loop={false} />
+          </View>
+        </View>
+      </Modal>
       <Text style={styles.subText}>We told you that if you have thumbs, you can learn AI</Text>
       <View style={styles.footerButtons}>
         <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course1Review' buttonColor='#8976C2' buttonText='Back' />
@@ -68,6 +104,23 @@ const styles = {
   starView: {
     marginTop: height / 20,
     flex: 1
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
   },
   subText: {
     color: 'white',
