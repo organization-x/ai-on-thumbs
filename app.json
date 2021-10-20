@@ -24,6 +24,7 @@
     },
     "android": {
       "package": "com.aicamp.aionthumbs",
+      "versionCode": 2,
       "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/stock/adaptive-icon.png",
