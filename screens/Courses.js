@@ -28,7 +28,7 @@ export default function CoursesScreen ({ navigation }) {
           ratingandduration='Coming soon!'
         />
         <CourseAd
-          gradColors={['#1AFB59', '#8CDF6F']}
+          gradColors={['#33D05F', '#09713F']}
           title='Want to learn more about AI?'
           desc='Immerse yourself in artificial intelligence and learn to build incredible real-world AI products at ai-camp.org. No prior experience necessary!'
         />
