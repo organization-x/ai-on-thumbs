@@ -1,4 +1,4 @@
-// Precisely! A photo is just a matrix of numbers to a computer.
+// Precisely! To a computer, a photo is a large table of numbers called a matrix
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
@@ -14,7 +14,7 @@ export default function Course1Info4 ({ navigation }) {
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.bigText}>Precisely!</Text>
-        <Text style={styles.text}>A photo is just a matrix of numbers to a computer.</Text>
+        <Text style={styles.text}>To a computer, a photo is a large table of numbers called a matrix</Text>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Info3' buttonColor='#8976C2' buttonText='Back' />
