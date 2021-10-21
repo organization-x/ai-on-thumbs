@@ -57,7 +57,7 @@ export default function Course1Rating ({ navigation }) {
           selectedStar={(rating) => setStarCount(rating)}
           fullStarColor='yellow'
         />
-        <TouchableOpacity style={styles.button} onPress={() => { onFeedbackPress().catch((err) => { Sentry.captureException(err) }) }}>
+        <TouchableOpacity style={styles.button} onPress={() => { onFeedbackPress().catch((err) => { Sentry.Native.captureException(err) }) }}>
           <Text>Send Feedback</Text>
         </TouchableOpacity>
       </View>

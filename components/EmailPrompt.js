@@ -82,7 +82,7 @@ export default function EmailPrompt () {
           </View>
           <View style={styles.flexSmall}>
             <TouchableOpacity
-              onPress={() => { onLoginPress().catch((err) => { Sentry.captureException(err) }) }}
+              onPress={() => { onLoginPress().catch((err) => { Sentry.Native.captureException(err) }) }}
               style={[styles.submitButton]}
               underlayColor='#fff'
             >
