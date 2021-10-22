@@ -1,9 +1,11 @@
 // No, we don’t! But do you know why?
 
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+
+const height = Dimensions.get('window').height
 
 export default function Course2ScanAll2Correct ({navigation}) {
   return (
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 60,
+    fontSize: height / 16, // ~60px
     fontWeight: 'bold'
   },
   secondText: {
@@ -67,7 +69,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 45
+    fontSize: height / 18 // ~45px
   },
   thirdText: {
     padding: 15,
@@ -77,6 +79,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 30
+    fontSize: height / 22 // ~30px
   }
 })
