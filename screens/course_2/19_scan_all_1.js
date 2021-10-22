@@ -1,7 +1,11 @@
+// Ok, now we can find different parts of a face.
+
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+
+const height = Dimensions.get('window').height
 
 export default function Course2ScanAll1 ({ navigation }) {
   return (
@@ -19,13 +23,13 @@ export default function Course2ScanAll1 ({ navigation }) {
       <View style={styles.footerButtons}>
         <LessonButton
           navigation={navigation}
-          nextScreen=''
+          nextScreen='Course2ScanAll2Correct'
           buttonColor={['#32B59D', '#3AC55B']}
           buttonText='Yes! 👍'
         />
         <LessonButton
           navigation={navigation}
-          nextScreen=''
+          nextScreen='Course2ScanAll2Wrong'
           buttonColor='#8976C2'
           buttonText='No! 👎'
         />
@@ -58,7 +62,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height / 20, // ~40px
     fontWeight: 'bold'
   },
   secondText: {
@@ -69,6 +73,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 40
+    fontSize: height / 20 // ~40px
   }
 })

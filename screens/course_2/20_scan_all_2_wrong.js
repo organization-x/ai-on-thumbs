@@ -1,9 +1,12 @@
 // You guessed wrong
 
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course2ScanAll2Wrong ({navigation}) {
   return (
@@ -15,18 +18,18 @@ export default function Course2ScanAll2Wrong ({navigation}) {
       </View>
 
       <View style={styles.footerButtons}>
-      <LessonButton
-          navigation={navigation}
-          nextScreen=''
-          buttonColor='#8976C2'
-          buttonText='Back'
-        />
         <LessonButton
-          navigation={navigation}
-          nextScreen=''
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Continue'
-        />
+            navigation={navigation}
+            nextScreen='Course2ScanAll1'
+            buttonColor='#8976C2'
+            buttonText='Back'
+          />
+          <LessonButton
+            navigation={navigation}
+            nextScreen='Course2ScanAll3'
+            buttonColor={['#32B59D', '#3AC55B']}
+            buttonText='Continue'
+          />
       </View>
     </LinearGradient>
   )
@@ -55,7 +58,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 60,
+    fontSize: height / 16, // ~60px
     fontWeight: 'bold'
   },
   secondText: {
@@ -65,10 +68,10 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 30
+    fontSize: height / 26 // ~30px
   },
   image: {
     resizeMode: 'contain',
-    width: '50%'
+    width: width / 1.6
   }
 })
