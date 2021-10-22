@@ -17,13 +17,13 @@ export default function Course2ScanAll2Correct ({navigation}) {
       <View style={styles.footerButtons}>
         <LessonButton
             navigation={navigation}
-            nextScreen=''
+            nextScreen='Course2ScanAll1'
             buttonColor='#8976C2'
             buttonText='Back'
           />
           <LessonButton
             navigation={navigation}
-            nextScreen=''
+            nextScreen='Course2ScanAll3'
             buttonColor={['#32B59D', '#3AC55B']}
             buttonText='Continue'
           />

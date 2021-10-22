@@ -15,18 +15,18 @@ export default function Course2ScanAll2Wrong ({navigation}) {
       </View>
 
       <View style={styles.footerButtons}>
-      <LessonButton
-          navigation={navigation}
-          nextScreen=''
-          buttonColor='#8976C2'
-          buttonText='Back'
-        />
         <LessonButton
-          navigation={navigation}
-          nextScreen=''
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Continue'
-        />
+            navigation={navigation}
+            nextScreen='Course2ScanAll1'
+            buttonColor='#8976C2'
+            buttonText='Back'
+          />
+          <LessonButton
+            navigation={navigation}
+            nextScreen='Course2ScanAll3'
+            buttonColor={['#32B59D', '#3AC55B']}
+            buttonText='Continue'
+          />
       </View>
     </LinearGradient>
   )
