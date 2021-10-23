@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 30,
+    fontSize: 38,
     fontWeight: "bold"
   },
   secondText: {
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 25,
+    fontSize: 30,
     fontWeight : 'bold'
   }
 })
