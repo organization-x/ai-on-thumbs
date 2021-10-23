@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   mainText: {
-    marginVertical: 15,
+    marginVertical: 5,
     padding: 15,
     marginHorizontal : 0,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   secondaryText: {
-    marginVertical: 0,
+    marginVertical: 5,
     padding: 0,
     marginHorizontal : 5,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 23,
+    fontSize: 25,
   }, 
   image: {
     resizeMode: 'contain',
