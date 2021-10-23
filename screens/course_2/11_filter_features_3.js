@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   secondaryText: {
-    marginVertical: 0,
+    marginVertical: 5,
     padding: 0,
     marginHorizontal : 0,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   image: {
     resizeMode: 'contain',
     width: '100%',
-    height : '50%',
+    height : '45%',
     paddingHorizontal : 0, 
     paddingVertical : 0
   }
