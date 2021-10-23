@@ -1,13 +1,15 @@
 // Welcome to your second lesson in facial recognition! Let’s review what we learned last time.
 
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground } from 'react-native'
+import { StyleSheet, View, Text, ImageBackground, Dimensions } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
 
+const height = Dimensions.get('window').height
+
 export default function Course2Intro ({ navigation }) {
   return (
-    <ImageBackground source={require('../../assets/high-def-assets/objectregbackground.png')} style={styles.container}>
+    <ImageBackground source={require('../../assets/objectregbackground.png')} style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.text}>Welcome to your second lesson in facial recognition!</Text>
         <Text style={styles.text}>Let's review what we learned last time.</Text>
@@ -33,10 +35,10 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {
-    marginTop: '15%',
+    marginTop: height / 12,
     textAlign: 'center',
     color: 'white',
-    fontSize: 45,
+    fontSize: height / 15,
     fontWeight: 'bold'
   },
   footerButtons: {
