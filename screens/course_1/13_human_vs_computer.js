@@ -27,9 +27,9 @@ export default function Course1HumanVsComputer ({ navigation }) {
         <View style={styles.interactive}>
           <Text style={styles.text}>Toggle the switch to shift between human vision and computer vision.</Text>
         </View>
-
-        <Image source={src} style={styles.image} resizeMode='contain' />
-
+        <View style={styles.flexCenter}>
+          <Image source={src} style={styles.image}/>
+        </View>
         <View style={styles.flexRow}>
           <View style={styles.flexLeft}>
             <Text style={styles.smallText}>Human{'\n'}Vision</Text>
@@ -87,8 +87,10 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   image: {
+    alignItems: 'center',
     marginVertical: '10%',
-    height: height / 3
+    height: height / 3,
+    resizeMode: 'contain'
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

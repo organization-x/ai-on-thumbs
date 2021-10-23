@@ -1,9 +1,11 @@
 import React from 'react'
-import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
-export default function Course1Complete ({ navigation }) {
+const height = Dimensions.get('window').height
+
+export default function Course1FaceFinder ({ navigation }) {
   const [numCorrectFaces, setNumCorrectFaces] = React.useState(0)
   const [disableTopLeft, setDisableTopLeft] = React.useState(false)
   const [disableTopRight, setDisableTopRight] = React.useState(false)
@@ -42,12 +44,12 @@ export default function Course1Complete ({ navigation }) {
 
   const setText = () => {
     const facesLeft = 2 - numCorrectFaces
-    if (facesLeft > 1) {
-      setLowerScreenText('There are ' + facesLeft + ' faces remaining.')
+    if (facesLeft === 2) {
+      setLowerScreenText('Good eye! There are ' + facesLeft + ' faces remaining.')
     } else if (facesLeft === 1) {
-      setLowerScreenText('There is ' + facesLeft + ' face remaining.')
+      setLowerScreenText('Nice one! There is ' + facesLeft + ' face remaining.')
     } else if (facesLeft === 0) {
-      setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap continue to learn why.')
+      setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap continue to learn why.' )
     }
   }
 
@@ -109,8 +111,8 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'black',
-    marginTop: '10%',
-    fontSize: 20,
+    marginTop: '0%',
+    fontSize: height/40,
     fontWeight: 'bold'
   },
   bigText: {
@@ -118,10 +120,10 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     marginTop: '15%',
-    marginBottom: '10%',
+    marginBottom: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 24,
+    fontSize: height/30,
     fontWeight: 'bold'
   },
   footerButtons: {
