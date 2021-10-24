@@ -19,7 +19,7 @@ export default function Course1EmailPrompt ({ navigation }) {
         <Text style={styles.hyperText} onPress={() => Linking.openURL('https://ai-camp.org')}>ai-camp.org</Text>
       </View>
       <KeyboardAvoidingView
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
         <ScrollView
           showsVerticalScrollIndicator={false}

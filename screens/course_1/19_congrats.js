@@ -16,8 +16,8 @@ export default function Course1Congrats ({ navigation }) {
         count={100}
         origin={{ x: width / 2, y: -100 }}
         fallSpeed={1500}
-        autoStart={true}
-        fadeOut={true}
+        autoStart
+        fadeOut
       />
       <View style={styles.interactive}>
         <Text style={styles.bigText}>Congrats!</Text>
