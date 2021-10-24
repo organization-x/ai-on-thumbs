@@ -1,11 +1,11 @@
 // DO YOU HAVE THUMBS?
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
-
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../components/LessonButton'
-
 import { LinearGradient } from 'expo-linear-gradient'
+
+const height = Dimensions.get('window').height
 
 export default function Thumbs ({ navigation }) {
   return (
@@ -28,12 +28,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingVertical: 5
   },
   interactive: {
     flex: 1,
-    borderRadius: 7,
+    borderRadius: 5,
     overflow: 'hidden',
+    resizeMode: 'contain',
     alignItems: 'center'
   },
   smallestText: {
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 60,
+    fontSize: height / 12,
     fontWeight: 'bold'
   },
   smallText: {
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 105,
+    fontSize: height / 7,
     fontWeight: 'bold'
   },
   bigText: {
@@ -60,17 +61,17 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 135,
+    fontSize: height / 6,
     fontWeight: 'bold'
   },
   biggestText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '10%',
+    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 200,
+    fontSize: height / 4,
     fontWeight: 'bold'
   },
   footerButtons: {
