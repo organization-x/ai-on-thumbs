@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/12,
+    fontSize: height / 12,
     fontWeight: 'bold'
   },
   smallText: {
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/7,
+    fontSize: height / 7,
     fontWeight: 'bold'
   },
   bigText: {
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/6,
+    fontSize: height / 6,
     fontWeight: 'bold'
   },
   biggestText: {
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/4,
+    fontSize: height / 4,
     fontWeight: 'bold'
   },
   footerButtons: {

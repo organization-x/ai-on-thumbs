@@ -28,7 +28,7 @@ export default function Course1HumanVsComputer ({ navigation }) {
           <Text style={styles.text}>Toggle the switch to shift between human vision and computer vision.</Text>
         </View>
         <View style={styles.flexCenter}>
-          <Image source={src} style={styles.image}/>
+          <Image source={src} style={styles.image} />
         </View>
         <View style={styles.flexRow}>
           <View style={styles.flexLeft}>

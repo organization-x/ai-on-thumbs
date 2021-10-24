@@ -10,7 +10,6 @@ import ImageMapper from 'react-native-image-mapper'
 const deviceHeight = Dimensions.get('window').height
 const imageDimension = deviceHeight * 0.35
 
-
 export default function Course1FaceParts2 ({ navigation }) {
   const [lowerScreenText, setLowerScreenText] = React.useState(' ')
   const [upperScreenText, setUpperScreenText] = React.useState('Tap to identify which features you think are important to recognize a face.')
@@ -24,13 +23,13 @@ export default function Course1FaceParts2 ({ navigation }) {
       x2: ((130 / 300) * imageDimension),
       y2: ((110 / 300) * imageDimension),
       x1: ((100 / 300) * imageDimension),
-      y1: ((80 / 300) * imageDimension), 
+      y1: ((80 / 300) * imageDimension),
       fill: 'rgba(0,255,0,0.4)'
     },
     {
-      id: '1', 
-      name: 'right eye', 
-      shape: 'rectangle', 
+      id: '1',
+      name: 'right eye',
+      shape: 'rectangle',
       x2: ((175 / 300) * imageDimension),
       y2: ((105 / 300) * imageDimension),
       x1: ((145 / 300) * imageDimension),
@@ -47,7 +46,7 @@ export default function Course1FaceParts2 ({ navigation }) {
       y1: ((80 / 300) * imageDimension),
       fill: 'rgba(0,0,255,0.4)'
     },
-    {  
+    {
       id: '3',
       name: 'mouth',
       shape: 'rectangle',
@@ -59,11 +58,11 @@ export default function Course1FaceParts2 ({ navigation }) {
     },
     {
       id: '4',
-      name: 'right ear', 
-      shape: 'rectangle', 
+      name: 'right ear',
+      shape: 'rectangle',
       x2: ((225 / 300) * imageDimension),
       y2: ((135 / 300) * imageDimension),
-      x1: ((195 / 300) * imageDimension), 
+      x1: ((195 / 300) * imageDimension),
       y1: ((80 / 300) * imageDimension),
       fill: 'rgba(255,255,0,0.4)'
     },

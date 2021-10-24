@@ -11,8 +11,8 @@ export default function Welcome ({ navigation }) {
   const [next, setNext] = useState(null)
   const [modalVisible, setModalVisible] = useState(false)
 
-  function displayModal(show){
-    setModalVisible(show);
+  function displayModal (show) {
+    setModalVisible(show)
   }
 
   useEffect(() => {
@@ -38,9 +38,9 @@ export default function Welcome ({ navigation }) {
         onRequestClose={() => {
           setModalVisible(!modalVisible)
         }}
-        >
+      >
         <View style={styles.centeredView}>
-          <View style = {styles.modalView}>
+          <View style={styles.modalView}>
             <Text style={styles.modalBigText}> Lesson 1 Credits! </Text>
             <Text style={styles.modalBoldText}> Axel Mora (19) </Text>
             <Text style={styles.modalText}> Design Lead </Text>
@@ -53,9 +53,9 @@ export default function Welcome ({ navigation }) {
             <Text style={styles.modalBoldText}> Mitch Cutts (23) </Text>
             <Text style={styles.modalText}> Product Manager </Text>
             <Text style={styles.closeText}
-              onPress={() => {
-              setModalVisible(!modalVisible);}
-            }> Close </Text>
+              onPress={ () => {
+              setModalVisible(!modalVisible) }}
+            > Close </Text>
           </View>
         </View>
         </Modal>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: '20%',
-    fontSize: height/25,
+    fontSize: height / 25,
     fontFamily: 'Avenir',
     color: 'white',
     textAlign: 'center'
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   modalText: {
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     marginTop: '2%',
-    fontSize: height/40,
+    fontSize: height / 40,
     fontFamily: 'Avenir',
     color: 'white',
     textAlign: 'center'
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     marginTop: '4%',
-    fontSize: height/40,
+    fontSize: height / 40,
     fontFamily: 'Avenir',
     fontWeight: 'bold',
     color: 'white',
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     marginTop: '5%',
-    fontSize: height/35,
+    fontSize: height / 35,
     fontFamily: 'Avenir',
     color: 'black',
     textAlign: 'center'
@@ -155,10 +155,10 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   modalView: {
-    margin: height/25,
+    margin: height / 25,
     backgroundColor: '#3AC55B',
     borderRadius: 15,
-    padding: height/20,
+    padding: height / 20,
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {

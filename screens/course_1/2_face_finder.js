@@ -45,11 +45,11 @@ export default function Course1FaceFinder ({ navigation }) {
   const setText = () => {
     const facesLeft = 2 - numCorrectFaces
     if (facesLeft === 2) {
-      setLowerScreenText('Good eye! There are ' + facesLeft + ' faces remaining.')
+        setLowerScreenText('Good eye! There are ' + facesLeft + ' faces remaining.')
     } else if (facesLeft === 1) {
-      setLowerScreenText('Nice one! There is ' + facesLeft + ' face remaining.')
+        setLowerScreenText('Nice one! There is ' + facesLeft + ' face remaining.')
     } else if (facesLeft === 0) {
-      setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap continue to learn why.' )
+        setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap continue to learn why.')
     }
   }
 
@@ -85,7 +85,7 @@ export default function Course1FaceFinder ({ navigation }) {
         </View>
       </View>
     </LinearGradient>
-    )
+  )
 }
 
 const styles = StyleSheet.create({
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'black',
     marginTop: '0%',
-    fontSize: height/40,
+    fontSize: height / 40,
     fontWeight: 'bold'
   },
   bigText: {
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     marginBottom: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/30,
+    fontSize: height / 30,
     fontWeight: 'bold'
   },
   footerButtons: {
