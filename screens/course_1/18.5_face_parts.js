@@ -129,7 +129,7 @@ export default function Course1FaceParts2 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={{ flex: 1 }}>
-      <Text style={styles.bigText}>{upperScreenText} </Text>
+        <Text style={styles.bigText}>{upperScreenText} </Text>
       </View>
       <View style={styles.interactive}>
         <ImageMapper
@@ -139,7 +139,7 @@ export default function Course1FaceParts2 ({ navigation }) {
           imgWidth={imageDimension}
           onPress={(item, idx, event) => handlePress(item, idx, event)}
           selectedAreaId={selectedAreaId}
-          multiselect={true}
+          multiselect
         />
       </View>
       <View style={styles.interactive}>
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     flex: 2,
-    marginTop: deviceHeight/15
+    marginTop: deviceHeight / 15
   },
   footerButtons: {
     marginBottom: 10,

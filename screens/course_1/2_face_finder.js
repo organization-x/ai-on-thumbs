@@ -45,11 +45,11 @@ export default function Course1FaceFinder ({ navigation }) {
   const setText = () => {
     const facesLeft = 2 - numCorrectFaces
     if (facesLeft === 2) {
-        setLowerScreenText('Good eye! There are ' + facesLeft + ' faces remaining.')
+      setLowerScreenText('Good eye! There are ' + facesLeft + ' faces remaining.')
     } else if (facesLeft === 1) {
-        setLowerScreenText('Nice one! There is ' + facesLeft + ' face remaining.')
+      setLowerScreenText('Nice one! There is ' + facesLeft + ' face remaining.')
     } else if (facesLeft === 0) {
-        setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap continue to learn why.')
+      setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap continue to learn why.')
     }
   }
 
@@ -59,8 +59,8 @@ export default function Course1FaceFinder ({ navigation }) {
       <View style={{ flex: 1 }}>
         <View style={styles.rowContainer}>
           <TouchableOpacity
-          onPress={() => handlePress(0)}
-          disabled={disableTopLeft}
+            onPress={() => handlePress(0)}
+            disabled={disableTopLeft}
           >
             <Image style={styles.image} source={sourceTopLeft} />
           </TouchableOpacity>

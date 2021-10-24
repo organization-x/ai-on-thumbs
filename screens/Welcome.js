@@ -52,12 +52,12 @@ export default function Welcome ({ navigation }) {
             <Text style={styles.modalText}> Engineering Manager </Text>
             <Text style={styles.modalBoldText}> Mitch Cutts (23) </Text>
             <Text style={styles.modalText}> Product Manager </Text>
-            <Text style={styles.closeText} onPress={ () => {setModalVisible(!modalVisible)} }> Close </Text>
+            <Text style={styles.closeText} onPress={() => { setModalVisible(!modalVisible) }}> Close </Text>
           </View>
         </View>
       </Modal>
 
-      <TouchableOpacity onPress={ () => {displayModal(true)} }>
+      <TouchableOpacity onPress={() => { displayModal(true) }}>
         <Image style={styles.logo} resizeMode='contain' source={require('../assets/stock/ai-on-thumbs-logo.png')} />
       </TouchableOpacity>
       <Text style={styles.text}>If you have thumbs,{'\n'}you can learn AI.</Text>
