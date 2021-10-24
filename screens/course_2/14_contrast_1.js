@@ -2,9 +2,12 @@
 // Contrast is the difference between the dark pixels and the bright pixels. It helps objects pop out more!
 
 import React from "react"
-import { View, Text, Image , StyleSheet, Button } from "react-native"
+import { View, Text, Image , StyleSheet, Dimensions } from "react-native"
 import { LinearGradient } from "expo-linear-gradient"
 import LessonButton from "../../components/LessonButton"
+
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course2Contrast1({ navigation }) {
   return (
@@ -38,11 +41,11 @@ export default function Course2Contrast1({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
     paddingVertical: 15
   },
   footerButtons: {
-    marginBottom: 10,
+    marginBottom: height / 110,
     flexDirection: "row",
     justifyContent: "space-between"
   },
@@ -57,35 +60,29 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   mainText: {
-    marginVertical: 15,
-    padding: 15,
-    marginHorizontal : 0,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 33,
+    fontSize: height / 25,
     fontWeight: "bold"
   },
   secondaryText: {
-    marginVertical: 20,
-    padding: 0,
-    marginHorizontal : 25,
+    marginVertical: height / 30,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 25,
+    fontSize: height / 35,
     fontWeight : 'bold'
   }, 
   image: {
     resizeMode: 'contain',
-    width: '95%',
     height : '25%',
-    paddingHorizontal : 0, 
-    paddingVertical : 0
+    width : width / 1.1,
+    marginVertical : '10%'
   }
 })
 
