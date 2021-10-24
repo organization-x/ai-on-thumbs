@@ -82,7 +82,7 @@ export default function EmailPrompt () {
           </View>
           <View style={styles.flexSmall}>
             <TouchableOpacity
-              onPress={() => { onLoginPress().catch((err) => { Sentry.captureException(err) }) }}
+              onPress={() => { onLoginPress().catch((err) => { Sentry.Native.captureException(err) }) }}
               style={[styles.submitButton]}
               underlayColor='#fff'
             >
@@ -138,33 +138,33 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   text: {
-    fontSize: 25,
+    fontSize: height / 35,
     color: 'white',
     textAlign: 'center',
     margin: '10%'
   },
   submitText: {
-    fontSize: 15,
+    fontSize: height / 70,
     color: 'white',
     textAlign: 'center'
   },
   gradientContainer: {
-    paddingVertical: '30%',
-    paddingHorizontal: '15%'
+    paddingVertical: height / 40,
+    paddingHorizontal: height / 60
   },
   submitButton: {
     alignSelf: 'flex-end',
     height: 60,
     borderRadius: 10,
     overflow: 'hidden',
-    marginHorizontal: height / 150
+    marginRight: height / 75
   },
   textInput: {
     justifyContent: 'flex-start',
     backgroundColor: 'white',
     height: 60,
     borderRadius: 10,
-    marginLeft: '5%'
+    marginLeft: height / 75
   },
   button: {
     justifyContent: 'flex-end'

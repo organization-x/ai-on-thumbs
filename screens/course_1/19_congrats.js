@@ -1,28 +1,33 @@
 // Congrats! You just learned all about how computers see. You also learned an important insight into facial recognition!
 
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground, Dimensions } from 'react-native'
-
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-
 import { LinearGradient } from 'expo-linear-gradient'
+import ConfettiCannon from 'react-native-confetti-cannon'
 
+const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 export default function Course1Congrats ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <ImageBackground source={require('../../assets/course_1/confetti.png')} style={styles.container}>
-        <View style={styles.interactive}>
-          <Text style={styles.bigText}>Congrats!</Text>
-          <Text style={styles.text}>You just learned all about how computers see. You also learned an important insight into facial recognition!</Text>
-          <Text style={styles.boldText}>Now let’s review.</Text>
-        </View>
-        <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course1FaceParts2' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course1Review' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>
-      </ImageBackground>
+      <ConfettiCannon
+        count={100}
+        origin={{ x: width / 2, y: -100 }}
+        fallSpeed={1500}
+        autoStart
+        fadeOut
+      />
+      <View style={styles.interactive}>
+        <Text style={styles.bigText}>Congrats!</Text>
+        <Text style={styles.text}>You just learned all about how computers see. You also learned an important insight into facial recognition!</Text>
+        <Text style={styles.boldText}>Now let’s review.</Text>
+      </View>
+      <View style={styles.footerButtons}>
+        <LessonButton navigation={navigation} nextScreen='Course1FaceParts2' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Review' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+      </View>
     </LinearGradient>
   )
 }

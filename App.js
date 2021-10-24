@@ -51,11 +51,11 @@ const Stack = createStackNavigator()
 
 export default function App () {
   const [loaded] = useFonts({
-    Avenir: require('./assets/fonts/Avenir.ttf'),
-  });
+    Avenir: require('./assets/fonts/Avenir.ttf')
+  })
 
   if (!loaded) {
-    return null;
+    return null
   }
   return (
     <NavigationContainer>

@@ -1,4 +1,4 @@
-// so does this mean computers see photos as just a matrix of numbers?
+// so, does this mean computers see photos as just a large list of numbers?
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
@@ -14,7 +14,7 @@ export default function Course1Info3 ({ navigation }) {
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.bigText}>SO</Text>
-        <Text style={styles.text}>does this mean computers see photos as just a matrix of numbers?</Text>
+        <Text style={styles.text}>does this mean computers see photos as just a large list of numbers?</Text>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course1Brightness2' buttonColor='#8976C2' buttonText='Back' />
