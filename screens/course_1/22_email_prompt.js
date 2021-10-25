@@ -2,11 +2,12 @@
 
 import React from 'react'
 import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollView, Dimensions, Linking } from 'react-native'
-
 import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
-
 import { LinearGradient } from 'expo-linear-gradient'
+
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 22: Email Prompt Screen')
 
 const height = Dimensions.get('window').height
 

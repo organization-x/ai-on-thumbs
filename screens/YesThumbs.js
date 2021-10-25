@@ -2,10 +2,11 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
-
 import LessonButton from '../components/LessonButton'
-
 import { LinearGradient } from 'expo-linear-gradient'
+
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('YesThumbs Screen')
 
 export default function YesThumbs ({ navigation }) {
   return (

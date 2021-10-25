@@ -5,10 +5,11 @@ For this lesson, we will focus on the first thing computers need to know to dete
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-
 import LessonButton from '../../components/LessonButton'
-
 import { LinearGradient } from 'expo-linear-gradient'
+
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 16: Info 8 Screen')
 
 const height = Dimensions.get('window').height
 

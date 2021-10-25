@@ -6,6 +6,9 @@ import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import ConfettiCannon from 'react-native-confetti-cannon'
 
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 19: Congrats Screen')
+
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
