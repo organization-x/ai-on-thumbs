@@ -1,9 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, ScrollView } from 'react-native'
-
 import CourseCard from '../components/CourseCard'
 import CourseAd from '../components/CourseAd'
 import { LinearGradient } from 'expo-linear-gradient'
+
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Courses Screen')
 
 export default function CoursesScreen ({ navigation }) {
   return (

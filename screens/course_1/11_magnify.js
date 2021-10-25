@@ -3,9 +3,11 @@
 import React from 'react'
 import { Text, View, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-
 import MagnifyGlass from '../../components/MagnifyGlass'
 import LessonButton from '../../components/LessonButton'
+
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 11: Magnify Screen')
 
 export default function Course1Magnify ({ navigation }) {
   const smallScreen = Dimensions.get('window').height < 700

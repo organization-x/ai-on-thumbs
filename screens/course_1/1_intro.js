@@ -2,8 +2,10 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, ImageBackground } from 'react-native'
-
 import LessonButton from '../../components/LessonButton'
+
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 1: Intro Screen')
 
 export default function Course1Intro ({ navigation }) {
   return (

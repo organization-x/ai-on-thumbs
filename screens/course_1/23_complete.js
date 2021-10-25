@@ -4,6 +4,9 @@ import { StyleSheet, View, Image, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 23: Complete Screen')
+
 export default function Course1Complete ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
