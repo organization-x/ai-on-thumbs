@@ -123,7 +123,7 @@ const styles = {
     shadowOffset: {
       width: 0,
       height: 2
-    },
+    }
   },
   subText: {
     color: 'white',
