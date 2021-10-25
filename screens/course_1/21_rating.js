@@ -60,6 +60,7 @@ export default function Course1Rating ({ navigation }) {
         <TouchableOpacity style={styles.button} onPress={() => { onFeedbackPress().catch((err) => { Sentry.Native.captureException(err) }) }}>
           <Text>Send Feedback</Text>
         </TouchableOpacity>
+        <Text style={styles.subText}>We told you that if you have thumbs, you can learn AI</Text>
       </View>
       <Modal
         animationType='slide'
@@ -75,7 +76,6 @@ export default function Course1Rating ({ navigation }) {
           </View>
         </View>
       </Modal>
-      <Text style={styles.subText}>We told you that if you have thumbs, you can learn AI</Text>
       <View style={styles.footerButtons}>
         <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course1Review' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course1EmailPrompt' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
@@ -102,7 +102,7 @@ const styles = {
     marginVertical: '50%'
   },
   starView: {
-    marginTop: height / 20,
+    marginVertical: height / 30,
     flex: 1
   },
   centeredView: {
@@ -127,7 +127,7 @@ const styles = {
     fontStyle: 'italic',
     fontSize: height / 35,
     textAlign: 'center',
-    marginTop: height / 40
+    marginTop: height / 30
   },
   button: {
     alignItems: 'center',

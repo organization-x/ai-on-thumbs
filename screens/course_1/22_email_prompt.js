@@ -15,8 +15,7 @@ export default function Course1EmailPrompt ({ navigation }) {
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
-        <Text style={styles.text}>Continue your journey by going to</Text>
-        <Text style={styles.hyperText} onPress={() => Linking.openURL('https://ai-camp.org')}>ai-camp.org</Text>
+        <Text style={styles.text} onPress={() => Linking.openURL('https://ai-camp.org')}>Continue your journey by going to ai-camp.org</Text>
       </View>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -54,16 +53,6 @@ const styles = StyleSheet.create({
     marginTop: height / 12
   },
   text: {
-    textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 5,
-    marginTop: height / 15,
-    textAlign: 'center',
-    color: 'white',
-    fontSize: height / 23,
-    fontWeight: 'bold'
-  },
-  hyperText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,

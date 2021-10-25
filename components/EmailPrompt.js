@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
   },
   submitButton: {
     alignSelf: 'flex-end',
-    height: 60,
+    height: height / 15,
     borderRadius: 10,
     overflow: 'hidden',
     marginRight: height / 75
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   textInput: {
     justifyContent: 'flex-start',
     backgroundColor: 'white',
-    height: 60,
+    height: height / 15,
     borderRadius: 10,
     marginLeft: height / 75
   },
