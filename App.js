@@ -111,6 +111,6 @@ export default function App () {
 
 const styles = StyleSheet.create({
   naviBackground: {
-    flex: 1,
+    flex: 1
   }
 })
