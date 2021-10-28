@@ -34,11 +34,11 @@ export default function EmailPrompt () {
 
     if (res === 'OK') {
       setModalVisible(true)
-      CloseModalAfterDelay()
+      closeModalAfterDelay()
     }
   }
 
-  function CloseModalAfterDelay () {
+  function closeModalAfterDelay () {
     setTimeout(function () {
       setModalVisible(false)
     }, 2000)
