@@ -5,6 +5,7 @@ import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollVi
 import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
 import { LinearGradient } from 'expo-linear-gradient'
+import { Shadow } from 'react-native-shadow-2'
 
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 1 Screen 22: Email Prompt Screen')
@@ -20,12 +21,15 @@ export default function Course1EmailPrompt ({ navigation }) {
       </View>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={height / 10}
       >
         <ScrollView
           showsVerticalScrollIndicator={false}
         >
-          <View>
-            <EmailPrompt />
+          <View style={styles.emailView}>
+            <Shadow distance={4} offset={[2, 2]}>
+              <EmailPrompt />
+            </Shadow>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -68,5 +72,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
+  },
+  emailView: {
+    borderRadius: 10,
+    overflow: 'hidden'
   }
 })

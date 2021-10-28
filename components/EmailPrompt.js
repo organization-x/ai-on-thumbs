@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { StyleSheet, Text, TextInput, TouchableOpacity, Modal, View, Dimensions } from 'react-native'
 
 import { LinearGradient } from 'expo-linear-gradient'
-import { Shadow } from 'react-native-shadow-2'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 
@@ -10,15 +9,13 @@ const height = Dimensions.get('window').height
 
 async function createUser (email) {
   const res = await fetch('https://app.ai-camp.org/sub', {
-
     method: 'POST',
+    headers: {
+      'Content-type': 'application/json'
+    },
     body: JSON.stringify(
       { email: email }
     ),
-    headers: {
-      'Content-type': 'application/json'
-    }
-
   })
 
   const resText = await res.text()
@@ -44,61 +41,59 @@ export default function EmailPrompt () {
     }, 2000)
   }
   return (
-    <Shadow distance={4} offset={[2, 2]}>
-      <LinearGradient colors={['#3421A6', '#6D298A']} style={styles.container}>
-        <Modal
-          animationType='slide'
-          transparent
-          visible={modalVisible}
-          onRequestClose={() => {
-            setModalVisible(!modalVisible)
-          }}
-        >
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <LottieView source={require('../assets/course_1/1818-success-animation.json')} autoPlay loop={false} />
-            </View>
-          </View>
-        </Modal>
-
-        <Text style={styles.text}>You can also enter your email to get notified of new lessons.</Text>
-        <View style={styles.flexRow}>
-          <View style={styles.flexBig}>
-            <TextInput
-              style={styles.textInput}
-              onChangeText={onChangeEmail}
-              value={email}
-              placeholder='Email'
-              textAlign='center'
-              returnKeyType='done'
-              autoCorrect={false}
-              keyboardType='email-address'
-              clearButtonMode='while-editing'
-              textContentType='emailAddress'
-              autoCompleteType='email'
-              autoCapitalize='none'
-              placeholderTextColor='grey'
-            />
-          </View>
-          <View style={styles.flexSmall}>
-            <TouchableOpacity
-              onPress={() => { onLoginPress().catch((err) => { Sentry.Native.captureException(err) }) }}
-              style={[styles.submitButton]}
-              underlayColor='#fff'
-            >
-              <LinearGradient
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 1 }}
-                colors={['#32B59D', '#3AC55B']}
-                style={styles.gradientContainer}
-              >
-                <Text style={styles.submitText}>Submit</Text>
-              </LinearGradient>
-            </TouchableOpacity>
+    <LinearGradient colors={['#3421A6', '#6D298A']} style={styles.container}>
+      <Modal
+        animationType='slide'
+        transparent
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible)
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <LottieView source={require('../assets/course_1/1818-success-animation.json')} autoPlay loop={false} />
           </View>
         </View>
-      </LinearGradient>
-    </Shadow>
+      </Modal>
+
+      <Text style={styles.text}>You can also enter your email to get notified of new lessons.</Text>
+      <View style={styles.flexRow}>
+        <View style={styles.flexBig}>
+          <TextInput
+            style={styles.textInput}
+            onChangeText={onChangeEmail}
+            value={email}
+            placeholder='Email'
+            textAlign='center'
+            returnKeyType='done'
+            autoCorrect={false}
+            keyboardType='email-address'
+            clearButtonMode='while-editing'
+            textContentType='emailAddress'
+            autoCompleteType='email'
+            autoCapitalize='none'
+            placeholderTextColor='grey'
+          />
+        </View>
+        <View style={styles.flexSmall}>
+          <TouchableOpacity
+            onPress={() => { onLoginPress().catch((err) => { Sentry.Native.captureException(err) }) }}
+            style={[styles.submitButton]}
+            underlayColor='#fff'
+          >
+            <LinearGradient
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              colors={['#32B59D', '#3AC55B']}
+              style={styles.gradientContainer}
+            >
+              <Text style={styles.submitText}>Submit</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </LinearGradient>
   )
 }
 
