@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '20%',
+    marginTop: '15%',
     marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
