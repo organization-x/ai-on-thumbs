@@ -17,7 +17,11 @@ export default function Welcome ({ navigation }) {
   function displayModal (show) {
     setModalVisible(show)
   }
-
+  /*
+    note: securestore values persist even when you delete the app on iOS
+    therefore the screen will ONLY show up once per device on iOS
+    in the future we can switch to asyncstorage or add a reset button on a settings page
+  */
   useEffect(() => {
     SecureStore.getItemAsync('hasSeenThumbs').then(value => {
       if (value !== 'true') {
@@ -44,18 +48,18 @@ export default function Welcome ({ navigation }) {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalBigText}> Lesson 1 Credits! </Text>
-            <Text style={styles.modalBoldText}> Axel Mora (19) </Text>
-            <Text style={styles.modalText}> Design Lead </Text>
-            <Text style={styles.modalBoldText}> Alexander Zhou (17) </Text>
-            <Text style={styles.modalText}> Engineer </Text>
-            <Text style={styles.modalBoldText}> Rohan Joshi (14) </Text>
+            <Text style={styles.modalBigText}>Lesson 1 Credits!</Text>
+            <Text style={styles.modalBoldText}>Axel Mora (19)</Text>
+            <Text style={styles.modalText}>Design Lead</Text>
+            <Text style={styles.modalBoldText}>Alexander Zhou (17)</Text>
+            <Text style={styles.modalText}>Engineer</Text>
+            <Text style={styles.modalBoldText}>Rohan Joshi (14)</Text>
             <Text style={styles.modalText}> Engineer </Text>
             <Text style={styles.modalBoldText}> Jackson Choyce (19)</Text>
-            <Text style={styles.modalText}> Engineering Manager </Text>
-            <Text style={styles.modalBoldText}> Mitch Cutts (23) </Text>
-            <Text style={styles.modalText}> Product Manager </Text>
-            <Text style={styles.closeText} onPress={() => { setModalVisible(!modalVisible) }}> Close </Text>
+            <Text style={styles.modalText}>Engineering Manager</Text>
+            <Text style={styles.modalBoldText}>Mitch Cutts (23)</Text>
+            <Text style={styles.modalText}>Product Manager</Text>
+            <Text style={styles.closeText} onPress={() => { setModalVisible(!modalVisible) }}>Close</Text>
           </View>
         </View>
       </Modal>
@@ -129,11 +133,12 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '5%',
+    marginTop: '10%',
     fontSize: height / 35,
     fontFamily: 'Avenir',
     color: 'black',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontWeight: 'bold'
   },
   buttonView: {
     marginTop: 150

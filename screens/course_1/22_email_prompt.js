@@ -20,11 +20,12 @@ export default function Course1EmailPrompt ({ navigation }) {
       </View>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={height / 10}
       >
         <ScrollView
           showsVerticalScrollIndicator={false}
         >
-          <View>
+          <View style={styles.emailView}>
             <EmailPrompt />
           </View>
         </ScrollView>
@@ -68,5 +69,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
+  },
+  emailView: {
+    overflow: 'hidden'
   }
 })

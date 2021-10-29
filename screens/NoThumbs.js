@@ -1,12 +1,14 @@
 // NoThumbs
 
 import React from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
+import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
 import LessonButton from '../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('NoThumbs Screen')
+
+const height = Dimensions.get('window').height
 
 export default function NoThumbs ({ navigation }) {
   return (
@@ -42,17 +44,17 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 30,
-    marginTop: '20%'
+    fontSize: height / 30,
+    marginTop: height / 10
   },
   biggestText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '20%',
+    marginTop: height / 15,
     textAlign: 'center',
     color: 'white',
-    fontSize: 35,
+    fontSize: height / 23,
     fontWeight: 'bold'
   },
   footerButtons: {
@@ -60,6 +62,6 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   image: {
-    marginTop: '30%'
+    marginTop: height / 12
   }
 })
