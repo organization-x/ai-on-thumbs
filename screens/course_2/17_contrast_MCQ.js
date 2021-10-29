@@ -85,9 +85,9 @@ const styles = StyleSheet.create({
     height: imageSide
   },
   MCQ: {
-    marginTop: 10,
-    paddingTop: 15,
-    paddingBottom: 15,
-    width: width / 1.4
+    marginTop: 25,
+    marginBottom: 15,
+    width: width / 1.4,
+    borderRadius: 10,
   }
 })
