@@ -8,7 +8,6 @@ import { LinearGradient } from "expo-linear-gradient"
 import LessonButton from "../../components/LessonButton"
 
 const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
 
 export default function Course2FilterFeatures5({ navigation }) {
   return (
