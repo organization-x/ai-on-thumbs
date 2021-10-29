@@ -50,9 +50,9 @@ const styles = StyleSheet.create({
     paddingVertical: 15
   },
   footerButtons: {
-    marginBottom: height / 110,
-    flexDirection: "row",
-    justifyContent: "space-between"
+    marginBottom: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   textSection: {
     flex: 1,
