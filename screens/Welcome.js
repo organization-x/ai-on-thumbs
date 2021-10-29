@@ -26,9 +26,9 @@ export default function Welcome ({ navigation }) {
     SecureStore.getItemAsync('hasSeenThumbs').then(value => {
       if (value !== 'true') {
         SecureStore.setItemAsync('hasSeenThumbs', 'true')
-        setNext('Thumbs')
-      } else {
         setNext('Courses')
+      } else {
+        setNext('Thumbs')
       }
     }).catch((err) => {
       Sentry.Native.captureException(err)
