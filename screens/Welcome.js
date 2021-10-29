@@ -17,7 +17,7 @@ export default function Welcome ({ navigation }) {
   function displayModal (show) {
     setModalVisible(show)
   }
-  /* 
+  /*
     note: securestore values persist even when you delete the app on iOS
     therefore the screen will ONLY show up once per device on iOS
     in the future we can switch to asyncstorage or add a reset button on a settings page

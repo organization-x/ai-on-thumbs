@@ -15,7 +15,7 @@ async function createUser (email) {
     },
     body: JSON.stringify(
       { email: email }
-    ),
+    )
   })
 
   const resText = await res.text()
