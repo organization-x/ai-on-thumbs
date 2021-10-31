@@ -6,18 +6,17 @@ import { LinearGradient } from 'expo-linear-gradient'
 import BottomLessonParagraph from '../../components/BottomLessonParagraph'
 
 export default function Course2DraggableExplanation ({ navigation }) {
-
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
-      <View style={{flex: 1}}>
-      <TopLessonParagraph>How does the computer use contrast to help?</TopLessonParagraph>
-      <View style={styles.image}>
-        <Image
-          style={{ width: 300, height: 300 }}
-          source={require('../../assets/markcuban_hybrid_with_filter.png')}
-        />
-      </View>
-      <BottomLessonParagraph> The computer adds the pixels under bright areas of the filter and subtracts the pixels under dark areas of the filter. High Contrast = Better Match</BottomLessonParagraph>
+      <View style={{ flex: 1 }}>
+        <TopLessonParagraph>How does the computer use contrast to help?</TopLessonParagraph>
+        <View style={styles.image}>
+          <Image
+            style={{ width: 300, height: 300 }}
+            source={require('../../assets/markcuban_hybrid_with_filter.png')}
+          />
+        </View>
+        <BottomLessonParagraph> The computer adds the pixels under bright areas of the filter and subtracts the pixels under dark areas of the filter. High Contrast = Better Match</BottomLessonParagraph>
       </View>
 
       <View style={styles.footerButtons}>
@@ -26,7 +25,7 @@ export default function Course2DraggableExplanation ({ navigation }) {
           navigation={navigation}
           nextScreen='Course2ScanAll1'
           buttonColor={['#32B59D', '#3AC55B']}
-          buttonText={'Continue'}
+          buttonText='Continue'
           actOpacity={1}
         />
       </View>
@@ -46,6 +45,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   image: {
-      margin: 30,
+    margin: 30
   }
 })
