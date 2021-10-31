@@ -3,9 +3,11 @@
 // The computer is going to perform calculations on the pixels in the photo to understand the patterns in the photo. Let's find out how!
 
 import React from "react"
-import { View, Text, Image , StyleSheet, Button } from "react-native"
+import { View, Text, Image , StyleSheet, Dimensions } from "react-native"
 import { LinearGradient } from "expo-linear-gradient"
 import LessonButton from "../../components/LessonButton"
+
+const height = Dimensions.get('window').height
 
 export default function Course2FilterFeatures5({ navigation }) {
   return (
@@ -40,7 +42,7 @@ export default function Course2FilterFeatures5({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
     paddingVertical: 15
   },
   footerButtons: {
@@ -59,34 +61,31 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   mainText: {
-    marginVertical: 5,
-    padding: 15,
-    marginHorizontal : 0,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 33,
-    fontWeight: "bold"
+    fontSize: height / 25,
+    fontWeight: "bold",
+    marginTop : height / 30,
+    marginBottom : height / 30
   },
   secondaryText: {
-    marginVertical: 5,
-    padding: 0,
-    marginHorizontal : 5,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 25,
+    fontSize: height / 35,
+    marginTop : height / 40,
+    marginBottom : height / 30
   }, 
   image: {
     resizeMode: 'contain',
-    width: '80%',
-    height : '25%',
-    paddingHorizontal : 0, 
-    paddingVertical : 0
+    width : '95%',
+    marginVertical : '-15%',
+    height : height / 3
   }
 })
 

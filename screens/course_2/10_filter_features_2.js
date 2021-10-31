@@ -1,9 +1,11 @@
 // But how exactly does a computer use these filters to find facial features?
 
 import React from "react"
-import { View, Text, StyleSheet, Button } from "react-native"
+import { View, Text, StyleSheet, Dimensions } from "react-native"
 import { LinearGradient } from "expo-linear-gradient"
 import LessonButton from "../../components/LessonButton"
+
+const height = Dimensions.get('window').height
 
 export default function Course2FilterFeatures2({ navigation }) {
   return (
@@ -40,13 +42,13 @@ export default function Course2FilterFeatures2({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
     paddingVertical: 15
   },
   footerButtons: {
     marginBottom: 10,
-    flexDirection: "row",
-    justifyContent: "space-between"
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   textSection: {
     flex: 1,
@@ -54,15 +56,12 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   mainText: {
-    marginVertical: 5,
-    padding: 10,
-    marginHorizontal : 0,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 40,
+    fontSize: height / 22,
     fontWeight: "bold"
   }
 })

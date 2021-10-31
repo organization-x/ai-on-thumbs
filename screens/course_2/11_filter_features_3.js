@@ -1,9 +1,11 @@
 // The computer scans for pixel patterns in the photo
 
 import React from "react"
-import { View, Text, Image , StyleSheet, Button } from "react-native"
+import { View, Text, Image , StyleSheet, Dimensions } from "react-native"
 import { LinearGradient } from "expo-linear-gradient"
 import LessonButton from "../../components/LessonButton"
+
+const height = Dimensions.get('window').height
 
 export default function Course2FilterFeatures3({ navigation }) {
   return (
@@ -37,7 +39,7 @@ export default function Course2FilterFeatures3({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
     paddingVertical: 15
   },
   footerButtons: {
@@ -56,34 +58,26 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   mainText: {
-    marginVertical: 5,
-    padding: 15,
-    marginHorizontal : 0,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 30,
+    fontSize: height / 25,
     fontWeight: "bold"
   },
   secondaryText: {
-    marginVertical: 5,
-    padding: 0,
-    marginHorizontal : 0,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 28,
+    fontSize: height / 30,
     fontWeight: "bold"
   }, 
   image: {
     resizeMode: 'contain',
-    width: '100%',
-    height : '45%',
-    paddingHorizontal : 0, 
-    paddingVertical : 0
+    marginVertical : '10%',
+    height : height / 3
   }
 })

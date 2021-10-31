@@ -6,7 +6,6 @@ import { LinearGradient } from "expo-linear-gradient"
 import LessonButton from "../../components/LessonButton"
 
 const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
 
 export default function Course2FilterFeatures4({ navigation }) {
   return (
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15
   },
   footerButtons: {
-    marginBottom: height / 110,
+    marginBottom: 10,
     flexDirection: "row",
     justifyContent: "space-between"
   },
