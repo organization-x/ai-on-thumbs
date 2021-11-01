@@ -50,6 +50,7 @@ import Course2Contrast2 from './screens/course_2/15_contrast_2'
 import Course2Contrast3 from './screens/course_2/16_contrast_3'
 import Course2ContrastMCQ from './screens/course_2/17_contrast_MCQ'
 import Course2DraggableFilter from './screens/course_2/18_draggable_filter'
+import Course2DraggableCompleted from './screens/course_2/18_completed'
 import Course2ScanAll1 from './screens/course_2/19_scan_all_1'
 import Course2ScanAll2Wrong from './screens/course_2/20_scan_all_2_wrong'
 import Course2ScanAll2Correct from './screens/course_2/21_scan_all_2_correct'
@@ -67,6 +68,7 @@ import Course2AppStoreReview from './screens/course_2/32_app_store_review'
 import Course2Email from './screens/course_2/33_email'
 import Course2Selfie from './screens/course_2/34_selfie'
 import Course2FaceDetection from './screens/course_2/35_face_detection'
+import Course2DraggableExplanation from './screens/course_2/18_explanation'
 
 const Stack = createStackNavigator()
 
@@ -125,6 +127,8 @@ export default function App () {
         <Stack.Screen name='Course2Contrast3' component={Course2Contrast3} />
         <Stack.Screen name='Course2ContrastMCQ' component={Course2ContrastMCQ} />
         <Stack.Screen name='Course2DraggableFilter' component={Course2DraggableFilter} />
+        <Stack.Screen name='Course2DraggableCompleted' component={Course2DraggableCompleted} />
+        <Stack.Screen name='Course2DraggableExplanation' component={Course2DraggableExplanation} />
         <Stack.Screen name='Course2ScanAll1' component={Course2ScanAll1} />
         <Stack.Screen name='Course2ScanAll2Wrong' component={Course2ScanAll2Wrong} />
         <Stack.Screen name='Course2ScanAll2Correct' component={Course2ScanAll2Correct} />
