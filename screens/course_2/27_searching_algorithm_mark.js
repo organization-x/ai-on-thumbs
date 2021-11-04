@@ -9,12 +9,6 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course2SearchingAlgorithmMark ({ navigation }) {
-  const [partsLeft, setPartsLeft] = React.useState(4)
-  const [currentSquare, setCurrentSquare] = React.useState(6)
-  const [isVisible1, setIsVisible1] = React.useState(false)
-  const [isVisible3, setIsVisible3] = React.useState(false)
-  const [isVisible6, setIsVisible6] = React.useState(false)
-  const [isVisible10, setIsVisible10] = React.useState(false)
   const [upperScreenText, setUpperScreenText] = React.useState("Let’s say we find what we think are some noses in a photo.")
   const [lowerScreenText, setLowerScreenText] = React.useState(' Tap the squares where the computer should look for ears, eyes and mouths!')
 
@@ -27,41 +21,11 @@ export default function Course2SearchingAlgorithmMark ({ navigation }) {
   const greenSquares = [5,6,7,8,9,10,13]
   const redSquares = [0,1,2,3,4,11,12,14,15]
 
-  console.log("sliver of pope")
+  // console.log("test")
 
   const handlePress = (square) => {
     console.log("index",square)
     setIsVisibleArray(isVisibleArray.map((_,i)=>i===square))
-    if (greenSquares.includes(square)){
-
-
-    }
-  }
-
-  const setText = () => {
-    if (partsLeft === 4) {
-      setIsVisible6(true)
-      setUpperScreenText("That's right, we would look below the eyes! Now, where would you search for the left ear?")
-      setLowerScreenText('Tap where you think you may find the left ear on the grid until it pops up!')
-      setCurrentSquare(1)
-      setPartsLeft(3)
-    } else if (partsLeft === 3) {
-      setIsVisible1(true)
-      setLowerScreenText('Great job! Now, find the other ear!')
-      setCurrentSquare(3)
-      setPartsLeft(2)
-    } else if (partsLeft === 2) {
-      setIsVisible3(true)
-      setUpperScreenText("Now, we're just missing the mouth. Our face is coming together!")
-      setLowerScreenText('Tap where you think you may find the mouth on the grid until it pops up!')
-      setCurrentSquare(10)
-      setPartsLeft(1)
-    } else if (partsLeft === 1) {
-      setIsVisible10(true)
-      setUpperScreenText('Awesome job!!!')
-      setLowerScreenText("Great find! That's a lot easier than searching every single square with every single filter, isn't it?")
-      setPartsLeft(0)
-    }
   }
 
   return (

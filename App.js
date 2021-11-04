@@ -74,9 +74,10 @@ export default function App () {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName='Welcome'
+        //initialRouteName='Welcome'
         screenOptions={{ headerShown: false }}
       >
+        <Stack.Screen name='Course2SearchingAlgorithmMark' component={Course2SearchingAlgorithmMark} />
         <Stack.Screen name='Welcome' component={Welcome} />
         <Stack.Screen name='Courses' component={Courses} />
 
@@ -133,7 +134,7 @@ export default function App () {
         <Stack.Screen name='Course2ScanAll5' component={Course2ScanAll5} />
         <Stack.Screen name='Course2SearchingAlgorithmFeatures' component={Course2SearchingAlgorithmFeatures} />
         <Stack.Screen name='Course2GettingHangAlgorithms' component={Course2GettingHangAlgorithms} />
-        <Stack.Screen name='Course2SearchingAlgorithmMark' component={Course2SearchingAlgorithmMark} />
+        {/* <Stack.Screen name='Course2SearchingAlgorithmMark' component={Course2SearchingAlgorithmMark} /> */}
         <Stack.Screen name='Course2Congrats' component={Course2Congrats} />
         <Stack.Screen name='Course2AlgorithmReview1' component={Course2AlgorithmReview1} />
         <Stack.Screen name='Course2AlgorithmReview2' component={Course2AlgorithmReview2} />
