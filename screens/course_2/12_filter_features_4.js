@@ -10,7 +10,6 @@ const height = Dimensions.get('window').height
 export default function Course2FilterFeatures4({ navigation }) {
   return (
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
-    <View style = {styles.container}> 
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           Ok, how about the long answer?
@@ -34,7 +33,6 @@ export default function Course2FilterFeatures4({ navigation }) {
           buttonText = "Let's find out!"
         />
       </View>
-    </View> 
     </LinearGradient>
   )
 }
