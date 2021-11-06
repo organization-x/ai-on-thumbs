@@ -10,7 +10,6 @@ const height = Dimensions.get('window').height
 export default function Course2FilterFeatures3({ navigation }) {
   return (
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
-    <View style = {styles.lessonContent}> 
       <View style={styles.textSection}>
         <Text style={styles.mainText}>The short answer:</Text>
         <Image style={styles.image} source={require('../../assets/pixelpatterns.png')}/>
@@ -31,7 +30,6 @@ export default function Course2FilterFeatures3({ navigation }) {
           buttonText = "Continue"
         />
       </View>
-    </View> 
     </LinearGradient>
   )
 }
@@ -46,11 +44,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: "row",
     justifyContent: "space-between"
-  },
-  lessonContent: {
-    flex : 1, 
-    paddingHorizontal : 10 , 
-    paddingVertical : 15
   },
   textSection: {
     flex: 1,
