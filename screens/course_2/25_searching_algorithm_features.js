@@ -90,8 +90,7 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
 
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.container}>
-
+      <View style={styles.lessonContent} >
         <View style={styles.information}>
           <Text style={styles.textFont}>{upperScreenText}</Text>
         </View>
@@ -137,14 +136,14 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
             ) : <Image style={styles.nose2} source={require('../../assets/Nose.png')} />}
           </TouchableOpacity>
         </View>
+      </View>
 
-        <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course2ScanAll5' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course2GettingHangAlgorithms' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>
+      <View style={styles.footerButtons}>
+        <LessonButton navigation={navigation} nextScreen='Course2ScanAll5' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course2GettingHangAlgorithms' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+      </View>
 
         <StatusBar style='auto' />
-      </View>
     </LinearGradient>
   )
 }
@@ -155,6 +154,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15,
     zIndex: 1
+  },
+
+  lessonContent: {
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
   },
 
   information: {
@@ -295,8 +300,7 @@ const styles = StyleSheet.create({
   },
 
   footerButtons: {
-    marginTop: height / 2,
-    marginBottom: height / 20,
+    marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
   }
