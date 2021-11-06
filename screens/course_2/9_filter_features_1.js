@@ -7,10 +7,9 @@ import LessonButton from "../../components/LessonButton"
 
 const height = Dimensions.get('window').height
 
-export default function Filter_features({ navigation }) {
+export default function Course2FilterFeatures1({ navigation }) {
   return (
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
-    <View style = {styles.container}> 
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           Turns out the patterns in our facial features are distinctive, even in the pixel world!
@@ -21,8 +20,6 @@ export default function Filter_features({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        
-
         <LessonButton
           navigation = {navigation}
           nextScreen = "Course2PixelPatternsInteractive"
@@ -37,7 +34,6 @@ export default function Filter_features({ navigation }) {
           buttonText = "Continue"
         />
       </View>
-    </View> 
     </LinearGradient>
   )
 }
