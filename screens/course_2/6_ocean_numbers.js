@@ -21,7 +21,7 @@ export default function Course2OceanNumbers ({ navigation }) {
     <View style = {styles.lessonContent}> 
       <View style={styles.textSection}>
         <Text style={styles.mainText}>SO</Text>
-        <Text style={styles.secondaryText}>If a photo is an ocean on numbers, how does a computer tell eyes from noses?</Text>
+        <Text style={styles.secondaryText}>If a photo is an ocean of numbers, how does a computer tell eyes from noses?</Text>
       </View>
 
       <View style={styles.footerButtons}> 
