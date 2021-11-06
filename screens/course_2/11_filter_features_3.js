@@ -13,7 +13,7 @@ export default function Course2FilterFeatures3({ navigation }) {
       <View style={styles.textSection}>
         <Text style={styles.mainText}>The short answer:</Text>
         <Image style={styles.image} source={require('../../assets/pixelpatterns.png')}/>
-        <Text style={styles.secondaryText}>The computer scans for pixel patterns in the photo that best matches the structure of the filter.</Text>
+        <Text style={styles.secondaryText}>The computer scans for pixel patterns in the photo that best match the structure of the filter.</Text>
       </View>
 
       <View style={styles.footerButtons}> 
