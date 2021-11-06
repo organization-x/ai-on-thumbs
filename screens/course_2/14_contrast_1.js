@@ -12,7 +12,6 @@ const width = Dimensions.get('window').width
 export default function Course2Contrast1({ navigation }) {
   return (
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
-    <View style = {styles.lessonContent}> 
       <View style={styles.textSection}>
         <Text style={styles.mainText}>The secret ingredient is called contrast.</Text>
         <Image style={styles.image} source={require('../../assets/contrastdemo.png')}/>
@@ -33,7 +32,6 @@ export default function Course2Contrast1({ navigation }) {
           buttonText = "Continue"
         />
       </View>
-    </View> 
     </LinearGradient>
   )
 }
@@ -48,11 +46,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: "row",
     justifyContent: "space-between"
-  },
-  lessonContent: {
-    flex : 1, 
-    paddingHorizontal : 10 , 
-    paddingVertical : 15
   },
   textSection: {
     flex: 1,
