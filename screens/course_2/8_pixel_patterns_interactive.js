@@ -142,7 +142,7 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
 
           <View style={styles.footerButtons}>
             <LessonButton navigation={navigation} nextScreen='Course2PixelPatternsText' buttonColor='#8976C2' buttonText='Back' />
-            <LessonButton navigation={navigation} nextScreen='Filter_features' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+            <LessonButton navigation={navigation} nextScreen='Course2FilterFeatures1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
           </View>
         </LinearGradient>
   )

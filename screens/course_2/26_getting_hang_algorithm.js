@@ -11,7 +11,6 @@ const width = Dimensions.get('window').width
 export default function Course2GettingHangAlgorithms({ navigation }) {
   return (
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
-    <View style = {styles.container}> 
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           Getting the hang of the algorithm?
@@ -38,7 +37,6 @@ export default function Course2GettingHangAlgorithms({ navigation }) {
           buttonText = "Continue"
         />
       </View>
-    </View> 
     </LinearGradient>
   )
 }

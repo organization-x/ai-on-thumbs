@@ -133,7 +133,19 @@ const styles = StyleSheet.create({
   lessonContent: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15
+  },
+
+  information: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginBottom: 30
+  },
+
+  information2: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center'
   },
 
   textFont: {

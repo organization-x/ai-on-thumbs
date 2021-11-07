@@ -1,36 +1,34 @@
 import React from "react"
-import { StyleSheet, Text, SafeAreaView} from 'react-native'
+import { StyleSheet, Text, View} from 'react-native'
 import { LinearGradient } from "expo-linear-gradient"
 import LessonButton from "../../components/LessonButton"
 
 export default function Course2PixelPatternsText ({ navigation }) {
   return (
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
-    <SafeAreaView style = {styles.container}> 
-      <SafeAreaView style={styles.textSection}>
+      <View style={styles.textSection}>
         <Text style={styles.mainText}>
           The pixel patterns for our eyes are different than the pixel patterns for our nose.
         </Text>
         <Text style={styles.main2Text}>
           But what distinctive patterns do our eyes have?
         </Text>
-      </SafeAreaView>
+      </View>
 
-      <SafeAreaView style={styles.footerButtons}>
-      <LessonButton
-          navigation = {navigation}
-          nextScreen = "8_pixel_patterns_interactive.js"
-          buttonColor = "#8976C2"
-          buttonText = "Back"
-        />
+      <View style={styles.footerButtons}>
         <LessonButton
-          navigation={navigation}
-          nextScreen = "10_filter_features_2.js"
-          buttonColor = {["#32B59D", "#3AC55B"]}
-          buttonText = "Continue"
-        />
-      </SafeAreaView>
-    </SafeAreaView> 
+            navigation = {navigation}
+            nextScreen = "Course2OceanNumbers"
+            buttonColor = "#8976C2"
+            buttonText = "Back"
+          />
+          <LessonButton
+            navigation={navigation}
+            nextScreen = "Course2PixelPatternsInteractive"
+            buttonColor = {["#32B59D", "#3AC55B"]}
+            buttonText = "Continue"
+          />
+        </View>
     </LinearGradient>
   )
 }
@@ -38,7 +36,7 @@ export default function Course2PixelPatternsText ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
     paddingVertical: 15
   },
   footerButtons: {

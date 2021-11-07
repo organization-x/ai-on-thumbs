@@ -10,7 +10,6 @@ const height = Dimensions.get('window').height
 export default function Course2FilterFeatures2({ navigation }) {
   return (
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
-    <View style = {styles.container}> 
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           But how exactly does a computer use these filters to find facial features?
@@ -18,8 +17,6 @@ export default function Course2FilterFeatures2({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        
-
         <LessonButton
           navigation = {navigation}
           nextScreen = "Course2FilterFeatures1"
@@ -34,7 +31,6 @@ export default function Course2FilterFeatures2({ navigation }) {
           buttonText = "Let's find out!"
         />
       </View>
-    </View> 
     </LinearGradient>
   )
 }

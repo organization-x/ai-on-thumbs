@@ -33,7 +33,7 @@ export default function Course2DraggableFilter ({ navigation }) {
       <ParagraphBox text={`${filterText}`} />
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course2RatingContrast' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course2ContrastMCQ' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton
           navigation={navigation}
           nextScreen='Course2DraggableCompleted'
