@@ -1,12 +1,11 @@
 // Let’s say you find something that looks like a pair of eyes on an image, where would you search for a nose?
 
 import React from 'react'
-import { StyleSheet, Text, View, Image, Dimensions, TouchableOpacity, StatusBar } from 'react-native'
+import { StyleSheet, Text, View, Image, Dimensions, TouchableOpacity, ImageBackground, StatusBar } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 
 const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
 
 export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
   const [partsLeft, setPartsLeft] = React.useState(4)
@@ -56,7 +55,7 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
         setUpperScreenText('Not quite! Try another square!')
         break
 
-      case 0:
+      default:
         setUpperScreenText('Not quite! Try another square!')
         break
     }
@@ -90,52 +89,29 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
 
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.lessonContent} >
-        <View style={styles.information}>
-          <Text style={styles.textFont}>{upperScreenText}</Text>
-        </View>
+      <View styles={styles.lessonContent}>
+        <Text style={styles.textFont}>{upperScreenText}</Text>
 
-        <View style={styles.information2}>
-          <Text style={styles.textFont2}>{lowerScreenText}</Text>
-        </View>
+        <Text style={styles.textFont2}>{lowerScreenText}</Text>
 
-        <View>
-          <TouchableOpacity onPress={() => handlePress(0)}>
-            <Image style={styles.grid} source={require('../../assets/Grid.png')} />
-          </TouchableOpacity>
-        </View>
-
-        <View>
-          <TouchableOpacity onPress={() => handlePress(10)} disabled={isVisible10}>
-            {isVisible10 ? (
-              <Image style={styles.mouth} source={require('../../assets/Mouth.png')} />
-            ) : <Image style={styles.mouth2} source={require('../../assets/Mouth.png')} />}
-          </TouchableOpacity>
-        </View>
-
-        <View>
-          <TouchableOpacity onPress={() => handlePress(3)} disabled={isVisible3}>
-            {isVisible3 ? (
-              <Image style={styles.rightEar} source={require('../../assets/rightEar.png')} />
-            ) : <Image style={styles.rightEar2} source={require('../../assets/rightEar.png')} />}
-          </TouchableOpacity>
-        </View>
-
-        <View>
-          <TouchableOpacity onPress={() => handlePress(1)} disabled={isVisible1}>
-            {isVisible1 ? (
-              <Image style={styles.leftEar} source={require('../../assets/leftEar.png')} />
-            ) : <Image style={styles.leftEar2} source={require('../../assets/leftEar.png')} />}
-          </TouchableOpacity>
-        </View>
-
-        <View>
-          <TouchableOpacity onPress={() => handlePress(6)} disabled={isVisible6}>
-            {isVisible6 ? (
-              <Image style={styles.nose} source={require('../../assets/Nose.png')} />
-            ) : <Image style={styles.nose2} source={require('../../assets/Nose.png')} />}
-          </TouchableOpacity>
-        </View>
+        <ImageBackground source={require('../../assets/Grid.png')} resizeMode='cover' style={styles.grid}>
+          <TouchableOpacity onPress={() => handlePress(1)} disabled={isVisible1} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(2)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(3)} disabled={isVisible3} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(4)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(5)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(6)} disabled={isVisible6} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(7)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(8)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(9)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(10)} disabled={isVisible10} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(11)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(12)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(13)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(14)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(15)} style={styles.box} />
+          <TouchableOpacity onPress={() => handlePress(16)} style={styles.box} />
+        </ImageBackground>
       </View>
 
       <View style={styles.footerButtons}>
@@ -143,23 +119,20 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
         <LessonButton navigation={navigation} nextScreen='Course2GettingHangAlgorithms' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
 
-        <StatusBar style='auto' />
+      <StatusBar style='auto' />
     </LinearGradient>
   )
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15,
-    zIndex: 1
+    paddingVertical: 15
   },
 
   lessonContent: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15,
   },
 
   information: {
@@ -176,127 +149,46 @@ const styles = StyleSheet.create({
   },
 
   textFont: {
+    marginTop: height / 20,
     color: 'white',
     textAlign: 'center',
-    fontSize: 25,
-    fontWeight: 'bold'
+    fontSize: height / 30,
+    fontWeight: 'bold',
+    height: '25%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center'
   },
 
   textFont2: {
+    height: '20%',
     color: 'black',
     textAlign: 'center',
-    fontSize: 16,
-    marginBottom: 30
+    fontSize: height / 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginBottom: height / -15
   },
 
   grid: {
-    resizeMode: 'contain',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    backgroundColor: '#DECFBE',
+    alignContent: 'center',
     justifyContent: 'center',
-    alignItems: 'center',
-    width: width / 1.2,
-    height: width / 1.2,
-    position: 'absolute',
-    zIndex: 2
+    aspectRatio: 1,
+    borderColor: 'black',
+    borderWidth: 5,
+    alignItems: 'center'
   },
 
-  nose: {
-    resizeMode: 'contain',
+  box: {
+    margin: 1,
+    width: '24.3%',
+    height: '24%',
     justifyContent: 'center',
-    alignItems: 'center',
-    width: width / 8,
-    height: width / 8,
-    position: 'absolute',
-    marginLeft: 90,
-    marginTop: 95,
-    zIndex: 3
-  },
-
-  nose2: {
-    resizeMode: 'contain',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: width / 8,
-    height: width / 8,
-    position: 'absolute',
-    marginLeft: 90,
-    marginTop: 95,
-    opacity: 0,
-    zIndex: 3
-  },
-
-  leftEar: {
-    resizeMode: 'contain',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: width / 8,
-    height: width / 8,
-    position: 'absolute',
-    marginLeft: 10,
-    marginTop: 10,
-    zIndex: 4
-  },
-
-  leftEar2: {
-    resizeMode: 'contain',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: width / 8,
-    height: width / 8,
-    position: 'absolute',
-    marginLeft: 10,
-    marginTop: 10,
-    opacity: 0,
-    zIndex: 4
-  },
-
-  rightEar: {
-    resizeMode: 'contain',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: width / 8,
-    height: width / 8,
-    marginLeft: 175,
-    marginTop: 10,
-    position: 'absolute',
-    zIndex: 5
-  },
-
-  rightEar2: {
-    resizeMode: 'contain',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: width / 8,
-    height: width / 8,
-    marginLeft: 175,
-    marginTop: 10,
-    position: 'absolute',
-    opacity: 0,
-    zIndex: 5
-  },
-
-  mouth: {
-    resizeMode: 'contain',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: width / 8,
-    height: width / 8,
-    marginLeft: 92,
-    marginTop: 175,
-    position: 'absolute',
-    zIndex: 6
-  },
-
-  mouth2: {
-    resizeMode: 'contain',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: width / 8,
-    height: width / 8,
-    marginLeft: 92,
-    marginTop: 175,
-    position: 'absolute',
-    opacity: 0,
-    zIndex: 6
+    alignItems: 'center'
   },
 
   footerButtons: {
@@ -304,5 +196,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   }
-
 })
