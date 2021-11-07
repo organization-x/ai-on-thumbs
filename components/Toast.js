@@ -5,6 +5,8 @@ import { StyleSheet, View, Text } from 'react-native'
 // a special kind of notification that appears at the top of the screen
 
 export default function Toast ({ type = 'error', message, onDismiss }) {
+  console.log(message)
+  console.log(type)
 
   return (
     <View style={styles.container}>
