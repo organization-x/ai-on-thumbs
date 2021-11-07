@@ -35,6 +35,9 @@ export default function Course2FaceDetection ( { route, navigation } ) {
   }
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+      <View style={{ alignItems: 'center'}}>
+        <Image style={styles.logo} source={require('../../assets/ai-on-thumbs-logo.png')} />
+      </View>
       <Text style={styles.mainText}> Click your photo to share your results and show others that you know how AI works!</Text>
 
       <Modal
@@ -54,14 +57,23 @@ export default function Course2FaceDetection ( { route, navigation } ) {
           </View>
         </View>
       </Modal>
+      
+      {context !== null ?
+        <TouchableOpacity style={styles.imageContainer} onPress={() => shareData(context)}>
+          <Image style={styles.image} source={{ uri: `data:image/png;base64,${context}` }} />
+        </TouchableOpacity>
+      : <View style={styles.imageContainer}>
+        <Image style={styles.noPhotoImage} source={require('../../assets/scan.png')}/>
+        <Text style={styles.noPhotoText}> (No photo taken)</Text>
+        </View>
+      }        
 
-      <TouchableOpacity style={styles.imageContainer} onPress={() => shareData(context)}>
-        <Image style={styles.image} source={{ uri: `data:image/png;base64,${context}` }} />
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => { displayModal(true)}}>
-        <Text style={styles.secondText}> Face not detected? Tap here for help.</Text>
-      </TouchableOpacity>
+      {context !== null ?
+        <TouchableOpacity onPress={() => { displayModal(true)}}>
+          <Text style={styles.secondText}> Face not detected? Tap here for help.</Text>
+        </TouchableOpacity>
+      :
+      null}
 
       <View style={styles.footerButtons}>
         <LessonButton
@@ -83,6 +95,13 @@ export default function Course2FaceDetection ( { route, navigation } ) {
 }
 
 const styles = StyleSheet.create({
+  logo: {
+    width: 325,
+    height: 128,
+    marginTop: 40,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   container: {
     flex: 1,
     paddingHorizontal: 27,
@@ -90,12 +109,22 @@ const styles = StyleSheet.create({
   },
   mainText: {
     padding: 10,
-    marginTop: '15%',
     textShadowColor: "rgba(0, 0, 0, 0.1)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
+    fontSize: windowHeight/30,
+    fontWeight: "bold"
+  },
+  noPhotoText: {
+    padding: 10,
+    marginTop: '5%',
+    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+    textAlign: "center",
+    color: "black",
     fontSize: windowHeight/25,
     fontWeight: "bold"
   },
@@ -124,6 +153,16 @@ const styles = StyleSheet.create({
     width: '95%',
     height: '95%',
     resizeMode: 'cover',
+    marginTop: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 10,
+    borderWidth: 3,
+    borderColor: 'black'
+  },
+  noPhotoImage: {
+    height: windowHeight/3,
+    width:  windowHeight/3,
     marginTop: 10,
     alignItems: 'center',
     justifyContent: 'center',

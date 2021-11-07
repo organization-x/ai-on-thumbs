@@ -120,7 +120,7 @@ export default function Course2Selfie ({ navigation }) {
 
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
-      
+
       <View style={{ alignItems: 'center'}}>
         <Image style={styles.logo} source={require('../../assets/ai-on-thumbs-logo.png')} />
       </View>
@@ -152,7 +152,7 @@ export default function Course2Selfie ({ navigation }) {
       <View style={styles.footerButtons}>        
         <LessonButton
           navigation = {navigation}
-          nextScreen = "Course2PixelPatternsInteractive"
+          nextScreen = "Course2Email"
           buttonColor = "#8976C2"
           buttonText = "Back"
         />
