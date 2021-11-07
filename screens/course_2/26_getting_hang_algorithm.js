@@ -32,7 +32,7 @@ export default function Course2GettingHangAlgorithms({ navigation }) {
 
         <LessonButton
           navigation={navigation}
-          nextScreen = "Course2Congrats"
+          nextScreen = "Course2SearchingAlgorithmMark"
           buttonColor = {["#32B59D", "#3AC55B"]}
           buttonText = "Continue"
         />
