@@ -1,13 +1,14 @@
 // Let’s say you find something that looks like a pair of eyes on an image, where would you search for a nose?
 
 import React from 'react'
-import { StyleSheet, Text, View, Image, Dimensions, TouchableOpacity, ImageBackground, StatusBar } from 'react-native'
+import { StyleSheet, Text, View, Dimensions, TouchableOpacity, ImageBackground, StatusBar } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 
 const height = Dimensions.get('window').height
 
 export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
+  var updateOpacities = []
   const [partsLeft, setPartsLeft] = React.useState(4)
   const [currentSquare, setCurrentSquare] = React.useState(6)
   const [isVisible1, setIsVisible1] = React.useState(false)
@@ -16,7 +17,14 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
   const [isVisible10, setIsVisible10] = React.useState(false)
   const [upperScreenText, setUpperScreenText] = React.useState("Let's say you find something that looks like a pair of eyes on an image, where would you search for a nose?")
   const [lowerScreenText, setLowerScreenText] = React.useState('Tap where you think you might find the nose on the grid until it pops up!')
-
+  const backgroundColors = ['#DECFBE','#DECFBE','#DECFBE','#DECFBE',
+                                                          '#DECFBE','#DECFBE','#DECFBE','#DECFBE',
+                                                          '#DECFBE','#DECFBE','#DECFBE','#DECFBE',
+                                                          '#DECFBE','#DECFBE','#DECFBE','#DECFBE']
+  const[opacities, setOpacities] = React.useState([1,0,1,1,
+                                            1,1,1,1,
+                                            1,1,1,1,
+                                            1,1,1,1])
   const handlePress = (square) => {
     switch (square) {
       case 1:
@@ -64,23 +72,35 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
   const setText = () => {
     if (partsLeft === 4) {
       setIsVisible6(true)
+      updateOpacities = opacities
+      updateOpacities[5] = 0
+      setOpacities(updateOpacities)
       setUpperScreenText("That's right, we would look below the eyes! Now, where would you search for the left ear?")
       setLowerScreenText('Tap where you think you may find the left ear on the grid until it pops up!')
       setCurrentSquare(1)
       setPartsLeft(3)
     } else if (partsLeft === 3) {
       setIsVisible1(true)
+      updateOpacities = opacities
+      updateOpacities[0] = 0
+      setOpacities(updateOpacities)
       setLowerScreenText('Great job! Now, find the other ear!')
       setCurrentSquare(3)
       setPartsLeft(2)
     } else if (partsLeft === 2) {
       setIsVisible3(true)
+      updateOpacities = opacities
+      updateOpacities[2] = 0
+      setOpacities(updateOpacities)
       setUpperScreenText("Now, we're just missing the mouth. Our face is coming together!")
       setLowerScreenText('Tap where you think you may find the mouth on the grid until it pops up!')
       setCurrentSquare(10)
       setPartsLeft(1)
     } else if (partsLeft === 1) {
       setIsVisible10(true)
+      updateOpacities = opacities
+      updateOpacities[9] = 0
+      setOpacities(updateOpacities)
       setUpperScreenText('Awesome job!!!')
       setLowerScreenText("Great find! That's a lot easier than searching every single square with every single filter, isn't it?")
       setPartsLeft(0)
@@ -95,22 +115,22 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
         <Text style={styles.textFont2}>{lowerScreenText}</Text>
 
         <ImageBackground source={require('../../assets/Grid.png')} resizeMode='cover' style={styles.grid}>
-          <TouchableOpacity onPress={() => handlePress(1)} disabled={isVisible1} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(2)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(3)} disabled={isVisible3} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(4)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(5)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(6)} disabled={isVisible6} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(7)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(8)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(9)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(10)} disabled={isVisible10} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(11)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(12)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(13)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(14)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(15)} style={styles.box} />
-          <TouchableOpacity onPress={() => handlePress(16)} style={styles.box} />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(1)} disabled={isVisible1} style={[styles.box, {backgroundColor: backgroundColors[0], opacity: opacities[0]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(2)} style={[styles.box, {backgroundColor: backgroundColors[1], opacity: opacities[1]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(3)} disabled={isVisible3} style={[styles.box, {backgroundColor: backgroundColors[2], opacity: opacities[2]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(4)} style={[styles.box, {backgroundColor: backgroundColors[3], opacity: opacities[3]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(5)} style={[styles.box, {backgroundColor: backgroundColors[4], opacity: opacities[4]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(6)} disabled={isVisible6} style={[styles.box, {backgroundColor: backgroundColors[5], opacity: opacities[5]}] }/>
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(7)} style={[styles.box, {backgroundColor: backgroundColors[6], opacity: opacities[6]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(8)} style={[styles.box, {backgroundColor: backgroundColors[7], opacity: opacities[7]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(9)} style={[styles.box, {backgroundColor: backgroundColors[8], opacity: opacities[8]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(10)} disabled={isVisible10} style={[styles.box, {backgroundColor: backgroundColors[9], opacity: opacities[9]}] }/>
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(11)} style={[styles.box, {backgroundColor: backgroundColors[10], opacity: opacities[10]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(12)} style={[styles.box, {backgroundColor: backgroundColors[11], opacity: opacities[11]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(13)} style={[styles.box, {backgroundColor: backgroundColors[12], opacity: opacities[12]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(14)} style={[styles.box, {backgroundColor: backgroundColors[13], opacity: opacities[13]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(15)} style={[styles.box, {backgroundColor: backgroundColors[14], opacity: opacities[14]}] } />
+          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(16)} style={[styles.box, {backgroundColor: backgroundColors[15], opacity: opacities[15]}] } />
         </ImageBackground>
       </View>
 
@@ -168,10 +188,19 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
     borderColor: 'black',
     borderWidth: 5,
-    alignItems: 'center'
+    alignItems: 'center',
+    zIndex: 1
   },
 
   box: {
+    margin: 1,
+    width: '24.3%',
+    height: '24%',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  box2: {
     margin: 1,
     width: '24.3%',
     height: '24%',
