@@ -11,7 +11,7 @@ export default function CoursesScreen ({ navigation }) {
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
         <CourseCard
           navigation={navigation}
-          lessonScreen='ZoomScreen'
+          lessonScreen='Course2SearchingAlgorithmMark'
           gradColors={['#8233C5', '#F02FE2']}
           title='Getting Started'
           desc='Learn AI with zero coding experience. This course will teach you how to learn.'
