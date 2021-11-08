@@ -19,10 +19,10 @@ export default function Course2SearchingAlgorithmMark ({ navigation }) {
     setTouched(updateTouched);
     let updateNum
     if (!isFinished){
-      if([5, 6, 7, 8, 9, 13].includes(number)){
+      if([5, 6, 7, 8, 9, 13].includes(number)) {
         setInformation('Nailed it! Searching in the same square, or the squares right next to the nose are great bets.')
         updateNum = numCorrect;
-        if (updateNum + 1 === 6){
+        if (updateNum + 1 === 6) {
           setTopText('Look at how much time that saves us!')
           setInformation('Even when using 16 squares, our computer only needed to look in seven of the squares after scanning for a nose.')
           setIsFinished(true)
