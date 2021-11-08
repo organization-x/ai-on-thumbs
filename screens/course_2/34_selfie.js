@@ -68,14 +68,14 @@ export default function Course2Selfie ({ navigation }) {
 
   useEffect(() => {
     (async () => {
-      const { status } = await Camera.requestPermissionsAsync();
+      const { status } = await Camera.requestPermissionsAsync()
       setHasPermission(status === 'granted')
     })
     ().catch(error => {
-      //TODO: ADD SENTRY LOGGIN
-      console.log(error.message)
-    })
-    });
+          //TODO: ADD SENTRY LOGGIN
+          console.log(error.message)
+          })
+    }, [])
 
   if (hasPermission === null) {
     return (
