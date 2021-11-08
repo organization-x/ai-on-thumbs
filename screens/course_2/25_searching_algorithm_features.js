@@ -22,23 +22,23 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
                                             1,1,1,1,
                                             1,1,1,1,
                                             1,1,1,1])
-const grid = []
-const disableMap = {
-  1: isVisible1,
-  3: isVisible3,
-  6: isVisible6,
-  10: isVisible10
-}
+  const grid = []
+  const disableMap = {
+    1: isVisible1,
+    3: isVisible3,
+    6: isVisible6,
+    10: isVisible10
+  }
 
-for(let i = 0; i < 16; i++){
-  if( [0, 2, 5, 9].includes(i)) {
-    grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} disabled={disableMap[i + 1]} onPress={() => handlePress(i + 1)} style={[styles.box, {backgroundColor: backgroundColor}, {opacity: opacities[i]}]} />)
-  }
+  for(let i = 0; i < 16; i++){
+    if( [0, 2, 5, 9].includes(i)) {
+      grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} disabled={disableMap[i + 1]} onPress={() => handlePress(i + 1)} style={[styles.box, {backgroundColor: backgroundColor}, {opacity: opacities[i]}]} />)
+    }
   
-  else {
-    grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} onPress={() => handlePress(i + 1)} style={[styles.box, {backgroundColor: backgroundColor}, {opacity: opacities[i]}]} />)
+    else {
+      grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} onPress={() => handlePress(i + 1)} style={[styles.box, {backgroundColor: backgroundColor}, {opacity: opacities[i]}]} />)
+    }
   }
-}
 
   const handlePress = (square) => {
     switch (square) {
