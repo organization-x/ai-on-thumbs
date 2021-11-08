@@ -8,7 +8,7 @@ const height = Dimensions.get('window').height
 export default function Course2SearchingAlgorithmMark ({ navigation }) {
   const [topText, setTopText] = useState("Let’s say we find what we think are some noses in a photo.")  
   const [information, setInformation] = useState("Tap all the squares where the computer should look for ears, eyes, and mouths!")
-  var touchedArray = new Array(16).fill(false)
+  const touchedArray = new Array(16).fill(false)
   const [numCorrect, setNumCorrect] = useState(0);
   const [touched, setTouched] = useState(touchedArray);
   const [isFinished, setIsFinished] = useState(false);
@@ -19,76 +19,17 @@ export default function Course2SearchingAlgorithmMark ({ navigation }) {
     setTouched(updateTouched);
     let updateNum
     if (!isFinished){
-      switch (number) {
-        case 5:
-          setInformation('Nailed it! Searching in the same square, or the squares right next to the nose are great bets.')
-          updateNum = numCorrect;
-          if (updateNum + 1 === 6){
-            setTopText('Look at how much time that saves us!')
-            setInformation('Even when using 16 squares, our computer only needed to look in seven of the squares after scanning for a nose.')
-            setIsFinished(true)
-          }
-          setNumCorrect(updateNum + 1);
-          break
-
-        case 6:
-          setInformation('Nailed it! Searching in the same square, or the squares right next to the nose are great bets.')
-          updateNum = numCorrect;
-          if (updateNum + 1 === 6){
-            setTopText('Look at how much time that saves us!')
-            setInformation('Even when using 16 squares, our computer only needed to look in seven of the squares after scanning for a nose.')
-            setIsFinished(true)
-          }
-          setNumCorrect(updateNum + 1);
-          break
-
-        case 7:
-          setInformation('Nailed it! Searching in the same square, or the squares right next to the nose are great bets.')
-          updateNum = numCorrect;
-          if (updateNum + 1 === 6){
-            setTopText('Look at how much time that saves us!')
-            setInformation('Even when using 16 squares, our computer only needed to look in seven of the squares after scanning for a nose.')
-            setIsFinished(true)
-          }
-          setNumCorrect(updateNum + 1);
-          break
-
-        case 8:
-          setInformation('Nailed it! Searching in the same square, or the squares right next to the nose are great bets.')
-          updateNum = numCorrect;
-          if (updateNum + 1 === 6){
-            setTopText('Look at how much time that saves us!')
-            setInformation('Even when using 16 squares, our computer only needed to look in seven of the squares after scanning for a nose.')
-            setIsFinished(true)
-          }
-          setNumCorrect(updateNum + 1);
-          break
-
-        case 9:
-            setInformation('Nailed it! Searching in the same square, or the squares right next to the nose are great bets.')
-            updateNum = numCorrect;
-            if (updateNum + 1 === 6){
-              setTopText('Look at how much time that saves us!')
-              setInformation('Even when using 16 squares, our computer only needed to look in seven of the squares after scanning for a nose.')
-              setIsFinished(true)
-            }
-            setNumCorrect(updateNum + 1);
-            break
-
-        case 13:
-          setInformation('Nailed it! Searching in the same square, or the squares right next to the nose are great bets.')
-          updateNum = numCorrect;
-          if (updateNum + 1 === 6){
-            setTopText('Look at how much time that saves us!')
-            setInformation('Even when using 16 squares, our computer only needed to look in seven of the squares after scanning for a nose.')
-            setIsFinished(true)
-          }
-          setNumCorrect(updateNum + 1);
-          break
-
-        default:
-          setInformation('Not quite, try again! Where are your ears and mouth in relation to your nose?')
-          break
+      if([5, 6, 7, 8, 9, 13].includes(number)){
+        setInformation('Nailed it! Searching in the same square, or the squares right next to the nose are great bets.')
+        updateNum = numCorrect;
+        if (updateNum + 1 === 6){
+          setTopText('Look at how much time that saves us!')
+          setInformation('Even when using 16 squares, our computer only needed to look in seven of the squares after scanning for a nose.')
+          setIsFinished(true)
+        }
+        setNumCorrect(updateNum + 1);
+      }else{
+        setInformation('Not quite, try again! Where are your ears and mouth in relation to your nose?')
       }
     }
   } 
@@ -144,10 +85,10 @@ const styles = StyleSheet.create({
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    height: '17%',
+    height: '18%',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '10%',
+    marginTop: '20%',
     textAlign: 'center',
     color: 'white',
     fontSize: height/22,
