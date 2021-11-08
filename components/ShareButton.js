@@ -28,6 +28,7 @@ export default function ShareButton ({ style, filename, objectToShare, buttonTex
       await Sharing.shareAsync(filepath, { mimeType: 'image/png' })
     } catch (e) {
       alert(e.message)
+      // TODO: add SENTRY error handling
     }
   }
 

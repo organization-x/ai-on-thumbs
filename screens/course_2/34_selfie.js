@@ -55,20 +55,27 @@ export default function Course2Selfie ({ navigation }) {
         }
       )
     } catch (error) {
-      // console.log(error.response.data)  NOTE - use "error.response.data` (not "error")
-      // TODO: add error handling
+      console.log(error.response.data) // NOTE - use "error.response.data` (not "error")
+      // TODO: add SENTRY error handling
     }
-
-    const data = await res.text()
+    // TODO: If try catch fails, the uncaught exception will be thrown here. TALK to alex about what to add down the line to catch it. 
+    const data = await res.text().catch((error) => {
+      //TODO: add SENTRY error handling
+      console.log(error.message) // NOTE - use "error.response.data` (not "error")
+    });
     return data
   }
 
   useEffect(() => {
     (async () => {
-      const { status } = await Camera.requestPermissionsAsync()
+      const { status } = await Camera.requestPermissionsAsync();
       setHasPermission(status === 'granted')
-    })()
-  }, [])
+    })
+    ().catch(error => {
+      //TODO: ADD SENTRY LOGGIN
+      console.log(error.message)
+    })
+    });
 
   if (hasPermission === null) {
     return (
@@ -78,7 +85,7 @@ export default function Course2Selfie ({ navigation }) {
     )
   }
 
-  function openCamera () {
+  const openCamera = () => {
     setStartCamera(true)
   }
 
@@ -106,7 +113,7 @@ export default function Course2Selfie ({ navigation }) {
       >
         <ActionButton
           style={{ marginBottom: 30 }}
-          onPress={async () => { await takePhoto() }}
+          onPress={() => takePhoto().catch(err => { console.log(error.response.data) }) } //TODO: ADD SENTRY LOG
           title='Take Photo'
           icon={<AntDesign
             name='camera' style={{ marginLeft: 5 }}

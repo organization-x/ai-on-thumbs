@@ -30,7 +30,8 @@ export default function Course2FaceDetection ( { route, navigation } ) {
       await FileSystem.writeAsStringAsync(filepath, context, {encoding: 'base64'});
       await Sharing.shareAsync(filepath, { mimeType: 'image/png' })
     } catch (e) {
-      alert(e.message)
+      // TODO: add SENTRY LOGGING HERE.
+      console.log(e.message)
     }
   }
   return (
@@ -59,7 +60,11 @@ export default function Course2FaceDetection ( { route, navigation } ) {
       </Modal>
       
       {context !== null ?
-        <TouchableOpacity style={styles.imageContainer} onPress={() => shareData(context)}>
+        <TouchableOpacity 
+        style={styles.imageContainer} 
+        onPress={() => shareData(context).catch(err => { console.log(err.message) })
+        //TODO: LOG ERROR TO SENTRY
+        }> 
           <Image style={styles.image} source={{ uri: `data:image/png;base64,${context}` }} />
         </TouchableOpacity>
       : <View style={styles.imageContainer}>
