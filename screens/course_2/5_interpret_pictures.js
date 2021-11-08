@@ -11,7 +11,7 @@ export default function Course2InterpretPictures ({ navigation }) {
   return (
     <ImageBackground source={require('../../assets/objectregbackground.png')} style={styles.container}>
       <View style={styles.information}>
-        <Text style={styles.textFont}>Now that we know how computers interpret photos, we will learn a popular face detection strategy.</Text>
+        <Text style={styles.textFont}>Now that we know how computers see photos, let's learn a popular face detection strategy!</Text>
       </View>
 
       <View style={styles.footerButtons}>
