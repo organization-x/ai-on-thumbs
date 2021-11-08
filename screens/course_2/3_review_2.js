@@ -11,7 +11,7 @@ const height = Dimensions.get('window').height
 export default function Course2Review2 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.container}>
+      <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Facial Recognition Review</LessonHeader>
 
         <View style={styles.number}>
@@ -29,13 +29,13 @@ export default function Course2Review2 ({ navigation }) {
         <View style={styles.information2}>
           <Text style={styles.textFont}>Computers see pixels as a matrix of numbers. The brighter the pixel, the larger the number!</Text>
         </View>
-
-        <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course2Review1' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course2Review3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>
-
       </View>
+
+      <View style={styles.footerButtons}>
+        <LessonButton navigation={navigation} nextScreen='Course2Review1' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course2Review3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+      </View>
+
 
       <StatusBar style='auto' />
     </LinearGradient>
@@ -47,6 +47,12 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+
+  textSection: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 
   header: {

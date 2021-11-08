@@ -12,7 +12,7 @@ const width = Dimensions.get('window').width
 export default function Course2Contrast3 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.container}>
+      <View style={styles.lessonContent} >
         <View>
           <LessonHeader style={styles.header}>Remember:</LessonHeader>
         </View>
@@ -27,11 +27,11 @@ export default function Course2Contrast3 ({ navigation }) {
         <View style={styles.information2}>
           <Text style={styles.textFont2}>Notice how the more similar the brightness is, the less contrast there is between the pixels!</Text>
         </View>
+      </View>
 
-        <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course2Contrast2' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course2ContrastMCQ' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>
+      <View style={styles.footerButtons}>
+        <LessonButton navigation={navigation} nextScreen='Course2Contrast2' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course2ContrastMCQ' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )
@@ -39,6 +39,12 @@ export default function Course2Contrast3 ({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingVertical: 15
+  },
+
+  lessonContent: {
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15

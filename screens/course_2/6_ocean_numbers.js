@@ -21,19 +21,19 @@ export default function Course2OceanNumbers ({ navigation }) {
     <View style = {styles.lessonContent}> 
       <View style={styles.textSection}>
         <Text style={styles.mainText}>SO</Text>
-        <Text style={styles.secondaryText}>If a photo is an ocean on numbers, how does a computer tell eyes from noses?</Text>
+        <Text style={styles.secondaryText}>If a photo is an ocean of numbers, how does a computer tell eyes from noses?</Text>
       </View>
 
       <View style={styles.footerButtons}> 
         <LessonButton
           navigation = {navigation}
-          nextScreen = "7_pixel_patterns_1.js"
+          nextScreen = "Course2InterpretPictures"
           buttonColor = "#8976C2"
           buttonText = "Back"
         />
         <LessonButton
           navigation={navigation}
-          nextScreen = "9_pixel_patterns_3.js"
+          nextScreen = "Course2PixelPatternsText"
           buttonColor = {["#32B59D", "#3AC55B"]}
           buttonText = "Continue"
         />
@@ -47,12 +47,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    paddingHorizontal: 0,
+    paddingHorizontal: 20,
     paddingVertical: 10
   },
   footerButtons: {
-    marginBottom: 20,
-    paddingHorizontal: 15,
+    marginBottom: 10,
     flexDirection: "row",
     justifyContent: "space-between"
   },

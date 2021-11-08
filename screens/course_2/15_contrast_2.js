@@ -11,10 +11,11 @@ const width = Dimensions.get('window').width
 export default function Course2Contrast2 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.container}>
+      <View style={styles.container} >
         <View style={styles.information}>
           <Text style={styles.textFont}>Since brighter pixels are higher in value, and darker pixels are lower in value,</Text>
         </View>
+
         <View>
           <Image style={styles.image} source={require('../../assets/pixelContrast1.png')} />
         </View>
@@ -22,11 +23,11 @@ export default function Course2Contrast2 ({ navigation }) {
         <View style={styles.information2}>
           <Text style={styles.textFont}>we can find their difference to get the contrast.</Text>
         </View>
+      </View>
 
-        <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course2Contrast1' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course2Contrast3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>
+      <View style={styles.footerButtons}>
+        <LessonButton navigation={navigation} nextScreen='Course2Contrast1' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course2Contrast3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )
@@ -68,7 +69,6 @@ const styles = StyleSheet.create({
   },
 
   footerButtons: {
-    marginTop: 125,
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
