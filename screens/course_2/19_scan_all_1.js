@@ -24,14 +24,14 @@ export default function Course2ScanAll1 ({ navigation }) {
         <LessonButton
           navigation={navigation}
           nextScreen='Course2ScanAll2Correct'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Yes! 👍'
-        />
+          buttonColor='#8976C2'
+          buttonText='No! 👎'
+          />
         <LessonButton
           navigation={navigation}
           nextScreen='Course2ScanAll2Wrong'
-          buttonColor='#8976C2'
-          buttonText='No! 👎'
+          buttonColor={['#32B59D', '#3AC55B']}
+          buttonText='Yes! 👍'
         />
       </View>
     </LinearGradient>
