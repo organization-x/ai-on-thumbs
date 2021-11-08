@@ -8,7 +8,7 @@ import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 
 export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
-  var updateOpacities = []
+  let updateOpacities = []
   const [partsLeft, setPartsLeft] = React.useState(4)
   const [currentSquare, setCurrentSquare] = React.useState(6)
   const [isVisible1, setIsVisible1] = React.useState(false)
@@ -17,14 +17,29 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
   const [isVisible10, setIsVisible10] = React.useState(false)
   const [upperScreenText, setUpperScreenText] = React.useState("Let's say you find something that looks like a pair of eyes on an image, where would you search for a nose?")
   const [lowerScreenText, setLowerScreenText] = React.useState('Tap where you think you might find the nose on the grid until it pops up!')
-  const backgroundColors = ['#DECFBE','#DECFBE','#DECFBE','#DECFBE',
-                                                          '#DECFBE','#DECFBE','#DECFBE','#DECFBE',
-                                                          '#DECFBE','#DECFBE','#DECFBE','#DECFBE',
-                                                          '#DECFBE','#DECFBE','#DECFBE','#DECFBE']
+  const backgroundColor = '#DECFBE'
   const[opacities, setOpacities] = React.useState([1,0,1,1,
                                             1,1,1,1,
                                             1,1,1,1,
                                             1,1,1,1])
+const grid = []
+const disableMap = {
+  1: isVisible1,
+  3: isVisible3,
+  6: isVisible6,
+  10: isVisible10
+}
+
+for(let i = 0; i < 16; i++){
+  if( [0, 2, 5, 9].includes(i)) {
+    grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} disabled={disableMap[i + 1]} onPress={() => handlePress(i + 1)} style={[styles.box, {backgroundColor: backgroundColor}, {opacity: opacities[i]}]} />)
+  }
+  
+  else {
+    grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} onPress={() => handlePress(i + 1)} style={[styles.box, {backgroundColor: backgroundColor}, {opacity: opacities[i]}]} />)
+  }
+}
+
   const handlePress = (square) => {
     switch (square) {
       case 1:
@@ -115,22 +130,7 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
         <Text style={styles.textFont2}>{lowerScreenText}</Text>
 
         <ImageBackground source={require('../../assets/Grid.png')} resizeMode='cover' style={styles.grid}>
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(1)} disabled={isVisible1} style={[styles.box, {backgroundColor: backgroundColors[0], opacity: opacities[0]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(2)} style={[styles.box, {backgroundColor: backgroundColors[1], opacity: opacities[1]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(3)} disabled={isVisible3} style={[styles.box, {backgroundColor: backgroundColors[2], opacity: opacities[2]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(4)} style={[styles.box, {backgroundColor: backgroundColors[3], opacity: opacities[3]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(5)} style={[styles.box, {backgroundColor: backgroundColors[4], opacity: opacities[4]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(6)} disabled={isVisible6} style={[styles.box, {backgroundColor: backgroundColors[5], opacity: opacities[5]}] }/>
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(7)} style={[styles.box, {backgroundColor: backgroundColors[6], opacity: opacities[6]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(8)} style={[styles.box, {backgroundColor: backgroundColors[7], opacity: opacities[7]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(9)} style={[styles.box, {backgroundColor: backgroundColors[8], opacity: opacities[8]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(10)} disabled={isVisible10} style={[styles.box, {backgroundColor: backgroundColors[9], opacity: opacities[9]}] }/>
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(11)} style={[styles.box, {backgroundColor: backgroundColors[10], opacity: opacities[10]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(12)} style={[styles.box, {backgroundColor: backgroundColors[11], opacity: opacities[11]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(13)} style={[styles.box, {backgroundColor: backgroundColors[12], opacity: opacities[12]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(14)} style={[styles.box, {backgroundColor: backgroundColors[13], opacity: opacities[13]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(15)} style={[styles.box, {backgroundColor: backgroundColors[14], opacity: opacities[14]}] } />
-          <TouchableOpacity activeOpacity={1} onPress={() => handlePress(16)} style={[styles.box, {backgroundColor: backgroundColors[15], opacity: opacities[15]}] } />
+          {grid}
         </ImageBackground>
       </View>
 
