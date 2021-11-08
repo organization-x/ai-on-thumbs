@@ -28,7 +28,7 @@ export default function Course2SearchingAlgorithmMark ({ navigation }) {
           setIsFinished(true)
         }
         setNumCorrect(updateNum + 1);
-      }else{
+      } else {
         setInformation('Not quite, try again! Where are your ears and mouth in relation to your nose?')
       }
     }
