@@ -38,7 +38,7 @@ export default function Course2SearchingAlgorithmMark ({ navigation }) {
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <Text style={styles.bigText}> {topText} </Text>
       <Text style={styles.darkSmallBoldText}> {information} </Text>
-      <ImageBackground  source={require('../../assets/markcuban_and_wife.png')} resizeMode="cover" style={styles.gridContainer}> 
+      <ImageBackground  source={require('../../assets/course_2/markcuban_and_wife.png')} resizeMode="cover" style={styles.gridContainer}> 
         <TouchableOpacity onPress={() => handlePress(0)} style={[styles.box, { backgroundColor: touched[0] ? 'red': '#E5D3B3' , opacity: 0.7}] } />
         <TouchableOpacity onPress={() => handlePress(1)} style={[styles.box, { backgroundColor: touched[1] ? 'red': '#E5D3B3' , opacity: 0.7}] } />
         <TouchableOpacity onPress={() => handlePress(2)} style={[styles.box, { backgroundColor: touched[2] ? 'red': '#E5D3B3' , opacity: 0.7}] }/>

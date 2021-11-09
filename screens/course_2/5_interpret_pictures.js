@@ -9,7 +9,7 @@ const height = Dimensions.get('window').height
 
 export default function Course2InterpretPictures ({ navigation }) {
   return (
-    <ImageBackground source={require('../../assets/objectregbackground.png')} style={styles.container}>
+    <ImageBackground source={require('../../assets/stock/objectregbackground.png')} style={styles.container}>
       <View style={styles.information}>
         <Text style={styles.textFont}>Now that we know how computers interpret photos, we will learn a popular face detection strategy.</Text>
       </View>

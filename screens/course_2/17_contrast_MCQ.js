@@ -25,7 +25,7 @@ export default function Course2ContrastMCQ ({navigation}) {
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.textSection} >
         <Text style={styles.mainText} >Find the difference between all of the bright pixels and dark pixels, then select the correct contrast value.</Text>
-        <Image style={styles.image} source={require('../../assets/contrastMCQ.png')} />
+        <Image style={styles.image} source={require('../../assets/course_2/contrastMCQ.png')} />
         <GridMCQ style={styles.MCQ} answers={['6', '-3', '0', '3']}  correctAnswer='6' handleChoice={handleAnswer} />
         <Text style={styles.secondText} >{paraText}</Text>
       </View>

@@ -46,12 +46,12 @@ export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
         {/* main image of face */}
         <Image
           style={{ width: imageWidth, height: imageHeight }}
-          source={require('../assets/grayscale_face_image.jpg')}
+          source={require('../assets/course_2/grayscale_face_image.jpg')}
         />
 
         {/* Draggable filter */}
         <Draggable
-          imageSource={require('../assets/filter_drawing2.png')}
+          imageSource={require('../assets/course_2/filter_drawing2.png')}
           // size of draggable filter for android
           renderSize={35}
           // original starting point of the filter on the image (top left corner)
@@ -75,7 +75,7 @@ export default function Filter ({ setEquation, imageXOffset, imageYOffset }) {
           {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
-              ? (<Image style={{ width: 70, height: 50 }} source={require('../assets/filter_drawing2.png')} />)
+              ? (<Image style={{ width: 70, height: 50 }} source={require('../assets/course_2/filter_drawing2.png')} />)
               : null
           }
         </Draggable>

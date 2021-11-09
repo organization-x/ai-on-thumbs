@@ -14,7 +14,7 @@ export default function Course2Contrast1({ navigation }) {
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>The secret ingredient is called contrast.</Text>
-        <Image style={styles.image} source={require('../../assets/contrastdemo.png')}/>
+        <Image style={styles.image} source={require('../../assets/course_2/contrastdemo.png')}/>
         <Text style={styles.secondaryText}>Contrast is the difference between the dark pixels and the bright pixels. It helps objects pop out more!</Text>
       </View>
 

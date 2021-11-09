@@ -129,7 +129,7 @@ export default function Course2Selfie ({ navigation }) {
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
 
       <View style={{ alignItems: 'center'}}>
-        <Image style={styles.logo} source={require('../../assets/ai-on-thumbs-logo.png')} />
+        <Image style={styles.logo} source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       </View>
 
       <View style={{ flex : 1 }}>

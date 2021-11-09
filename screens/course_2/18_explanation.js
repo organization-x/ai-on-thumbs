@@ -13,7 +13,7 @@ export default function Course2DraggableExplanation ({ navigation }) {
         <View style={styles.image}>
           <Image
             style={{ width: 300, height: 300 }}
-            source={require('../../assets/markcuban_hybrid_with_filter.png')}
+            source={require('../../assets/course_2/markcuban_hybrid_with_filter.png')}
           />
         </View>
         <BottomLessonParagraph> The computer adds the pixels under bright areas of the filter and subtracts the pixels under dark areas of the filter. High Contrast = Better Match</BottomLessonParagraph>

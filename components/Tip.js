@@ -6,7 +6,8 @@ export default function Tip ({ tipText }) {
     <View style={styles.container}>
       <Text style={styles.tip}>
         Tip
-        <Image source={require('../assets/lightbulb.png')} style={{ width: 20, height: 20 }} />
+        {//<Image source={require('../assets/lightbulb.png')} style={{ width: 20, height: 20 }} />
+        }
 
       </Text>
       <Text style={styles.explanation}>

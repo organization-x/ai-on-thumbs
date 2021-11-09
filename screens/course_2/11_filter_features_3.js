@@ -12,7 +12,7 @@ export default function Course2FilterFeatures3({ navigation }) {
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>The short answer:</Text>
-        <Image style={styles.image} source={require('../../assets/pixelpatterns.png')}/>
+        <Image style={styles.image} source={require('../../assets/course_2/pixelpatterns.png')}/>
         <Text style={styles.secondaryText}>The computer scans for pixel patterns in the photo that best match the structure of the filter.</Text>
       </View>
 

@@ -46,7 +46,7 @@ export default function Course2AppStoreReview ({ navigation }) {
 
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <Image style={styles.logo} resizeMode='contain' source={require('../../assets/ai-on-thumbs-logo.png')} />
+      <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       <TopLessonParagraph> Did you have fun learning AI with us?</TopLessonParagraph>
       <View style={styles.starView}>
         <StarRating
@@ -71,7 +71,7 @@ export default function Course2AppStoreReview ({ navigation }) {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <LottieView source={require('../../assets/1818-success-animation.json')} autoPlay loop={false} />
+            <LottieView source={require('../../assets/stock/1818-success-animation.json')} autoPlay loop={false} />
           </View>
         </View>
       </Modal>

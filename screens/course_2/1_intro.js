@@ -9,7 +9,7 @@ const height = Dimensions.get('window').height
 
 export default function Course2Intro ({ navigation }) {
   return (
-    <ImageBackground source={require('../../assets/objectregbackground.png')} style={styles.container}>
+    <ImageBackground source={require('../../assets/stock/objectregbackground.png')} style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.text}>Welcome to your second lesson in facial recognition!</Text>
         <Text style={styles.text}>Let's review what we learned last time.</Text>

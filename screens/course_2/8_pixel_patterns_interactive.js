@@ -61,12 +61,12 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
   let darkOrLightRegularStyle
 
   if (isEnabled === true) {
-    src = require('../../assets/colorlessEyes.png')
+    src = require('../../assets/course_2/colorlessEyes.png')
     darkOrLightBoldStyle = styles.lightSmallBoldText
     darkOrLightRegularStyle = styles.lightSmallRegularText
     backgroundColor = ['#370098', '#160535']
   } else {
-    src = require('../../assets/eyesWithColor.png')
+    src = require('../../assets/course_2/eyesWithColor.png')
     darkOrLightBoldStyle = styles.darkSmallBoldText
     darkOrLightRegularStyle = styles.darkSmallRegularText
     backgroundColor = ['#8976C2', '#E6E8FB']
@@ -90,16 +90,16 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
             <View style={styles.button1and3Area}>
                 <View style={styles.button1Background}>
                 <TouchableOpacity onPress={pressButton1}>
-                  <ImageBackground source={require('../../assets/rectangleButton1.png')} style={styles.button1Background}>
-                    <Image source={require('../../assets/eyeButton1.jpg')} style={styles.eyeButton1} />
+                  <ImageBackground source={require('../../assets/course_2/rectangleButton1.png')} style={styles.button1Background}>
+                    <Image source={require('../../assets/course_2/eyeButton1.jpg')} style={styles.eyeButton1} />
                   </ImageBackground>
                 </TouchableOpacity>
                 </View>
 
                 <View style={styles.button3Background}>
                 <TouchableOpacity onPress={pressButton3}>
-                  <ImageBackground source={require('../../assets/rectangleButton3.png')} style={styles.button3Background}>
-                    <Image source={require('../../assets/eyeButton3.png')} style={styles.eyeButton3} />
+                  <ImageBackground source={require('../../assets/course_2/rectangleButton3.png')} style={styles.button3Background}>
+                    <Image source={require('../../assets/course_2/eyeButton3.png')} style={styles.eyeButton3} />
                   </ImageBackground>
                 </TouchableOpacity>
                 </View>
@@ -108,8 +108,8 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
             <View style={styles.button2Area}>
               <View style={styles.button2Background}>
                 <TouchableOpacity onPress={pressButton2}>
-                  <ImageBackground source={require('../../assets/rectangleButton2.png')} style={styles.button2Background}>
-                    <Image source={require('../../assets/eyeButton2.png')} style={styles.eyeButton2} />
+                  <ImageBackground source={require('../../assets/course_2/rectangleButton2.png')} style={styles.button2Background}>
+                    <Image source={require('../../assets/course_2/eyeButton2.png')} style={styles.eyeButton2} />
                   </ImageBackground>
                 </TouchableOpacity>
               </View>

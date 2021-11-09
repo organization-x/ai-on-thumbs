@@ -37,7 +37,7 @@ export default function Course2FaceDetection ( { route, navigation } ) {
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
       <View style={{ alignItems: 'center'}}>
-        <Image style={styles.logo} source={require('../../assets/ai-on-thumbs-logo.png')} />
+        <Image style={styles.logo} source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       </View>
       <Text style={styles.mainText}> Click your photo to share your results and show others that you know how AI works!</Text>
 
@@ -68,7 +68,7 @@ export default function Course2FaceDetection ( { route, navigation } ) {
           <Image style={styles.image} source={{ uri: `data:image/png;base64,${context}` }} />
         </TouchableOpacity>
       : <View style={styles.imageContainer}>
-        <Image style={styles.noPhotoImage} source={require('../../assets/scan.png')}/>
+        <Image style={styles.noPhotoImage} source={require('../../assets/course_2/scan.png')}/>
         <Text style={styles.noPhotoText}> (No photo taken)</Text>
         </View>
       }        

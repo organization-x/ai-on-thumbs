@@ -13,7 +13,7 @@ export default function Course2Email ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
-        <Image style={styles.logo} resizeMode='contain' source={require('../../assets/ai-on-thumbs-logo.png')} />
+        <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.text} onPress={() => Linking.openURL('https://ai-camp.org')}>Continue your journey by going to ai-camp.org</Text>
       </View>
       <KeyboardAvoidingView

@@ -14,7 +14,7 @@ export default function App ({ navigation }) {
           <Image
             fadeDuration={1000}
             resizeMode={'cover'}
-            source={require("../../assets/greenWater.png")}
+            source={require("../../assets/course_2/greenWater.png")}
           />
         </TouchableOpacity>
       </View>

@@ -66,7 +66,7 @@ export default function DetectingFeatures ({ found, setFound, setSimilarity, ima
         shouldRender
         /* Draggable filter */
           ? <Draggable
-              imageSource={require('../assets/horizontal_filter.png')}
+              imageSource={require('../assets/course_2/horizontal_filter.png')}
               animatedViewProps={{ opacity: 0.5 }}
             // size of draggable filter for android
               renderSize={50}
@@ -93,7 +93,7 @@ export default function DetectingFeatures ({ found, setFound, setSimilarity, ima
             {
               /* When using ios, you can use the children parameter to have more customization over the filter image */
               (Platform.OS === 'ios' || Platform.OS === 'web')
-                ? (<Image style={styles.filterImage} source={require('../assets/horizontal_filter.png')} />)
+                ? (<Image style={styles.filterImage} source={require('../assets/course_2/horizontal_filter.png')} />)
                 : null
               }
           </Draggable>

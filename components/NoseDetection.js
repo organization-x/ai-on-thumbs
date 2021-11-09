@@ -64,7 +64,7 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
         shouldRender
         /* Draggable filter */
           ? <Draggable
-              imageSource={require('../assets/vertical_filter.png')}
+              imageSource={require('../assets/course_2/vertical_filter.png')}
               disabled={!!found}
               animatedViewProps={{ opacity: 0.5 }}
           // size of draggable filter for android
@@ -90,7 +90,7 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
             {
             /* When using ios, you can use the children parameter to have more customization over the filter image */
             (Platform.OS === 'ios' || Platform.OS === 'web')
-              ? (<Image style={styles.filterImage} source={require('../assets/vertical_filter.png')} />)
+              ? (<Image style={styles.filterImage} source={require('../assets/course_2/vertical_filter.png')} />)
               : null
             }
 

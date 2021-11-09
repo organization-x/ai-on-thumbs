@@ -57,14 +57,14 @@ export default function Course2FilterDetection ({ found, setFound, setFilterText
         {/* main image of face */}
         <Image
           style={{ width: imageWidth, height: imageHeight }}
-          source={require('../assets/grayscale_markcuban_img.png')}
+          source={require('../assets/course_2/grayscale_markcuban_img.png')}
         />
 
         {
         shouldRender
         /* Draggable filter */
           ? <Draggable
-              imageSource={require('../assets/horizontal_filter_with_border.png')}
+              imageSource={require('../assets/course_2/horizontal_filter_with_border.png')}
               animatedViewProps={{ opacity: 0.5 }}
             // size of draggable filter for android
               renderSize={50}
@@ -90,7 +90,7 @@ export default function Course2FilterDetection ({ found, setFound, setFilterText
             {
               /* When using ios, you can use the children parameter to have more customization over the filter image */
               (Platform.OS === 'ios' || Platform.OS === 'web')
-                ? (<Image style={styles.filterImage} source={require('../assets/horizontal_filter.png')} />)
+                ? (<Image style={styles.filterImage} source={require('../assets/course_2/horizontal_filter.png')} />)
                 : null
               }
           </Draggable>

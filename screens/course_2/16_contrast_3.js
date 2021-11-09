@@ -21,7 +21,7 @@ export default function Course2Contrast3 ({ navigation }) {
         </View>
 
         <View>
-          <Image style={styles.image} source={require('../../assets/pixelContrast2.png')} />
+          <Image style={styles.image} source={require('../../assets/course_2/pixelContrast2.png')} />
         </View>
 
         <View style={styles.information2}>

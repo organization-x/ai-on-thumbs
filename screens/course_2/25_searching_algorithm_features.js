@@ -129,7 +129,7 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
 
         <Text style={styles.textFont2}>{lowerScreenText}</Text>
 
-        <ImageBackground source={require('../../assets/Grid.png')} resizeMode='cover' style={styles.grid}>
+        <ImageBackground source={require('../../assets/course_2/Grid.png')} resizeMode='cover' style={styles.grid}>
           {grid}
         </ImageBackground>
       </View>

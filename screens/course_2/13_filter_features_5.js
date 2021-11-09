@@ -15,7 +15,7 @@ export default function Course2FilterFeatures5({ navigation }) {
       <View style={styles.textSection}>
         <Text style={styles.mainText}>The long answer:</Text>
         <Text style={styles.secondaryText}>Remember how computers think of pixels as a matrix of numbers?</Text>
-        <Image style={styles.image} source={require('../../assets/pixelcalculations.png')}/>
+        <Image style={styles.image} source={require('../../assets/course_2/pixelcalculations.png')}/>
         <Text style={styles.secondaryText}>The computer is going to perform calculations on the pixels in the photo to understand the patterns in the photo. Let's find out how!</Text>
       </View>
 

@@ -13,7 +13,7 @@ export default function Course2DraggableCompleted ({ navigation }) {
         <View style={styles.image}>
           <Image
             style={{ width: 300, height: 300 }}
-            source={require('../../assets/markcuban_hybrid_with_filter.png')}
+            source={require('../../assets/course_2/markcuban_hybrid_with_filter.png')}
           />
         </View>
         <BottomLessonParagraph>This is a great time to celebrate with our computer, since we both can now recognize important facial features!!</BottomLessonParagraph>
