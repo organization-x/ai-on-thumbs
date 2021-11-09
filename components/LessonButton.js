@@ -2,7 +2,7 @@ import React from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 
-export default function LessonButton ({ style, navigation, nextScreen, buttonText, buttonColor, context, enabled = true, actOpacity = 0.3 }) {
+export default function LessonButton ({ style, navigation, nextScreen, buttonText, buttonColor, enabled = true, actOpacity = 0.3 }) {
   let gradColor
   // allows gradient or uniform bg colors
   // grad: ['c1', 'c2']
@@ -15,8 +15,7 @@ export default function LessonButton ({ style, navigation, nextScreen, buttonTex
 
   return (
     <TouchableOpacity
-      onPress={() => enabled && navigation.navigate(nextScreen, {context: context,})
-      }
+      onPress={() => enabled && navigation.navigate(nextScreen)}
       style={[styles.backButton, style]}
       underlayColor='#fff'
       activeOpacity={actOpacity}
