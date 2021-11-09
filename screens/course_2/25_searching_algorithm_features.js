@@ -17,11 +17,11 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
   const [isVisible10, setIsVisible10] = React.useState(false)
   const [upperScreenText, setUpperScreenText] = React.useState("Let's say you find something that looks like a pair of eyes on an image, where would you search for a nose?")
   const [lowerScreenText, setLowerScreenText] = React.useState('Tap where you think you might find the nose on the grid until it pops up!')
-  const backgroundColor = '#DECFBE'
-  const[opacities, setOpacities] = React.useState([1,0,1,1,
-                                            1,1,1,1,
-                                            1,1,1,1,
-                                            1,1,1,1])
+  const backgroundColor = '#D9D9D9'
+  const[opacities, setOpacities] = React.useState([1,0,1,0,
+                                            0,1,0,0,
+                                            0,1,0,0,
+                                            0,0,0,0])
   const grid = []
   const disableMap = {
     1: isVisible1,
@@ -124,14 +124,15 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
 
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View styles={styles.lessonContent}>
+      <View style={styles.lessonContent}>
         <Text style={styles.textFont}>{upperScreenText}</Text>
 
         <Text style={styles.textFont2}>{lowerScreenText}</Text>
-
+        
         <ImageBackground source={require('../../assets/Grid.png')} resizeMode='cover' style={styles.grid}>
           {grid}
         </ImageBackground>
+
       </View>
 
       <View style={styles.footerButtons}>
@@ -155,26 +156,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 
-  information: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-    marginBottom: 30
-  },
-
-  information2: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center'
-  },
-
   textFont: {
-    marginTop: height / 20,
+    marginVertical: 15,
+    padding: 15,
+    height: '25%',
     color: 'white',
     textAlign: 'center',
     fontSize: height / 30,
     fontWeight: 'bold',
-    height: '25%',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center'
@@ -199,7 +188,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     aspectRatio: 1,
     borderColor: 'black',
-    borderWidth: 5,
     alignItems: 'center',
     zIndex: 1
   },
@@ -208,16 +196,6 @@ const styles = StyleSheet.create({
     margin: 1,
     width: '24.3%',
     height: '24%',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-
-  box2: {
-    margin: 1,
-    width: '24.3%',
-    height: '24%',
-    justifyContent: 'center',
-    alignItems: 'center'
   },
 
   footerButtons: {
