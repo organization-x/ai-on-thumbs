@@ -3,11 +3,11 @@
     "name": "aionthumbs",
     "slug": "aionthumbs",
     "owner": "ai-camp",
-    "version": "1.0.2",
+    "version": "1.1.2",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/stock/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/stock/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -24,16 +24,32 @@
     },
     "android": {
       "package": "com.aicamp.aionthumbs",
+      "versionCode": 4,
       "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/stock/adaptive-icon.png",
         "backgroundColor": "#8A8AF4"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/stock/favicon.png"
     },
     "description": "Learn AI with just your thumbs!",
-    "githubUrl": "https://github.com/organization-x/ai-on-thumbs"
+    "githubUrl": "https://github.com/organization-x/ai-on-thumbs",
+    "plugins": [
+      "sentry-expo"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "ai-camp",
+            "project": "ai-on-thumbs",
+            "authToken": "8193e0875b3a49e2b0990257d269a9fee2c01a44b30a4f11a7ae2f481ba13b93"
+          }
+        }
+      ]
+    }
   }
 }

@@ -3,6 +3,8 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, Modal, View, Dimensions 
 
 import { LinearGradient } from 'expo-linear-gradient'
 import LottieView from 'lottie-react-native'
+import * as Sentry from 'sentry-expo'
+
 const height = Dimensions.get('window').height
 
 async function createUser (email) {
@@ -50,7 +52,7 @@ export default function EmailPrompt () {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <LottieView source={require('../assets/1818-success-animation.json')} autoPlay loop={false} />
+            <LottieView source={require('../assets/stock/1818-success-animation.json')} autoPlay loop={false} />
           </View>
         </View>
       </Modal>
