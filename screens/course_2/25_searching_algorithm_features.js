@@ -18,10 +18,7 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
   const [upperScreenText, setUpperScreenText] = React.useState("Let's say you find something that looks like a pair of eyes on an image, where would you search for a nose?")
   const [lowerScreenText, setLowerScreenText] = React.useState('Tap where you think you might find the nose on the grid until it pops up!')
   const backgroundColor = '#D9D9D9'
-  const[opacities, setOpacities] = React.useState([1,0,1,0,
-                                            0,1,0,0,
-                                            0,1,0,0,
-                                            0,0,0,0])
+  const[opacities, setOpacities] = React.useState([1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
   const grid = []
   const disableMap = {
     1: isVisible1,
@@ -128,12 +125,12 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
         <Text style={styles.textFont}>{upperScreenText}</Text>
 
         <Text style={styles.textFont2}>{lowerScreenText}</Text>
-        
-        <ImageBackground source={require('../../assets/Grid.png')} resizeMode='cover' style={styles.grid}>
-          {grid}
-        </ImageBackground>
+      </View>        
+      <ImageBackground source={require('../../assets/Grid.png')} resizeMode='cover' style={styles.grid}>
+        {grid}
+      </ImageBackground>
 
-      </View>
+
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course2ScanAll5' buttonColor='#8976C2' buttonText='Back' />
@@ -187,15 +184,19 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     aspectRatio: 1,
+    margin: 1,
     borderColor: 'black',
+    borderWidth: 5,
+    borderRadius: 10,
     alignItems: 'center',
-    zIndex: 1
   },
 
   box: {
     margin: 1,
     width: '24.3%',
     height: '24%',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
   footerButtons: {
