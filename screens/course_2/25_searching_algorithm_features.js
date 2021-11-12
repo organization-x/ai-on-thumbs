@@ -18,25 +18,16 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
   const [upperScreenText, setUpperScreenText] = React.useState("Let's say you find something that looks like a pair of eyes on an image, where would you search for a nose?")
   const [lowerScreenText, setLowerScreenText] = React.useState('Tap where you think you might find the nose on the grid until it pops up!')
   const backgroundColor = '#DECFBE'
-  const[opacities, setOpacities] = React.useState([1,0,1,1,
-                                            1,1,1,1,
-                                            1,1,1,1,
-                                            1,1,1,1])
+  const [opacities, setOpacities] = React.useState([1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
   const grid = []
-  const disableMap = {
-    1: isVisible1,
-    3: isVisible3,
-    6: isVisible6,
-    10: isVisible10
+  const disableMap = {1: isVisible1, 3: isVisible3, 6: isVisible6, 10: isVisible10
   }
 
-  for(let i = 0; i < 16; i++){
-    if( [0, 2, 5, 9].includes(i)) {
-      grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} disabled={disableMap[i + 1]} onPress={() => handlePress(i + 1)} style={[styles.box, {backgroundColor: backgroundColor}, {opacity: opacities[i]}]} />)
-    }
-  
-    else {
-      grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} onPress={() => handlePress(i + 1)} style={[styles.box, {backgroundColor: backgroundColor}, {opacity: opacities[i]}]} />)
+  for (let i = 0; i < 16; i++) {
+    if ([0, 2, 5, 9].includes(i)) {
+      grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} disabled={disableMap[i + 1]} onPress={() => handlePress(i + 1)} style={[styles.box, { backgroundColor: backgroundColor }, { opacity: opacities[i] }]} />)
+    } else {
+      grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} onPress={() => handlePress(i + 1)} style={[styles.box, { backgroundColor: backgroundColor }, { opacity: opacities[i] }]} />)
     }
   }
 
@@ -152,7 +143,7 @@ const styles = StyleSheet.create({
 
   lessonContent: {
     flex: 1,
-    paddingHorizontal: 20,
+    paddingHorizontal: 20
   },
 
   information: {
@@ -171,7 +162,6 @@ const styles = StyleSheet.create({
   textFont: {
     marginTop: height / 20,
     color: 'white',
-    textAlign: 'center',
     fontSize: height / 30,
     fontWeight: 'bold',
     height: '25%',
@@ -183,7 +173,6 @@ const styles = StyleSheet.create({
   textFont2: {
     height: '20%',
     color: 'black',
-    textAlign: 'center',
     fontSize: height / 40,
     justifyContent: 'center',
     alignItems: 'center',

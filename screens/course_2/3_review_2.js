@@ -36,7 +36,6 @@ export default function Course2Review2 ({ navigation }) {
         <LessonButton navigation={navigation} nextScreen='Course2Review3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
 
-
       <StatusBar style='auto' />
     </LinearGradient>
   )

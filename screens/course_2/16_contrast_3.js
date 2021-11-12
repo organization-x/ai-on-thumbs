@@ -12,7 +12,7 @@ const width = Dimensions.get('window').width
 export default function Course2Contrast3 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.lessonContent} >
+      <View style={styles.lessonContent}>
         <View>
           <LessonHeader style={styles.header}>Remember:</LessonHeader>
         </View>
@@ -97,5 +97,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   }
-
 })
