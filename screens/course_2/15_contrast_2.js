@@ -11,7 +11,7 @@ const width = Dimensions.get('window').width
 export default function Course2Contrast2 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.container} >
+      <View style={styles.container}>
         <View style={styles.information}>
           <Text style={styles.textFont}>Since brighter pixels are higher in value, and darker pixels are lower in value,</Text>
         </View>
@@ -73,5 +73,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   }
-
 })
