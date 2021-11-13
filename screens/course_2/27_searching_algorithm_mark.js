@@ -24,8 +24,8 @@ export default function Course2SearchingAlgorithmMark ({ navigation }) {
         setInformation('Nailed it! Searching in the same square, or the squares right next to the nose are great bets.')
         updateNum = numCorrect
         if (updateNum + 1 === 6) {
-          setTopText('Look at how much time this method will save us!')
-          setInformation('Even when using 16 squares, our computer only needed to look in seven of the squares after scanning for a nose.')
+          setTopText('Great job! Think about how much time this method will save us!')
+          setInformation('We only needed to look in seven of the sixteen squares after scanning for a nose.')
           setIsFinished(true)
         }
         setNumCorrect(updateNum + 1)

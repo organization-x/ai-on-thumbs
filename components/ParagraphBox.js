@@ -13,14 +13,14 @@ export default function ParagraphBox ({ text }) {
 
 const styles = StyleSheet.create({
   box: {
-    marginVertical: 15,
+    marginVertical: 10,
     backgroundColor: '#8378e8',
     borderRadius: 10,
-    padding: 10
+    padding: 8
   },
   paragraph: {
     color: 'white',
-    fontSize: height/34,
+    fontSize: height/36,
     textAlign: 'center'
   }
 })
