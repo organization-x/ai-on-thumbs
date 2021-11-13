@@ -6,7 +6,7 @@ import LessonButton from "../../components/LessonButton"
 const screenHeight = Dimensions.get('screen').height
 const screenWidth = Dimensions.get('screen').width
 
-export default function Course2OceanNumbers ({ navigation }) {
+export default function App ({ navigation }) {
   return (
     <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
     <View style={styles.lowPicture}>
@@ -21,19 +21,19 @@ export default function Course2OceanNumbers ({ navigation }) {
     <View style = {styles.lessonContent}> 
       <View style={styles.textSection}>
         <Text style={styles.mainText}>SO</Text>
-        <Text style={styles.secondaryText}>If a photo is an ocean of numbers, how does a computer tell eyes from noses?</Text>
+        <Text style={styles.secondaryText}>If a photo is an ocean on numbers, how does a computer tell eyes from noses?</Text>
       </View>
 
       <View style={styles.footerButtons}> 
         <LessonButton
           navigation = {navigation}
-          nextScreen = "Course2InterpretPictures"
+          nextScreen = ""
           buttonColor = "#8976C2"
           buttonText = "Back"
         />
         <LessonButton
           navigation={navigation}
-          nextScreen = "Course2PixelPatternsText"
+          nextScreen = "9_pixel_patterns_3.js"
           buttonColor = {["#32B59D", "#3AC55B"]}
           buttonText = "Continue"
         />
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     paddingVertical: 10
   },
   footerButtons: {
@@ -77,19 +77,19 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
+    fontSize: screenHeight * 0.2,
     fontSize: screenWidth/3,
-    fontWeight: "bold"
   },
   secondaryText: {
     marginVertical: 0,
     padding: 0,
-    marginHorizontal : 0 ,
+    marginHorizontal : 0,
     textShadowColor: "rgba(0, 0, 0, 0.1)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: screenWidth/11,
+    fontSize: screenHeight*0.04,
     fontWeight: "bold"
   },
   lowPicture: {
