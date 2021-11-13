@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 120,
+    fontSize: screenWidth/3,
     fontWeight: "bold"
   },
   secondaryText: {
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 40,
+    fontSize: screenWidth/11,
     fontWeight: "bold"
   },
   lowPicture: {

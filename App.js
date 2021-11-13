@@ -138,44 +138,44 @@ export default function App () {
           <Stack.Screen name='Course1EmailPrompt' component={Course1EmailPrompt} />
           <Stack.Screen name='Course1Complete' component={Course1Complete} />
 
-        {/* course 2 screen stack */}
-        <Stack.Screen name='Course2Intro' component={Course2Intro} />
-        <Stack.Screen name='Course2Review1' component={Course2Review1} />
-        <Stack.Screen name='Course2Review2' component={Course2Review2} />
-        <Stack.Screen name='Course2Review3' component={Course2Review3} />
-        <Stack.Screen name='Course2InterpretPictures' component={Course2InterpretPictures} />
-        <Stack.Screen name='Course2OceanNumbers' component={Course2OceanNumbers} />
-        <Stack.Screen name='Course2PixelPatternsText' component={Course2PixelPatternsText} />
-        <Stack.Screen name='Course2PixelPatternsInteractive' component={Course2PixelPatternsInteractive} />
-        <Stack.Screen name='Course2FilterFeatures1' component={Course2FilterFeatures1} />
-        <Stack.Screen name='Course2FilterFeatures2' component={Course2FilterFeatures2} />
-        <Stack.Screen name='Course2FilterFeatures3' component={Course2FilterFeatures3} />
-        <Stack.Screen name='Course2FilterFeatures4' component={Course2FilterFeatures4} />
-        <Stack.Screen name='Course2FilterFeatures5' component={Course2FilterFeatures5} />
-        <Stack.Screen name='Course2Contrast1' component={Course2Contrast1} />
-        <Stack.Screen name='Course2Contrast2' component={Course2Contrast2} />
-        <Stack.Screen name='Course2Contrast3' component={Course2Contrast3} />
-        <Stack.Screen name='Course2ContrastMCQ' component={Course2ContrastMCQ} />
-        <Stack.Screen name='Course2DraggableFilter' component={Course2DraggableFilter} />
-        <Stack.Screen name='Course2DraggableCompleted' component={Course2DraggableCompleted} />
-        <Stack.Screen name='Course2DraggableExplanation' component={Course2DraggableExplanation} />
-        <Stack.Screen name='Course2ScanAll1' component={Course2ScanAll1} />
-        <Stack.Screen name='Course2ScanAll2Wrong' component={Course2ScanAll2Wrong} />
-        <Stack.Screen name='Course2ScanAll2Correct' component={Course2ScanAll2Correct} />
-        <Stack.Screen name='Course2ScanAll3' component={Course2ScanAll3} />
-        <Stack.Screen name='Course2ScanAll4' component={Course2ScanAll4} />
-        <Stack.Screen name='Course2ScanAll5' component={Course2ScanAll5} />
-        <Stack.Screen name='Course2SearchingAlgorithmFeatures' component={Course2SearchingAlgorithmFeatures} />
-        <Stack.Screen name='Course2GettingHangAlgorithms' component={Course2GettingHangAlgorithms} />
-        <Stack.Screen name='Course2SearchingAlgorithmMark' component={Course2SearchingAlgorithmMark} />
-        <Stack.Screen name='Course2Congrats' component={Course2Congrats} />
-        <Stack.Screen name='Course2AlgorithmReview1' component={Course2AlgorithmReview1} />
-        <Stack.Screen name='Course2AlgorithmReview2' component={Course2AlgorithmReview2} />
-        <Stack.Screen name='Course2AlgorithmReview3' component={Course2AlgorithmReview3} />
-        <Stack.Screen name='Course2AppStoreReview' component={Course2AppStoreReview} />
-        <Stack.Screen name='Course2Email' component={Course2Email} />
-        <Stack.Screen name='Course2Selfie' component={Course2Selfie} />
-        <Stack.Screen name='Course2FaceDetection' component={Course2FaceDetection} />
+          {/* course 2 screen stack */}
+          <Stack.Screen name='Course2Intro' component={Course2Intro} />
+          <Stack.Screen name='Course2Review1' component={Course2Review1} />
+          <Stack.Screen name='Course2Review2' component={Course2Review2} />
+          <Stack.Screen name='Course2Review3' component={Course2Review3} />
+          <Stack.Screen name='Course2InterpretPictures' component={Course2InterpretPictures} />
+          <Stack.Screen name='Course2OceanNumbers' component={Course2OceanNumbers} />
+          <Stack.Screen name='Course2PixelPatternsText' component={Course2PixelPatternsText} />
+          <Stack.Screen name='Course2PixelPatternsInteractive' component={Course2PixelPatternsInteractive} />
+          <Stack.Screen name='Course2FilterFeatures1' component={Course2FilterFeatures1} />
+          <Stack.Screen name='Course2FilterFeatures2' component={Course2FilterFeatures2} />
+          <Stack.Screen name='Course2FilterFeatures3' component={Course2FilterFeatures3} />
+          <Stack.Screen name='Course2FilterFeatures4' component={Course2FilterFeatures4} />
+          <Stack.Screen name='Course2FilterFeatures5' component={Course2FilterFeatures5} />
+          <Stack.Screen name='Course2Contrast1' component={Course2Contrast1} />
+          <Stack.Screen name='Course2Contrast2' component={Course2Contrast2} />
+          <Stack.Screen name='Course2Contrast3' component={Course2Contrast3} />
+          <Stack.Screen name='Course2ContrastMCQ' component={Course2ContrastMCQ} />
+          <Stack.Screen name='Course2DraggableFilter' component={Course2DraggableFilter} />
+          <Stack.Screen name='Course2DraggableCompleted' component={Course2DraggableCompleted} />
+          <Stack.Screen name='Course2DraggableExplanation' component={Course2DraggableExplanation} />
+          <Stack.Screen name='Course2ScanAll1' component={Course2ScanAll1} />
+          <Stack.Screen name='Course2ScanAll2Wrong' component={Course2ScanAll2Wrong} />
+          <Stack.Screen name='Course2ScanAll2Correct' component={Course2ScanAll2Correct} />
+          <Stack.Screen name='Course2ScanAll3' component={Course2ScanAll3} />
+          <Stack.Screen name='Course2ScanAll4' component={Course2ScanAll4} />
+          <Stack.Screen name='Course2ScanAll5' component={Course2ScanAll5} />
+          <Stack.Screen name='Course2SearchingAlgorithmFeatures' component={Course2SearchingAlgorithmFeatures} />
+          <Stack.Screen name='Course2GettingHangAlgorithms' component={Course2GettingHangAlgorithms} />
+          <Stack.Screen name='Course2SearchingAlgorithmMark' component={Course2SearchingAlgorithmMark} />
+          <Stack.Screen name='Course2Congrats' component={Course2Congrats} />
+          <Stack.Screen name='Course2AlgorithmReview1' component={Course2AlgorithmReview1} />
+          <Stack.Screen name='Course2AlgorithmReview2' component={Course2AlgorithmReview2} />
+          <Stack.Screen name='Course2AlgorithmReview3' component={Course2AlgorithmReview3} />
+          <Stack.Screen name='Course2AppStoreReview' component={Course2AppStoreReview} />
+          <Stack.Screen name='Course2Email' component={Course2Email} />
+          <Stack.Screen name='Course2Selfie' component={Course2Selfie} />
+          <Stack.Screen name='Course2FaceDetection' component={Course2FaceDetection} />
 
         </Stack.Navigator>
       </NavigationContainer>

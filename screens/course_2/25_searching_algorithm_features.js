@@ -16,9 +16,10 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
   const [isVisible6, setIsVisible6] = React.useState(false)
   const [isVisible10, setIsVisible10] = React.useState(false)
   const [upperScreenText, setUpperScreenText] = React.useState("Let's say you find something that looks like a pair of eyes on an image, where would you search for a nose?")
-  const [lowerScreenText, setLowerScreenText] = React.useState('Tap where you think you might find the nose on the grid until it pops up!')
-  const backgroundColor = '#DECFBE'
-  const [opacities, setOpacities] = React.useState([1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+  const [lowerScreenText, setLowerScreenText] = React.useState('Tap where you think the nose on the grid is!')
+  const backgroundColor = '#D9D9D9'
+  const[opacities, setOpacities] = React.useState([1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+
   const grid = []
   const disableMap = {1: isVisible1, 3: isVisible3, 6: isVisible6, 10: isVisible10
   }
@@ -82,7 +83,7 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
       updateOpacities[5] = 0
       setOpacities(updateOpacities)
       setUpperScreenText("That's right, we would look below the eyes! Now, where would you search for the left ear?")
-      setLowerScreenText('Tap where you think you may find the left ear on the grid until it pops up!')
+      setLowerScreenText('Tap where you think the left ear on the grid is!')
       setCurrentSquare(1)
       setPartsLeft(3)
     } else if (partsLeft === 3) {
@@ -99,7 +100,7 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
       updateOpacities[2] = 0
       setOpacities(updateOpacities)
       setUpperScreenText("Now, we're just missing the mouth. Our face is coming together!")
-      setLowerScreenText('Tap where you think you may find the mouth on the grid until it pops up!')
+      setLowerScreenText('Tap where you think the mouth on the grid is!')
       setCurrentSquare(10)
       setPartsLeft(1)
     } else if (partsLeft === 1) {
@@ -107,23 +108,27 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
       updateOpacities = opacities
       updateOpacities[9] = 0
       setOpacities(updateOpacities)
-      setUpperScreenText('Awesome job!!!')
-      setLowerScreenText("Great find! That's a lot easier than searching every single square with every single filter, isn't it?")
+      setUpperScreenText("Great find! That's a lot easier than searching every single square with every single filter, isn't it?")
+      setLowerScreenText('')
       setPartsLeft(0)
     }
   }
 
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View styles={styles.lessonContent}>
+      <View style={styles.lessonContent}>
         <Text style={styles.textFont}>{upperScreenText}</Text>
 
         <Text style={styles.textFont2}>{lowerScreenText}</Text>
+      </View>
 
+      <View style={styles.interactive}>
         <ImageBackground source={require('../../assets/course_2/Grid.png')} resizeMode='cover' style={styles.grid}>
           {grid}
         </ImageBackground>
       </View>
+
+
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course2ScanAll5' buttonColor='#8976C2' buttonText='Back' />
@@ -140,7 +145,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-
   lessonContent: {
     flex: 1,
     paddingHorizontal: 20
@@ -149,38 +153,29 @@ const styles = StyleSheet.create({
   information: {
     justifyContent: 'center',
     alignItems: 'center',
-    textAlign: 'center',
-    marginBottom: 30
+    justifyContent: 'space-evenly',
   },
-
-  information2: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center'
-  },
-
   textFont: {
-    marginTop: height / 20,
     color: 'white',
     fontSize: height / 30,
     fontWeight: 'bold',
-    height: '25%',
     justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
   },
-
   textFont2: {
-    height: '20%',
     color: 'black',
     fontSize: height / 40,
     justifyContent: 'center',
-    alignItems: 'center',
     textAlign: 'center',
-    marginBottom: height / -15
   },
-
+  interactive: {
+    flex: 1.5,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   grid: {
+    flex: 1,
+    margin: height / 17,
     flexDirection: 'row',
     flexWrap: 'wrap',
     backgroundColor: '#DECFBE',
@@ -188,27 +183,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     aspectRatio: 1,
     borderColor: 'black',
-    borderWidth: 5,
-    alignItems: 'center',
-    zIndex: 1
+    borderWidth: 7,
   },
-
   box: {
-    margin: 1,
+    margin: 0.5,
     width: '24.3%',
     height: '24%',
     justifyContent: 'center',
     alignItems: 'center'
   },
-
-  box2: {
-    margin: 1,
-    width: '24.3%',
-    height: '24%',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',

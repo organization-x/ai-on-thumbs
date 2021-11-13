@@ -1,26 +1,23 @@
 import React, { useState } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Dimensions, Text } from 'react-native'
 import Course2FilterDetection from '../../components/Course2FilterDetection'
-import Tip from '../../components/Tip'
-import LessonHeader from '../../components/TopLessonParagraph'
 import LessonButton from '../../components/LessonButton'
 import ParagraphBox from '../../components/ParagraphBox'
 import { LinearGradient } from 'expo-linear-gradient'
-import TopLessonParagraph from '../../components/TopLessonParagraph'
+
+const height = Dimensions.get('window').height
 
 export default function Course2DraggableFilter ({ navigation }) {
   const [imageXOffset, setImageXOffset] = useState(0)
   const [imageYOffset, setImageYOffset] = useState(0)
-
   const [filterText, setFilterText] = useState('')
-
   const [found, setFound] = useState(false)
 
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
-      <TopLessonParagraph>Move the filter around the face to find a matching pixel pattern.</TopLessonParagraph>
+      <Text style={styles.topText}>Drag and release the filter around the face to find a matching pixel pattern.</Text>
       <View
-        style={{ flex: 1 }} onLayout={(event) => {
+        style={styles.component} onLayout={(event) => {
           // get dimensions of container and
           const { x, y } = event.nativeEvent.layout
           setImageXOffset(x)
@@ -52,6 +49,23 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  component: {
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingVertical: 15
+  },
+  topText: {
+    marginTop: height / 20,
+    padding: 10,
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+    textAlign: 'center',
+    color: 'white',
+    fontSize: height / 30,
+    fontWeight: 'bold',
+    marginBottom: height / 25
   },
   footerButtons: {
     marginBottom: 10,
