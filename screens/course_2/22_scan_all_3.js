@@ -4,6 +4,9 @@ import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 22: Scan all info 3')
+
 
 const height = Dimensions.get('window').height
 

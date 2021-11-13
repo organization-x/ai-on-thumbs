@@ -11,6 +11,9 @@ import Toast from '../../components/Toast'
 import * as FileSystem from 'expo-file-system'
 import { manipulateAsync, SaveFormat } from 'expo-image-manipulator'
 import { LinearGradient } from 'expo-linear-gradient'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 34: Selfie Screen')
+
 
 const height = Dimensions.get('window').height
 
@@ -126,7 +129,7 @@ export default function Course2Selfie ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
 
-      <View style={ {alignItems: 'center'} }>
+      <View style={{ alignItems: 'center' }}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       </View>
 
@@ -138,7 +141,7 @@ export default function Course2Selfie ({ navigation }) {
           : null}
       </View>
 
-      <View style={ {alignItems: 'center'} }>
+      <View style={{ alignItems: 'center' }}>
         <ActionButton
           onPress={() => hasPermission
             ? openCamera()
@@ -179,7 +182,7 @@ export default function Course2Selfie ({ navigation }) {
 const styles = StyleSheet.create({
   logo: {
     height: height / 7,
-    marginTop: height / 12,
+    marginTop: height / 12
   },
   buttonView: {
     flex: 1,
@@ -197,7 +200,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 27,
     paddingVertical: 17
-  },  
+  },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',

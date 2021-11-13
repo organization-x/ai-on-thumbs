@@ -5,6 +5,8 @@ import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import GridMCQ from '../../components/GridMCQ'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 17: Contrast MCQ Screen')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width

@@ -6,6 +6,9 @@ import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import * as Sharing from 'expo-sharing'
 import * as FileSystem from 'expo-file-system'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 35: Face Detection Screen')
+
 const windowHeight = Dimensions.get('window').height
 
 export default function Course2FaceDetection ({ route, navigation }) {
@@ -18,7 +21,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
 
   const shareData = async (context) => {
     if (!(await Sharing.isAvailableAsync())) {
-      alert('Uh oh, sharing isn`t available on your platform') //TODO SENTRY LOGGING DELETE ERROR 
+      alert('Uh oh, sharing isn`t available on your platform') // TODO SENTRY LOGGING DELETE ERROR 
       return
     }
     try {
@@ -56,10 +59,9 @@ export default function Course2FaceDetection ({ route, navigation }) {
         </View>
       </Modal>
 
-      {context !== null
-      ?
+      {context !== null ?
         <TouchableOpacity
-          style={styles.imageContainer} 
+          style={styles.imageContainer}
           onPress={() => shareData(context).catch(err => { console.log(err.message) })
           // TODO: LOG ERROR TO SENTRY
         }> 
