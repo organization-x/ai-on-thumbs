@@ -12,21 +12,18 @@ const width = Dimensions.get('window').width
 export default function Course2Contrast3 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.lessonContent} >
-        <View>
-          <LessonHeader style={styles.header}>Remember:</LessonHeader>
-        </View>
-        <View style={styles.information}>
-          <Text style={styles.textFont}>Brighter pixels are higher in value and darker pixels are lower in value.</Text>
-        </View>
+      <View style={styles.container} >
+        <Text style={styles.header}>Remember:</Text>
 
-        <View>
-          <Image style={styles.image} source={require('../../assets/course_2/pixelContrast2.png')} />
-        </View>
+        <Text style={styles.textFont}>Brighter pixels are higher in value and darker pixels are lower in value.</Text>
 
-        <View style={styles.information2}>
-          <Text style={styles.textFont2}>Notice how the more similar the brightness is, the less contrast there is between the pixels!</Text>
-        </View>
+
+
+        <Image style={styles.image} source={require('../../assets/course_2/pixelContrast2.png')} />
+  
+
+        <Text style={styles.textFont2}>Notice how the more similar the brightness is, the less contrast there is between the pixels!</Text>
+
       </View>
 
       <View style={styles.footerButtons}>
@@ -41,33 +38,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15
-  },
-
-  lessonContent: {
-    flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingVertical: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center'
   },
 
   header: {
+    marginTop: height/30,
+    justifyContent: 'center',
     textAlign: 'center',
-    marginBottom: height / 50
-  },
-
-  information: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center'
-  },
-
-  information2: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center'
+    fontSize: height/20,
+    color: 'white',
+    fontWeight: 'bold'
   },
 
   textFont: {
+    marginTop: height/40,
     color: 'white',
     textAlign: 'center',
     fontSize: height / 27
@@ -84,11 +71,8 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     justifyContent: 'center',
     alignItems: 'center',
-    width: width / 1.2,
-    height: width / 1.2,
-    marginLeft: width / -50,
-    marginTop: width / -15,
-    marginBottom: width / -15
+    height: width / 1.9,
+    margin: height / 45
   },
 
   footerButtons: {

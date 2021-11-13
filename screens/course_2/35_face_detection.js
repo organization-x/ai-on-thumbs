@@ -3,16 +3,13 @@
 import React, { useState } from 'react'
 import { StyleSheet, View, Image, Text, Dimensions, TouchableOpacity, Modal } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import LessonButton from "../../components/LessonButton"
-import * as Sharing from 'expo-sharing'; 
+import LessonButton from '../../components/LessonButton'
+import * as Sharing from 'expo-sharing'
 import * as FileSystem from 'expo-file-system'
+const windowHeight = Dimensions.get('window').height
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
-
-
-export default function Course2FaceDetection ( { route, navigation } ) {
-  const { context } = route.params;
+export default function Course2FaceDetection ({ route, navigation }) {
+  const { context } = route.params
   const [modalVisible, setModalVisible] = useState(false)
 
   function displayModal (show) {
@@ -21,13 +18,13 @@ export default function Course2FaceDetection ( { route, navigation } ) {
 
   const shareData = async (context) => {
     if (!(await Sharing.isAvailableAsync())) {
-      alert(`Uh oh, sharing isn't available on your platform`);
-      return;
+      alert('Uh oh, sharing isn`t available on your platform') //TODO SENTRY LOGGING DELETE ERROR 
+      return
     }
-    try{
-      let name = 'face_detection.png';
-      let filepath = `${FileSystem.documentDirectory}/${name}`;;
-      await FileSystem.writeAsStringAsync(filepath, context, {encoding: 'base64'});
+    try {
+      const name = 'face_detection.png'
+      const filepath = `${FileSystem.documentDirectory}/${name}`
+      await FileSystem.writeAsStringAsync(filepath, context, { encoding: 'base64' })
       await Sharing.shareAsync(filepath, { mimeType: 'image/png' })
     } catch (e) {
       // TODO: add SENTRY LOGGING HERE.
@@ -36,8 +33,8 @@ export default function Course2FaceDetection ( { route, navigation } ) {
   }
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
-      <View style={{ alignItems: 'center'}}>
-        <Image style={styles.logo} source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
+      <View style={{ alignItems: 'center' }}>
+        <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       </View>
       <Text style={styles.mainText}> Click your photo to share your results and show others that you know how AI works!</Text>
 
@@ -58,41 +55,41 @@ export default function Course2FaceDetection ( { route, navigation } ) {
           </View>
         </View>
       </Modal>
-      
-      {context !== null ?
-        <TouchableOpacity 
-        style={styles.imageContainer} 
-        onPress={() => shareData(context).catch(err => { console.log(err.message) })
-        //TODO: LOG ERROR TO SENTRY
+
+      {context !== null
+      ?
+        <TouchableOpacity
+          style={styles.imageContainer} 
+          onPress={() => shareData(context).catch(err => { console.log(err.message) })
+          // TODO: LOG ERROR TO SENTRY
         }> 
           <Image style={styles.image} source={{ uri: `data:image/png;base64,${context}` }} />
         </TouchableOpacity>
       : <View style={styles.imageContainer}>
-        <Image style={styles.noPhotoImage} source={require('../../assets/course_2/scan.png')}/>
-        <Text style={styles.noPhotoText}> (No photo taken)</Text>
-        </View>
-      }        
+          <Image style={styles.noPhotoImage} source={require('../../assets/course_2/scan.png')} />
+          <Text style={styles.noPhotoText}> (No photo taken)</Text>
+        </View>}
 
-      {context !== null ?
-        <TouchableOpacity onPress={() => { displayModal(true)}}>
+      {context !== null 
+      ?
+        <TouchableOpacity onPress={() => { displayModal(true)} }>
           <Text style={styles.secondText}> Face not detected? Tap here for help.</Text>
         </TouchableOpacity>
-      :
-      null}
+      : null}
 
       <View style={styles.footerButtons}>
         <LessonButton
-          navigation = {navigation}
-          nextScreen = "Course2Selfie"
-          buttonColor = "#8976C2"
-          buttonText = "Back"
+          navigation={navigation}
+          nextScreen='Course2Selfie'
+          buttonColor='#8976C2'
+          buttonText='Back'
         />
 
         <LessonButton
-          navigation = {navigation}
-          nextScreen = "Courses"
-          buttonColor = {["#32B59D", "#3AC55B"]}
-          buttonText = "Go to Home"
+          navigation={navigation}
+          nextScreen='Courses'
+          buttonColor={['#32B59D', '#3AC55B']}
+          buttonText='Go to Home'
         />
       </View>
     </LinearGradient>
@@ -101,9 +98,8 @@ export default function Course2FaceDetection ( { route, navigation } ) {
 
 const styles = StyleSheet.create({
   logo: {
-    width: 325,
-    height: 128,
-    marginTop: 40,
+    height: windowHeight / 7,
+    marginTop: windowHeight / 12,
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -114,39 +110,39 @@ const styles = StyleSheet.create({
   },
   mainText: {
     padding: 10,
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
-    color: "white",
-    fontSize: windowHeight/30,
-    fontWeight: "bold"
+    textAlign: 'center',
+    color: 'white',
+    fontSize: windowHeight / 32,
+    fontWeight: 'bold'
   },
   noPhotoText: {
     padding: 10,
-    marginTop: '5%',
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    marginTop: '2%',
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
-    color: "black",
-    fontSize: windowHeight/25,
-    fontWeight: "bold"
+    textAlign: 'center',
+    color: 'black',
+    fontSize: windowHeight / 38,
+    fontWeight: 'bold'
   },
   secondText: {
     padding: 30,
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
+    textAlign: 'center',
     fontWeight: 'bold',
-    color: "black",
-    fontSize: windowHeight/42
+    color: 'black',
+    fontSize: windowHeight / 42
   },
   footerButtons: {
     marginBottom: 10,
-    flexDirection: "row",
-    justifyContent: "space-between"
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   imageContainer: { 
     flex: 1,
@@ -166,9 +162,8 @@ const styles = StyleSheet.create({
     borderColor: 'black'
   },
   noPhotoImage: {
-    height: windowHeight/3,
-    width:  windowHeight/3,
-    marginTop: 10,
+    height: windowHeight / 3.2,
+    width: windowHeight / 3.2,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
@@ -237,5 +232,5 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'center',
     fontWeight: 'bold'
-  },
+  }
 })

@@ -1,16 +1,16 @@
 // Getting the hang of the algorithm? Let’s try one final example with two real faces!
 
-import React from "react"
-import { View, Text, StyleSheet, Dimensions } from "react-native"
-import { LinearGradient } from "expo-linear-gradient"
-import LessonButton from "../../components/LessonButton"
+import React from 'react'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
+import LessonButton from '../../components/LessonButton'
 
 const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
 
-export default function Course2GettingHangAlgorithms({ navigation }) {
+
+export default function Course2GettingHangAlgorithms ({ navigation }) {
   return (
-    <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           Getting the hang of the algorithm?
@@ -21,20 +21,19 @@ export default function Course2GettingHangAlgorithms({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        
 
         <LessonButton
-          navigation = {navigation}
-          nextScreen = "Course2SearchingAlgorithmFeatures"
-          buttonColor = "#8976C2"
-          buttonText = "Back"
+          navigation={navigation}
+          nextScreen='Course2SearchingAlgorithmFeatures'
+          buttonColor='#8976C2'
+          buttonText='Back'
         />
 
         <LessonButton
           navigation={navigation}
-          nextScreen = "Course2SearchingAlgorithmMark"
-          buttonColor = {["#32B59D", "#3AC55B"]}
-          buttonText = "Continue"
+          nextScreen='Course2SearchingAlgorithmMark'
+          buttonColor={['#32B59D', '#3AC55B']}
+          buttonText='Continue'
         />
       </View>
     </LinearGradient>
@@ -65,7 +64,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: height / 20,
     fontWeight: "bold",
-    marginVertical : height / 20
+    marginVertical: height / 20
   }
 })
-

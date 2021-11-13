@@ -12,17 +12,12 @@ export default function Course2Contrast2 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.container} >
-        <View style={styles.information}>
-          <Text style={styles.textFont}>Since brighter pixels are higher in value, and darker pixels are lower in value,</Text>
-        </View>
+        <Text style={styles.textFont}>Since brighter pixels are higher in value, and darker pixels are lower in value,</Text>
 
-        <View>
-          <Image style={styles.image} source={require('../../assets/course_2/pixelContrast1.png')} />
-        </View>
+        <Image style={styles.image} source={require('../../assets/course_2/pixelContrast1.png')} />
 
-        <View style={styles.information2}>
-          <Text style={styles.textFont}>we can find their difference to get the contrast.</Text>
-        </View>
+        <Text style={styles.textFont}>we can find their difference to get the contrast.</Text>
+
       </View>
 
       <View style={styles.footerButtons}>
@@ -37,21 +32,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingVertical: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   information: {
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    marginTop: 60,
-    marginBottom: height / -18
-  },
-
-  information2: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center'
+    margin: height/20,
   },
 
   textFont: {
@@ -61,11 +51,9 @@ const styles = StyleSheet.create({
   },
 
   image: {
+    margin: height/22,
     resizeMode: 'contain',
-    width: width / 1.2,
-    height: width / 1.2,
-    marginLeft: width / -60,
-    marginBottom: width / -10
+    height: height / 4,
   },
 
   footerButtons: {

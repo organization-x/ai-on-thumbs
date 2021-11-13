@@ -71,14 +71,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "white",
     fontSize: height / 35,
-    marginTop : height / 40,
+    marginTop : height / 25,
     marginBottom : height / 30
   }, 
   image: {
     resizeMode: 'contain',
     width : '95%',
-    marginVertical : '-15%',
-    height : height / 3
+    height : height / 4
   }
 })
 

@@ -12,27 +12,27 @@ export default function CoursesScreen ({ navigation }) {
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
         <Text style={styles.header}>Your AI Journey</Text>
-          <CourseCard
-            navigation={navigation}
-            lessonScreen='Course1Intro'
-            gradColors={['#8233C5', '#F02FE2']}
-            title='Intro to Facial Recognition'
-            desc='This lesson will teach you how to see through the "eyes" of a computer, and the first steps for facial recognition.'
-            ratingandduration='Beginner: 5 minutes'
-          />
-          <CourseCard
-            navigation={navigation}
-            lessonScreen='Course2Intro'
-            gradColors={['#8233C5', '#3C4687']}
-            title='Facial Recognition, part 2'
-            desc='This lesson will teach you how facial recognition works using a real-life algorithm, starting right from where we left off last lesson.'
-            ratingandduration='Beginner: 5 minutes'
-          />
-          <CourseAd
-            gradColors={['#33D05F', '#09713F']}
-            title='Want to learn more about AI?'
-            desc='Immerse yourself in artificial intelligence and learn to build incredible real-world AI products at ai-camp.org. No prior experience necessary!'
-          />
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='Course1Intro'
+          gradColors={['#8233C5', '#F02FE2']}
+          title='Intro to Facial Recognition'
+          desc='This lesson will teach you how to see through the "eyes" of a computer, and the first steps for facial recognition.'
+          ratingandduration='Beginner: 5 minutes'
+        />
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='Course2GettingHangAlgorithms'
+          gradColors={['#8233C5', '#3C4687']}
+          title='Facial Recognition, part 2'
+          desc='This lesson will teach you how facial recognition works using a real-life algorithm, starting right from where we left off last lesson.'
+          ratingandduration='Beginner: 5 minutes'
+        />
+        <CourseAd
+          gradColors={['#33D05F', '#09713F']}
+          title='Want to learn more about AI?'
+          desc='Immerse yourself in artificial intelligence and learn to build incredible real-world AI products at ai-camp.org. No prior experience necessary!'
+        />
       </ScrollView>
     </LinearGradient>
   )

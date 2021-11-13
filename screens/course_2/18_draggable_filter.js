@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import Course2FilterDetection from '../../components/Course2FilterDetection'
-import Tip from '../../components/Tip'
-import LessonHeader from '../../components/TopLessonParagraph'
 import LessonButton from '../../components/LessonButton'
 import ParagraphBox from '../../components/ParagraphBox'
 import { LinearGradient } from 'expo-linear-gradient'

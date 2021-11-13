@@ -3,10 +3,8 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { StyleSheet, View, ActivityIndicator, Dimensions, Text, Image } from 'react-native'
 import Background from '../../components/Background'
-import Header from '../../components/Header'
-import FootPrint from '../../components/FootPrint'
 import ActionButton from '../../components/ActionButton'
-import LessonButton from "../../components/LessonButton"
+import LessonButton from '../../components/LessonButton'
 import { AntDesign } from '@expo/vector-icons'
 import { Camera } from 'expo-camera'
 import Toast from '../../components/Toast'
@@ -14,7 +12,7 @@ import * as FileSystem from 'expo-file-system'
 import { manipulateAsync, SaveFormat } from 'expo-image-manipulator'
 import { LinearGradient } from 'expo-linear-gradient'
 
-const height = Dimensions.get('window').height;
+const height = Dimensions.get('window').height
 
 export default function Course2Selfie ({ navigation }) {
   const [hasPermission, setHasPermission] = useState(null)
@@ -40,14 +38,14 @@ export default function Course2Selfie ({ navigation }) {
     return result.uri
   }
 
-  const sendFaceRequest = async (image_string) => {
+  const sendFaceRequest = async (imageString) => {
     let res
     try {
       res = await fetch('https://app.ai-camp.org/image',
         {
           method: 'POST',
           body: JSON.stringify(
-            { base_64: image_string }
+            { base_64: imageString }
           ),
           headers: {
             'Content-type': 'application/json'
@@ -58,11 +56,11 @@ export default function Course2Selfie ({ navigation }) {
       console.log(error.response.data) // NOTE - use "error.response.data` (not "error")
       // TODO: add SENTRY error handling
     }
-    // TODO: If try catch fails, the uncaught exception will be thrown here. TALK to alex about what to add down the line to catch it. 
+    // TODO: If try catch fails, the uncaught exception will be thrown here. TALK to alex about what to add down the line to catch it.
     const data = await res.text().catch((error) => {
-      //TODO: add SENTRY error handling
+      // TODO: add SENTRY error handling
       console.log(error.message) // NOTE - use "error.response.data` (not "error")
-    });
+    })
     return data
   }
 
@@ -70,12 +68,12 @@ export default function Course2Selfie ({ navigation }) {
     (async () => {
       const { status } = await Camera.requestPermissionsAsync()
       setHasPermission(status === 'granted')
+    })().catch(error => {
+      // TODO: ADD SENTRY LOGGIN' and erase line below
+
+      console.log(error.message)
     })
-    ().catch(error => {
-          //TODO: ADD SENTRY LOGGIN
-          console.log(error.message)
-          })
-    }, [])
+  }, [])
 
   if (hasPermission === null) {
     return (
@@ -113,7 +111,7 @@ export default function Course2Selfie ({ navigation }) {
       >
         <ActionButton
           style={{ marginBottom: 30 }}
-          onPress={() => takePhoto().catch(err => { console.log(error.response.data) }) } //TODO: ADD SENTRY LOG
+          onPress={() => takePhoto().catch(err => { console.log(err.response.data) })} // TODO: ADD SENTRY LOG
           title='Take Photo'
           icon={<AntDesign
             name='camera' style={{ marginLeft: 5 }}
@@ -128,63 +126,60 @@ export default function Course2Selfie ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
 
-      <View style={{ alignItems: 'center'}}>
-        <Image style={styles.logo} source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
+      <View style={ {alignItems: 'center'} }>
+        <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       </View>
 
-      <View style={{ flex : 1 }}>
+      <View style={{ flex: 1 }}>
         <Text style={styles.mainText}>You've completed your first lesson!</Text>
         <Text style={styles.secondText}>Take a photo of yourself to let the AI algorithm detect your face.</Text>
         {isProcessed
-        ? <Text style={styles.thirdText}> Your photo is taken! Go to the next page to see your results!</Text>
-        : null}
+          ? <Text style={styles.thirdText}> Your photo is taken! Go to the next page to see your results!</Text>
+          : null}
       </View>
 
-      <View style={{alignItems: 'center'}}>
-      <ActionButton
-        onPress={() => hasPermission
-          ? openCamera()
-          : setToast(
-            { type: 'error', message: 'Go to settings to enable the camera.' }
-          )}
-        title='Open Camera'
-        icon={<AntDesign name='camera' style={{ marginLeft: 5 }} size={30} color='black' />}
-      />
+      <View style={ {alignItems: 'center'} }>
+        <ActionButton
+          onPress={() => hasPermission
+            ? openCamera()
+            : setToast(
+              { type: 'error', message: 'Go to settings to enable the camera.' }
+            )}
+          title='Open Camera'
+          icon={<AntDesign name='camera' style={{ marginLeft: 5 }} size={30} color='black' />}
+        />
       </View>
 
       {loading
         ? <ActivityIndicator size='large' color='#409C69' style={{ marginTop: '40%' }} />
-          : null}
+        : null}
 
-      <View style={styles.footerButtons}>        
+      <View style={styles.footerButtons}>
         <LessonButton
-          navigation = {navigation}
-          nextScreen = "Course2Email"
-          buttonColor = "#8976C2"
-          buttonText = "Back"
+          navigation={navigation}
+          nextScreen='Course2Email'
+          buttonColor='#8976C2'
+          buttonText='Back'
         />
 
         <LessonButton
           navigation={navigation}
-          nextScreen = "Course2FaceDetection"
-          buttonColor = {["#32B59D", "#3AC55B"]}
-          context = {imageBase64}
-          buttonText = "Continue"
+          nextScreen='Course2FaceDetection'
+          buttonColor={['#32B59D', '#3AC55B']}
+          context={imageBase64}
+          buttonText='Continue'
         />
       </View>
 
       <Toast {...toast} onDismiss={() => setToast({ value: '', type: toast.type })} />
-     </LinearGradient>
+    </LinearGradient>
   )
 }
 
 const styles = StyleSheet.create({
   logo: {
-    width: 325,
-    height: 128,
-    marginTop: 40,
-    justifyContent: 'center',
-    alignItems: 'center'
+    height: height / 7,
+    marginTop: height / 12,
   },
   buttonView: {
     flex: 1,
@@ -201,40 +196,39 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 27,
-    paddingVertical: 17,
+    paddingVertical: 17
   },  
   footerButtons: {
     marginBottom: 10,
-    flexDirection: "row",
-    justifyContent: "space-between"
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   mainText: {
-    padding: 5,
-    marginHorizontal : 0,
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    marginTop: '5%',
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
-    color: "white",
-    fontSize: height/19,
-    fontWeight: "bold"
+    textAlign: 'center',
+    color: 'white',
+    fontSize: height / 20,
+    fontWeight: 'bold'
   },
   secondText: {
     marginTop: '5%',
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
-    color: "white",
-    fontSize: height/30,
+    textAlign: 'center',
+    color: 'white',
+    fontSize: height / 32
   },
   thirdText: {
     marginTop: '8%',
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
-    color: "black",
-    fontSize: height/32,
+    textAlign: 'center',
+    color: 'black',
+    fontSize: height / 33
   }
 })

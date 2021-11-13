@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 export default function Tip ({ tipText }) {
   return (
     <View style={styles.container}>
       <Text style={styles.tip}>
         Tip
-        {//<Image source={require('../assets/lightbulb.png')} style={{ width: 20, height: 20 }} />
+        {// <Image source={require('../assets/lightbulb.png')} style={{ width: 20, height: 20 }} />
         }
 
       </Text>

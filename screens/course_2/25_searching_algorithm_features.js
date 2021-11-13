@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
   },
 
   textFont2: {
-    height: '20%',
+    height: '5%',
     color: 'black',
     textAlign: 'center',
     fontSize: height / 40,
@@ -201,11 +201,10 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderWidth: 5,
     alignItems: 'center',
-    zIndex: 1
   },
 
   box: {
-    margin: 1,
+    margin: 0.5,
     width: '24.3%',
     height: '24%',
     justifyContent: 'center',
