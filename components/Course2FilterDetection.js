@@ -12,17 +12,18 @@ export default function Course2FilterDetection ({ found, setFound, setFilterText
   const [yDist, setYDist] = useState(100)
 
   // height and width of image (used to perform calculations for target of draggable filter)
-  const imageWidth = Dimensions.get('window').width / 1.5
-  const imageHeight = Dimensions.get('window').height / 3
+  const imageWidth = Dimensions.get('window').height / 2.6
+  const imageHeight = Dimensions.get('window').height / 2.6
+
 
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
   useEffect(() => {
-    if (Math.round(1 / xDist * 100) >= 4 && Math.round((1 / yDist * 100)) >= 6) {
+    if (Math.round(1 / xDist * 100) >= 2.5 && Math.round((1 / yDist * 100)) >= 3) {
       setFilterText('Great find!!! The filter matches up closest to the eyes because they form a horizontal line!')
-      setInitialX(dragContainerDim.width / 2.9)
-      setInitialY(Dimensions.get('window').height > 800 ? dragContainerDim.height / 6.3 : dragContainerDim.height / 12)
+      setInitialX(Dimensions.get('window').width > 400 ? dragContainerDim.width / 2.4 :  dragContainerDim.width / 2.9 )
+      setInitialY(Dimensions.get('window').height > 800 ? dragContainerDim.height / 6 : dragContainerDim.height / 6.5)
       setFound(true)
     } else {
       setInitialX(dragContainerDim.width / 2 - imageWidth / 2)
@@ -67,7 +68,7 @@ export default function Course2FilterDetection ({ found, setFound, setFilterText
               imageSource={require('../assets/course_2/horizontal_filter_with_border.png')}
               animatedViewProps={{ opacity: 0.5 }}
             // size of draggable filter for android
-              renderSize={50}
+              renderSize={imageHeight / 4}
             // original starting point of the filter on the image (top left corner)
               x={initialX}
               y={initialY}
@@ -83,7 +84,7 @@ export default function Course2FilterDetection ({ found, setFound, setFilterText
                 setDragY(e.nativeEvent.pageY - imageYOffset)
                 // target of filter is near the middle of the image (nose bridge)
                 setXDist(Math.abs(dragContainerDim.width / 2 - dragX))
-                setYDist(Math.abs(dragContainerDim.height / 2.2 - dragY))
+                setYDist(Math.abs(dragContainerDim.height / 2 - dragY))
               }}
             >
 
@@ -112,14 +113,15 @@ export default function Course2FilterDetection ({ found, setFound, setFilterText
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     marginVertical: 20,
     justifyContent: 'center',
-    paddingTop: 15,
+    paddingTop: 10,
     padding: 8
   },
   paragraph: {
-    marginVertical: 8,
-    fontSize: 18,
+    marginTop: 20,
+    fontSize: Dimensions.get('window').height / 40,
     fontWeight: 'bold',
     textAlign: 'center'
   },

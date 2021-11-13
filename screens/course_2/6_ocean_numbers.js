@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "white",
     fontSize: screenHeight * 0.2,
-    fontWeight: "bold"
+    fontSize: screenWidth/3,
   },
   secondaryText: {
     marginVertical: 0,

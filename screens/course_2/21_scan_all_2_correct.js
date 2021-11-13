@@ -11,7 +11,7 @@ export default function Course2ScanAll2Correct ({navigation}) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.lessonContent}>
-        <Text style={styles.mainText} >No, we don't!</Text>
+        <Text style={styles.mainText} > You're right, we don't!</Text>
         <Text style={styles.secondText} >But do you know why?</Text>
         <Text style={styles.thirdText} >Let’s understand why next.</Text>
       </View>

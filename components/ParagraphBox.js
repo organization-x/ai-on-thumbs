@@ -1,5 +1,7 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
+
+const height = Dimensions.get('window').height
 
 export default function ParagraphBox ({ text }) {
   return (
@@ -11,13 +13,14 @@ export default function ParagraphBox ({ text }) {
 
 const styles = StyleSheet.create({
   box: {
-    marginVertical: 20,
+    marginVertical: 10,
     backgroundColor: '#8378e8',
     borderRadius: 10,
-    padding: 15
+    padding: 8
   },
   paragraph: {
     color: 'white',
-    fontSize: 18
+    fontSize: height/36,
+    textAlign: 'center'
   }
 })

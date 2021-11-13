@@ -1,29 +1,43 @@
-   
-// Algorithm Review 2
+// Computers see pixels as a matrix of numbers. The brighter the pixel, the larger the number!
 
 import React from 'react'
-import { StyleSheet, View, Text, Dimensions } from 'react-native'
-
-import LessonButton from '../../components/LessonButton'
-
+import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
+import LessonButton from '../../components/LessonButton'
+import LessonHeader from '../../components/LessonHeader'
 
 const height = Dimensions.get('window').height
 
 export default function Course2AlgorithmReview2 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.interactive}>
-        <Text style={styles.bigText}>Lesson Review</Text>
-        <Text style={styles.boldText}>1</Text>
-        <Text style={styles.text}>Photos are composed of smaller parts: pixels.</Text>
-        <Text style={styles.boldText}>2</Text>
-        <Text style={styles.text}>Computers use filters to identify facial features. </Text>
+      <View style={styles.textSection}>
+        <LessonHeader style={styles.header}>Algorithm Review</LessonHeader>
+
+        <View style={styles.number}>
+          <Text style={styles.numberFont}>1</Text>
+        </View>
+
+        <View style={styles.information}>
+          <Text style={styles.textFont}>Photos are composed of smaller parts: pixels.</Text>
+        </View>
+
+        <View styles={styles.number}>
+          <Text style={styles.numberFont}>2</Text>
+        </View>
+
+        <View style={styles.information2}>
+          <Text style={styles.textFont}>Computers use filters to identify facial features.</Text>
+        </View>
       </View>
+
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course2AlgorithmReview1' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course2AlgorithmReview3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
+
+
+      <StatusBar style='auto' />
     </LinearGradient>
   )
 }
@@ -34,45 +48,59 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  interactive: {
+
+  textSection: {
     flex: 1,
-    borderRadius: 7,
-    overflow: 'hidden',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  text: {
+
+  header: {
+    textAlign: 'center',
+    marginBottom: 5
+  },
+
+  number: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center'
+  },
+
+  numberFont: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
+    fontSize: height / 14,
+    fontWeight: 'bold',
+    opacity: 0.5
+  },
+
+  information: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginBottom: 10
+  },
+
+  information2: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginBottom: height / 3.8
+  },
+
+  textFont: {
+    color: 'white',
+    textAlign: 'center',
     fontSize: height / 30
   },
-  boldText: {
-    textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 5,
-    marginTop: '5%',
-    textAlign: 'center',
-    color: 'white',
-    fontSize: height / 25,
-    fontWeight: 'bold'
-  },
-  bigText: {
-    textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 5,
-    marginTop: '20%',
-    marginBottom: '10%',
-    textAlign: 'center',
-    color: 'white',
-    fontSize: height / 18,
-    fontWeight: 'bold'
-  },
+
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
   }
+
 })

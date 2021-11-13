@@ -7,6 +7,10 @@ import { LinearGradient } from 'expo-linear-gradient'
 import StarRating from 'react-native-star-rating'
 import TopLessonParagraph from '../../components/TopLessonParagraph'
 import LottieView from 'lottie-react-native'
+import * as Sentry from 'sentry-expo'
+
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 21: Rating Screen')
 
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {
@@ -47,7 +51,7 @@ export default function Course2AppStoreReview ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
-      <TopLessonParagraph> Did you have fun learning AI with us?</TopLessonParagraph>
+      <Text style={styles.mainText}> Did you have fun learning AI with us?</Text>
       <View style={styles.starView}>
         <StarRating
           disabled={false}
@@ -76,7 +80,7 @@ export default function Course2AppStoreReview ({ navigation }) {
         </View>
       </Modal>
       <View style={styles.footerButtons}>
-        <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course2Selfie' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course2AlgorithmReview3' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course2Email' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
@@ -120,6 +124,14 @@ const styles = {
       width: 0,
       height: 2
     }
+  },
+  mainText: {
+    color: 'white',
+    fontStyle: 'italic',
+    fontSize: height / 25,
+    textAlign: 'center',
+    marginTop: height / 20,
+    fontWeight: 'bold'
   },
   subText: {
     color: 'white',
