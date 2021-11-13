@@ -13,11 +13,8 @@ export default function Course2Contrast2 ({ navigation }) {
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.container} >
         <Text style={styles.textFont}>Since brighter pixels are higher in value, and darker pixels are lower in value,</Text>
-
         <Image style={styles.image} source={require('../../assets/course_2/pixelContrast1.png')} />
-
         <Text style={styles.textFont}>we can find their difference to get the contrast.</Text>
-
       </View>
 
       <View style={styles.footerButtons}>
@@ -61,5 +58,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   }
-
 })
