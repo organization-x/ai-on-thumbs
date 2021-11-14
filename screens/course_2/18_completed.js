@@ -2,12 +2,11 @@ import React from 'react'
 import { StyleSheet, View, Image, Dimensions, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+import * as Analytics from 'expo-firebase-analytics'
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
-import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 18.2: Draggable Completed Screen')
-
 
 export default function Course2DraggableCompleted ({ navigation }) {
   return (

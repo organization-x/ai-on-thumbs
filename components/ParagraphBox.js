@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     color: 'white',
-    fontSize: height/36,
+    fontSize: height / 36,
     textAlign: 'center'
   }
 })

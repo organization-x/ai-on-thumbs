@@ -5,7 +5,6 @@ import LessonButton from '../../components/LessonButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 1: Intro Screen')
 
-
 const height = Dimensions.get('window').height
 
 export default function Course2Intro ({ navigation }) {

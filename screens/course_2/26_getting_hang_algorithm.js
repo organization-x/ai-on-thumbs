@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   mainText: {
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',

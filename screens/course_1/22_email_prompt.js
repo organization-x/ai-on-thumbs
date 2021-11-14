@@ -5,14 +5,13 @@ import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollVi
 import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
 import { LinearGradient } from 'expo-linear-gradient'
-
+import * as Sentry from 'sentry-expo'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 1 Screen 22: Email Prompt Screen')
 
 const height = Dimensions.get('window').height
 
 export default function Course1EmailPrompt ({ navigation }) {
-
   async function handlePress () {
     Linking.openURL('https://ai-camp.org')
     await Analytics.logEvent('Webpage Visit').catch(err => { Sentry.Native.captureException(err.response.data) })
