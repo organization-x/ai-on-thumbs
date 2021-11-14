@@ -13,7 +13,7 @@ const width = Dimensions.get('window').width
 export default function Course2Contrast2 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.container} >
+      <View style={styles.container}>
         <Text style={styles.textFont}>Since brighter pixels are higher in value, and darker pixels are lower in value,</Text>
         <Image style={styles.image} source={require('../../assets/course_2/pixelContrast1.png')} />
         <Text style={styles.textFont}>we can find their difference to get the contrast.</Text>
@@ -33,14 +33,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
 
   information: {
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    margin: height/20,
+    margin: height / 20
   },
 
   textFont: {
@@ -50,9 +50,9 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    margin: height/22,
+    margin: height / 22,
     resizeMode: 'contain',
-    height: height / 4,
+    height: height / 4
   },
 
   footerButtons: {
