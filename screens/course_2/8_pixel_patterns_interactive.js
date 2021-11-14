@@ -160,12 +160,13 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    alignItems: 'center'
+    alignItems: 'center',
+    margin: 5
   },
   flexRow: {
-    flex: 10,
+    flex: 1,
     marginTop: '5%',
-    marginBottom: '20%',
+    marginBottom: '10%',
     flexDirection: 'row',
     alignItems: 'center'
   },
@@ -184,7 +185,7 @@ const styles = StyleSheet.create({
   image: {
     flexDirection: 'column',
     alignItems: 'center',
-    height: windowHeight / 4,
+    height: windowHeight / 5,
     resizeMode: 'contain',
     top: 0,
     position: 'relative'
@@ -193,15 +194,15 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '7%',
+    marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: windowWidth / 14,
+    fontSize: windowHeight / 30,
     fontWeight: 'bold'
   },
   lightSmallBoldText: {
     fontWeight: 'bold',
-    fontSize: windowHeight/40,
+    fontSize: windowHeight/45,
     color: "white",
     textAlign: 'center'
   },
@@ -242,8 +243,8 @@ const styles = StyleSheet.create({
     flex: 1,
     top: 0,
     flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    justifyContent: 'space-between'
   },
   eyeButton1: {
     height: windowHeight/7/3,

@@ -27,15 +27,15 @@ export default function App ({ navigation }) {
       <View style={styles.footerButtons}> 
         <LessonButton
           navigation = {navigation}
-          nextScreen = ""
-          buttonColor = "#8976C2"
-          buttonText = "Back"
+          nextScreen = 'Course2InterpretPictures'
+          buttonColor = '#8976C2'
+          buttonText = 'Back'
         />
         <LessonButton
           navigation={navigation}
-          nextScreen = "9_pixel_patterns_3.js"
-          buttonColor = {["#32B59D", "#3AC55B"]}
-          buttonText = "Continue"
+          nextScreen = 'Course2PixelPatternsText'
+          buttonColor = {['#32B59D', '#3AC55B']}
+          buttonText = 'Continue'
         />
       </View>
     </View> 
@@ -46,37 +46,37 @@ export default function App ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
+    flexDirection: 'column',
     paddingHorizontal: 10,
     paddingVertical: 10
   },
   footerButtons: {
     marginBottom: 10,
-    flexDirection: "row",
-    justifyContent: "space-between"
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   lessonContent: {
     flex : 1, 
     flexDirection: 'column',
     paddingHorizontal : 0, 
     paddingVertical : 0,
-    justifyContent: "flex-start"
+    justifyContent: 'flex-start'
   },
   textSection: {
     flex: 1,
     paddingHorizontal: 10,
     paddingVertical: screenHeight * 0.05,
-    alignItems: "center"
+    alignItems: 'center'
   },
   mainText: {
     marginVertical: 0,
     padding: 0,
     marginHorizontal : 0,
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
-    color: "white",
+    textAlign: 'center',
+    color: 'white',
     fontSize: screenHeight * 0.2,
     fontSize: screenWidth/3,
   },
@@ -84,19 +84,19 @@ const styles = StyleSheet.create({
     marginVertical: 0,
     padding: 0,
     marginHorizontal : 0,
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
-    color: "white",
+    textAlign: 'center',
+    color: 'white',
     fontSize: screenHeight*0.04,
-    fontWeight: "bold"
+    fontWeight: 'bold'
   },
   lowPicture: {
-    alignSelf: "flex-start",
+    alignSelf: 'flex-start',
     bottom: 0,
     flex: 1,
-    position: "absolute",
+    position: 'absolute',
     width: screenWidth,
     height: screenHeight * 0.4
   }
