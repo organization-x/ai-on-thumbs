@@ -1,10 +1,10 @@
-// Computers see pixels as a matrix of numbers. The brighter the pixel, the larger the number!
-
 import React from 'react'
 import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 3: Review 2 Screen')
 
 const height = Dimensions.get('window').height
 

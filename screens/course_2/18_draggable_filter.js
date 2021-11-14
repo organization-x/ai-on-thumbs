@@ -4,6 +4,8 @@ import Course2FilterDetection from '../../components/Course2FilterDetection'
 import LessonButton from '../../components/LessonButton'
 import ParagraphBox from '../../components/ParagraphBox'
 import { LinearGradient } from 'expo-linear-gradient'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 18.1: Draggable Filter Screen')
 
 const height = Dimensions.get('window').height
 

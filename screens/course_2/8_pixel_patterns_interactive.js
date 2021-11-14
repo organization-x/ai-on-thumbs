@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import { StyleSheet, View, Text, Image, Switch, ScrollView, Dimensions, TouchableOpacity, ImageBackground, SafeAreaView } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 8: Pixel Patterns Interactive Screen')
 
 const windowHeight = Dimensions.get('window').height
 const windowWidth = Dimensions.get('window').width
@@ -188,6 +190,7 @@ const styles = StyleSheet.create({
     height: windowHeight / 5,
     resizeMode: 'contain',
     top: 0,
+    marginBottom: 10,
     position: 'relative'
   },
   headerText: {
@@ -197,28 +200,28 @@ const styles = StyleSheet.create({
     marginTop: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: windowHeight / 30,
+    fontSize: windowHeight / 33,
     fontWeight: 'bold'
   },
   lightSmallBoldText: {
     fontWeight: 'bold',
-    fontSize: windowHeight/45,
+    fontSize: windowHeight/42,
     color: "white",
     textAlign: 'center'
   },
   darkSmallBoldText: {
     fontWeight: 'bold',
-    fontSize: windowHeight/40,
+    fontSize: windowHeight/42,
     color: "black",
     textAlign: 'center'
   },
   lightSmallRegularText: {
-    fontSize: windowHeight/40,
+    fontSize: windowHeight/42,
     color: "white",
     textAlign: 'center'
   },
   darkSmallRegularText: {
-    fontSize: windowHeight/40,
+    fontSize: windowHeight/42,
     color: "black",
     textAlign: 'center'
   },
@@ -241,46 +244,46 @@ const styles = StyleSheet.create({
   },
   allButtonArea: {
     flex: 1,
-    top: 0,
+    top: -5,
     flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'flex-start',
-    justifyContent: 'space-between'
   },
   eyeButton1: {
-    height: windowHeight/7/3,
-    width: windowWidth/2.5/1.5,
+    height: windowHeight/7.5/3,
+    width: windowWidth/2.75/1.5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   eyeButton2: {
-    height: windowHeight/3.5/1.35,
-    width: windowWidth/2.5/3.5,
+    height: windowHeight/3.75/1.35,
+    width: windowWidth/2.75/3.5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   eyeButton3: {
-    height: windowHeight/7/1.85,
-    width: windowWidth/2.5/1.75,
+    height: windowHeight/7.5/1.85,
+    width: windowWidth/2.75/1.75,
     justifyContent: 'center',
     alignItems: 'center'
   },
   button1Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth/2.5,
-    height: windowHeight/7
+    width: windowWidth/2.75,
+    height: windowHeight/7.5
   },
   button2Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth/2.5,
-    height: windowHeight/3.5
+    width: windowWidth/2.75,
+    height: windowHeight/3.75
   },
   button3Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth/2.5,
-    height: windowHeight/7
+    width: windowWidth/2.75,
+    height: windowHeight/ 7.5
   },
   switch: {
     bottom: 0,

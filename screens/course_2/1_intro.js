@@ -1,9 +1,10 @@
 // Welcome to your second lesson in facial recognition! Let’s review what we learned last time.
-
 import React from 'react'
 import { StyleSheet, View, Text, ImageBackground, Dimensions } from 'react-native'
-
 import LessonButton from '../../components/LessonButton'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 1: Intro Screen')
+
 
 const height = Dimensions.get('window').height
 

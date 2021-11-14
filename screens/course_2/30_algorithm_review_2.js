@@ -5,6 +5,8 @@ import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 30: Algo Review 2')
 
 const height = Dimensions.get('window').height
 
@@ -35,7 +37,6 @@ export default function Course2AlgorithmReview2 ({ navigation }) {
         <LessonButton navigation={navigation} nextScreen='Course2AlgorithmReview1' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course2AlgorithmReview3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
-
 
       <StatusBar style='auto' />
     </LinearGradient>

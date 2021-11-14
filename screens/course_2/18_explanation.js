@@ -2,6 +2,8 @@ import React from 'react'
 import { StyleSheet, View, Image, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 18.3: Draggable Explanation Screen')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -10,10 +12,10 @@ export default function Course2DraggableExplanation ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
       <View style={{ flex: 1 }}>
-      <Text style={styles.topText}>How does the computer use contrast to help?</Text>
+        <Text style={styles.topText}>How does the computer use contrast to help?</Text>
         <View style={styles.image}>
           <Image
-            style={(width <= 400) ? {width: width / 1.5, height: width / 1.5, borderRadius: 7} : {width: width / 2, height: width / 2, borderRadius: 7}}
+            style={(width <= 400) ? { width: width / 1.5, height: width / 1.5, borderRadius: 7 } : { width: width / 2, height: width / 2, borderRadius: 7 }}
             source={require('../../assets/course_2/markcuban_hybrid_with_filter.png')}
           />
         </View>
