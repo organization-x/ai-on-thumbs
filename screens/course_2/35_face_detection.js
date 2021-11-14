@@ -1,7 +1,7 @@
 // Share your results to show that you know how AI works!
 
 import React, { useState } from 'react'
-import { StyleSheet, View, Image, Text, Dimensions, TouchableOpacity, Modal } from 'react-native'
+import { StyleSheet, View, Image, Text, Dimensions, TouchableOpacity, Modal, Alert } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import * as Sharing from 'expo-sharing'
@@ -21,7 +21,18 @@ export default function Course2FaceDetection ({ route, navigation }) {
 
   const shareData = async (context) => {
     if (!(await Sharing.isAvailableAsync())) {
-      alert('Uh oh, sharing isn`t available on your platform') // TODO SENTRY LOGGING DELETE ERROR 
+      Alert.alert(
+        "Sharing not possible",
+        "Sharing is not available on your current device.",
+        [
+          {
+            text: "Cancel",
+            onPress: () => console.log("Cancel Pressed"),
+            style: "cancel"
+          },
+          { text: "OK", onPress: () => console.log("OK Pressed") }
+        ]
+      );
       return
     }
     try {
@@ -30,8 +41,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
       await FileSystem.writeAsStringAsync(filepath, context, { encoding: 'base64' })
       await Sharing.shareAsync(filepath, { mimeType: 'image/png' })
     } catch (e) {
-      // TODO: add SENTRY LOGGING HERE.
-      console.log(e.message)
+        Sentry.Native.captureException(e.response.message)
     }
   }
   return (
@@ -62,8 +72,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
       {context !== null ?
         <TouchableOpacity
           style={styles.imageContainer}
-          onPress={() => shareData(context).catch(err => { console.log(err.message) })
-          // TODO: LOG ERROR TO SENTRY
+          onPress={() => shareData(context).catch(err => { Sentry.Native.captureException(err.message) })
         }> 
           <Image style={styles.image} source={{ uri: `data:image/png;base64,${context}` }} />
         </TouchableOpacity>
@@ -101,7 +110,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
 const styles = StyleSheet.create({
   logo: {
     height: windowHeight / 7,
-    marginTop: windowHeight / 12,
+    marginTop: windowHeight / 20,
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -153,8 +162,8 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   image: {
-    width: '95%',
-    height: '95%',
+    height: windowHeight / 3.2,
+    width: windowHeight / 3.2,
     resizeMode: 'cover',
     marginTop: 10,
     alignItems: 'center',

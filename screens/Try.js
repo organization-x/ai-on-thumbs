@@ -51,7 +51,6 @@ export default function Try ({ navigation }) {
       )
     } catch (error) {
       console.log(error.response.data) // NOTE - use "error.response.data` (not "error")
-      // TODO: add error handling
     }
 
     const data = await res.text()

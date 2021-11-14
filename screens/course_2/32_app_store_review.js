@@ -88,8 +88,8 @@ export default function Course2AppStoreReview ({ navigation }) {
 
 const styles = {
   logo: {
-    height: height / 7,
-    marginTop: height / 12
+    height: height / 6.5,
+    marginTop: height / 20
   },
   container: {
     flex: 1,

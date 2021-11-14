@@ -11,9 +11,10 @@ import Toast from '../../components/Toast'
 import * as FileSystem from 'expo-file-system'
 import { manipulateAsync, SaveFormat } from 'expo-image-manipulator'
 import { LinearGradient } from 'expo-linear-gradient'
+import * as Sentry from 'sentry-expo'
+
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 34: Selfie Screen')
-
 
 const height = Dimensions.get('window').height
 
@@ -56,14 +57,9 @@ export default function Course2Selfie ({ navigation }) {
         }
       )
     } catch (error) {
-      console.log(error.response.data) // NOTE - use "error.response.data` (not "error")
-      // TODO: add SENTRY error handling
+      Sentry.Native.captureException(error.response.data)
     }
-    // TODO: If try catch fails, the uncaught exception will be thrown here. TALK to alex about what to add down the line to catch it.
-    const data = await res.text().catch((error) => {
-      // TODO: add SENTRY error handling
-      console.log(error.message) // NOTE - use "error.response.data` (not "error")
-    })
+    const data = await res.text().catch((error) => {Sentry.Native.captureException(error.message)})
     return data
   }
 
@@ -71,12 +67,7 @@ export default function Course2Selfie ({ navigation }) {
     (async () => {
       const { status } = await Camera.requestPermissionsAsync()
       setHasPermission(status === 'granted')
-    })().catch(error => {
-      // TODO: ADD SENTRY LOGGIN' and erase line below
-
-      console.log(error.message)
-    })
-  }, [])
+    })().catch(error => {Sentry.Native.captureException(error.message)})}, [])
 
   if (hasPermission === null) {
     return (
@@ -114,7 +105,7 @@ export default function Course2Selfie ({ navigation }) {
       >
         <ActionButton
           style={{ marginBottom: 30 }}
-          onPress={() => takePhoto().catch(err => { console.log(err.response.data) })} // TODO: ADD SENTRY LOG
+          onPress={() => takePhoto().catch(err => { Sentry.Native.captureException(err.response.data) })}
           title='Take Photo'
           icon={<AntDesign
             name='camera' style={{ marginLeft: 5 }}
@@ -181,8 +172,8 @@ export default function Course2Selfie ({ navigation }) {
 
 const styles = StyleSheet.create({
   logo: {
-    height: height / 7,
-    marginTop: height / 12
+    height: height / 6.5,
+    marginTop: height / 20
   },
   buttonView: {
     flex: 1,

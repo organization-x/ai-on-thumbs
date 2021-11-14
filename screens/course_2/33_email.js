@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   logo: {
-    height: height / 7,
-    marginTop: height / 12
+    height: height / 6.5,
+    marginTop: height / 20
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
