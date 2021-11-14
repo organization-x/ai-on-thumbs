@@ -1,7 +1,10 @@
 import React from "react"
-import { StyleSheet, Text, View} from 'react-native'
+import { Dimensions, StyleSheet, Text, View} from 'react-native'
 import { LinearGradient } from "expo-linear-gradient"
 import LessonButton from "../../components/LessonButton"
+
+const windowHeight = Dimensions.get('window').height
+const windowWidth = Dimensions.get('window').width
 
 export default function Course2PixelPatternsText ({ navigation }) {
   return (
@@ -58,7 +61,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 30,
+    fontSize: windowHeight/22,
     fontWeight: "bold"
   },
   main2Text: {
@@ -71,6 +74,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: "center",
     color: "white",
-    fontSize: 30
+    fontSize: windowHeight/22
   }
 })
