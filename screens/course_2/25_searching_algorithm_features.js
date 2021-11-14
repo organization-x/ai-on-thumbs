@@ -23,8 +23,7 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
   const[opacities, setOpacities] = React.useState([1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
 
   const grid = []
-  const disableMap = {1: isVisible1, 3: isVisible3, 6: isVisible6, 10: isVisible10
-  }
+  const disableMap = { 1: isVisible1, 3: isVisible3, 6: isVisible6, 10: isVisible10 }
 
   for (let i = 0; i < 16; i++) {
     if ([0, 2, 5, 9].includes(i)) {
