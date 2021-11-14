@@ -15,16 +15,9 @@ export default function Course2Contrast3 ({ navigation }) {
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.container} >
         <Text style={styles.header}>Remember:</Text>
-
         <Text style={styles.textFont}>Brighter pixels are higher in value and darker pixels are lower in value.</Text>
-
-
-
         <Image style={styles.image} source={require('../../assets/course_2/pixelContrast2.png')} />
-  
-
         <Text style={styles.textFont2}>Notice how the more similar the brightness is, the less contrast there is between the pixels!</Text>
-
       </View>
 
       <View style={styles.footerButtons}>
@@ -82,5 +75,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   }
-
 })

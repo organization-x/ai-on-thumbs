@@ -93,7 +93,7 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
                 <View style={styles.button1Background}>
                 <TouchableOpacity onPress={pressButton1}>
                   <ImageBackground source={require('../../assets/course_2/rectangleButton1.png')} style={styles.button1Background}>
-                    <Image source={require('../../assets/course_2/eyeButton1.jpg')} style={styles.eyeButton1} />
+                    <Image source={require('../../assets/course_2/eyeButton1.png')} style={styles.eyeButton1} />
                   </ImageBackground>
                 </TouchableOpacity>
                 </View>
@@ -126,7 +126,8 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
             <View style={styles.flexLeft}>
               <Text style={darkOrLightBoldStyle}>Human{'\n'}Vision</Text>
             </View>
-            <View style={styles.flexCenter}>
+            
+            <View style={styles.switch}>
               <Switch
                 trackColor='#767577'
                 thumbColor='#34BF7D'
@@ -134,6 +135,7 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
                 onValueChange={toggleSwitch}
                 value={isEnabled}
               />
+            
             </View>
             <View style={styles.flexRight}>
               <Text style={darkOrLightBoldStyle}>Computer{'\n'}Vision</Text>
@@ -160,12 +162,13 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    alignItems: 'center'
+    alignItems: 'center',
+    margin: 5
   },
   flexRow: {
-    flex: 10,
+    flex: 1,
     marginTop: '5%',
-    marginBottom: '20%',
+    marginBottom: '10%',
     flexDirection: 'row',
     alignItems: 'center'
   },
@@ -282,4 +285,9 @@ const styles = StyleSheet.create({
     width: windowWidth/2.75,
     height: windowHeight/ 7.5
   },
+  switch: {
+    bottom: 0,
+    position: 'relative',
+    alignItems: 'center'
+  }
 })
