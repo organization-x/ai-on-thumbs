@@ -59,7 +59,7 @@ export default function Course2Selfie ({ navigation }) {
     } catch (error) {
       Sentry.Native.captureException(error.response.data)
     }
-    const data = await res.text().catch((error) => {Sentry.Native.captureException(error.message)})
+    const data = await res.text().catch((error) => { Sentry.Native.captureException(error.message) })
     return data
   }
 
@@ -67,7 +67,8 @@ export default function Course2Selfie ({ navigation }) {
     (async () => {
       const { status } = await Camera.requestPermissionsAsync()
       setHasPermission(status === 'granted')
-    })().catch(error => {Sentry.Native.captureException(error.message)})}, [])
+    })().catch(error => { Sentry.Native.captureException(error.message) })
+  }, [])
 
   if (hasPermission === null) {
     return (

@@ -73,13 +73,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingVertical: 15
   },
   grid: {
     flex: 1,
     alignContent: 'center',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   gridContainer: {
     flex: 1,

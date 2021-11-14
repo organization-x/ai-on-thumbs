@@ -12,11 +12,11 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 const imageSide = width / 1.4
 
-export default function Course2ContrastMCQ ({navigation}) {
+export default function Course2ContrastMCQ ({ navigation }) {
   const [paraText, setParaText] = useState('Select an answer')
 
   const handleAnswer = ({ correct }) => {
-    if(correct) {
+    if (correct) {
       setParaText('Nailed it!')
     } else {
       setParaText('Not quite, try again!')
@@ -25,26 +25,26 @@ export default function Course2ContrastMCQ ({navigation}) {
 
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.textSection} >
-        <Text style={styles.mainText} >Find the difference between all of the bright pixels and dark pixels, then select the correct contrast value.</Text>
+      <View style={styles.textSection}>
+        <Text style={styles.mainText}>Find the difference between all of the bright pixels and dark pixels, then select the correct contrast value.</Text>
         <Image style={styles.image} source={require('../../assets/course_2/contrastMCQ.png')} />
-        <GridMCQ style={styles.MCQ} answers={['6', '-3', '0', '3']}  correctAnswer='6' handleChoice={handleAnswer} />
-        <Text style={styles.secondText} >{paraText}</Text>
+        <GridMCQ style={styles.MCQ} answers={['6', '-3', '0', '3']} correctAnswer='6' handleChoice={handleAnswer} />
+        <Text style={styles.secondText}>{paraText}</Text>
       </View>
 
       <View style={styles.footerButtons}>
         <LessonButton
-            navigation={navigation}
-            nextScreen='Course2Contrast3'
-            buttonColor='#8976C2'
-            buttonText='Back'
-          />
-          <LessonButton
-            navigation={navigation}
-            nextScreen='Course2DraggableFilter'
-            buttonColor={['#32B59D', '#3AC55B']}
-            buttonText='Continue'
-          />
+          navigation={navigation}
+          nextScreen='Course2Contrast3'
+          buttonColor='#8976C2'
+          buttonText='Back'
+        />
+        <LessonButton
+          navigation={navigation}
+          nextScreen='Course2DraggableFilter'
+          buttonColor={['#32B59D', '#3AC55B']}
+          buttonText='Continue'
+        />
       </View>
     </LinearGradient>
   )
@@ -90,6 +90,6 @@ const styles = StyleSheet.create({
     marginTop: 25,
     marginBottom: 15,
     width: width / 1.4,
-    borderRadius: 10,
+    borderRadius: 10
   }
 })

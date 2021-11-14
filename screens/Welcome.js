@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: 'white',
     fontSize: height / 25,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   modalTitleText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 20,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   modalText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     fontSize: height / 40,
     fontFamily: 'Avenir',
     color: 'white',
-    textAlign: 'center',
+    textAlign: 'center'
   },
   modalBoldText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

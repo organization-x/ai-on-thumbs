@@ -8,7 +8,6 @@ import LessonHeader from '../../components/LessonHeader'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 31: Algo Review 3')
 
-
 const height = Dimensions.get('window').height
 
 export default function Course2AlgorithmReview3 ({ navigation }) {

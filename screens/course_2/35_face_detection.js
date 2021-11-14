@@ -7,6 +7,7 @@ import LessonButton from '../../components/LessonButton'
 import * as Sharing from 'expo-sharing'
 import * as FileSystem from 'expo-file-system'
 import * as Analytics from 'expo-firebase-analytics'
+import * as Sentry from 'sentry-expo'
 Analytics.setCurrentScreen('Course 2 Screen 35: Face Detection Screen')
 
 const windowHeight = Dimensions.get('window').height
@@ -22,17 +23,17 @@ export default function Course2FaceDetection ({ route, navigation }) {
   const shareData = async (context) => {
     if (!(await Sharing.isAvailableAsync())) {
       Alert.alert(
-        "Sharing not possible",
-        "Sharing is not available on your current device.",
+        'Sharing not possible',
+        'Sharing is not available on your current device.',
         [
           {
-            text: "Cancel",
-            onPress: () => console.log("Cancel Pressed"),
-            style: "cancel"
+            text: 'Cancel',
+            onPress: () => console.log('Cancel Pressed'),
+            style: 'cancel'
           },
-          { text: "OK", onPress: () => console.log("OK Pressed") }
+          { text: 'OK', onPress: () => console.log('OK Pressed') }
         ]
-      );
+      )
       return
     }
     try {
@@ -41,7 +42,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
       await FileSystem.writeAsStringAsync(filepath, context, { encoding: 'base64' })
       await Sharing.shareAsync(filepath, { mimeType: 'image/png' })
     } catch (e) {
-        Sentry.Native.captureException(e.response.message)
+      Sentry.Native.captureException(e.response.message)
     }
   }
   return (
@@ -69,24 +70,23 @@ export default function Course2FaceDetection ({ route, navigation }) {
         </View>
       </Modal>
 
-      {context !== null ?
-        <TouchableOpacity
-          style={styles.imageContainer}
-          onPress={() => shareData(context).catch(err => { Sentry.Native.captureException(err.message) })
-        }> 
+      {context !== null
+        ? <TouchableOpacity
+            style={styles.imageContainer}
+            onPress={() => shareData(context).catch(err => { Sentry.Native.captureException(err.message) })}
+          >
           <Image style={styles.image} source={{ uri: `data:image/png;base64,${context}` }} />
         </TouchableOpacity>
-      : <View style={styles.imageContainer}>
+        : <View style={styles.imageContainer}>
           <Image style={styles.noPhotoImage} source={require('../../assets/course_2/scan.png')} />
           <Text style={styles.noPhotoText}> (No photo taken)</Text>
-        </View>}
+          </View>}
 
-      {context !== null 
-      ?
-        <TouchableOpacity onPress={() => { displayModal(true)} }>
+      {context !== null
+        ? <TouchableOpacity onPress={() => { displayModal(true) }}>
           <Text style={styles.secondText}> Face not detected? Tap here for help.</Text>
-        </TouchableOpacity>
-      : null}
+          </TouchableOpacity>
+        : null}
 
       <View style={styles.footerButtons}>
         <LessonButton
@@ -155,11 +155,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
-  imageContainer: { 
+  imageContainer: {
     flex: 1,
     alignItems: 'center',
     paddingHorizontal: 10,
-    paddingVertical: 10,
+    paddingVertical: 10
   },
   image: {
     height: windowHeight / 3.2,

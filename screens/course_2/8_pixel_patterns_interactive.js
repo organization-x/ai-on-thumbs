@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, View, Text, Image, Switch, ScrollView, Dimensions, TouchableOpacity, ImageBackground, SafeAreaView } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
@@ -9,28 +9,27 @@ const windowHeight = Dimensions.get('window').height
 const windowWidth = Dimensions.get('window').width
 
 export default function Course2PixelPatternsInteractive ({ navigation }) {
-
   const [isEnabled, setIsEnabled] = useState(false)
   const toggleSwitch = () => setIsEnabled(previousState => !previousState)
 
   const [button1Pressed, button1NotPressed] = useState(false)
   const pressButton1 = () => {
     button1NotPressed(previousState => !previousState)
-    if(button2Pressed === true) {
+    if (button2Pressed === true) {
       button2NotPressed(previousState => !previousState)
     }
-    if(button3Pressed === true) {
+    if (button3Pressed === true) {
       button3NotPressed(previousState => !previousState)
     }
   }
 
-  const [button2Pressed, button2NotPressed] = useState(false) 
+  const [button2Pressed, button2NotPressed] = useState(false)
   const pressButton2 = () => {
     button2NotPressed(previousState => !previousState)
-    if(button1Pressed === true) {
+    if (button1Pressed === true) {
       button1NotPressed(previousState => !previousState)
     }
-    if(button3Pressed === true) {
+    if (button3Pressed === true) {
       button3NotPressed(previousState => !previousState)
     }
   }
@@ -38,10 +37,10 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
   const [button3Pressed, button3NotPressed] = useState(false)
   const pressButton3 = () => {
     button3NotPressed(previousState => !previousState)
-    if(button1Pressed === true) {
+    if (button1Pressed === true) {
       button1NotPressed(previousState => !previousState)
     }
-    if(button2Pressed === true) {
+    if (button2Pressed === true) {
       button2NotPressed(previousState => !previousState)
     }
   }
@@ -49,7 +48,7 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
   let lowerText
   if (button1Pressed === true) {
     lowerText = 'Of course! Our eyes have dark centers and are horizontally aligned!'
-  } else if (button2Pressed === true ) {
+  } else if (button2Pressed === true) {
     lowerText = 'Not quite! Our eyes are not vertically aligned.'
   } else if (button3Pressed === true) {
     lowerText = 'Not quite! Unless you think our eyes look like spiders!'
@@ -74,7 +73,6 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
     backgroundColor = ['#8976C2', '#E6E8FB']
   }
 
-
   return (
     <LinearGradient colors={backgroundColor} style={styles.container}>
       <ScrollView scrollEnabled={false}>
@@ -86,25 +84,25 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
 
           <View style={styles.image}>
             <Image source={src} style={styles.image} />
-          </View>  
-          
+          </View>
+
           <View style={styles.allButtonArea}>
             <View style={styles.button1and3Area}>
-                <View style={styles.button1Background}>
+              <View style={styles.button1Background}>
                 <TouchableOpacity onPress={pressButton1}>
                   <ImageBackground source={require('../../assets/course_2/rectangleButton1.png')} style={styles.button1Background}>
                     <Image source={require('../../assets/course_2/eyeButton1.png')} style={styles.eyeButton1} />
                   </ImageBackground>
                 </TouchableOpacity>
-                </View>
+              </View>
 
-                <View style={styles.button3Background}>
+              <View style={styles.button3Background}>
                 <TouchableOpacity onPress={pressButton3}>
                   <ImageBackground source={require('../../assets/course_2/rectangleButton3.png')} style={styles.button3Background}>
                     <Image source={require('../../assets/course_2/eyeButton3.png')} style={styles.eyeButton3} />
                   </ImageBackground>
                 </TouchableOpacity>
-                </View>
+              </View>
             </View>
 
             <View style={styles.button2Area}>
@@ -115,7 +113,7 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
                   </ImageBackground>
                 </TouchableOpacity>
               </View>
-            </View>  
+            </View>
           </View>
 
           <View style={styles.interactive}>
@@ -126,7 +124,7 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
             <View style={styles.flexLeft}>
               <Text style={darkOrLightBoldStyle}>Human{'\n'}Vision</Text>
             </View>
-            
+
             <View style={styles.switch}>
               <Switch
                 trackColor='#767577'
@@ -135,7 +133,7 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
                 onValueChange={toggleSwitch}
                 value={isEnabled}
               />
-            
+
             </View>
             <View style={styles.flexRight}>
               <Text style={darkOrLightBoldStyle}>Computer{'\n'}Vision</Text>
@@ -144,11 +142,11 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
         </SafeAreaView>
       </ScrollView>
 
-          <View style={styles.footerButtons}>
-            <LessonButton navigation={navigation} nextScreen='Course2PixelPatternsText' buttonColor='#8976C2' buttonText='Back' />
-            <LessonButton navigation={navigation} nextScreen='Course2FilterFeatures1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-          </View>
-        </LinearGradient>
+      <View style={styles.footerButtons}>
+        <LessonButton navigation={navigation} nextScreen='Course2PixelPatternsText' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course2FilterFeatures1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+      </View>
+    </LinearGradient>
   )
 }
 
@@ -205,24 +203,24 @@ const styles = StyleSheet.create({
   },
   lightSmallBoldText: {
     fontWeight: 'bold',
-    fontSize: windowHeight/42,
-    color: "white",
+    fontSize: windowHeight / 42,
+    color: 'white',
     textAlign: 'center'
   },
   darkSmallBoldText: {
     fontWeight: 'bold',
-    fontSize: windowHeight/42,
-    color: "black",
+    fontSize: windowHeight / 42,
+    color: 'black',
     textAlign: 'center'
   },
   lightSmallRegularText: {
-    fontSize: windowHeight/42,
-    color: "white",
+    fontSize: windowHeight / 42,
+    color: 'white',
     textAlign: 'center'
   },
   darkSmallRegularText: {
-    fontSize: windowHeight/42,
-    color: "black",
+    fontSize: windowHeight / 42,
+    color: 'black',
     textAlign: 'center'
   },
   footerButtons: {
@@ -247,43 +245,43 @@ const styles = StyleSheet.create({
     top: -5,
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'flex-start',
+    alignItems: 'flex-start'
   },
   eyeButton1: {
-    height: windowHeight/7.5/3,
-    width: windowWidth/2.75/1.5,
+    height: windowHeight / 7.5 / 3,
+    width: windowWidth / 2.75 / 1.5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   eyeButton2: {
-    height: windowHeight/3.75/1.35,
-    width: windowWidth/2.75/3.5,
+    height: windowHeight / 3.75 / 1.35,
+    width: windowWidth / 2.75 / 3.5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   eyeButton3: {
-    height: windowHeight/7.5/1.85,
-    width: windowWidth/2.75/1.75,
+    height: windowHeight / 7.5 / 1.85,
+    width: windowWidth / 2.75 / 1.75,
     justifyContent: 'center',
     alignItems: 'center'
   },
   button1Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth/2.75,
-    height: windowHeight/7.5
+    width: windowWidth / 2.75,
+    height: windowHeight / 7.5
   },
   button2Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth/2.75,
-    height: windowHeight/3.75
+    width: windowWidth / 2.75,
+    height: windowHeight / 3.75
   },
   button3Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth/2.75,
-    height: windowHeight/ 7.5
+    width: windowWidth / 2.75,
+    height: windowHeight / 7.5
   },
   switch: {
     bottom: 0,

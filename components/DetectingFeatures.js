@@ -96,7 +96,7 @@ export default function DetectingFeatures ({ found, setFound, setSimilarity, ima
                 ? (<Image style={styles.filterImage} source={require('../assets/course_2/horizontal_filter.png')} />)
                 : null
               }
-            </Draggable>
+          </Draggable>
           : null
         }
 
