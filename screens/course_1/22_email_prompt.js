@@ -5,18 +5,23 @@ import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollVi
 import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
 import { LinearGradient } from 'expo-linear-gradient'
-
+import * as Sentry from 'sentry-expo'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 1 Screen 22: Email Prompt Screen')
 
 const height = Dimensions.get('window').height
 
 export default function Course1EmailPrompt ({ navigation }) {
+  async function handlePress () {
+    Linking.openURL('https://ai-camp.org')
+    await Analytics.logEvent('Webpage Visit').catch(err => { Sentry.Native.captureException(err.response.data) })
+  }
+
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.interactive}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
-        <Text style={styles.text} onPress={() => Linking.openURL('https://ai-camp.org')}>Continue your journey by going to ai-camp.org</Text>
+        <Text style={styles.text} onPress={handlePress}>Continue your journey by going to ai-camp.org</Text>
       </View>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}

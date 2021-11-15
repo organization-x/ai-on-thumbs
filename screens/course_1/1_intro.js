@@ -9,7 +9,7 @@ Analytics.setCurrentScreen('Course 1 Screen 1: Intro Screen')
 
 export default function Course1Intro ({ navigation }) {
   return (
-    <ImageBackground source={require('../../assets/course_1/objectregbackground.png')} style={styles.container}>
+    <ImageBackground source={require('../../assets/stock/objectregbackground.png')} style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.text}>To understand how facial recognition works, we will first learn about how computers interpret faces.</Text>
       </View>

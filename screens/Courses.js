@@ -10,8 +10,8 @@ Analytics.setCurrentScreen('Courses Screen')
 export default function CoursesScreen ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <Text style={styles.header}>Your AI Journey</Text>
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
+        <Text style={styles.header}>Your AI Journey</Text>
         <CourseCard
           navigation={navigation}
           lessonScreen='Course1Intro'
@@ -22,12 +22,11 @@ export default function CoursesScreen ({ navigation }) {
         />
         <CourseCard
           navigation={navigation}
-          lessonScreen='Course1Intro'
+          lessonScreen='Course2Intro'
           gradColors={['#8233C5', '#3C4687']}
-          disabled
           title='Facial Recognition, part 2'
           desc='This lesson will teach you how facial recognition works using a real-life algorithm, starting right from where we left off last lesson.'
-          ratingandduration='Coming soon!'
+          ratingandduration='Beginner: 5 minutes'
         />
         <CourseAd
           gradColors={['#33D05F', '#09713F']}

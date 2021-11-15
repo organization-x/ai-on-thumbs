@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, View, Image, Text, TouchableOpacity, Modal, Dimensions } from 'react-native'
+import { StyleSheet, View, Image, Text, TouchableOpacity, Modal, Dimensions, ScrollView } from 'react-native'
 import LessonButton from '../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as SecureStore from 'expo-secure-store'
@@ -48,17 +48,38 @@ export default function Welcome ({ navigation }) {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalBigText}>Lesson 1 Credits!</Text>
-            <Text style={styles.modalBoldText}>Axel Mora (19)</Text>
-            <Text style={styles.modalText}>Design Lead</Text>
-            <Text style={styles.modalBoldText}>Alexander Zhou (17)</Text>
-            <Text style={styles.modalText}>Engineer</Text>
-            <Text style={styles.modalBoldText}>Rohan Joshi (14)</Text>
-            <Text style={styles.modalText}> Engineer </Text>
-            <Text style={styles.modalBoldText}> Jackson Choyce (19)</Text>
-            <Text style={styles.modalText}>Engineering Manager</Text>
-            <Text style={styles.modalBoldText}>Mitch Cutts (23)</Text>
-            <Text style={styles.modalText}>Product Manager</Text>
+            <ScrollView style={styles.creditsList} showsVerticalScrollIndicator>
+              <Text style={styles.modalTitleText}>AI on Thumbs Credits!</Text>
+              <Text style={styles.modalBigText}>Lesson 1</Text>
+              <Text style={styles.modalBoldText}>Alexander Zhou (17)</Text>
+              <Text style={styles.modalText}>Engineer</Text>
+              <Text style={styles.modalBoldText}>Rohan Joshi (14)</Text>
+              <Text style={styles.modalText}> Engineer </Text>
+              <Text style={styles.modalBoldText}>Axel Mora (19)</Text>
+              <Text style={styles.modalText}>Design Lead</Text>
+              <Text style={styles.modalBoldText}> Jackson Choyce (19)</Text>
+              <Text style={styles.modalText}>Engineering Manager</Text>
+              <Text style={styles.modalBoldText}>Mitch Cutts (23)</Text>
+              <Text style={styles.modalText}>Product Manager</Text>
+
+              <Text style={styles.modalBigText}>Lesson 2</Text>
+              <Text style={styles.modalBoldText}>Zac Brammer (17)</Text>
+              <Text style={styles.modalText}>Engineer</Text>
+              <Text style={styles.modalBoldText}>Alex Fry (18)</Text>
+              <Text style={styles.modalText}>Engineer</Text>
+              <Text style={styles.modalBoldText}>Sanjay Manoj (17)</Text>
+              <Text style={styles.modalText}>Engineer</Text>
+              <Text style={styles.modalBoldText}>Advay Aravind (15)</Text>
+              <Text style={styles.modalText}>Engineer</Text>
+              <Text style={styles.modalBoldText}>Rohan Joshi (14)</Text>
+              <Text style={styles.modalText}> Engineer </Text>
+              <Text style={styles.modalBoldText}>Axel Mora (19)</Text>
+              <Text style={styles.modalText}>Design Lead</Text>
+              <Text style={styles.modalBoldText}> Alexander Zhou (17)</Text>
+              <Text style={styles.modalText}>Engineering Manager</Text>
+              <Text style={styles.modalBoldText}>Mitch Cutts (23)</Text>
+              <Text style={styles.modalText}>Product Manager</Text>
+            </ScrollView>
             <Text style={styles.closeText} onPress={() => { setModalVisible(!modalVisible) }}>Close</Text>
           </View>
         </View>
@@ -102,10 +123,19 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     fontFamily: 'Avenir',
     marginTop: '2%',
-    marginBottom: 5,
-    textAlign: 'center',
+    textAlign: 'left',
     color: 'white',
     fontSize: height / 25,
+    fontWeight: 'bold'
+  },
+  modalTitleText: {
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+    fontFamily: 'Avenir',
+    textAlign: 'center',
+    color: 'white',
+    fontSize: height / 20,
     fontWeight: 'bold'
   },
   modalText: {
@@ -171,5 +201,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 50
+  },
+  creditsList: {
+    flexDirection: 'column'
   }
 })
