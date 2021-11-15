@@ -12,10 +12,10 @@ export default function Course2DraggableCompleted ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
       <View style={{ flex: 1 }}>
-        <Text style={styles.topText}>Move the filter around the face to find a matching pixel pattern.</Text>
+        <Text style={styles.topText}>Drag and release the filter around the face to find a matching pixel pattern.</Text>
         <View style={styles.image}>
           <Image
-            style={(width <= 400) ? { width: width / 1.4, height: width / 1.4, borderRadius: 7 } : { width: width / 2, height: width / 2, borderRadius: 7 }}
+            style={(width <= 400) ? { width: width / 1.7, height: width / 1.7, borderRadius: 7 } : { width: width / 2, height: width / 2, borderRadius: 7 }}
             source={require('../../assets/course_2/markcuban_hybrid_with_filter.png')}
           />
         </View>
