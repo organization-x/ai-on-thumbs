@@ -13,7 +13,7 @@ const width = Dimensions.get('window').width
 export default function Course2Contrast3 ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.container}>
+      <View style={styles.interactive}>
         <Text style={styles.header}>Remember:</Text>
         <Text style={styles.textFont}>Brighter pixels are higher in value and darker pixels are lower in value.</Text>
         <Image style={styles.image} source={require('../../assets/course_2/pixelContrast2.png')} />
@@ -30,6 +30,12 @@ export default function Course2Contrast3 ({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+  },
+  
+  interactive: {
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15,

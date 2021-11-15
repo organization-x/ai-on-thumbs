@@ -10,7 +10,7 @@ Analytics.setCurrentScreen('Course 2 Screen 17: Contrast MCQ Screen')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
-const imageSide = width / 1.4
+const imageSide = width > 400 ? width / 2 : width / 1.6
 
 export default function Course2ContrastMCQ ({ navigation }) {
   const [paraText, setParaText] = useState('Select an answer')
