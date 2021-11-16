@@ -5,7 +5,7 @@ Explore AI concepts using just your thumbs!!
 ### Available in the App Store and Google Play Store
 
 ## Directory Structure
-Assets - media, images, fonts, etc. organized by which lesson they are used for. 
+**Assets** - media, images, fonts, etc. organized by which lesson they are used for. 
 * Stock is for media used across multiple lessons
 
 Components - contains all the components that are used for advanced functionality (mutliple choice boxes, email prompt, magnifying glass, etc.)
