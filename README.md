@@ -1,23 +1,23 @@
 ![Logo](/assets/stock/ai-on-thumbs-logo.png)
-# AI on Thumbs
+# **AI on Thumbs**
 Explore AI concepts using just your thumbs!!
 
 ### Available in the App Store and Google Play Store
 
-## Directory Structure
+## **Directory Structure**
 **Assets** - media, images, fonts, etc. organized by which lesson they are used for. 
 * Stock is for media used across multiple lessons
 
-Components - contains all the components that are used for advanced functionality (mutliple choice boxes, email prompt, magnifying glass, etc.)
+**Components** - contains all the components that are used for advanced functionality (mutliple choice boxes, email prompt, magnifying glass, etc.)
 
-Screens - screens of the app are organized into a folder for the corresponding lesson it is a part of (course_1, course_2, etc.)
+**Screens** - screens of the app are organized into a folder for the corresponding lesson it is a part of (course_1, course_2, etc.)
 * Screens are labeled with their corresponding number (1_intro.js, 2_review.js)
 
-App.js
+**App.js**
 * Imports all the functions from their .js screen files (Course2Intro  --> './screens/course_2/1_intro')
 * Chronologically orders screens (as per their number) in the body of App.js to run everything in order
 
-## Protocols for Development
+## **Protocols for Development**
 * Create a branch for the lesson that you/your team is working on (i.e. course_2)
 * For each individual contributor, create your own branch to work on your screens, make revisions, work on anything
 * Check your screens (QC) on at least two different devices to make sure it all looks good
@@ -27,7 +27,7 @@ App.js
 * All code should be reviewed by an EM
 * EVEN IF IT IS A COMMA, MAKE THE PR
 
-## Course 1: Facial Recognition Algorithm
+## **Course 1: Facial Recognition Algorithm**
 Explore the beginning concepts of facial recognition with interactice tutorials and games! See how computers SEE images and recognize patterns.
 
 ### Authors
@@ -39,7 +39,7 @@ Explore the beginning concepts of facial recognition with interactice tutorials 
 * Rohan Joshi
 
 
-## Course 2: Facial Recognition Algorithm pt 2
+## **Course 2: Facial Recognition Algorithm pt 2**
 Delve deeper into the world of facial recognition and its advanced ideas! 
 ### Authors
 * Advay Aravind
