@@ -93,7 +93,7 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
                 ? (<Image style={styles.filterImage} source={require('../assets/course_2/horizontal_filter.png')} />)
                 : null
               }
-          </Draggable>
+            </Draggable>
           : null
         }
 

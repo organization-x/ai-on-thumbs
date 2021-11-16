@@ -5,6 +5,8 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import ConfettiCannon from 'react-native-confetti-cannon'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 28: Congrats')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -26,16 +28,18 @@ export default function Course2Congrats ({ navigation }) {
         <Text style={styles.boldText}>Now let’s review.</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton 
-          navigation={navigation} 
-          nextScreen='Course2SearchingAlgorithmMark' 
-          buttonColor='#8976C2' 
-          buttonText='Back' />
-        <LessonButton 
-        navigation={navigation} 
-        nextScreen='Course2AlgorithmReview1' 
-        buttonColor={['#32B59D', '#3AC55B']} 
-        buttonText='Continue' />
+        <LessonButton
+          navigation={navigation}
+          nextScreen='Course2SearchingAlgorithmMark'
+          buttonColor='#8976C2'
+          buttonText='Back'
+        />
+        <LessonButton
+          navigation={navigation}
+          nextScreen='Course2AlgorithmReview1'
+          buttonColor={['#32B59D', '#3AC55B']}
+          buttonText='Continue'
+        />
       </View>
     </LinearGradient>
   )

@@ -5,12 +5,11 @@ import { Text, Image, View, TouchableOpacity, Dimensions, Modal } from 'react-na
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import StarRating from 'react-native-star-rating'
-import TopLessonParagraph from '../../components/TopLessonParagraph'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 21: Rating Screen')
+Analytics.setCurrentScreen('Course 2 Screen 32: Rating Screen')
 
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {
@@ -89,8 +88,8 @@ export default function Course2AppStoreReview ({ navigation }) {
 
 const styles = {
   logo: {
-    height: height / 7,
-    marginTop: height / 12
+    height: height / 6.5,
+    marginTop: height / 20
   },
   container: {
     flex: 1,

@@ -1,4 +1,3 @@
-![Logo](/assets/stock/ai-on-thumbs-logo.png)
 # **AI on Thumbs**
 Explore AI concepts using just your thumbs!!
 

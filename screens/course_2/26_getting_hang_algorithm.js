@@ -4,9 +4,10 @@ import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 26: Getting Hang of Algorithm Info')
 
 const height = Dimensions.get('window').height
-
 
 export default function Course2GettingHangAlgorithms ({ navigation }) {
   return (
@@ -48,22 +49,22 @@ const styles = StyleSheet.create({
   },
   footerButtons: {
     marginBottom: 10,
-    flexDirection: "row",
-    justifyContent: "space-between"
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   textSection: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   mainText: {
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
-    color: "white",
+    textAlign: 'center',
+    color: 'white',
     fontSize: height / 20,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginVertical: height / 20
   }
 })

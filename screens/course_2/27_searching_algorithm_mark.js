@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { StyleSheet, Text, View, ImageBackground, Dimensions, TouchableOpacity } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 27: Searching Algorithm Mark Cuban')
 
 const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
 
 export default function Course2SearchingAlgorithmMark ({ navigation }) {
   const [topText, setTopText] = useState('Let’s say we find what we think are some noses in a photo.')
@@ -37,26 +38,32 @@ export default function Course2SearchingAlgorithmMark ({ navigation }) {
 
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <Text style={styles.bigText}> {topText} </Text>
-      <Text style={styles.darkSmallBoldText}> {information} </Text>
-      <ImageBackground source={require('../../assets/course_2/markcuban_and_wife.png')} resizeMode='cover' style={styles.gridContainer}>
-        <TouchableOpacity onPress={() => handlePress(0)} style={[styles.box, { backgroundColor: touched[0] ? 'red' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity onPress={() => handlePress(1)} style={[styles.box, { backgroundColor: touched[1] ? 'red' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity onPress={() => handlePress(2)} style={[styles.box, { backgroundColor: touched[2] ? 'red' : '#E5D3B3', opacity: 0.7 }]}/>
-        <TouchableOpacity onPress={() => handlePress(3)} style={[styles.box, { backgroundColor: touched[3] ? 'red' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity onPress={() => handlePress(4)} style={[styles.box, { backgroundColor: touched[4] ? 'red' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity onPress={() => handlePress(5)} style={[styles.box, { backgroundColor: touched[5] ? '#32CD32' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity  onPress={() => handlePress(6)} style={[styles.box, { backgroundColor: touched[6] ? '#32CD32' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity onPress={() => handlePress(7)} style={[styles.box, { backgroundColor: touched[7] ? '#32CD32' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity onPress={() => handlePress(8)} style={[styles.box, { backgroundColor: touched[8] ? '#32CD32' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity onPress={() => handlePress(9)} style={[styles.box, { backgroundColor: touched[9] ? '#32CD32' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity onPress={() => handlePress(10)} style={[styles.box, { backgroundColor: touched[10] ? 'red' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity onPress={() => handlePress(11)} style={[styles.box, { backgroundColor: touched[11] ? 'red' : '#E5D3B3', opacity: 0.7 }]}  />
-        <TouchableOpacity onPress={() => handlePress(12)} style={[styles.box, { backgroundColor: touched[12] ? 'red' : '#E5D3B3', opacity: 0.7 }]}  />
-        <TouchableOpacity onPress={() => handlePress(13)} style={[styles.box, { backgroundColor: touched[13] ? '#32CD32' : '#E5D3B3', opacity: 0.7 }]} />
-        <TouchableOpacity onPress={() => handlePress(14)} style={[styles.box, { backgroundColor: touched[14] ? 'red' : '#E5D3B3', opacity: 0.7 }]}  />
-        <TouchableOpacity onPress={() => handlePress(15)} style={[styles.box, { backgroundColor: touched[15] ? 'red' : '#E5D3B3', opacity: 0.7 }]} />
-      </ImageBackground>
+      <View style={styles.lessonContent}>
+        <Text style={styles.bigText}> {topText} </Text>
+        <Text style={styles.darkSmallBoldText}> {information} </Text>
+      </View>
+
+      <View style={styles.grid}>
+        <ImageBackground source={require('../../assets/course_2/markcuban_and_wife.png')} resizeMode='cover' style={styles.gridContainer}>
+          <TouchableOpacity onPress={() => handlePress(0)} style={[styles.box, { backgroundColor: touched[0] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(1)} style={[styles.box, { backgroundColor: touched[1] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(2)} style={[styles.box, { backgroundColor: touched[2] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(3)} style={[styles.box, { backgroundColor: touched[3] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(4)} style={[styles.box, { backgroundColor: touched[4] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(5)} style={[styles.box, { backgroundColor: touched[5] ? '#32CD32' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(6)} style={[styles.box, { backgroundColor: touched[6] ? '#32CD32' : '#E5D3B3', opacity: 0.3 }]} />
+          <TouchableOpacity onPress={() => handlePress(7)} style={[styles.box, { backgroundColor: touched[7] ? '#32CD32' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(8)} style={[styles.box, { backgroundColor: touched[8] ? '#32CD32' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(9)} style={[styles.box, { backgroundColor: touched[9] ? '#32CD32' : '#E5D3B3', opacity: 0.3 }]} />
+          <TouchableOpacity onPress={() => handlePress(10)} style={[styles.box, { backgroundColor: touched[10] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(11)} style={[styles.box, { backgroundColor: touched[11] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(12)} style={[styles.box, { backgroundColor: touched[12] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(13)} style={[styles.box, { backgroundColor: touched[13] ? '#32CD32' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(14)} style={[styles.box, { backgroundColor: touched[14] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(15)} style={[styles.box, { backgroundColor: touched[15] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+        </ImageBackground>
+      </View>
+
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course2GettingHangAlgorithms' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course2Congrats' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
@@ -69,7 +76,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingVertical: 15
+  },
+  lessonContent: {
+    flex: 1,
+    paddingHorizontal: 20
+  },
+  grid: {
+    flex: 1.5,
     alignContent: 'center',
     justifyContent: 'center',
     alignItems: 'center'
@@ -82,9 +96,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#DECFBE',
     alignContent: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
     aspectRatio: 1,
     borderColor: 'black',
-    borderWidth: 7,
+    borderWidth: 7
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -110,10 +125,11 @@ const styles = StyleSheet.create({
     width: '24.2%',
     height: '24.2%',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    alignContent: 'center'
   },
   footerButtons: {
-    marginTop: '10%',
+    marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
   }

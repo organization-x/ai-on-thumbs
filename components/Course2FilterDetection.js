@@ -15,14 +15,13 @@ export default function Course2FilterDetection ({ found, setFound, setFilterText
   const imageWidth = Dimensions.get('window').height / 2.6
   const imageHeight = Dimensions.get('window').height / 2.6
 
-
   // dimensions of the draggable container (used for responsiveness to different screen sizes)
   const [dragContainerDim, setDragContainerDim] = useState({ width: 0, height: 0, x: 0, y: 0 })
 
   useEffect(() => {
     if (Math.round(1 / xDist * 100) >= 2.5 && Math.round((1 / yDist * 100)) >= 3) {
       setFilterText('Great find!!! The filter matches up closest to the eyes because they form a horizontal line!')
-      setInitialX(Dimensions.get('window').width > 400 ? dragContainerDim.width / 2.4 :  dragContainerDim.width / 2.9 )
+      setInitialX(Dimensions.get('window').width > 400 ? dragContainerDim.width / 2.4 : dragContainerDim.width / 2.9)
       setInitialY(Dimensions.get('window').height > 800 ? dragContainerDim.height / 6 : dragContainerDim.height / 6.5)
       setFound(true)
     } else {
@@ -94,7 +93,7 @@ export default function Course2FilterDetection ({ found, setFound, setFilterText
                 ? (<Image style={styles.filterImage} source={require('../assets/course_2/horizontal_filter.png')} />)
                 : null
               }
-          </Draggable>
+            </Draggable>
           : null
         }
 

@@ -1,11 +1,15 @@
 // Share your results to show that you know how AI works!
 
 import React, { useState } from 'react'
-import { StyleSheet, View, Image, Text, Dimensions, TouchableOpacity, Modal } from 'react-native'
+import { StyleSheet, View, Image, Text, Dimensions, TouchableOpacity, Modal, Alert } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import * as Sharing from 'expo-sharing'
 import * as FileSystem from 'expo-file-system'
+import * as Analytics from 'expo-firebase-analytics'
+import * as Sentry from 'sentry-expo'
+Analytics.setCurrentScreen('Course 2 Screen 35: Face Detection Screen')
+
 const windowHeight = Dimensions.get('window').height
 
 export default function Course2FaceDetection ({ route, navigation }) {
@@ -18,7 +22,18 @@ export default function Course2FaceDetection ({ route, navigation }) {
 
   const shareData = async (context) => {
     if (!(await Sharing.isAvailableAsync())) {
-      alert('Uh oh, sharing isn`t available on your platform') //TODO SENTRY LOGGING DELETE ERROR 
+      Alert.alert(
+        'Sharing not possible',
+        'Sharing is not available on your current device.',
+        [
+          {
+            text: 'Cancel',
+            onPress: () => console.log('Cancel Pressed'),
+            style: 'cancel'
+          },
+          { text: 'OK', onPress: () => console.log('OK Pressed') }
+        ]
+      )
       return
     }
     try {
@@ -27,8 +42,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
       await FileSystem.writeAsStringAsync(filepath, context, { encoding: 'base64' })
       await Sharing.shareAsync(filepath, { mimeType: 'image/png' })
     } catch (e) {
-      // TODO: add SENTRY LOGGING HERE.
-      console.log(e.message)
+      Sentry.Native.captureException(e.response.message)
     }
   }
   return (
@@ -57,25 +71,22 @@ export default function Course2FaceDetection ({ route, navigation }) {
       </Modal>
 
       {context !== null
-      ?
-        <TouchableOpacity
-          style={styles.imageContainer} 
-          onPress={() => shareData(context).catch(err => { console.log(err.message) })
-          // TODO: LOG ERROR TO SENTRY
-        }> 
+        ? <TouchableOpacity
+            style={styles.imageContainer}
+            onPress={() => shareData(context).catch(err => { Sentry.Native.captureException(err.message) })}
+          >
           <Image style={styles.image} source={{ uri: `data:image/png;base64,${context}` }} />
         </TouchableOpacity>
-      : <View style={styles.imageContainer}>
+        : <View style={styles.imageContainer}>
           <Image style={styles.noPhotoImage} source={require('../../assets/course_2/scan.png')} />
           <Text style={styles.noPhotoText}> (No photo taken)</Text>
-        </View>}
+          </View>}
 
-      {context !== null 
-      ?
-        <TouchableOpacity onPress={() => { displayModal(true)} }>
+      {context !== null
+        ? <TouchableOpacity onPress={() => { displayModal(true) }}>
           <Text style={styles.secondText}> Face not detected? Tap here for help.</Text>
-        </TouchableOpacity>
-      : null}
+          </TouchableOpacity>
+        : null}
 
       <View style={styles.footerButtons}>
         <LessonButton
@@ -99,7 +110,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
 const styles = StyleSheet.create({
   logo: {
     height: windowHeight / 7,
-    marginTop: windowHeight / 12,
+    marginTop: windowHeight / 20,
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -144,15 +155,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
-  imageContainer: { 
+  imageContainer: {
     flex: 1,
     alignItems: 'center',
     paddingHorizontal: 10,
-    paddingVertical: 10,
+    paddingVertical: 10
   },
   image: {
-    width: '95%',
-    height: '95%',
+    height: windowHeight / 3.2,
+    width: windowHeight / 3.2,
     resizeMode: 'cover',
     marginTop: 10,
     alignItems: 'center',

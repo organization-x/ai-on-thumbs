@@ -1,12 +1,19 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, Linking } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
+import * as Analytics from 'expo-firebase-analytics'
+import * as Sentry from 'sentry-expo'
 
 export default function CourseCard ({ gradColors, title, desc }) {
+  async function handlePress () {
+    Linking.openURL('https://ai-camp.org')
+    await Analytics.logEvent('Webpage Visit').catch(err => { Sentry.Native.captureException(err.response.data) })
+  }
+
   return (
     <TouchableOpacity
       activeOpacity={0.7}
-      onPress={() => Linking.openURL('https://ai-camp.org')}
+      onPress={handlePress}
       style={styles.cardTouchableContainer}
     >
       <LinearGradient

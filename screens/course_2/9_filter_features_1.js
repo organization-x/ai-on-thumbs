@@ -1,15 +1,17 @@
 // Turns out the patterns in our facial features are distinctive
 
-import React from "react"
-import { View, Text, StyleSheet, Dimensions } from "react-native"
-import { LinearGradient } from "expo-linear-gradient"
-import LessonButton from "../../components/LessonButton"
+import React from 'react'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
+import LessonButton from '../../components/LessonButton'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 9: Filter Features 1 Screen')
 
 const height = Dimensions.get('window').height
 
-export default function Course2FilterFeatures1({ navigation }) {
+export default function Course2FilterFeatures1 ({ navigation }) {
   return (
-    <LinearGradient colors={["#8976C2", "#E6E8FB"]} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           Turns out the patterns in our facial features are distinctive, even in the pixel world!
@@ -21,17 +23,17 @@ export default function Course2FilterFeatures1({ navigation }) {
 
       <View style={styles.footerButtons}>
         <LessonButton
-          navigation = {navigation}
-          nextScreen = "Course2PixelPatternsInteractive"
-          buttonColor = "#8976C2"
-          buttonText = "Back"
+          navigation={navigation}
+          nextScreen='Course2PixelPatternsInteractive'
+          buttonColor='#8976C2'
+          buttonText='Back'
         />
 
         <LessonButton
           navigation={navigation}
-          nextScreen = "Course2FilterFeatures2"
-          buttonColor = {["#32B59D", "#3AC55B"]}
-          buttonText = "Continue"
+          nextScreen='Course2FilterFeatures2'
+          buttonColor={['#32B59D', '#3AC55B']}
+          buttonText='Continue'
         />
       </View>
     </LinearGradient>
@@ -51,27 +53,27 @@ const styles = StyleSheet.create({
   },
   textSection: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   mainText: {
-    marginTop : height / 30,
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    marginTop: height / 30,
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
-    color: "white",
+    textAlign: 'center',
+    color: 'white',
     fontSize: height / 23,
-    fontWeight: "bold"
+    fontWeight: 'bold'
   },
   secondText: {
     marginTop: height / 20,
-    textShadowColor: "rgba(0, 0, 0, 0.1)",
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    textAlign: "center",
-    color: "white",
+    textAlign: 'center',
+    color: 'white',
     fontSize: height / 30,
-    fontWeight : 'bold'
+    fontWeight: 'bold'
   }
 })
