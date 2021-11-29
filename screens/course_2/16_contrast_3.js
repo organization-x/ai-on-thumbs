@@ -17,7 +17,6 @@ export default function Course2Contrast3 ({ navigation }) {
         <Text style={styles.header}>Remember:</Text>
         <Text style={styles.textFont}>Brighter pixels are higher in value and darker pixels are lower in value.</Text>
         <Image style={styles.image} source={require('../../assets/course_2/pixelContrast2.png')} />
-        <Text style={styles.textFont2}>Notice how the more similar the brightness is, the less contrast there is between the pixels!</Text>
       </View>
 
       <View style={styles.footerButtons}>
@@ -58,13 +57,6 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontSize: height / 27
-  },
-
-  textFont2: {
-    color: 'white',
-    textAlign: 'center',
-    fontSize: height / 27,
-    fontWeight: 'bold'
   },
 
   image: {
