@@ -146,7 +146,8 @@ const styles = StyleSheet.create({
   },
   lessonContent: {
     flex: 1,
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
+    marginTop: height / 20
   },
 
   information: {
@@ -165,10 +166,11 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: height / 40,
     justifyContent: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: height / 40
   },
   interactive: {
-    flex: 1.5,
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center'
   },

@@ -158,10 +158,10 @@ const styles = StyleSheet.create({
   },
   interactive: {
     flex: 1,
-    borderRadius: 7,
+    borderRadius: 3,
     overflow: 'hidden',
     alignItems: 'center',
-    margin: 5
+    margin: 3
   },
   flexRow: {
     flex: 1,
@@ -268,19 +268,19 @@ const styles = StyleSheet.create({
   button1Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth / 2.75,
+    width: windowWidth / 2.6,
     height: windowHeight / 7.5
   },
   button2Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth / 2.75,
+    width: windowWidth / 2.6,
     height: windowHeight / 3.75
   },
   button3Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth / 2.75,
+    width: windowWidth / 2.6,
     height: windowHeight / 7.5
   },
   switch: {
