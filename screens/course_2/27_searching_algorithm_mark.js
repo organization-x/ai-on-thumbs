@@ -21,12 +21,12 @@ export default function Course2SearchingAlgorithmMark ({ navigation }) {
     setTouched(updateTouched)
     let updateNum
     if (!isFinished) {
-      if ([5, 6, 7, 8, 9, 13].includes(number)) {
+      if ([2, 5, 6, 7, 8, 9, 10, 13].includes(number)) {
         setInformation('Nailed it! Searching in the same square, or the squares right next to the nose are great bets.')
         updateNum = numCorrect
-        if (updateNum + 1 === 6) {
+        if (updateNum + 1 === 8) {
           setTopText('Great job! Think about how much time this method will save us!')
-          setInformation('We only needed to look in seven of the sixteen squares after scanning for a nose.')
+          setInformation('We only needed to look in half of the sixteen squares after scanning for a nose.')
           setIsFinished(true)
         }
         setNumCorrect(updateNum + 1)
@@ -45,22 +45,22 @@ export default function Course2SearchingAlgorithmMark ({ navigation }) {
 
       <View style={styles.grid}>
         <ImageBackground source={require('../../assets/course_2/markcuban_and_wife.png')} resizeMode='cover' style={styles.gridContainer}>
-          <TouchableOpacity onPress={() => handlePress(0)} style={[styles.box, { backgroundColor: touched[0] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(1)} style={[styles.box, { backgroundColor: touched[1] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(2)} style={[styles.box, { backgroundColor: touched[2] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(3)} style={[styles.box, { backgroundColor: touched[3] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(4)} style={[styles.box, { backgroundColor: touched[4] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(5)} style={[styles.box, { backgroundColor: touched[5] ? '#32CD32' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(6)} style={[styles.box, { backgroundColor: touched[6] ? '#32CD32' : '#E5D3B3', opacity: 0.3 }]} />
-          <TouchableOpacity onPress={() => handlePress(7)} style={[styles.box, { backgroundColor: touched[7] ? '#32CD32' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(8)} style={[styles.box, { backgroundColor: touched[8] ? '#32CD32' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(9)} style={[styles.box, { backgroundColor: touched[9] ? '#32CD32' : '#E5D3B3', opacity: 0.3 }]} />
-          <TouchableOpacity onPress={() => handlePress(10)} style={[styles.box, { backgroundColor: touched[10] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(11)} style={[styles.box, { backgroundColor: touched[11] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(12)} style={[styles.box, { backgroundColor: touched[12] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(13)} style={[styles.box, { backgroundColor: touched[13] ? '#32CD32' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(14)} style={[styles.box, { backgroundColor: touched[14] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
-          <TouchableOpacity onPress={() => handlePress(15)} style={[styles.box, { backgroundColor: touched[15] ? 'red' : '#E5D3B3', opacity: 0.85 }]} />
+          <TouchableOpacity onPress={() => handlePress(0)} style={[styles.box, { backgroundColor: touched[0] ? 'red' : '#E5D3B3', opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(1)} style={[styles.box, { backgroundColor: touched[1] ? 'red' : '#E5D3B3', opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(2)} style={[styles.box, { backgroundColor: touched[2] ? '#32CD32' : '#E5D3B3', opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(3)} style={[styles.box, { backgroundColor: touched[3] ? 'red' : '#E5D3B3', opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(4)} style={[styles.box, { backgroundColor: touched[4] ? 'red' : '#E5D3B3', opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(5)} style={[styles.box, { backgroundColor: touched[5] ? '#32CD32' : '#E5D3B3', opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(6)} style={[styles.box, { backgroundColor: touched[6] ? '#32CD32' : '#E5D3B3' }, { opacity: 0.3 }]} />
+          <TouchableOpacity onPress={() => handlePress(7)} style={[styles.box, { backgroundColor: touched[7] ? '#32CD32' : '#E5D3B3' }, { opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(8)} style={[styles.box, { backgroundColor: touched[8] ? '#32CD32' : '#E5D3B3' }, { opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(9)} style={[styles.box, { backgroundColor: touched[9] ? '#32CD32' : '#E5D3B3' }, { opacity: 0.3 }]} />
+          <TouchableOpacity onPress={() => handlePress(10)} style={[styles.box, { backgroundColor: touched[10] ? '#32CD32' : '#E5D3B3' }, { opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(11)} style={[styles.box, { backgroundColor: touched[11] ? 'red' : '#E5D3B3' }, { opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(12)} style={[styles.box, { backgroundColor: touched[12] ? 'red' : '#E5D3B3' }, { opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(13)} style={[styles.box, { backgroundColor: touched[13] ? '#32CD32' : '#E5D3B3' }, { opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(14)} style={[styles.box, { backgroundColor: touched[14] ? 'red' : '#E5D3B3' }, { opacity: 0.9 }]} />
+          <TouchableOpacity onPress={() => handlePress(15)} style={[styles.box, { backgroundColor: touched[15] ? 'red' : '#E5D3B3' }, { opacity: 0.9 }]} />
         </ImageBackground>
       </View>
 

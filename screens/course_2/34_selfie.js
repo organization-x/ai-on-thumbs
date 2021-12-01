@@ -1,7 +1,7 @@
 // Take a photo of yourself to let the AI algorithm detect your face.
 
 import React, { useEffect, useState, useRef } from 'react'
-import { StyleSheet, View, ActivityIndicator, Dimensions, Text, Image } from 'react-native'
+import { StyleSheet, View, ActivityIndicator, Dimensions, Text, Image, TouchableOpacity } from 'react-native'
 import Background from '../../components/Background'
 import ActionButton from '../../components/ActionButton'
 import LessonButton from '../../components/LessonButton'
@@ -24,6 +24,7 @@ export default function Course2Selfie ({ navigation }) {
   const [startCamera, setStartCamera] = useState(false)
   const [imageBase64, setImageBase64] = useState(null)
   const [isProcessed, setIsProcessed] = useState(false)
+  const [type, setType] = useState(Camera.Constants.Type.front)
   const camera = useRef(null)
   const [loading, setLoading] = useState(false)
 
@@ -103,7 +104,21 @@ export default function Course2Selfie ({ navigation }) {
       <Camera
         style={styles.camera}
         ref={(r) => { camera.current = r }}
+        type={type}
       >
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            setType(
+              type === Camera.Constants.Type.back
+                ? Camera.Constants.Type.front
+                : Camera.Constants.Type.back
+            )
+          }}
+        >
+          <Text style={styles.secondText}> Tap here to flip the camera! </Text>
+        </TouchableOpacity>
+
         <ActionButton
           style={{ marginBottom: 30 }}
           onPress={() => takePhoto().catch(err => { Sentry.Native.captureException(err.response.data) })}
@@ -225,5 +240,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'black',
     fontSize: height / 33
+  },
+  button: {
+    flex: 1,
+    alignItems: 'center',
+    marginTop: 10
   }
 })

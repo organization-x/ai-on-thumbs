@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingVertical: 15
   },
 
   interactive: {
