@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     overflow: 'hidden',
     alignItems: 'center',
-    margin: 3
+    margin: 1
   },
   flexRow: {
     flex: 1,
@@ -188,14 +188,14 @@ const styles = StyleSheet.create({
     height: windowHeight / 5,
     resizeMode: 'contain',
     top: 0,
-    marginBottom: 10,
+    marginBottom: 5,
     position: 'relative'
   },
   headerText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '5%',
+    marginTop: '3%',
     textAlign: 'center',
     color: 'white',
     fontSize: windowHeight / 33,

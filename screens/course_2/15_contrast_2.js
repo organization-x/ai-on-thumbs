@@ -16,7 +16,7 @@ export default function Course2Contrast2 ({ navigation }) {
       <View style={styles.interactive}>
         <Text style={styles.textFont}>Since brighter pixels are higher in value, and darker pixels are lower in value,</Text>
         <Image style={styles.image} source={require('../../assets/course_2/pixelContrast1.png')} />
-        <Text style={styles.textFont}>we can find their difference to get the contrast.</Text>
+        <Text style={styles.textFont2}>we can find their difference to get the contrast.</Text>
       </View>
 
       <View style={styles.footerButtons}>
@@ -54,7 +54,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: height / 27
   },
-
+  textFont2: {
+    color: 'black',
+    textAlign: 'center',
+    fontSize: height / 27
+  },
   image: {
     margin: height / 22,
     resizeMode: 'contain',
