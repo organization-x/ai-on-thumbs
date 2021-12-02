@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
   lessonContent: {
     flex: 1,
     paddingHorizontal: 20,
-    marginTop: height / 20
+    marginTop: height / 18
   },
 
   information: {
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
   },
   grid: {
     flex: 1,
-    margin: height / 17,
+    margin: height / 16,
     flexDirection: 'row',
     flexWrap: 'wrap',
     backgroundColor: '#DECFBE',

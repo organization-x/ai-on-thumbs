@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   mainText: {
+    marginVertical: height / 20,
     padding: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
@@ -64,6 +65,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   secondText: {
+    flex: 1,
     padding: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
@@ -73,6 +75,7 @@ const styles = StyleSheet.create({
     fontSize: height / 26 // ~30px
   },
   image: {
+    flex: 1,
     resizeMode: 'contain',
     width: width / 1.6
   }
