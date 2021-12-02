@@ -18,7 +18,7 @@ export default function Course2FilterFeatures5 ({ navigation }) {
         <Text style={styles.mainText}>The long answer:</Text>
         <Text style={styles.secondaryText}>Remember how computers think of pixels as a matrix of numbers?</Text>
         <Image style={styles.image} source={require('../../assets/course_2/pixelcalculations.png')} />
-        <Text style={styles.secondaryText}>The computer is going to perform calculations on the pixels in the photo to understand the patterns in the photo. Let's find out how!</Text>
+        <Text style={styles.secondaryText2}>The computer is going to perform calculations on the pixels in the photo to understand the patterns in the photo. Let's find out how!</Text>
       </View>
 
       <View style={styles.footerButtons}>
@@ -72,6 +72,16 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
+    fontSize: height / 35,
+    marginTop: height / 25,
+    marginBottom: height / 30
+  },
+  secondaryText2: {
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+    textAlign: 'center',
+    color: 'black',
     fontSize: height / 35,
     marginTop: height / 25,
     marginBottom: height / 30

@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
-    color: 'white',
+    color: 'black',
     fontSize: height / 35,
     fontWeight: 'bold'
   },
