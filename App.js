@@ -80,6 +80,25 @@ import Course2Selfie from './screens/course_2/34_selfie'
 import Course2FaceDetection from './screens/course_2/35_face_detection'
 import Course2DraggableExplanation from './screens/course_2/18_explanation'
 
+// course 3 imports
+import Course3Introduction from './screens/course_3/1_introduction'
+import Course3NearestNeighbor from './screens/course_3/2_nearest_neighbor'
+import Course3FollowUp from './screens/course_3/5_follow_up'
+import Course3FollowUpCorrect from './screens/course_3/6_follow_up_correct'
+import Course3FollowUpIncorrect from './screens/course_3/7_follow_up_incorrect'
+import Course3FollowUpII from './screens/course_3/14_follow_up'
+import Course3FollowUpIICorrect from './screens/course_3/15_follow_up_correct'
+import Course3FollowUpIIIncorrect from './screens/course_3/16_follow_up_incorrect'
+import Course3NearestNeighborsReveal from './screens/course_3/17_nearest_neighbors_reveal'
+import Course3Congratulations from './screens/course_3/21_congratulations'
+import Course3AlgorithmReview1 from './screens/course_3/22_algorithm_review_1'
+import Course3AlgorithmReview2 from './screens/course_3/23_algorithm_review_2'
+import Course3AlgorithmReview3 from './screens/course_3/24_algorithm_review_3'
+import Course3AlgorithmReview4 from './screens/course_3/25_algorithm_review_4'
+import Course3AppStoreReview from './screens/course_3/26_app_store_review'
+import Course3Email from './screens/course_3/27_email'
+import Course3Promotion from './screens/course_3/28_promotion'
+
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
   enableInExpoDevelopment: false,
@@ -177,6 +196,24 @@ export default function App () {
           <Stack.Screen name='Course2Selfie' component={Course2Selfie} />
           <Stack.Screen name='Course2FaceDetection' component={Course2FaceDetection} />
 
+          {/* course 3 screen stack */}
+          <Stack.Screen name='Course3Introduction' component={Course3Introduction} />
+          <Stack.Screen name='Course3NearestNeighbor' component={Course3NearestNeighbor} />
+          <Stack.Screen name='Course3FollowUp' component={Course3FollowUp} />
+          <Stack.Screen name='Course3FollowUpCorrect' component={Course3FollowUpCorrect} />
+          <Stack.Screen name='Course3FollowUpIncorrect' component={Course3FollowUpIncorrect} />
+          <Stack.Screen name='Course3FollowUpII' component={Course3FollowUpII} />
+          <Stack.Screen name='Course3FollowUpIICorrect' component={Course3FollowUpIICorrect} />
+          <Stack.Screen name='Course3FollowUpIIIncorrect' component={Course3FollowUpIIIncorrect} />
+          <Stack.Screen name='Course3NearestNeighborsReveal' component={Course3NearestNeighborsReveal}/>
+          <Stack.Screen name='Course3Congratulations' component={Course3Congratulations} />
+          <Stack.Screen name='Course3AlgorithmReview1' component={Course3AlgorithmReview1} />
+          <Stack.Screen name='Course3AlgorithmReview2' component={Course3AlgorithmReview2} />
+          <Stack.Screen name='Course3AlgorithmReview3' component={Course3AlgorithmReview3} />
+          <Stack.Screen name='Course3AlgorithmReview4' component={Course3AlgorithmReview4} />
+          <Stack.Screen name='Course3AppStoreReview' component={Course3AppStoreReview} />
+          <Stack.Screen name='Course3Email' component={Course3Email} />
+          <Stack.Screen name='Course3Promotion' component={Course3Promotion} />
         </Stack.Navigator>
       </NavigationContainer>
     </LinearGradient>
