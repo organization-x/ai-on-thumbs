@@ -1,4 +1,4 @@
-// KNN is a machine learning algorithm used for classification.
+// What's one thing you share in common with your neighbors?
 
 import React from 'react'
 import { StyleSheet, View, Text} from 'react-native'
@@ -6,17 +6,17 @@ import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 1: Introduction')
+Analytics.setCurrentScreen('Course 3 Screen 17: Common Trait Question')
 
-export default function Course3Introduction ({ navigation }) {
+export default function Course3CommonTraitQuestion ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.text}>KNN is a machine learning algorithm used for classification.</Text>
+        <Text style={styles.text}>What's one thing you share in common with your neighbors?</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3NearestNeighbor' buttonColor={['#32B59D', '#3AC55B']} buttonText="Tell Me More!" />
+        <LessonButton navigation={navigation} nextScreen='Course3NearestNeighborsReveal' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course3CommonTraitAnswer' buttonColor={['#32B59D', '#3AC55B']} buttonText="What's That?" />
       </View>
     </LinearGradient>
   )
@@ -35,11 +35,17 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {
-    marginTop: '70%',
+    marginTop: '40%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: 50,
     fontWeight: 'bold'
+  },
+  boldText: {
+    textAlign: 'center',
+    color: 'rgba(0, 0, 0, 0.6)',
+    fontSize: 40,
+    fontWeight: '800'
   },
   footerButtons: {
     marginBottom: 10,

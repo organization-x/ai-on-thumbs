@@ -9,7 +9,7 @@ import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 26: Rating Screen')
+Analytics.setCurrentScreen('Course 3 Screen 30: Rating Screen')
 
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {
@@ -48,7 +48,7 @@ export default function Course3AppStoreReview ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       <Text style={styles.mainText}> Did you have fun learning AI with us?</Text>
       <View style={styles.starView}>

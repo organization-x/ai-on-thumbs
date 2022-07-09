@@ -1,37 +1,38 @@
-// You guessed wrong
+// User incorrectly selects Neighborhood B.
 
 import React from 'react'
-import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 20: Scan all wrong ')
+Analytics.setCurrentScreen('Course 3 Screen 12: Follow Up II A')
 
 const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
 
-export default function Course2ScanAll2Wrong ({ navigation }) {
+export default function Course3FollowUpIIA ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
-      <View style={styles.lessonContent}>
-        <Text style={styles.mainText}>Oh Snap!</Text>
-        <Image style={styles.image} source={require('../../assets/course_3/NeighborsFighting.png')} />
-        <Text style={styles.secondText}>The owners hate each other, so friendship can't be the answer.</Text>
-        <Text style={styles.secondText}>Remember that they share neighborhoods because they're so close to each other.</Text>
+    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+      <View style={styles.textSection}>
+        <Text style={styles.mainText}>
+          Actually, the black and green houses both belong to Neighborhood A.
+        </Text>
+        <Text style={styles.secondText}>
+          What do you think makes them neighbors?
+        </Text>
       </View>
 
       <View style={styles.footerButtons}>
         <LessonButton
           navigation={navigation}
-          nextScreen='Course3FollowUpII'
-          buttonColor='#8976C2'
-          buttonText='Back'
+          nextScreen='Course3FollowUpIICorrect'
+          buttonColor={['#32B59D', '#3AC55B']}
+          buttonText='Distance'
         />
         <LessonButton
           navigation={navigation}
-          nextScreen='Course3NearestNeighborsReveal'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText="Gotcha!"
+          nextScreen='Course3FollowUpIIIncorrect'
+          buttonColor='#8976C2'
+          buttonText='Friendship'
         />
       </View>
     </LinearGradient>
@@ -49,34 +50,30 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
-  lessonContent: {
+  textSection: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
   },
   mainText: {
-    marginVertical: height / 15,
+    marginVertical: 10,
     padding: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 20, // ~60px
+    fontSize: height / 20, // ~40px
     fontWeight: 'bold'
   },
   secondText: {
-    flex: 1,
+    marginVertical: 10,
     padding: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 26 // ~30px
-  },
-  image: {
-    flex: 1,
-    width: width / 0.6
+    fontSize: height / 20 // ~40px
   }
 })

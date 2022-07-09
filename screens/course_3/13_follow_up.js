@@ -1,17 +1,17 @@
-// Ok, now we can find different parts of a face.
+// User correctly selects Neighborhood A.
 
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 19: Scan all question ')
+Analytics.setCurrentScreen('Course 3 Screen 13: Follow Up II B')
 
 const height = Dimensions.get('window').height
 
-export default function Course3FollowUp ({ navigation }) {
+export default function Course3FollowUpIIB ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           That's right! The black and green houses belong to the same neighborhood.

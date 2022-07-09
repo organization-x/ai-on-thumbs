@@ -1,23 +1,22 @@
-// You guessed wrong
+// User incorrectly selects color.
 
 import React from 'react'
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 20: Scan all wrong ')
+Analytics.setCurrentScreen('Course 3 Screen 7: Follow Up Incorrect')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-export default function Course2ScanAll2Wrong ({ navigation }) {
+export default function Course3FollowUpIncorrect ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}>Uh Oh!</Text>
         <Image style={styles.image} source={require('../../assets/course_3/BrokenComputer.png')} />
         <Text style={styles.secondText}>Green is a cool color, but that's not quite what we're looking for.</Text>
-        <Text style={styles.secondText}>Let's understand the role that distance plays!</Text>
       </View>
 
       <View style={styles.footerButtons}>
@@ -29,9 +28,9 @@ export default function Course2ScanAll2Wrong ({ navigation }) {
         />
         <LessonButton
           navigation={navigation}
-          nextScreen='Course3FollowUpII'
+          nextScreen='Course3DistanceRole'
           buttonColor={['#32B59D', '#3AC55B']}
-          buttonText="I'm Ready!"
+          buttonText="You Got Me!"
         />
       </View>
     </LinearGradient>
@@ -62,21 +61,33 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 20, // ~60px
+    fontSize: height / 15, // ~60px
     fontWeight: 'bold'
   },
   secondText: {
     flex: 1,
-    padding: 15,
+    padding: 5,
+    marginTop: 20,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 26 // ~30px
+    fontSize: height / 20 // ~30px
+  },
+  explanationText: {
+    flex: 1,
+    padding: 10,
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+    textAlign: 'center',
+    color: 'white',
+    fontSize: height / 27 // ~30px
   },
   image: {
     flex: 1,
-    width: width / 0.75
+    width: "170%",
+    height: "170%"
   }
 })

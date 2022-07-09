@@ -1,18 +1,18 @@
-// Computers use facial features to help them detect faces.
+// Review 1
 
 import React from 'react'
-import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import LessonButton from '../../components/LessonButton'
+import { StyleSheet, View, Text, Dimensions, StatusBar } from 'react-native'
 import LessonHeader from '../../components/LessonHeader'
+import LessonButton from '../../components/LessonButton'
+import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 24: Algorithm Review 3')
+Analytics.setCurrentScreen('Course 3 Screen 26: Algorithm Review 1')
 
 const height = Dimensions.get('window').height
 
-export default function Course3AlgorithmReview3 ({ navigation }) {
+export default function Course3AlgorithmReview1 ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Algorithm Review</LessonHeader>
 
@@ -23,27 +23,11 @@ export default function Course3AlgorithmReview3 ({ navigation }) {
         <View style={styles.information}>
           <Text style={styles.textFont}>KNN is a machine learning algorithm used for classification.</Text>
         </View>
-
-        <View styles={styles.number}>
-          <Text style={styles.numberFont}>2</Text>
-        </View>
-
-        <View style={styles.information}>
-          <Text style={styles.textFont}>Distance is how we measure how far apart houses are.</Text>
-        </View>
-
-        <View style={styles.number}>
-          <Text style={styles.numberFont}>3</Text>
-        </View>
-
-        <View style={styles.information2}>
-          <Text style={styles.textFont}>Our nearest neighbors are the ones closest to us.</Text>
-        </View>
       </View>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course3AlgorithmReview2' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3AlgorithmReview4' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='Course3Congratulations' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course3AlgorithmReview2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Yeah It Is!' />
       </View>
 
       <StatusBar style='auto' />
@@ -90,14 +74,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    marginBottom: 10
-  },
-
-  information2: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-    marginBottom: height / 12
+    marginBottom: height / 1.90
   },
 
   textFont: {
@@ -111,5 +88,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   }
-
 })

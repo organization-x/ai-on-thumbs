@@ -1,4 +1,4 @@
-// Continue your journey by going to ai-camp.org
+// Summer Camp Promotion
 
 import React from 'react'
 import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollView, Dimensions, Linking } from 'react-native'
@@ -7,7 +7,7 @@ import EmailPrompt from '../../components/EmailPrompt'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 28: Promotion')
+Analytics.setCurrentScreen('Course 3 Screen 32: Promotion')
 
 const height = Dimensions.get('window').height
 
@@ -18,7 +18,7 @@ export default function Promotion ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <View style={styles.interactive}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.text}>If you had fun here, you'll certainly want to check out our after-school and summer programs at AI Camp.</Text>
@@ -65,8 +65,8 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     marginTop: height / 15,
     textAlign: 'center',
-    color: 'rgb(34, 206, 136)',
-    fontSize: height / 35,
+    color: 'white',
+    fontSize: height / 30,
     fontWeight: 'bold'
   },
   footerButtons: {

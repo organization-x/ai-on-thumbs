@@ -1,4 +1,4 @@
-// You just learned your first AI algorithm. Do you see how simple it is?
+// Congratulations!
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
@@ -6,14 +6,14 @@ import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import ConfettiCannon from 'react-native-confetti-cannon'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 21: Congratulations')
+Analytics.setCurrentScreen('Course 3 Screen 25: Congratulations')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 export default function Course3Congratulations ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <ConfettiCannon
         count={100}
         origin={{ x: width / 2, y: -100 }}
@@ -24,13 +24,13 @@ export default function Course3Congratulations ({ navigation }) {
       <View style={styles.interactive}>
         <Text style={styles.bigText}>Congratulations!</Text>
         <Text style={styles.text}>This lesson was all about using distance to make observations about the world around you and you did amazing!</Text>
-        <Text style={styles.text}>The KNN algorithm uses this same thought process, but on a much greater scale.</Text>
+        <Text style={styles.text}>In the next lesson, we will see exactly how KNN uses distance to make observations.</Text>
         <Text style={styles.boldText}>Let’s review!</Text>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton
           navigation={navigation}
-          nextScreen='Course3FollowUpIncorrect'
+          nextScreen='Course3KNNMainIdeaVI'
           buttonColor='#8976C2'
           buttonText='Back'
         />
@@ -38,7 +38,7 @@ export default function Course3Congratulations ({ navigation }) {
           navigation={navigation}
           nextScreen='Course3AlgorithmReview1'
           buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Continue'
+          buttonText="Can't Wait!"
         />
       </View>
     </LinearGradient>

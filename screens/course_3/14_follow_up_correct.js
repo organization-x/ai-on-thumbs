@@ -1,38 +1,35 @@
-// The user correctly selects the green house as the closest.
+// The user correctly selects distance again.
 
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 5: Follow Up Question')
+Analytics.setCurrentScreen('Course 3 Screen 14: Follow Up II (Correct)')
 
 const height = Dimensions.get('window').height
 
-export default function Course3FollowUp ({ navigation }) {
+export default function Course3FollowUpIICorrect ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
-      <View style={styles.textSection}>
-        <Text style={styles.mainText}>
-          That's right! The green house is the closest.
-        </Text>
-        <Text style={styles.secondText}>
-          If you guessed green, what do you think makes the green house closest to the black house?
-        </Text>
+      <View style={styles.lessonContent}>
+        <Text style={styles.mainText}> You're on fire!</Text>
+        <Text style={styles.secondText}>The black and green houses are very close to each other, so we assume they're neighbors.</Text>
+        <Text style={styles.thirdText}>Sounds like you've got the idea of nearest neighbors!</Text>
       </View>
 
       <View style={styles.footerButtons}>
         <LessonButton
           navigation={navigation}
-          nextScreen='Course3FollowUpCorrect'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Lowest Distance'
+          nextScreen='Course3FollowUpIIA'
+          buttonColor='#8976C2'
+          buttonText='Back'
         />
         <LessonButton
           navigation={navigation}
-          nextScreen='Course3FollowUpIncorrect'
-          buttonColor='#8976C2'
-          buttonText='Coolest Color'
+          nextScreen='Course3NearestNeighborsReveal'
+          buttonColor={['#32B59D', '#3AC55B']}
+          buttonText="Thank You!"
         />
       </View>
     </LinearGradient>
@@ -50,30 +47,40 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
-  textSection: {
+  lessonContent: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
   },
   mainText: {
-    marginVertical: 10,
     padding: 15,
+    marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 20, // ~40px
+    fontSize: height / 22, // ~60px
     fontWeight: 'bold'
   },
   secondText: {
-    marginVertical: 10,
     padding: 15,
+    marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 20 // ~40px
+    fontSize: height / 24 // ~45px
+  },
+  thirdText: {
+    padding: 15,
+    marginVertical: 10,
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+    textAlign: 'center',
+    color: 'white',
+    fontSize: height / 28 // ~30px
   }
 })

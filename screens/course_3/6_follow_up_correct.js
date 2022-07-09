@@ -1,17 +1,17 @@
-// No, we don’t! But do you know why?
+// User correctly selects distance.
 
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 21: Scan all correct')
+Analytics.setCurrentScreen('Course 3 Screen 6: Follow Up Correct')
 
 const height = Dimensions.get('window').height
 
-export default function Course2ScanAll2Correct ({ navigation }) {
+export default function Course3FollowUpCorrect ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}> You're absolutely right!</Text>
         <Text style={styles.secondText}>Distance is how we measure how far apart houses are.</Text>
@@ -27,7 +27,7 @@ export default function Course2ScanAll2Correct ({ navigation }) {
         />
         <LessonButton
           navigation={navigation}
-          nextScreen='Course3FollowUpII'
+          nextScreen='Course3Neighborhoods'
           buttonColor={['#32B59D', '#3AC55B']}
           buttonText="Let's Expand!"
         />

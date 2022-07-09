@@ -7,18 +7,18 @@ import EmailPrompt from '../../components/EmailPrompt'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 27: Email Prompt Screen')
+Analytics.setCurrentScreen('Course 3 Screen 31: Email Prompt Screen')
 
 const height = Dimensions.get('window').height
 
-export default function Course2Email ({ navigation }) {
+export default function Course3Email ({ navigation }) {
   async function handlePress () {
     Linking.openURL('https://ai-camp.org')
     await Analytics.logEvent('Webpage Visit').catch(err => { Sentry.Native.captureException(err.response.data) })
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <View style={styles.interactive}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.text} onPress={handlePress}>Continue your journey by going to ai-camp.org</Text>
