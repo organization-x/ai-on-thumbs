@@ -95,8 +95,8 @@ const styles = StyleSheet.create({
     marginBottom: '10%'
   },
   cell: {
-    width: width * 0.22,
-    height: width * 0.22,
+    width: width * 0.19,
+    height: width * 0.19,
     marginRight: 5,
     backgroundColor: '#E6E8FB',
     borderRadius: 5

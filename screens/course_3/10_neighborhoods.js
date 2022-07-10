@@ -121,8 +121,8 @@ const styles = StyleSheet.create({
     marginBottom: '5%'
   },
   cell: {
-    width: width * 0.22,
-    height: width * 0.22,
+    width: width * 0.2,
+    height: width * 0.2,
     marginRight: 5,
     backgroundColor: '#E6E8FB',
     borderRadius: 5

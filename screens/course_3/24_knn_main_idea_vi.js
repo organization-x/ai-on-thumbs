@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     fontWeight: '600'
   },
   bottomText: {
-    marginTop: '20%',
+    marginTop: '10%',
     textAlign: 'center',
     color: 'white',
     fontSize: 35,

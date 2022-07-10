@@ -15,7 +15,7 @@ export default function Course3GreenHouseNeighborhood ({ navigation }) {
 
   return (
     <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
-      <View style={{ flex: 1, marginTop: '15%'}}>
+      <View style={{ flex: 1, marginTop: '5%'}}>
         <Text style={styles.boldText}>That's right! The black house is part of Neighborhood A.</Text>
         <Text style={styles.text}>Which neighborhood would you predict the green house is a part of?</Text>
       </View>
@@ -78,7 +78,8 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 35,
     fontWeight: '700',
-    marginTop: '40%'
+    marginTop: '30%'
+
   },
   footerButtons: {
     marginBottom: 10,

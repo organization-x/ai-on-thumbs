@@ -67,16 +67,16 @@ const styles = StyleSheet.create({
   },
   secondText: {
     flex: 1,
-    padding: 15,
+    padding: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 26 // ~30px
+    fontSize: height / 30 // ~30px
   },
   image: {
     flex: 1,
-    width: width / 0.6
+    width: width / 0.8
   }
 })

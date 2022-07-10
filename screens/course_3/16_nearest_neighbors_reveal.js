@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     color: 'rgba(0, 0, 0, 0.6)',
     fontSize: 40,
-    fontWeight: '800'
+    fontWeight: 'bold'
   },
   footerButtons: {
     marginBottom: 10,
@@ -61,6 +61,6 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    width: width / 0.6
+    width: width / 0.9
   }
 })

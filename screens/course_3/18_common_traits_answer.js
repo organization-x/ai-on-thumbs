@@ -37,22 +37,23 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginBottom: 30
   },
   text: {
     marginTop: '30%',
     marginBottom: '5%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 45,
+    fontSize: 40,
     fontWeight: 'bold'
   },
   boldText: {
-    marginBottom: '1%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
-    fontWeight: '900'
+    fontSize: 35,
+    marginBottom: '5%',
+    fontWeight: 'bold'
   },
   footerButtons: {
     marginBottom: 10,
@@ -61,6 +62,6 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    width: width / 0.6
+    width: width / 0.9
   }
 })

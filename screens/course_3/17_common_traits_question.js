@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {
-    marginTop: '40%',
+    marginTop: '30%',
     textAlign: 'center',
     color: 'white',
     fontSize: 50,
