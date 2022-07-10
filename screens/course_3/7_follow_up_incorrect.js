@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 15, // ~60px
+    fontSize: height / 15,
     fontWeight: 'bold'
   },
   secondText: {
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 20 // ~30px
+    fontSize: height / 20
   },
   explanationText: {
     flex: 1,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 27 // ~30px
+    fontSize: height / 27
   },
   image: {
     flex: 1,

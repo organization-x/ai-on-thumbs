@@ -21,7 +21,7 @@ export default function Course3FollowUpIICorrect ({ navigation }) {
       <View style={styles.footerButtons}>
         <LessonButton
           navigation={navigation}
-          nextScreen='Course3FollowUpIIA'
+          nextScreen='Course3FollowUpIIB'
           buttonColor='#8976C2'
           buttonText='Back'
         />
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 22, // ~60px
+    fontSize: height / 22,
     fontWeight: 'bold'
   },
   secondText: {
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 24 // ~45px
+    fontSize: height / 24
   },
   thirdText: {
     padding: 15,
@@ -81,6 +81,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 28 // ~30px
+    fontSize: height / 28
   }
 })

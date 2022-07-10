@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 16, // ~60px
+    fontSize: height / 16,
     fontWeight: 'bold'
   },
   secondText: {
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 18 // ~45px
+    fontSize: height / 18
   },
   thirdText: {
     padding: 15,
@@ -81,6 +81,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 22 // ~30px
+    fontSize: height / 22
   }
 })

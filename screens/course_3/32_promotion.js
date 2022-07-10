@@ -7,7 +7,7 @@ import EmailPrompt from '../../components/EmailPrompt'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 32: Promotion')
+Analytics.setCurrentScreen('Course 3 Screen 31: Promotion')
 
 const height = Dimensions.get('window').height
 
@@ -26,7 +26,7 @@ export default function Promotion ({ navigation }) {
         <Text style={styles.promoText} onPress = {handlePress}>Click here to see what else AI Camp has to offer!</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course3AppStoreReview' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course3Email' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Courses' buttonColor={['#32B59D', '#3AC55B']} buttonText='Back to Home' />
       </View>
     </LinearGradient>
