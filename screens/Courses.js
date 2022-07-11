@@ -16,7 +16,7 @@ export default function CoursesScreen ({ navigation }) {
           navigation={navigation}
           lessonScreen='Course1Intro'
           gradColors={['#8233C5', '#F02FE2']}
-          title='Intro to Facial Recognition'
+          title='Facial Recognition I'
           desc='This lesson will teach you how to see through the "eyes" of a computer, and the first steps for facial recognition.'
           ratingandduration='Beginner: 5 minutes'
         />
@@ -24,8 +24,16 @@ export default function CoursesScreen ({ navigation }) {
           navigation={navigation}
           lessonScreen='Course2Intro'
           gradColors={['#8233C5', '#3C4687']}
-          title='Facial Recognition, part 2'
+          title='Facial Recognition II'
           desc='This lesson will teach you how facial recognition works using a real-life algorithm, starting right from where we left off last lesson.'
+          ratingandduration='Beginner: 5 minutes'
+        />
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='Course3Introduction'
+          gradColors={['#8233C5', '#3C4687']}
+          title='K Nearest Neighbors I'
+          desc='This lesson will teach how distance influences our observations of the world around us, an important part of the KNN algorithm.'
           ratingandduration='Beginner: 5 minutes'
         />
         <CourseAd

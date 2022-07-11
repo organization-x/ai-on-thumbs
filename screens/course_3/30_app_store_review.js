@@ -5,12 +5,11 @@ import { Text, Image, View, TouchableOpacity, Dimensions, Modal } from 'react-na
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import StarRating from 'react-native-star-rating'
-import TopLessonParagraph from '../../components/TopLessonParagraph'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 21: Rating Screen')
+Analytics.setCurrentScreen('Course 3 Screen 30: Rating Screen')
 
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {
@@ -29,7 +28,7 @@ async function sendFeedback (rating) {
 
 const height = Dimensions.get('window').height
 
-export default function Course1Rating ({ navigation }) {
+export default function Course3AppStoreReview ({ navigation }) {
   const [starCount, setStarCount] = useState(0)
   const [modalVisible, setModalVisible] = useState(false)
 
@@ -49,9 +48,9 @@ export default function Course1Rating ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
-      <TopLessonParagraph> Did you have fun learning AI with us?</TopLessonParagraph>
+      <Text style={styles.mainText}> Did you have fun learning AI with us?</Text>
       <View style={styles.starView}>
         <StarRating
           disabled={false}
@@ -80,8 +79,8 @@ export default function Course1Rating ({ navigation }) {
         </View>
       </Modal>
       <View style={styles.footerButtons}>
-        <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course1Review' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1EmailPrompt' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course3AlgorithmReview4' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course3Email' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </LinearGradient>
   )
@@ -89,8 +88,8 @@ export default function Course1Rating ({ navigation }) {
 
 const styles = {
   logo: {
-    height: height / 7,
-    marginTop: height / 12
+    height: height / 6.5,
+    marginTop: height / 20
   },
   container: {
     flex: 1,
@@ -124,6 +123,14 @@ const styles = {
       width: 0,
       height: 2
     }
+  },
+  mainText: {
+    color: 'white',
+    fontStyle: 'italic',
+    fontSize: height / 25,
+    textAlign: 'center',
+    marginTop: height / 20,
+    fontWeight: 'bold'
   },
   subText: {
     color: 'white',

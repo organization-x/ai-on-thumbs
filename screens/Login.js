@@ -9,7 +9,7 @@ async function createUser (username, email, password) {
 
     method: 'POST',
     body: JSON.stringify(
-      { username: username, email: email, password: password }
+      { username, email, password }
     ),
     headers: {
       'Content-type': 'application/json'
@@ -45,7 +45,7 @@ async function authUser (username, password) {
   const res = await fetch('https://app.ai-camp.org/auth', {
     method: 'POST',
     body: JSON.stringify(
-      { username: username, password: password }
+      { username, password }
     ),
     headers: {
       'Content-type': 'application/json'

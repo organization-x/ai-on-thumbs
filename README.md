@@ -26,7 +26,7 @@ Explore AI concepts using just your thumbs!!
 * All code should be reviewed by an EM
 * EVEN IF IT IS A COMMA, MAKE THE PR
 
-## **Course 1: Facial Recognition Algorithm**
+## **Course 1: Facial Recognition Algorithm I**
 Explore the beginning concepts of facial recognition with interactice tutorials and games! See how computers SEE images and recognize patterns.
 
 ### Authors
@@ -38,7 +38,7 @@ Explore the beginning concepts of facial recognition with interactice tutorials 
 * Rohan Joshi
 
 
-## **Course 2: Facial Recognition Algorithm pt 2**
+## **Course 2: Facial Recognition Algorithm II**
 Delve deeper into the world of facial recognition and its advanced ideas! 
 ### Authors
 * Advay Aravind
@@ -48,3 +48,10 @@ Delve deeper into the world of facial recognition and its advanced ideas!
 * Rohan Joshi
 * Sanjay Manoj
 * Zac Brammer
+
+## **Course 3: K Nearest Neighbors I**
+Explore how distance influences our observations of the world around us through the idea of nearest neighbors, an important part of the KNN algorithm.
+### Authors
+* Blake Martin
+* Phakawat Wangkriangkri
+* Ansh Chaurasia

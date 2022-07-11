@@ -50,7 +50,7 @@ export default function EyeDetection ({ found, setFound, setFilterText, imageXOf
         style={styles.dragContainer} onLayout={(event) => {
           // get dimensions of container and
           const { x, y, width, height } = event.nativeEvent.layout
-          setDragContainerDim({ width: width, height: height, x: x, y: y })
+          setDragContainerDim({ width, height, x, y })
         }}
       >
 

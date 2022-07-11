@@ -14,7 +14,7 @@ async function createUser (email) {
       'Content-type': 'application/json'
     },
     body: JSON.stringify(
-      { email: email }
+      { email }
     )
   })
 

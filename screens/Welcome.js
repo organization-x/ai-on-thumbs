@@ -79,6 +79,14 @@ export default function Welcome ({ navigation }) {
               <Text style={styles.modalText}>Engineering Manager</Text>
               <Text style={styles.modalBoldText}>Mitch Cutts (23)</Text>
               <Text style={styles.modalText}>Product Manager</Text>
+
+              <Text style={styles.modalBigText}>Lesson 3</Text>
+              <Text style={styles.modalBoldText}>Blake Martin (20)</Text>
+              <Text style={styles.modalText}>Engineering and Design</Text>
+              <Text style={styles.modalBoldText}>Phakawat Wangkriangkri (24)</Text>
+              <Text style={styles.modalText}>Engineering and Design</Text>
+              <Text style={styles.modalBoldText}>Ansh Chaurasia (19)</Text>
+              <Text style={styles.modalText}>Engineering and Design</Text>
             </ScrollView>
             <Text style={styles.closeText} onPress={() => { setModalVisible(!modalVisible) }}>Close</Text>
           </View>

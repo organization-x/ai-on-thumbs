@@ -29,7 +29,7 @@ export default function GridMCQ ({ style, answers, correctAnswer, handleChoice, 
     if (choice === correctAnswer) {
       correct = true
     }
-    handleChoice({ correct: correct, remAttempts: remAttempts })
+    handleChoice({ correct, remAttempts })
   }
 
   const choices = answers.map((answer, index, array) => {
@@ -39,7 +39,7 @@ export default function GridMCQ ({ style, answers, correctAnswer, handleChoice, 
         style={[styles.choice,
           {
             backgroundColor: answer === selected ? '#8279D4' : '#6357C9',
-            width: width,
+            width,
             borderColor: 'white',
             borderLeftWidth: (index % cols !== 0) ? 1 : 0, // left border if not 1st of row
             borderBottomWidth: (index < array.length - cols) ? 1 : 0 // bott border if not last 2
