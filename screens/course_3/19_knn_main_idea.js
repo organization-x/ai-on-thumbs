@@ -8,7 +8,6 @@ import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 19: KNN Main Idea')
 
-
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
@@ -16,12 +15,12 @@ export default function Course3KNNMainIdea ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <View style={styles.interactive}>
-        <Image style={styles.image} source={require('../../assets/course_3/KNNVisualization.png')}/>
+        <Image style={styles.image} source={require('../../assets/course_3/KNNVisualization.png')} />
         <Text style={styles.text}>What if we use that idea to separate these shapes into groups?</Text>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3CommonTraitAnswer' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdeaII' buttonColor={['#32B59D', '#3AC55B']} buttonText="Tell Me More!" />
+        <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdeaII' buttonColor={['#32B59D', '#3AC55B']} buttonText='Tell Me More!' />
       </View>
     </LinearGradient>
   )
@@ -47,9 +46,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     transform: [
 
-      { translateY: - height * 0.10 },
+      { translateY: -height * 0.10 }
 
-    ],
+    ]
   },
   boldText: {
     textAlign: 'center',
@@ -64,6 +63,6 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    width: width / 0.9,
+    width: width / 0.9
   }
 })

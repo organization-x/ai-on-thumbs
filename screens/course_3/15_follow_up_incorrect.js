@@ -31,7 +31,7 @@ export default function Course3FollowUpIIIncorrect ({ navigation }) {
           navigation={navigation}
           nextScreen='Course3NearestNeighborsReveal'
           buttonColor={['#32B59D', '#3AC55B']}
-          buttonText="Gotcha!"
+          buttonText='Gotcha!'
         />
       </View>
     </LinearGradient>

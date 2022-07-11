@@ -1,7 +1,7 @@
 // Distance helps us predict which group new members belong to.
 
 import React from 'react'
-import { StyleSheet, View, Text} from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
@@ -16,7 +16,7 @@ export default function Course3KNNMainIdeaIV ({ navigation }) {
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdeaIII' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdeaV' buttonColor={['#32B59D', '#3AC55B']} buttonText="Interesting!" />
+        <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdeaV' buttonColor={['#32B59D', '#3AC55B']} buttonText='Interesting!' />
       </View>
     </LinearGradient>
   )

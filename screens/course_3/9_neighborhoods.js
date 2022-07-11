@@ -1,25 +1,23 @@
 // What if we separate the area into three neighborhoods?
 
 import React from 'react'
-import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions, TurboModuleRegistry } from 'react-native'
+import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 9: Neighborhoods')
 
-const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course3Neighborhoods ({ navigation }) {
-
   return (
     <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
-      <View style={{ flex: 1, marginTop: '15%'}}>
+      <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.text}>What if we separate the area into three neighborhoods?</Text>
         <View style={styles.rowContainer}>
           <View style={styles.cell}>
-          <Image style={styles.image} source={require('../../assets/course_3/GreenHouse.png')} />
+            <Image style={styles.image} source={require('../../assets/course_3/GreenHouse.png')} />
           </View>
           <View style={styles.cell}>
             <Image style={styles.image} source={require('../../assets/course_3/BlackHouse.png')} />
@@ -27,47 +25,38 @@ export default function Course3Neighborhoods ({ navigation }) {
           <View style={styles.cell}>
             <Image style={styles.image} source={require('../../assets/course_3/A.png')} />
           </View>
-          <View style={styles.cell}>
-          </View>
+          <View style={styles.cell} />
+        </View>
+        <View style={styles.rowContainer}>
+          <View style={styles.cell} />
+          <View style={styles.cell} />
+          <View style={styles.cell} />
+          <View style={styles.cell} />
         </View>
         <View style={styles.rowContainer}>
           <View style={styles.cell}>
+            <Image style={styles.image} source={require('../../assets/course_3/RedHouse.png')} />
           </View>
           <View style={styles.cell}>
+            <Image style={styles.image} source={require('../../assets/course_3/B.png')} />
           </View>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
+          <View style={styles.cell} />
+          <View style={styles.cell} />
         </View>
         <View style={styles.rowContainer}>
+          <View style={styles.cell} />
+          <View style={styles.cell} />
           <View style={styles.cell}>
-          <Image style={styles.image} source={require('../../assets/course_3/RedHouse.png')} />
+            <Image style={styles.image} source={require('../../assets/course_3/C.png')} />
           </View>
           <View style={styles.cell}>
-          <Image style={styles.image} source={require('../../assets/course_3/B.png')} />
-          </View>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
-        </View>
-        <View style={styles.rowContainer}>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          <Image style={styles.image} source={require('../../assets/course_3/C.png')} />
-          </View>
-          <View style={styles.cell}>
-          <Image style={styles.image} source={require('../../assets/course_3/BlueHouse.png')} />
+            <Image style={styles.image} source={require('../../assets/course_3/BlueHouse.png')} />
           </View>
         </View>
       </View>
       <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course3FollowUp' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course3BlackHouseNeighborhood' buttonColor={['#32B59D', '#3AC55B']} buttonText="I'm Listening" />
+        <LessonButton navigation={navigation} nextScreen='Course3FollowUp' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course3BlackHouseNeighborhood' buttonColor={['#32B59D', '#3AC55B']} buttonText="I'm Listening" />
       </View>
     </LinearGradient>
   )

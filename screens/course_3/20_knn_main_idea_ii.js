@@ -1,7 +1,7 @@
 // That's the idea of KNN!
 
 import React from 'react'
-import { StyleSheet, View, Text} from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
@@ -17,7 +17,7 @@ export default function Course3KNNMainIdeaII ({ navigation }) {
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdea' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdeaIII' buttonColor={['#32B59D', '#3AC55B']} buttonText="I See" />
+        <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdeaIII' buttonColor={['#32B59D', '#3AC55B']} buttonText='I See' />
       </View>
     </LinearGradient>
   )

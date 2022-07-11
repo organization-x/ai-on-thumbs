@@ -43,7 +43,7 @@ export default function Course3AlgorithmReview3 ({ navigation }) {
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3AlgorithmReview2' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3AlgorithmReview4' buttonColor={['#32B59D', '#3AC55B']} buttonText="Next" />
+        <LessonButton navigation={navigation} nextScreen='Course3AlgorithmReview4' buttonColor={['#32B59D', '#3AC55B']} buttonText='Next' />
       </View>
 
       <StatusBar style='auto' />

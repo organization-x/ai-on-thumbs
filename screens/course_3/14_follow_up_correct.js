@@ -29,7 +29,7 @@ export default function Course3FollowUpIICorrect ({ navigation }) {
           navigation={navigation}
           nextScreen='Course3NearestNeighborsReveal'
           buttonColor={['#32B59D', '#3AC55B']}
-          buttonText="Thank You!"
+          buttonText='Thank You!'
         />
       </View>
     </LinearGradient>

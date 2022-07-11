@@ -8,7 +8,6 @@ import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 18: Common Trait Answer')
 
-const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course3CommonTraitAnswer ({ navigation }) {
@@ -21,7 +20,7 @@ export default function Course3CommonTraitAnswer ({ navigation }) {
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3CommonTraitQuestion' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdea' buttonColor={['#32B59D', '#3AC55B']} buttonText="Read My Mind!" />
+        <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdea' buttonColor={['#32B59D', '#3AC55B']} buttonText='Read My Mind!' />
       </View>
     </LinearGradient>
   )

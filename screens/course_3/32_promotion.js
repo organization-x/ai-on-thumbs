@@ -1,9 +1,8 @@
 // Summer Camp Promotion
 
 import React from 'react'
-import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollView, Dimensions, Linking } from 'react-native'
+import { StyleSheet, View, Text, Image, Dimensions, Linking } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import EmailPrompt from '../../components/EmailPrompt'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
 import * as Analytics from 'expo-firebase-analytics'
@@ -23,7 +22,7 @@ export default function Promotion ({ navigation }) {
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.text}>If you had fun here, you'll certainly want to check out our after-school and summer programs at AI Camp.</Text>
         <Text style={styles.text}>At AI Camp, you will make lifelong friends and connections and we will teach you how to build amazing AI products!</Text>
-        <Text style={styles.promoText} onPress = {handlePress}>Click here to see what else AI Camp has to offer!</Text>
+        <Text style={styles.promoText} onPress={handlePress}>Click here to see what else AI Camp has to offer!</Text>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3Email' buttonColor='#8976C2' buttonText='Back' />

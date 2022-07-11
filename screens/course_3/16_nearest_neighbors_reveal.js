@@ -8,7 +8,6 @@ import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 16: Nearest Neighbors Reveal')
 
-const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course3NearestNeighborsReveal ({ navigation }) {
@@ -20,8 +19,8 @@ export default function Course3NearestNeighborsReveal ({ navigation }) {
         <Image style={styles.image} source={require('../../assets/course_3/CartoonNeighborhood.png')} />
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course3FollowUpIIA' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3CommonTraitQuestion' buttonColor={['#32B59D', '#3AC55B']} buttonText="Next" />
+        <LessonButton navigation={navigation} nextScreen='Course3FollowUpIIB' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course3CommonTraitQuestion' buttonColor={['#32B59D', '#3AC55B']} buttonText='Next' />
       </View>
     </LinearGradient>
   )

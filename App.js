@@ -227,15 +227,15 @@ export default function App () {
           <Stack.Screen name='Course3FollowUpIIB' component={Course3FollowUpIIB} />
           <Stack.Screen name='Course3FollowUpIICorrect' component={Course3FollowUpIICorrect} />
           <Stack.Screen name='Course3FollowUpIIIncorrect' component={Course3FollowUpIIIncorrect} />
-          <Stack.Screen name='Course3NearestNeighborsReveal' component={Course3NearestNeighborsReveal}/>
-          <Stack.Screen name='Course3CommonTraitQuestion' component={Course3CommonTraitQuestion}/>
-          <Stack.Screen name='Course3CommonTraitAnswer' component={Course3CommonTraitAnswer}/>
-          <Stack.Screen name='Course3KNNMainIdea' component={Course3KNNMainIdea}/>
-          <Stack.Screen name='Course3KNNMainIdeaII' component={Course3KNNMainIdeaII}/>
-          <Stack.Screen name='Course3KNNMainIdeaIII' component={Course3KNNMainIdeaIII}/>
-          <Stack.Screen name='Course3KNNMainIdeaIV' component={Course3KNNMainIdeaIV}/>
-          <Stack.Screen name='Course3KNNMainIdeaV' component={Course3KNNMainIdeaV}/>
-          <Stack.Screen name='Course3KNNMainIdeaVI' component={Course3KNNMainIdeaVI}/>
+          <Stack.Screen name='Course3NearestNeighborsReveal' component={Course3NearestNeighborsReveal} />
+          <Stack.Screen name='Course3CommonTraitQuestion' component={Course3CommonTraitQuestion} />
+          <Stack.Screen name='Course3CommonTraitAnswer' component={Course3CommonTraitAnswer} />
+          <Stack.Screen name='Course3KNNMainIdea' component={Course3KNNMainIdea} />
+          <Stack.Screen name='Course3KNNMainIdeaII' component={Course3KNNMainIdeaII} />
+          <Stack.Screen name='Course3KNNMainIdeaIII' component={Course3KNNMainIdeaIII} />
+          <Stack.Screen name='Course3KNNMainIdeaIV' component={Course3KNNMainIdeaIV} />
+          <Stack.Screen name='Course3KNNMainIdeaV' component={Course3KNNMainIdeaV} />
+          <Stack.Screen name='Course3KNNMainIdeaVI' component={Course3KNNMainIdeaVI} />
           <Stack.Screen name='Course3Congratulations' component={Course3Congratulations} />
           <Stack.Screen name='Course3AlgorithmReview1' component={Course3AlgorithmReview1} />
           <Stack.Screen name='Course3AlgorithmReview2' component={Course3AlgorithmReview2} />

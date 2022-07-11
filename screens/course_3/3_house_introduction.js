@@ -1,68 +1,51 @@
 // Introduction to the black house.
 
 import React from 'react'
-import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions, TurboModuleRegistry } from 'react-native'
+import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 3: House Introduction')
 
-const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course3HouseIntroduction ({ navigation }) {
-
   return (
     <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
-      <View style={{ flex: 1, marginTop: '15%'}}>
+      <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.text}>Here is the black house.</Text>
         <View style={styles.rowContainer}>
-          <View style={styles.cell}>
-          </View>
+          <View style={styles.cell} />
           <View style={styles.cell}>
             <Image style={styles.image} source={require('../../assets/course_3/BlackHouse.png')} />
           </View>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
+          <View style={styles.cell} />
+          <View style={styles.cell} />
         </View>
         <View style={styles.rowContainer}>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
+          <View style={styles.cell} />
+          <View style={styles.cell} />
+          <View style={styles.cell} />
+          <View style={styles.cell} />
         </View>
         <View style={styles.rowContainer}>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
+          <View style={styles.cell} />
+          <View style={styles.cell} />
+          <View style={styles.cell} />
+          <View style={styles.cell} />
         </View>
         <View style={styles.rowContainer}>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
-          <View style={styles.cell}>
-          </View>
+          <View style={styles.cell} />
+          <View style={styles.cell} />
+          <View style={styles.cell} />
+          <View style={styles.cell} />
         </View>
       </View>
       <Text style={styles.text}>It's a little lonely here. Let's add a few more houses.</Text>
       <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course3NearestNeighbor' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course3SelectClosestHouse' buttonColor={['#32B59D', '#3AC55B']} buttonText='Add Houses' />
+        <LessonButton navigation={navigation} nextScreen='Course3NearestNeighbor' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course3SelectClosestHouse' buttonColor={['#32B59D', '#3AC55B']} buttonText='Add Houses' />
       </View>
     </LinearGradient>
   )

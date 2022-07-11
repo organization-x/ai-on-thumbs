@@ -1,7 +1,7 @@
 // To understand how KNN works, we need to first understand nearest neighbors.
 
 import React from 'react'
-import { StyleSheet, View, Text} from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'

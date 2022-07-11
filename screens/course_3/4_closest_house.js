@@ -1,28 +1,25 @@
 // Select the house that is closest to the green house.
 
 import React from 'react'
-import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions, TurboModuleRegistry } from 'react-native'
+import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 4: Nearest Neighbor')
 
-const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course3SelectClosestHouse ({ navigation }) {
-
   const [redHouseDisabled, setDisableRedHouse] = React.useState(false)
   const [blueHouseDisabled, setDisableBlueHouse] = React.useState(false)
   const [lowerScreenText, setLowerScreenText] = React.useState('Select the house that is closest to the black house.')
 
-  
   const handlePress = (num) => {
-    if (num === 0){
+    if (num === 0) {
       setDisableRedHouse(true)
       setLowerScreenText("It's not the red house! Pick another house.")
-    } else if (num === 1){
+    } else if (num === 1) {
       setDisableBlueHouse(true)
       setLowerScreenText("It's not the blue house! Pick another house.")
     }
@@ -30,56 +27,44 @@ export default function Course3SelectClosestHouse ({ navigation }) {
 
   return (
     <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
-      <View style={{ flex: 1, marginTop: '15%'}}>
-      <Text style={styles.text}>That's more like it.</Text>
+      <View style={{ flex: 1, marginTop: '15%' }}>
+        <Text style={styles.text}>That's more like it.</Text>
         <View style={styles.rowContainer}>
-          <TouchableOpacity style={styles.cell} onPress={()=>navigation.navigate("Course3FollowUp")} disabled={false}>
-          <Image style={styles.image} source={require('../../assets/course_3/GreenHouse.png')} />
+          <TouchableOpacity style={styles.cell} onPress={() => navigation.navigate('Course3FollowUp')} disabled={false}>
+            <Image style={styles.image} source={require('../../assets/course_3/GreenHouse.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
+          <TouchableOpacity style={styles.cell} disabled>
             <Image style={styles.image} source={require('../../assets/course_3/BlackHouse.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
+          <TouchableOpacity style={styles.cell} disabled />
+          <TouchableOpacity style={styles.cell} disabled />
         </View>
         <View style={styles.rowContainer}>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
+          <TouchableOpacity style={styles.cell} disabled />
+          <TouchableOpacity style={styles.cell} disabled />
+          <TouchableOpacity style={styles.cell} disabled />
+          <TouchableOpacity style={styles.cell} disabled />
         </View>
         <View style={styles.rowContainer}>
-          <TouchableOpacity style={styles.cell} onPress={()=>handlePress(0)}disabled={redHouseDisabled}>
-          <Image style={styles.image} onPress={()=>handlePress(0)} source={require('../../assets/course_3/RedHouse.png')} />
+          <TouchableOpacity style={styles.cell} onPress={() => handlePress(0)} disabled={redHouseDisabled}>
+            <Image style={styles.image} onPress={() => handlePress(0)} source={require('../../assets/course_3/RedHouse.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
+          <TouchableOpacity style={styles.cell} disabled />
+          <TouchableOpacity style={styles.cell} disabled />
+          <TouchableOpacity style={styles.cell} disabled />
         </View>
         <View style={styles.rowContainer}>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} disabled={true}>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cell} onPress={()=>handlePress(1)} disabled={blueHouseDisabled}>
-          <Image style={styles.image} source={require('../../assets/course_3/BlueHouse.png')} />
+          <TouchableOpacity style={styles.cell} disabled />
+          <TouchableOpacity style={styles.cell} disabled />
+          <TouchableOpacity style={styles.cell} disabled />
+          <TouchableOpacity style={styles.cell} onPress={() => handlePress(1)} disabled={blueHouseDisabled}>
+            <Image style={styles.image} source={require('../../assets/course_3/BlueHouse.png')} />
           </TouchableOpacity>
         </View>
       </View>
       <Text style={styles.text}>{lowerScreenText}</Text>
       <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course3HouseIntroduction' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course3HouseIntroduction' buttonColor='#8976C2' buttonText='Back' />
       </View>
     </LinearGradient>
   )
@@ -133,6 +118,6 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'center'
   }
 })

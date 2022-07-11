@@ -1,7 +1,7 @@
 // What's one thing you share in common with your neighbors?
 
 import React from 'react'
-import { StyleSheet, View, Text} from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'

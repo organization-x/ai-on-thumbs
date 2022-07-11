@@ -1,27 +1,25 @@
 // What neighborhood is the green house part of?
 
 import React from 'react'
-import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions, TurboModuleRegistry, ListView } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 11: Green House Neighborhood')
 
-const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course3GreenHouseNeighborhood ({ navigation }) {
-
   return (
     <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
-      <View style={{ flex: 1, marginTop: '5%'}}>
+      <View style={{ flex: 1, marginTop: '5%' }}>
         <Text style={styles.boldText}>That's right! The black house is part of Neighborhood A.</Text>
         <Text style={styles.text}>Which neighborhood would you predict the green house is a part of?</Text>
       </View>
       <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course3FollowUpIIB' buttonColor='#8976C2' buttonText='Neighborhood A' />
-          <LessonButton navigation={navigation} nextScreen='Course3FollowUpIIA' buttonColor={['#32B59D', '#3AC55B']} buttonText='Neighborhood B' />
+        <LessonButton navigation={navigation} nextScreen='Course3FollowUpIIB' buttonColor='#8976C2' buttonText='Neighborhood A' />
+        <LessonButton navigation={navigation} nextScreen='Course3FollowUpIIA' buttonColor={['#32B59D', '#3AC55B']} buttonText='Neighborhood B' />
       </View>
     </LinearGradient>
   )

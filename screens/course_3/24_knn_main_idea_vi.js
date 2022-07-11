@@ -1,7 +1,7 @@
 // Members of each group are close to other members of the group.
 
 import React from 'react'
-import { StyleSheet, View, Text} from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
@@ -17,7 +17,7 @@ export default function Course3KNNMainIdeaVI ({ navigation }) {
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdeaV' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3Congratulations' buttonColor={['#32B59D', '#3AC55B']} buttonText="Gotcha!" />
+        <LessonButton navigation={navigation} nextScreen='Course3Congratulations' buttonColor={['#32B59D', '#3AC55B']} buttonText='Gotcha!' />
       </View>
     </LinearGradient>
   )

@@ -1,7 +1,7 @@
 // KNN is a machine learning algorithm used for classification.
 
 import React from 'react'
-import { StyleSheet, View, Text} from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
@@ -16,7 +16,7 @@ export default function Course3Introduction ({ navigation }) {
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3NearestNeighbor' buttonColor={['#32B59D', '#3AC55B']} buttonText="Tell Me More!" />
+        <LessonButton navigation={navigation} nextScreen='Course3NearestNeighbor' buttonColor={['#32B59D', '#3AC55B']} buttonText='Tell Me More!' />
       </View>
     </LinearGradient>
   )

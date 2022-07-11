@@ -8,7 +8,6 @@ import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 7: Follow Up Incorrect')
 
 const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
 
 export default function Course3FollowUpIncorrect ({ navigation }) {
   return (
@@ -30,7 +29,7 @@ export default function Course3FollowUpIncorrect ({ navigation }) {
           navigation={navigation}
           nextScreen='Course3DistanceRole'
           buttonColor={['#32B59D', '#3AC55B']}
-          buttonText="You Got Me!"
+          buttonText='You Got Me!'
         />
       </View>
     </LinearGradient>
@@ -87,7 +86,7 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    width: "150%",
-    height: "150%"
+    width: '150%',
+    height: '150%'
   }
 })

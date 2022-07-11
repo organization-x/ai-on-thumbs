@@ -1,14 +1,14 @@
 // Distance is how we measure how far apart houses are.
 
 import React from 'react'
-import { StyleSheet, View, Text} from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
 
-export default function Course3Distance({ navigation }) {
+export default function Course3Distance ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
       <View style={styles.interactive}>
