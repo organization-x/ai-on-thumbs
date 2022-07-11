@@ -18,7 +18,7 @@ async function sendFeedback (rating) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      rating: rating
+      rating
     })
   })
 

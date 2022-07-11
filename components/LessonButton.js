@@ -15,7 +15,7 @@ export default function LessonButton ({ style, navigation, nextScreen, buttonTex
 
   return (
     <TouchableOpacity
-      onPress={() => enabled && navigation.navigate(nextScreen, { context: context })}
+      onPress={() => enabled && navigation.navigate(nextScreen, { context })}
       style={[styles.backButton, style]}
       underlayColor='#fff'
       activeOpacity={actOpacity}

@@ -27,9 +27,9 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
 
   for (let i = 0; i < 16; i++) {
     if ([0, 2, 5, 9].includes(i)) {
-      grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} disabled={disableMap[i + 1]} onPress={() => handlePress(i + 1)} style={[styles.box, { backgroundColor: backgroundColor }, { opacity: opacities[i] }]} />)
+      grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} disabled={disableMap[i + 1]} onPress={() => handlePress(i + 1)} style={[styles.box, { backgroundColor }, { opacity: opacities[i] }]} />)
     } else {
-      grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} onPress={() => handlePress(i + 1)} style={[styles.box, { backgroundColor: backgroundColor }, { opacity: opacities[i] }]} />)
+      grid.push(<TouchableOpacity key={`grid${i}`} activeOpacity={1} onPress={() => handlePress(i + 1)} style={[styles.box, { backgroundColor }, { opacity: opacities[i] }]} />)
     }
   }
 
