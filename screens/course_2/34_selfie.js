@@ -13,8 +13,8 @@ import { manipulateAsync, SaveFormat } from 'expo-image-manipulator'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 34: Selfie Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 2 Screen 34: Selfie Screen')
 
 const height = Dimensions.get('window').height
 
@@ -46,7 +46,7 @@ export default function Course2Selfie ({ navigation }) {
   const sendFaceRequest = async (imageString) => {
     let res
     try {
-      res = await fetch('https://app.ai-camp.org/image',
+      res = await fetch('https://app2.ai-camp.dev/image',
         {
           method: 'POST',
           body: JSON.stringify(
@@ -66,7 +66,7 @@ export default function Course2Selfie ({ navigation }) {
 
   useEffect(() => {
     (async () => {
-      const { status } = await Camera.requestPermissionsAsync()
+      const { status } = await Camera.requestCameraPermissionsAsync()
       setHasPermission(status === 'granted')
     })().catch(error => { Sentry.Native.captureException(error.message) })
   }, [])

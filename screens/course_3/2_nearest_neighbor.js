@@ -5,8 +5,8 @@ import { StyleSheet, View, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 2: Nearest Neighbor')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 3 Screen 2: Nearest Neighbor')
 
 export default function Course3NearestNeighbor ({ navigation }) {
   return (

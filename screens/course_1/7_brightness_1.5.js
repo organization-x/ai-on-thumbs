@@ -5,8 +5,8 @@ import { StyleSheet, View, Text, Image, Pressable, Dimensions } from 'react-nati
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 7: Brightness 1.5 Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 1 Screen 7: Brightness 1.5 Screen')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width

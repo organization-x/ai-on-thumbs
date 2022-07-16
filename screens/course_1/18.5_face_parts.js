@@ -7,8 +7,8 @@ import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import ImageMapper from 'react-native-image-mapper'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 18.5: Face Parts 2 Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 1 Screen 18.5: Face Parts 2 Screen')
 
 const deviceHeight = Dimensions.get('window').height
 const imageDimension = deviceHeight * 0.35

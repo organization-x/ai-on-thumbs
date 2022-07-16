@@ -7,8 +7,8 @@ import { StyleSheet, View, Text, Image, ScrollView, Dimensions } from 'react-nat
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 13.5: Human vs Computer 2 Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 1 Screen 13.5: Human vs Computer 2 Screen')
 
 export default function Course1HumanVsComputer2 ({ navigation }) {
   return (

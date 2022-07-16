@@ -5,8 +5,8 @@ import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 28: Algorithm Review 3')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 3 Screen 28: Algorithm Review 3')
 
 const height = Dimensions.get('window').height
 

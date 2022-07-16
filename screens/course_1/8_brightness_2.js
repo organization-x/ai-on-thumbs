@@ -8,8 +8,8 @@ import BottomLessonParagraph from '../../components/BottomLessonParagraph'
 import { LinearGradient } from 'expo-linear-gradient'
 import TopLessonParagraph from '../../components/TopLessonParagraph'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 8: Brightness 2 Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 1 Screen 8: Brightness 2 Screen')
 
 const height = Dimensions.get('window').height
 

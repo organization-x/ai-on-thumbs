@@ -6,8 +6,8 @@ import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 22: Email Prompt Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 1 Screen 22: Email Prompt Screen')
 
 const height = Dimensions.get('window').height
 

@@ -8,8 +8,8 @@ import BottomLessonParagraph from '../../components/BottomLessonParagraph'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 3.5: Pinch Zoom Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 1 Screen 3.5: Pinch Zoom Screen')
 
 const height = Dimensions.get('window').height
 

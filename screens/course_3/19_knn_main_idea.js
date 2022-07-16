@@ -5,8 +5,8 @@ import { StyleSheet, View, Image, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 19: KNN Main Idea')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 3 Screen 19: KNN Main Idea')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width

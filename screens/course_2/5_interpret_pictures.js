@@ -3,8 +3,8 @@
 import React from 'react'
 import { StyleSheet, View, Text, ImageBackground, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 5: Interpret Pictures Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 2 Screen 5: Interpret Pictures Screen')
 
 const height = Dimensions.get('window').height
 

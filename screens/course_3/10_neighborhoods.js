@@ -5,8 +5,8 @@ import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions } from 'rea
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 10: Black House Neighborhood')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 3 Screen 10: Black House Neighborhood')
 
 const width = Dimensions.get('window').width
 

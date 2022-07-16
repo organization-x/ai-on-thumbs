@@ -5,8 +5,8 @@ import { StyleSheet, View, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 22: KNN Main Idea IV')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 3 Screen 22: KNN Main Idea IV')
 
 export default function Course3KNNMainIdeaIV ({ navigation }) {
   return (

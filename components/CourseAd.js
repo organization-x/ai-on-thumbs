@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, Linking } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import * as Analytics from 'expo-firebase-analytics'
+// import * as Analytics from 'expo-firebase-analytics'
 import * as Sentry from 'sentry-expo'
 
 export default function CourseCard ({ gradColors, title, desc }) {

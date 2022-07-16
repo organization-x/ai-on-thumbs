@@ -3,8 +3,8 @@ import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions } from 'rea
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 2: Face Finder Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 1 Screen 2: Face Finder Screen')
 
 const height = Dimensions.get('window').height
 

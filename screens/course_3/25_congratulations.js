@@ -5,8 +5,8 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import ConfettiCannon from 'react-native-confetti-cannon'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 25: Congratulations')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 3 Screen 25: Congratulations')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
