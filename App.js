@@ -114,6 +114,16 @@ import Course3AppStoreReview from './screens/course_3/30_app_store_review'
 import Course3Email from './screens/course_3/31_email'
 import Course3Promotion from './screens/course_3/32_promotion'
 
+//course 4 imports 
+import Test1 from './screens/course_4/1_test'
+import Test2 from './screens/course_4/2_test'
+import Test3 from './screens/course_4/3_test'
+import Course4CaptExplain from './screens/course_4/4_explain_captcha'
+import Course4Info1 from './screens/course_4/5_nn_info_1'
+import Course4Info2 from './screens/course_4/6_nn_info_2'
+import Test7 from './screens/course_4/7_test'
+import Test8 from './screens/course_4/8_test'
+
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
   enableInExpoDevelopment: false,
@@ -244,6 +254,17 @@ export default function App () {
           <Stack.Screen name='Course3AppStoreReview' component={Course3AppStoreReview} />
           <Stack.Screen name='Course3Email' component={Course3Email} />
           <Stack.Screen name='Course3Promotion' component={Course3Promotion} />
+
+          {/* course 4 screen stack */}
+          <Stack.Screen name='Test1' component={Test1} />
+          <Stack.Screen name='Test2' component={Test2} />
+          <Stack.Screen name='Test3' component={Test3} />
+          <Stack.Screen name='Course4CaptExplain' component={Course4CaptExplain} />
+          <Stack.Screen name='Course4Info1' component={Course4Info1} />
+          <Stack.Screen name='Course4Info2' component={Course4Info2} />
+          <Stack.Screen name='Test7' component={Test7} />
+          <Stack.Screen name='Test8' component={Test8} />
+
         </Stack.Navigator>
       </NavigationContainer>
     </LinearGradient>
