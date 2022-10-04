@@ -118,11 +118,12 @@ import Course3Promotion from './screens/course_3/32_promotion'
 import Test1 from './screens/course_4/1_test'
 import Test2 from './screens/course_4/2_test'
 import Test3 from './screens/course_4/3_test'
-import Course4CaptExplain from './screens/course_4/4_explain_captcha'
-import Course4Info1 from './screens/course_4/5_nn_info_1'
-import Course4Info2 from './screens/course_4/6_nn_info_2'
+import Course4CaptExplain from './screens/course_4/1.4_explain_captcha'
+import Course4Info1 from './screens/course_4/1.5_nn_info_1'
+import Course4Info2 from './screens/course_4/1.6_nn_info_2'
 import Test7 from './screens/course_4/7_test'
-import Test8 from './screens/course_4/8_test'
+import Course4Sect1End from './screens/course_4/1.8_section1_end'
+import Test9 from './screens/course_4/2.1_test'
 
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
@@ -263,7 +264,8 @@ export default function App () {
           <Stack.Screen name='Course4Info1' component={Course4Info1} />
           <Stack.Screen name='Course4Info2' component={Course4Info2} />
           <Stack.Screen name='Test7' component={Test7} />
-          <Stack.Screen name='Test8' component={Test8} />
+          <Stack.Screen name='Course4Sect1End' component={Course4Sect1End} />
+          <Stack.Screen name='Test9' component={Test9} />
 
         </Stack.Navigator>
       </NavigationContainer>

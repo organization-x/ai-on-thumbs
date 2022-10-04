@@ -5,6 +5,7 @@ import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-nati
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+import SectionButton from '../../components/SectionButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
 // import * as Analytics from 'expo-firebase-analytics'
@@ -12,20 +13,19 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 const height = Dimensions.get('window').height
 
-export default function Test8 ({ navigation, context, enabled = true }) {
+export default function Course4Sect1End ({ navigation, context, enabled = true }) {
     let screenSection = screen_list.section1;
-    let screenName = 'Test8';
+    let nextSection = screen_list.section2;
+    let screenName = 'Course4Sect1End';
     return (
     <View style={styles.container}>
-        <Text style={styles.number}>4/8</Text>
+        <Text style={styles.number}>8/8</Text>
         <View style={styles.interactive}>
-            <Text style={styles.text}>Page</Text>
-            <Text style={styles.text}>8</Text>
+            <Text style={styles.text}>Now let's dive further into neural networks to better understand how they are able to process information!</Text>
         </View>
-        {/*<View style={styles.footerButtons}>
-            <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
-            <LessonButton navigation={navigation} nextScreen='Cours4Info1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>*/}
+        <View style={styles.sectionButton}>
+            <SectionButton navigation={navigation} nextSection={true} goSection={nextSection} />
+        </View>
         <View style={styles.footerButtons}>
             <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
         </View>
@@ -49,13 +49,18 @@ const styles = StyleSheet.create({
         flex: 1,
         borderRadius: 7,
         overflow: 'hidden',
-        marginTop: height / 12
+        marginTop: height / 10
     },
     number: {
         color: 'white',
         fontSize: 30,
         textAlign: 'right',
         marginTop: 10
+    },
+    sectionButton: {
+        marginBottom: 160,
+        flexDirection: 'row',
+        justifyContent: 'center',
     },
     text: {
         flex: 1,
