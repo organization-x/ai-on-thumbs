@@ -114,6 +114,21 @@ import Course3AppStoreReview from './screens/course_3/30_app_store_review'
 import Course3Email from './screens/course_3/31_email'
 import Course3Promotion from './screens/course_3/32_promotion'
 
+// course 4 imports
+import Course4page1_7 from './screens/course_4/1.7_nn_to_brains'
+// import Course4page1_8 from './screens/course_4/8'
+import Course4page2_1 from './screens/course_4/2.1_process_info'
+import Course4page2_2 from './screens/course_4/2.2_layers'
+import Course4page2_3 from './screens/course_4/2.3_numerical_values'
+import Course4page2_4 from './screens/course_4/2.4_hidden_layer_interactive'
+import Course4page2_5 from './screens/course_4/2.5_backprop'
+import Course4page2_6 from './screens/course_4/2.6_bp_cont'
+import Course4page2_7 from './screens/course_4/2.7_learning'
+import Course4page2_8 from './screens/course_4/2.8_adjustment'
+// import Course3NearestNeighbor from './screens/course_3/2_nearest_neighbor'
+// import Course3HouseIntroduction from './screens/course_3/3_house_introduction'
+
+
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
   enableInExpoDevelopment: false,
@@ -244,6 +259,18 @@ export default function App () {
           <Stack.Screen name='Course3AppStoreReview' component={Course3AppStoreReview} />
           <Stack.Screen name='Course3Email' component={Course3Email} />
           <Stack.Screen name='Course3Promotion' component={Course3Promotion} />
+
+          {/* course 4 screen stack */}
+          <Stack.Screen name='Course4page1_7' component={Course4page1_7} />
+          <Stack.Screen name='Course4page2_1' component={Course4page2_1} /> 
+          <Stack.Screen name='Course4page2_2' component={Course4page2_2} />
+          <Stack.Screen name='Course4page2_3' component={Course4page2_3} />
+          <Stack.Screen name='Course4page2_4' component={Course4page2_4} />
+          <Stack.Screen name='Course4page2_5' component={Course4page2_5} />
+          <Stack.Screen name='Course4page2_6' component={Course4page2_6} />
+          <Stack.Screen name='Course4page2_7' component={Course4page2_7} />
+          <Stack.Screen name='Course4page2_8' component={Course4page2_8} />
+          {/* <Stack.Screen name='Course3SelectClosestHouse' component={Course3SelectClosestHouse} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </LinearGradient>
