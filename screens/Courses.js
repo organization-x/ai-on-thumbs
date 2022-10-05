@@ -36,6 +36,14 @@ export default function CoursesScreen ({ navigation }) {
           desc='This lesson will teach how distance influences our observations of the world around us, an important part of the KNN algorithm.'
           ratingandduration='Beginner: 5 minutes'
         />
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='Course4S3Intro'
+          gradColors={['#8233C5', '#3C4687']}
+          title='Neural Networks I'
+          desc="This lesson is going to explain what a neural network is, how it's similar to a human brain, and the basics of how they work. We'll also be exploring some real world applications of neural networks."
+          ratingandduration='Beginner: 10 minutes'
+        />
         <CourseAd
           gradColors={['#33D05F', '#09713F']}
           title='Want to learn more about AI?'

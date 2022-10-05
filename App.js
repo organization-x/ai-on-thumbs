@@ -13,6 +13,15 @@ import YesThumbs from './screens/YesThumbs'
 
 import * as Sentry from 'sentry-expo'
 
+//testing
+import Test from './screens/course_4/test'
+import Course4S3Intro from './screens/course_4/3.1'
+import Course4S3Recommendation from './screens/course_4/3.2'
+import Course4S3Correct from './screens/course_4/3.2-2'
+import Course4S3Incorrect from './screens/course_4/3.2-3'
+import Course4S3Info from './screens/course_4/3.3'
+import Course4S3End from './screens/course_4/3.4'
+
 // course 1 imports
 import Course1Intro from './screens/course_1/1_intro'
 import Course1FaceFinder from './screens/course_1/2_face_finder'
@@ -137,6 +146,7 @@ export default function App () {
           initialRouteName='Welcome'
           screenOptions={{ headerShown: false }}
         >
+
           <Stack.Screen name='Welcome' component={Welcome} />
           <Stack.Screen name='Courses' component={Courses} />
 
@@ -244,6 +254,13 @@ export default function App () {
           <Stack.Screen name='Course3AppStoreReview' component={Course3AppStoreReview} />
           <Stack.Screen name='Course3Email' component={Course3Email} />
           <Stack.Screen name='Course3Promotion' component={Course3Promotion} />
+
+          <Stack.Screen name='Course4S3Intro' component={Course4S3Intro} />
+          <Stack.Screen name='Course4S3Recommendation' component={Course4S3Recommendation} />
+          <Stack.Screen name='Course4S3Correct' component={Course4S3Correct} />
+          <Stack.Screen name='Course4S3Incorrect' component={Course4S3Incorrect} />
+          <Stack.Screen name='Course4S3Info' component={Course4S3Info} />
+          <Stack.Screen name='Course4S3End' component={Course4S3End} />
         </Stack.Navigator>
       </NavigationContainer>
     </LinearGradient>
