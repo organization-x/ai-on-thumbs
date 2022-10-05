@@ -114,6 +114,10 @@ import Course3AppStoreReview from './screens/course_3/30_app_store_review'
 import Course3Email from './screens/course_3/31_email'
 import Course3Promotion from './screens/course_3/32_promotion'
 
+import Course4_intro from './screens/course_4/1.1_intro'
+import Course4_second from './screens/course_4/1.2_nn'
+import Course4_third from './screens/course_4/1.3_captcha'
+
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
   enableInExpoDevelopment: false,
@@ -244,6 +248,10 @@ export default function App () {
           <Stack.Screen name='Course3AppStoreReview' component={Course3AppStoreReview} />
           <Stack.Screen name='Course3Email' component={Course3Email} />
           <Stack.Screen name='Course3Promotion' component={Course3Promotion} />
+
+          <Stack.Screen name='Course4_intro' component={Course4_intro}/>
+          <Stack.Screen name='Course4_second' component={Course4_second}/>
+          <Stack.Screen name="Course4_third" component={Course4_third}/>
         </Stack.Navigator>
       </NavigationContainer>
     </LinearGradient>
