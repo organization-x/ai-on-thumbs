@@ -20,9 +20,9 @@ export default function Course4page2_8 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.boldText}></Text>
-        <Text style={styles.secondText}>If the output is wrong, the model will work its way backwards, <Text style={styles.underlinedText}>adjusting the values assigned to each node</Text> 
+        <Text style={styles.secondText}>If the output is wrong, the model will work its way backwards, <Text style={styles.underlinedText}>adjusting the values assigned to each node.</Text> 
         </Text>
-        <Text style={styles.secondText}>After <Text style={styles.underlinedText}>doing this process multiple times</Text> to minimize the error between the predicted and the actual output, the model moves on to the next input and does the same thing
+        <Text style={styles.secondText}>After <Text style={styles.underlinedText}>doing this process multiple times</Text> to minimize the error between the predicted and the actual output, the model moves on to the next input, repeating the process
         </Text>
       </View>
       <View style={styles.footerButtons}>

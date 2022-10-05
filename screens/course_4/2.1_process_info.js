@@ -24,7 +24,7 @@ export default function Course4page2_1 ({ navigation }) {
         </View>
         <Text style={styles.secondText}>Neural networks process information by <Text style={styles.underlinedText}>first taking in a vast amount of data </Text> 
         </Text>
-        <Text style={styles.secondText}>They then train themselves to find patterns in the data and <Text style={styles.underlinedText}>predict outputs based on the trained model</Text>
+        <Text style={styles.secondText}>They then train themselves to find patterns in the data and <Text style={styles.underlinedText}>predict outputs based on the learned patterns</Text>
         </Text>
         {/* <Text style={styles.underlinedText}> first taking in a vast amount of data </Text> */}
         

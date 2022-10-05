@@ -26,7 +26,7 @@ export default function Course4page1_7 ({ navigation }) {
           <Image style={styles.image} source={require('../../assets/course_4/nn_layers.gif')}></Image>
         </View>
         
-        <Text style={styles.thirdText}>Information is sent from node to node, similarly to electrical signals between neurons, only in the form of numbers.</Text>
+        <Text style={styles.thirdText}>Information is sent from node to node, similarly to the transmission of signals between neurons in the brain, in the form of numbers.</Text>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course4page2_1' buttonColor='#8976C2' buttonText='Back' />
