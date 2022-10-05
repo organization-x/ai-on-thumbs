@@ -1,19 +1,27 @@
 // Distance is how we measure how far apart houses are.
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
 
+import colors from '../../config/colors'
+
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+
+const height = Dimensions.get('window').height
+
 export default function Course4page2_6 ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.boldText}></Text>
-        <Text style={styles.text}>Backpropagation is a technique used to train NN models to get the best possible output by adjusting the values the hidden layers uses in its calculations</Text>
+        <Text style={styles.underlinedText}>Backpropagation is a technique used to train NN models </Text>
+        <Text style={styles.secondText}>to get the best possible output by adjusting the <Text style={styles.underlinedText}>values of nodes in the hidden layers</Text> </Text>
         <Text style={styles.text}>Let's see how they are able to do this!</Text>
 
       </View>
@@ -21,15 +29,37 @@ export default function Course4page2_6 ({ navigation }) {
         <LessonButton navigation={navigation} nextScreen='Course4page2_5' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course4page2_7' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
+  secondText: {
+    padding: 20,
+    marginVertical: 10,
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+    textAlign: 'center',
+    color: 'white',
+    fontSize: height / 24
+  },
+  underlinedText: {
+    textDecorationLine: 'underline', 
+    // padding: 15,
+    // marginVertical: 10,
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+    textAlign: 'center',
+    color: 'white',
+    fontSize: height / 24
+  },
   container: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingVertical: 15,
+    backgroundColor: colors.background
   },
   interactive: {
     flex: 1,

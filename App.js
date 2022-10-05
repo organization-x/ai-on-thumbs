@@ -120,13 +120,13 @@ import Course4page1_7 from './screens/course_4/1.7_nn_to_brains'
 import Course4page2_1 from './screens/course_4/2.1_process_info'
 import Course4page2_2 from './screens/course_4/2.2_layers'
 import Course4page2_3 from './screens/course_4/2.3_numerical_values'
-import Course4page2_4 from './screens/course_4/2.4_hidden_layer_interactive'
+import Course4SelectDNN from './screens/course_4/2.4_hidden_layer_interactive'
+import Course4page2_4_correct from './screens/course_4/2.4_hidden_layer_interactive_follow_up'
 import Course4page2_5 from './screens/course_4/2.5_backprop'
 import Course4page2_6 from './screens/course_4/2.6_bp_cont'
 import Course4page2_7 from './screens/course_4/2.7_learning'
 import Course4page2_8 from './screens/course_4/2.8_adjustment'
-// import Course3NearestNeighbor from './screens/course_3/2_nearest_neighbor'
-// import Course3HouseIntroduction from './screens/course_3/3_house_introduction'
+
 
 
 Sentry.init({
@@ -265,7 +265,9 @@ export default function App () {
           <Stack.Screen name='Course4page2_1' component={Course4page2_1} /> 
           <Stack.Screen name='Course4page2_2' component={Course4page2_2} />
           <Stack.Screen name='Course4page2_3' component={Course4page2_3} />
-          <Stack.Screen name='Course4page2_4' component={Course4page2_4} />
+          <Stack.Screen name='Course4page2_4' component={Course4SelectDNN} />
+          <Stack.Screen name='Course4page2_4_correct' component={Course4page2_4_correct} />
+          {/* <Stack.Screen name='Course4page'></> */}
           <Stack.Screen name='Course4page2_5' component={Course4page2_5} />
           <Stack.Screen name='Course4page2_6' component={Course4page2_6} />
           <Stack.Screen name='Course4page2_7' component={Course4page2_7} />

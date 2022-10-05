@@ -30,10 +30,10 @@ export default function Course4page2_1 ({ navigation }) {
         
       </View>
       <View style={styles.footerButtons}>
-        {/* <LessonButton navigation={navigation} nextScreen='Course4page1_7' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4page2_2' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" /> */}
+        <LessonButton navigation={navigation} nextScreen='Course4page1_7' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course4page2_2' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" />
         
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+        {/* <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> */}
       </View>
     </View>
   )

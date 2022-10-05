@@ -19,7 +19,7 @@ export default function Course4page1_7 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.lessonContent}>
-        <Text style={styles.secondText}>As you can see in the image, <Text style={styles.underlinedText}>NNs are made of nodes,</Text> which act similarly to neurons in the brain.
+        <Text style={styles.secondText}>As you can see in the image, <Text style={styles.underlinedText}>NNs are made of nodes (the purple circles) </Text>
         </Text>
         
         <View style={styles.container}>
@@ -39,6 +39,17 @@ export default function Course4page1_7 ({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  underlinedText: {
+    textDecorationLine: 'underline', 
+    // padding: 15,
+    // marginVertical: 10,
+    textShadowColor: 'rgba(0, 0, 0, 0.1)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
+    textAlign: 'center',
+    color: 'white',
+    fontSize: height / 24
+  },
   container: {
     flex: 1,
     paddingHorizontal: 20,
@@ -59,17 +70,6 @@ const styles = StyleSheet.create({
     flex: 1,
     aspectRatio: 1,
     margin: 10
-  },
-  underlinedText: {
-    textDecorationLine: 'underline', 
-    // padding: 15,
-    // marginVertical: 10,
-    textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 5,
-    textAlign: 'center',
-    color: 'white',
-    fontSize: height / 24
   },
   mainText: {
     padding: 15,
