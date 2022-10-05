@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         flex: 1,
         borderRadius: 7,
         overflow: 'hidden',
-        marginTop: height / 10
+        marginTop: height / 7
     },
     number: {
         color: 'white',
@@ -69,7 +69,6 @@ const styles = StyleSheet.create({
         textShadowRadius: 5,
         textAlign: 'center',
         color: 'white',
-        fontSize: 30,
-        fontWeight: 'bold'
+        fontSize: 30
     },
 })

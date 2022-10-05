@@ -124,6 +124,8 @@ import Course4Info2 from './screens/course_4/1.6_nn_info_2'
 import Test7 from './screens/course_4/7_test'
 import Course4Sect1End from './screens/course_4/1.8_section1_end'
 import Test9 from './screens/course_4/2.1_test'
+import Course4Sect2End from './screens/course_4/2.9_section2_end'
+import Test10 from './screens/course_4/3.1_test'
 
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
@@ -266,6 +268,8 @@ export default function App () {
           <Stack.Screen name='Test7' component={Test7} />
           <Stack.Screen name='Course4Sect1End' component={Course4Sect1End} />
           <Stack.Screen name='Test9' component={Test9} />
+          <Stack.Screen name='Course4Sect2End' component={Course4Sect2End} />
+          <Stack.Screen name='Test10' component={Test10} />
 
         </Stack.Navigator>
       </NavigationContainer>

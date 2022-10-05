@@ -10,12 +10,14 @@ export default function ProgressBar ({ navigation, nextSection = false, goSectio
     let buttonTextSize;
 
     //If we're going to the next section, set button text to next section and get index of the 1st screen of the next section 
+    //Also set text size to 35
     if(nextSection === true) {
         nextScreenIdx = 0;
         buttonText = 'Next Section';
         buttonTextSize = 35;
     }
     //If we're going to previous section, set button text to previous section and get index of last screen of previous section
+    // set text size to 30
     else {
         nextScreenIdx = screens.length-1;
         buttonText = 'Previous Section';

@@ -1,7 +1,7 @@
 // Developers created Neural Networks to mimic how the human brain learns.
 
 import React from 'react'
-import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Text, Dimensions, Image, TouchableOpacity } from 'react-native'
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
@@ -18,8 +18,10 @@ export default function Course4Info1 ({ navigation, context, enabled = true }) {
     <View style={styles.container}>
         <Text style={styles.number}>5/8</Text>
         <View style={styles.interactive}>
-            <Text style={styles.text}>Developers created Neural Networks to mimic how the human brain learns.</Text>
-            <View style={styles.rectangle}/>
+            <Text style={styles.text}>Developers created <Text style={styles.underlineText}>Neural Networks</Text> to <Text style={styles.underlineText}>mimic how the human brain learns.</Text></Text>
+            <View style={styles.rectangle}>
+                <Image source={require('../../assets/course_4/brain_1.5.png')} style={styles.image}/>
+            </View>
             <Text style={styles.text}>We abbreviate Neural Networks to NN.</Text>
         </View>
         {/*<View style={styles.footerButtons}>
@@ -59,6 +61,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center'
     },
+    image: {
+        width: 350,
+        height: 200
+    },
     interactive: {
         flex: 1,
         borderRadius: 7,
@@ -83,7 +89,8 @@ const styles = StyleSheet.create({
         height: 225,
         alignItems: "center",
         marginTop: 15,
-        marginBottom: 10
+        marginBottom: 10,
+        justifyContent: "center"
     },
     text: {
         flex: 1,
@@ -93,7 +100,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'white',
         fontSize: 30,
-        fontWeight: 'bold',
-        paddingVertical: 10,
+        paddingVertical: 10
     },
+    underlineText: {
+        textDecorationLine: "underline"
+    }
 })

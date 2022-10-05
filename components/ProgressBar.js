@@ -12,6 +12,7 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
     let buttonColor;
     let currentScreenIdx;
     let firstScreenIdx;
+    //Find index of current screen
     for (let i=0; i<screens.length; i++){
         if (screens[i] === currentScreen) {
             currentScreenIdx = i;
@@ -37,6 +38,9 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
         //the last button is small when you're farther from the end
         else if (progressBar.length === 4 && i<screens.length-1) {
             buttonWidth = 20;
+        }
+        else if (progressBar.length === screens.length && screens.length < 5) {
+            break;
         }
         //else the button is long
         else {

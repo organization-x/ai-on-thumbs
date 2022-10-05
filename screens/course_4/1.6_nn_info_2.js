@@ -1,7 +1,7 @@
 // Brain is composed of roughly 86 billion neurons, which communicate through electrical signals.
 
 import React from 'react'
-import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Text, Dimensions, Image, TouchableOpacity } from 'react-native'
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
@@ -18,8 +18,9 @@ export default function Course4Info2 ({ navigation, context, enabled = true }) {
     <View style={styles.container}>
         <Text style={styles.number}>6/8</Text>
         <View style={styles.interactive}>
-            <Text style={styles.text}>The brain is composed of roughly 86 billion neurons, which communicate through electrical signals.</Text>
-            <Text style={styles.text}>This allows humans to process information rapidly and efficiently.</Text>
+            <Text style={styles.text}>The brain is composed of roughly 86 billion neurons, which <Text style={styles.underlineText}>communicate through electrical signals.</Text></Text>
+            <Image source={require('../../assets/course_4/electrical_signal_1.6.jpg')} style={styles.image}/>
+            <Text style={styles.text}>This allows humans to <Text style={styles.underlineText}>process information rapidly and efficiently.</Text></Text>
         </View>
         {/*<View style={styles.footerButtons}>
             <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
@@ -58,11 +59,17 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center'
     },
+    image: {
+        width: 200,
+        height: 200,
+        borderRadius: 20
+    },
     interactive: {
         flex: 1,
         borderRadius: 7,
         overflow: 'hidden',
-        marginTop: height / 12
+        marginTop: height / 22,
+        alignItems: "center"
     },
     number: {
         color: 'white',
@@ -82,6 +89,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'white',
         fontSize: 30,
-        fontWeight: 'bold'
+        marginTop: 12
     },
+    underlineText: {
+        textDecorationLine: "underline"
+    }
 })
