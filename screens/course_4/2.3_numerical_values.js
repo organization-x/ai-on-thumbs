@@ -12,7 +12,7 @@ import ProgressBar from '../../components/ProgressBar'
 // Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
 
 const height = Dimensions.get('window').height
-
+// import LessonButton from '../../components/LessonButton'
 export default function Course4page2_3 ({ navigation }) {
   return (
     <View style={styles.container}>

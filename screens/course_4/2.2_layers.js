@@ -12,7 +12,7 @@ import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
-
+// import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 
 export default function Course4page2_2 ({ navigation }) {

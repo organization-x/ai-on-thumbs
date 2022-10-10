@@ -38,6 +38,9 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
         else if (progressBar.length === 4 && i<screens.length-1) {
             buttonWidth = 20;
         }
+        else if (progressBar.length === screens.length && screens.length < 5) {
+            break;
+        }
         //else the button is long
         else {
             buttonWidth = 50;

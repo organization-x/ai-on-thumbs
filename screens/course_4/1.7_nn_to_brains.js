@@ -29,8 +29,8 @@ export default function Course4page1_7 ({ navigation }) {
         <Text style={styles.thirdText}>Information is sent from node to node, similarly to the transmission of signals between neurons in the brain, in the form of numbers.</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course4page2_1' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4page2_1' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" />
+        <LessonButton navigation={navigation} nextScreen='Course4page1_6' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course4page1_8' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" />
         {/* <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> */}
       </View>
 

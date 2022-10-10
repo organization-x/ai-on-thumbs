@@ -10,7 +10,7 @@ import colors from '../../config/colors'
 // const [redHouseDisabled, setDisableRedHouse] = React.useState(false)
 // const [blueHouseDisabled, setDisableBlueHouse] = React.useState(false)
 // const [lowerScreenText, setLowerScreenText] = React.useState('Select the house that is closest to the black house.')
-
+// import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 
 export default function Course4page2_4_correct ({ navigation }) {

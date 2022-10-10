@@ -38,11 +38,11 @@ export default function CoursesScreen ({ navigation }) {
         />
         <CourseCard
           navigation={navigation}
-          lessonScreen='Course4page1_7'
+          lessonScreen='Course4page1_1'
           gradColors={['#8233C5', '#3C4687']}
-          title='Neural Networks'
-          desc='are computer algorithms that are designed to imitate how the human brain learns.'
-          ratingandduration='Beginner: 5 minutes'
+          title='Neural Networks I'
+          desc="This lesson is going to explain what a neural network is, how it's similar to a human brain, and the basics of how they work. We'll also be exploring some real world applications of neural networks."
+          ratingandduration='Beginner: 10 minutes'
         />
         <CourseAd
           gradColors={['#33D05F', '#09713F']}
