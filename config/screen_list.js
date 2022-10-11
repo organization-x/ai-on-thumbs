@@ -4,7 +4,7 @@ export default {
     },
     section2: {
         // screens: ['Test9', 'Test1', 'Test2', 'Test3', 'Test7', 'Test8', 'Test1', 'Test2', 'Test3']
-        screens: ['Course4page2_1','Course4page2_2','Course4page2_3','Course4page2_4','Course4page2_5','Course4page2_6','Course4page2_7','Course4page2_8','Course4page2_9']
+        screens: ['Course4page2_1','Course4page2_2','Course4page2_3','Course4page2_4','Course4page2_4_correct','Course4page2_5','Course4page2_6','Course4page2_7','Course4page2_8','Course4page2_9']
     },
     section3: {
         buttonWidth: 30,
