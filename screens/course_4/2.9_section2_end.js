@@ -27,8 +27,8 @@ export default function Course4Sect2End ({ navigation, context, enabled = true }
             <SectionButton navigation={navigation} nextSection={true} goSection={nextSection} />
         </View>
         <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course4page2_8' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4page3_1' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" />
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page2_8' buttonColor='#8976C2' buttonText='Back' /> */}
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_1' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" /> */}
       </View>
     </View>
   )

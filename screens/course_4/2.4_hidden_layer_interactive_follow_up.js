@@ -4,6 +4,9 @@ import LessonButton from '../../components/LessonButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 import colors from '../../config/colors'
+
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
 
@@ -14,6 +17,8 @@ import colors from '../../config/colors'
 const height = Dimensions.get('window').height
 
 export default function Course4page2_4_correct ({ navigation }) {
+  let screenSection = screen_list.section2;
+  let screenName = 'Course4page2_4_correct';
   return (
     <View style={styles.container}>
       <View style={styles.interactive}>
@@ -22,8 +27,9 @@ export default function Course4page2_4_correct ({ navigation }) {
       </View>
   
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course4page2_4' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4page2_5' buttonColor='#8976C2' buttonText='Lets do it!' />    
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page2_4' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course4page2_5' buttonColor='#8976C2' buttonText='Lets do it!' />   */}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />  
       </View>
     </View>
   )

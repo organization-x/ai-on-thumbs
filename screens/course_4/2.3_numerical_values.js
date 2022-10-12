@@ -14,6 +14,8 @@ import ProgressBar from '../../components/ProgressBar'
 const height = Dimensions.get('window').height
 // import LessonButton from '../../components/LessonButton'
 export default function Course4page2_3 ({ navigation }) {
+  let screenSection = screen_list.section2;
+  let screenName = 'Course4page2_3';
   return (
     <View style={styles.container}>
       <View style={styles.interactive}>
@@ -24,8 +26,9 @@ export default function Course4page2_3 ({ navigation }) {
         </Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course4page2_2' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4page2_4' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" />
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page2_2' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course4page2_4' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" /> */}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
   )

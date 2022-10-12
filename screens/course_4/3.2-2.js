@@ -26,8 +26,8 @@ export default function Course4page3_2_2 ({navigation}) {
         </Text>
       </View>
       <View style={[styles.footerButtons, {marginTop: 50}]}>
-        <LessonButton navigation={navigation} nextScreen='Course4S3Recommendation' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4S3Info' buttonColor='#8976C2' buttonText='Next' />
+        <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course4page3_3' buttonColor='#8976C2' buttonText='Next' />
       </View>
     </View>
   )

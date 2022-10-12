@@ -333,7 +333,6 @@ export default function App () {
           <Stack.Screen name='Course4page2_8' component={Course4page2_8} />
           <Stack.Screen name='Course4page2_9' component={Course4page2_9} />
           
-
           <Stack.Screen name='Course4page3_1' component={Course4page3_1} />
           <Stack.Screen name='Course4page3_2' component={Course4page3_2} /> 
           <Stack.Screen name='Course4page3_2_2' component={Course4page3_2_2} />
