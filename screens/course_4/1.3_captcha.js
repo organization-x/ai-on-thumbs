@@ -4,12 +4,17 @@ import LessonButton from '../../components/LessonButton'
 import { TapGestureHandler, } from 'react-native-gesture-handler'
 
 
+<<<<<<< HEAD
 export default function Course4_third ({navigation}) {
+=======
+export default function Course4page1_3 ({navigation}) {
+>>>>>>> nr_neural_network
   return (
     <View style={styles.container}>
       <Text style={styles.num}>3/8</Text>
       <View style={styles.interactive}>
         <Text style={styles.box}>Select all images with a{'\n'}<Text style={styles.bold}> Bus</Text>{'\n'}Click verify when done</Text>
+<<<<<<< HEAD
         <Image style={styles.im} source={require('./captc.png')}/>
         <Text style={styles.verify}>Verify!</Text>
       </View>
@@ -18,6 +23,15 @@ export default function Course4_third ({navigation}) {
 
         <LessonButton navigation={navigation} nextScreen='Course1FaceFinder' buttonColor={['#32B59D', '#3AC55B']} buttonText="Next" />
       </View>
+=======
+        {/* <Image style={styles.im} source={require('./assets/images.jfif')}/> */}
+        <Text style={styles.verify}>Verify!</Text>
+      </View>
+      <View style={styles.footerButtons}>
+            <LessonButton navigation={navigation} nextScreen='Course4page1_2' buttonColor='#8976C2' buttonText='Back' />
+            <LessonButton navigation={navigation} nextScreen='Course4page1_4' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        </View>
+>>>>>>> nr_neural_network
     </View>
   )
 }

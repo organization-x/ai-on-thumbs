@@ -1,11 +1,19 @@
 import React from 'react'
 import { TouchableOpacity, View, StyleSheet } from 'react-native'
 
+<<<<<<< HEAD
+=======
+import colors from '../config/colors'
+>>>>>>> nr_neural_network
 
 export default function ProgressBar ({ navigation, section, currentScreen, context, enabled = true, actOpacity = 0.3 }) {
     let buttonWidth = section.buttonWidth;
     let screens = section.screens;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> nr_neural_network
 
     let progressBar = [];
     let buttonColor;
@@ -37,6 +45,12 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
         else if (progressBar.length === 4 && i<screens.length-1) {
             buttonWidth = 20;
         }
+<<<<<<< HEAD
+=======
+        else if (progressBar.length === screens.length && screens.length < 5) {
+            break;
+        }
+>>>>>>> nr_neural_network
         //else the button is long
         else {
             buttonWidth = 50;
@@ -44,7 +58,11 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
         //set color of each button
         if (i === currentScreenIdx) {
             buttonColor = colors.primary;
+<<<<<<< HEAD
         }
+=======
+        } 
+>>>>>>> nr_neural_network
         else {
             buttonColor = colors.progressButton;
         }
@@ -56,7 +74,11 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
             activeOpacity={actOpacity}
         />);
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> nr_neural_network
 
     return progressBar;
 }
@@ -64,8 +86,13 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
 
 const styles = StyleSheet.create({
     button: {
+<<<<<<< HEAD
         backgroundColor: 'red',
         padding: 10,
+=======
+        backgroundColor: colors.progressButton, 
+        padding: 10, 
+>>>>>>> nr_neural_network
         marginHorizontal: 5,
         borderRadius: 12,
         height: 20,
@@ -76,4 +103,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center'
     }
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> nr_neural_network

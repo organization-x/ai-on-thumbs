@@ -3,7 +3,11 @@ import { StyleSheet, View, Text, ImageBackground } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 
 
+<<<<<<< HEAD
 export default function Course4_second ({navigation}) {
+=======
+export default function Course4page1_2 ({navigation}) {
+>>>>>>> nr_neural_network
   return (
     <View style={styles.container}>
       <Text style={styles.num}>2/8</Text>
@@ -13,9 +17,15 @@ export default function Course4_second ({navigation}) {
         <Text style={styles.textund}>NNs are important to learn about, so let's see how they work!</Text>
       </View>
       <View style={styles.footerButtons}>
+<<<<<<< HEAD
         <LessonButton navigation={navigation} nextScreen='Course4_intro' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course4_third' buttonColor={['#32B59D', '#3AC55B']} buttonText="Next" />
       </View>
+=======
+            <LessonButton navigation={navigation} nextScreen='Course4page1_1' buttonColor='#8976C2' buttonText='Back' />
+            <LessonButton navigation={navigation} nextScreen='Course4page1_3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        </View>
+>>>>>>> nr_neural_network
     </View>
   )
 }
