@@ -10,6 +10,7 @@ import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
+<<<<<<< HEAD
 
 import colors from '../../config/colors'
 
@@ -23,6 +24,14 @@ export default function Course4page3_3 ({navigation}) {
   let screenName = 'Course4page3_3';
   
   return (
+=======
+<<<<<<< HEAD
+export default function Course4S3Info ({navigation}) {
+=======
+export default function Course4page3_3 ({navigation}) {
+>>>>>>> nr_neural_network
+    return (
+>>>>>>> c20284830c30e32ca7fad8d71e0a8ce935986183
     <View style={styles.container}>
       <Text style={styles.number}>3/4</Text>
       <View style={styles.textContainer}>
@@ -47,11 +56,27 @@ export default function Course4page3_3 ({navigation}) {
         </Text>
       </View>
       <View style={[styles.footerButtons, {marginTop: 50}]}>
+<<<<<<< HEAD
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2_2' buttonColor='#8976C2' buttonText='Back' />  */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> 
         {/*need to figure out how to access variable determining if the user answered correctly or incorrectly*/}
 
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_4' buttonColor='#8976C2' buttonText='Next' /> */}
+=======
+<<<<<<< HEAD
+        <LessonButton navigation={navigation} nextScreen='Course4S3Correct' buttonColor='#8976C2' buttonText='Back' /> 
+        
+        {/*need to figure out how to access variable determining if the user answered correctly or incorrectly*/}
+
+        <LessonButton navigation={navigation} nextScreen='Course4S3End' buttonColor='#8976C2' buttonText='Next' />
+=======
+        <LessonButton navigation={navigation} nextScreen='Course4page3_2_2' buttonColor='#8976C2' buttonText='Back' /> 
+        
+        {/*need to figure out how to access variable determining if the user answered correctly or incorrectly*/}
+
+        <LessonButton navigation={navigation} nextScreen='Course4page3_4' buttonColor='#8976C2' buttonText='Next' />
+>>>>>>> nr_neural_network
+>>>>>>> c20284830c30e32ca7fad8d71e0a8ce935986183
       </View>
     </View>
   )
