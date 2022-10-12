@@ -5,14 +5,18 @@ import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-nati
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+<<<<<<< HEAD
 import { ScrollView } from 'react-native-gesture-handler'
+=======
+import LessonButton from '../../components/LessonButton'
+>>>>>>> nr_neural_network
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
 
 const height = Dimensions.get('window').height
 
-export default function Course4CaptExplain ({ navigation, context, enabled = true }) {
+export default function Course4page1_4 ({ navigation, context, enabled = true }) {
     //set variables for section the screen is in and the screen name
     //These variables are passed into the progress bar 
     let screenSection = screen_list.section1;

@@ -5,13 +5,14 @@ import { StyleSheet, View, Text, Dimensions, Image, TouchableOpacity } from 'rea
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+import LessonButton from '../../components/LessonButton'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
 
 const height = Dimensions.get('window').height
 
-export default function Course4Info1 ({ navigation, context, enabled = true }) {
+export default function Course4page1_5 ({ navigation, context, enabled = true }) {
     let screenSection = screen_list.section1;
     let screenName = 'Course4Info1';
     return (
@@ -24,13 +25,13 @@ export default function Course4Info1 ({ navigation, context, enabled = true }) {
             </View>
 
         </View>
-        {/*<View style={styles.footerButtons}>
-            <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
-            <LessonButton navigation={navigation} nextScreen='Cours4Info1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>*/}
         <View style={styles.footerButtons}>
-            <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+            <LessonButton navigation={navigation} nextScreen='Course4page1_4' buttonColor='#8976C2' buttonText='Back' />
+            <LessonButton navigation={navigation} nextScreen='Course4page1_6' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
         </View>
+        {/* <View style={styles.footerButtons}>
+            <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+        </View> */}
     </View>
   )
 }

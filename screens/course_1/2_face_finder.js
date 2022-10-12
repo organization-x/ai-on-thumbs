@@ -19,7 +19,7 @@ export default function Course1FaceFinder ({ navigation }) {
   const [sourceBottomLeft, setSourceBottomLeft] = React.useState(require('../../assets/course_1/moonface.png'))
   const [sourceBottomRight, setSourceBottomRight] = React.useState(require('../../assets/course_1/veggieface.png'))
   const [lowerScreenText, setLowerScreenText] = React.useState('There are 3 faces remaining.')
-
+  
   const handlePress = (num) => {
     if (num === 0) {
       setNumCorrectFaces(numCorrectFaces + 1)
