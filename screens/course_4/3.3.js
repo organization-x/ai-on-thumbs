@@ -10,7 +10,11 @@ import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
+<<<<<<< HEAD
 export default function Course4S3Info ({navigation}) {
+=======
+export default function Course4page3_3 ({navigation}) {
+>>>>>>> nr_neural_network
     return (
     <View style={styles.container}>
       <Text style={styles.number}>3/4</Text>
@@ -36,11 +40,19 @@ export default function Course4S3Info ({navigation}) {
         </Text>
       </View>
       <View style={[styles.footerButtons, {marginTop: 50}]}>
+<<<<<<< HEAD
         <LessonButton navigation={navigation} nextScreen='Course4S3Correct' buttonColor='#8976C2' buttonText='Back' /> 
         
         {/*need to figure out how to access variable determining if the user answered correctly or incorrectly*/}
 
         <LessonButton navigation={navigation} nextScreen='Course4S3End' buttonColor='#8976C2' buttonText='Next' />
+=======
+        <LessonButton navigation={navigation} nextScreen='Course4page3_2_2' buttonColor='#8976C2' buttonText='Back' /> 
+        
+        {/*need to figure out how to access variable determining if the user answered correctly or incorrectly*/}
+
+        <LessonButton navigation={navigation} nextScreen='Course4page3_4' buttonColor='#8976C2' buttonText='Next' />
+>>>>>>> nr_neural_network
       </View>
     </View>
   )

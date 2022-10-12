@@ -3,14 +3,14 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-
+import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-export default function Course4S3End ({navigation}) {
+export default function Course4page3_4 ({navigation}) {
     return (
     <View style={styles.container}>
       <Text style={styles.number}>4/4</Text>

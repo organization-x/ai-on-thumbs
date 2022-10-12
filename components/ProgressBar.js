@@ -1,11 +1,12 @@
 import React from 'react'
 import { TouchableOpacity, View, StyleSheet } from 'react-native'
 
+import colors from '../config/colors'
 
 export default function ProgressBar ({ navigation, section, currentScreen, context, enabled = true, actOpacity = 0.3 }) {
     let buttonWidth = section.buttonWidth;
     let screens = section.screens;
-
+    
 
     let progressBar = [];
     let buttonColor;
@@ -37,6 +38,9 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
         else if (progressBar.length === 4 && i<screens.length-1) {
             buttonWidth = 20;
         }
+        else if (progressBar.length === screens.length && screens.length < 5) {
+            break;
+        }
         //else the button is long
         else {
             buttonWidth = 50;
@@ -44,7 +48,7 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
         //set color of each button
         if (i === currentScreenIdx) {
             buttonColor = colors.primary;
-        }
+        } 
         else {
             buttonColor = colors.progressButton;
         }
@@ -56,7 +60,7 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
             activeOpacity={actOpacity}
         />);
     }
-
+    
 
     return progressBar;
 }
@@ -64,8 +68,8 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: 'red',
-        padding: 10,
+        backgroundColor: colors.progressButton, 
+        padding: 10, 
         marginHorizontal: 5,
         borderRadius: 12,
         height: 20,
