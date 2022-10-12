@@ -57,10 +57,10 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background
   },
   footerButtons: {
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
+    justifyContent: 'center'
+},
   lessonContent: {
     flex: 1,
     alignItems: 'center',

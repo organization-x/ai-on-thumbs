@@ -81,11 +81,7 @@ export default function Course4page3_2 ({navigation}) {
       <TouchableOpacity
         onPress={() => 
           {if(choice!=""){
-<<<<<<< HEAD
-            navigation.navigate(choice === "soccer" ? 'Course4S3Correct' : 'Course4S3Incorrect')
-=======
             navigation.navigate(choice === "soccer" ? 'Course4page3_2_2' : 'Course4page3_2_3')
->>>>>>> nr_neural_network
           }}
           }
         underlayColor='#fff'
@@ -205,8 +201,8 @@ const styles = StyleSheet.create({
       fontWeight: "bold"
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
-      justifyContent: 'space-between'
-    }
+      justifyContent: 'center'
+    },
 })

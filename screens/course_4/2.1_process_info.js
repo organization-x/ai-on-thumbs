@@ -91,10 +91,10 @@ const styles = StyleSheet.create({
     fontSize: height / 24
   },
   footerButtons: {
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'space-between'
-  }, 
+    justifyContent: 'center'
+  },
   progressBar: {
     alignItems: 'center', 
     justifyContent: 'flex-end',

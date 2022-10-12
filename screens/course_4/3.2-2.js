@@ -8,7 +8,6 @@ import LessonButton from '../../components/LessonButton'
 
 const width = Dimensions.get('window').width
 
-<<<<<<< HEAD
 import colors from '../../config/colors'
 
 import screen_list from '../../config/screen_list'
@@ -21,14 +20,6 @@ export default function Course4page3_2_2 ({navigation}) {
   let screenName = 'Course4page3_2_2';
 
   return (
-=======
-<<<<<<< HEAD
-export default function Course4S3Correct({navigation}) {
-=======
-export default function Course4page3_2_2 ({navigation}) {
->>>>>>> nr_neural_network
-    return (
->>>>>>> c20284830c30e32ca7fad8d71e0a8ce935986183
     <View style={styles.container}>
       <Text style={styles.number}>2/4</Text>
       <View style={styles.textContainer}>
@@ -45,19 +36,10 @@ export default function Course4page3_2_2 ({navigation}) {
         </Text>
       </View>
       <View style={[styles.footerButtons, {marginTop: 50}]}>
-<<<<<<< HEAD
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor='#8976C2' buttonText='Back' /> */}
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_3' buttonColor='#8976C2' buttonText='Next' /> */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-=======
-<<<<<<< HEAD
-        <LessonButton navigation={navigation} nextScreen='Course4S3Recommendation' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4S3Info' buttonColor='#8976C2' buttonText='Next' />
-=======
-        <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4page3_3' buttonColor='#8976C2' buttonText='Next' />
->>>>>>> nr_neural_network
->>>>>>> c20284830c30e32ca7fad8d71e0a8ce935986183
+
       </View>
     </View>
   )
@@ -91,8 +73,8 @@ const styles = StyleSheet.create({
       marginTop: 75,
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
-      justifyContent: 'space-between'
-    }
+      justifyContent: 'center'
+    },
 })

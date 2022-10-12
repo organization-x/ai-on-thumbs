@@ -8,19 +8,14 @@ import LessonButton from '../../components/LessonButton'
 
 const width = Dimensions.get('window').width
 
-<<<<<<< HEAD
+
 import colors from '../../config/colors'
 
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 
-=======
-<<<<<<< HEAD
-export default function Course4S3Incorrect({navigation}) {
-=======
->>>>>>> c20284830c30e32ca7fad8d71e0a8ce935986183
 export default function Course4page3_2_3({navigation}) {
->>>>>>> nr_neural_network
+
     return (
     <View style={styles.container}>
       <Text style={styles.number}>2/4</Text>
@@ -73,8 +68,8 @@ const styles = StyleSheet.create({
       marginTop: 90,
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
-      justifyContent: 'space-between'
-    }
+      justifyContent: 'center'
+    },
 })

@@ -5,32 +5,23 @@ import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
-<<<<<<< HEAD
-
-const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
-
-export default function Course4S3Intro ({navigation}) {
-=======
-// import LessonButton from '../../components/LessonButton'
-const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
 
 import colors from '../../config/colors'
 
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
+
+// import LessonButton from '../../components/LessonButton'
+
 export default function Course4page3_1 ({navigation}) {
-<<<<<<< HEAD
     
   let screenSection = screen_list.section3;
   let screenName = 'Course4page3_1';
   return (
-=======
->>>>>>> nr_neural_network
-    return (
->>>>>>> c20284830c30e32ca7fad8d71e0a8ce935986183
+
     <View style={styles.container}>
         <Text style={styles.number}>1/4</Text>
         <View style={styles.titleBox}>
@@ -44,19 +35,12 @@ export default function Course4page3_1 ({navigation}) {
           </Text>
         </View>
         <View style={styles.footerButtons}>
-<<<<<<< HEAD
+
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> 
-=======
-<<<<<<< HEAD
-          <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course4S3Recommendation' buttonColor='#8976C2' buttonText='Next' />
-        </View>
-=======
-        <LessonButton navigation={navigation} nextScreen='Course4page2_9' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" />
->>>>>>> c20284830c30e32ca7fad8d71e0a8ce935986183
+
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page2_9' buttonColor='#8976C2' buttonText='Back' /> */}
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" /> */}
       </View>
->>>>>>> nr_neural_network
     </View>
   )
 }
@@ -107,8 +91,8 @@ const styles = StyleSheet.create({
       alignSelf: 'center'
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
-      justifyContent: 'space-between'
-    }
+      justifyContent: 'center'
+    },
 })

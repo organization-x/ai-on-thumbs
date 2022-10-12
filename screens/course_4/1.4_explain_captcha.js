@@ -6,7 +6,7 @@ import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 import LessonButton from '../../components/LessonButton'
-
+import { ScrollView } from 'react-native-gesture-handler'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
 
@@ -16,10 +16,10 @@ export default function Course4page1_4 ({ navigation, context, enabled = true })
     //set variables for section the screen is in and the screen name
     //These variables are passed into the progress bar 
     let screenSection = screen_list.section1;
-    let screenName = 'Course4CaptExplain';
+    let screenName = 'Course4page1_4';
     return (
         <View style={styles.container}>
-            <Swiper navigation={navigation}/>
+            {/* <Swiper navigation={navigation}/> */}
             <Text style={styles.number}>4/8</Text>
             <View style={styles.interactive}>
                 <Text style={styles.text}>Tasks like the captcha you just completed aren't hard for humans because of the way we take in information and recognize patterns.</Text>

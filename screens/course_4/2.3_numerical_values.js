@@ -83,8 +83,8 @@ const styles = StyleSheet.create({
     fontWeight: '800'
   },
   footerButtons: {
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'center'
+  },
 })
