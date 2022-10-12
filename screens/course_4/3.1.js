@@ -9,8 +9,16 @@ import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
+import colors from '../../config/colors'
+
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+
 export default function Course4page3_1 ({navigation}) {
-    return (
+    
+  let screenSection = screen_list.section3;
+  let screenName = 'Course4page3_1';
+  return (
     <View style={styles.container}>
         <Text style={styles.number}>1/4</Text>
         <View style={styles.titleBox}>
@@ -24,8 +32,7 @@ export default function Course4page3_1 ({navigation}) {
           </Text>
         </View>
         <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course4page2_9' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> 
       </View>
     </View>
   )

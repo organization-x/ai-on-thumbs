@@ -8,13 +8,20 @@ import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
+import colors from '../../config/colors'
+
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+
+
 export default function Course4page3_2 ({navigation}) {
   let choice = "";
   let check1color = "#474747";
   let check2color = "#474747";
   let check3color = "#474747";
   // figure out how to make the check boxes change color when clicked
-
+  // let screenSection = screen_list.section3;
+  // let screenName = 'Course4page3_1';
     return (
     <View style={styles.container}>
       <Text style={styles.number}>2/4</Text>

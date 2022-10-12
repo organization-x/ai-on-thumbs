@@ -8,6 +8,7 @@ export default {
     },
     section3: {
         buttonWidth: 30,
-        screens: ['Course4page3_1','Course4page3_2','Course4page3_2_2','Course4page3_2_3','Course4page3_3','Course4page3_4']
+        screens: ['Course4page3_1','Course4page3_2','Course4page3_2_2','Course4page3_3','Course4page3_4']
+        // 'Course4page3_2_2','Course4page3_2_3'
     },
 }

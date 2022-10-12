@@ -10,6 +10,12 @@ import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
+import colors from '../../config/colors'
+
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+
+
 export default function Course4page3_4 ({navigation}) {
     return (
     <View style={styles.container}>

@@ -10,8 +10,19 @@ import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
+
+import colors from '../../config/colors'
+
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+
+
 export default function Course4page3_3 ({navigation}) {
-    return (
+  
+  let screenSection = screen_list.section3;
+  let screenName = 'Course4page3_3';
+  
+  return (
     <View style={styles.container}>
       <Text style={styles.number}>3/4</Text>
       <View style={styles.textContainer}>
@@ -36,11 +47,11 @@ export default function Course4page3_3 ({navigation}) {
         </Text>
       </View>
       <View style={[styles.footerButtons, {marginTop: 50}]}>
-        <LessonButton navigation={navigation} nextScreen='Course4page3_2_2' buttonColor='#8976C2' buttonText='Back' /> 
-        
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2_2' buttonColor='#8976C2' buttonText='Back' />  */}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> 
         {/*need to figure out how to access variable determining if the user answered correctly or incorrectly*/}
 
-        <LessonButton navigation={navigation} nextScreen='Course4page3_4' buttonColor='#8976C2' buttonText='Next' />
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_4' buttonColor='#8976C2' buttonText='Next' /> */}
       </View>
     </View>
   )
