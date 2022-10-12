@@ -19,11 +19,11 @@ export default function Course4page1_5 ({ navigation, context, enabled = true })
     <View style={styles.container}>
         <Text style={styles.number}>5/8</Text>
         <View style={styles.interactive}>
-            <Text style={styles.text}>Developers created <Text style={styles.underlineText}>Neural Networks</Text> to <Text style={styles.underlineText}>mimic how the human brain learns.</Text></Text>
+            <Text style={styles.text}>To solve this problem, developers created <Text style={styles.underlineText}>NNs</Text> to <Text style={styles.underlineText}>mimic the human brain.</Text></Text>
             <View style={styles.rectangle}>
                 <Image source={require('../../assets/course_4/brain_1.5.png')} style={styles.image}/>
             </View>
-            <Text style={styles.text}>We abbreviate Neural Networks to NN.</Text>
+
         </View>
         <View style={styles.footerButtons}>
             <LessonButton navigation={navigation} nextScreen='Course4page1_4' buttonColor='#8976C2' buttonText='Back' />

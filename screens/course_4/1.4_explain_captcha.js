@@ -5,7 +5,11 @@ import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-nati
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+<<<<<<< HEAD
+import { ScrollView } from 'react-native-gesture-handler'
+=======
 import LessonButton from '../../components/LessonButton'
+>>>>>>> nr_neural_network
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
@@ -18,24 +22,22 @@ export default function Course4page1_4 ({ navigation, context, enabled = true })
     let screenSection = screen_list.section1;
     let screenName = 'Course4CaptExplain';
     return (
-    <View style={styles.container}>
-        <Text style={styles.number}>4/8</Text>
-        <View style={styles.interactive}>
-            <Text style={styles.text}>Tasks like the captcha you just completed aren't hard for humans because of the way we take in information and recognize patterns.</Text>
-            <Text style={styles.text}>However, these tasks cause a big problem for computers, which <Text style={styles.underlineText}>can't process things the same way.</Text></Text>
-        </View>
-        
-        <View style={styles.footerButtons}>
-            <LessonButton navigation={navigation} nextScreen='Course4page1_3' buttonColor='#8976C2' buttonText='Back' />
-            <LessonButton navigation={navigation} nextScreen='Course4page1_5' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>
+        <View style={styles.container}>
+            <Swiper navigation={navigation}/>
+            <Text style={styles.number}>4/8</Text>
+            <View style={styles.interactive}>
+                <Text style={styles.text}>Tasks like the captcha you just completed aren't hard for humans because of the way we take in information and recognize patterns.</Text>
+                <Text style={styles.text}>However, these tasks cause problems for computers since they <Text style={styles.underlineText}>can't process things the same way.</Text></Text>
+            </View>
 
-        {/* <View style={styles.footerButtons}>
-            <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-        </View> */}
-    </View>
-  )
+            <View style={styles.footerButtons}>
+                <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+            </View>
+        </View>
+    )
 }
+
+
 
 const styles = StyleSheet.create({
     container: {
