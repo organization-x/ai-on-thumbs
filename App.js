@@ -316,7 +316,6 @@ export default function App () {
           <Stack.Screen name='Course3Email' component={Course3Email} />
           <Stack.Screen name='Course3Promotion' component={Course3Promotion} />
 
-<<<<<<< HEAD
           {/* course 4 screen stack */}
           
 
@@ -354,12 +353,6 @@ export default function App () {
 
 
           {/* <Stack.Screen name='Course3SelectClosestHouse' component={Course3SelectClosestHouse} /> */}
-=======
-          <Stack.Screen name='Course4_intro' component={Course4_intro}/>
-          <Stack.Screen name='Course4_second' component={Course4_second}/>
-          <Stack.Screen name="Course4_third" component={Course4_third}/>
-
->>>>>>> 477da7fde227259acd044170367584082ac69d06
         </Stack.Navigator>
       </NavigationContainer>
     </LinearGradient>

@@ -38,19 +38,11 @@ export default function CoursesScreen ({ navigation }) {
         />
         <CourseCard
           navigation={navigation}
-<<<<<<< HEAD
-          lessonScreen='Course4_intro'
-          gradColors={['#8233C5', '#3C4687']}
-          title='Neural Networks'
-          desc='This lesson will teach you the basics of neural networks and how they are used in our daily lives.'
-          ratingandduration='Beginner: 5 minutes'
-=======
           lessonScreen='Course4page1_1'
           gradColors={['#8233C5', '#3C4687']}
           title='Neural Networks I'
           desc="This lesson is going to explain what a neural network is, how it's similar to a human brain, and the basics of how they work. We'll also be exploring some real world applications of neural networks."
           ratingandduration='Beginner: 10 minutes'
->>>>>>> nr_neural_network
         />
         <CourseAd
           gradColors={['#33D05F', '#09713F']}

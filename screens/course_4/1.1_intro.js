@@ -1,22 +1,16 @@
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, Dimensions  } from 'react-native'
+import { StyleSheet, View, Text, ImageBackground } from 'react-native'
 
 import LessonButton from '../../components/LessonButton'
-import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Course4_intro ({navigation}) {
-=======
+
 export default function Course4page1_1 ({navigation}) {
->>>>>>> nr_neural_network
-=======
-export default function Course4_intro ({ navigation}) {
-  const name = 'Course4_intro'
-  const section=screen_list.section1
->>>>>>> 477da7fde227259acd044170367584082ac69d06
+  
+  let screenSection = screen_list.section1;
+  let screenName = 'Course4page1_1';
+
   return (
     <View style={styles.container}>
       <Text style={styles.num}>1/8</Text>
@@ -25,17 +19,9 @@ export default function Course4_intro ({ navigation}) {
         <Text style={styles.text}>are computer algorithms that are designed to imitate how the human brain learns.</Text>
       </View>
       <View style={styles.footerButtons}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4_second' buttonColor={['#32B59D', '#3AC55B']} buttonText="Next" />
-=======
         {/* <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' /> */}
-        <LessonButton navigation={navigation} nextScreen='Course4page1_2' buttonColor={['#32B59D', '#3AC55B']} buttonText="Next" />
->>>>>>> nr_neural_network
-=======
-        <ProgressBar navigation={navigation} currentScreen={name} section={section}  />
->>>>>>> 477da7fde227259acd044170367584082ac69d06
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page1_2' buttonColor={['#32B59D', '#3AC55B']} buttonText="Next" /> */}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
   )
@@ -84,8 +70,8 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   footerButtons: {
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'center'
+},
 })

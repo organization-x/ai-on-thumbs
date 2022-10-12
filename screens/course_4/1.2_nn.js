@@ -1,18 +1,15 @@
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, Dimensions  } from 'react-native'
-import { GestureHandler } from 'expo'
+import { StyleSheet, View, Text, ImageBackground } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-export default function Course4_second ({navigation}) {
-=======
 export default function Course4page1_2 ({navigation}) {
->>>>>>> nr_neural_network
+  
+  let screenSection = screen_list.section1;
+  let screenName = 'Course4page1_2';
+  
   return (
     <View style={styles.container}>
       <Text style={styles.num}>2/8</Text>
@@ -22,39 +19,11 @@ export default function Course4page1_2 ({navigation}) {
         <Text style={styles.textund}>NNs are important to learn about, so let's see how they work!</Text>
       </View>
       <View style={styles.footerButtons}>
-<<<<<<< HEAD
-        <LessonButton navigation={navigation} nextScreen='Course4_intro' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4_third' buttonColor={['#32B59D', '#3AC55B']} buttonText="Next" />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-=======
-            <LessonButton navigation={navigation} nextScreen='Course4page1_1' buttonColor='#8976C2' buttonText='Back' />
-            <LessonButton navigation={navigation} nextScreen='Course4page1_3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>
->>>>>>> nr_neural_network
     </View>
-=======
-export default function Course4_second ({ navigation}) {
-  const name = 'Course4_second'
-  const section=screen_list.section1
-  return (
-    // <GestureHandler renderLeftActions={LeftActions}>
-      <View style={styles.container}>
-        <Text style={styles.num}>2/8</Text>
-        <View style={styles.interactive}>
-          <Text style={styles.text}>Neural networks are used in many real life applications, such as in speech recognition, text generation, and image-recognition.</Text>
-          <Text style={styles.text}>You may have seen neural networks in action, through self-driving cars or market predictions.</Text>
-          <Text style={styles.textund}>NNs are important to learn about, so let's see how they work!</Text>
-        </View>
-        <View style={styles.footerButtons}>
-          <ProgressBar navigation={navigation} currentScreen={name} section={section}  />
-        </View>
-      </View>
-    // </GestureHandler>
->>>>>>> 477da7fde227259acd044170367584082ac69d06
   )
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -109,9 +78,9 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline'
   },
   footerButtons: {
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'center'
+},
 })
 

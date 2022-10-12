@@ -14,7 +14,7 @@ const height = Dimensions.get('window').height
 
 export default function Course4page1_6 ({ navigation, context, enabled = true }) {
     let screenSection = screen_list.section1;
-    let screenName = 'Course4Info2';
+    let screenName = 'Course4page1_6';
     return (
     <View style={styles.container}>
         <Text style={styles.number}>6/8</Text>
@@ -24,8 +24,9 @@ export default function Course4page1_6 ({ navigation, context, enabled = true })
             <Text style={styles.text}>This allows humans to <Text style={styles.underlineText}>process information rapidly and efficiently.</Text></Text>
         </View>
         <View style={styles.footerButtons}>
-            <LessonButton navigation={navigation} nextScreen='Course4page1_5' buttonColor='#8976C2' buttonText='Back' />
-            <LessonButton navigation={navigation} nextScreen='Course4page1_7' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+            {/* <LessonButton navigation={navigation} nextScreen='Course4page1_5' buttonColor='#8976C2' buttonText='Back' />
+            <LessonButton navigation={navigation} nextScreen='Course4page1_7' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
+            <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
         </View>
         {/* <View style={styles.footerButtons}>
             <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
