@@ -5,11 +5,7 @@ import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-nati
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
-<<<<<<< HEAD
-import { ScrollView } from 'react-native-gesture-handler'
-=======
 import LessonButton from '../../components/LessonButton'
->>>>>>> nr_neural_network
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
