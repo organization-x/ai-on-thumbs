@@ -1,28 +1,67 @@
-import React from 'react'
-import { StyleSheet, View, Text, ImageBackground, Image } from 'react-native'
+import React, {useState} from 'react'
+import { StyleSheet, View, Text, ImageBackground, Image, FlatList, TouchableOpacity, Dimensions, Pressable } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { TapGestureHandler, } from 'react-native-gesture-handler'
+import colors from '../../config/colors'
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
 
-
-export default function Course4_third ({navigation}) {
+export default function Course4_third ({ navigation }) {
+  const [images, setImages] = useState([require('./bus_1.jpg'),require('./bus_2.jpg'),require('./bus.jpg'),require('./car.jpg'),require('./house.jpg'),require('./street.jpg'),require('./streets.jpg'),require('./traf.jpg'),require('./van.jpg')])
+  const name = 'Course4_third'
+  const section=screen_list.section1
+  const [col, setCol] = useState(false)
+  const [pressed, setPressed] = useState([])
+  const pressHandler = (num) => {
+    if (num == 0) {
+      console.log(col)
+    }
+    setCol(!col)
+    // setPressed(pressed.concat(num))
+    console.log(col)
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.num}>3/8</Text>
       <View style={styles.interactive}>
         <Text style={styles.box}>Select all images with a{'\n'}<Text style={styles.bold}> Bus</Text>{'\n'}Click verify when done</Text>
-        <Image style={styles.im} source={require('./captc.png')}/>
+      <View style={styles.im}>
+        <FlatList
+          data={images}
+          numColumns={3}
+          renderItem={ ({ item, index }) => (
+            <View style={styles.img_container}>
+              <TouchableOpacity onPress={() => pressHandler(index)} >
+                <Image source={item} key={index} style={{
+                  tintColor: col ? null : 'black',
+                  opacity: col ? 1 : 0.7,
+                  width: 100,
+                  height: 100,
+                  marginLeft: 5
+                }}/>
+              </TouchableOpacity>
+            </View>
+
+          )}
+        />
+      </View>
         <Text style={styles.verify}>Verify!</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course4_second' buttonColor='#8976C2' buttonText='Back' />
-
-        <LessonButton navigation={navigation} nextScreen='Course1FaceFinder' buttonColor={['#32B59D', '#3AC55B']} buttonText="Next" />
+        <ProgressBar navigation={navigation} currentScreen={name} section={section}  />
       </View>
     </View>
   )
 }
 
+
+
 const styles = StyleSheet.create({
+  img_container: {
+    width: "30%",
+    paddingTop: 7,
+    marginHorizontal: 3,
+  },
   container: {
     flex: 1,
     backgroundColor:"#202020",
@@ -32,7 +71,10 @@ const styles = StyleSheet.create({
   im:{
     borderColor: "#1FBD67",
     borderWidth: 4,
-    borderRadius: 10
+    borderRadius: 10,
+    height: "55%",
+    marginVertical: 10,
+    paddingLeft: 5
   },
   num: {
     fontSize: 28,
