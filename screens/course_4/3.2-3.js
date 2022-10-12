@@ -8,7 +8,11 @@ import LessonButton from '../../components/LessonButton'
 
 const width = Dimensions.get('window').width
 
+<<<<<<< HEAD
+export default function Course4S3Incorrect({navigation}) {
+=======
 export default function Course4page3_2_3({navigation}) {
+>>>>>>> nr_neural_network
     return (
     <View style={styles.container}>
       <Text style={styles.number}>2/4</Text>
