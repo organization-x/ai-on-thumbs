@@ -2,31 +2,33 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
-import LessonButton from '../../components/LessonButton'
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-export default function Course4S3Intro ({navigation}) {
+export default function Course4page3_1 ({navigation}) {
+    let screenSection = screen_list.section3;
+    let screenName = 'Course4page3_1';
     return (
     <View style={styles.container}>
-        <Text style={styles.number}>1/4</Text>
-        <View style={styles.titleBox}>
-          <Text style={styles.title}>
-            Real world example:
-          </Text>
-        </View>
-        <View style={styles.textContainer}>
-          <Text style={styles.text}>
-            Let’s see how Amazon uses a neural network in their recommendation system.
-          </Text>
-        </View>
-        <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course4S3Recommendation' buttonColor='#8976C2' buttonText='Next' />
-        </View>
+      <Text style={styles.number}>1/4</Text>
+      <View style={styles.titleBox}>
+        <Text style={styles.title}>
+          Real world example:
+        </Text>
+      </View>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>
+          Let’s see how Amazon uses a neural network in their recommendation system.
+        </Text>
+      </View>
+      <View style={styles.footerButtons}>
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+      </View>
     </View>
   )
 }
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
     },
     textContainer: {
       marginTop: 25,
-      marginBottom: 50,
+      marginBottom: height/5.5,
       justifyContent: 'center',
       alignItems: 'center',
       width: width * 0.7,
@@ -77,8 +79,8 @@ const styles = StyleSheet.create({
       alignSelf: 'center'
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
-      justifyContent: 'space-between'
+      justifyContent: 'center'
     }
 })

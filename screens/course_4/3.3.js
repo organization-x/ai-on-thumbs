@@ -2,7 +2,8 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
-
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
 import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
@@ -10,7 +11,9 @@ import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-export default function Course4S3Info ({navigation}) {
+export default function Course4page3_3 ({navigation}) {
+    let screenSection = screen_list.section3;
+    let screenName = 'Course4page3_3';
     return (
     <View style={styles.container}>
       <Text style={styles.number}>3/4</Text>
@@ -22,7 +25,7 @@ export default function Course4S3Info ({navigation}) {
           </Text>
         </Text>
       </View>
-      <View style={styles.textContainer}>
+      <View style={[styles.textContainer, {marginBottom: height/5}]}>
         <Text style={styles.text}>
           This allows the neural network to make{' '}
           <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
@@ -35,12 +38,8 @@ export default function Course4S3Info ({navigation}) {
           !
         </Text>
       </View>
-      <View style={[styles.footerButtons, {marginTop: 50}]}>
-        <LessonButton navigation={navigation} nextScreen='Course4S3Correct' buttonColor='#8976C2' buttonText='Back' /> 
-        
-        {/*need to figure out how to access variable determining if the user answered correctly or incorrectly*/}
-
-        <LessonButton navigation={navigation} nextScreen='Course4S3End' buttonColor='#8976C2' buttonText='Next' />
+      <View style={styles.footerButtons}>
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
   )
@@ -74,8 +73,8 @@ const styles = StyleSheet.create({
       marginTop: 90,
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
-      justifyContent: 'space-between'
+      justifyContent: 'center'
     }
 })

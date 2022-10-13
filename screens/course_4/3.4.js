@@ -3,14 +3,17 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-export default function Course4S3End ({navigation}) {
+export default function Course4page3_4 ({navigation}) {
+    let screenSection = screen_list.section3;
+    let screenName = 'Course4page3_4';
     return (
     <View style={styles.container}>
       <Text style={styles.number}>4/4</Text>
@@ -31,6 +34,9 @@ export default function Course4S3End ({navigation}) {
           </Text>
         </View>
       </TouchableOpacity>
+      <View style={styles.footerButtons}>
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+      </View>
     </View>
   )
 }
@@ -78,6 +84,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       borderRadius: 15,
       alignSelf: 'center',
+      marginBottom: height/6,
     },
     returnText: {
       fontFamily: "AppleSDGothicNeo-Light",
@@ -85,5 +92,10 @@ const styles = StyleSheet.create({
       fontSize: 35,
       textAlign: 'center',
       fontWeight: 'bold'
+  },
+  footerButtons: {
+    marginBottom: 20,
+    flexDirection: 'row',
+    justifyContent: 'center'
   }
 })

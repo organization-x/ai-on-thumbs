@@ -1,20 +1,22 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, Image} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-export default function Course4S3Recommendation ({navigation}) {
+export default function Course4page3_2 ({navigation}) {
   let choice = "";
   let check1color = "#474747";
   let check2color = "#474747";
   let check3color = "#474747";
   // figure out how to make the check boxes change color when clicked
-
+    let screenSection = screen_list.section3;
+    let screenName = 'Course4page3_2';
     return (
     <View style={styles.container}>
       <Text style={styles.number}>2/4</Text>
@@ -74,7 +76,7 @@ export default function Course4S3Recommendation ({navigation}) {
       <TouchableOpacity
         onPress={() => 
           {if(choice!=""){
-            navigation.navigate(choice === "soccer" ? 'Course4S3Correct' : 'Course4S3Incorrect')
+            navigation.navigate(choice === "soccer" ? 'Course4page3_2_2' : 'Course4page3_2_3')
           }}
           }
         underlayColor='#fff'
@@ -86,6 +88,9 @@ export default function Course4S3Recommendation ({navigation}) {
           </Text>
         </View>
       </TouchableOpacity>
+      <View style={styles.footerButtons}>
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+      </View>
     </View>
   )
 }
@@ -194,8 +199,8 @@ const styles = StyleSheet.create({
       fontWeight: "bold"
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
-      justifyContent: 'space-between'
+      justifyContent: 'center'
     }
 })
