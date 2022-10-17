@@ -3,13 +3,14 @@ import React from 'react'
 import { StyleSheet, View, Image, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+import colors from '../../config/colors'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 23: Complete Screen')
 
 export default function Course1Complete ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
       <View style={{ alignItems: 'center' }}>
         <Image style={styles.logo} source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       </View>
@@ -21,7 +22,7 @@ export default function Course1Complete ({ navigation }) {
         <LessonButton navigation={navigation} nextScreen='Course1EmailPrompt' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Courses' buttonColor={['#32B59D', '#3AC55B']} buttonText='Back to home' />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15

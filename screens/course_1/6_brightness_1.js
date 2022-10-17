@@ -4,6 +4,9 @@ import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
+import colors from '../../config/colors'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 6: Brightness 1 Screen')
@@ -11,8 +14,11 @@ import { LinearGradient } from 'expo-linear-gradient'
 const height = Dimensions.get('window').height
 
 export default function Course1Brightness1 ({ navigation }) {
+  let screenSection = screen_list.course1;
+  let screenName = 'Course1Brightness1';
+
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.biggestText}>Each pixel has a value that represents how bright it is.</Text>
         <View style={styles.imageContainer}>
@@ -21,15 +27,17 @@ export default function Course1Brightness1 ({ navigation }) {
         <Text style={styles.smallText}>If a pixel has a larger number, the computer will know that the pixel is brighter.</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1Info2' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Brightness1.5' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        {/*<LessonButton navigation={navigation} nextScreen='Course1Info2' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Brightness1.5' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />*/}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -45,7 +53,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
     fontSize: height / 35,
     fontWeight: 'bold',
     marginTop: '5%'
@@ -63,7 +71,7 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   },
   image: {
     flex: 1,

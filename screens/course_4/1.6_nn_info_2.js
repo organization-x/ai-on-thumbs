@@ -5,6 +5,7 @@ import { StyleSheet, View, Text, Dimensions, Image, TouchableOpacity } from 'rea
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
@@ -16,7 +17,10 @@ export default function Course4Info2 ({ navigation, context, enabled = true }) {
     let screenName = 'Course4Info2';
     return (
     <View style={styles.container}>
-        <Text style={styles.number}>6/8</Text>
+        <View style={styles.top}>
+            <HomeButton navigation={navigation}/>
+            <Text style={styles.number}>6/8</Text>
+        </View>
         <View style={styles.interactive}>
             <Text style={styles.text}>The brain is composed of roughly 86 billion neurons, which <Text style={styles.underlineText}>communicate through electrical signals.</Text></Text>
             <Image source={require('../../assets/course_4/electrical_signal_1.6.jpg')} style={styles.image}/>
@@ -90,6 +94,12 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 30,
         marginTop: 12
+    },
+    top: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignContent: 'center',
+        marginTop: '2%'
     },
     underlineText: {
         textDecorationLine: "underline"

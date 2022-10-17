@@ -8,6 +8,7 @@ import StarRating from 'react-native-star-rating'
 import TopLessonParagraph from '../../components/TopLessonParagraph'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
+import colors from '../../config/colors'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 21: Rating Screen')
@@ -49,7 +50,7 @@ export default function Course1Rating ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
       <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       <TopLessonParagraph> Did you have fun learning AI with us?</TopLessonParagraph>
       <View style={styles.starView}>
@@ -83,7 +84,7 @@ export default function Course1Rating ({ navigation }) {
         <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course1Review' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course1EmailPrompt' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
@@ -93,6 +94,7 @@ const styles = {
     marginTop: height / 12
   },
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15,

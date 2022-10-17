@@ -5,6 +5,7 @@ import { StyleSheet, View, Text, Dimensions, Image, TouchableOpacity } from 'rea
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
@@ -16,7 +17,10 @@ export default function Course4Info1 ({ navigation, context, enabled = true }) {
     let screenName = 'Course4Info1';
     return (
     <View style={styles.container}>
-        <Text style={styles.number}>5/8</Text>
+        <View style={styles.top}>
+            <HomeButton navigation={navigation}/>
+            <Text style={styles.number}>5/8</Text>
+        </View>
         <View style={styles.interactive}>
             <Text style={styles.text}>To solve this problem, developers created <Text style={styles.underlineText}>NNs</Text> to <Text style={styles.underlineText}>mimic the human brain.</Text></Text>
             <View style={styles.rectangle}>
@@ -24,10 +28,7 @@ export default function Course4Info1 ({ navigation, context, enabled = true }) {
             </View>
 
         </View>
-        {/*<View style={styles.footerButtons}>
-            <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
-            <LessonButton navigation={navigation} nextScreen='Cours4Info1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-        </View>*/}
+        
         <View style={styles.footerButtons}>
             <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
         </View>
@@ -69,14 +70,14 @@ const styles = StyleSheet.create({
         flex: 1,
         borderRadius: 7,
         overflow: 'hidden',
-        marginTop: height / 15,
-        alignItems: "center"
+        marginTop: height / 10,
+        alignItems: "center",
+        justifyContent: "center"
     },
     number: {
         color: 'white',
         fontSize: 30,
-        textAlign: 'right',
-        marginTop: 10
+        textAlign: 'right'
     },
     progressBar: {
         alignItems: 'center', 
@@ -88,8 +89,7 @@ const styles = StyleSheet.create({
         width: 350,
         height: 225,
         alignItems: "center",
-        marginTop: 15,
-        marginBottom: 10,
+        marginBottom: height / 5,
         justifyContent: "center"
     },
     text: {
@@ -101,6 +101,12 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 30,
         paddingVertical: 10
+    },
+    top: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignContent: 'center',
+        marginTop: '2%'
     },
     underlineText: {
         textDecorationLine: "underline"
