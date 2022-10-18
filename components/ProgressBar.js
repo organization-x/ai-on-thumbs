@@ -20,7 +20,6 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
     let buttonColor;
     let currentScreenIdx;
     let firstScreenIdx;
-    //Find index of current screen
     for (let i=0; i<screens.length; i++){
         if (screens[i] === currentScreen) {
             currentScreenIdx = i;

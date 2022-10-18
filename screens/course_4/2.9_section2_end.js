@@ -7,7 +7,7 @@ import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 import SectionButton from '../../components/SectionButton'
 import { LinearGradient } from 'expo-linear-gradient'
-
+import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
 
@@ -27,8 +27,10 @@ export default function Course4Sect2End ({ navigation, context, enabled = true }
             <SectionButton navigation={navigation} nextSection={true} goSection={nextSection} />
         </View>
         <View style={styles.footerButtons}>
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page2_8' buttonColor='#8976C2' buttonText='Back' /> */}
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_1' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" /> */}
             <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-        </View>
+      </View>
     </View>
   )
 }
