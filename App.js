@@ -117,7 +117,8 @@ import Course3Promotion from './screens/course_3/32_promotion'
 import Course4_intro from './screens/course_4/1.1_intro'
 import Course4_second from './screens/course_4/1.2_nn'
 import Course4_third from './screens/course_4/1.3_captcha'
-
+import Right from './screens/course_4/right_captcha'
+import Wrong from './screens/course_4/wrong_captcha'
 
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
@@ -253,6 +254,8 @@ export default function App () {
           <Stack.Screen name='Course4_intro' component={Course4_intro}/>
           <Stack.Screen name='Course4_second' component={Course4_second}/>
           <Stack.Screen name="Course4_third" component={Course4_third}/>
+          <Stack.Screen name='Right' component={Right}/>
+          <Stack.Screen name='Wrong' component={Wrong}/>
 
         </Stack.Navigator>
       </NavigationContainer>
