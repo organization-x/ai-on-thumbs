@@ -2,6 +2,9 @@ import React from 'react'
 import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
+import colors from '../../config/colors'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 2: Face Finder Screen')
@@ -19,7 +22,10 @@ export default function Course1FaceFinder ({ navigation }) {
   const [sourceBottomLeft, setSourceBottomLeft] = React.useState(require('../../assets/course_1/moonface.png'))
   const [sourceBottomRight, setSourceBottomRight] = React.useState(require('../../assets/course_1/veggieface.png'))
   const [lowerScreenText, setLowerScreenText] = React.useState('There are 3 faces remaining.')
-  
+
+  let screenSection = screen_list.course1;
+  let screenName = 'Course1FaceFinder';
+
   const handlePress = (num) => {
     if (num === 0) {
       setNumCorrectFaces(numCorrectFaces + 1)
@@ -57,7 +63,7 @@ export default function Course1FaceFinder ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
       <Text style={styles.bigText}>To show computers how facial recognition is done, tap on all the faces in the pictures below. </Text>
       <View style={{ flex: 1 }}>
         <View style={styles.rowContainer}>
@@ -83,16 +89,18 @@ export default function Course1FaceFinder ({ navigation }) {
           <Text style={styles.text}> {lowerScreenText} </Text>
         </View>
         <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+          {/*<LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
+          <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />*/}
+          <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
         </View>
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -113,7 +121,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
     marginTop: '0%',
     fontSize: height / 40,
     fontWeight: 'bold'
@@ -133,6 +141,6 @@ const styles = StyleSheet.create({
     marginTop: 60,
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

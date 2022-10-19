@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   secondText: {
     padding: 15,
-    marginVertical: 10,
+    marginVertical: 5,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
@@ -94,7 +94,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
+<<<<<<< HEAD
+  }, 
+=======
   },
+>>>>>>> nr_neural_network
   progressBar: {
     alignItems: 'center', 
     justifyContent: 'flex-end',

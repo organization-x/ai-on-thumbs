@@ -1,6 +1,9 @@
 import React from 'react'
 import { StyleSheet, View, Text, ImageBackground, Image } from 'react-native'
-import LessonButton from '../../components/LessonButton'
+import colors from '../../config/colors'
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 import { TapGestureHandler, } from 'react-native-gesture-handler'
 
 import screen_list from '../../config/screen_list'
@@ -10,10 +13,15 @@ import colors from '../../config/colors'
 
 
 export default function Course4page1_3 ({navigation}) {
+<<<<<<< HEAD
+  let screenSection = screen_list.section1;
+  let screenName = 'Course4page1_3';
+=======
   
   let screenSection = screen_list.section1;
   let screenName = 'Course4page1_3';
 
+>>>>>>> nr_neural_network
   return (
     <View style={styles.container}>
       <Text style={styles.num}>3/8</Text>
@@ -23,10 +31,15 @@ export default function Course4page1_3 ({navigation}) {
         <Text style={styles.verify}>Verify!</Text>
       </View>
       <View style={styles.footerButtons}>
+<<<<<<< HEAD
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+      </View>
+=======
             {/* <LessonButton navigation={navigation} nextScreen='Course4page1_2' buttonColor='#8976C2' buttonText='Back' />
             <LessonButton navigation={navigation} nextScreen='Course4page1_4' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
             <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
         </View>
+>>>>>>> nr_neural_network
     </View>
   )
 }
@@ -109,6 +122,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
+<<<<<<< HEAD
+  }
+=======
 },
+>>>>>>> nr_neural_network
 })
 

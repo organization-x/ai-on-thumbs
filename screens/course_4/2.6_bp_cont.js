@@ -21,7 +21,6 @@ export default function Course4page2_6 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.boldText}></Text>
         <Text style={styles.underlinedText}>Backpropagation is a technique used to train NN models </Text>
         <Text style={styles.secondText}>to get the best possible output by adjusting the <Text style={styles.underlinedText}>values of nodes in the hidden layers</Text> </Text>
         <Text style={styles.text}>Let's see how NNs are able to do this!</Text>
@@ -68,7 +67,8 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   text: {
     marginTop: '10%',
@@ -88,5 +88,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> nr_neural_network
 })

@@ -5,7 +5,7 @@ import { View, Text, StyleSheet,  Image, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
-
+import HomeButton from '../../components/HomeButton'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 // import * as Analytics from 'expo-firebase-analytics'
@@ -60,7 +60,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
+<<<<<<< HEAD
+  },
+=======
 },
+>>>>>>> nr_neural_network
   lessonContent: {
     flex: 1,
     alignItems: 'center',

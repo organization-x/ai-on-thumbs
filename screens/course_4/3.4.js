@@ -21,7 +21,7 @@ export default function Course4page3_4 ({navigation}) {
     <View style={styles.container}>
       <Text style={styles.number}>4/4</Text>
       <View style={styles.textContainer}>
-        <Text style={[styles.title, {marginTop: 100}]}>Congrats!</Text>
+        <Text style={[styles.title]}>Congrats!</Text>
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>You've now completed a brief introduction to neural networks</Text>

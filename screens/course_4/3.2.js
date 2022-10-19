@@ -105,16 +105,13 @@ const styles = StyleSheet.create({
       backgroundColor: colors.background,
     },
     number: {
-      fontFamily: "AppleSDGothicNeo-Light",
       color: 'white',
       fontSize: 35,
-      textAlign: 'right',
-      paddingVertical: 30
+      textAlign: 'right'
     },
     text: {
-      fontFamily: "AppleSDGothicNeo-Light",
       color: 'white',
-      fontSize: 35,
+      fontSize: 30,
       textAlign: 'center'
     },
     textContainer: {
@@ -124,14 +121,13 @@ const styles = StyleSheet.create({
       alignSelf: 'center',
     },
     title: {
-      fontFamily: "AppleSDGothicNeo-Light",
       textAlign: 'center',
       color: 'white',
       fontSize: 50,
       fontWeight: "bold"
     },
     titleBox: {
-      backgroundColor: "#1fbd67",
+      backgroundColor: colors.secondary,
       height: 150,
       width: "95%",
       borderRadius: 15,

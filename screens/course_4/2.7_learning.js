@@ -21,7 +21,6 @@ export default function Course4page2_7 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.boldText}></Text>
         <Text style={styles.secondText}>To begin, a <Text style={styles.underlinedText}>NN randomly assigns a number for each node.</Text> It then processes an input through the hidden layers to predict an output. </Text>
         <Text style={styles.secondText}>Then, the model <Text style={styles.underlinedText}> compares its prediction to the desired answer</Text>
         </Text>
@@ -67,7 +66,8 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   text: {
     marginTop: '10%',
@@ -87,5 +87,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> nr_neural_network
 })

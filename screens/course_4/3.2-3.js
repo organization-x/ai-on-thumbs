@@ -15,7 +15,8 @@ import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 
 export default function Course4page3_2_3({navigation}) {
-
+  let screenSection = screen_list.section1;
+  let screenName = 'Course4page3_2_3';
     return (
     <View style={styles.container}>
       <Text style={styles.number}>2/4</Text>
@@ -33,7 +34,7 @@ export default function Course4page3_2_3({navigation}) {
         </Text>
       </View>
       <View style={[styles.footerButtons, {marginTop: 50}]}>
-        <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor='#8976C2' buttonText='Try Again' />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
         {/* <LessonButton navigation={navigation} nextScreen='Course4S3Info' buttonColor='#8976C2' buttonText='Next' /> */}
       </View>
     </View>
@@ -71,5 +72,9 @@ const styles = StyleSheet.create({
       marginBottom: 20,
       flexDirection: 'row',
       justifyContent: 'center'
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> nr_neural_network
 })

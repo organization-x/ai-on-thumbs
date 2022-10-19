@@ -19,7 +19,6 @@ export default function Course4page2_3 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.interactive}>
-      <Text style={styles.boldText}></Text>
         <Text style={styles.secondText}>Since computers can't understand words or images, <Text style={styles.underlinedText}>they represent these inputs with numerical values</Text> 
         </Text>
         <Text style={styles.secondText}>These numerical values change with multiple <Text style={styles.underlinedText}>calculations in the hidden layer(s),</Text> resulting in the predicted output from the output layer
@@ -43,7 +42,8 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 24
+    fontSize: height / 24,
+    justifyContent: 'center'
   },
   underlinedText: {
     textDecorationLine: 'underline', 
@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   text: {
     marginTop: '10%',
@@ -86,5 +87,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> nr_neural_network
 })

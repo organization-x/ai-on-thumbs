@@ -26,7 +26,6 @@ export default function Course4page2_5 ({ navigation }) {
         {/* <Text style={styles.text}>Now, lets dive further into how NNs process information:</Text>
         <Text style={styles.boldText}>Backpropagation is one of the most crucial processes of Neural Networks</Text> */}
         <View style={styles.interactive}>
-        <Text style={styles.boldText}></Text>
           <Text style={styles.secondText}>Now, lets dive further into how NNs process information:
           </Text>
           <Text style={styles.secondText}></Text>
@@ -77,7 +76,8 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   text: {
     marginTop: '10%',
@@ -97,5 +97,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> nr_neural_network
 })

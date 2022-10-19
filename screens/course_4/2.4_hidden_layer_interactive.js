@@ -62,7 +62,7 @@ export default function Course4SelectDNN ({ navigation }) {
       <Text style={styles.text}>{lowerScreenText}</Text>
       <View style={styles.footerButtons}>
         {/* <LessonButton navigation={navigation} nextScreen='Course4page2_4_correct' buttonColor='#8976C2' buttonText='Back' /> */}
-        {/* <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />  */}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
   )
@@ -119,5 +119,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> nr_neural_network
 })

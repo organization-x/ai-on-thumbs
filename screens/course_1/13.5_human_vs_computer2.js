@@ -6,13 +6,19 @@ import React from 'react'
 import { StyleSheet, View, Text, Image, ScrollView, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
+import colors from '../../config/colors'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 13.5: Human vs Computer 2 Screen')
 
 export default function Course1HumanVsComputer2 ({ navigation }) {
+  let screenSection = screen_list.course1;
+  let screenName = 'Course1HumanVsComputer2';
+
   return (
-    <LinearGradient colors={['#370098', '#160535']} style={styles.container}>
+    <View style={styles.container}>
       <ScrollView scrollEnabled={false}>
         <View style={styles.interactive}>
           <Text style={styles.text}>See how different the worlds we live in are?</Text>
@@ -23,15 +29,17 @@ export default function Course1HumanVsComputer2 ({ navigation }) {
       </ScrollView>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Info6' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        {/*<LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Info6' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />*/}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -64,6 +72,6 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

@@ -3,7 +3,7 @@ import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 
 import colors from '../config/colors'
 
-export default function ProgressBar ({ navigation, nextSection = false, goSection, context, enabled = true, actOpacity = 0.3 }) {
+export default function SectionButton ({ navigation, nextSection = false, goSection, context, enabled = true, actOpacity = 0.3 }) {
     let screens = goSection.screens;
     let nextScreenIdx;
     let buttonText;

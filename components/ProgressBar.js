@@ -1,3 +1,11 @@
+/*To implement:
+1. import ProgressBar and import screen_list
+2. create variables for screen section and screen name 
+(e.g. 
+    let screenSection = screen_list.section1;
+    let screenName = 'Course4CaptExplain';)
+3. put <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />*/
+
 import React from 'react'
 import { TouchableOpacity, View, StyleSheet } from 'react-native'
 
@@ -52,6 +60,7 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
         else {
             buttonColor = colors.progressButton;
         }
+        //put all the buttons together
         progressBar.push(
         <TouchableOpacity
             key={i}

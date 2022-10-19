@@ -21,7 +21,6 @@ export default function Course4page2_8 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.interactive}>
-        <Text style={styles.boldText}></Text>
         <Text style={styles.secondText}>If the output is wrong, the model will work its way backwards, <Text style={styles.underlinedText}>adjusting the values assigned to each node.</Text> 
         </Text>
         <Text style={styles.secondText}>After <Text style={styles.underlinedText}>doing this process multiple times</Text> to minimize the error between the predicted and the actual output, the model moves on to the next input, repeating the process
@@ -69,7 +68,8 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   text: {
     marginTop: '10%',
@@ -89,5 +89,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> nr_neural_network
 })

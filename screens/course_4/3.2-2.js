@@ -7,6 +7,7 @@ import LessonButton from '../../components/LessonButton'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
 const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
 
 import colors from '../../config/colors'
 
@@ -39,7 +40,10 @@ export default function Course4page3_2_2 ({navigation}) {
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor='#8976C2' buttonText='Back' /> */}
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_3' buttonColor='#8976C2' buttonText='Next' /> */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+<<<<<<< HEAD
+=======
 
+>>>>>>> nr_neural_network
       </View>
     </View>
   )
@@ -53,14 +57,11 @@ const styles = StyleSheet.create({
       backgroundColor: colors.background,
     },
     number: {
-      fontFamily: "AppleSDGothicNeo-Light",
       color: 'white',
-      fontSize: 35,
-      textAlign: 'right',
-      paddingVertical: 30
+      fontSize: 30,
+      textAlign: 'right'
     },
     text: {
-      fontFamily: "AppleSDGothicNeo-Light",
       color: 'white',
       fontSize: 35,
       textAlign: 'center'
@@ -70,11 +71,15 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       width: width * 0.8,
       alignSelf: 'center',
-      marginTop: 75,
+      marginTop: height / 30,
     },
     footerButtons: {
       marginBottom: 20,
       flexDirection: 'row',
       justifyContent: 'center'
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> nr_neural_network
 })
