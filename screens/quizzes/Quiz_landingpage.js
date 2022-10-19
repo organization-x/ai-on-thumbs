@@ -1,17 +1,17 @@
 import React from 'react'
 import { StyleSheet, Text, ScrollView } from 'react-native'
-import CourseCard from '../components/CourseCard'
-import CourseAd from '../components/CourseAd'
+import CourseCard from '../../components/CourseCard'
+import CourseAd from '../../components/CourseAd'
 import { LinearGradient } from 'expo-linear-gradient'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Courses Screen')
 
-export default function CoursesScreen ({ navigation }) {
+export default function QuizzesScreen ({ navigation }) {
   return (
     <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
-        <Text style={styles.header}>Your AI Journey</Text>
+        <Text style={styles.header}>Quizzes</Text>
         <CourseCard
           navigation={navigation}
           lessonScreen='Course1Intro'
@@ -46,7 +46,7 @@ export default function CoursesScreen ({ navigation }) {
         />
         <CourseCard 
           navigation={navigation}
-          lessonScreen='QuizzesScreen'
+          lessonScreen=''
           gradColors={['#8233C5', '#3C4687']}
           title='Quizzes'
           desc='Test your knowledge with questions from each lesson!'

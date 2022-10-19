@@ -6,6 +6,8 @@ import { TapGestureHandler, } from 'react-native-gesture-handler'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 
+import colors from '../../config/colors'
+
 
 export default function Course4page1_3 ({navigation}) {
   
@@ -32,7 +34,7 @@ export default function Course4page1_3 ({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:"#202020",
+    backgroundColor:colors.background,
     paddingHorizontal: 20,
     paddingVertical: 15
   },

@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, ImageBackground } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+import colors from '../../config/colors'
 
 
 export default function Course4page1_2 ({navigation}) {
@@ -28,7 +29,7 @@ export default function Course4page1_2 ({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:"#202020",
+    backgroundColor:colors.background,
     paddingHorizontal: 20,
     paddingVertical: 15
   },
