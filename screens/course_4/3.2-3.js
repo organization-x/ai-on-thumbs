@@ -69,8 +69,12 @@ const styles = StyleSheet.create({
       marginTop: 90,
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
       justifyContent: 'center'
+<<<<<<< HEAD
     }
+=======
+    },
+>>>>>>> nr_neural_network
 })

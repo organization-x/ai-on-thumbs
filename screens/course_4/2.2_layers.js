@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     fontSize: height / 30
   },
   footerButtons: {
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
   },

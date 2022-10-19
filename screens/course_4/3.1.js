@@ -5,15 +5,19 @@ import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
+import colors from '../../config/colors'
+
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
 
 // import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-import colors from '../../config/colors'
 
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
+
+
+// import LessonButton from '../../components/LessonButton'
 
 export default function Course4page3_1 ({navigation}) {
     
@@ -83,7 +87,7 @@ const styles = StyleSheet.create({
       alignSelf: 'center'
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
       justifyContent: 'center'
     }

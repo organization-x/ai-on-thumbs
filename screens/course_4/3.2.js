@@ -197,8 +197,8 @@ const styles = StyleSheet.create({
       fontWeight: "bold"
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
-      justifyContent: 'space-between'
-    }
+      justifyContent: 'center'
+    },
 })

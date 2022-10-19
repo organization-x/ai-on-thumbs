@@ -57,10 +57,14 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background
   },
   footerButtons: {
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
+<<<<<<< HEAD
   },
+=======
+},
+>>>>>>> nr_neural_network
   lessonContent: {
     flex: 1,
     alignItems: 'center',

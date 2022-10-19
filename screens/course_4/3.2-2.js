@@ -40,6 +40,10 @@ export default function Course4page3_2_2 ({navigation}) {
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor='#8976C2' buttonText='Back' /> */}
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_3' buttonColor='#8976C2' buttonText='Next' /> */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+<<<<<<< HEAD
+=======
+
+>>>>>>> nr_neural_network
       </View>
     </View>
   )
@@ -70,8 +74,12 @@ const styles = StyleSheet.create({
       marginTop: height / 30,
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
       justifyContent: 'center'
+<<<<<<< HEAD
     }
+=======
+    },
+>>>>>>> nr_neural_network
 })

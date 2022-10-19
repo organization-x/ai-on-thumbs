@@ -13,6 +13,8 @@ import YesThumbs from './screens/YesThumbs'
 
 import * as Sentry from 'sentry-expo'
 
+import QuizzesScreen from './screens/quizzes/Quiz_landingpage'
+
 //testing
 import Test from './screens/course_4/test'
 import Course4S3Intro from './screens/course_4/3.1'
@@ -183,6 +185,7 @@ import Course4page3_4 from './screens/course_4/3.4'
 
 
 
+
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
   enableInExpoDevelopment: false,
@@ -316,27 +319,20 @@ export default function App () {
           <Stack.Screen name='Course3Promotion' component={Course3Promotion} />
 
           {/* course 4 screen stack */}
-          
-
           <Stack.Screen name='Course4page1_1' component={Course4page1_1} />
           <Stack.Screen name='Course4page1_2' component={Course4page1_2} /> 
           <Stack.Screen name='Course4page1_3' component={Course4page1_3} />
           <Stack.Screen name='Course4page1_4' component={Course4page1_4} />
           <Stack.Screen name='Course4page1_5' component={Course4page1_5} />
-          <Stack.Screen name='Course4page1_6' component={Course4page1_6} />
-        
+          <Stack.Screen name='Course4page1_6' component={Course4page1_6} />        
           <Stack.Screen name='Course4page1_7' component={Course4page1_7} />
           <Stack.Screen name='Course4page1_8' component={Course4page1_8} />
 
-
-
-          {/* <Stack.Screen name='Course4page1_7' component={Course4page1_7} /> */}
           <Stack.Screen name='Course4page2_1' component={Course4page2_1} /> 
           <Stack.Screen name='Course4page2_2' component={Course4page2_2} />
           <Stack.Screen name='Course4page2_3' component={Course4page2_3} />
           <Stack.Screen name='Course4page2_4' component={Course4SelectDNN} />
           <Stack.Screen name='Course4page2_4_correct' component={Course4page2_4_correct} />
-          {/* <Stack.Screen name='Course4page'></> */}
           <Stack.Screen name='Course4page2_5' component={Course4page2_5} />
           <Stack.Screen name='Course4page2_6' component={Course4page2_6} />
           <Stack.Screen name='Course4page2_7' component={Course4page2_7} />
@@ -350,8 +346,8 @@ export default function App () {
           <Stack.Screen name='Course4page3_3' component={Course4page3_3} />
           <Stack.Screen name='Course4page3_4' component={Course4page3_4} />
 
+          <Stack.Screen name='QuizzesScreen' component={QuizzesScreen}/>
 
-          {/* <Stack.Screen name='Course3SelectClosestHouse' component={Course3SelectClosestHouse} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </LinearGradient>

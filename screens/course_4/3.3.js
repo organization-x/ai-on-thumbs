@@ -7,14 +7,13 @@ import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
-const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
-
-
 import colors from '../../config/colors'
 
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
+
 
   
 export default function Course4page3_3 ({navigation}) {
@@ -24,26 +23,23 @@ export default function Course4page3_3 ({navigation}) {
     <View style={styles.container}>
       <Text style={styles.number}>3/4</Text>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          After looking at a user's preferences, the computer{' '}
-          <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
-            can start recognizing patterns
+          <Text style={styles.text}>
+            After looking at a user's preferences, the computer{' '}
+            <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
+              can start recognizing patterns
+            </Text>
           </Text>
-        </Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          This allows the neural network to make{' '}
           <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
             accurate predictions{' '}
           </Text>
-          and{' '}
+          {/* and{' '}00k */}
           <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
-            great recommendations
+            great recommendations!
           </Text>
-          !
-        </Text>
-      </View>
+            
+        </View>
+      
+      
       <View style={[styles.footerButtons, {marginTop: 50}]}>
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2_2' buttonColor='#8976C2' buttonText='Back' />  */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> 
@@ -54,6 +50,8 @@ export default function Course4page3_3 ({navigation}) {
     </View>
   )
 }
+
+
 
 const styles = StyleSheet.create({
     container: {
@@ -80,8 +78,12 @@ const styles = StyleSheet.create({
       justifyContent: 'center'
     },
     footerButtons: {
-      marginBottom: 10,
+      marginBottom: 20,
       flexDirection: 'row',
       justifyContent: 'center'
+<<<<<<< HEAD
     }
+=======
+    },
+>>>>>>> nr_neural_network
 })

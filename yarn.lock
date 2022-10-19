@@ -1319,6 +1319,8 @@
     "resolve-from" "^5.0.0"
     "sucrase" "^3.20.0"
 
+<<<<<<< HEAD
+=======
 "@expo/ngrok-bin-win32-x64@2.3.40":
   "integrity" "sha512-a8xtUxX/Ftp2ho+/+VR5GCg0ttP9MNzYj58TVjfiKMkl4mVrbFVIzEinRzmy7PhiOWxqGQSCOdzEfa6C2G4nEA=="
   "resolved" "https://registry.npmjs.org/@expo/ngrok-bin-win32-x64/-/ngrok-bin-win32-x64-2.3.40.tgz"
@@ -1351,6 +1353,7 @@
     "uuid" "^3.3.2"
     "yaml" "^1.10.0"
 
+>>>>>>> nr_neural_network
 "@expo/osascript@^2.0.31", "@expo/osascript@2.0.33":
   "integrity" "sha512-FQinlwHrTlJbntp8a7NAlCKedVXe06Va/0DSLXRO8lZVtgbEMrYYSUZWQNcOlNtc58c2elNph6z9dMOYwSo3JQ=="
   "resolved" "https://registry.npmjs.org/@expo/osascript/-/osascript-2.0.33.tgz"
@@ -2036,6 +2039,8 @@
   "integrity" "sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ=="
   "resolved" "https://registry.npmjs.org/@sideway/pinpoint/-/pinpoint-2.0.0.tgz"
   "version" "2.0.0"
+<<<<<<< HEAD
+=======
 
 "@sindresorhus/is@^4.0.0":
   "integrity" "sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw=="
@@ -2058,6 +2063,7 @@
     "@types/keyv" "*"
     "@types/node" "*"
     "@types/responselike" "*"
+>>>>>>> nr_neural_network
 
 "@types/graceful-fs@^4.1.2":
   "integrity" "sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw=="
@@ -2106,6 +2112,8 @@
   "integrity" "sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ=="
   "resolved" "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   "version" "0.0.29"
+<<<<<<< HEAD
+=======
 
 "@types/keyv@*":
   "integrity" "sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg=="
@@ -2113,11 +2121,14 @@
   "version" "3.1.4"
   dependencies:
     "@types/node" "*"
+>>>>>>> nr_neural_network
 
 "@types/node@*":
   "integrity" "sha512-En7tneq+j0qAiVwysBD79y86MT3ModuoIJbe7JXp+sb5UAjInSShmK3nXXMioBzfF7rXC12hv12d4IyCVwN4dA=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-18.0.5.tgz"
   "version" "18.0.5"
+<<<<<<< HEAD
+=======
 
 "@types/responselike@*", "@types/responselike@^1.0.0":
   "integrity" "sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA=="
@@ -2125,6 +2136,7 @@
   "version" "1.0.0"
   dependencies:
     "@types/node" "*"
+>>>>>>> nr_neural_network
 
 "@types/unist@*":
   "integrity" "sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ=="
@@ -2838,6 +2850,8 @@
     "union-value" "^1.0.0"
     "unset-value" "^1.0.0"
 
+<<<<<<< HEAD
+=======
 "cacheable-lookup@^5.0.3":
   "integrity" "sha512-2/kNscPhpcxrOigMZzbiWF7dz8ilhb/nIHU3EyZiXWXpeq/au8qJ8VhdftMkty3n7Gj6HIGalQG8oiBNB3AJgA=="
   "resolved" "https://registry.npmjs.org/cacheable-lookup/-/cacheable-lookup-5.0.4.tgz"
@@ -2856,6 +2870,7 @@
     "normalize-url" "^6.0.1"
     "responselike" "^2.0.0"
 
+>>>>>>> nr_neural_network
 "call-bind@^1.0.0", "call-bind@^1.0.2":
   "integrity" "sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA=="
   "resolved" "https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz"
@@ -3067,6 +3082,8 @@
     "kind-of" "^6.0.2"
     "shallow-clone" "^3.0.0"
 
+<<<<<<< HEAD
+=======
 "clone-response@^1.0.2":
   "integrity" "sha512-ROoL94jJH2dUVML2Y/5PEDNaSHgeOdSDicUyS7izcF63G6sTc/FTjLub4b8Il9S8S0beOfYt0TaA5qvFK+w0wA=="
   "resolved" "https://registry.npmjs.org/clone-response/-/clone-response-1.0.3.tgz"
@@ -3074,6 +3091,7 @@
   dependencies:
     "mimic-response" "^1.0.0"
 
+>>>>>>> nr_neural_network
 "clone@^1.0.2":
   "integrity" "sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg=="
   "resolved" "https://registry.npmjs.org/clone/-/clone-1.0.4.tgz"
@@ -3468,6 +3486,8 @@
   "resolved" "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.2.0.tgz"
   "version" "0.2.0"
 
+<<<<<<< HEAD
+=======
 "decompress-response@^6.0.0":
   "integrity" "sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ=="
   "resolved" "https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz"
@@ -3475,6 +3495,7 @@
   dependencies:
     "mimic-response" "^3.1.0"
 
+>>>>>>> nr_neural_network
 "dedent@^0.6.0":
   "integrity" "sha512-cSfRWjXJtZQeRuZGVvDrJroCR5V2UvBNUMHsPCdNYzuAG8b9V8aAy3KUcdQrGQPXs17Y+ojbPh1aOCplg9YR9g=="
   "resolved" "https://registry.npmjs.org/dedent/-/dedent-0.6.0.tgz"
@@ -3510,11 +3531,14 @@
   dependencies:
     "clone" "^1.0.2"
 
+<<<<<<< HEAD
+=======
 "defer-to-connect@^2.0.0":
   "integrity" "sha512-4tvttepXG1VaYGrRibk5EwJd1t4udunSOVMdLSAL6mId1ix438oPwPZMALY41FCijukO1L0twNcGsdzS7dHgDg=="
   "resolved" "https://registry.npmjs.org/defer-to-connect/-/defer-to-connect-2.0.1.tgz"
   "version" "2.0.1"
 
+>>>>>>> nr_neural_network
 "define-lazy-prop@^2.0.0":
   "integrity" "sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og=="
   "resolved" "https://registry.npmjs.org/define-lazy-prop/-/define-lazy-prop-2.0.0.tgz"
@@ -4750,6 +4774,8 @@
   dependencies:
     "pump" "^3.0.0"
 
+<<<<<<< HEAD
+=======
 "get-stream@^5.1.0":
   "integrity" "sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA=="
   "resolved" "https://registry.npmjs.org/get-stream/-/get-stream-5.2.0.tgz"
@@ -4757,6 +4783,7 @@
   dependencies:
     "pump" "^3.0.0"
 
+>>>>>>> nr_neural_network
 "get-symbol-description@^1.0.0":
   "integrity" "sha512-2EmdH1YvIQiZpltCNgkuiUnyukzxM/R6NDJX31Ke3BG1Nq5b0S2PhX59UKi9vZpPDQVdqn+1IcaAwnzTT5vCjw=="
   "resolved" "https://registry.npmjs.org/get-symbol-description/-/get-symbol-description-1.0.0.tgz"
@@ -4848,6 +4875,8 @@
   dependencies:
     "delegate" "^3.1.2"
 
+<<<<<<< HEAD
+=======
 "got@^11.5.1":
   "integrity" "sha512-o0Je4NvQObAuZPHLFoRSkdG2lTgtcynqymzg2Vupdx6PorhaT5MCbIyXG6d4D94kk8ZG57QeosgdiqfJWhEhlQ=="
   "resolved" "https://registry.npmjs.org/got/-/got-11.8.5.tgz"
@@ -4865,6 +4894,7 @@
     "p-cancelable" "^2.0.0"
     "responselike" "^2.0.0"
 
+>>>>>>> nr_neural_network
 "graceful-fs@^4.1.11", "graceful-fs@^4.1.15", "graceful-fs@^4.1.2", "graceful-fs@^4.1.3", "graceful-fs@^4.1.6", "graceful-fs@^4.1.9", "graceful-fs@^4.2.0", "graceful-fs@^4.2.4", "graceful-fs@^4.2.9":
   "integrity" "sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA=="
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz"
@@ -5038,11 +5068,14 @@
   dependencies:
     "lru-cache" "^6.0.0"
 
+<<<<<<< HEAD
+=======
 "http-cache-semantics@^4.0.0":
   "integrity" "sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ=="
   "resolved" "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.0.tgz"
   "version" "4.1.0"
 
+>>>>>>> nr_neural_network
 "http-errors@1.7.2":
   "integrity" "sha512-uUQBt3H/cSIVfch6i1EuPNy/YsRSOUBXTVfZ+yR7Zjez3qjBz6i9+i4zjNaoqcoFVI4lQJ5plg63TvGfRSDCRg=="
   "resolved" "https://registry.npmjs.org/http-errors/-/http-errors-1.7.2.tgz"
@@ -5065,6 +5098,8 @@
     "statuses" "2.0.1"
     "toidentifier" "1.0.1"
 
+<<<<<<< HEAD
+=======
 "http2-wrapper@^1.0.0-beta.5.2":
   "integrity" "sha512-V+23sDMr12Wnz7iTcDeJr3O6AIxlnvT/bmaAAAP/Xda35C90p9599p0F1eHR/N1KILWSoWVAiOMFjBBXaXSMxg=="
   "resolved" "https://registry.npmjs.org/http2-wrapper/-/http2-wrapper-1.0.3.tgz"
@@ -5073,6 +5108,7 @@
     "quick-lru" "^5.1.1"
     "resolve-alpn" "^1.0.0"
 
+>>>>>>> nr_neural_network
 "https-proxy-agent@^5.0.0":
   "integrity" "sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA=="
   "resolved" "https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz"
@@ -5759,11 +5795,14 @@
   "resolved" "https://registry.npmjs.org/jsesc/-/jsesc-0.5.0.tgz"
   "version" "0.5.0"
 
+<<<<<<< HEAD
+=======
 "json-buffer@3.0.1":
   "integrity" "sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ=="
   "resolved" "https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.1.tgz"
   "version" "3.0.1"
 
+>>>>>>> nr_neural_network
 "json-parse-better-errors@^1.0.1":
   "integrity" "sha512-mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw=="
   "resolved" "https://registry.npmjs.org/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz"
@@ -5851,13 +5890,7 @@
     "array-includes" "^3.1.5"
     "object.assign" "^4.1.2"
 
-"keyv@^4.0.0":
-  "integrity" "sha512-2YvuMsA+jnFGtBareKqgANOEKe1mk3HKiXu2fRmAfyxG0MJAywNhi5ttWA3PMjl4NmpyjZNbFifR2vNjW1znfA=="
-  "resolved" "https://registry.npmjs.org/keyv/-/keyv-4.5.0.tgz"
-  "version" "4.5.0"
-  dependencies:
-    "json-buffer" "3.0.1"
-
+<<<<<<< HEAD
 "kind-of@^3.0.2", "kind-of@^3.0.3":
   "integrity" "sha512-NOW9QQXMoZGg/oqnVNoNTTIFEIid1627WCffUBJEdMxYApq7mNE7CpzucIPc+ZQg25Phej7IJSmX3hO+oblOtQ=="
   "resolved" "https://registry.npmjs.org/kind-of/-/kind-of-3.2.2.tgz"
@@ -5866,11 +5899,31 @@
     "is-buffer" "^1.1.5"
 
 "kind-of@^3.2.0":
+=======
+"keyv@^4.0.0":
+  "integrity" "sha512-2YvuMsA+jnFGtBareKqgANOEKe1mk3HKiXu2fRmAfyxG0MJAywNhi5ttWA3PMjl4NmpyjZNbFifR2vNjW1znfA=="
+  "resolved" "https://registry.npmjs.org/keyv/-/keyv-4.5.0.tgz"
+  "version" "4.5.0"
+  dependencies:
+    "json-buffer" "3.0.1"
+
+"kind-of@^3.0.2", "kind-of@^3.0.3":
+>>>>>>> nr_neural_network
   "integrity" "sha512-NOW9QQXMoZGg/oqnVNoNTTIFEIid1627WCffUBJEdMxYApq7mNE7CpzucIPc+ZQg25Phej7IJSmX3hO+oblOtQ=="
   "resolved" "https://registry.npmjs.org/kind-of/-/kind-of-3.2.2.tgz"
   "version" "3.2.2"
   dependencies:
     "is-buffer" "^1.1.5"
+<<<<<<< HEAD
+=======
+
+"kind-of@^3.2.0":
+  "integrity" "sha512-NOW9QQXMoZGg/oqnVNoNTTIFEIid1627WCffUBJEdMxYApq7mNE7CpzucIPc+ZQg25Phej7IJSmX3hO+oblOtQ=="
+  "resolved" "https://registry.npmjs.org/kind-of/-/kind-of-3.2.2.tgz"
+  "version" "3.2.2"
+  dependencies:
+    "is-buffer" "^1.1.5"
+>>>>>>> nr_neural_network
 
 "kind-of@^4.0.0":
   "integrity" "sha512-24XsCxmEbRwEDbz/qz3stgin8TTzZ1ESR56OMCN0ujYg+vRutNSiOj9bHH9u85DKgXguraugV5sFuvbD4FW/hw=="
@@ -5883,6 +5936,190 @@
   "integrity" "sha512-NGEErnH6F2vUuXDh+OlbcKW7/wOcfdRHaZ7VWtqCztfHri/++YKmP51OdWeGPuqCOba6kk2OTe5d02VmTB80Pw=="
   "resolved" "https://registry.npmjs.org/kind-of/-/kind-of-5.1.0.tgz"
   "version" "5.1.0"
+<<<<<<< HEAD
+
+"kind-of@^6.0.0", "kind-of@^6.0.2":
+  "integrity" "sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw=="
+  "resolved" "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"
+  "version" "6.0.3"
+
+"klaw@^1.0.0":
+  "integrity" "sha512-TED5xi9gGQjGpNnvRWknrwAB1eL5GciPfVFOt3Vk1OJCVDQbzuSfrF3hkUQKlsgKrG1F+0t5W0m+Fje1jIt8rw=="
+  "resolved" "https://registry.npmjs.org/klaw/-/klaw-1.3.1.tgz"
+  "version" "1.3.1"
+  optionalDependencies:
+    "graceful-fs" "^4.1.9"
+
+"kleur@^3.0.3":
+  "integrity" "sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w=="
+  "resolved" "https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz"
+  "version" "3.0.3"
+
+"lcid@^1.0.0":
+  "integrity" "sha512-YiGkH6EnGrDGqLMITnGjXtGmNtjoXw9SVUzcaos8RBi7Ps0VBylkq+vOcY9QE5poLasPCR849ucFUkl0UzUyOw=="
+  "resolved" "https://registry.npmjs.org/lcid/-/lcid-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "invert-kv" "^1.0.0"
+
+"leven@^3.1.0":
+  "integrity" "sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A=="
+  "resolved" "https://registry.npmjs.org/leven/-/leven-3.1.0.tgz"
+  "version" "3.1.0"
+
+"levn@^0.4.1":
+  "integrity" "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ=="
+  "resolved" "https://registry.npmjs.org/levn/-/levn-0.4.1.tgz"
+  "version" "0.4.1"
+  dependencies:
+    "prelude-ls" "^1.2.1"
+    "type-check" "~0.4.0"
+
+"lie@3.1.1":
+  "integrity" "sha512-RiNhHysUjhrDQntfYSfY4MU24coXXdEOgw9WGcKHNeEwffDYbF//u87M1EWaMGzuFoSbqW0C9C6lEEhDOAswfw=="
+  "resolved" "https://registry.npmjs.org/lie/-/lie-3.1.1.tgz"
+  "version" "3.1.1"
+  dependencies:
+    "immediate" "~3.0.5"
+
+"lines-and-columns@^1.1.6":
+  "integrity" "sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg=="
+  "resolved" "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz"
+  "version" "1.2.4"
+
+"load-json-file@^2.0.0":
+  "integrity" "sha512-3p6ZOGNbiX4CdvEd1VcE6yi78UrGNpjHO33noGwHCnT/o2fyllJDepsm8+mFFv/DvtwFHht5HIHSyOy5a+ChVQ=="
+  "resolved" "https://registry.npmjs.org/load-json-file/-/load-json-file-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "graceful-fs" "^4.1.2"
+    "parse-json" "^2.2.0"
+    "pify" "^2.0.0"
+    "strip-bom" "^3.0.0"
+
+"load-json-file@^4.0.0":
+  "integrity" "sha512-Kx8hMakjX03tiGTLAIdJ+lL0htKnXjEZN6hk/tozf/WOuYGdZBJrZ+rCJRbVCugsjB3jMLn9746NsQIf5VjBMw=="
+  "resolved" "https://registry.npmjs.org/load-json-file/-/load-json-file-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "graceful-fs" "^4.1.2"
+    "parse-json" "^4.0.0"
+    "pify" "^3.0.0"
+    "strip-bom" "^3.0.0"
+
+"load-json-file@^5.2.0":
+  "integrity" "sha512-cJGP40Jc/VXUsp8/OrnyKyTZ1y6v/dphm3bioS+RrKXjK2BB6wHUd6JptZEFDGgGahMT+InnZO5i1Ei9mpC8Bw=="
+  "resolved" "https://registry.npmjs.org/load-json-file/-/load-json-file-5.3.0.tgz"
+  "version" "5.3.0"
+  dependencies:
+    "graceful-fs" "^4.1.15"
+    "parse-json" "^4.0.0"
+    "pify" "^4.0.1"
+    "strip-bom" "^3.0.0"
+    "type-fest" "^0.3.0"
+
+"localforage@^1.8.1":
+  "integrity" "sha512-14/H1aX7hzBBmmh7sGPd+AOMkkIrHM3Z1PAyGgZigA1H1p5O5ANnMyWzvpAETtG68/dC4pC0ncy3+PPGzXZHPg=="
+  "resolved" "https://registry.npmjs.org/localforage/-/localforage-1.10.0.tgz"
+  "version" "1.10.0"
+  dependencies:
+    "lie" "3.1.1"
+
+"locate-path@^2.0.0":
+  "integrity" "sha512-NCI2kiDkyR7VeEKm27Kda/iQHyKJe1Bu0FlTbYp3CqJu+9IFe9bLyAjMxf5ZDDbEg+iMPzB5zYyUTSm8wVTKmA=="
+  "resolved" "https://registry.npmjs.org/locate-path/-/locate-path-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "p-locate" "^2.0.0"
+    "path-exists" "^3.0.0"
+
+"locate-path@^3.0.0":
+  "integrity" "sha512-7AO748wWnIhNqAuaty2ZWHkQHRSNfPVIsPIfwEOWO22AmaoVrWavlOcMR5nzTLNYvp36X220/maaRsrec1G65A=="
+  "resolved" "https://registry.npmjs.org/locate-path/-/locate-path-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "p-locate" "^3.0.0"
+    "path-exists" "^3.0.0"
+
+"locate-path@^5.0.0":
+  "integrity" "sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g=="
+  "resolved" "https://registry.npmjs.org/locate-path/-/locate-path-5.0.0.tgz"
+  "version" "5.0.0"
+  dependencies:
+    "p-locate" "^4.1.0"
+
+"locate-path@^6.0.0":
+  "integrity" "sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw=="
+  "resolved" "https://registry.npmjs.org/locate-path/-/locate-path-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "p-locate" "^5.0.0"
+
+"lodash.debounce@^4.0.8":
+  "integrity" "sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow=="
+  "resolved" "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
+  "version" "4.0.8"
+
+"lodash.throttle@^4.1.1":
+  "integrity" "sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ=="
+  "resolved" "https://registry.npmjs.org/lodash.throttle/-/lodash.throttle-4.1.1.tgz"
+  "version" "4.1.1"
+
+"lodash.truncate@^4.4.2":
+  "integrity" "sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw=="
+  "resolved" "https://registry.npmjs.org/lodash.truncate/-/lodash.truncate-4.4.2.tgz"
+  "version" "4.4.2"
+
+"lodash@^4.0.0", "lodash@^4.17.12", "lodash@^4.17.13", "lodash@^4.17.14", "lodash@^4.17.15", "lodash@^4.17.20", "lodash@^4.17.21", "lodash@^4.17.4":
+  "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
+  "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  "version" "4.17.21"
+
+"log-symbols@^2.2.0":
+  "integrity" "sha512-VeIAFslyIerEJLXHziedo2basKbMKtTw3vfn5IzG0XTjhAVEJyNHnL2p7vc+wBDSdQuUpNw3M2u6xb9QsAY5Eg=="
+  "resolved" "https://registry.npmjs.org/log-symbols/-/log-symbols-2.2.0.tgz"
+  "version" "2.2.0"
+  dependencies:
+    "chalk" "^2.0.1"
+
+"log-symbols@^4.1.0":
+  "integrity" "sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg=="
+  "resolved" "https://registry.npmjs.org/log-symbols/-/log-symbols-4.1.0.tgz"
+  "version" "4.1.0"
+  dependencies:
+    "chalk" "^4.1.0"
+    "is-unicode-supported" "^0.1.0"
+
+"logkitty@^0.7.1":
+  "integrity" "sha512-/3ER20CTTbahrCrpYfPn7Xavv9diBROZpoXGVZDWMw4b/X4uuUwAC0ki85tgsdMRONURyIJbcOvS94QsUBYPbQ=="
+  "resolved" "https://registry.npmjs.org/logkitty/-/logkitty-0.7.1.tgz"
+  "version" "0.7.1"
+  dependencies:
+    "ansi-fragments" "^0.2.1"
+    "dayjs" "^1.8.15"
+    "yargs" "^15.1.0"
+
+"loose-envify@^1.0.0", "loose-envify@^1.1.0", "loose-envify@^1.3.1", "loose-envify@^1.4.0":
+  "integrity" "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
+  "resolved" "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
+  "version" "1.4.0"
+  dependencies:
+    "js-tokens" "^3.0.0 || ^4.0.0"
+
+"lottie-ios@^3.2.3":
+  "integrity" "sha512-QWA3uV/gOo4aIQbNYdjmrQEVp0QRzxsf34YegQuZdnYjq+vv4LX7IkSrfcdaun5U3EYJ7Bla7ccRd5pxx829Lw=="
+  "resolved" "https://registry.npmjs.org/lottie-ios/-/lottie-ios-3.4.3.tgz"
+  "version" "3.4.3"
+
+"lottie-react-native@5.0.1":
+  "integrity" "sha512-V+ODPqiHOSRzEWg8VsfrJBicgc2k0ZPlCjk3J7ULUkh94smL1nrsF/n4OGukj4MLZwonpv+frVK7pPh5U7t3rQ=="
+  "resolved" "https://registry.npmjs.org/lottie-react-native/-/lottie-react-native-5.0.1.tgz"
+  "version" "5.0.1"
+  dependencies:
+    "invariant" "^2.2.2"
+    "prop-types" "^15.5.10"
+    "react-native-safe-modules" "^1.0.3"
+=======
 
 "kind-of@^6.0.0", "kind-of@^6.0.2":
   "integrity" "sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw=="
@@ -6068,11 +6305,13 @@
   "integrity" "sha512-tqNXrS78oMOE73NMxK4EMLQsQowWf8jKooH9g7xPavRT706R6bkQJ6DY2Te7QukaZsulxa30wQ7bk0pm4XiHmA=="
   "resolved" "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-2.0.0.tgz"
   "version" "2.0.0"
+>>>>>>> nr_neural_network
 
 "lowlight@^1.17.0":
   "integrity" "sha512-8Ktj+prEb1RoCPkEOrPMYUN/nCggB7qAWe3a7OpMjWQkh3l2RD5wKRQ+o8Q8YuI9RG/xs95waaI/E6ym/7NsTw=="
   "resolved" "https://registry.npmjs.org/lowlight/-/lowlight-1.20.0.tgz"
   "version" "1.20.0"
+<<<<<<< HEAD
   dependencies:
     "fault" "^1.0.0"
     "highlight.js" "~10.7.0"
@@ -6148,6 +6387,83 @@
   "resolved" "https://registry.npmjs.org/md5/-/md5-2.2.1.tgz"
   "version" "2.2.1"
   dependencies:
+=======
+  dependencies:
+    "fault" "^1.0.0"
+    "highlight.js" "~10.7.0"
+
+"lowlight@~1.9.1":
+  "integrity" "sha512-Ek18ElVCf/wF/jEm1b92gTnigh94CtBNWiZ2ad+vTgW7cTmQxUY3I98BjHK68gZAJEWmybGBZgx9qv3QxLQB/Q=="
+  "resolved" "https://registry.npmjs.org/lowlight/-/lowlight-1.9.2.tgz"
+  "version" "1.9.2"
+  dependencies:
+    "fault" "^1.0.2"
+    "highlight.js" "~9.12.0"
+
+"lru-cache@^4.0.1":
+  "integrity" "sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g=="
+  "resolved" "https://registry.npmjs.org/lru-cache/-/lru-cache-4.1.5.tgz"
+  "version" "4.1.5"
+  dependencies:
+    "pseudomap" "^1.0.2"
+    "yallist" "^2.1.2"
+
+"lru-cache@^6.0.0":
+  "integrity" "sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA=="
+  "resolved" "https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "yallist" "^4.0.0"
+
+"make-dir@^2.0.0", "make-dir@^2.1.0":
+  "integrity" "sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA=="
+  "resolved" "https://registry.npmjs.org/make-dir/-/make-dir-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "pify" "^4.0.1"
+    "semver" "^5.6.0"
+
+"makeerror@1.0.12":
+  "integrity" "sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg=="
+  "resolved" "https://registry.npmjs.org/makeerror/-/makeerror-1.0.12.tgz"
+  "version" "1.0.12"
+  dependencies:
+    "tmpl" "1.0.5"
+
+"map-cache@^0.2.2":
+  "integrity" "sha512-8y/eV9QQZCiyn1SprXSrCmqJN0yNRATe+PO8ztwqrvrbdRLA3eYJF0yaR0YayLWkMbsQSKWS9N2gPcGEc4UsZg=="
+  "resolved" "https://registry.npmjs.org/map-cache/-/map-cache-0.2.2.tgz"
+  "version" "0.2.2"
+
+"map-visit@^1.0.0":
+  "integrity" "sha512-4y7uGv8bd2WdM9vpQsiQNo41Ln1NvhvDRuVt0k2JZQ+ezN2uaQes7lZeZ+QQUHOLQAtDaBJ+7wCbi+ab/KFs+w=="
+  "resolved" "https://registry.npmjs.org/map-visit/-/map-visit-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "object-visit" "^1.0.0"
+
+"md5-file@^3.2.3":
+  "integrity" "sha512-3Tkp1piAHaworfcCgH0jKbTvj1jWWFgbvh2cXaNCgHwyTCBxxvD1Y04rmfpvdPm1P4oXMOpm6+2H7sr7v9v8Fw=="
+  "resolved" "https://registry.npmjs.org/md5-file/-/md5-file-3.2.3.tgz"
+  "version" "3.2.3"
+  dependencies:
+    "buffer-alloc" "^1.1.0"
+
+"md5@^2.2.1":
+  "integrity" "sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g=="
+  "resolved" "https://registry.npmjs.org/md5/-/md5-2.3.0.tgz"
+  "version" "2.3.0"
+  dependencies:
+    "charenc" "0.0.2"
+    "crypt" "0.0.2"
+    "is-buffer" "~1.1.6"
+
+"md5@~2.2.0":
+  "integrity" "sha512-PlGG4z5mBANDGCKsYQe0CaUYHdZYZt8ZPZLmEt+Urf0W4GlpTX4HescwHU+dc9+Z/G/vZKYZYFrwgm9VxK6QOQ=="
+  "resolved" "https://registry.npmjs.org/md5/-/md5-2.2.1.tgz"
+  "version" "2.2.1"
+  dependencies:
+>>>>>>> nr_neural_network
     "charenc" "~0.0.1"
     "crypt" "~0.0.1"
     "is-buffer" "~1.1.1"
@@ -6499,6 +6815,8 @@
   "resolved" "https://registry.npmjs.org/mimic-fn/-/mimic-fn-2.1.0.tgz"
   "version" "2.1.0"
 
+<<<<<<< HEAD
+=======
 "mimic-response@^1.0.0":
   "integrity" "sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ=="
   "resolved" "https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.1.tgz"
@@ -6509,6 +6827,7 @@
   "resolved" "https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz"
   "version" "3.1.0"
 
+>>>>>>> nr_neural_network
 "minimatch@^3.0.2", "minimatch@^3.0.4", "minimatch@2 || 3":
   "integrity" "sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw=="
   "resolved" "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz"
@@ -6731,11 +7050,14 @@
   "resolved" "https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz"
   "version" "3.0.0"
 
+<<<<<<< HEAD
+=======
 "normalize-url@^6.0.1":
   "integrity" "sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A=="
   "resolved" "https://registry.npmjs.org/normalize-url/-/normalize-url-6.1.0.tgz"
   "version" "6.1.0"
 
+>>>>>>> nr_neural_network
 "npm-package-arg@^7.0.0":
   "integrity" "sha512-xXxr8y5U0kl8dVkz2oK7yZjPBvqM2fwaO5l3Yg13p03v8+E3qQcD0JNhHzjL1vyGgxcKkD0cco+NLR72iuPk3g=="
   "resolved" "https://registry.npmjs.org/npm-package-arg/-/npm-package-arg-7.0.0.tgz"
@@ -6997,11 +7319,14 @@
     "os-homedir" "^1.0.0"
     "os-tmpdir" "^1.0.0"
 
+<<<<<<< HEAD
+=======
 "p-cancelable@^2.0.0":
   "integrity" "sha512-BZOr3nRQHOntUjTrH8+Lh54smKHoHyur8We1V8DSMVrl5A2malOOwuJRnKRDjSnkoeBh4at6BwEnb5I7Jl31wg=="
   "resolved" "https://registry.npmjs.org/p-cancelable/-/p-cancelable-2.1.1.tgz"
   "version" "2.1.1"
 
+>>>>>>> nr_neural_network
 "p-finally@^1.0.0":
   "integrity" "sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow=="
   "resolved" "https://registry.npmjs.org/p-finally/-/p-finally-1.0.0.tgz"
@@ -7352,6 +7677,11 @@
     "asap" "~2.0.3"
 
 "promise@^8.0.3":
+<<<<<<< HEAD
+  "integrity" "sha512-W04AqnILOL/sPRXziNicCjSNRruLAuIHEOVBazepu0545DDNGYHz7ar9ZgZ1fMU8/MA4mVxp5rkBWRi6OXIy3Q=="
+  "resolved" "https://registry.npmjs.org/promise/-/promise-8.1.0.tgz"
+=======
+>>>>>>> nr_neural_network
   "version" "8.1.0"
   dependencies:
     "asap" "~2.0.6"
@@ -7440,11 +7770,14 @@
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   "version" "1.2.3"
 
+<<<<<<< HEAD
+=======
 "quick-lru@^5.1.1":
   "integrity" "sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA=="
   "resolved" "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   "version" "5.1.1"
 
+>>>>>>> nr_neural_network
 "r2@^2.0.1":
   "integrity" "sha512-EEmxoxYCe3LHzAUhRIRxdCKERpeRNmlLj6KLUSORqnK6dWl/K5ShmDGZqM2lRZQeqJgF+wyqk0s1M7SWUveNOQ=="
   "resolved" "https://registry.npmjs.org/r2/-/r2-2.0.1.tgz"
@@ -7769,6 +8102,11 @@
     "object-assign" "^4.1.1"
 
 "react@^16.8.0":
+<<<<<<< HEAD
+  "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
+  "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
+=======
+>>>>>>> nr_neural_network
   "version" "16.14.0"
   dependencies:
     "loose-envify" "^1.1.0"
@@ -8000,11 +8338,14 @@
   "resolved" "https://registry.npmjs.org/reselect/-/reselect-4.1.6.tgz"
   "version" "4.1.6"
 
+<<<<<<< HEAD
+=======
 "resolve-alpn@^1.0.0":
   "integrity" "sha512-0a1F4l73/ZFZOakJnQ3FvkJ2+gSTQWz/r2KE5OdDY0TxPm5h4GkqkWWfM47T7HsbnOtcJVEF4epCVy6u7Q3K+g=="
   "resolved" "https://registry.npmjs.org/resolve-alpn/-/resolve-alpn-1.2.1.tgz"
   "version" "1.2.1"
 
+>>>>>>> nr_neural_network
 "resolve-from@^3.0.0":
   "integrity" "sha512-GnlH6vxLymXJNMBo7XP1fJIzBFbdYt49CuTwmB/6N53t+kMPRMFKz783LlQ4tv28XoQfMWinAJX6WCGf2IlaIw=="
   "resolved" "https://registry.npmjs.org/resolve-from/-/resolve-from-3.0.0.tgz"
@@ -8050,6 +8391,8 @@
   dependencies:
     "path-parse" "^1.0.5"
 
+<<<<<<< HEAD
+=======
 "responselike@^2.0.0":
   "integrity" "sha512-4gl03wn3hj1HP3yzgdI7d3lCkF95F21Pz4BPGvKHinyQzALR5CapwC8yIi0Rh58DEMQ/SguC03wFj2k0M/mHhw=="
   "resolved" "https://registry.npmjs.org/responselike/-/responselike-2.0.1.tgz"
@@ -8057,6 +8400,7 @@
   dependencies:
     "lowercase-keys" "^2.0.0"
 
+>>>>>>> nr_neural_network
 "restore-cursor@^2.0.0":
   "integrity" "sha512-6IzJLuGi4+R14vwagDHX+JrXmPVtPpn4mffDJ1UdR7/Edm87fl6yi8mMBIVvFtJaNTUvjughmW4hwLhRG7gC1Q=="
   "resolved" "https://registry.npmjs.org/restore-cursor/-/restore-cursor-2.0.0.tgz"
@@ -8094,6 +8438,7 @@
   "integrity" "sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA=="
   "resolved" "https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz"
   "version" "3.0.2"
+<<<<<<< HEAD
   dependencies:
     "glob" "^7.1.3"
 
@@ -8141,6 +8486,55 @@
   "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz"
   "version" "6.6.7"
   dependencies:
+=======
+  dependencies:
+    "glob" "^7.1.3"
+
+"rimraf@~2.2.6":
+  "integrity" "sha512-R5KMKHnPAQaZMqLOsyuyUmcIjSeDm+73eoqQpaXA7AZ22BL+6C+1mcUscgOsNd8WVlJuvlgAPsegcx7pjlV0Dg=="
+  "resolved" "https://registry.npmjs.org/rimraf/-/rimraf-2.2.8.tgz"
+  "version" "2.2.8"
+
+"rimraf@~2.4.0":
+  "integrity" "sha512-J5xnxTyqaiw06JjMftq7L9ouA448dw/E7dKghkP9WpKNuwmARNNg+Gk8/u5ryb9N/Yo2+z3MCwuqFK/+qPOPfQ=="
+  "resolved" "https://registry.npmjs.org/rimraf/-/rimraf-2.4.5.tgz"
+  "version" "2.4.5"
+  dependencies:
+    "glob" "^6.0.1"
+
+"rimraf@~2.6.2":
+  "integrity" "sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA=="
+  "resolved" "https://registry.npmjs.org/rimraf/-/rimraf-2.6.3.tgz"
+  "version" "2.6.3"
+  dependencies:
+    "glob" "^7.1.3"
+
+"rn-fetch-blob@^0.12.0":
+  "integrity" "sha512-+QnR7AsJ14zqpVVUbzbtAjq0iI8c9tCg49tIoKO2ezjzRunN7YL6zFSFSWZm6d+mE/l9r+OeDM3jmb2tBb2WbA=="
+  "resolved" "https://registry.npmjs.org/rn-fetch-blob/-/rn-fetch-blob-0.12.0.tgz"
+  "version" "0.12.0"
+  dependencies:
+    "base-64" "0.1.0"
+    "glob" "7.0.6"
+
+"run-async@^2.2.0":
+  "integrity" "sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ=="
+  "resolved" "https://registry.npmjs.org/run-async/-/run-async-2.4.1.tgz"
+  "version" "2.4.1"
+
+"run-parallel@^1.1.9":
+  "integrity" "sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA=="
+  "resolved" "https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz"
+  "version" "1.2.0"
+  dependencies:
+    "queue-microtask" "^1.2.2"
+
+"rxjs@^6.4.0":
+  "integrity" "sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ=="
+  "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz"
+  "version" "6.6.7"
+  dependencies:
+>>>>>>> nr_neural_network
     "tslib" "^1.9.0"
 
 "safe-buffer@~5.1.0", "safe-buffer@~5.1.1", "safe-buffer@5.1.2":
@@ -9566,11 +9960,14 @@
   "resolved" "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz"
   "version" "4.0.0"
 
+<<<<<<< HEAD
+=======
 "yaml@^1.10.0":
   "integrity" "sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg=="
   "resolved" "https://registry.npmjs.org/yaml/-/yaml-1.10.2.tgz"
   "version" "1.10.2"
 
+>>>>>>> nr_neural_network
 "yargs-parser@^18.1.2":
   "integrity" "sha512-o50j0JeToy/4K6OZcaQmW6lyXXKhq7csREXcDwk2omFPJEwUNOVtJKvmDr9EI1fAJZUyZcRF7kxGBWmRXudrCQ=="
   "resolved" "https://registry.npmjs.org/yargs-parser/-/yargs-parser-18.1.3.tgz"
