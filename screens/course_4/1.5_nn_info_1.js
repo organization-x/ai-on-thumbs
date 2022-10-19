@@ -30,14 +30,6 @@ export default function Course4page1_5 ({ navigation, context, enabled = true })
         </View>
         
         <View style={styles.footerButtons}>
-<<<<<<< HEAD
-=======
-            {/* <LessonButton navigation={navigation} nextScreen='Course4page1_4' buttonColor='#8976C2' buttonText='Back' />
-            <LessonButton navigation={navigation} nextScreen='Course4page1_6' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
-            <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-        </View>
-        {/* <View style={styles.footerButtons}>
->>>>>>> nr_neural_network
             <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
         </View>
     </View>

@@ -18,6 +18,10 @@ export default function Course4page1_7 ({ navigation }) {
   let screenName = 'Course4page1_7'
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+          <HomeButton navigation={navigation}/>
+          <Text style={styles.number}>7/8</Text>
+      </View>
       <View style={styles.lessonContent}>
         <Text style={styles.secondText}>As you can see in the image, <Text style={styles.underlinedText}>NNs are made of nodes (the purple circles) </Text>
         </Text>
@@ -60,11 +64,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
-<<<<<<< HEAD
   },
-=======
-},
->>>>>>> nr_neural_network
   lessonContent: {
     flex: 1,
     alignItems: 'center',
@@ -110,6 +110,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 24
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
   },
   thirdText: {
     padding: 15,

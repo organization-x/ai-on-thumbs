@@ -8,6 +8,7 @@ import ProgressBar from '../../components/ProgressBar'
 import SectionButton from '../../components/SectionButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
 
@@ -19,6 +20,10 @@ export default function Course4Sect2End ({ navigation, context, enabled = true }
     let screenName = 'Course4Sect2End';
     return (
     <View style={styles.container}>
+        <View style={styles.top}>
+            <HomeButton navigation={navigation}/>
+            <Text style={styles.number}>9/9</Text>
+        </View>
         <Text style={styles.number}>9/9</Text>
         <View style={styles.interactive}>
             <Text style={styles.text}>Now let's take a look at a real-world application of Neural Networks!</Text>
@@ -72,5 +77,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'white',
         fontSize: 30,
+    },
+    top: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignContent: 'center',
+        marginTop: '2%'
     },
 })

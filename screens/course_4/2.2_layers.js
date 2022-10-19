@@ -3,7 +3,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, Image} from 'react-native'
 import LessonButton from '../../components/LessonButton'
-
+import HomeButton from '../../components/HomeButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
 import colors from '../../config/colors'
@@ -21,7 +21,10 @@ export default function Course4page2_2 ({ navigation }) {
   return (
 
     <View style={styles.container}>
-    
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>2/9</Text>
+      </View>
       <View style={styles.container}>
         <Text style={styles.secondText}>As displayed in the image,</Text>    
       </View>
@@ -112,6 +115,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 30
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
   },
   footerButtons: {
     marginBottom: 20,

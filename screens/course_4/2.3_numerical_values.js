@@ -3,7 +3,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import LessonButton from '../../components/LessonButton'
-
+import HomeButton from '../../components/HomeButton'
 import colors from '../../config/colors'
 
 import screen_list from '../../config/screen_list'
@@ -18,6 +18,10 @@ export default function Course4page2_3 ({ navigation }) {
   let screenName = 'Course4page2_3';
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>3/9</Text>
+      </View>
       <View style={styles.interactive}>
         <Text style={styles.secondText}>Since computers can't understand words or images, <Text style={styles.underlinedText}>they represent these inputs with numerical values</Text> 
         </Text>
@@ -83,13 +87,15 @@ const styles = StyleSheet.create({
     fontSize: 45,
     fontWeight: '800'
   },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
-<<<<<<< HEAD
   }
-=======
-  },
->>>>>>> nr_neural_network
 })

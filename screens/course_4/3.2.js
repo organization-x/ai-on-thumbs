@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
-
+import HomeButton from '../../components/HomeButton'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
@@ -24,7 +24,11 @@ export default function Course4page3_2 ({navigation}) {
   // let screenName = 'Course4page3_1';
     return (
     <View style={styles.container}>
-      <Text style={styles.number}>2/4</Text>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>2/4</Text>
+      </View>
+      
       <View style={styles.textContainer}>
         <Text style={styles.text}>
           Amazon automatically recommends products that a user would like based on their past purchases
@@ -195,6 +199,12 @@ const styles = StyleSheet.create({
       color: 'white',
       fontSize: 30,
       fontWeight: "bold"
+    },
+    top: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignContent: 'center',
+      marginTop: '2%'
     },
     footerButtons: {
       marginBottom: 20,

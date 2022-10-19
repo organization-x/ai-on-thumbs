@@ -5,7 +5,7 @@ import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
-
+import HomeButton from '../../components/HomeButton'
 const width = Dimensions.get('window').width
 
 
@@ -19,7 +19,11 @@ export default function Course4page3_2_3({navigation}) {
   let screenName = 'Course4page3_2_3';
     return (
     <View style={styles.container}>
-      <Text style={styles.number}>2/4</Text>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        
+      </View>
+      
       <View style={styles.textContainer}>
         <Text style={styles.text}>
           Not quite...Amazon’s NN would select the soccer ball based on John’s interests
@@ -68,13 +72,15 @@ const styles = StyleSheet.create({
       alignSelf: 'center',
       marginTop: 90,
     },
+    top: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignContent: 'center',
+      marginTop: '2%'
+    },
     footerButtons: {
       marginBottom: 20,
       flexDirection: 'row',
       justifyContent: 'center'
-<<<<<<< HEAD
-    }
-=======
     },
->>>>>>> nr_neural_network
 })

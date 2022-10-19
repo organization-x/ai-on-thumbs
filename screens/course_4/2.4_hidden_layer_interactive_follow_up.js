@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-
+import HomeButton from '../../components/HomeButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import colors from '../../config/colors'
 
@@ -21,6 +21,13 @@ export default function Course4page2_4_correct ({ navigation }) {
   let screenName = 'Course4page2_4_correct';
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+      </View>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        {/* <Text style={styles.number}>4/9</Text> */}
+      </View>
       <View style={styles.interactive}>
         <Text style={styles.boldText}>Correct!</Text>
         <Text style={styles.secondText}>A NN with two or more layers is called a <Text styles={styles.underlinedText}>deep neural network.</Text></Text>
@@ -84,13 +91,15 @@ const styles = StyleSheet.create({
     fontSize: 45,
     fontWeight: '800'
   },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
-<<<<<<< HEAD
   }
-=======
-  },
->>>>>>> nr_neural_network
 })

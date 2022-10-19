@@ -4,7 +4,7 @@ import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
-
+import HomeButton from '../../components/HomeButton'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 // import * as Analytics from 'expo-firebase-analytics'
@@ -18,6 +18,10 @@ export default function Course4page2_1 ({ navigation }) {
   let screenName = 'Course4page2_1';
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>2/8</Text>
+      </View>
       <View style={styles.interactive}>
         <View style={styles.rectangle}> 
           <Text style={styles.text}>How NNs process info</Text>
@@ -79,6 +83,12 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 24
   },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
   underlinedText: {
     textDecorationLine: 'underline', 
     // padding: 15,
@@ -94,11 +104,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
-<<<<<<< HEAD
   }, 
-=======
-  },
->>>>>>> nr_neural_network
   progressBar: {
     alignItems: 'center', 
     justifyContent: 'flex-end',

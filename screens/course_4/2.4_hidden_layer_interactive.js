@@ -2,7 +2,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions, TouchableOpacity} from 'react-native'
 import LessonButton from '../../components/LessonButton'
-
+import HomeButton from '../../components/HomeButton'
 // import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
@@ -41,6 +41,10 @@ export default function Course4SelectDNN ({ navigation }) {
     //   </View>
     // </LinearGradient>
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>4/8</Text>
+      </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.boldText}>Out of the following, which one has 2 or more hidden layers?</Text>
         <View style={styles.rowContainer}>
@@ -115,13 +119,15 @@ const styles = StyleSheet.create({
     fontSize: 45,
     fontWeight: '800'
   },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
-<<<<<<< HEAD
   }
-=======
-  },
->>>>>>> nr_neural_network
 })

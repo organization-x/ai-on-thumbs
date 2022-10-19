@@ -5,14 +5,15 @@ import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
-
-const width = Dimensions.get('window').width
-const height = Dimensions.get('window').height
+import HomeButton from '../../components/HomeButton'
 
 import colors from '../../config/colors'
 
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
+
 
 
 export default function Course4page3_2_2 ({navigation}) {
@@ -22,7 +23,10 @@ export default function Course4page3_2_2 ({navigation}) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.number}>2/4</Text>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+      </View>
+      {/* <Text style={styles.number}>2/4</Text> */}
       <View style={styles.textContainer}>
         <Text style={styles.text}>
           That’s correct! Amazon’s NN would also select the soccer ball based on John’s interests
@@ -40,10 +44,6 @@ export default function Course4page3_2_2 ({navigation}) {
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor='#8976C2' buttonText='Back' /> */}
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_3' buttonColor='#8976C2' buttonText='Next' /> */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-<<<<<<< HEAD
-=======
-
->>>>>>> nr_neural_network
       </View>
     </View>
   )
@@ -73,13 +73,15 @@ const styles = StyleSheet.create({
       alignSelf: 'center',
       marginTop: height / 30,
     },
+    top: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignContent: 'center',
+      marginTop: '2%'
+    },
     footerButtons: {
       marginBottom: 20,
       flexDirection: 'row',
       justifyContent: 'center'
-<<<<<<< HEAD
     }
-=======
-    },
->>>>>>> nr_neural_network
 })

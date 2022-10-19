@@ -6,7 +6,7 @@ import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 import colors from '../../config/colors'
-
+import HomeButton from '../../components/HomeButton'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 
@@ -25,7 +25,11 @@ export default function Course4page3_1 ({navigation}) {
   let screenName = 'Course4page3_1';
   return (
     <View style={styles.container}>
-        <Text style={styles.number}>1/4</Text>
+        <View style={styles.top}>
+          <HomeButton navigation={navigation}/>
+          <Text style={styles.number}>1/4</Text>
+        </View>
+        {/* <Text style={styles.number}>1/4</Text> */}
         <View style={styles.titleBox}>
           <Text style={styles.title}>
             Real world example:
@@ -90,5 +94,11 @@ const styles = StyleSheet.create({
       marginBottom: 20,
       flexDirection: 'row',
       justifyContent: 'center'
-    }
+    },
+    top: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignContent: 'center',
+      marginTop: '2%'
+    },
 })

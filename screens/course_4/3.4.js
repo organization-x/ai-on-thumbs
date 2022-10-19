@@ -4,6 +4,7 @@ import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import LessonButton from '../../components/LessonButton'
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
@@ -19,7 +20,11 @@ import ProgressBar from '../../components/ProgressBar'
 export default function Course4page3_4 ({navigation}) {
     return (
     <View style={styles.container}>
-      <Text style={styles.number}>4/4</Text>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>4/4</Text>
+      </View>
+      
       <View style={styles.textContainer}>
         <Text style={[styles.title]}>Congrats!</Text>
       </View>
@@ -84,6 +89,12 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       borderRadius: 15,
       alignSelf: 'center',
+    },
+    top: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignContent: 'center',
+      marginTop: '2%'
     },
     returnText: {
       fontFamily: "AppleSDGothicNeo-Light",

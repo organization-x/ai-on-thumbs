@@ -5,6 +5,7 @@ import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-nati
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 import SectionButton from '../../components/SectionButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
@@ -20,7 +21,10 @@ export default function Course4Sect1End ({ navigation, context, enabled = true }
     let screenName = 'Course4Sect1End';
     return (
     <View style={styles.container}>
+        <View style={styles.top}>
+            <HomeButton navigation={navigation}/>
         <Text style={styles.number}>8/8</Text>
+      </View>
         <View style={styles.interactive}>
             <Text style={styles.text}>Now let's dive further into neural networks to better understand how they are able to process information!</Text>
         </View>
@@ -63,6 +67,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
     },
+    top: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignContent: 'center',
+        marginTop: '2%'
+      },
     text: {
         flex: 1,
         textShadowColor: 'rgba(0, 0, 0, 0.1)',

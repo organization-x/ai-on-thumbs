@@ -4,6 +4,7 @@ import React from 'react'
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native'
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
+import HomeButton from '../../components/HomeButton'
 import ProgressBar from '../../components/ProgressBar'
 import SectionButton from '../../components/SectionButton'
 import { LinearGradient } from 'expo-linear-gradient'
@@ -19,7 +20,10 @@ export default function Test9 ({ navigation, context, enabled = true }) {
     let screenName = 'Test9';
     return (
     <View style={styles.container}>
-        <Text style={styles.number}>1/9</Text>
+        <View style={styles.top}>
+            <HomeButton navigation={navigation}/>
+            <Text style={styles.number}>1/9</Text>
+        </View>
         <View style={styles.interactive}>
             <Text style={styles.text}>Section 2 Page 9</Text>
         </View>
@@ -62,6 +66,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignContent: 'center'
+    },
+    top: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignContent: 'center',
+        marginTop: '2%'
     },
     text: {
         flex: 1,
