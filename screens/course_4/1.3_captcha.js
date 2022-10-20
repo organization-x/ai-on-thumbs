@@ -17,25 +17,16 @@ export default function Course4_third ({ navigation, context }) {
   const section=screen_list.section1
   const [pressed, setPressed] = useState([])
 
-  const work = () => {
-    console.log('asdf')
-  }
   const verify = () => {
-    console.log('noasdf')
     let count = 0
     for (let i =0; i <pressed.length; i++) {
 
-      console.log(pressed[i], 'each one')
       if(pressed[i] === false || pressed[i] == null) {
-        console.log('no this is not')
         navigation.navigate('Wrong', {context})
       } else if (pressed[i] === true) {
-        console.log('hi')
         count += 1
-        console.log(count, 'count')
         if (count == 3) {
           navigation.navigate('Right', { context })
-          console.log('bruh')
         }
       }
     }
