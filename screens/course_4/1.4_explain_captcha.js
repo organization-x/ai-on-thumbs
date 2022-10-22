@@ -5,13 +5,8 @@ import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-nati
 import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
-<<<<<<< HEAD
 import HomeButton from '../../components/HomeButton'
 
-=======
-import LessonButton from '../../components/LessonButton'
-import { ScrollView } from 'react-native-gesture-handler'
->>>>>>> nr_neural_network
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
 
@@ -25,15 +20,10 @@ export default function Course4page1_4 ({ navigation, context, enabled = true })
     let screenName = 'Course4page1_4';
     return (
         <View style={styles.container}>
-<<<<<<< HEAD
             <View style={styles.top}>
                 <HomeButton navigation={navigation}/>
                 <Text style={styles.number}>4/8</Text>
             </View>
-=======
-            {/* <Swiper navigation={navigation}/> */}
-            <Text style={styles.number}>4/8</Text>
->>>>>>> nr_neural_network
             <View style={styles.interactive}>
                 <Text style={styles.text}>Tasks like the captcha you just completed aren't hard for humans because of the way we take in information and <Text style={styles.underlineText}>recognize patterns.</Text></Text>
                 <Text style={styles.text}>However, these tasks cause problems for computers since they <Text style={styles.underlineText}>can't process things the same way.</Text></Text>

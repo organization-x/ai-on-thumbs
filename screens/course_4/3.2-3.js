@@ -72,9 +72,5 @@ const styles = StyleSheet.create({
       marginBottom: 20,
       flexDirection: 'row',
       justifyContent: 'center'
-<<<<<<< HEAD
     }
-=======
-    },
->>>>>>> nr_neural_network
 })
