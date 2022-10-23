@@ -10,12 +10,15 @@ import Imagel from '../../components/Image'
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
+const [pressed, setPressed] = useState([])
+const [full, setFull] = useState([])
+const [work, setWork] = useState(true)
 
 export default function Course4_third ({ navigation, context }) {
   const [images, setImages] = useState([require('./bus_1.jpg'),require('./bus_2.jpg'),require('./bus.jpg'),require('./car.jpg'),require('./house.jpg'),require('./street.jpg'),require('./streets.jpg'),require('./traf.jpg'),require('./van.jpg')])
   const name = 'Course4_third'
   const section=screen_list.section1
-  const [pressed, setPressed] = useState([])
+
 
   const verify = () => {
     let count = 0
@@ -55,16 +58,15 @@ export default function Course4_third ({ navigation, context }) {
           )}
         /> */}
       <View style ={styles.img_container}>
-        <Imagel link={images[0]} press={pressed} presser={setPressed} one={true} ind={0}/>
-        <Imagel link={images[1]} press={pressed} presser={setPressed} one={true} ind={1}/>
-        <Imagel link={images[2]} press={pressed} presser={setPressed} one={true} ind={2}/>
-        <Imagel link={images[3]} press={pressed} presser={setPressed} one={false} ind={0}/>
-        <Imagel link={images[4]} press={pressed} presser={setPressed} one={false} ind={0}/>
-        <Imagel link={images[5]} press={pressed} presser={setPressed} one={false} ind={0}/>
-        <Imagel link={images[6]} press={pressed} presser={setPressed} one={false} ind={0}/>
-        <Imagel link={images[7]} press={pressed} presser={setPressed} one={false} ind={0}/>
-        <Imagel link={images[8]} press={pressed} presser={setPressed} one={false} ind={0}/>
-        <Imagel link={images[9]} press={pressed} presser={setPressed} one={false}ind={0}/>
+        <Imagel link={images[0]} press={pressed} presser={setPressed} one={true} ind={0} fill={full} filler={setFull}/>
+        <Imagel link={images[1]} press={pressed} presser={setPressed} one={true} ind={1} fill={full} filler={setFull}/>
+        <Imagel link={images[2]} press={pressed} presser={setPressed} one={true} ind={2} fill={full} filler={setFull}/>
+        <Imagel link={images[3]} press={pressed} presser={setPressed} one={false} ind={3} fill={full} filler={setFull}/>
+        <Imagel link={images[4]} press={pressed} presser={setPressed} one={false} ind={4} fill={full} filler={setFull}/>
+        <Imagel link={images[5]} press={pressed} presser={setPressed} one={false} ind={5} fill={full} filler={setFull}/>
+        <Imagel link={images[6]} press={pressed} presser={setPressed} one={false} ind={6} fill={full} filler={setFull}/>
+        <Imagel link={images[7]} press={pressed} presser={setPressed} one={false} ind={7} fill={full} filler={setFull}/>
+        <Imagel link={images[8]} press={pressed} presser={setPressed} one={false} ind={8} fill={full} filler={setFull}/>
 
       </View>
       <Text style={styles.verify} onPress={verify}>Verify!</Text>

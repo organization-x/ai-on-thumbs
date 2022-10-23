@@ -3,16 +3,14 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import LessonButton from '../../components/LessonButton'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
 const width = Dimensions.get('window').width
 
-<<<<<<< HEAD
 export default function Course4S3Incorrect({navigation}) {
-=======
-export default function Course4page3_2_3({navigation}) {
->>>>>>> nr_neural_network
     return (
     <View style={styles.container}>
       <Text style={styles.number}>2/4</Text>
@@ -30,8 +28,7 @@ export default function Course4page3_2_3({navigation}) {
         </Text>
       </View>
       <View style={[styles.footerButtons, {marginTop: 50}]}>
-        <LessonButton navigation={navigation} nextScreen='Course4S3Recommendation' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4S3Info' buttonColor='#8976C2' buttonText='Next' />
+        <ProgressBar navigation={navigation} currentScreen={'Course4S3Intro'} section={section}  />
       </View>
     </View>
   )

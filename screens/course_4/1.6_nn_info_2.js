@@ -13,7 +13,7 @@ import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 
 export default function Course4page1_6 ({ navigation, context, enabled = true }) {
-    let screenSection = screen_list.section1;
+    let section = screen_list.section1;
     let screenName = 'Course4Info2';
     return (
     <View style={styles.container}>
@@ -24,8 +24,7 @@ export default function Course4page1_6 ({ navigation, context, enabled = true })
             <Text style={styles.text}>This allows humans to <Text style={styles.underlineText}>process information rapidly and efficiently.</Text></Text>
         </View>
         <View style={styles.footerButtons}>
-            <LessonButton navigation={navigation} nextScreen='Course4page1_5' buttonColor='#8976C2' buttonText='Back' />
-            <LessonButton navigation={navigation} nextScreen='Course4page1_7' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+          <ProgressBar navigation={navigation} currentScreen={'Course4page1_6'} section={section}  />
         </View>
         {/* <View style={styles.footerButtons}>
             <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
@@ -36,8 +35,8 @@ export default function Course4page1_6 ({ navigation, context, enabled = true })
 
 const styles = StyleSheet.create({
     buttons: {
-        backgroundColor: colors.progressButton, 
-        padding: 10, 
+        backgroundColor: colors.progressButton,
+        padding: 10,
         borderRadius: 12,
         height: 20,
         width: 35,
@@ -49,8 +48,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.background,
     },
     currentButton: {
-        backgroundColor: colors.primary, 
-        padding: 10, 
+        backgroundColor: colors.primary,
+        padding: 10,
         borderRadius: 12,
         height: 20,
         width: 35,
@@ -79,7 +78,7 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     progressBar: {
-        alignItems: 'center', 
+        alignItems: 'center',
         justifyContent: 'flex-end',
     },
     text: {

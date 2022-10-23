@@ -13,7 +13,18 @@ export default function Right ({navigation}) {
       <Text style={styles.num}>3/8</Text>
       <View style={styles.interactive}>
         <Text style={styles.box}>See  how  you're{'\n'} able  to  identify{'\n'}what  a  bus  is!</Text>
-        <Image style={styles.img} source={require('./captc_2.png')}/>
+        <View style ={styles.img_container}>
+          <Imagel link={images[0]} press={pressed} presser={setPressed} one={true} ind={0} fill={full} filler={setFull}/>
+          <Imagel link={images[1]} press={pressed} presser={setPressed} one={true} ind={1} fill={full} filler={setFull}/>
+          <Imagel link={images[2]} press={pressed} presser={setPressed} one={true} ind={2} fill={full} filler={setFull}/>
+          <Imagel link={images[3]} press={pressed} presser={setPressed} one={false} ind={3} fill={full} filler={setFull}/>
+          <Imagel link={images[4]} press={pressed} presser={setPressed} one={false} ind={4} fill={full} filler={setFull}/>
+          <Imagel link={images[5]} press={pressed} presser={setPressed} one={false} ind={5} fill={full} filler={setFull}/>
+          <Imagel link={images[6]} press={pressed} presser={setPressed} one={false} ind={6} fill={full} filler={setFull}/>
+          <Imagel link={images[7]} press={pressed} presser={setPressed} one={false} ind={7} fill={full} filler={setFull}/>
+          <Imagel link={images[8]} press={pressed} presser={setPressed} one={false} ind={8} fill={full} filler={setFull}/>
+
+        </View>
         <Text style={styles.btm}>Humans are easily able to identify buses by finding their characteristics, since we have seen them multiple times</Text>
       </View>
 
@@ -25,6 +36,21 @@ export default function Right ({navigation}) {
 }
 
 const styles = StyleSheet.create({
+  img_container: {
+    flexDirection: 'row',
+    justifyContent:'center',
+    flexWrap: 'wrap',
+    alignItems:'center',
+    width: width-50,
+    paddingTop: 10,
+    marginHorizontal: 3,
+    borderColor: "#1FBD67",
+    borderWidth: 4,
+    borderRadius: 10,
+    height: "55%",
+    marginVertical: 10,
+    paddingLeft: 5
+  },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',

@@ -10,14 +10,28 @@ export default function Wrong({navigation, context}) {
   const try_again = () =>{
     navigation.navigate('Course4_third', {context})
   }
+  const move_on = () => {
+    navigation.navigate('Course4page2_1', {context})
+  }
   return(
     <View style={styles.container}>
       <Text style={styles.num}>3/8</Text>
       <View style={styles.interactive}>
         <Text style={styles.box}>Uh oh!{'\n'}Let's try that again{'\n'}🙂</Text>
-        <Image style={styles.img} source={require('./captc_3.png')}/>
+        <View style ={styles.img_container}>
+          <Imagel link={images[0]} press={pressed} presser={setPressed} one={true} ind={0} fill={full} filler={setFull}/>
+          <Imagel link={images[1]} press={pressed} presser={setPressed} one={true} ind={1} fill={full} filler={setFull}/>
+          <Imagel link={images[2]} press={pressed} presser={setPressed} one={true} ind={2} fill={full} filler={setFull}/>
+          <Imagel link={images[3]} press={pressed} presser={setPressed} one={false} ind={3} fill={full} filler={setFull}/>
+          <Imagel link={images[4]} press={pressed} presser={setPressed} one={false} ind={4} fill={full} filler={setFull}/>
+          <Imagel link={images[5]} press={pressed} presser={setPressed} one={false} ind={5} fill={full} filler={setFull}/>
+          <Imagel link={images[6]} press={pressed} presser={setPressed} one={false} ind={6} fill={full} filler={setFull}/>
+          <Imagel link={images[7]} press={pressed} presser={setPressed} one={false} ind={7} fill={full} filler={setFull}/>
+          <Imagel link={images[8]} press={pressed} presser={setPressed} one={false} ind={8} fill={full} filler={setFull}/>
+
+        </View>
         <View style={styles.group}>
-          <Text style={styles.txts}>Move On!</Text>
+          <Text style={styles.txts} onPress={move_on}>Move On!</Text>
           <Text style={styles.txts} onPress={try_again}>Try Again!</Text>
         </View>
       </View>
@@ -32,6 +46,21 @@ export default function Wrong({navigation, context}) {
 
 
 const styles = StyleSheet.create({
+  img_container: {
+    flexDirection: 'row',
+    justifyContent:'center',
+    flexWrap: 'wrap',
+    alignItems:'center',
+    width: width-50,
+    paddingTop: 10,
+    marginHorizontal: 3,
+    borderColor: "#1FBD67",
+    borderWidth: 4,
+    borderRadius: 10,
+    height: "55%",
+    marginVertical: 10,
+    paddingLeft: 5
+  },
   txts: {
     color: 'white',
     fontSize: 22,

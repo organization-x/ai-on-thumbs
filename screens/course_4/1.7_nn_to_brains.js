@@ -21,11 +21,11 @@ export default function Course4page1_7 ({ navigation }) {
       <View style={styles.lessonContent}>
         <Text style={styles.secondText}>As you can see in the image, <Text style={styles.underlinedText}>NNs are made of nodes (the purple circles) </Text>
         </Text>
-        
+
         <View style={styles.container}>
           <Image style={styles.image} source={require('../../assets/course_4/nn_layers.gif')}></Image>
         </View>
-        
+
         <Text style={styles.thirdText}>Information is sent from node to node, similarly to the transmission of signals between neurons in the brain, in the form of numbers.</Text>
       </View>
       <View style={styles.footerButtons}>
@@ -40,7 +40,7 @@ export default function Course4page1_7 ({ navigation }) {
 
 const styles = StyleSheet.create({
   underlinedText: {
-    textDecorationLine: 'underline', 
+    textDecorationLine: 'underline',
     // padding: 15,
     // marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -93,11 +93,11 @@ const styles = StyleSheet.create({
     fontSize: height / 24
   },
   progressBar: {
-    alignItems: 'center', 
+    alignItems: 'center',
     justifyContent: 'flex-end',
   },
   underlinedText: {
-    textDecorationLine: 'underline', 
+    textDecorationLine: 'underline',
     // padding: 15,
     // marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

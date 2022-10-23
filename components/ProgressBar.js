@@ -67,14 +67,14 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
 const styles = StyleSheet.create({
     button: {
         backgroundColor: colors.progressButton,
-        marginHorizontal: 30,
+        marginHorizontal: 5,
         borderRadius: 12,
         height: 20,
-        width: 35,
+        width: 10,
     },
     container: {
-        marginBottom: 20,
         flexDirection: 'row',
+        marginBottom: 20,
         justifyContent: 'center'
     }
 })
