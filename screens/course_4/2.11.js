@@ -14,87 +14,73 @@ const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 export default function Course4page2_11 ({ navigation }) {
+  let screenSection = screen_list.section2;
+  let screenName = 'Course4page2_11';
 
+  // const [inputdog, setInputDog] = React.useState("     e.g. #1-4     ")
+  // const [inputblanket, setInputBlanket] = React.useState("     e.g. #1-4     ")
+  // const [inputguitar, setInputGuitar] = React.useState("     e.g. #1-4     ")
+  // const [inputfloppydisc, setInputFloppyDisc] = React.useState("     e.g. #1-4     ")
 
-  const [inputdog, setInputDog] = React.useState("     e.g. #1-4     ")
-  const [inputblanket, setInputBlanket] = React.useState("     e.g. #1-4     ")
-  const [inputguitar, setInputGuitar] = React.useState("     e.g. #1-4     ")
-  const [inputfloppydisc, setInputFloppyDisc] = React.useState("     e.g. #1-4     ")
-
-  const [numItemsTyped, setNumItemsTyped] = React.useState(0);
-  const [requireguessDog, setrequireguessDog] = React.useState(true);
-  const [requireguessBlanket, setrequireguessBlanket] = React.useState(true);
-  const [requireguessGuitar, setrequireguessGuitar] = React.useState(true);
-  const [requireguessFloppyDisc, setrequireguessFloppyDisc] = React.useState(true);
+  // const [numItemsTyped, setNumItemsTyped] = React.useState(0);
+  // const [requireguessDog, setrequireguessDog] = React.useState(true);
+  // const [requireguessBlanket, setrequireguessBlanket] = React.useState(true);
+  // const [requireguessGuitar, setrequireguessGuitar] = React.useState(true);
+  // const [requireguessFloppyDisc, setrequireguessFloppyDisc] = React.useState(true);
   
   
-  const handleInput = (num, value) => {
-    if (num === 1) {
-      setInputDog(value)
-      setNumItemsTyped(numItemsTyped + 1)
-      setrequireguessDog(false)
-    } else if (num === 2) {
-      setInputBlanket(value)
-      setNumItemsTyped(numItemsTyped + 1)
-      setrequireguessBlanket(false)
-    } else if (num === 3) {
-      setInputGuitar(value)
-      setNumItemsTyped(numItemsTyped + 1)
-      setrequireguessGuitar(false)
-    } else if (num === 4) {
-      setInputFloppyDisc(value)
-      setNumItemsTyped(numItemsTyped + 1)
-      setrequireguessFloppyDisc(false)
-    }
-  }
-
-  const DismissKeyboard = ({children}) => (
-    <TouchableWithoutFeedback onPress ={() => Keyboard.dismiss()}>
-        {children}
-    </TouchableWithoutFeedback>
-  )
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={styles.container}
-    >
-    <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>11/18</Text>
-    </View>
-    <DismissKeyboard>
-        <View style={styles.container}>
-          <View style={styles.rowContainer}>
-              <View style={styles.rectangle}>
-                  <Image style={styles.image} source={require('../../assets/course_4/dog.png')} />
-              </View>
-              <Text style={styles.number}>2</Text>
-          </View>
-          <View style={styles.rowContainer}>
-              <View style={styles.rectangle}>
-                  <Image style={styles.image} source={require('../../assets/course_4/blanket.png')} />
-              </View>
-              <Text style={styles.number}>4</Text>
-          </View>
-          <View style={styles.rowContainer}>
-              <View style={styles.rectangle}>
-                  <Image style={styles.image} source={require('../../assets/course_4/guitar.png')} />
-              </View>
-              <Text style={styles.number}>3</Text>
-          </View>
-          <View style={styles.rowContainer}>
-              <View style={styles.rectangle}>
-                  <Image style={styles.image} source={require('../../assets/course_4/floppydisc.png')} />
-              </View>
-              <Text style={styles.number}>1</Text>
-          </View>
-            <View style={footerButtons}>
-              <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-            </View>
+    <View style={styles.container}>
+      <View style={styles.top}>
+          <HomeButton navigation={navigation}/>
+          <Text style={styles.number}>11/18</Text>
+      </View>
+        <View style={styles.rowcontainer}>
+          <Text style={styles.bigText}>Here are the actual matches! Make sure to remember them for the next screen...</Text>
         </View>
-    </DismissKeyboard>
-    </KeyboardAvoidingView>
+        <View style={styles.rowContainer}>
+            <View style={styles.rectangle}>
+                <Image style={styles.image} source={require('../../assets/course_4/dog.png')} />
+            </View>
+            
+            <View style={styles.rectangle}>
+              <Text style={styles.number}>2</Text>
+            </View>
+            
+        </View>
+        <View style={styles.rowContainer}>
+            <View style={styles.rectangle}>
+                <Image style={styles.image} source={require('../../assets/course_4/blanket.png')} />
+            </View>
+            <View style={styles.rectangle}>
+              <Text style={styles.number}>4</Text>
+            </View>
+
+        </View>
+        <View style={styles.rowContainer}>
+            <View style={styles.rectangle}>
+                <Image style={styles.image} source={require('../../assets/course_4/guitar.png')} />
+            </View>
+            <View style={styles.rectangle}>
+              <Text style={styles.number}>3</Text>
+            </View>
+            
+        </View>
+        <View style={styles.rowContainer}>
+            <View style={styles.rectangle}>
+                <Image style={styles.image} source={require('../../assets/course_4/floppydisc.png')} />
+            </View>
+            <View style={styles.rectangle}>
+              <Text style={styles.number}>1</Text>
+            </View>
+            
+        </View>
+          <View style={styles.footerButtons}>
+            <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+        </View>
+    </View>
+
   )
 }
 
@@ -115,11 +101,12 @@ const styles = StyleSheet.create({
   rectangle: {
     backgroundColor: colors.primary,
     borderRadius: 20,
-    width: "50%",
+    width: "45%",
     height: "78%",
     alignItems: "center",
     marginBottom: height / 5,
-    justifyContent: "center"
+    justifyContent: "center",
+    margin:5
   },
   image: {
     flex: 1,

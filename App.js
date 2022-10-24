@@ -339,9 +339,11 @@ export default function App () {
           <Stack.Screen name='Course4page2_6' component={Course4page2_6} />
           <Stack.Screen name='Course4page2_7' component={Course4page2_7} />
           <Stack.Screen name='Course4page2_8' component={Course4page2_8} />
-          {/* <Stack.Screen name='Course4page2_9' component={Course4page2_9} /> */}
+          <Stack.Screen name='Course4page2_9' component={Course4page2_9} />
           <Stack.Screen name='Course4page2_10' component={Course4page2_10} />
           <Stack.Screen name='Course4page2_11' component={Course4page2_11} />
+          <Stack.Screen name='Course4page2_12' component={Course4page2_12} />
+          
 
           <Stack.Screen name='Course4page3_1' component={Course4page3_1} />
           <Stack.Screen name='Course4page3_2' component={Course4page3_2} /> 

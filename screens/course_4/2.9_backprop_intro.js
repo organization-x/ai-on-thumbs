@@ -14,10 +14,10 @@ import HomeButton from '../../components/HomeButton'
 
 const height = Dimensions.get('window').height
 
-export default function Course4Sect2End ({ navigation, context, enabled = true }) {
+export default function Course4page2_9 ({ navigation, context, enabled = true }) {
     let screenSection = screen_list.section2;
     let nextSection = screen_list.section3;
-    let screenName = 'Course4Sect2End';
+    let screenName = 'Course4page2_9';
     return (
     <View style={styles.container}>
         <View style={styles.top}>
