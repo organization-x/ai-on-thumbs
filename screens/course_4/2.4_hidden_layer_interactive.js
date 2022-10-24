@@ -11,7 +11,7 @@ import colors from '../../config/colors'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 
-const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
 
 export default function Course4SelectDNN ({ navigation }) {
   const [singleLayerDisabled, setsingleLayerDisabled] = React.useState(false)
@@ -54,19 +54,15 @@ export default function Course4SelectDNN ({ navigation }) {
           <TouchableOpacity style={styles.cell} onPress={() => handlePress(0)} disabled={singleLayerDisabled}>
             <Image style={styles.image} onPress={() => handlePress(0)} source={require('../../assets/course_4/single_layer_nn.png')} />
           </TouchableOpacity>
-          
         </View>
         <View style={styles.rowContainer}>
           <TouchableOpacity style={styles.cell} onPress={() => handlePress(1)} disabled={dogDisabled}>
-              <Image style={styles.image} source={require('../../assets/course_4/dog.jpg')} />
+              <Image style={styles.image} source={require('../../assets/course_4/dog.png')} />
           </TouchableOpacity>
         </View>
-        
       </View>
-      <Text style={styles.text}>{lowerScreenText}</Text>
-      <View style={styles.footerButtons}>
-        {/* <LessonButton navigation={navigation} nextScreen='Course4page2_4_correct' buttonColor='#8976C2' buttonText='Back' /> */}
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>{lowerScreenText}</Text>
       </View>
     </View>
   )
@@ -81,18 +77,19 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background
   },
   rowContainer: {
-    flex: 1.5,
+    flex: 1,
     alignContent: 'center',
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
+    marginBottom: '10%',
     // width: "80%"
   },
   cell: {
-    width: width * 0.2,
-    height: width * .25,
+    width: height * 0.18,
+    height: height * 0.18,
     marginRight: 6,
-    backgroundColor: '#E6E8FB',
-    borderRadius: 5
+    backgroundColor: '#d1d1d1',
+    borderRadius: 15
   },
   interactive: {
     flex: 1,
@@ -101,22 +98,28 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {
-    marginTop: '10%',
+    marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 35,
-    fontWeight: 'bold'
+    fontSize: 25,
+  },
+  textContainer: {
+    height: '20%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
   },
   image: {
     flex: 1,
     aspectRatio: 1,
-    margin: 10
+    alignSelf: 'center',
+    resizeMode: 'contain'
   },
   boldText: {
-    marginTop: '30%',
+    marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 45,
+    fontSize: 40,
     fontWeight: '800'
   },
   top: {
