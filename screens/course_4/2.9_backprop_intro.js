@@ -22,15 +22,15 @@ export default function Course4Sect2End ({ navigation, context, enabled = true }
     <View style={styles.container}>
         <View style={styles.top}>
             <HomeButton navigation={navigation}/>
-            <Text style={styles.number}>9/9</Text>
+            <Text style={styles.number}>9/18</Text>
         </View>
         <Text style={styles.number}>9/9</Text>
         <View style={styles.interactive}>
             <Text style={styles.text}>Now let's take a look at a real-world application of Neural Networks!</Text>
         </View>
-        <View style={styles.sectionButton}>
+        {/* <View style={styles.sectionButton}>
             <SectionButton navigation={navigation} nextSection={true} goSection={nextSection} />
-        </View>
+        </View> */}
         <View style={styles.footerButtons}>
         {/* <LessonButton navigation={navigation} nextScreen='Course4page2_8' buttonColor='#8976C2' buttonText='Back' /> */}
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_1' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" /> */}

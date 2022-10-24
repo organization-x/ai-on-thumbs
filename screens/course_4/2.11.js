@@ -5,6 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 2: Face Finder Screen')
@@ -58,47 +59,39 @@ export default function Course4page2_11 ({ navigation }) {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       style={styles.container}
     >
+    <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>11/18</Text>
+    </View>
     <DismissKeyboard>
         <View style={styles.container}>
-        <View style={styles.rowContainer}>
-            <View style={styles.rectangle}>
-                <Image style={styles.image} source={require('../../assets/course_4/dog.png')} />
+          <View style={styles.rowContainer}>
+              <View style={styles.rectangle}>
+                  <Image style={styles.image} source={require('../../assets/course_4/dog.png')} />
+              </View>
+              <Text style={styles.number}>2</Text>
+          </View>
+          <View style={styles.rowContainer}>
+              <View style={styles.rectangle}>
+                  <Image style={styles.image} source={require('../../assets/course_4/blanket.png')} />
+              </View>
+              <Text style={styles.number}>4</Text>
+          </View>
+          <View style={styles.rowContainer}>
+              <View style={styles.rectangle}>
+                  <Image style={styles.image} source={require('../../assets/course_4/guitar.png')} />
+              </View>
+              <Text style={styles.number}>3</Text>
+          </View>
+          <View style={styles.rowContainer}>
+              <View style={styles.rectangle}>
+                  <Image style={styles.image} source={require('../../assets/course_4/floppydisc.png')} />
+              </View>
+              <Text style={styles.number}>1</Text>
+          </View>
+            <View style={footerButtons}>
+              <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
             </View>
-            <Text>placeholder</Text>
-        </View>
-        <View style={styles.rowContainer}>
-            <View style={styles.rectangle}>
-                <Image style={styles.image} source={require('../../assets/course_4/blanket.png')} />
-            </View>
-                <Text>placeholder</Text>
-        </View>
-        <View style={styles.rowContainer}>
-            <View style={styles.rectangle}>
-                <Image style={styles.image} source={require('../../assets/course_4/guitar.png')} />
-            </View>
-            <Text>placeholder</Text>
-        </View>
-        <View style={styles.rowContainer}>
-            <View style={styles.rectangle}>
-                <Image style={styles.image} source={require('../../assets/course_4/floppydisc.png')} />
-            </View>
-            <Text>placeholder</Text>
-        </View>
-            <TouchableOpacity
-                onPress={() => 
-                {if(requireguessDog === false && requireguessBlanket === false && requireguessGuitar === false && requireguessFloppyDisc === false){
-                    navigation.navigate()
-                }}
-                }
-                underlayColor='#fff'
-                activeOpacity={0.3}
-            >
-                <View style={styles.submitBox}>
-                        <Text style={styles.submitText}>
-                            Submit
-                        </Text>
-                </View>
-            </TouchableOpacity>
         </View>
     </DismissKeyboard>
     </KeyboardAvoidingView>
@@ -182,9 +175,20 @@ const styles = StyleSheet.create({
     color: 'white'
   },
   footerButtons: {
-    marginTop: 60,
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
-  }
+  }, 
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  number: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
+  },
 })
