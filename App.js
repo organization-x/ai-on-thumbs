@@ -174,7 +174,8 @@ import Course4page2_6 from './screens/course_4/2.6_bp_cont'
 import Course4page2_7 from './screens/course_4/2.7_learning'
 import Course4page2_8 from './screens/course_4/2.8_adjustment'
 import Course4page2_9 from './screens/course_4/2.9_section2_end'
-
+import Course4page2_10 from './screens/course_4/2.10_backprop_initial_match'
+import Course4page2_11 from './screens/course_4/2.11'
 
 import Course4page3_1 from './screens/course_4/3.1'
 import Course4page3_2 from './screens/course_4/3.2'
@@ -337,8 +338,10 @@ export default function App () {
           <Stack.Screen name='Course4page2_6' component={Course4page2_6} />
           <Stack.Screen name='Course4page2_7' component={Course4page2_7} />
           <Stack.Screen name='Course4page2_8' component={Course4page2_8} />
-          <Stack.Screen name='Course4page2_9' component={Course4page2_9} />
-          
+          {/* <Stack.Screen name='Course4page2_9' component={Course4page2_9} /> */}
+          <Stack.Screen name='Course4page2_10' component={Course4page2_10} />
+          <Stack.Screen name='Course4page2_11' component={Course4page2_11} />
+
           <Stack.Screen name='Course4page3_1' component={Course4page3_1} />
           <Stack.Screen name='Course4page3_2' component={Course4page3_2} /> 
           <Stack.Screen name='Course4page3_2_2' component={Course4page3_2_2} />
