@@ -6,6 +6,7 @@ import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
+import { symbol } from 'prop-types'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 2: Face Finder Screen')
@@ -75,15 +76,14 @@ export default function Course4page2_12 ({ navigation }) {
   )
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={styles.container}
-    >
-    <View style={styles.top}>
+    
+    
+    <DismissKeyboard>
+      <View style={styles.container}>
+      <View style={styles.top}>
         <HomeButton navigation={navigation}/>
         <Text style={styles.number}>12/16</Text>
-    </View>
-    <DismissKeyboard>
+      </View>
         <View style={styles.container}>
           <View style={styles.rowContainer}>
               <View style={styles.rectangle}>
@@ -154,9 +154,10 @@ export default function Course4page2_12 ({ navigation }) {
                           </Text>
                   </View>
               </TouchableOpacity>
+        </View
         </View>
     </DismissKeyboard>
-    </KeyboardAvoidingView>
+    
   )
 }
 
