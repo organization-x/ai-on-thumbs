@@ -154,7 +154,7 @@ export default function Course4page2_12 ({ navigation }) {
                           </Text>
                   </View>
               </TouchableOpacity>
-        </View
+        </View>
         </View>
     </DismissKeyboard>
     
