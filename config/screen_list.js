@@ -113,9 +113,9 @@ export default {
         'Course4page2_3',
         'Course4page2_4',
         'Course4page2_4_correct',
-        'Course4page2_5',
-        'Course4page2_6',
-        'Course4page2_7',
+        // 'Course4page2_5',
+        // 'Course4page2_6',
+        // 'Course4page2_7',
         'Course4page2_8',
         'Course4page2_9',
         'Course4page2_10', 
@@ -124,9 +124,7 @@ export default {
         'Course4page2_13',
         'Course4page2_14',
         'Course4page2_15',
-        'Course4page2_16',
-        'Course4page2_17',
-        'Course4page2_18']
+        'Course4page2_16']
     },
     section3: {
         buttonWidth: 30,

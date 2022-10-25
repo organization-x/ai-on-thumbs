@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions, TextInput, TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView } from 'react-native'
+import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions, TextInput, TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView, ScrollView } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
@@ -75,88 +75,90 @@ export default function Course4page2_10 ({ navigation }) {
   )
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={styles.container}
-    >
-    <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>10/18</Text>
-    </View>
-    <DismissKeyboard>
-        <View style={styles.container}>
-          <View style={styles.rowContainer}>
-              <View style={styles.rectangle}>
-                  <Image style={styles.image} source={require('../../assets/course_4/dog.png')} />
-              </View>
-              
-              <TextInput
-                  editable={requireguessDog}
-                  style={styles.input}
-                  placeholder={inputdog}
-                  clearTextOnFocus
-                  onChangeText={(value) => handleInput(1, value)}
-                  keyboardType="numeric"
-              />
+    
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.container}
+      >
+      <View style={styles.top}>
+          <HomeButton navigation={navigation}/>
+          <Text style={styles.number}>10/16</Text>
+      </View>
+      <DismissKeyboard>
+          <View style={styles.container}>
+            <View style={styles.rowContainer}>
+                <View style={styles.rectangle}>
+                    <Image style={styles.image} source={require('../../assets/course_4/dog.png')} />
+                </View>
+                
+                <TextInput
+                    editable={requireguessDog}
+                    style={styles.input}
+                    placeholder={inputdog}
+                    clearTextOnFocus
+                    onChangeText={(value) => handleInput(1, value)}
+                    keyboardType="numeric"
+                />
+            </View>
+            <View style={styles.rowContainer}>
+                <View style={styles.rectangle}>
+                    <Image style={styles.image} source={require('../../assets/course_4/blanket.png')} />
+                </View>
+                <TextInput
+                        editable={requireguessBlanket}
+                        style={styles.input}
+                        placeholder={inputblanket}
+                        clearTextOnFocus
+                        onChangeText={(value) => handleInput(2, value)}
+                        keyboardType="numeric"
+                    />
+                </View>
+            <View style={styles.rowContainer}>
+                <View style={styles.rectangle}>
+                    <Image style={styles.image} source={require('../../assets/course_4/guitar.png')} />
+                </View>
+                <TextInput
+                        editable={requireguessGuitar}
+                        style={styles.input}
+                        
+                        placeholder={inputguitar}
+                        clearTextOnFocus
+                    
+                        onChangeText={(value) => handleInput(3, value)}
+                        keyboardType="numeric"
+                    />
+            </View>
+            <View style={styles.rowContainer}>
+                <View style={styles.rectangle}>
+                    <Image style={styles.image} source={require('../../assets/course_4/floppydisc.png')} />
+                </View>
+                <TextInput
+                        editable={requireguessFloppyDisc}
+                        style={styles.input}
+                        
+                        placeholder={inputfloppydisc}
+                        clearTextOnFocus
+                        
+                        onChangeText={(value) => handleInput(4, value)}
+                        keyboardType="numeric"
+                    />
+            </View>
+                <Text style={styles.textlower}>{lowerScreenText}</Text>
+                <TouchableOpacity
+                    onPress={() => buttonPressable(requireguessDog, requireguessFloppyDisc, requireguessBlanket, requireguessGuitar)}
+                    underlayColor='#fff'
+                    activeOpacity={0.3}
+                >
+                    <View style={styles.submitBox}>
+                      <Text style={styles.submitText}>
+                          Submit
+                      </Text>
+                    </View>
+                </TouchableOpacity>
           </View>
-          <View style={styles.rowContainer}>
-              <View style={styles.rectangle}>
-                  <Image style={styles.image} source={require('../../assets/course_4/blanket.png')} />
-              </View>
-              <TextInput
-                      editable={requireguessBlanket}
-                      style={styles.input}
-                      placeholder={inputblanket}
-                      clearTextOnFocus
-                      onChangeText={(value) => handleInput(2, value)}
-                      keyboardType="numeric"
-                  />
-              </View>
-          <View style={styles.rowContainer}>
-              <View style={styles.rectangle}>
-                  <Image style={styles.image} source={require('../../assets/course_4/guitar.png')} />
-              </View>
-              <TextInput
-                      editable={requireguessGuitar}
-                      style={styles.input}
-                      
-                      placeholder={inputguitar}
-                      clearTextOnFocus
-                  
-                      onChangeText={(value) => handleInput(3, value)}
-                      keyboardType="numeric"
-                  />
-          </View>
-          <View style={styles.rowContainer}>
-              <View style={styles.rectangle}>
-                  <Image style={styles.image} source={require('../../assets/course_4/floppydisc.png')} />
-              </View>
-              <TextInput
-                      editable={requireguessFloppyDisc}
-                      style={styles.input}
-                      
-                      placeholder={inputfloppydisc}
-                      clearTextOnFocus
-                      
-                      onChangeText={(value) => handleInput(4, value)}
-                      keyboardType="numeric"
-                  />
-          </View>
-              <Text style={styles.textlower}>{lowerScreenText}</Text>
-              <TouchableOpacity
-                  onPress={() => buttonPressable(requireguessDog, requireguessFloppyDisc, requireguessBlanket, requireguessGuitar)}
-                  underlayColor='#fff'
-                  activeOpacity={0.3}
-              >
-                  <View style={styles.submitBox}>
-                          <Text style={styles.submitText}>
-                              Submit
-                          </Text>
-                  </View>
-              </TouchableOpacity>
-        </View>
-    </DismissKeyboard>
-    </KeyboardAvoidingView>
+      </DismissKeyboard>
+      </KeyboardAvoidingView>
+    
   )
 }
 
@@ -260,4 +262,8 @@ const styles = StyleSheet.create({
       textAlign: 'right',
       marginTop: 10
   },
+  courseList: {
+    flexDirection: 'column',
+    minHeight: 200
+  }
 })

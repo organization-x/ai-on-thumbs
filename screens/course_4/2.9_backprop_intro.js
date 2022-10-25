@@ -22,11 +22,10 @@ export default function Course4page2_9 ({ navigation, context, enabled = true })
     <View style={styles.container}>
         <View style={styles.top}>
             <HomeButton navigation={navigation}/>
-            <Text style={styles.number}>9/18</Text>
+            <Text style={styles.number}>9/16</Text>
         </View>
-        <Text style={styles.number}>9/9</Text>
-        <View style={styles.interactive}>
-            <Text style={styles.text}>Now let's take a look at a real-world application of Neural Networks!</Text>
+        <View style={styles.rectangle}>
+            <Text style={styles.text}>Let's learn about backpropagation, a key element in how natural networks learn patterns!</Text>
         </View>
         {/* <View style={styles.sectionButton}>
             <SectionButton navigation={navigation} nextSection={true} goSection={nextSection} />
@@ -35,7 +34,7 @@ export default function Course4page2_9 ({ navigation, context, enabled = true })
         {/* <LessonButton navigation={navigation} nextScreen='Course4page2_8' buttonColor='#8976C2' buttonText='Back' /> */}
         {/* <LessonButton navigation={navigation} nextScreen='Course4page3_1' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" /> */}
             <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-      </View>
+        </View>
     </View>
   )
 }
@@ -69,14 +68,25 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
     },
+    rectangle: {
+        backgroundColor: colors.primary,
+        borderRadius: 20,
+        width: "100%",
+        height: "45%",
+        alignItems: "center",
+        marginBottom: height / 5,
+        justifyContent: "center"
+    },
     text: {
         flex: 1,
         textShadowColor: 'rgba(0, 0, 0, 0.1)',
         textShadowOffset: { width: 2, height: 2 },
         textShadowRadius: 5,
         textAlign: 'center',
+        alignContent:'center',
+        justifyContent:'center',
         color: 'white',
-        fontSize: 30,
+        fontSize: 45,
     },
     top: {
         flexDirection: 'row',

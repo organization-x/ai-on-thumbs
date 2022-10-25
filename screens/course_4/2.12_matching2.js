@@ -81,7 +81,7 @@ export default function Course4page2_12 ({ navigation }) {
     >
     <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>10/18</Text>
+        <Text style={styles.number}>12/16</Text>
     </View>
     <DismissKeyboard>
         <View style={styles.container}>

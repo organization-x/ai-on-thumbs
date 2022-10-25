@@ -175,8 +175,12 @@ import Course4page2_7 from './screens/course_4/2.7_learning'
 import Course4page2_8 from './screens/course_4/2.8_adjustment'
 import Course4page2_9 from './screens/course_4/2.9_backprop_intro'
 import Course4page2_10 from './screens/course_4/2.10_backprop_initial_match'
-import Course4page2_11 from './screens/course_4/2.11'
+import Course4page2_11 from './screens/course_4/2.11_reveal_matches'
 import Course4page2_12 from './screens/course_4/2.12_matching2'
+import Course4page2_13 from './screens/course_4/2.13_congrats_comparison'
+import Course4page2_14 from './screens/course_4/2.14_backprop_explanation'
+import Course4page2_15 from './screens/course_4/2.15_explanation_cont'
+import Course4page2_16 from './screens/course_4/2.16_section2_end'
 
 import Course4page3_1 from './screens/course_4/3.1'
 import Course4page3_2 from './screens/course_4/3.2'
@@ -335,14 +339,18 @@ export default function App () {
           <Stack.Screen name='Course4page2_3' component={Course4page2_3} />
           <Stack.Screen name='Course4page2_4' component={Course4SelectDNN} />
           <Stack.Screen name='Course4page2_4_correct' component={Course4page2_4_correct} />
-          <Stack.Screen name='Course4page2_5' component={Course4page2_5} />
+          {/* <Stack.Screen name='Course4page2_5' component={Course4page2_5} />
           <Stack.Screen name='Course4page2_6' component={Course4page2_6} />
-          <Stack.Screen name='Course4page2_7' component={Course4page2_7} />
+          <Stack.Screen name='Course4page2_7' component={Course4page2_7} /> */}
           <Stack.Screen name='Course4page2_8' component={Course4page2_8} />
           <Stack.Screen name='Course4page2_9' component={Course4page2_9} />
           <Stack.Screen name='Course4page2_10' component={Course4page2_10} />
           <Stack.Screen name='Course4page2_11' component={Course4page2_11} />
           <Stack.Screen name='Course4page2_12' component={Course4page2_12} />
+          <Stack.Screen name='Course4page2_13' component={Course4page2_13} />
+          <Stack.Screen name='Course4page2_14' component={Course4page2_14} />
+          <Stack.Screen name='Course4page2_15' component={Course4page2_15} />
+          <Stack.Screen name='Course4page2_16' component={Course4page2_16} />
           
 
           <Stack.Screen name='Course4page3_1' component={Course4page3_1} />
