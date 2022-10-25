@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     },
     number: {
         color: 'white',
-        fontSize: 30,
+        fontSize: height / 28,
         textAlign: 'right'
     },
     progressBar: {
@@ -106,7 +106,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignContent: 'center',
-        marginTop: '2%'
     },
     underlineText: {
         textDecorationLine: "underline"

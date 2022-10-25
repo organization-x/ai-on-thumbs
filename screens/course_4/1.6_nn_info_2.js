@@ -68,14 +68,13 @@ const styles = StyleSheet.create({
         flex: 1,
         borderRadius: 7,
         overflow: 'hidden',
-        marginTop: height / 22,
+        marginTop: height / 30,
         alignItems: "center"
     },
     number: {
         color: 'white',
-        fontSize: 30,
-        textAlign: 'right',
-        marginTop: 10
+        fontSize: height / 28,
+        textAlign: 'right'
     },
     progressBar: {
         alignItems: 'center', 
@@ -95,7 +94,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignContent: 'center',
-        marginTop: '2%'
     },
     underlineText: {
         textDecorationLine: "underline"

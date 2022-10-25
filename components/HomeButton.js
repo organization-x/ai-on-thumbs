@@ -10,19 +10,18 @@
     },
 */
 import React from 'react'
-import { TouchableOpacity, Image, StyleSheet } from 'react-native'
+import { TouchableOpacity, Image, StyleSheet, Dimensions } from 'react-native'
 
-import colors from '../config/colors'
-import CoursesScreen from '../screens/Courses';
+const height = Dimensions.get('window').height
 
-export default function HomeButton ({ navigation, goSection, context, enabled = true, actOpacity = 0.3 }) {
+export default function HomeButton ({ navigation, style, context, enabled = true, actOpacity = 0.3 }) {
     
     return <TouchableOpacity
             onPress={() => enabled && navigation.navigate('Courses', { context })}
             style={styles.button}
             activeOpacity={actOpacity}
             >
-                <Image source={require('../assets/course_4/home_icon.png')} style={styles.image}/>
+                <Image source={require('../assets/home_icon.png')} style={[styles.image, style]}/>
             </TouchableOpacity>;
 }
 
@@ -35,8 +34,8 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 1,
-        height: 40,
-        width: 40,
+        height: height / 18,
+        width: height / 18,
         resizeMode: 'contain'
     }
 })

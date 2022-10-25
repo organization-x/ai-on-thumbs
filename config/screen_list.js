@@ -49,8 +49,6 @@ export default {
             'Course2DraggableCompleted',
             'Course2DraggableExplanation',
             'Course2ScanAll1',
-            'Course2ScanAll2Wrong',
-            'Course2ScanAll2Correct',
             'Course2ScanAll3',
             'Course2ScanAll4',
             'Course2ScanAll5',
@@ -61,10 +59,6 @@ export default {
             'Course2AlgorithmReview1',
             'Course2AlgorithmReview2',
             'Course2AlgorithmReview3',
-            'Course2AppStoreReview',
-            'Course2Email',
-            'Course2Selfie',
-            'Course2FaceDetection',
         ]
     },
     course3: {

@@ -1,7 +1,9 @@
 import React from 'react'
 import { StyleSheet, View, Image, Dimensions, Text } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 
 const height = Dimensions.get('window').height
@@ -9,8 +11,14 @@ const width = Dimensions.get('window').width
 // Analytics.setCurrentScreen('Course 2 Screen 18.2: Draggable Completed Screen')
 
 export default function Course2DraggableCompleted ({ navigation }) {
+  let screenSection = screen_list.course2;
+  let screenName = 'Course2DraggableCompleted';
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}></Text>
+      </View>
       <View style={{ flex: 1 }}>
         <Text style={styles.topText}>Drag and release the filter around the face to find a matching pixel pattern.</Text>
         <View style={styles.image}>
@@ -23,24 +31,29 @@ export default function Course2DraggableCompleted ({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course2DraggableFilter' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton
-          navigation={navigation}
-          nextScreen='Course2DraggableExplanation'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Continue'
-          actOpacity={1}
-        />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '1%'
   },
   topText: {
     marginTop: height / 20,
@@ -60,13 +73,13 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
     fontSize: height / 34
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   },
   image: {
     margin: 10,
