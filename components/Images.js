@@ -11,11 +11,7 @@ export default function ImageContainer () {
   const [col, setCol] = useState(false)
   const [pressed, setPressed] = useState([])
   const pressHandler = () => {
-    // if (num == 0) {
-    //   console.log(col)
-    // }
     setCol(!col)
-    // setPressed(pressed.concat(num))
     console.log(col)
   }
   return(

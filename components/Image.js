@@ -16,10 +16,8 @@ export default function Imagel (props) {
         props.presser(ars)
         console.log(props.press)
         setCol(!col)
-            // setPressed(pressed.concat(num))
       }
   }
-          // setPressed(pressed.concat(num))
 
 
   return (
@@ -27,7 +25,6 @@ export default function Imagel (props) {
       marginRight: 5,
       height: "30%",
       marginBottom: 5
-      // alignSelf: 'center'
     }} >
       <Image source={props.link} style={{
 
