@@ -3,22 +3,25 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
+import colors from '../../config/colors'
+
 export default function Course4page3_4 ({navigation}) {
-    let screenSection = screen_list.section3;
-    let screenName = 'Course4page3_4';
-    return (
+  return (
     <View style={styles.container}>
-      <Text style={styles.number}>4/4</Text>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>4/4</Text>
+      </View>
+      
       <View style={styles.textContainer}>
-        <Text style={[styles.title, {marginTop: 100}]}>Congrats!</Text>
+        <Text style={[styles.title]}>Congrats!</Text>
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>You've now completed a brief introduction to neural networks</Text>
@@ -34,9 +37,6 @@ export default function Course4page3_4 ({navigation}) {
           </Text>
         </View>
       </TouchableOpacity>
-      <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-      </View>
     </View>
   )
 }
@@ -46,17 +46,15 @@ const styles = StyleSheet.create({
       flex: 1,
       paddingHorizontal: 20,
       paddingVertical: 15,
-      backgroundColor: "#202020",
+      backgroundColor: colors.background,
     },
     number: {
-      fontFamily: "AppleSDGothicNeo-Light",
       color: 'white',
       fontSize: 35,
       textAlign: 'right',
       paddingVertical: 30
     },
     text: {
-      fontFamily: "AppleSDGothicNeo-Light",
       color: 'white',
       fontSize: 35,
       textAlign: 'center'
@@ -69,7 +67,6 @@ const styles = StyleSheet.create({
       marginTop: 30,
     },
     title: {
-      fontFamily: "AppleSDGothicNeo-Light",
       textAlign: 'center',
       color: 'white',
       fontSize: 50,
@@ -84,18 +81,17 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       borderRadius: 15,
       alignSelf: 'center',
-      marginBottom: height/6,
+    },
+    top: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignContent: 'center',
+      marginTop: '2%'
     },
     returnText: {
-      fontFamily: "AppleSDGothicNeo-Light",
       color: 'white',
       fontSize: 35,
       textAlign: 'center',
       fontWeight: 'bold'
-  },
-  footerButtons: {
-    marginBottom: 20,
-    flexDirection: 'row',
-    justifyContent: 'center'
   }
 })

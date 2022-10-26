@@ -44,6 +44,22 @@ export default function CoursesScreen ({ navigation }) {
           desc="This lesson is going to explain what a neural network is, how it's similar to a human brain, and the basics of how they work. We'll also be exploring some real world applications of neural networks."
           ratingandduration='Beginner: 10 minutes'
         />
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='Quiz3Start'
+          gradColors={['#8233C5', '#3C4687']}
+          title='Quiz3'
+          desc="KNN Quiz"
+          ratingandduration='Assess your knowledge on K Nearest Neighbors with this quiz!'
+        />
+        <CourseCard
+          navigation={navigation}
+          lessonScreen='Quiz4Start'
+          gradColors={['#8233C5', '#3C4687']}
+          title='Quiz4'
+          desc="Neural Networks I Quiz"
+          ratingandduration='Assess your knowledge on Neural Networks with this quiz!'
+        />
         <CourseAd
           gradColors={['#33D05F', '#09713F']}
           title='Want to learn more about AI?'

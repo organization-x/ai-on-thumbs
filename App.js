@@ -123,6 +123,25 @@ import Course3AppStoreReview from './screens/course_3/30_app_store_review'
 import Course3Email from './screens/course_3/31_email'
 import Course3Promotion from './screens/course_3/32_promotion'
 
+//quiz test imports
+
+import Quiz3Test from './screens/quizzes/quiz_3/test.js'
+import Quiz3Start from './screens/quizzes/quiz_3/start.js'
+import Quiz3Question1 from './screens/quizzes/quiz_3/question1.js'
+import Quiz3Question1Wrong from './screens/quizzes/quiz_3/question1Wrong.js'
+import Quiz3Question2 from './screens/quizzes/quiz_3/question2.js'
+import Quiz3Question2Wrong from './screens/quizzes/quiz_3/question2Wrong.js'
+import Quiz3Score from './screens/quizzes/quiz_3/score.js'
+
+import Quiz4Start from './screens/quizzes/quiz_4/start.js'
+import Quiz4Question1 from './screens/quizzes/quiz_4/question1.js'
+import Quiz4Question1Wrong from './screens/quizzes/quiz_4/question1Wrong.js'
+import Quiz4Question2 from './screens/quizzes/quiz_4/question2.js'
+import Quiz4Question2Wrong from './screens/quizzes/quiz_4/question2Wrong.js'
+import Quiz4Question3 from './screens/quizzes/quiz_4/question3'
+import Quiz4Question3Wrong from './screens/quizzes/quiz_4/question3Wrong.js'
+import Quiz4Score from './screens/quizzes/quiz_4/score.js'
+
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
   enableInExpoDevelopment: false,
@@ -261,6 +280,23 @@ export default function App () {
           <Stack.Screen name='Course4page3_2_3' component={Course4page3_2_3} />
           <Stack.Screen name='Course4page3_3' component={Course4page3_3} />
           <Stack.Screen name='Course4page3_4' component={Course4page3_4} />
+
+          <Stack.Screen name='Quiz3Test' component={Quiz3Test} />
+          <Stack.Screen name='Quiz3Start' component={Quiz3Start} />
+          <Stack.Screen name='Quiz3Question1' component={Quiz3Question1} />
+          <Stack.Screen name='Quiz3Question1Wrong' component={Quiz3Question1Wrong} />
+          <Stack.Screen name='Quiz3Question2' component={Quiz3Question2} />
+          <Stack.Screen name='Quiz3Question2Wrong' component={Quiz3Question2Wrong} />
+          <Stack.Screen name='Quiz3Score' component={Quiz3Score} />
+
+          <Stack.Screen name='Quiz4Start' component={Quiz4Start} />
+          <Stack.Screen name='Quiz4Question1' component={Quiz4Question1} />
+          <Stack.Screen name='Quiz4Question1Wrong' component={Quiz4Question1Wrong} />
+          <Stack.Screen name='Quiz4Question2' component={Quiz4Question2} />
+          <Stack.Screen name='Quiz4Question2Wrong' component={Quiz4Question2Wrong} />
+          <Stack.Screen name='Quiz4Question3' component={Quiz4Question3} />
+          <Stack.Screen name='Quiz4Question3Wrong' component={Quiz4Question3Wrong} />
+          <Stack.Screen name='Quiz4Score' component={Quiz4Score} />
         </Stack.Navigator>
       </NavigationContainer>
     </LinearGradient>

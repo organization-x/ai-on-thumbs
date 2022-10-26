@@ -10,6 +10,7 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Test ({navigation}) {
+  
     return (
     <View style={styles.container}>
         <Text style={styles.number}>1/4</Text>
