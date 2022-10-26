@@ -116,7 +116,7 @@ export default {
         // 'Course4page2_5',
         // 'Course4page2_6',
         // 'Course4page2_7',
-        'Course4page2_8',
+        // 'Course4page2_8',
         'Course4page2_9',
         'Course4page2_10', 
         'Course4page2_11',

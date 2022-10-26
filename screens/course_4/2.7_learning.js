@@ -22,7 +22,7 @@ export default function Course4page2_7 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>7/9</Text>
+        <Text style={styles.number}>7/13</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.secondText}>To begin, a <Text style={styles.underlinedText}>NN randomly assigns a number for each node.</Text> It then processes an input through the hidden layers to predict an output. </Text>
