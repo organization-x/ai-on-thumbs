@@ -38,33 +38,12 @@ export default function CoursesScreen ({ navigation }) {
         />
         <CourseCard
           navigation={navigation}
-<<<<<<< HEAD
-          lessonScreen='Course4page3_1'
-=======
           lessonScreen='Course4page1_1'
->>>>>>> nr_neural_network
           gradColors={['#8233C5', '#3C4687']}
           title='Neural Networks I'
           desc="This lesson is going to explain what a neural network is, how it's similar to a human brain, and the basics of how they work. We'll also be exploring some real world applications of neural networks."
           ratingandduration='Beginner: 10 minutes'
         />
-<<<<<<< HEAD
-        <CourseCard
-          navigation={navigation}
-          lessonScreen='Quiz3Start'
-          gradColors={['#8233C5', '#3C4687']}
-          title='Quiz3'
-          desc="KNN Quiz"
-          ratingandduration='Assess your knowledge on K Nearest Neighbors with this quiz!'
-        />
-        <CourseCard
-          navigation={navigation}
-          lessonScreen='Quiz4Start'
-          gradColors={['#8233C5', '#3C4687']}
-          title='Quiz4'
-          desc="Neural Networks I Quiz"
-          ratingandduration='Assess your knowledge on Neural Networks with this quiz!'
-=======
         <CourseCard 
           navigation={navigation}
           lessonScreen='ComingSoon'
@@ -72,7 +51,6 @@ export default function CoursesScreen ({ navigation }) {
           title='Quizzes'
           desc='Test your knowledge with questions from each lesson!'
           ratingandduration='Intermediate: 15 minutes'
->>>>>>> nr_neural_network
         />
         <CourseAd
           gradColors={['#33D05F', '#09713F']}

@@ -13,7 +13,7 @@ import HomeButton from "../../../components/HomeButton";
 const height = Dimensions.get("window").height;
 const width = Dimensions.get("window").width;
 
-import colors from "../../config/colors";
+import colors from "../../../config/colors";
 
 export default function Course4page3_2({ navigation }) {
   const [choice, setChoice] = React.useState("");
