@@ -64,9 +64,8 @@ const styles = StyleSheet.create({
     },
     number: {
         color: 'white',
-        fontSize: 30,
-        textAlign: 'right',
-        marginTop: 10
+        fontSize: height / 28,
+        textAlign: 'right'
     },
     text: {
         flex: 1,
@@ -81,7 +80,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignContent: 'center',
-        marginTop: '2%'
     },
     underlineText: {
         textDecorationLine: "underline"

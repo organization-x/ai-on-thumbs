@@ -6,6 +6,8 @@ import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import * as Sharing from 'expo-sharing'
 import * as FileSystem from 'expo-file-system'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 import * as Sentry from 'sentry-expo'
 // Analytics.setCurrentScreen('Course 2 Screen 35: Face Detection Screen')
@@ -46,7 +48,11 @@ export default function Course2FaceDetection ({ route, navigation }) {
     }
   }
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>4</Text>
+      </View>
       <View style={{ alignItems: 'center' }}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       </View>
@@ -103,7 +109,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
           buttonText='Go to Home'
         />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
@@ -115,9 +121,21 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 27,
     paddingVertical: 17
+  },
+  number: {
+    color: colors.background,
+    fontSize: windowHeight / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '1%'
   },
   mainText: {
     padding: 10,

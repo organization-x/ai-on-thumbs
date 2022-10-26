@@ -3,14 +3,22 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
+import colors from '../../config/colors'
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 10: Black House Neighborhood')
 
 const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
 
 export default function Course3BlackHouseNeighborhood ({ navigation }) {
+  let screenSection = screen_list.course3;
+  let screenName = 'Course3BlackHouseNeighborhood';
+
   const [neighborhoodBDisabled, setDisableNeighborhoodB] = React.useState(false)
   const [neighborhoodCDisabled, setDisableNeighborhoodC] = React.useState(false)
   const [lowerScreenText, setLowerScreenText] = React.useState('Which neighborhood do you think the black house belongs to?')
@@ -26,7 +34,11 @@ export default function Course3BlackHouseNeighborhood ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}></Text>
+      </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.text}>{lowerScreenText}</Text>
         <View style={styles.rowContainer}>
@@ -71,15 +83,26 @@ export default function Course3BlackHouseNeighborhood ({ navigation }) {
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3Neighborhoods' buttonColor='#8976C2' buttonText='Back' />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
+   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
   },
   rowContainer: {
     flex: 1.5,

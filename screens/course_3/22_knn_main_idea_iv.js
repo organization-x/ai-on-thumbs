@@ -1,32 +1,54 @@
 // Distance helps us predict which group new members belong to.
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Dimensions, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
+import colors from '../../config/colors'
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 22: KNN Main Idea IV')
 
+const height = Dimensions.get('window').height
+
 export default function Course3KNNMainIdeaIV ({ navigation }) {
+  let screenSection = screen_list.course3;
+  let screenName = 'Course3KNNMainIdeaIV';
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}></Text>
+      </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>This helps us predict which group new members belong to.</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdeaIII' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3KNNMainIdeaV' buttonColor={['#32B59D', '#3AC55B']} buttonText='Interesting!' />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
+   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
   },
   interactive: {
     flex: 1,
@@ -43,13 +65,13 @@ const styles = StyleSheet.create({
   },
   boldText: {
     textAlign: 'center',
-    color: 'rgba(0, 0, 0, 0.6)',
+    color: 'rgba(255, 255, 255, 0.6)',
     fontSize: 40,
     fontWeight: '800'
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

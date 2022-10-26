@@ -1,22 +1,33 @@
 import React, { useState } from 'react'
 import { StyleSheet, View, Dimensions, Text } from 'react-native'
 import Course2FilterDetection from '../../components/Course2FilterDetection'
-import LessonButton from '../../components/LessonButton'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import ParagraphBox from '../../components/ParagraphBox'
 import { LinearGradient } from 'expo-linear-gradient'
+import LessonButton from '../../components/LessonButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 2 Screen 18.1: Draggable Filter Screen')
 
 const height = Dimensions.get('window').height
 
 export default function Course2DraggableFilter ({ navigation }) {
+  let screenSection = screen_list.course2;
+  let screenName = 'Course2DraggableFilter';
+
   const [imageXOffset, setImageXOffset] = useState(0)
   const [imageYOffset, setImageYOffset] = useState(0)
   const [filterText, setFilterText] = useState('')
   const [found, setFound] = useState(false)
 
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}></Text>
+      </View>
       <Text style={styles.topText}>Drag and release the filter around the face to find a matching pixel pattern.</Text>
       <View
         style={styles.component} onLayout={(event) => {
@@ -42,12 +53,13 @@ export default function Course2DraggableFilter ({ navigation }) {
           actOpacity={found ? 0.3 : 1}
         />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -56,6 +68,17 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '1%'
   },
   topText: {
     marginTop: height / 20,

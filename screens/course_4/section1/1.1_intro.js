@@ -7,8 +7,6 @@ import HomeButton from '../../../components/HomeButton'
 
 import LessonButton from '../../../components/LessonButton'
 
-
-
 export default function Course4page1_1 ({navigation}) {
   let screenSection = screen_list.section1;
   let screenName = 'Course4page1_1';

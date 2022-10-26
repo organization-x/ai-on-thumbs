@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { StyleSheet, View, Text, Image, Switch, ScrollView, Dimensions, TouchableOpacity, ImageBackground, SafeAreaView } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 2 Screen 8: Pixel Patterns Interactive Screen')
 
@@ -9,6 +11,9 @@ const windowHeight = Dimensions.get('window').height
 const windowWidth = Dimensions.get('window').width
 
 export default function Course2PixelPatternsInteractive ({ navigation }) {
+  let screenSection = screen_list.course2;
+  let screenName = 'Course2PixelPatternsInteractive';
+
   const [isEnabled, setIsEnabled] = useState(false)
   const toggleSwitch = () => setIsEnabled(previousState => !previousState)
 
@@ -74,7 +79,11 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={backgroundColor} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}></Text>
+      </View>
       <ScrollView scrollEnabled={false}>
         <SafeAreaView style={styles.container}>
 
@@ -143,15 +152,15 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
       </ScrollView>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course2PixelPatternsText' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course2FilterFeatures1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -191,6 +200,17 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     position: 'relative'
   },
+  number: {
+    color: 'white',
+    fontSize: windowHeight / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '1%'
+  },
   headerText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
@@ -210,7 +230,7 @@ const styles = StyleSheet.create({
   darkSmallBoldText: {
     fontWeight: 'bold',
     fontSize: windowHeight / 42,
-    color: 'black',
+    color: 'white',
     textAlign: 'center'
   },
   lightSmallRegularText: {
@@ -220,13 +240,13 @@ const styles = StyleSheet.create({
   },
   darkSmallRegularText: {
     fontSize: windowHeight / 42,
-    color: 'black',
+    color: 'white',
     textAlign: 'center'
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   },
   button1and3Area: {
     flex: 1,

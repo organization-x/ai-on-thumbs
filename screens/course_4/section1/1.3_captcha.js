@@ -8,10 +8,8 @@ import { TapGestureHandler, } from 'react-native-gesture-handler'
 
 
 export default function Course4page1_3 ({navigation}) {
-  
   let screenSection = screen_list.section1;
   let screenName = 'Course4page1_3';
-
   return (
     <View style={styles.container}>
       <View style={styles.top}>
