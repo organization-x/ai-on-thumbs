@@ -2,6 +2,8 @@ import React from 'react'
 import { StyleSheet, View, Text, Dimensions, Image} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import LessonButton from '../../components/LessonButton'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 import HomeButton from '../../components/HomeButton'
@@ -83,9 +85,9 @@ export default function Course4page3_2 ({navigation}) {
         </TouchableOpacity>
       </View>
       <TouchableOpacity
-        onPress={() => 
+        onPress={() =>
           {if(choice!=""){
-            navigation.navigate(choice === "soccer" ? 'Course4page3_2_2' : 'Course4page3_2_3')
+            navigation.navigate(choice === "soccer" ? 'Course4S3Correct' : 'Course4S3Incorrect')
           }}
           }
         underlayColor='#fff'

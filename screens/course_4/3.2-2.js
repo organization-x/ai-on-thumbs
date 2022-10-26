@@ -3,6 +3,8 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import LessonButton from '../../components/LessonButton'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 import HomeButton from '../../components/HomeButton'
@@ -16,12 +18,8 @@ const height = Dimensions.get('window').height
 
 
 
-export default function Course4page3_2_2 ({navigation}) {
-    
-  let screenSection = screen_list.section3;
-  let screenName = 'Course4page3_2_2';
-
-  return (
+export default function Course4S3Correct({navigation}) {
+    return (
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
@@ -41,9 +39,7 @@ export default function Course4page3_2_2 ({navigation}) {
         </Text>
       </View>
       <View style={[styles.footerButtons, {marginTop: 50}]}>
-        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2' buttonColor='#8976C2' buttonText='Back' /> */}
-        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_3' buttonColor='#8976C2' buttonText='Next' /> */}
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+        <ProgressBar navigation={navigation} currentScreen={'Course4S3Intro'} section={section}  />
       </View>
     </View>
   )

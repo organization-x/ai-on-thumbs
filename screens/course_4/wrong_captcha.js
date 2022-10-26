@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { StyleSheet, View, Text, ImageBackground, Image, FlatList, TouchableOpacity, Dimensions, Pressable, Button } from 'react-native'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+import Imagel from '../../components/Image'
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
@@ -10,20 +11,33 @@ export default function Wrong({navigation, context}) {
   const try_again = () =>{
     navigation.navigate('Course4_third', {context})
   }
+  const move_on = () => {
+    navigation.navigate('Course4page2_1', {context})
+  }
   return(
     <View style={styles.container}>
       <Text style={styles.num}>3/8</Text>
       <View style={styles.interactive}>
-        <Text style={styles.box}>Uh oh!{'\n'}Let's try that again{'\n'}🙂</Text>
-        <Image style={styles.img} source={require('./captc_3.png')}/>
+        <Text style={{color:'white', fontSize:32, fontWeight: 'bold', textAlign: 'center', lineHeight: 50, marginTop: width/5}}>{'\t'}Uh oh!{'\n'}Let's try that again{'\n'}🙂</Text>
+        {/* <View style ={styles.img_container}>
+          <Imagel link={images[0]}/>
+          <Imagel link={images[1]}/>
+          <Imagel link={images[2]}/>
+          <Imagel link={images[3]}/>
+          <Imagel link={images[4]}/>
+          <Imagel link={images[5]}/>
+          <Imagel link={images[6]}/>
+          <Imagel link={images[7]}/>
+          <Imagel link={images[8]}/>
+
+        </View> */}
         <View style={styles.group}>
-          <Text style={styles.txts}>Move On!</Text>
           <Text style={styles.txts} onPress={try_again}>Try Again!</Text>
         </View>
       </View>
 
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={'Course4_third'} section={section}  />
+        {/* <ProgressBar navigation={navigation} currentScreen={'Course4_third'} section={section}  /> */}
       </View>
     </View>
   )
@@ -32,6 +46,21 @@ export default function Wrong({navigation, context}) {
 
 
 const styles = StyleSheet.create({
+  img_container: {
+    flexDirection: 'row',
+    justifyContent:'center',
+    flexWrap: 'wrap',
+    alignItems:'center',
+    width: width-50,
+    paddingTop: 10,
+    marginHorizontal: 3,
+    borderColor: "#1FBD67",
+    borderWidth: 4,
+    borderRadius: 10,
+    height: "55%",
+    paddingLeft: 5,
+    marginBottom: width / 10
+  },
   txts: {
     color: 'white',
     fontSize: 22,
@@ -41,8 +70,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     paddingHorizontal: 20,
     paddingVertical: 10,
-    width: width / 2.75,
-    textAlign: 'center'
+    width: width / 2,
+    textAlign: 'center',
+    marginTop: height/4.5
   },
   group: {
     flexDirection: 'row',
@@ -99,7 +129,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-evenly',
     marginTop: 50
   }
 
