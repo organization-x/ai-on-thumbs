@@ -3,7 +3,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-
+import HomeButton from '../../components/HomeButton'
 import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
@@ -20,11 +20,12 @@ export default function Course4page2_8 ({ navigation }) {
   let screenName = 'Course4page2_8';
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>5/13</Text>
+      </View>
       <View style={styles.interactive}>
-        <Text style={styles.secondText}>If the output is wrong, the model will work its way backwards, <Text style={styles.underlinedText}>adjusting the values assigned to each node.</Text> 
-        </Text>
-        <Text style={styles.secondText}>After <Text style={styles.underlinedText}>doing this process multiple times</Text> to minimize the error between the predicted and the actual output, the model moves on to the next input, repeating the process
-        </Text>
+        <Text style={styles.secondText}>Now, let's dive further into how NNs work </Text>
       </View>
       <View style={styles.footerButtons}>
         {/* <LessonButton navigation={navigation} nextScreen='Course4page2_7' buttonColor='#8976C2' buttonText='Back' />
@@ -85,9 +86,15 @@ const styles = StyleSheet.create({
     fontSize: 45,
     fontWeight: '800'
   },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
-  },
+  }
 })

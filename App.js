@@ -13,16 +13,6 @@ import YesThumbs from './screens/YesThumbs'
 
 import * as Sentry from 'sentry-expo'
 
-import QuizzesScreen from './screens/quizzes/Quiz_landingpage'
-
-//testing
-import Test from './screens/course_4/test'
-import Course4S3Intro from './screens/course_4/3.1'
-import Course4S3Recommendation from './screens/course_4/3.2'
-import Course4S3Correct from './screens/course_4/3.2-2'
-import Course4S3Incorrect from './screens/course_4/3.2-3'
-import Course4S3Info from './screens/course_4/3.3'
-import Course4S3End from './screens/course_4/3.4'
 
 // course 1 imports
 import Course1Intro from './screens/course_1/1_intro'
@@ -125,64 +115,44 @@ import Course3AppStoreReview from './screens/course_3/30_app_store_review'
 import Course3Email from './screens/course_3/31_email'
 import Course3Promotion from './screens/course_3/32_promotion'
 
-// course 4 imports
-// import Course4page1_7 from './screens/course_4/1.7_nn_to_brains'
-// // import Course4page1_8 from './screens/course_4/8'
-// import Course4page2_1 from './screens/course_4/2.1_process_info'
-// import Course4page2_2 from './screens/course_4/2.2_layers'
-// import Course4page2_3 from './screens/course_4/2.3_numerical_values'
-// import Course4SelectDNN from './screens/course_4/2.4_hidden_layer_interactive'
-// import Course4page2_4_correct from './screens/course_4/2.4_hidden_layer_interactive_follow_up'
-// import Course4page2_5 from './screens/course_4/2.5_backprop'
-// import Course4page2_6 from './screens/course_4/2.6_bp_cont'
-// import Course4page2_7 from './screens/course_4/2.7_learning'
-// import Course4page2_8 from './screens/course_4/2.8_adjustment'
 
-
-// //course 4 imports 
-// import Test1 from './screens/course_4/1_test'
-// import Test2 from './screens/course_4/2_test'
-// import Test3 from './screens/course_4/3_test'
-// import Course4CaptExplain from './screens/course_4/1.4_explain_captcha'
-// import Course4Info1 from './screens/course_4/1.5_nn_info_1'
-// import Course4Info2 from './screens/course_4/1.6_nn_info_2'
-// import Test7 from './screens/course_4/7_test'
-// import Course4Sect1End from './screens/course_4/1.8_section1_end'
-// import Test9 from './screens/course_4/2.1_test'
-// import Course4Sect2End from './screens/course_4/2.9_section2_end'
-// import Test10 from './screens/course_4/3.1_test'
-
-import Course4page1_1 from './screens/course_4/1.1_intro'
-import Course4page1_2 from './screens/course_4/1.2_nn'
-import Course4page1_3 from './screens/course_4/1.3_captcha'
-import Course4page1_4 from './screens/course_4/1.4_explain_captcha'
-import Course4page1_5 from './screens/course_4/1.5_nn_info_1'
-import Course4page1_6 from './screens/course_4/1.6_nn_info_2'
+import Course4page1_1 from './screens/course_4/section1/1.1_intro'
+import Course4page1_2 from './screens/course_4/section1/1.2_nn'
+import Course4page1_3 from './screens/course_4/section1/1.3_captcha'
+import Course4page1_4 from './screens/course_4/section1/1.4_explain_captcha'
+import Course4page1_5 from './screens/course_4/section1/1.5_nn_info_1'
+import Course4page1_6 from './screens/course_4/section1/1.6_nn_info_2'
 // import Course4page1_7 from './screens/course_4/2.3_numerical_values'
 
-import Course4page1_7 from './screens/course_4/1.7_nn_to_brains'
-import Course4page1_8 from './screens/course_4/1.8_section1_end'
+import Course4page1_7 from './screens/course_4/section1/1.7_nn_to_brains'
+import Course4page1_8 from './screens/course_4/section1/1.8_section1_end'
 
 // import Course4page1_8 from './screens/course_4/8'
-import Course4page2_1 from './screens/course_4/2.1_process_info'
-import Course4page2_2 from './screens/course_4/2.2_layers'
-import Course4page2_3 from './screens/course_4/2.3_numerical_values'
-import Course4SelectDNN from './screens/course_4/2.4_hidden_layer_interactive'
-import Course4page2_4_correct from './screens/course_4/2.4_hidden_layer_interactive_follow_up'
-import Course4page2_5 from './screens/course_4/2.5_backprop'
-import Course4page2_6 from './screens/course_4/2.6_bp_cont'
-import Course4page2_7 from './screens/course_4/2.7_learning'
-import Course4page2_8 from './screens/course_4/2.8_adjustment'
-import Course4page2_9 from './screens/course_4/2.9_section2_end'
+import Course4page2_1 from './screens/course_4/section2/2.1_process_info'
+import Course4page2_2 from './screens/course_4/section2/2.2_layers'
+import Course4page2_3 from './screens/course_4/section2/2.3_numerical_values'
+import Course4SelectDNN from './screens/course_4/section2/2.4_hidden_layer_interactive'
+import Course4page2_4_correct from './screens/course_4/section2/2.4_hidden_layer_interactive_follow_up'
+// import Course4page2_8 from './screens/course_4/section2/2.8_adjustment'
+import Course4page2_9 from './screens/course_4/section2/2.9_backprop_intro'
+import Course4page2_10 from './screens/course_4/section2/2.10_backprop_initial_match'
+import Course4page2_11 from './screens/course_4/section2/2.11_reveal_matches'
+import Course4page2_12 from './screens/course_4/section2/2.12_matching2'
+import Course4page2_13 from './screens/course_4/section2/2.13_congrats_comparison'
+import Course4page2_14 from './screens/course_4/section2/2.14_backprop_explanation'
+import Course4page2_15 from './screens/course_4/section2/2.15_explanation_cont'
+import Course4page2_16 from './screens/course_4/section2/2.16_section2_end'
+
+import Course4page3_1 from './screens/course_4/section3/3.1'
+import Course4page3_2 from './screens/course_4/section3/3.2'
+import Course4page3_2_2 from './screens/course_4/section3/3.2-2'
+import Course4page3_2_3 from './screens/course_4/section3/3.2-3'
+import Course4page3_3 from './screens/course_4/section3/3.3'
+import Course4page3_4 from './screens/course_4/section3/3.4'
 
 
-import Course4page3_1 from './screens/course_4/3.1'
-import Course4page3_2 from './screens/course_4/3.2'
-import Course4page3_2_2 from './screens/course_4/3.2-2'
-import Course4page3_2_3 from './screens/course_4/3.2-3'
-import Course4page3_3 from './screens/course_4/3.3'
-import Course4page3_4 from './screens/course_4/3.4'
-
+// quiz screen imports 
+import ComingSoon from './screens/quizzes/quizzes_coming_soon'
 
 
 
@@ -333,12 +303,16 @@ export default function App () {
           <Stack.Screen name='Course4page2_3' component={Course4page2_3} />
           <Stack.Screen name='Course4page2_4' component={Course4SelectDNN} />
           <Stack.Screen name='Course4page2_4_correct' component={Course4page2_4_correct} />
-          <Stack.Screen name='Course4page2_5' component={Course4page2_5} />
-          <Stack.Screen name='Course4page2_6' component={Course4page2_6} />
-          <Stack.Screen name='Course4page2_7' component={Course4page2_7} />
-          <Stack.Screen name='Course4page2_8' component={Course4page2_8} />
           <Stack.Screen name='Course4page2_9' component={Course4page2_9} />
+          <Stack.Screen name='Course4page2_10' component={Course4page2_10} />
+          <Stack.Screen name='Course4page2_11' component={Course4page2_11} />
+          <Stack.Screen name='Course4page2_12' component={Course4page2_12} />
+          <Stack.Screen name='Course4page2_13' component={Course4page2_13} />
+          <Stack.Screen name='Course4page2_14' component={Course4page2_14} />
+          <Stack.Screen name='Course4page2_15' component={Course4page2_15} />
+          <Stack.Screen name='Course4page2_16' component={Course4page2_16} />
           
+
           <Stack.Screen name='Course4page3_1' component={Course4page3_1} />
           <Stack.Screen name='Course4page3_2' component={Course4page3_2} /> 
           <Stack.Screen name='Course4page3_2_2' component={Course4page3_2_2} />
@@ -346,7 +320,7 @@ export default function App () {
           <Stack.Screen name='Course4page3_3' component={Course4page3_3} />
           <Stack.Screen name='Course4page3_4' component={Course4page3_4} />
 
-          <Stack.Screen name='QuizzesScreen' component={QuizzesScreen}/>
+          <Stack.Screen name='ComingSoon' component={ComingSoon} />
 
         </Stack.Navigator>
       </NavigationContainer>

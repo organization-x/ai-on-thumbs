@@ -3,7 +3,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import LessonButton from '../../components/LessonButton'
-
+import HomeButton from '../../components/HomeButton'
 import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
@@ -20,10 +20,12 @@ export default function Course4page2_6 ({ navigation }) {
   let screenName = 'Course4page2_6';
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>6/13</Text>
+      </View>
       <View style={styles.interactive}>
-        <Text style={styles.underlinedText}>Backpropagation is a technique used to train NN models </Text>
-        <Text style={styles.secondText}>to get the best possible output by adjusting the <Text style={styles.underlinedText}>values of nodes in the hidden layers</Text> </Text>
-        <Text style={styles.text}>Let's see how NNs are able to do this!</Text>
+        
 
       </View>
       <View style={styles.footerButtons}>
@@ -84,9 +86,15 @@ const styles = StyleSheet.create({
     fontSize: 45,
     fontWeight: '800'
   },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
-  },
+  }
 })

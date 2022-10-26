@@ -46,7 +46,7 @@ export default function CoursesScreen ({ navigation }) {
         />
         <CourseCard 
           navigation={navigation}
-          lessonScreen='QuizzesScreen'
+          lessonScreen='ComingSoon'
           gradColors={['#8233C5', '#3C4687']}
           title='Quizzes'
           desc='Test your knowledge with questions from each lesson!'
