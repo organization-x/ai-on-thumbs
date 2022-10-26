@@ -33,27 +33,19 @@ export default function Course4page2_10 ({ navigation }) {
     if (num == 1) {
       setInputDog(value)
       setNumItemsTyped(numItemsTyped + 1)
-      console.log(numItemsTyped)
       setrequireguessDog(false)
-      console.log(requireguessDog)
     } else if (num == 2) {
       setInputBlanket(value)
       setNumItemsTyped(numItemsTyped + 1)
-      console.log(numItemsTyped)
       setrequireguessBlanket(false)
-      console.log(requireguessBlanket)
     } else if (num === 3) {
       setInputGuitar(value)
       setNumItemsTyped(numItemsTyped + 1)
-      console.log(numItemsTyped)
       setrequireguessGuitar(false)
-      console.log(requireguessGuitar)
     } else if (num == 4) {
       setInputFloppyDisc(value)
       setNumItemsTyped(numItemsTyped + 1)
-      console.log(numItemsTyped)
       setrequireguessFloppyDisc(false)
-      console.log(requireguessFloppyDisc)
     }
   }
 
