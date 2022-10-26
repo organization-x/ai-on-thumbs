@@ -18,7 +18,7 @@ export default function Course2FilterFeatures4 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>10/</Text>
       </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
@@ -39,6 +39,12 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   footerButtons: {
     marginBottom: 10,

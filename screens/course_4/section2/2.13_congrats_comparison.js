@@ -13,7 +13,7 @@ export default function Course4page2_13 ({navigation}) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>10/13</Text>
+        <Text style={styles.number}>11/14</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>Awesome job! Much easier after having an idea of the matches, right?</Text>

@@ -22,7 +22,7 @@ export default function Course4page2_9 ({ navigation, context, enabled = true })
     <View style={styles.container}>
         <View style={styles.top}>
             <HomeButton navigation={navigation}/>
-            <Text style={styles.number}>6/13</Text>
+            <Text style={styles.number}>6/14</Text>
         </View>
         <View style={styles.rectangle}>
             <Text style={styles.text}>Let's learn about backpropagation, a key element in how natural networks learn patterns!</Text>

@@ -19,7 +19,7 @@ export default function Course2ScanAll1 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>20/</Text>
       </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>

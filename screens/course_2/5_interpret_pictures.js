@@ -15,10 +15,10 @@ export default function Course2InterpretPictures ({ navigation }) {
   let screenSection = screen_list.course2;
   let screenName = 'Course2InterpretPictures';
   return (
-    <ImageBackground source={require('../../assets/stock/objectregbackground.png')} style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>3/</Text>
       </View>
       <View style={styles.information}>
         <Text style={styles.textFont}>Now that we know how computers interpret photos, we will learn a popular face detection strategy.</Text>
@@ -27,17 +27,23 @@ export default function Course2InterpretPictures ({ navigation }) {
       <View style={styles.footerButtons}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </ImageBackground>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
+  },
   information: {
     flex: 1,
     borderRadius: 7,

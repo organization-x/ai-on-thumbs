@@ -18,7 +18,7 @@ export default function Course2DraggableExplanation ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>18/</Text>
       </View>
       <View style={{ flex: 1 }}>
         <Text style={styles.topText}>How does the computer use contrast to help?</Text>
@@ -45,6 +45,12 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   footerButtons: {
     marginBottom: 10,

@@ -74,6 +74,12 @@ const styles = StyleSheet.create({
       marginTop: 20,
       marginBottom: 50
     },
+    submitText: {
+      textAlign: "center",
+      color: "white",
+      fontSize: 30,
+      fontWeight: "bold",
+    },
     textBox: {
       backgroundColor: "#0f89ce",
       height: height*0.25,

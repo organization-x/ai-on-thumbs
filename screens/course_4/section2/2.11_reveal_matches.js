@@ -33,7 +33,7 @@ export default function Course4page2_11 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
           <HomeButton navigation={navigation}/>
-          <Text style={styles.number}>8/13</Text>
+          <Text style={styles.number}>9/14</Text>
       </View>
         <View style={styles.rowcontainer}>
           <Text style={styles.bigText}>Here are the actual matches! Make sure to remember them for the next screen...</Text>

@@ -14,11 +14,10 @@ export default function Course4page2_15 ({navigation}) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>12/13</Text>
+        <Text style={styles.number}>13/14</Text>
       </View>
       <View style={styles.interactive}>
-        <Text style={styles.textund}>In short, backpropagation allows NNs to make more accurate predictions. </Text>
-        <Text style={styles.text}>This process compares the predictions to the expected outputs, and from there adjusts the values of the nodes in the hidden layers to generate more accurate predictions.</Text>
+        <Text style={styles.text}>You followed a similar process in the matching game, and were able to improve your accuracy in matching items and numbers after seeing the correct pairings!</Text>
       </View>
         <View style={styles.footerButtons}>
             <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />

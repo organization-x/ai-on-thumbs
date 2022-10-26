@@ -1,20 +1,12 @@
 // Let’s say you find something that looks like a pair of eyes on an image, where would you search for a nose?
 
 import React from 'react'
-<<<<<<< HEAD:screens/course_4/2.3_numerical_values.js
-import { StyleSheet, Text, View, Dimensions, TouchableOpacity, Image, ImageBackground, StatusBar } from 'react-native'
-import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
-import colors from '../../config/colors'
-import HomeButton from '../../components/HomeButton'
-=======
-import { StyleSheet, View, Text, Dimensions} from 'react-native'
+import { StyleSheet, View, Text, Dimensions, TouchableOpacity, Image, StatusBar } from 'react-native'
 
 import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
->>>>>>> nr_neural_network:screens/course_4/section2/2.3_numerical_values.js
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 2 Screen 25: Searching Algorithm Features')
 
@@ -26,10 +18,10 @@ export default function Course4page2_3 ({ navigation }) {
   let screenName = 'Course4page2_3';
   const [partsLeft, setPartsLeft] = React.useState(3);
   const [currentLayer, setCurrentLayer] = React.useState(1);
-  const [upperScreenText, setUpperScreenText] = React.useState("This is a vanilla neural network which is the simplest type of neural network. It only has 1 hidden layer.");
+  const [upperScreenText, setUpperScreenText] = React.useState("This is a simple neural network, with only one hidden layer.");
   const [lowerScreenText, setLowerScreenText] = React.useState('Select the input layer!');
 
-  const layerImgs = [require('../../assets/course_4/input-layer.png'), require('../../assets/course_4/hidden-layer.png'), require('../../assets/course_4/output-layer.png')];
+  const layerImgs = [require('../../../assets/course_4/input-layer.png'), require('../../../assets/course_4/hidden-layer.png'), require('../../../assets/course_4/output-layer.png')];
   const layers = [];
 
   for (let i=0; i<3; i++){
@@ -98,12 +90,13 @@ export default function Course4page2_3 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>3/13</Text>
+        <Text style={styles.number}>3/14</Text>
       </View>
+        <Text style={styles.textFont}>{upperScreenText}</Text>
       <View style={styles.interactive}>
         {layers}
       </View>
-
+        <Text style={styles.textFont2}>{lowerScreenText}</Text> 
       <View style={styles.footerButtons}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
@@ -120,8 +113,8 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: 40,
+    paddingVertical: 20,
     backgroundColor: colors.background
   },
   lessonContent: {
@@ -139,18 +132,22 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly'
   },
   textFont: {
+    paddingTop: 40,
     color: 'white',
     fontSize: height / 30,
     fontWeight: 'bold',
     justifyContent: 'center',
     textAlign: 'center'
   },
+  
   textFont2: {
     color: 'white',
-    fontSize: height / 40,
+    paddingBottom: 40,
+    fontSize: height / 30,
     justifyContent: 'center',
     textAlign: 'center',
-    marginTop: height / 40
+    marginTop: height / 40,
+
   },
   interactive: {
     flex: 2,

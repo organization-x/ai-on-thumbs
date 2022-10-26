@@ -133,7 +133,7 @@ import Course4page2_2 from './screens/course_4/section2/2.2_layers'
 import Course4page2_3 from './screens/course_4/section2/2.3_numerical_values'
 import Course4SelectDNN from './screens/course_4/section2/2.4_hidden_layer_interactive'
 import Course4page2_4_correct from './screens/course_4/section2/2.4_hidden_layer_interactive_follow_up'
-// import Course4page2_8 from './screens/course_4/section2/2.8_adjustment'
+import Course4page2_8 from './screens/course_4/section2/2.8_adjustment'
 import Course4page2_9 from './screens/course_4/section2/2.9_backprop_intro'
 import Course4page2_10 from './screens/course_4/section2/2.10_backprop_initial_match'
 import Course4page2_11 from './screens/course_4/section2/2.11_reveal_matches'
@@ -304,6 +304,7 @@ export default function App () {
           <Stack.Screen name='Course4page2_4' component={Course4SelectDNN} />
           <Stack.Screen name='Course4page2_4_correct' component={Course4page2_4_correct} />
           <Stack.Screen name='Course4page2_9' component={Course4page2_9} />
+          <Stack.Screen name='Course4page2_8' component={Course4page2_8} />
           <Stack.Screen name='Course4page2_10' component={Course4page2_10} />
           <Stack.Screen name='Course4page2_11' component={Course4page2_11} />
           <Stack.Screen name='Course4page2_12' component={Course4page2_12} />

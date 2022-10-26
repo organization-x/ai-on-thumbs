@@ -42,7 +42,7 @@ export default function Course4SelectDNN ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>4/13</Text>
+        <Text style={styles.number}>4/14</Text>
       </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.boldText}>Out of the following, which one has 2 or more hidden layers?</Text>

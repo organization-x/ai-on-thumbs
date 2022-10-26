@@ -14,7 +14,7 @@ export default function Course4page2_16 ({navigation}) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>13/13</Text>
+        <Text style={styles.number}>14/14</Text>
       </View>
       <View style={styles.interactive}>
 

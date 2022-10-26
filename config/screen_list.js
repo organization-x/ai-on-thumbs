@@ -95,6 +95,7 @@ export default {
         'Course4page2_4',
         'Course4page2_4_correct',
         'Course4page2_9',
+        'Course4page2_8',
         'Course4page2_10', 
         'Course4page2_11',
         'Course4page2_12',

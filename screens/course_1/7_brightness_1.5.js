@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
-
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 7: Brightness 1.5 Screen')
 
@@ -21,7 +21,10 @@ export default function Course1Brightness1Point5 ({ navigation }) {
 
   return (
     <View style={styles.container}>
-      
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>8/22</Text>
+      </View>
       <View style={styles.interactive}>
         <Text style={styles.biggestText}>Now, tap the pixel that has the largest value!</Text>
         <View style={styles.flexRow}>
@@ -63,6 +66,18 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  number: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   interactive: {
     flex: 1,

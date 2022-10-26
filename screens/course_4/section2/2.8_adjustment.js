@@ -2,16 +2,15 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import HomeButton from '../../components/HomeButton'
+import colors from '../../../config/colors'
+import screen_list from '../../../config/screen_list'
+import ProgressBar from '../../../components/ProgressBar'
+
+import HomeButton from '../../../components/HomeButton'
 import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
 
-import colors from '../../config/colors'
-
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
 
 const height = Dimensions.get('window').height
 
@@ -22,10 +21,13 @@ export default function Course4page2_8 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>5/13</Text>
+        <Text style={styles.number}>7/14</Text>
       </View>
       <View style={styles.interactive}>
-        <Text style={styles.secondText}>Now, let's dive further into how NNs work </Text>
+        <Text style={styles.secondText}>We can learn about this process by playing a matching game. But wait, this game comes with a catch! </Text>
+      </View>
+      <View style={styles.interactive}>
+        <Text style={styles.secondText}>You will not be given a chance to look at the matches prior to starting, and will have to guess randomly the first round! Are you ready to start? </Text>
       </View>
       <View style={styles.footerButtons}>
         {/* <LessonButton navigation={navigation} nextScreen='Course4page2_7' buttonColor='#8976C2' buttonText='Back' />
@@ -50,8 +52,6 @@ const styles = StyleSheet.create({
   },
   underlinedText: {
     textDecorationLine: 'underline', 
-    // padding: 15,
-    // marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
@@ -65,8 +65,15 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     backgroundColor: colors.background
   },
+  number: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
+  },
   interactive: {
     flex: 1,
+    paddingTop: 5,
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center',

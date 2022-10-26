@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
-
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 2: Face Finder Screen')
 
@@ -64,6 +64,10 @@ export default function Course1FaceFinder ({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>2/22</Text>
+      </View>
       <Text style={styles.bigText}>To show computers how facial recognition is done, tap on all the faces in the pictures below. </Text>
       <View style={{ flex: 1 }}>
         <View style={styles.rowContainer}>
@@ -115,6 +119,18 @@ const styles = StyleSheet.create({
     flex: 1,
     aspectRatio: 1,
     margin: 10
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  number: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

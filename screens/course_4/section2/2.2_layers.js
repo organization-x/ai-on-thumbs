@@ -22,7 +22,7 @@ export default function Course4page2_2 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>2/13</Text>
+        <Text style={styles.number}>2/14</Text>
       </View>
       <View style={styles.container}>
         <Text style={styles.secondText}>As displayed in the image,</Text>    

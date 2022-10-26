@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
-
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 18: Face Parts Screen')
 
@@ -17,6 +17,10 @@ export default function Course1FaceParts ({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>20/22</Text>
+      </View>
       <Text style={styles.bigText}>Our faces have some unique features that stand out and make them recognizable.</Text>
       <View style={styles.interactive}>
         <Image style={styles.image} source={require('../../assets/course_1/markcubanface.png')} />
@@ -42,6 +46,18 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  number: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   image: {
     height: 300,

@@ -19,7 +19,7 @@ export default function Course2Contrast2 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>13/</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.textFont}>Since brighter pixels are higher in value, and darker pixels are lower in value,</Text>
@@ -41,7 +41,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
+  },
   interactive: {
     flex: 1,
     paddingHorizontal: 20,

@@ -13,11 +13,12 @@ export default function Course4page2_14 ({navigation}) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>11/13</Text>
+        <Text style={styles.number}>12/14</Text>
       </View>
       <View style={styles.interactive}>
-        <Text style={styles.textund}>Backpropagation is a process NNs use to improve their predicted outputs</Text>
-        <Text style={styles.text}>This process is similar to the matching exercise, and can be broken down into a few steps.</Text>
+        <Text style={styles.textund}>In short, backpropagation allows NNs to make more accurate predictions. </Text>
+        <Text style={styles.text}>This process compares the predictions the NN makes to the expected outputs, and from there adjusts the values of the nodes in the hidden layers to generate more accurate predictions.</Text>
+        
       </View>
       <View style={styles.footerButtons}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />

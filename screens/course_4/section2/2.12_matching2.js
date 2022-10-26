@@ -27,7 +27,7 @@ export default function Course4page2_12 ({ navigation }) {
   const [requireguessGuitar, setrequireguessGuitar] = React.useState(true);
   const [requireguessFloppyDisc, setrequireguessFloppyDisc] = React.useState(true);
   
-  const [lowerScreenText, setLowerScreenText] = React.useState("Type your guess for every item! (i.e. 1 for dog if you think that dog matches with 1)")
+  const [lowerScreenText, setLowerScreenText] = React.useState("Type your guess for every item! (Ex: Type 1 in the box across from the dog if you think dog and 1 are a match!)")
   
   
   const handleInput = (num, value) => {
@@ -81,7 +81,7 @@ export default function Course4page2_12 ({ navigation }) {
       <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>9/13</Text>
+        <Text style={styles.number}>10/14</Text>
       </View>
         <View style={styles.container}>
           <View style={styles.rowContainer}>
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     borderRadius: 20,
     width: "50%",
-    height: "78%",
+    height: "90%",
     alignItems: "center",
     marginBottom: height / 5,
     justifyContent: "center"
@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
     marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 25,
+    fontSize: 20,
   },
   footerButtons: {
     marginTop: 60,
