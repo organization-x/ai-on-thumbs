@@ -1,32 +1,54 @@
 // KNN is a machine learning algorithm used for classification.
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Dimensions, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
+import colors from '../../config/colors'
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 1: Introduction')
 
+const height = Dimensions.get('window').height
+
 export default function Course3Introduction ({ navigation }) {
+  let screenSection = screen_list.course3;
+  let screenName = 'Course3Introduction';
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}></Text>
+      </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>KNN is a machine learning algorithm used for classification.</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3NearestNeighbor' buttonColor={['#32B59D', '#3AC55B']} buttonText='Tell Me More!' />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
   },
   interactive: {
     flex: 1,
@@ -44,6 +66,6 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })
