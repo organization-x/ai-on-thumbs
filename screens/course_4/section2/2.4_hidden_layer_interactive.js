@@ -4,9 +4,8 @@ import { StyleSheet, View, Text, Image, Dimensions, TouchableOpacity} from 'reac
 import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import HomeButton from '../../../components/HomeButton'
-// import { LinearGradient } from 'expo-linear-gradient'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 5 Section 2: NNs Hidden Layers Interactive')
 
 
 
@@ -26,19 +25,8 @@ export default function Course4SelectDNN ({ navigation }) {
       setLowerScreenText("Hmm, the dog is definitely not the right choice! Pick another option.")
     }
   }
-  let screenSection = screen_list.section2;
-  let screenName = 'Course4SelectDNN';
+  
   return (
-    // <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
-    //   <View style={styles.interactive}>
-    //     <Text style={styles.boldText}>Out of the following, which one has 2 or more hidden layers? </Text>
-
-    //   </View>
-    //   <View style={styles.footerButtons}>
-    //     <LessonButton navigation={navigation} nextScreen='Course4page2_3' buttonColor='#8976C2' buttonText='Back' />
-    //     <LessonButton navigation={navigation} nextScreen='Course4page2_5' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" />
-    //   </View>
-    // </LinearGradient>
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>

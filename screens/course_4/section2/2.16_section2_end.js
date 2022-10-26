@@ -5,10 +5,12 @@ import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 import SectionButton from '../../../components/SectionButton'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 14 Section 2: Section 2 End') 
 
-export default function Course4page2_16 ({navigation}) {
+export default function Course4Sect2End ({navigation}) {
   let screenSection = screen_list.section2;
-  let screenName = 'Course4page2_16';
+  let screenName = 'Course4Sect2End';
   let nextSection = screen_list.section3;
   return (
     <View style={styles.container}>
@@ -23,9 +25,6 @@ export default function Course4page2_16 ({navigation}) {
       <View style={styles.sectionButton}>
             <SectionButton navigation={navigation} nextSection={true} goSection={nextSection} />
       </View>
-      {/* <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-      </View> */}
     </View>
   )
 }

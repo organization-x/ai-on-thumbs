@@ -86,26 +86,33 @@ export default {
         ]
     },
     section1: {
-        screens: ['Course4page1_1', 'Course4page1_2', 'Course4page1_3','Course4page1_4', 'Course4page1_5', 'Course4page1_6', 'Course4page1_7','Course4page1_8']
+        screens: ['Course4Intro', 
+        'Course4IntroRealLifeApplications', 
+        'Course4InteractiveCaptcha',
+        'Course4CaptchaExplanation', 
+        'Course4NNInfo1', 
+        'Course4NNInfo2',
+        'Course4CompToBrain',
+        'Course4Sect1End']
     },
     section2: {
-        screens: ['Course4page2_1',
-        'Course4page2_2',
-        'Course4page2_3',
-        'Course4page2_4',
-        'Course4page2_4_correct',
-        'Course4page2_9',
-        'Course4page2_8',
-        'Course4page2_10', 
-        'Course4page2_11',
-        'Course4page2_12',
-        'Course4page2_13',
-        'Course4page2_14',
-        'Course4page2_15',
-        'Course4page2_16']
+        screens: ['Course4ProcessInfo',
+        'Course4NNLayers',
+        'Course4LayerInteractive',
+        'Course4SelectDNN',
+        'Course4SelectDNN_correct',
+        'Course4BPInteractiveIntro',
+        'Course4BPInteractiveIntro2',
+        'Course4BPInteractive', 
+        'Course4BPInteractiveReveal',
+        'Course4Rematch',
+        'Course4BPInteractiveCongrats',
+        'Course4BPExplanation1',
+        'Course4BPExplanation2',
+        'Course4Sect2End']
     },
     section3: {
         buttonWidth: 30,
-        screens: ['Course4page3_1','Course4page3_2','Course4page3_2_2','Course4page3_3','Course4page3_4']
+        screens: ['Course4RealWorldIntro','Course4RWInteractive','Course4RWInteractiveCorrect','Course4RealWorldExplanation','Course4Sect3End']
     },
 }

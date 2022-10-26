@@ -8,15 +8,15 @@ import ProgressBar from '../../../components/ProgressBar'
 
 import HomeButton from '../../../components/HomeButton'
 import { LinearGradient } from 'expo-linear-gradient'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 7 Section 2: Backpropagation Matching Explanation')
 
 
 const height = Dimensions.get('window').height
 
-export default function Course4page2_8 ({ navigation }) {
+export default function Course4BPInteractiveIntro2 ({ navigation }) {
   let screenSection = screen_list.section2;
-  let screenName = 'Course4page2_8';
+  let screenName = 'Course4BPInteractiveIntro2';
   return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -30,8 +30,6 @@ export default function Course4page2_8 ({ navigation }) {
         <Text style={styles.secondText}>You will not be given a chance to look at the matches prior to starting, and will have to guess randomly the first round! Are you ready to start? </Text>
       </View>
       <View style={styles.footerButtons}>
-        {/* <LessonButton navigation={navigation} nextScreen='Course4page2_7' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4page2_9' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" /> */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> 
       
       </View>

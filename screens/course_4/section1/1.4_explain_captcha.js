@@ -7,17 +7,17 @@ import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-export default function Course4page1_4 ({ navigation, context, enabled = true }) {
+export default function Course4CaptchaExplanation ({ navigation, context, enabled = true }) {
     //set variables for section the screen is in and the screen name
     //These variables are passed into the progress bar
     let screenSection = screen_list.section1;
-    let screenName = 'Course4page1_4';
+    let screenName = 'Course4CaptchaExplanation';
     return (
     <View style={styles.container}>
         <Text style={styles.number}>4/8</Text>
@@ -32,13 +32,6 @@ export default function Course4page1_4 ({ navigation, context, enabled = true })
     )
 }
 
-{/*const Swiper = ({ navigation, context, enabled = true }) => {
-    return(
-        <ScrollView snapToInterval={width} decelerationRate="fast" horizontal>
-            {() => enabled && navigation.navigate('Course4Info1', { context })}
-        </ScrollView>
-    )
-}*/}
 
 const styles = StyleSheet.create({
     container: {

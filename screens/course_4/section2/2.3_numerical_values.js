@@ -1,5 +1,3 @@
-// Let’s say you find something that looks like a pair of eyes on an image, where would you search for a nose?
-
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity, Image, StatusBar } from 'react-native'
 
@@ -7,15 +5,15 @@ import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 2 Screen 25: Searching Algorithm Features')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 3 Section 2: NNs Layers Interactive')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-export default function Course4page2_3 ({ navigation }) {
+export default function Course4LayerInteractive ({ navigation }) {
   let screenSection = screen_list.section2;
-  let screenName = 'Course4page2_3';
+  let screenName = 'Course4LayerInteractive';
   const [partsLeft, setPartsLeft] = React.useState(3);
   const [currentLayer, setCurrentLayer] = React.useState(1);
   const [upperScreenText, setUpperScreenText] = React.useState("This is a simple neural network, with only one hidden layer.");

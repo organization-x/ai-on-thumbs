@@ -4,12 +4,13 @@ import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-
+import * as Analytics from 'expo-firebase-analytics'
 import LessonButton from '../../../components/LessonButton'
+Analytics.setCurrentScreen('Course 4 Screen 1: Intro')
 
-export default function Course4page1_1 ({navigation}) {
+export default function Course4Intro ({navigation}) {
   let screenSection = screen_list.section1;
-  let screenName = 'Course4page1_1';
+  let screenName = 'Course4Intro';
 
   return (
     <View style={styles.container}>

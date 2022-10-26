@@ -6,8 +6,8 @@ import StarRating from 'react-native-star-rating'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 3 Screen 30: Rating Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 5: Rating Screen')
 
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {
@@ -26,7 +26,7 @@ async function sendFeedback (rating) {
 
 const height = Dimensions.get('window').height
 
-export default function End ({ navigation }) {
+export default function Course4End ({ navigation }) {
 
   const [starCount, setStarCount] = useState(0)
   const [modalVisible, setModalVisible] = useState(false)

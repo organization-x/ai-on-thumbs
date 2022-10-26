@@ -3,8 +3,8 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity} from 'react-native'
 
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 2A: RW Example Incorrect')
 import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
@@ -13,9 +13,9 @@ import HomeButton from '../../../components/HomeButton'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-export default function Course4page3_2_3({navigation}) {
+export default function Course4RWInteractiveIncorrect ({navigation}) {
   let screenSection = screen_list.section1;
-  let screenName = 'Course4page3_2_3';
+  let screenName = 'Course4RWInteractiveInorrect';
     return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -50,7 +50,6 @@ export default function Course4page3_2_3({navigation}) {
           </Text>
         </View>
       </TouchableOpacity>
-        {/* <LessonButton navigation={navigation} nextScreen='Course4S3Info' buttonColor='#8976C2' buttonText='Next' /> */}
       </View>
     </View>
   )

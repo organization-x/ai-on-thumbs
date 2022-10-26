@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 2B: RW Example Correct')
 import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
@@ -14,9 +14,9 @@ const height = Dimensions.get('window').height
 
 
 
-export default function Course4page3_2_2({navigation}) {
+export default function Course4RWInteractiveCorrect ({navigation}) {
     let screenSection = screen_list.section3;
-    let screenName = 'Course4page3_2_2';
+    let screenName = 'Course4RWInteractiveCorrect';
     return (
     <View style={styles.container}>
       <View style={styles.top}>

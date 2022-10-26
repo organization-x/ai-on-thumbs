@@ -10,8 +10,8 @@ import SectionButton from '../../../components/SectionButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
 
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 8: Section 1 End')
 
 const height = Dimensions.get('window').height
 

@@ -7,13 +7,13 @@ import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 import { symbol } from 'prop-types'
 
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 1 Screen 2: Face Finder Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 10 Section 2: Backpropagation Matching Round 2')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
-export default function Course4page2_12 ({ navigation }) {
+export default function Course4Rematch ({ navigation }) {
 
 
   const [inputdog, setInputDog] = React.useState("     e.g. #1-4     ")
@@ -58,12 +58,10 @@ export default function Course4page2_12 ({ navigation }) {
     }
   }
 
-  const buttonPressable = (requireguessDog, requireguessFloppyDisc, requireguessBlanket, requireguessGuitar) => {
+  const buttonPressable = (numItemsTyped) => {
     if (numItemsTyped == 4) {
-    // if (requireguessDog == false && requireguessFloppyDisc == false && requireguessGuitar && requireguessBlanket) {
-        navigation.navigate('Course4page2_13')
+        navigation.navigate('Course4BPInteractiveCongrats')
     } else {
-        // set bottom text to "require more inputs or something"
         setLowerScreenText("You need to enter at least one more guess before moving on!")
     }
   }
@@ -143,7 +141,7 @@ export default function Course4page2_12 ({ navigation }) {
           </View>
               <Text style={styles.textlower}>{lowerScreenText}</Text>
               <TouchableOpacity
-                  onPress={() => buttonPressable(requireguessDog, requireguessFloppyDisc, requireguessBlanket, requireguessGuitar)}
+                  onPress={() => buttonPressable(numItemsTyped)}
                   underlayColor='#fff'
                   activeOpacity={0.3}
               >

@@ -10,8 +10,8 @@ import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 1 Screen 13.5: Human vs Computer 2 Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 13.5: Human vs Computer 2 Screen')
 
 export default function Course1HumanVsComputer2 ({ navigation }) {
   let screenSection = screen_list.course1;

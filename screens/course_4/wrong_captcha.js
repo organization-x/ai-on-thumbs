@@ -3,10 +3,13 @@ import { StyleSheet, View, Text, ImageBackground, Image, FlatList, TouchableOpac
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 import Imagel from '../../components/Image'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 1 Screen 3B: Incorrect Captcha Screen')
+
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
-export default function Wrong({navigation, context}) {
+export default function CaptchaWrong({navigation, context}) {
   const section = screen_list.section1
   const try_again = () =>{
     navigation.navigate('Course4page1_3', {context})
@@ -19,25 +22,11 @@ export default function Wrong({navigation, context}) {
       <Text style={styles.num}>3/8</Text>
       <View style={styles.interactive}>
         <Text style={{color:'white', fontSize:32, fontWeight: 'bold', textAlign: 'center', lineHeight: 50, marginTop: width/5}}>{'\t'}Uh oh!{'\n'}Let's try that again{'\n'}🙂</Text>
-        {/* <View style ={styles.img_container}>
-          <Imagel link={images[0]}/>
-          <Imagel link={images[1]}/>
-          <Imagel link={images[2]}/>
-          <Imagel link={images[3]}/>
-          <Imagel link={images[4]}/>
-          <Imagel link={images[5]}/>
-          <Imagel link={images[6]}/>
-          <Imagel link={images[7]}/>
-          <Imagel link={images[8]}/>
-
-        </View> */}
         <View style={styles.group}>
           <Text style={styles.txts} onPress={try_again}>Try Again!</Text>
         </View>
       </View>
-
       <View style={styles.footerButtons}>
-        {/* <ProgressBar navigation={navigation} currentScreen={'Course4_third'} section={section}  /> */}
       </View>
     </View>
   )

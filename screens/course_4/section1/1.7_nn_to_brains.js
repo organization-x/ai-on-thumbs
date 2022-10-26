@@ -7,14 +7,15 @@ import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 3 Screen 6: Follow Up Correct')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 7: Comparison to Brains')
+
 
 const height = Dimensions.get('window').height
 
-export default function Course4page1_7 ({ navigation }) {
+export default function Course4CompToBrain ({ navigation }) {
   let screenSection = screen_list.section1;
-  let screenName = 'Course4page1_7'
+  let screenName = 'Course4CompToBrain';
   return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -107,8 +108,6 @@ const styles = StyleSheet.create({
   },
   underlinedText: {
     textDecorationLine: 'underline',
-    // padding: 15,
-    // marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,

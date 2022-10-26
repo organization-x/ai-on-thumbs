@@ -6,8 +6,8 @@ import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 2 Screen 10: Filter Features 2 Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 10: Filter Features 2 Screen')
 
 const height = Dimensions.get('window').height
 

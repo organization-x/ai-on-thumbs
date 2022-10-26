@@ -9,8 +9,8 @@ import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 3 Screen 17: Common Trait Question')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 3 Screen 17: Common Trait Question')
 
 const height = Dimensions.get('window').height
 

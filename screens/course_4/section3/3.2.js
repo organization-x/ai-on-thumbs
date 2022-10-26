@@ -7,22 +7,19 @@ import {
   Image
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 2: Real World Interactive')
 import HomeButton from "../../../components/HomeButton";
 const height = Dimensions.get("window").height;
 const width = Dimensions.get("window").width;
 
 import colors from "../../../config/colors";
 
-export default function Course4page3_2({ navigation }) {
+export default function Course4RWInteractive ({ navigation }) {
   const [choice, setChoice] = React.useState("");
   const [checkColor1, setCheckColor1] = React.useState("#474747");
   const [checkColor2, setCheckColor2] = React.useState("#474747");
   const [checkColor3, setCheckColor3] = React.useState("#474747");
-  // figure out how to make the check boxes change color when clicked
-  // let screenSection = screen_list.section3;
-  // let screenName = 'Course4page3_1';
   return (
     <View style={styles.container}>
       <View style={styles.top}>

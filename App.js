@@ -116,43 +116,43 @@ import Course3Email from './screens/course_3/31_email'
 import Course3Promotion from './screens/course_3/32_promotion'
 
 
-import Course4page1_1 from './screens/course_4/section1/1.1_intro'
-import Course4page1_2 from './screens/course_4/section1/1.2_nn'
-import Course4page1_3 from './screens/course_4/section1/1.3_captcha'
-import Right from './screens/course_4/right_captcha'
-import Wrong from './screens/course_4/wrong_captcha'
-import Course4page1_4 from './screens/course_4/section1/1.4_explain_captcha'
-import Course4page1_5 from './screens/course_4/section1/1.5_nn_info_1'
-import Course4page1_6 from './screens/course_4/section1/1.6_nn_info_2'
-import Course4page1_7 from './screens/course_4/section1/1.7_nn_to_brains'
-import Course4page1_8 from './screens/course_4/section1/1.8_section1_end'
+import Course4Intro from './screens/course_4/section1/1.1_intro'
+import Course4IntroRealLifeApplications from './screens/course_4/section1/1.2_nn'
+import Course4InteractiveCaptcha from './screens/course_4/section1/1.3_captcha'
+import CaptchaRight from './screens/course_4/right_captcha'
+import CaptchaWrong from './screens/course_4/wrong_captcha'
+import Course4CaptchaExplanation from './screens/course_4/section1/1.4_explain_captcha'
+import Course4NNInfo1 from './screens/course_4/section1/1.5_nn_info_1'
+import Course4NNInfo2 from './screens/course_4/section1/1.6_nn_info_2'
+import Course4CompToBrain from './screens/course_4/section1/1.7_nn_to_brains'
+import Course4Sect1End from './screens/course_4/section1/1.8_section1_end'
 
 // import Course4page1_8 from './screens/course_4/8'
-import Course4page2_1 from './screens/course_4/section2/2.1_process_info'
-import Course4page2_2 from './screens/course_4/section2/2.2_layers'
-import Course4page2_3 from './screens/course_4/section2/2.3_numerical_values'
+import Course4ProcessInfo from './screens/course_4/section2/2.1_process_info'
+import Course4NNLayers from './screens/course_4/section2/2.2_layers'
+import Course4LayerInteractive from './screens/course_4/section2/2.3_numerical_values'
 import Course4SelectDNN from './screens/course_4/section2/2.4_hidden_layer_interactive'
-import Course4page2_4_correct from './screens/course_4/section2/2.4_hidden_layer_interactive_follow_up'
-import Course4page2_8 from './screens/course_4/section2/2.8_adjustment'
-import Course4page2_9 from './screens/course_4/section2/2.9_backprop_intro'
-import Course4page2_10 from './screens/course_4/section2/2.10_backprop_initial_match'
-import Course4page2_11 from './screens/course_4/section2/2.11_reveal_matches'
-import Course4page2_12 from './screens/course_4/section2/2.12_matching2'
-import Course4page2_13 from './screens/course_4/section2/2.13_congrats_comparison'
-import Course4page2_14 from './screens/course_4/section2/2.14_backprop_explanation'
-import Course4page2_15 from './screens/course_4/section2/2.15_explanation_cont'
-import Course4page2_16 from './screens/course_4/section2/2.16_section2_end'
+import Course4SelectDNN_correct from './screens/course_4/section2/2.4_hidden_layer_interactive_follow_up'
+import Course4BPInteracticeIntro2 from './screens/course_4/section2/2.8_adjustment'
+import Course4BPInteracticeIntro from './screens/course_4/section2/2.9_backprop_intro'
+import Course4BPInteractive from './screens/course_4/section2/2.10_backprop_initial_match'
+import Course4BPInteractiveReveal from './screens/course_4/section2/2.11_reveal_matches'
+import Course4Rematch from './screens/course_4/section2/2.12_matching2'
+import Course4BPInteractiveCongrats from './screens/course_4/section2/2.13_congrats_comparison'
+import Course4BPExplanation1 from './screens/course_4/section2/2.14_backprop_explanation'
+import Course4BPExplanation2 from './screens/course_4/section2/2.15_explanation_cont'
+import Course4Sect2End from './screens/course_4/section2/2.16_section2_end'
 
-import Course4page3_1 from './screens/course_4/section3/3.1'
-import Course4page3_2 from './screens/course_4/section3/3.2'
-import Course4page3_2_2 from './screens/course_4/section3/3.2-2'
-import Course4page3_2_3 from './screens/course_4/section3/3.2-3'
-import Course4page3_3 from './screens/course_4/section3/3.3'
-import Course4page3_4 from './screens/course_4/section3/3.4'
+import Course4RealWorldIntro from './screens/course_4/section3/3.1'
+import Course4RWInteractive from './screens/course_4/section3/3.2'
+import Course4RWInteractiveCorrect from './screens/course_4/section3/3.2-2'
+import Course4RWInteractiveIncorrect from './screens/course_4/section3/3.2-3'
+import Course4RealWorldExplanation from './screens/course_4/section3/3.3'
+import Course4Sect3End from './screens/course_4/section3/3.4'
 import Course4Review from './screens/course_4/3_review'
-import End from './screens/course_4/End'
-import Email from './screens/course_4/Email'
-import Promo from './screens/course_4/Promo'
+import Course4End from './screens/course_4/End'
+import Course4Email from './screens/course_4/Email'
+import Course4Promo from './screens/course_4/Promo'
 // quiz screen imports 
 import ComingSoon from './screens/quizzes/quizzes_coming_soon'
 
@@ -291,45 +291,45 @@ export default function App () {
           <Stack.Screen name='Course3Promotion' component={Course3Promotion} />
 
           {/* course 4 screen stack */}
-          <Stack.Screen name='Course4page1_1' component={Course4page1_1} />
-          <Stack.Screen name='Course4page1_2' component={Course4page1_2} /> 
-          <Stack.Screen name='Course4page1_3' component={Course4page1_3} />
-          <Stack.Screen name='Right' component={Right} />
-          <Stack.Screen name='Wrong' component={Wrong} />
-          <Stack.Screen name='Course4page1_4' component={Course4page1_4} />
-          <Stack.Screen name='Course4page1_5' component={Course4page1_5} />
-          <Stack.Screen name='Course4page1_6' component={Course4page1_6} />        
-          <Stack.Screen name='Course4page1_7' component={Course4page1_7} />
-          <Stack.Screen name='Course4page1_8' component={Course4page1_8} />
+          <Stack.Screen name='Course4Intro' component={Course4Intro} />
+          <Stack.Screen name='Course4IntroRealLifeApplications' component={Course4IntroRealLifeApplications} /> 
+          <Stack.Screen name='Course4InteractiveCaptcha' component={Course4InteractiveCaptcha} />
+          <Stack.Screen name='CaptchaRight' component={CaptchaRight} />
+          <Stack.Screen name='CaptchaWrong' component={CaptchaWrong} />
+          <Stack.Screen name='Course4CaptchaExplanation' component={Course4CaptchaExplanation} />
+          <Stack.Screen name='Course4NNInfo1' component={Course4NNInfo1} />
+          <Stack.Screen name='Course4NNInfo2' component={Course4NNInfo2} />        
+          <Stack.Screen name='Course4CompToBrain' component={Course4CompToBrain} />
+          <Stack.Screen name='Course4Sect1End' component={Course4Sect1End} />
 
-          <Stack.Screen name='Course4page2_1' component={Course4page2_1} /> 
-          <Stack.Screen name='Course4page2_2' component={Course4page2_2} />
-          <Stack.Screen name='Course4page2_3' component={Course4page2_3} />
-          <Stack.Screen name='Course4page2_4' component={Course4SelectDNN} />
-          <Stack.Screen name='Course4page2_4_correct' component={Course4page2_4_correct} />
-          <Stack.Screen name='Course4page2_9' component={Course4page2_9} />
-          <Stack.Screen name='Course4page2_8' component={Course4page2_8} />
-          <Stack.Screen name='Course4page2_10' component={Course4page2_10} />
-          <Stack.Screen name='Course4page2_11' component={Course4page2_11} />
-          <Stack.Screen name='Course4page2_12' component={Course4page2_12} />
-          <Stack.Screen name='Course4page2_13' component={Course4page2_13} />
-          <Stack.Screen name='Course4page2_14' component={Course4page2_14} />
-          <Stack.Screen name='Course4page2_15' component={Course4page2_15} />
-          <Stack.Screen name='Course4page2_16' component={Course4page2_16} />
+          <Stack.Screen name='Course4ProcessInfo' component={Course4ProcessInfo} /> 
+          <Stack.Screen name='Course4NNLayers' component={Course4NNLayers} />
+          <Stack.Screen name='Course4LayerInteractive' component={Course4LayerInteractive} />
+          <Stack.Screen name='Course4SelectDNN' component={Course4SelectDNN} />
+          <Stack.Screen name='Course4SelectDNN_correct' component={Course4SelectDNN_correct} />
+          <Stack.Screen name='Course4BPInteracticeIntro' component={Course4BPInteracticeIntro} />
+          <Stack.Screen name='Course4BPInteracticeIntro2' component={Course4BPInteracticeIntro2} />
+          <Stack.Screen name='Course4BPInteractive' component={Course4BPInteractive} />
+          <Stack.Screen name='CCourse4BPInteractiveReveal' component={Course4BPInteractiveReveal} />
+          <Stack.Screen name='Course4Rematch' component={Course4Rematch} />
+          <Stack.Screen name='Course4BPInteractiveCongrats' component={Course4BPInteractiveCongrats} />
+          <Stack.Screen name='Course4BPExplanation1' component={Course4BPExplanation1} />
+          <Stack.Screen name='Course4page2_15' component={Course4BPExplanation2} />
+          <Stack.Screen name='Course4Sect2End' component={Course4Sect2End} />
           
 
-          <Stack.Screen name='Course4page3_1' component={Course4page3_1} />
-          <Stack.Screen name='Course4page3_2' component={Course4page3_2} /> 
-          <Stack.Screen name='Course4page3_2_2' component={Course4page3_2_2} />
-          <Stack.Screen name='Course4page3_2_3' component={Course4page3_2_3} />
-          <Stack.Screen name='Course4page3_3' component={Course4page3_3} />
-          <Stack.Screen name='Course4page3_4' component={Course4page3_4} />
+          <Stack.Screen name='Course4RealWorldIntro' component={Course4RealWorldIntro} />
+          <Stack.Screen name='Course4RWInteractive' component={Course4RWInteractive} /> 
+          <Stack.Screen name='Course4RWInteractiveCorrect' component={Course4RWInteractiveCorrect} />
+          <Stack.Screen name='Course4RWInteractiveIncorrect' component={Course4RWInteractiveIncorrect} />
+          <Stack.Screen name='Course4RealWorldExplanation' component={Course4RealWorldExplanation} />
+          <Stack.Screen name='Course4Sect3End' component={Course4Sect3End} />
           <Stack.Screen name='Course4Review' component={Course4Review} />
-          <Stack.Screen name='End' component={End} />
-          <Stack.Screen name='Email' component={Email} />
-          <Stack.Screen name='Promo' component={Promo} />
+          <Stack.Screen name='Course4End' component={Course4End} />
+          <Stack.Screen name='Course4Email' component={Course4Email} />
+          <Stack.Screen name='Course4Promo' component={Course4Promo} />
 
-
+          {/* quiz screen stack */}
           <Stack.Screen name='ComingSoon' component={ComingSoon} />
 
         </Stack.Navigator>

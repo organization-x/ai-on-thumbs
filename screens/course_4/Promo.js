@@ -5,12 +5,12 @@ import { StyleSheet, View, Text, Image, Dimensions, Linking } from 'react-native
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 3 Screen 31: Promotion')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 7: Promo')
 
 const height = Dimensions.get('window').height
 
-export default function Promo ({ navigation }) {
+export default function Course4Promo ({ navigation }) {
   async function handlePress () {
     Linking.openURL('https://www.ai-camp.org/virtual-summer-camp')
     await Analytics.logEvent('Webpage Visit').catch(err => { Sentry.Native.captureException(err.response.data) })

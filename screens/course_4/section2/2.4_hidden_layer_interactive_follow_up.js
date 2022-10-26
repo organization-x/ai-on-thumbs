@@ -6,18 +6,14 @@ import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 4 Section 2: NNs Layers Interactive Follow Up')
 
-// const [redHouseDisabled, setDisableRedHouse] = React.useState(false)
-// const [blueHouseDisabled, setDisableBlueHouse] = React.useState(false)
-// const [lowerScreenText, setLowerScreenText] = React.useState('Select the house that is closest to the black house.')
-// import LessonButton from '../../components/LessonButton'
 const height = Dimensions.get('window').height
 
-export default function Course4page2_4_correct ({ navigation }) {
+export default function Course4SelectDNN_correct ({ navigation }) {
   let screenSection = screen_list.section2;
-  let screenName = 'Course4page2_4_correct';
+  let screenName = 'Course4SelectDNN_correct';
   return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -29,8 +25,6 @@ export default function Course4page2_4_correct ({ navigation }) {
       </View>
   
       <View style={styles.footerButtons}>
-        {/* <LessonButton navigation={navigation} nextScreen='Course4page2_4' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course4page2_5' buttonColor='#8976C2' buttonText='Lets do it!' />   */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />  
       </View>
     </View>

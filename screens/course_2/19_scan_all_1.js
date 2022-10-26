@@ -7,8 +7,8 @@ import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import LessonButton from '../../components/LessonButton'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 2 Screen 19: Scan all question ')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 19: Scan all question ')
 
 const height = Dimensions.get('window').height
 

@@ -5,8 +5,8 @@ import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import { LinearGradient } from 'expo-linear-gradient'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 2 Screen 18.3: Draggable Explanation Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 18.3: Draggable Explanation Screen')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width

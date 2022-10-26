@@ -9,8 +9,8 @@ import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 1 Screen 11: Magnify Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 11: Magnify Screen')
 
 export default function Course1Magnify ({ navigation }) {
   const smallScreen = Dimensions.get('window').height < 700;

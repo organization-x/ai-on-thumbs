@@ -5,13 +5,13 @@ import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import HomeButton from '../../../components/HomeButton'
 import colors from '../../../config/colors'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 4: Section 3 NN Lesson End')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-export default function Course4page3_4 ({navigation}) {
+export default function Course4Sect3End ({navigation}) {
     return (
     <View style={styles.container}>
       <View style={styles.top}>

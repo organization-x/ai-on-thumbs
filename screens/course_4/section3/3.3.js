@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 3: Real World Example Explanation')
 import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
@@ -15,9 +15,9 @@ const width = Dimensions.get('window').width
 
 
   
-export default function Course4page3_3 ({navigation}) {
+export default function Course4RealWorldExplanation ({navigation}) {
   let screenSection = screen_list.section3;
-  let screenName = 'Course4page3_3';
+  let screenName = 'Course4RealWorldExplanation';
   return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -41,14 +41,8 @@ export default function Course4page3_3 ({navigation}) {
           </Text>
             
         </View>
-      
-      
       <View style={[styles.footerButtons, {marginTop: 50}]}>
-        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2_2' buttonColor='#8976C2' buttonText='Back' />  */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> 
-        {/*need to figure out how to access variable determining if the user answered correctly or incorrectly*/}
-
-        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_4' buttonColor='#8976C2' buttonText='Next' /> */}
       </View>
     </View>
   )

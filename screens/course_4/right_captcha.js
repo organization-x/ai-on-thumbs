@@ -3,11 +3,15 @@ import { StyleSheet, View, Text, ImageBackground, Image, FlatList, TouchableOpac
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import Imagel from '../../components/Image'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 1 Screen 3A: Captcha Correct')
+
+
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 const images = [require('../../assets/bus_1.jpg'),require('../../assets/bus_2.jpg'),require('../../assets/bus.jpg'),require('../../assets/car.jpg'),require('../../assets/house.jpg'),require('../../assets/street.jpg'),require('../../assets/streets.jpg'),require('../../assets/traf.jpg'),require('../../assets/van.jpg')]
-export default function Right ({navigation}) {
+export default function CaptchaRight ({navigation}) {
   const section = screen_list.section1
   const screenName = 'Course4page1_3';
   return (

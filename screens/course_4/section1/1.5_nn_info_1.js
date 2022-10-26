@@ -7,14 +7,14 @@ import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 5: NN Info Part 1')
 
 const height = Dimensions.get('window').height
 
-export default function Course4page1_5 ({ navigation }) {
+export default function Course4NNInfo1 ({ navigation }) {
     let screenSection = screen_list.section1;
-    let screenName = 'Course4page1_5';
+    let screenName = 'Course4NNInfo1';
     return (
     <View style={styles.container}>
         <View style={styles.top}>

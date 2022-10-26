@@ -6,28 +6,15 @@ import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 1 Screen 2: Face Finder Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 9 Section 2: Backpropagation Matching Reveal')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
-export default function Course4page2_11 ({ navigation }) {
+export default function Course4BPInteractiveReveal ({ navigation }) {
   let screenSection = screen_list.section2;
-  let screenName = 'Course4page2_11';
-
-  // const [inputdog, setInputDog] = React.useState("     e.g. #1-4     ")
-  // const [inputblanket, setInputBlanket] = React.useState("     e.g. #1-4     ")
-  // const [inputguitar, setInputGuitar] = React.useState("     e.g. #1-4     ")
-  // const [inputfloppydisc, setInputFloppyDisc] = React.useState("     e.g. #1-4     ")
-
-  // const [numItemsTyped, setNumItemsTyped] = React.useState(0);
-  // const [requireguessDog, setrequireguessDog] = React.useState(true);
-  // const [requireguessBlanket, setrequireguessBlanket] = React.useState(true);
-  // const [requireguessGuitar, setrequireguessGuitar] = React.useState(true);
-  // const [requireguessFloppyDisc, setrequireguessFloppyDisc] = React.useState(true);
-  
-  
+  let screenName = 'Course4BPInteractiveReveal';
 
   return (
     <View style={styles.container}>

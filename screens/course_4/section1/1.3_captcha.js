@@ -8,11 +8,13 @@ import ProgressBar from '../../../components/ProgressBar'
 import ImageContainer from '../../../components/Images'
 import Imagel from '../../../components/Image'
 import HomeButton from '../../../components/HomeButton'
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 3: Interactive Captcha')
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 
-export default function Course4page3_1 ({ navigation, context }) {
+export default function Course4InteractiveCaptcha ({ navigation, context }) {
   const [images, setImages] = useState([require('../../../assets/bus_1.jpg'),require('../../../assets/bus_2.jpg'),require('../../../assets/bus.jpg'),require('../../../assets/car.jpg'),require('../../../assets/house.jpg'),require('../../../assets/street.jpg'),require('../../../assets/streets.jpg'),require('../../../assets/traf.jpg'),require('../../../assets/van.jpg')])
   const name = 'Course4page1_3'
   const section=screen_list.section1
@@ -44,24 +46,7 @@ export default function Course4page3_1 ({ navigation, context }) {
       
       <View style={styles.interactive}>
         <Text style={styles.box}>Select all images with a{'\n'}<Text style={styles.bold}> Bus</Text>{'\n'}Click verify when done</Text>
-        {/* <FlatList
-          data={images}
-          numColumns={3}
-          renderItem={ ({ item, index }) => (
-            <View style={styles.img_container}>
-              <TouchableOpacity onPress={() => pressHandler(index)} >
-                <Image source={item} key={index} style={{
-                  tintColor: col ? null : 'black',
-                  opacity: col ? 1 : 0.7,
-                  width: 100,
-                  height: 100,
-                  marginLeft: 5
-                }}/>
-              </TouchableOpacity>
-            </View>
-
-          )}
-        /> */}
+        
       <View style ={styles.img_container}>
         <Imagel link={images[0]} press={pressed} presser={setPressed} one={true} ind={0} fill={full} filler={setFull}/>
         <Imagel link={images[1]} press={pressed} presser={setPressed} one={true} ind={1} fill={full} filler={setFull}/>
@@ -78,7 +63,6 @@ export default function Course4page3_1 ({ navigation, context }) {
 
       </View>
       <View style={styles.footerButtons}>
-        {/* <ProgressBar navigation={navigation} currentScreen={name} section={section}  /> */}
       </View>
     </View>
   )

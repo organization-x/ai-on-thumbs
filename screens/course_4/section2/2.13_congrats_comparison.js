@@ -4,11 +4,11 @@ import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-
-
-export default function Course4page2_13 ({navigation}) {
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 11 Section 2: Backpropagation Matching Congrats')
+export default function Course4BPInteractiveCongrats ({navigation}) {
   let screenSection = screen_list.section2;
-  let screenName = 'Course4page2_13';
+  let screenName = 'Course4BPInteractiveCongrats';
   return (
     <View style={styles.container}>
       <View style={styles.top}>

@@ -4,12 +4,12 @@ import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
+import * as Analytics from 'expo-firebase-analytics'
 
-const section = screen_list.section1
-
-export default function Course4page1_2 ({navigation}) {
+Analytics.setCurrentScreen('Course 4 Screen 2: Real Life Applications')
+export default function Course4IntroRealLifeApplications ({navigation}) {
   let screenSection = screen_list.section1;
-  let screenName = 'Course4page1_2';
+  let screenName = 'Course4IntroRealLifeApplications';
   return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -22,7 +22,7 @@ export default function Course4page1_2 ({navigation}) {
         <Text style={styles.textund}>NNs are important to learn about, so let's see how they work!</Text>
       </View>
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={'Course4page1_2'} section={section}  />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={section}  />
       </View>
     </View>
   )
