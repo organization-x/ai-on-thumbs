@@ -14,12 +14,8 @@ const height = Dimensions.get('window').height
 
 
 
-export default function Course4page3_2_2 ({navigation}) {
-    
-  let screenSection = screen_list.section3;
-  let screenName = 'Course4page3_2_2';
-
-  return (
+export default function Course4S3Correct({navigation}) {
+    return (
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
@@ -38,7 +34,11 @@ export default function Course4page3_2_2 ({navigation}) {
         </Text>
       </View>
       <View style={[styles.footerButtons, {marginTop: 50}]}>
+<<<<<<< HEAD:screens/course_4/3.2-2.js
+        <ProgressBar navigation={navigation} currentScreen={'Course4S3Intro'} section={section}  />
+=======
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+>>>>>>> nr_neural_network:screens/course_4/section3/3.2-2.js
       </View>
     </View>
   )

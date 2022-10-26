@@ -24,15 +24,16 @@ export default function Course4page3_4 ({navigation}) {
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>You've now completed a brief introduction to neural networks</Text>
+        <Text style={styles.text}>Let's review what we learned</Text>
       </View>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('Courses')
+          navigation.navigate('Course4Review')
         }}
       >
         <View style={styles.returnButton}>
           <Text style={styles.returnText}>
-            Return home
+            Review
           </Text>
         </View>
       </TouchableOpacity>
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
       flex: 1,
       paddingHorizontal: 20,
       paddingVertical: 15,
-      backgroundColor: colors.background,
+      backgroundColor: "#202020"
     },
     number: {
       color: 'white',

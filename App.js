@@ -13,6 +13,19 @@ import YesThumbs from './screens/YesThumbs'
 
 import * as Sentry from 'sentry-expo'
 
+<<<<<<< HEAD
+import QuizzesScreen from './screens/quizzes/Quiz_landingpage'
+
+//testing
+// import Test from './screens/course_4/test'
+// import Course4S3Intro from './screens/course_4/3.1'
+// import Course4S3Recommendation from './screens/course_4/3.2'
+// import Course4S3Correct from './screens/course_4/3.2-2'
+// import Course4S3Incorrect from './screens/course_4/3.2-3'
+// import Course4S3Info from './screens/course_4/3.3'
+// import Course4S3End from './screens/course_4/3.4'
+=======
+>>>>>>> nr_neural_network
 
 // course 1 imports
 import Course1Intro from './screens/course_1/1_intro'

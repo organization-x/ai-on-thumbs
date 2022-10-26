@@ -30,16 +30,17 @@ export default function Course4page1_5 ({ navigation }) {
         </View>
 
         <View style={styles.footerButtons}>
-            <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+          <ProgressBar navigation={navigation} currentScreen={'Course4page1_5'} section={section}  />
         </View>
+        
     </View>
   )
 }
 
 const styles = StyleSheet.create({
     buttons: {
-        backgroundColor: colors.progressButton, 
-        padding: 10, 
+        backgroundColor: colors.progressButton,
+        padding: 10,
         borderRadius: 12,
         height: 20,
         width: 35,
@@ -51,8 +52,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.background,
     },
     currentButton: {
-        backgroundColor: colors.primary, 
-        padding: 10, 
+        backgroundColor: colors.primary,
+        padding: 10,
         borderRadius: 12,
         height: 20,
         width: 35,
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
         textAlign: 'right'
     },
     progressBar: {
-        alignItems: 'center', 
+        alignItems: 'center',
         justifyContent: 'flex-end',
     },
     rectangle: {

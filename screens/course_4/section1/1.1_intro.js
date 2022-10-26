@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground } from 'react-native'
+import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
@@ -11,6 +11,9 @@ export default function Course4page1_1 ({navigation}) {
   let screenSection = screen_list.section1;
   let screenName = 'Course4page1_1';
 
+export default function Course4_intro ({ navigation}) {
+  const name = 'Course4_intro'
+  const section=screen_list.section1
   return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -22,8 +25,7 @@ export default function Course4page1_1 ({navigation}) {
         <Text style={styles.text}>are computer algorithms that are designed to imitate how the human brain learns.</Text>
       </View>
       <View style={styles.footerButtons}>
-        {/* <LessonButton navigation={navigation} nextScreen='Courses' buttonColor='#8976C2' buttonText='Back' /> */}
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+        <ProgressBar navigation={navigation} currentScreen={name} section={section}  />
       </View>
     </View>
   )

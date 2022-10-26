@@ -5,6 +5,7 @@ import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 
+const section = screen_list.section1
 
 export default function Course4page1_2 ({navigation}) {
   let screenSection = screen_list.section1;
@@ -21,7 +22,7 @@ export default function Course4page1_2 ({navigation}) {
         <Text style={styles.textund}>NNs are important to learn about, so let's see how they work!</Text>
       </View>
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />  
+        <ProgressBar navigation={navigation} currentScreen={'Course4page1_2'} section={section}  />
       </View>
     </View>
   )

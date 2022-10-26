@@ -12,6 +12,7 @@ import HomeButton from '../../../components/HomeButton'
 // import LessonButton from '../../components/LessonButton'
 
 const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course4page2_1 ({ navigation }) {
   let screenSection = screen_list.section2;
@@ -23,20 +24,20 @@ export default function Course4page2_1 ({ navigation }) {
         <Text style={styles.number}>1/14</Text>
       </View>
       <View style={styles.interactive}>
-        <View style={styles.rectangle}> 
+        <View style={styles.rectangle}>
           <Text style={styles.text}>How NNs process info</Text>
         </View>
-        <Text style={styles.secondText}>Neural networks process information by <Text style={styles.underlinedText}>first taking in a vast amount of data </Text> 
+        <Text style={styles.secondText}>Neural networks process information by <Text style={styles.underlinedText}>first taking in a vast amount of data </Text>
         </Text>
         <Text style={styles.secondText}>They then train themselves to find patterns in the data and <Text style={styles.underlinedText}>predict outputs based on the learned patterns</Text>
         </Text>
         {/* <Text style={styles.underlinedText}> first taking in a vast amount of data </Text> */}
-        
+
       </View>
       <View style={styles.footerButtons}>
         {/* <LessonButton navigation={navigation} nextScreen='Course4page1_7' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course4page2_2' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" /> */}
-        
+
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
     marginTop: '2%'
   },
   underlinedText: {
-    textDecorationLine: 'underline', 
+    textDecorationLine: 'underline',
     // padding: 15,
     // marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -109,10 +110,10 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'center'
-  }, 
+    justifyContent: 'space-between'
+  },
   progressBar: {
-    alignItems: 'center', 
+    alignItems: 'center',
     justifyContent: 'flex-end',
   },
   rectangle: {

@@ -32,9 +32,8 @@ export default function Course4page3_1 ({navigation}) {
           </Text>
         </View>
         <View style={styles.footerButtons}>
-          <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> 
+          <ProgressBar navigation={navigation} currentScreen={'Course4S3Intro'} section={section}  />
         </View>
-
     </View>
   )
 }

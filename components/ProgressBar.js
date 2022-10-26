@@ -14,12 +14,11 @@ import colors from '../config/colors'
 export default function ProgressBar ({ navigation, section, currentScreen, context, enabled = true, actOpacity = 0.3 }) {
     let buttonWidth = section.buttonWidth;
     let screens = section.screens;
-    
-
     let progressBar = [];
     let buttonColor;
     let currentScreenIdx;
     let firstScreenIdx;
+    //Find index of current screen
     for (let i=0; i<screens.length; i++){
         if (screens[i] === currentScreen) {
             currentScreenIdx = i;
@@ -27,7 +26,7 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
         }
     }
     //setting first button screen
-    if (currentScreenIdx < 2){
+    if (currentScreenIdx < 4){
         firstScreenIdx = 0;
     }
     else if (currentScreenIdx > screens.length-3) {
@@ -43,7 +42,7 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
             buttonWidth = 20;
         }
         //the last button is small when you're farther from the end
-        else if (progressBar.length === 4 && i<screens.length-1) {
+        else if (progressBar.length > 4 && i<screens.length-1) {
             buttonWidth = 20;
         }
         else if (progressBar.length === screens.length && screens.length < 5) {
@@ -56,7 +55,7 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
         //set color of each button
         if (i === currentScreenIdx) {
             buttonColor = colors.primary;
-        } 
+        }
         else {
             buttonColor = colors.progressButton;
         }
@@ -69,7 +68,6 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
             activeOpacity={actOpacity}
         />);
     }
-    
 
     return progressBar;
 }
@@ -77,16 +75,15 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: colors.progressButton, 
-        padding: 10, 
+        backgroundColor: colors.progressButton,
         marginHorizontal: 5,
         borderRadius: 12,
         height: 20,
-        width: 35,
+        width: 10,
     },
     container: {
-        marginBottom: 20,
         flexDirection: 'row',
+        marginBottom: 20,
         justifyContent: 'center'
     }
 })

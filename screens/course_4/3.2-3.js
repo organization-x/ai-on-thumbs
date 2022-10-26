@@ -1,7 +1,14 @@
 // Tasks like captchas are easy for humans but hard for computers
 
 import React from 'react'
+<<<<<<< HEAD
+import { StyleSheet, View, Text, Dimensions} from 'react-native'
+import LessonButton from '../../components/LessonButton'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
+=======
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity} from 'react-native'
+>>>>>>> nr_neural_network
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 import HomeButton from '../../../components/HomeButton'

@@ -27,12 +27,12 @@ export default function Course4SelectDNN ({ navigation }) {
     }
   }
   let screenSection = screen_list.section2;
-  let screenName = 'Course4page2_4_correct';
+  let screenName = 'Course4SelectDNN';
   return (
     // <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
     //   <View style={styles.interactive}>
     //     <Text style={styles.boldText}>Out of the following, which one has 2 or more hidden layers? </Text>
-        
+
     //   </View>
     //   <View style={styles.footerButtons}>
     //     <LessonButton navigation={navigation} nextScreen='Course4page2_3' buttonColor='#8976C2' buttonText='Back' />
@@ -53,15 +53,29 @@ export default function Course4SelectDNN ({ navigation }) {
           <TouchableOpacity style={styles.cell} onPress={() => handlePress(0)} disabled={singleLayerDisabled}>
             <Image style={styles.image} onPress={() => handlePress(0)} source={require('../../../assets/course_4/single_layer_nn.png')} />
           </TouchableOpacity>
+<<<<<<< HEAD:screens/course_4/2.4_hidden_layer_interactive.js
+
+=======
+>>>>>>> nr_neural_network:screens/course_4/section2/2.4_hidden_layer_interactive.js
         </View>
         <View style={styles.rowContainer}>
           <TouchableOpacity style={styles.cell} onPress={() => handlePress(1)} disabled={dogDisabled}>
               <Image style={styles.image} source={require('../../../assets/course_4/dog.png')} />
           </TouchableOpacity>
         </View>
+<<<<<<< HEAD:screens/course_4/2.4_hidden_layer_interactive.js
+
+      </View>
+      <Text style={styles.text}>{lowerScreenText}</Text>
+      <View style={styles.footerButtons}>
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page2_4_correct' buttonColor='#8976C2' buttonText='Back' /> */}
+        {/* <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />  */}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection}/>
+=======
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{lowerScreenText}</Text>
+>>>>>>> nr_neural_network:screens/course_4/section2/2.4_hidden_layer_interactive.js
       </View>
     </View>
   )
