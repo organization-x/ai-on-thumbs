@@ -3,19 +3,13 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
-import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
+import colors from '../../../config/colors'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
-
-
-
-
 
 export default function Course4page3_4 ({navigation}) {
     return (
@@ -54,14 +48,12 @@ const styles = StyleSheet.create({
       backgroundColor: colors.background,
     },
     number: {
-      fontFamily: "AppleSDGothicNeo-Light",
       color: 'white',
       fontSize: 35,
       textAlign: 'right',
       paddingVertical: 30
     },
     text: {
-      fontFamily: "AppleSDGothicNeo-Light",
       color: 'white',
       fontSize: 35,
       textAlign: 'center'
@@ -74,7 +66,6 @@ const styles = StyleSheet.create({
       marginTop: 30,
     },
     title: {
-      fontFamily: "AppleSDGothicNeo-Light",
       textAlign: 'center',
       color: 'white',
       fontSize: 50,
@@ -97,7 +88,6 @@ const styles = StyleSheet.create({
       marginTop: '2%'
     },
     returnText: {
-      fontFamily: "AppleSDGothicNeo-Light",
       color: 'white',
       fontSize: 35,
       textAlign: 'center',

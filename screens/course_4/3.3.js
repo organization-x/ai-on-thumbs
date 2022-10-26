@@ -2,47 +2,58 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
+
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
+import HomeButton from '../../../components/HomeButton'
 import colors from '../../../config/colors'
+
 import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
-import HomeButton from '../../../components/HomeButton'
-
 const width = Dimensions.get('window').width
-const height = Dimensions.get('window').height
 
 
-
-export default function Course4page3_2_2 ({navigation}) {
-    
+  
+export default function Course4page3_3 ({navigation}) {
   let screenSection = screen_list.section3;
-  let screenName = 'Course4page3_2_2';
-
+  let screenName = 'Course4page3_3';
   return (
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>3/4</Text>
       </View>
+      
       <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          That’s correct! Amazon’s NN would also select the soccer ball based on John’s interests
-        </Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          This is a simple example, but a neural network{' '}
-          <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
-            can do this on a much larger scale
+          <Text style={styles.text}>
+            After looking at a user's preferences, the computer{' '}
+            <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
+              can start recognizing patterns
+            </Text>
           </Text>
-        </Text>
-      </View>
+          <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
+            accurate predictions{' '}
+          </Text>
+          {/* and{' '}00k */}
+          <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
+            great recommendations!
+          </Text>
+            
+        </View>
+      
+      
       <View style={[styles.footerButtons, {marginTop: 50}]}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_2_2' buttonColor='#8976C2' buttonText='Back' />  */}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> 
+        {/*need to figure out how to access variable determining if the user answered correctly or incorrectly*/}
+
+        {/* <LessonButton navigation={navigation} nextScreen='Course4page3_4' buttonColor='#8976C2' buttonText='Next' /> */}
       </View>
     </View>
   )
 }
+
+
 
 const styles = StyleSheet.create({
     container: {
@@ -53,7 +64,7 @@ const styles = StyleSheet.create({
     },
     number: {
       color: 'white',
-      fontSize: 30,
+      fontSize: 35,
       textAlign: 'right'
     },
     text: {
@@ -67,7 +78,6 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       width: width * 0.8,
       alignSelf: 'center',
-      marginTop: height / 30,
     },
     top: {
       flexDirection: 'row',
@@ -78,7 +88,6 @@ const styles = StyleSheet.create({
     footerButtons: {
       marginBottom: 20,
       flexDirection: 'row',
-      justifyContent: 'center',
-      paddingTop: 300
+      justifyContent: 'center'
     }
 })

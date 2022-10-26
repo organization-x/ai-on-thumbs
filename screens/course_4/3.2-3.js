@@ -1,45 +1,38 @@
 // Tasks like captchas are easy for humans but hard for computers
 
 import React from 'react'
-import { StyleSheet, View, Text, Dimensions} from 'react-native'
+import { StyleSheet, View, Text, Dimensions, TouchableOpacity} from 'react-native'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
-import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
-import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-
+import colors from '../../../config/colors'
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 
-
-export default function Course4page3_2_2 ({navigation}) {
-    
-  let screenSection = screen_list.section3;
-  let screenName = 'Course4page3_2_2';
-
-  return (
+export default function Course4page3_2_3({navigation}) {
+    return (
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
       </View>
+      
       <View style={styles.textContainer}>
         <Text style={styles.text}>
-          That’s correct! Amazon’s NN would also select the soccer ball based on John’s interests
+          Not quite, why don't you give it another shot?
         </Text>
       </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          This is a simple example, but a neural network{' '}
-          <Text style={[styles.text, {textDecorationLine: 'underline'}]}>
-            can do this on a much larger scale
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Course4page3_2')
+        }}
+      >
+        <View style={styles.returnButton}>
+          <Text style={styles.returnText}>
+            Try again
           </Text>
-        </Text>
-      </View>
-      <View style={[styles.footerButtons, {marginTop: 50}]}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-      </View>
+        </View>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -53,8 +46,9 @@ const styles = StyleSheet.create({
     },
     number: {
       color: 'white',
-      fontSize: 30,
-      textAlign: 'right'
+      fontSize: 35,
+      textAlign: 'right',
+      paddingVertical: 30
     },
     text: {
       color: 'white',
@@ -67,7 +61,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       width: width * 0.8,
       alignSelf: 'center',
-      marginTop: height / 30,
+      marginTop: 90,
     },
     top: {
       flexDirection: 'row',
@@ -75,10 +69,20 @@ const styles = StyleSheet.create({
       alignContent: 'center',
       marginTop: '2%'
     },
-    footerButtons: {
-      marginBottom: 20,
-      flexDirection: 'row',
+    returnButton: {
+      marginBottom: height/20,
+      backgroundColor: '#0f89ce',
+      height: height/10,
+      width: width/1.5,
       justifyContent: 'center',
-      paddingTop: 300
-    }
+      alignItems: 'center',
+      borderRadius: 15,
+      alignSelf: 'center',
+    },
+    returnText: {
+      color: 'white',
+      fontSize: 35,
+      textAlign: 'center',
+      fontWeight: 'bold'
+  }
 })
