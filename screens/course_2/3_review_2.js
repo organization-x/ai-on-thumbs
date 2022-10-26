@@ -18,7 +18,7 @@ export default function Course2Review2 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.pagenumber}>2/</Text>
+        <Text style={styles.pagenumber}>2/26</Text>
       </View>
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Facial Recognition Review</LessonHeader>

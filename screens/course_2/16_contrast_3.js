@@ -19,7 +19,7 @@ export default function Course2Contrast3 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.pagenumber}>14/</Text>
+        <Text style={styles.pagenumber}>14/26</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.header}>Remember:</Text>

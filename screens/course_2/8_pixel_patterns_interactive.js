@@ -82,7 +82,7 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.pagenumber}>6/</Text>
+        <Text style={styles.pagenumber}>6/26</Text>
       </View>
       <ScrollView scrollEnabled={false}>
         <SafeAreaView style={styles.container}>

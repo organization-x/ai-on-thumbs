@@ -17,7 +17,7 @@ export default function Course2DraggableCompleted ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.pagenumber}>17/</Text>
+        <Text style={styles.pagenumber}>17/26</Text>
       </View>
       <View style={{ flex: 1 }}>
         <Text style={styles.topText}>Drag and release the filter around the face to find a matching pixel pattern.</Text>

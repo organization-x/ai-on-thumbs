@@ -27,7 +27,7 @@ export default function Course2Congrats ({ navigation }) {
       />
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>26/26</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.bigText}>Congrats!</Text>
@@ -53,6 +53,12 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 28,
     textAlign: 'right'
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   top: {
     flexDirection: 'row',

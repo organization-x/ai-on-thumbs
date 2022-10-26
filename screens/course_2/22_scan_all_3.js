@@ -18,7 +18,7 @@ export default function Course2ScanAll3 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>20/26</Text>
       </View>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}>Scanning across the image with filters won’t work because it’s not how us humans identify faces anyways.</Text>
@@ -42,6 +42,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'center'
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   lessonContent: {
     flex: 1,

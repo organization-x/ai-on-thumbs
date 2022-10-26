@@ -17,7 +17,7 @@ export default function App ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.pagenumber}>4/</Text>
+        <Text style={styles.pagenumber}>4/26</Text>
       </View>
       <View style={styles.lowPicture}>
         <TouchableOpacity>

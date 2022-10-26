@@ -18,7 +18,7 @@ export default function Course2DraggableExplanation ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.pagenumber}>18/</Text>
+        <Text style={styles.pagenumber}>18/26</Text>
       </View>
       <View style={{ flex: 1 }}>
         <Text style={styles.topText}>How does the computer use contrast to help?</Text>

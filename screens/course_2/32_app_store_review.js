@@ -51,10 +51,7 @@ export default function Course2AppStoreReview ({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>1</Text>
-      </View>
+      
       <View style={styles.centeredContainer}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.mainText}> Did you have fun learning AI with us?</Text>

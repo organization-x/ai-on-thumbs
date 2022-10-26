@@ -26,7 +26,7 @@ export default function Course2DraggableFilter ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.pagenumber}>16/</Text>
+        <Text style={styles.pagenumber}>16/26</Text>
       </View>
       <Text style={styles.topText}>Drag and release the filter around the face to find a matching pixel pattern.</Text>
       <View

@@ -22,7 +22,7 @@ export default function Course3HouseIntroduction ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>3/21</Text>
       </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.text}>Here is the black house.</Text>
@@ -68,6 +68,12 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   number: {
     color: 'white',

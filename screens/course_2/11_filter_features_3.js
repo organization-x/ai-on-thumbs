@@ -18,7 +18,7 @@ export default function Course2FilterFeatures3 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.pagenumber}>9/</Text>
+        <Text style={styles.pagenumber}>9/26</Text>
       </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>The short answer:</Text>

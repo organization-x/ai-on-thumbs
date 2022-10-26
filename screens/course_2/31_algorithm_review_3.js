@@ -19,10 +19,7 @@ export default function Course2AlgorithmReview3 ({ navigation }) {
   let screenName = 'Course2AlgorithmReview3';
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.pageNum}></Text>
-      </View>
+      
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Algorithm Review</LessonHeader>
 
@@ -54,10 +51,6 @@ export default function Course2AlgorithmReview3 ({ navigation }) {
       <View style={[styles.footerButtons, {marginBottom: height / 25}]}>
         <LessonButton navigation={navigation} nextScreen='Course2AppStoreReview' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
-      <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-      </View>
-
       <StatusBar style='auto' />
     </View>
   )

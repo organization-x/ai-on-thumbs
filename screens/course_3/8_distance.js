@@ -19,10 +19,6 @@ export default function Course3Distance ({ navigation }) {
   let screenName = 'Course3Distance';
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
-      </View>
       <View style={styles.interactive}>
         <Text style={styles.boldText}>Distance is how we measure how far apart houses are.</Text>
         <Text style={styles.text}>Let's take another look at the role it plays!</Text>

@@ -137,10 +137,7 @@ export default function Course2Selfie ({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>3</Text>
-      </View>
+      
 
       <View style={{ alignItems: 'center' }}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />

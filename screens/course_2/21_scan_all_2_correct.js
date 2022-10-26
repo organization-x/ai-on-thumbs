@@ -17,10 +17,6 @@ export default function Course2ScanAll2Correct ({ navigation }) {
   let screenName = 'Course2ScanAll2Correct';
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
-      </View>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}> You're right, we don't!</Text>
         <Text style={styles.secondText}>But do you know why?</Text>

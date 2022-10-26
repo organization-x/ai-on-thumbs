@@ -18,10 +18,6 @@ export default function Course2ScanAll2Wrong ({ navigation }) {
   let screenName = 'Course2ScanAll2Wrong';
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
-      </View>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}>Error 404</Text>
         <Image style={styles.image} source={require('../../assets/course_2/scan.png')} />

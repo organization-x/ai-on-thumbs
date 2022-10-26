@@ -22,7 +22,7 @@ export default function Course3CommonTraitAnswer ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>14/21</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>Your neighborhood of course!</Text>
@@ -52,6 +52,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   interactive: {
     flex: 1,

@@ -21,10 +21,7 @@ export default function Course2Email ({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>2</Text>
-      </View>
+      
       <View style={styles.interactive}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.text} onPress={handlePress}>Continue your journey by going to ai-camp.org</Text>

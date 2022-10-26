@@ -17,10 +17,7 @@ export default function Course2AlgorithmReview1 ({ navigation }) {
   let screenName = 'Course2AlgorithmReview1';
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.pageNum}></Text>
-      </View>
+      
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Algorithm Review</LessonHeader>
 

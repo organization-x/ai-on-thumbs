@@ -16,7 +16,7 @@ export default function Course2PixelPatternsText ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.pagenumber}>5/</Text>
+        <Text style={styles.pagenumber}>5/26</Text>
       </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>

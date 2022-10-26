@@ -18,7 +18,7 @@ export default function Course2ScanAll4 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>21/26</Text>
       </View>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}>If every filter scanned the entire photo over and over, then a face would have more wrinkles by the time the computer recognizes it!
@@ -45,6 +45,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'center'
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   lessonContent: {
     flex: 1,

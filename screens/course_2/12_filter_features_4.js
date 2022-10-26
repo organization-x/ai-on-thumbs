@@ -18,7 +18,7 @@ export default function Course2FilterFeatures4 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.pagenumber}>10/</Text>
+        <Text style={styles.pagenumber}>10/26</Text>
       </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>

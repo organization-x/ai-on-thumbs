@@ -21,7 +21,7 @@ export default function Course3KNNMainIdeaII ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>16/21</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>That's the idea of</Text>
@@ -56,6 +56,12 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center'
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   text: {
     marginTop: '60%',

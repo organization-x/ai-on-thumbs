@@ -17,7 +17,7 @@ export default function Course2Intro ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>1/</Text>
+        <Text style={styles.number}>1/26</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>Welcome to your second lesson in facial recognition!</Text>

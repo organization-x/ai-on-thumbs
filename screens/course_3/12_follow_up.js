@@ -18,10 +18,6 @@ export default function Course3FollowUpIIA ({ navigation }) {
   let screenName = 'Course3FollowUpIIA';
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
-      </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           Actually, the black and green houses both belong to Neighborhood A.

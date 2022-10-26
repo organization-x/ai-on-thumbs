@@ -62,9 +62,7 @@ export default function Course3AlgorithmReview4 ({ navigation }) {
       <View style={[styles.footerButtons, {marginBottom: height / 30}]}>
         <LessonButton navigation={navigation} nextScreen='Course3AppStoreReview' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
-      <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
-      </View>
+      
 
       <StatusBar style='auto' />
     </View>

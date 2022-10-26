@@ -21,7 +21,7 @@ export default function Course3KNNMainIdeaVI ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.pagenumber}>20/21</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.topText}>Members of each group are close to other members of the group.</Text>
@@ -45,6 +45,12 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 28,
     textAlign: 'right'
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   top: {
     flexDirection: 'row',

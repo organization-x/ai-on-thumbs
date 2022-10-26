@@ -19,10 +19,6 @@ export default function Course3FollowUpIIIncorrect ({ navigation }) {
   let screenName = 'Course3FollowUpIIIncorrect';
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
-      </View>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}>Oh Snap!</Text>
         <Image style={styles.image} source={require('../../assets/course_3/NeighborsFighting.png')} />
