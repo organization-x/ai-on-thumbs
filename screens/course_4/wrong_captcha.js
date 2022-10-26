@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { StyleSheet, View, Text, ImageBackground, Image, FlatList, TouchableOpacity, Dimensions, Pressable, Button } from 'react-native'
 import screen_list from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
+import Imagel from '../../components/Image'
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
@@ -17,27 +18,26 @@ export default function Wrong({navigation, context}) {
     <View style={styles.container}>
       <Text style={styles.num}>3/8</Text>
       <View style={styles.interactive}>
-        <Text style={styles.box}>Uh oh!{'\n'}Let's try that again{'\n'}🙂</Text>
-        <View style ={styles.img_container}>
-          <Imagel link={images[0]} press={pressed} presser={setPressed} one={true} ind={0} fill={full} filler={setFull}/>
-          <Imagel link={images[1]} press={pressed} presser={setPressed} one={true} ind={1} fill={full} filler={setFull}/>
-          <Imagel link={images[2]} press={pressed} presser={setPressed} one={true} ind={2} fill={full} filler={setFull}/>
-          <Imagel link={images[3]} press={pressed} presser={setPressed} one={false} ind={3} fill={full} filler={setFull}/>
-          <Imagel link={images[4]} press={pressed} presser={setPressed} one={false} ind={4} fill={full} filler={setFull}/>
-          <Imagel link={images[5]} press={pressed} presser={setPressed} one={false} ind={5} fill={full} filler={setFull}/>
-          <Imagel link={images[6]} press={pressed} presser={setPressed} one={false} ind={6} fill={full} filler={setFull}/>
-          <Imagel link={images[7]} press={pressed} presser={setPressed} one={false} ind={7} fill={full} filler={setFull}/>
-          <Imagel link={images[8]} press={pressed} presser={setPressed} one={false} ind={8} fill={full} filler={setFull}/>
+        <Text style={{color:'white', fontSize:32, fontWeight: 'bold', textAlign: 'center', lineHeight: 50, marginTop: width/5}}>{'\t'}Uh oh!{'\n'}Let's try that again{'\n'}🙂</Text>
+        {/* <View style ={styles.img_container}>
+          <Imagel link={images[0]}/>
+          <Imagel link={images[1]}/>
+          <Imagel link={images[2]}/>
+          <Imagel link={images[3]}/>
+          <Imagel link={images[4]}/>
+          <Imagel link={images[5]}/>
+          <Imagel link={images[6]}/>
+          <Imagel link={images[7]}/>
+          <Imagel link={images[8]}/>
 
-        </View>
+        </View> */}
         <View style={styles.group}>
-          <Text style={styles.txts} onPress={move_on}>Move On!</Text>
           <Text style={styles.txts} onPress={try_again}>Try Again!</Text>
         </View>
       </View>
 
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={'Course4_third'} section={section}  />
+        {/* <ProgressBar navigation={navigation} currentScreen={'Course4_third'} section={section}  /> */}
       </View>
     </View>
   )
@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderRadius: 10,
     height: "55%",
-    marginVertical: 10,
-    paddingLeft: 5
+    paddingLeft: 5,
+    marginBottom: width / 10
   },
   txts: {
     color: 'white',
@@ -70,8 +70,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     paddingHorizontal: 20,
     paddingVertical: 10,
-    width: width / 2.75,
-    textAlign: 'center'
+    width: width / 2,
+    textAlign: 'center',
+    marginTop: height/4.5
   },
   group: {
     flexDirection: 'row',
@@ -128,7 +129,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-evenly',
     marginTop: 50
   }
 

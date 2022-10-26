@@ -2,10 +2,11 @@ import React, {useState} from 'react'
 import { StyleSheet, View, Text, ImageBackground, Image, FlatList, TouchableOpacity, Dimensions, Pressable, Button } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
+import Imagel from '../../components/Image'
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
-
+const images = [require('../../assets/bus_1.jpg'),require('../../assets/bus_2.jpg'),require('../../assets/bus.jpg'),require('../../assets/car.jpg'),require('../../assets/house.jpg'),require('../../assets/street.jpg'),require('../../assets/streets.jpg'),require('../../assets/traf.jpg'),require('../../assets/van.jpg')]
 export default function Right ({navigation}) {
   const section = screen_list.section1
   return (
@@ -14,16 +15,15 @@ export default function Right ({navigation}) {
       <View style={styles.interactive}>
         <Text style={styles.box}>See  how  you're{'\n'} able  to  identify{'\n'}what  a  bus  is!</Text>
         <View style ={styles.img_container}>
-          <Imagel link={images[0]} press={pressed} presser={setPressed} one={true} ind={0} fill={full} filler={setFull}/>
-          <Imagel link={images[1]} press={pressed} presser={setPressed} one={true} ind={1} fill={full} filler={setFull}/>
-          <Imagel link={images[2]} press={pressed} presser={setPressed} one={true} ind={2} fill={full} filler={setFull}/>
-          <Imagel link={images[3]} press={pressed} presser={setPressed} one={false} ind={3} fill={full} filler={setFull}/>
-          <Imagel link={images[4]} press={pressed} presser={setPressed} one={false} ind={4} fill={full} filler={setFull}/>
-          <Imagel link={images[5]} press={pressed} presser={setPressed} one={false} ind={5} fill={full} filler={setFull}/>
-          <Imagel link={images[6]} press={pressed} presser={setPressed} one={false} ind={6} fill={full} filler={setFull}/>
-          <Imagel link={images[7]} press={pressed} presser={setPressed} one={false} ind={7} fill={full} filler={setFull}/>
-          <Imagel link={images[8]} press={pressed} presser={setPressed} one={false} ind={8} fill={full} filler={setFull}/>
-
+          <Imagel link={images[0]} style={styles.show}/>
+          <Imagel link={images[1]} style={styles.show}/>
+          <Imagel link={images[2]} style={styles.show}/>
+          <Imagel link={images[3]}/>
+          <Imagel link={images[4]}/>
+          <Imagel link={images[5]}/>
+          <Imagel link={images[6]}/>
+          <Imagel link={images[7]}/>
+          <Imagel link={images[8]}/>
         </View>
         <Text style={styles.btm}>Humans are easily able to identify buses by finding their characteristics, since we have seen them multiple times</Text>
       </View>
@@ -36,19 +36,21 @@ export default function Right ({navigation}) {
 }
 
 const styles = StyleSheet.create({
+  show: {
+    opacity: 0.3
+  },
   img_container: {
     flexDirection: 'row',
     justifyContent:'center',
     flexWrap: 'wrap',
     alignItems:'center',
     width: width-50,
-    paddingTop: 10,
+    paddingTop: 5,
     marginHorizontal: 3,
     borderColor: "#1FBD67",
     borderWidth: 4,
     borderRadius: 10,
     height: "55%",
-    marginVertical: 10,
     paddingLeft: 5
   },
   footerButtons: {
@@ -61,7 +63,8 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     width: "90%",
-    textAlign: 'center'
+    textAlign: 'center',
+
   },
   img: {
     width: width-85,
@@ -78,7 +81,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     lineHeight: 35,
-    marginBottom: 25
+    marginBottom: 10
   },
   container: {
     flex: 1,

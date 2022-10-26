@@ -10,14 +10,15 @@ import Imagel from '../../components/Image'
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
-const [pressed, setPressed] = useState([])
-const [full, setFull] = useState([])
-const [work, setWork] = useState(true)
+
 
 export default function Course4_third ({ navigation, context }) {
-  const [images, setImages] = useState([require('./bus_1.jpg'),require('./bus_2.jpg'),require('./bus.jpg'),require('./car.jpg'),require('./house.jpg'),require('./street.jpg'),require('./streets.jpg'),require('./traf.jpg'),require('./van.jpg')])
+  const [images, setImages] = useState([require('../../assets/bus_1.jpg'),require('../../assets/bus_2.jpg'),require('../../assets/bus.jpg'),require('../../assets/car.jpg'),require('../../assets/house.jpg'),require('../../assets/street.jpg'),require('../../assets/streets.jpg'),require('../../assets/traf.jpg'),require('../../assets/van.jpg')])
   const name = 'Course4_third'
   const section=screen_list.section1
+  const [pressed, setPressed] = useState([])
+  const [full, setFull] = useState([])
+  const [work, setWork] = useState(true)
 
 
   const verify = () => {
@@ -73,7 +74,7 @@ export default function Course4_third ({ navigation, context }) {
 
       </View>
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={name} section={section}  />
+        {/* <ProgressBar navigation={navigation} currentScreen={name} section={section}  /> */}
       </View>
     </View>
   )
