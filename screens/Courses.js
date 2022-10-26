@@ -44,7 +44,7 @@ export default function CoursesScreen ({ navigation }) {
           desc="This lesson is going to explain what a neural network is, how it's similar to a human brain, and the basics of how they work. We'll also be exploring some real world applications of neural networks."
           ratingandduration='Beginner: 10 minutes'
         />
-        <CourseCard 
+        <CourseCard
           navigation={navigation}
           lessonScreen='ComingSoon'
           gradColors={['#8233C5', '#3C4687']}

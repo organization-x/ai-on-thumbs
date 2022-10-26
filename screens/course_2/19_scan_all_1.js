@@ -2,8 +2,6 @@
 
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
-import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import LessonButton from '../../components/LessonButton'
@@ -13,12 +11,10 @@ Analytics.setCurrentScreen('Course 2 Screen 19: Scan all question ')
 const height = Dimensions.get('window').height
 
 export default function Course2ScanAll1 ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2ScanAll';
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>19/26</Text>
       </View>
       <View style={styles.textSection}>

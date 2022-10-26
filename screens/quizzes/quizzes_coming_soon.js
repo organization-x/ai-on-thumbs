@@ -1,32 +1,27 @@
 import React from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Dimensions } from 'react-native'
 import colors from '../../config/colors'
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
-import HomeButton from '../../components/HomeButton'
-
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
-export default function ComingSoon ({navigation}) {
-  
+export default function ComingSoon ({ navigation }) {
   return (
     <View style={styles.container}>
-      
-        <View style={styles.interactive}>
-            <Text style={styles.text}>Quizzes for all four lessons are on the way!</Text>
-        </View>
-        <TouchableOpacity
-            onPress={() => {
-            navigation.navigate('Courses')
-            }}
-        >
+
+      <View style={styles.interactive}>
+        <Text style={styles.text}>Quizzes for all four lessons are on the way!</Text>
+      </View>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Courses')
+        }}
+      >
         <View style={styles.returnButton}>
           <Text style={styles.returnText}>
             Return to courses
           </Text>
         </View>
-        </TouchableOpacity>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -34,18 +29,18 @@ export default function ComingSoon ({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
-    
+    backgroundColor: colors.background
+
   },
   number: {
     fontSize: 28,
-    color: "white",
+    color: 'white',
     textAlign: 'right'
   },
   box: {
     backgroundColor: colors.primary,
     color: 'white',
-    width: "100%",
+    width: '100%',
     borderRadius: 20,
     paddingHorizontal: 10,
     paddingVertical: 15,
@@ -64,7 +59,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 48,
-    width: "100%",
+    width: '100%',
     fontWeight: 'bold',
     lineHeight: 35,
     marginBottom: 25,
@@ -75,7 +70,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 24,
-    width: "100%",
+    width: '100%',
     fontWeight: 'bold',
     marginTop: 25,
     lineHeight: 35,
@@ -84,8 +79,8 @@ const styles = StyleSheet.create({
   returnButton: {
     marginTop: 150,
     backgroundColor: '#0f89ce',
-    height: height/10,
-    width: width/1.5,
+    height: height / 10,
+    width: width / 1.5,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 15,
@@ -93,12 +88,12 @@ const styles = StyleSheet.create({
     marginBottom: 100
   },
   returnText: {
-    fontFamily: "AppleSDGothicNeo-Light",
+    fontFamily: 'AppleSDGothicNeo-Light',
     color: 'white',
     fontSize: 35,
     textAlign: 'center',
     fontWeight: 'bold'
-    },
+  },
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -111,4 +106,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 })
-

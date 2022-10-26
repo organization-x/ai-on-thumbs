@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import { Text, Image, View, TouchableOpacity, Dimensions, Modal } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import StarRating from 'react-native-star-rating'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
@@ -52,7 +51,7 @@ export default function Course3AppStoreReview ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>1</Text>
       </View>
       <View style={styles.centeredContainer}>
@@ -86,7 +85,7 @@ export default function Course3AppStoreReview ({ navigation }) {
           </View>
         </Modal>
       </View>
-        
+
       <View style={styles.footerButtons}>
         <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course3AlgorithmReview4' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course3Email' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
@@ -104,7 +103,7 @@ const styles = {
     backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingVertical: 15
   },
   centeredContainer: {
     flex: 1,

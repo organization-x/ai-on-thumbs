@@ -3,13 +3,10 @@
 import React, { useState } from 'react'
 import { Text, Image, View, TouchableOpacity, Dimensions, Modal } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import StarRating from 'react-native-star-rating'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
-import HomeButton from '../../components/HomeButton'
-
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 32: Rating Screen')
 
@@ -51,7 +48,7 @@ export default function Course2AppStoreReview ({ navigation }) {
 
   return (
     <View style={styles.container}>
-      
+
       <View style={styles.centeredContainer}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.mainText}> Did you have fun learning AI with us?</Text>
@@ -83,7 +80,7 @@ export default function Course2AppStoreReview ({ navigation }) {
           </View>
         </Modal>
       </View>
-        
+
       <View style={styles.footerButtons}>
         <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course2AlgorithmReview3' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course2Email' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
@@ -101,7 +98,7 @@ const styles = {
     backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingVertical: 15
   },
   centeredContainer: {
     flex: 1,

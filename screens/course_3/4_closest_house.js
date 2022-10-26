@@ -4,11 +4,7 @@ import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
-
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 4: Nearest Neighbor')
 
@@ -16,9 +12,6 @@ const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 export default function Course3SelectClosestHouse ({ navigation }) {
-  let screenSection = screen_list.course3;
-  let screenName = 'Course3SelectClosestHouse';
-
   const [redHouseDisabled, setDisableRedHouse] = React.useState(false)
   const [blueHouseDisabled, setDisableBlueHouse] = React.useState(false)
   const [lowerScreenText, setLowerScreenText] = React.useState('Select the house that is closest to the black house.')
@@ -36,7 +29,7 @@ export default function Course3SelectClosestHouse ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>4/</Text>
       </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
@@ -103,7 +96,7 @@ const styles = StyleSheet.create({
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center',
+    alignContent: 'center'
   },
   rowContainer: {
     flex: 1.5,

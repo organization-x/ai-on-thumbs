@@ -1,10 +1,9 @@
 import React from 'react'
 import { StyleSheet, View, Image, Text, Dimensions } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 18.3: Draggable Explanation Screen')
 
@@ -12,12 +11,12 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course2DraggableExplanation ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2DraggableExplanation';
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2DraggableExplanation'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>18/26</Text>
       </View>
       <View style={{ flex: 1 }}>

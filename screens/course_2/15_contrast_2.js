@@ -3,22 +3,21 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, Dimensions } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 15: Contrast 2 Screen')
 
 const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
 
 export default function Course2Contrast2 ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2Contrast2';
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2Contrast2'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>13/26</Text>
       </View>
       <View style={styles.interactive}>

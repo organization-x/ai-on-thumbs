@@ -2,11 +2,9 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import ConfettiCannon from 'react-native-confetti-cannon'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -16,13 +14,13 @@ const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 export default function Course1Congrats ({ navigation }) {
-  let screenSection = screen_list.course1;
-  let screenName = 'Course1Congrats';
+  const screenSection = ScreenList.course1
+  const screenName = 'Course1Congrats'
 
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>22/22</Text>
       </View>
       <ConfettiCannon
@@ -38,8 +36,8 @@ export default function Course1Congrats ({ navigation }) {
         <Text style={styles.boldText}>Now let’s review.</Text>
       </View>
       <View style={styles.footerButtons}>
-        {/*<LessonButton navigation={navigation} nextScreen='Course1FaceParts2' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Review' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />*/}
+        {/* <LessonButton navigation={navigation} nextScreen='Course1FaceParts2' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Review' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>

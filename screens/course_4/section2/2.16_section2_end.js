@@ -1,21 +1,18 @@
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
-import ProgressBar from '../../../components/ProgressBar'
+import ScreenList from '../../../config/screen_list'
 import HomeButton from '../../../components/HomeButton'
 import SectionButton from '../../../components/SectionButton'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 14 Section 2: Section 2 End') 
+Analytics.setCurrentScreen('Course 4 Screen 14 Section 2: Section 2 End')
 
-export default function Course4Sect2End ({navigation}) {
-  let screenSection = screen_list.section2;
-  let screenName = 'Course4Sect2End';
-  let nextSection = screen_list.section3;
+export default function Course4Sect2End ({ navigation }) {
+  const nextSection = ScreenList.section3
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>14/14</Text>
       </View>
       <View style={styles.interactive}>
@@ -23,7 +20,7 @@ export default function Course4Sect2End ({navigation}) {
         <Text style={styles.text}>Let's now look at a real-world application of Neural Networks!</Text>
       </View>
       <View style={styles.sectionButton}>
-            <SectionButton navigation={navigation} nextSection={true} goSection={nextSection} />
+        <SectionButton navigation={navigation} nextSection goSection={nextSection} />
       </View>
     </View>
   )
@@ -38,18 +35,18 @@ const styles = StyleSheet.create({
   },
   number: {
     fontSize: 28,
-    color: "white",
+    color: 'white',
     textAlign: 'right'
   },
   sectionButton: {
     marginBottom: 160,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   box: {
     backgroundColor: colors.primary,
     color: 'white',
-    width: "100%",
+    width: '100%',
     borderRadius: 20,
     paddingHorizontal: 10,
     paddingVertical: 15,
@@ -69,7 +66,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 24,
-    width: "100%",
+    width: '100%',
     fontWeight: 'bold',
     lineHeight: 35,
     marginBottom: 25
@@ -78,7 +75,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 24,
-    width: "100%",
+    width: '100%',
     fontWeight: 'bold',
     marginTop: 25,
     lineHeight: 35,
@@ -96,4 +93,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 })
-

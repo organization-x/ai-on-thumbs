@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, Dimensions, TouchableOpacity } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -11,12 +11,12 @@ const height = Dimensions.get('screen').height
 const screenWidth = Dimensions.get('screen').width
 
 export default function App ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2OceanNumbers';
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2OceanNumbers'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>4/26</Text>
       </View>
       <View style={styles.lowPicture}>

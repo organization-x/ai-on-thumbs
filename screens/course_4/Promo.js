@@ -3,7 +3,6 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions, Linking } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 4 Section 3 Screen 7: Promo')
@@ -37,7 +36,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15,
-    backgroundColor: "#202020"
+    backgroundColor: '#202020'
   },
   interactive: {
     flex: 1,

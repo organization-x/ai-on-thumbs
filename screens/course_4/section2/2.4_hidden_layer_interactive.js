@@ -1,13 +1,10 @@
 
 import React from 'react'
-import { StyleSheet, View, Text, Image, Dimensions, TouchableOpacity} from 'react-native'
+import { StyleSheet, View, Text, Image, Dimensions, TouchableOpacity } from 'react-native'
 import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
 import HomeButton from '../../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 4 Screen 5 Section 2: NNs Hidden Layers Interactive')
-
-
 
 const height = Dimensions.get('window').height
 
@@ -22,14 +19,14 @@ export default function Course4SelectDNN ({ navigation }) {
       setLowerScreenText("It's not that neural network! Pick another option.")
     } else if (num === 1) {
       setdogDisabled(true)
-      setLowerScreenText("Hmm, the dog is definitely not the right choice! Pick another option.")
+      setLowerScreenText('Hmm, the dog is definitely not the right choice! Pick another option.')
     }
   }
-  
+
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>4/14</Text>
       </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
@@ -44,7 +41,7 @@ export default function Course4SelectDNN ({ navigation }) {
         </View>
         <View style={styles.rowContainer}>
           <TouchableOpacity style={styles.cell} onPress={() => handlePress(1)} disabled={dogDisabled}>
-              <Image style={styles.image} source={require('../../../assets/course_4/dog.png')} />
+            <Image style={styles.image} source={require('../../../assets/course_4/dog.png')} />
           </TouchableOpacity>
         </View>
       </View>
@@ -54,7 +51,6 @@ export default function Course4SelectDNN ({ navigation }) {
     </View>
   )
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -74,7 +70,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    marginBottom: '10%',
+    marginBottom: '10%'
     // width: "80%"
   },
   cell: {
@@ -94,13 +90,13 @@ const styles = StyleSheet.create({
     marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 25,
+    fontSize: 25
   },
   textContainer: {
     height: '20%',
     justifyContent: 'center',
     alignItems: 'center',
-    alignSelf: 'center',
+    alignSelf: 'center'
   },
   image: {
     flex: 1,

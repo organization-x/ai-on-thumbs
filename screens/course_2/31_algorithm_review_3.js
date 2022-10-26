@@ -2,24 +2,18 @@
 
 import React from 'react'
 import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
-import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
-import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 31: Algo Review 3')
 
 const height = Dimensions.get('window').height
 
 export default function Course2AlgorithmReview3 ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2AlgorithmReview3';
   return (
     <View style={styles.container}>
-      
+
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Algorithm Review</LessonHeader>
 
@@ -48,7 +42,7 @@ export default function Course2AlgorithmReview3 ({ navigation }) {
         </View>
       </View>
 
-      <View style={[styles.footerButtons, {marginBottom: height / 25}]}>
+      <View style={[styles.footerButtons, { marginBottom: height / 25 }]}>
         <LessonButton navigation={navigation} nextScreen='Course2AppStoreReview' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
       <StatusBar style='auto' />

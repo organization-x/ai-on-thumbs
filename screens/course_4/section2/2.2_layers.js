@@ -1,41 +1,38 @@
 // Distance is how we measure how far apart houses are.
 
 import React from 'react'
-import { StyleSheet, View, Text, Dimensions, Image} from 'react-native'
+import { StyleSheet, View, Text, Dimensions, Image } from 'react-native'
 import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
+import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-import { LinearGradient } from 'expo-linear-gradient'
-
-
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 4 Screen 2 Section 2: NNs Layers')
 // Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
 const height = Dimensions.get('window').height
 
 export default function Course4NNLayers ({ navigation }) {
-  let screenSection = screen_list.section2;
-  let screenName = 'Course4NNLayers';
+  const screenSection = ScreenList.section2
+  const screenName = 'Course4NNLayers'
   return (
 
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>2/14</Text>
       </View>
       <View style={styles.container}>
-        <Text style={styles.secondText}>As displayed in the image,</Text>    
+        <Text style={styles.secondText}>As displayed in the image,</Text>
       </View>
-      
-        <View style={styles.imageContainer}>
-            <Image style={styles.image} source={require('../../../assets/course_4/nn_layers.gif')}></Image>
-        </View>
-      
-      <View style={styles.container}>     
+
+      <View style={styles.imageContainer}>
+        <Image style={styles.image} source={require('../../../assets/course_4/nn_layers.gif')} />
+      </View>
+
+      <View style={styles.container}>
         <Text style={styles.thirdText}>NNs have 3 general types of layers: <Text style={styles.underlinedText}>Input, Hidden, and Output Layers</Text> </Text>
       </View>
-      
+
       <View style={styles.footerButtons}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
@@ -55,8 +52,8 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'right',
     marginTop: 10
-},
-  imageContainer:{
+  },
+  imageContainer: {
     flexGrow: 1,
     justifyContent: 'center',
     // marginLeft: 55,
@@ -109,7 +106,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   underlinedText: {
-    textDecorationLine: 'underline', 
+    textDecorationLine: 'underline',
     // padding: 15,
     // marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -129,6 +126,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center'
-  },
+  }
 
 })

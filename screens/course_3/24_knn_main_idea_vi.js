@@ -2,25 +2,22 @@
 
 import React from 'react'
 import { StyleSheet, View, Dimensions, Text } from 'react-native'
-import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
-
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 24: KNN Main Idea VI')
 
 const height = Dimensions.get('window').height
 
 export default function Course3KNNMainIdeaVI ({ navigation }) {
-  let screenSection = screen_list.course3;
-  let screenName = 'Course3KNNMainIdeaVI';
+  const screenSection = ScreenList.course3
+  const screenName = 'Course3KNNMainIdeaVI'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>20/21</Text>
       </View>
       <View style={styles.interactive}>
@@ -35,7 +32,7 @@ export default function Course3KNNMainIdeaVI ({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-   container: {
+  container: {
     backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
@@ -55,7 +52,7 @@ const styles = StyleSheet.create({
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center',
+    alignContent: 'center'
   },
   interactive: {
     flex: 1,

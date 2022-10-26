@@ -1,21 +1,20 @@
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, Dimensions } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
+import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
-import LessonButton from '../../../components/LessonButton'
 Analytics.setCurrentScreen('Course 4 Screen 1: Intro')
 
-export default function Course4Intro ({navigation}) {
-  let screenSection = screen_list.section1;
-  let screenName = 'Course4Intro';
+export default function Course4Intro ({ navigation }) {
+  const screenSection = ScreenList.section1
+  const screenName = 'Course4Intro'
 
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>1/8</Text>
       </View>
       <View style={styles.interactive}>
@@ -23,7 +22,7 @@ export default function Course4Intro ({navigation}) {
         <Text style={styles.text}>are computer algorithms that are designed to imitate how the human brain learns.</Text>
       </View>
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection}  />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
   )
@@ -41,11 +40,11 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'right',
     marginTop: 10
-},
+  },
   box: {
-    backgroundColor: "#1FBD67",
+    backgroundColor: '#1FBD67',
     color: 'white',
-    width: "100%",
+    width: '100%',
     borderRadius: 20,
     paddingHorizontal: 10,
     paddingVertical: 15,
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 30,
-    width: "80%",
+    width: '80%',
     fontWeight: 'bold',
     lineHeight: 40,
     marginTop: 10

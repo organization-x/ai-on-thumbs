@@ -3,11 +3,9 @@
 import React from 'react'
 
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import ImageMapper from 'react-native-image-mapper'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -17,13 +15,13 @@ const deviceHeight = Dimensions.get('window').height
 const imageDimension = deviceHeight * 0.35
 
 export default function Course1FaceParts2 ({ navigation }) {
-  let screenSection = screen_list.course1;
-  let screenName = 'Course1FaceParts2';
+  const screenSection = ScreenList.course1
+  const screenName = 'Course1FaceParts2'
 
-  const [lowerScreenText, setLowerScreenText] = React.useState(' ');
-  const [upperScreenText, setUpperScreenText] = React.useState('Tap to identify which features you think are important to recognize a face.');
-  const [selectedAreaId, setSelectedAreaId] = React.useState([]);
-  const imageSource = require('../../assets/course_1/markcubanface.png');
+  const [lowerScreenText, setLowerScreenText] = React.useState(' ')
+  const [upperScreenText, setUpperScreenText] = React.useState('Tap to identify which features you think are important to recognize a face.')
+  const [selectedAreaId, setSelectedAreaId] = React.useState([])
+  const imageSource = require('../../assets/course_1/markcubanface.png')
   const areaMap = [
     {
       id: '0',
@@ -138,7 +136,7 @@ export default function Course1FaceParts2 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>21/22</Text>
       </View>
       <View style={{ flex: 1 }}>
@@ -159,8 +157,8 @@ export default function Course1FaceParts2 ({ navigation }) {
         <Text style={styles.text}> {lowerScreenText} </Text>
       </View>
       <View style={styles.footerButtons}>
-        {/*<LessonButton navigation={navigation} nextScreen='Course1FaceParts' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Congrats' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />*/}
+        {/* <LessonButton navigation={navigation} nextScreen='Course1FaceParts' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Congrats' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>

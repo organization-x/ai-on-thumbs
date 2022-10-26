@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Text, Image, View, TouchableOpacity, Dimensions, Modal } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import StarRating from 'react-native-star-rating'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
@@ -9,25 +8,9 @@ import * as Sentry from 'sentry-expo'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 4 Section 3 Screen 5: Rating Screen')
 
-async function sendFeedback (rating) {
-  const res = await fetch('https://app.ai-camp.org/set-rating', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      rating
-    })
-  })
-
-  const resText = await res.text()
-  return resText
-}
-
 const height = Dimensions.get('window').height
 
 export default function Course4End ({ navigation }) {
-
   const [starCount, setStarCount] = useState(0)
   const [modalVisible, setModalVisible] = useState(false)
 

@@ -3,10 +3,7 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
-import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 20: Scan all wrong ')
 
@@ -14,8 +11,6 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course2ScanAll2Wrong ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2ScanAll2Wrong';
   return (
     <View style={styles.container}>
       <View style={styles.lessonContent}>

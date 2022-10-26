@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { StyleSheet, View, Text, Image, Switch, ScrollView, Dimensions, TouchableOpacity, ImageBackground, SafeAreaView } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -11,8 +11,8 @@ const windowHeight = Dimensions.get('window').height
 const windowWidth = Dimensions.get('window').width
 
 export default function Course2PixelPatternsInteractive ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2PixelPatternsInteractive';
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2PixelPatternsInteractive'
 
   const [isEnabled, setIsEnabled] = useState(false)
   const toggleSwitch = () => setIsEnabled(previousState => !previousState)
@@ -81,7 +81,7 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>6/26</Text>
       </View>
       <ScrollView scrollEnabled={false}>

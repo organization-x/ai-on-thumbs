@@ -10,11 +10,8 @@ import { Camera } from 'expo-camera'
 import Toast from '../../components/Toast'
 import * as FileSystem from 'expo-file-system'
 import { manipulateAsync, SaveFormat } from 'expo-image-manipulator'
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
-import HomeButton from '../../components/HomeButton'
-
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 34: Selfie Screen')
 
@@ -137,7 +134,6 @@ export default function Course2Selfie ({ navigation }) {
 
   return (
     <View style={styles.container}>
-      
 
       <View style={{ alignItems: 'center' }}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />

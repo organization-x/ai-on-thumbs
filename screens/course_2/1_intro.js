@@ -1,8 +1,8 @@
 // Welcome to your second lesson in facial recognition! Let’s review what we learned last time.
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground, Dimensions } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -11,12 +11,12 @@ Analytics.setCurrentScreen('Course 2 Screen 1: Intro Screen')
 const height = Dimensions.get('window').height
 
 export default function Course2Intro ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2Intro';
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2Intro'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>1/26</Text>
       </View>
       <View style={styles.interactive}>

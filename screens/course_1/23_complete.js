@@ -2,7 +2,6 @@
 import React from 'react'
 import { StyleSheet, View, Image, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import colors from '../../config/colors'
 
 import * as Analytics from 'expo-firebase-analytics'

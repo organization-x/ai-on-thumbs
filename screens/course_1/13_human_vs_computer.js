@@ -4,10 +4,8 @@
 
 import React, { useState } from 'react'
 import { StyleSheet, View, Text, Image, Switch, ScrollView, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -16,13 +14,13 @@ Analytics.setCurrentScreen('Course 1 Screen 13: Human vs Computer Screen')
 const height = Dimensions.get('window').height
 
 export default function Course1HumanVsComputer ({ navigation }) {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+  const [isEnabled, setIsEnabled] = useState(false)
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState)
 
-  let src;
-  let screenSection = screen_list.course1;
-  let screenName = 'Course1HumanVsComputer';
-  
+  let src
+  const screenSection = ScreenList.course1
+  const screenName = 'Course1HumanVsComputer'
+
   if (isEnabled === true) {
     src = require('../../assets/course_1/pixelizedlincoln.png')
   } else {
@@ -32,7 +30,7 @@ export default function Course1HumanVsComputer ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>14/22</Text>
       </View>
       <ScrollView scrollEnabled={false}>
@@ -62,8 +60,8 @@ export default function Course1HumanVsComputer ({ navigation }) {
       </ScrollView>
 
       <View style={styles.footerButtons}>
-        {/*<LessonButton navigation={navigation} nextScreen='Course1Info5' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />*/}
+        {/* <LessonButton navigation={navigation} nextScreen='Course1Info5' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>

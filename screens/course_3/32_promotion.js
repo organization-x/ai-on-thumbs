@@ -3,11 +3,8 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions, Linking } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 31: Promotion')
@@ -23,8 +20,8 @@ export default function Promotion ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.number}></Text>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.number} />
       </View>
       <View style={styles.interactive}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
@@ -41,7 +38,7 @@ export default function Promotion ({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-   container: {
+  container: {
     backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
@@ -55,7 +52,7 @@ const styles = StyleSheet.create({
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center',
+    alignContent: 'center'
   },
   interactive: {
     flex: 1,

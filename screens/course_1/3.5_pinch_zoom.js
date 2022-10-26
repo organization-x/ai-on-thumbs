@@ -5,10 +5,8 @@ import { StyleSheet, View, Dimensions, Text } from 'react-native'
 import Zoom from '../../components/Zoom'
 import TopLessonParagraph from '../../components/TopLessonParagraph'
 import BottomLessonParagraph from '../../components/BottomLessonParagraph'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -17,15 +15,15 @@ Analytics.setCurrentScreen('Course 1 Screen 3.5: Pinch Zoom Screen')
 const height = Dimensions.get('window').height
 
 export default function Course1PinchZoom ({ navigation }) {
-  const [currentZoom, setCurrentZoom] = useState(1);
+  const [currentZoom, setCurrentZoom] = useState(1)
 
-  let screenSection = screen_list.course1;
-  let screenName = 'Course1PinchZoom';
+  const screenSection = ScreenList.course1
+  const screenName = 'Course1PinchZoom'
 
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>4/22</Text>
       </View>
       <TopLessonParagraph style={styles.text}>It turns out each picture is composed of tiny color squares - pixels! {'\n\n'} Pinch the photo to see pixels. </TopLessonParagraph>
@@ -36,8 +34,8 @@ export default function Course1PinchZoom ({ navigation }) {
 
       <BottomLessonParagraph style={styles.text}>{(currentZoom > 1.8) ? 'Great! \n\n Now you know photos are made up of tiny pixels.' : '\n\n\n'}</BottomLessonParagraph>
       <View style={styles.footerButtons}>
-        {/*<LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Info1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />*/}
+        {/* <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Info1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>

@@ -1,36 +1,33 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
+import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-import { LinearGradient } from 'expo-linear-gradient'
-
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 4 Screen 4 Section 2: NNs Layers Interactive Follow Up')
 
 const height = Dimensions.get('window').height
 
-export default function Course4SelectDNN_correct ({ navigation }) {
-  let screenSection = screen_list.section2;
-  let screenName = 'Course4SelectDNN_correct';
+export default function Course4SelectDNNCorrect ({ navigation }) {
+  const screenSection = ScreenList.section2
+  const screenName = 'Course4SelectDNN_correct'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
       </View>
       <View style={styles.interactive}>
         <Text style={styles.boldText}>Correct!</Text>
         <Text style={styles.secondText}>A NN with two or more layers is called a <Text styles={styles.underlinedText}>deep neural network.</Text></Text>
       </View>
-  
+
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />  
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
   )
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -50,7 +47,7 @@ const styles = StyleSheet.create({
     fontSize: height / 24
   },
   underlinedText: {
-    textDecorationLine: 'underline', 
+    textDecorationLine: 'underline',
     // padding: 15,
     // marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

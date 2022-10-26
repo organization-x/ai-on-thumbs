@@ -2,9 +2,9 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, Linking } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course Ad')
 
 import * as Sentry from 'sentry-expo'
+Analytics.setCurrentScreen('Course Ad')
 
 export default function CourseCard ({ gradColors, title, desc }) {
   async function handlePress () {

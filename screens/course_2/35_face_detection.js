@@ -2,12 +2,10 @@
 
 import React, { useState } from 'react'
 import { StyleSheet, View, Image, Text, Dimensions, TouchableOpacity, Modal, Alert } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import * as Sharing from 'expo-sharing'
 import * as FileSystem from 'expo-file-system'
 import colors from '../../config/colors'
-import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 import * as Sentry from 'sentry-expo'
 Analytics.setCurrentScreen('Course 2 Screen 35: Face Detection Screen')
@@ -49,7 +47,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
   }
   return (
     <View style={styles.container}>
-      
+
       <View style={{ alignItems: 'center' }}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
       </View>
@@ -79,7 +77,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
             onPress={() => shareData(context).catch(err => { Sentry.Native.captureException(err.message) })}
           >
           <Image style={styles.image} source={{ uri: `data:image/png;base64,${context}` }} />
-        </TouchableOpacity>
+          </TouchableOpacity>
         : <View style={styles.imageContainer}>
           <Image style={styles.noPhotoImage} source={require('../../assets/course_2/scan.png')} />
           <Text style={styles.noPhotoText}> (No photo taken)</Text>
@@ -88,7 +86,7 @@ export default function Course2FaceDetection ({ route, navigation }) {
       {context !== null
         ? <TouchableOpacity onPress={() => { displayModal(true) }}>
           <Text style={styles.secondText}> Face not detected? Tap here for help.</Text>
-          </TouchableOpacity>
+        </TouchableOpacity>
         : null}
 
       <View style={styles.footerButtons}>

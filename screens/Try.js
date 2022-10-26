@@ -35,14 +35,14 @@ export default function Try ({ navigation }) {
     return result.uri
   }
 
-  const sendFaceRequest = async (image_string) => {
+  const sendFaceRequest = async (ImageString) => {
     let res
     try {
       res = await fetch('https://app.ai-camp.org/image',
         {
           method: 'POST',
           body: JSON.stringify(
-            { base_64: image_string }
+            { base_64: ImageString }
           ),
           headers: {
             'Content-type': 'application/json'
@@ -132,7 +132,7 @@ export default function Try ({ navigation }) {
         : imageBase64
           ? <View style={styles.imageContainer}>
             <Image style={styles.image} source={{ uri: `data:image/png;base64,${imageBase64}` }} />
-            </View>
+          </View>
           : null}
 
       <View style={styles.buttonView}>

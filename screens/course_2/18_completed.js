@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Image, Dimensions, Text } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -11,12 +11,12 @@ const width = Dimensions.get('window').width
 Analytics.setCurrentScreen('Course 2 Screen 18.2: Draggable Completed Screen')
 
 export default function Course2DraggableCompleted ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2DraggableCompleted';
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2DraggableCompleted'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>17/26</Text>
       </View>
       <View style={{ flex: 1 }}>

@@ -1,23 +1,20 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, StatusBar } from 'react-native'
 import LessonHeader from '../../components/LessonHeader'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
-import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 29: Algo Review 1')
 
 const height = Dimensions.get('window').height
 
 export default function Course2AlgorithmReview1 ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2AlgorithmReview1';
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2AlgorithmReview1'
   return (
     <View style={styles.container}>
-      
+
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Algorithm Review</LessonHeader>
 

@@ -1,19 +1,19 @@
 import React from 'react'
-import { StyleSheet, View, Text, ImageBackground } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
+import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 
 Analytics.setCurrentScreen('Course 4 Screen 2: Real Life Applications')
-export default function Course4IntroRealLifeApplications ({navigation}) {
-  let screenSection = screen_list.section1;
-  let screenName = 'Course4IntroRealLifeApplications';
+export default function Course4IntroRealLifeApplications ({ navigation }) {
+  const screenSection = ScreenList.section1
+  const screenName = 'Course4IntroRealLifeApplications'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>2/8</Text>
       </View>
       <View style={styles.interactive}>
@@ -22,7 +22,7 @@ export default function Course4IntroRealLifeApplications ({navigation}) {
         <Text style={styles.textund}>NNs are important to learn about, so let's see how they work!</Text>
       </View>
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={section}  />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
   )
@@ -37,13 +37,13 @@ const styles = StyleSheet.create({
   },
   number: {
     fontSize: 28,
-    color: "white",
+    color: 'white',
     textAlign: 'right'
   },
   box: {
     backgroundColor: colors.primary,
     color: 'white',
-    width: "100%",
+    width: '100%',
     borderRadius: 20,
     paddingHorizontal: 10,
     paddingVertical: 15,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 24,
-    width: "100%",
+    width: '100%',
     fontWeight: 'bold',
     lineHeight: 35,
     marginBottom: 25
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 24,
-    width: "100%",
+    width: '100%',
     fontWeight: 'bold',
     marginTop: 25,
     lineHeight: 35,
@@ -90,4 +90,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 })
-

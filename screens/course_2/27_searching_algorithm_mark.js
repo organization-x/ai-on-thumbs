@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, ImageBackground, Dimensions, TouchableOpacity } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -10,8 +10,8 @@ Analytics.setCurrentScreen('Course 2 Screen 27: Searching Algorithm Mark Cuban')
 const height = Dimensions.get('window').height
 
 export default function Course2SearchingAlgorithmMark ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2SearchingAlgorithmMark';
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2SearchingAlgorithmMark'
 
   const [topText, setTopText] = useState('Let’s say we find what we think are some noses in a photo.')
   const [information, setInformation] = useState('Tap all the squares where the computer should look for ears, eyes, and mouths!')
@@ -44,7 +44,7 @@ export default function Course2SearchingAlgorithmMark ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>25/26</Text>
       </View>
       <View style={styles.lessonContent}>

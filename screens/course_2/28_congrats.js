@@ -3,7 +3,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import ConfettiCannon from 'react-native-confetti-cannon'
@@ -14,8 +14,8 @@ const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 export default function Course2Congrats ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2Congrats';
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2Congrats'
   return (
     <View style={styles.container}>
       <ConfettiCannon
@@ -26,7 +26,7 @@ export default function Course2Congrats ({ navigation }) {
         fadeOut
       />
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>26/26</Text>
       </View>
       <View style={styles.interactive}>

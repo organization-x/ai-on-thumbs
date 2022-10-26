@@ -4,11 +4,7 @@ import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
-
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 10: Black House Neighborhood')
 
@@ -16,9 +12,6 @@ const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 export default function Course3BlackHouseNeighborhood ({ navigation }) {
-  let screenSection = screen_list.course3;
-  let screenName = 'Course3BlackHouseNeighborhood';
-
   const [neighborhoodBDisabled, setDisableNeighborhoodB] = React.useState(false)
   const [neighborhoodCDisabled, setDisableNeighborhoodC] = React.useState(false)
   const [lowerScreenText, setLowerScreenText] = React.useState('Which neighborhood do you think the black house belongs to?')
@@ -36,7 +29,7 @@ export default function Course3BlackHouseNeighborhood ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>8/21</Text>
       </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
@@ -88,7 +81,7 @@ export default function Course3BlackHouseNeighborhood ({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-   container: {
+  container: {
     backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
@@ -108,7 +101,7 @@ const styles = StyleSheet.create({
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center',
+    alignContent: 'center'
   },
   rowContainer: {
     flex: 1.5,

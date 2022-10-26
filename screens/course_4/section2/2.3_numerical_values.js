@@ -1,8 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity, Image, StatusBar } from 'react-native'
-
 import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
+import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -12,22 +11,22 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course4LayerInteractive ({ navigation }) {
-  let screenSection = screen_list.section2;
-  let screenName = 'Course4LayerInteractive';
-  const [partsLeft, setPartsLeft] = React.useState(3);
-  const [currentLayer, setCurrentLayer] = React.useState(1);
-  const [upperScreenText, setUpperScreenText] = React.useState("This is a simple neural network, with only one hidden layer.");
-  const [lowerScreenText, setLowerScreenText] = React.useState('Select the input layer!');
+  const screenSection = ScreenList.section2
+  const screenName = 'Course4LayerInteractive'
+  const [partsLeft, setPartsLeft] = React.useState(3)
+  const [currentLayer, setCurrentLayer] = React.useState(1)
+  const [upperScreenText, setUpperScreenText] = React.useState('This is a simple neural network, with only one hidden layer.')
+  const [lowerScreenText, setLowerScreenText] = React.useState('Select the input layer!')
 
-  const layerImgs = [require('../../../assets/course_4/input-layer.png'), require('../../../assets/course_4/hidden-layer.png'), require('../../../assets/course_4/output-layer.png')];
-  const layers = [];
+  const layerImgs = [require('../../../assets/course_4/input-layer.png'), require('../../../assets/course_4/hidden-layer.png'), require('../../../assets/course_4/output-layer.png')]
+  const layers = []
 
-  for (let i=0; i<3; i++){
-    let layerImg = layerImgs[i];
+  for (let i = 0; i < 3; i++) {
+    const layerImg = layerImgs[i]
     layers.push(
-      <TouchableOpacity key={i} onPress={() => handlePress(i + 1)} >
+      <TouchableOpacity key={i} onPress={() => handlePress(i + 1)}>
         <Image source={layerImg} style={styles.image} />
-        {/*<View style={styles.overlay}/>*/}
+        {/* <View style={styles.overlay}/> */}
       </TouchableOpacity>
     )
   }
@@ -68,33 +67,33 @@ export default function Course4LayerInteractive ({ navigation }) {
 
   const setText = () => {
     if (partsLeft === 3) {
-      setUpperScreenText("That's right, the input layer is the very first layer in an NN! It takes in input as numerical values.");
-      setLowerScreenText('Select the output layer!');
-      setCurrentLayer(3);
-      setPartsLeft(2);
+      setUpperScreenText("That's right, the input layer is the very first layer in an NN! It takes in input as numerical values.")
+      setLowerScreenText('Select the output layer!')
+      setCurrentLayer(3)
+      setPartsLeft(2)
     } else if (partsLeft === 2) {
-      setUpperScreenText("That's right, the output layer is the very last layer in an NN!");
-      setLowerScreenText('Select the hidden layer!');
-      setCurrentLayer(2);
-      setPartsLeft(1);
+      setUpperScreenText("That's right, the output layer is the very last layer in an NN!")
+      setLowerScreenText('Select the hidden layer!')
+      setCurrentLayer(2)
+      setPartsLeft(1)
     } else if (partsLeft === 1) {
-      setUpperScreenText("Great job! Now you know all the different types of layers in a neural network!");
-      setLowerScreenText('The hidden layer manipulates the numbers it receives from the input layer through calculations and feeds the results to the output layer.');
-      setPartsLeft(0);
+      setUpperScreenText('Great job! Now you know all the different types of layers in a neural network!')
+      setLowerScreenText('The hidden layer manipulates the numbers it receives from the input layer through calculations and feeds the results to the output layer.')
+      setPartsLeft(0)
     }
   }
 
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>3/14</Text>
       </View>
-        <Text style={styles.textFont}>{upperScreenText}</Text>
+      <Text style={styles.textFont}>{upperScreenText}</Text>
       <View style={styles.interactive}>
         {layers}
       </View>
-        <Text style={styles.textFont2}>{lowerScreenText}</Text> 
+      <Text style={styles.textFont2}>{lowerScreenText}</Text>
       <View style={styles.footerButtons}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
@@ -126,8 +125,7 @@ const styles = StyleSheet.create({
   },
   information: {
     justifyContent: 'center',
-    alignItems: 'center',
-    justifyContent: 'space-evenly'
+    alignItems: 'center'
   },
   textFont: {
     paddingTop: 40,
@@ -137,14 +135,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     textAlign: 'center'
   },
-  
+
   textFont2: {
     color: 'white',
     paddingBottom: 40,
     fontSize: height / 30,
     justifyContent: 'center',
     textAlign: 'center',
-    marginTop: height / 40,
+    marginTop: height / 40
 
   },
   interactive: {
@@ -177,10 +175,5 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'right',
     marginTop: 5
-  },
-  top: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignContent: 'center',
   }
 })

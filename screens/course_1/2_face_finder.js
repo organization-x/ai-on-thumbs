@@ -1,9 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
@@ -23,8 +21,8 @@ export default function Course1FaceFinder ({ navigation }) {
   const [sourceBottomRight, setSourceBottomRight] = React.useState(require('../../assets/course_1/veggieface.png'))
   const [lowerScreenText, setLowerScreenText] = React.useState('There are 3 faces remaining.')
 
-  let screenSection = screen_list.course1;
-  let screenName = 'Course1FaceFinder';
+  const screenSection = ScreenList.course1
+  const screenName = 'Course1FaceFinder'
 
   const handlePress = (num) => {
     if (num === 0) {
@@ -65,7 +63,7 @@ export default function Course1FaceFinder ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>2/22</Text>
       </View>
       <Text style={styles.bigText}>To show computers how facial recognition is done, tap on all the faces in the pictures below. </Text>
@@ -93,8 +91,8 @@ export default function Course1FaceFinder ({ navigation }) {
           <Text style={styles.text}> {lowerScreenText} </Text>
         </View>
         <View style={styles.footerButtons}>
-          {/*<LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />*/}
+          {/* <LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
+          <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
           <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
         </View>
       </View>

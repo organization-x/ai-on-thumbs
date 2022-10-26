@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import { Text, Image, View, TouchableOpacity, Dimensions, Modal } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import StarRating from 'react-native-star-rating'
 import TopLessonParagraph from '../../components/TopLessonParagraph'
 import LottieView from 'lottie-react-native'

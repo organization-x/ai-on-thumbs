@@ -1,33 +1,31 @@
 // User correctly selects distance.
 
 import React from 'react'
-import { View, Text, StyleSheet,  Image, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
+import { View, Text, StyleSheet, Image, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
+import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 4 Screen 7: Comparison to Brains')
 
-
 const height = Dimensions.get('window').height
 
 export default function Course4CompToBrain ({ navigation }) {
-  let screenSection = screen_list.section1;
-  let screenName = 'Course4CompToBrain';
+  const screenSection = ScreenList.section1
+  const screenName = 'Course4CompToBrain'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-          <HomeButton navigation={navigation}/>
-          <Text style={styles.number}>7/8</Text>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.number}>7/8</Text>
       </View>
       <View style={styles.lessonContent}>
         <Text style={styles.secondText}>As you can see in the image, <Text style={styles.underlinedText}>NNs are made of nodes (the purple circles) </Text>
         </Text>
 
         <View style={styles.container}>
-          <Image style={styles.image} source={require('../../../assets/course_4/nn_layers.gif')}></Image>
+          <Image style={styles.image} source={require('../../../assets/course_4/nn_layers.gif')} />
         </View>
 
         <Text style={styles.thirdText}>Information is sent from node to node, similarly to the transmission of signals between neurons in the brain, in the form of numbers.</Text>
@@ -45,8 +43,6 @@ export default function Course4CompToBrain ({ navigation }) {
 const styles = StyleSheet.create({
   underlinedText: {
     textDecorationLine: 'underline',
-    // padding: 15,
-    // marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
@@ -65,7 +61,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'right',
     marginTop: 10
-},
+  },
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
@@ -104,16 +100,7 @@ const styles = StyleSheet.create({
   },
   progressBar: {
     alignItems: 'center',
-    justifyContent: 'flex-end',
-  },
-  underlinedText: {
-    textDecorationLine: 'underline',
-    textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 5,
-    textAlign: 'center',
-    color: 'white',
-    fontSize: height / 24
+    justifyContent: 'flex-end'
   },
   top: {
     flexDirection: 'row',

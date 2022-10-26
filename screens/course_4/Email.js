@@ -4,9 +4,8 @@ import React from 'react'
 import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollView, Dimensions, Linking } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
-// import * as Analytics from 'expo-firebase-analytics'
+import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 4 Section 3 Screen 6: Email Prompt Screen')
 
 const height = Dimensions.get('window').height
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15,
-    backgroundColor: "#202020"
+    backgroundColor: '#202020'
   },
   interactive: {
     flex: 1,

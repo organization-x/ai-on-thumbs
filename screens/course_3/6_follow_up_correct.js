@@ -2,11 +2,8 @@
 
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 6: Follow Up Correct')
@@ -14,13 +11,10 @@ Analytics.setCurrentScreen('Course 3 Screen 6: Follow Up Correct')
 const height = Dimensions.get('window').height
 
 export default function Course3FollowUpCorrect ({ navigation }) {
-  let screenSection = screen_list.course3;
-  let screenName = 'Course3FollowUpCorrect';
-
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>6/21</Text>
       </View>
       <View style={styles.lessonContent}>
@@ -48,7 +42,7 @@ export default function Course3FollowUpCorrect ({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-   container: {
+  container: {
     backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
@@ -68,7 +62,7 @@ const styles = StyleSheet.create({
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center',
+    alignContent: 'center'
   },
   footerButtons: {
     marginBottom: 10,

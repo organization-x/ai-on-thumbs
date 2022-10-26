@@ -2,13 +2,10 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
-
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 9: Neighborhoods')
 
@@ -16,12 +13,12 @@ const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 export default function Course3Neighborhoods ({ navigation }) {
-  let screenSection = screen_list.course3;
-  let screenName = 'Course3Neighborhoods';
+  const screenSection = ScreenList.course3
+  const screenName = 'Course3Neighborhoods'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>7/21</Text>
       </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
@@ -73,7 +70,7 @@ export default function Course3Neighborhoods ({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-   container: {
+  container: {
     backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
@@ -93,7 +90,7 @@ const styles = StyleSheet.create({
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center',
+    alignContent: 'center'
   },
   rowContainer: {
     flex: 1.5,

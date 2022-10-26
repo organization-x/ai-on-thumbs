@@ -3,24 +3,21 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
+import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
-
 import HomeButton from '../../../components/HomeButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 4 Screen 7 Section 2: Backpropagation Matching Explanation')
-
 
 const height = Dimensions.get('window').height
 
 export default function Course4BPInteractiveIntro2 ({ navigation }) {
-  let screenSection = screen_list.section2;
-  let screenName = 'Course4BPInteractiveIntro2';
+  const screenSection = ScreenList.section2
+  const screenName = 'Course4BPInteractiveIntro2'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>7/14</Text>
       </View>
       <View style={styles.interactive}>
@@ -30,8 +27,8 @@ export default function Course4BPInteractiveIntro2 ({ navigation }) {
         <Text style={styles.secondText}>You will not be given a chance to look at the matches prior to starting, and will have to guess randomly the first round! Are you ready to start? </Text>
       </View>
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} /> 
-      
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+
       </View>
     </View>
   )
@@ -49,13 +46,13 @@ const styles = StyleSheet.create({
     fontSize: height / 28
   },
   underlinedText: {
-    textDecorationLine: 'underline', 
+    textDecorationLine: 'underline',
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height /28
+    fontSize: height / 28
   },
   container: {
     flex: 1,

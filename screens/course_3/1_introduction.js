@@ -2,25 +2,22 @@
 
 import React from 'react'
 import { StyleSheet, View, Dimensions, Text } from 'react-native'
-import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
-
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 1: Introduction')
 
 const height = Dimensions.get('window').height
 
 export default function Course3Introduction ({ navigation }) {
-  let screenSection = screen_list.course3;
-  let screenName = 'Course3Introduction';
+  const screenSection = ScreenList.course3
+  const screenName = 'Course3Introduction'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>1/21</Text>
       </View>
       <View style={styles.interactive}>
@@ -54,7 +51,7 @@ const styles = StyleSheet.create({
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center',
+    alignContent: 'center'
   },
   interactive: {
     flex: 1,

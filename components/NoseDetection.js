@@ -94,7 +94,7 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
               : null
             }
 
-          </Draggable>
+            </Draggable>
           : null
 
         }

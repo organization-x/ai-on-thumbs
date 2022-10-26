@@ -1,25 +1,19 @@
-import React from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  Dimensions,
-  Image
-} from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import React from 'react'
+import { StyleSheet, View, Text, Dimensions, Image } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 import * as Analytics from 'expo-firebase-analytics'
+import HomeButton from '../../../components/HomeButton'
+import colors from '../../../config/colors'
 Analytics.setCurrentScreen('Course 4 Section 3 Screen 2: Real World Interactive')
-import HomeButton from "../../../components/HomeButton";
-const height = Dimensions.get("window").height;
-const width = Dimensions.get("window").width;
 
-import colors from "../../../config/colors";
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course4RWInteractive ({ navigation }) {
-  const [choice, setChoice] = React.useState("");
-  const [checkColor1, setCheckColor1] = React.useState("#474747");
-  const [checkColor2, setCheckColor2] = React.useState("#474747");
-  const [checkColor3, setCheckColor3] = React.useState("#474747");
+  const [choice, setChoice] = React.useState('')
+  const [checkColor1, setCheckColor1] = React.useState('#474747')
+  const [checkColor2, setCheckColor2] = React.useState('#474747')
+  const [checkColor3, setCheckColor3] = React.useState('#474747')
   return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -44,10 +38,10 @@ export default function Course4RWInteractive ({ navigation }) {
       <View style={styles.optionsContainer}>
         <TouchableOpacity
           onPress={() => {
-            setChoice("soccer");
-            setCheckColor1("#1fbd67");
-            setCheckColor2("#474747");
-            setCheckColor3("#474747");
+            setChoice('soccer')
+            setCheckColor1('#1fbd67')
+            setCheckColor2('#474747')
+            setCheckColor3('#474747')
           }}
         >
           <View style={styles.optionBox}>
@@ -56,16 +50,16 @@ export default function Course4RWInteractive ({ navigation }) {
             />
             <Image
               style={styles.image}
-              source={require("../../../assets/course_4/soccer.png")}
+              source={require('../../../assets/course_4/soccer.png')}
             />
           </View>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            setChoice("calc");
-            setCheckColor1("#474747");
-            setCheckColor2("#1fbd67");
-            setCheckColor3("#474747");
+            setChoice('calc')
+            setCheckColor1('#474747')
+            setCheckColor2('#1fbd67')
+            setCheckColor3('#474747')
           }}
         >
           <View style={styles.optionBox}>
@@ -74,16 +68,16 @@ export default function Course4RWInteractive ({ navigation }) {
             />
             <Image
               style={styles.image}
-              source={require("../../../assets/course_4/calc.png")}
-            ></Image>
+              source={require('../../../assets/course_4/calc.png')}
+            />
           </View>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            setChoice("controller");
-            setCheckColor1("#474747");
-            setCheckColor2("#474747");
-            setCheckColor3("#1fbd67");
+            setChoice('controller')
+            setCheckColor1('#474747')
+            setCheckColor2('#474747')
+            setCheckColor3('#1fbd67')
           }}
         >
           <View style={styles.optionBox}>
@@ -92,20 +86,20 @@ export default function Course4RWInteractive ({ navigation }) {
             />
             <Image
               style={styles.image}
-              source={require("../../../assets/course_4/controller.png")}
+              source={require('../../../assets/course_4/controller.png')}
             />
           </View>
         </TouchableOpacity>
       </View>
       <TouchableOpacity
         onPress={() => {
-          if (choice != "") {
+          if (choice !== '') {
             navigation.navigate(
-              choice === "soccer" ? "Course4page3_2_2" : "Course4page3_2_3"
-            );
+              choice === 'soccer' ? 'Course4page3_2_2' : 'Course4page3_2_3'
+            )
           }
         }}
-        underlayColor="#fff"
+        underlayColor='#fff'
         activeOpacity={0.3}
       >
         <View style={styles.submitBox}>
@@ -113,7 +107,7 @@ export default function Course4RWInteractive ({ navigation }) {
         </View>
       </TouchableOpacity>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -121,66 +115,66 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15,
-    backgroundColor: colors.background,
+    backgroundColor: colors.background
   },
   number: {
-    color: "white",
+    color: 'white',
     fontSize: 35,
-    textAlign: "right",
+    textAlign: 'right'
   },
   text: {
-    color: "white",
+    color: 'white',
     fontSize: 30,
-    textAlign: "center",
+    textAlign: 'center'
   },
   textContainer: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     width: width * 0.8,
-    alignSelf: "center",
+    alignSelf: 'center'
   },
   title: {
-    textAlign: "center",
-    color: "white",
+    textAlign: 'center',
+    color: 'white',
     fontSize: 50,
-    fontWeight: "bold",
+    fontWeight: 'bold'
   },
   titleBox: {
     flex: 1,
     backgroundColor: colors.secondary,
     height: 150,
-    width: "95%",
+    width: '95%',
     borderRadius: 15,
     marginTop: 150,
-    justifyContent: "center",
-    alignItems: "center",
-    alignSelf: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center'
   },
   textBox: {
     flex: 1,
-    backgroundColor: "#0f89ce",
+    backgroundColor: '#0f89ce',
     height: height * 0.25,
     width: width * 0.85,
     borderRadius: 15,
     marginTop: 35,
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center'
   },
   image: {
-    resizeMode: "contain",
+    resizeMode: 'contain',
     flex: 1,
     aspectRatio: 1,
-    alignSelf: "center",
-    marginBottom: 10,
+    alignSelf: 'center',
+    marginBottom: 10
   },
   optionBox: {
     marginTop: 20,
-    backgroundColor: "#d1d1d1",
+    backgroundColor: '#d1d1d1',
     height: height * 0.13,
     width: height * 0.13,
-    borderRadius: 15,
+    borderRadius: 15
   },
   optionCheck: {
     marginTop: 5,
@@ -188,41 +182,41 @@ const styles = StyleSheet.create({
     height: 20,
     width: 20,
     borderRadius: 10,
-    alignSelf: "flex-end",
+    alignSelf: 'flex-end'
   },
   optionsContainer: {
     flex: 1,
     marginTop: 5,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   submitBox: {
-    backgroundColor: "#1fbd67",
+    backgroundColor: '#1fbd67',
     height: height / 20,
     width: width * 0.85,
     borderRadius: 15,
-    justifyContent: "center",
-    alignItems: "center",
-    alignSelf: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
     marginTop: 20,
-    marginBottom: 50,
+    marginBottom: 50
   },
   submitText: {
-    textAlign: "center",
-    color: "white",
+    textAlign: 'center',
+    color: 'white',
     fontSize: 30,
-    fontWeight: "bold",
+    fontWeight: 'bold'
   },
   top: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignContent: "center",
-    marginTop: "2%",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
   },
   footerButtons: {
     marginBottom: 20,
-    flexDirection: "row",
-    justifyContent: "center",
-  },
-});
+    flexDirection: 'row',
+    justifyContent: 'center'
+  }
+})

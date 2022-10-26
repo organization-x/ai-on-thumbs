@@ -13,7 +13,6 @@ import YesThumbs from './screens/YesThumbs'
 
 import * as Sentry from 'sentry-expo'
 
-
 // course 1 imports
 import Course1Intro from './screens/course_1/1_intro'
 import Course1FaceFinder from './screens/course_1/2_face_finder'
@@ -115,7 +114,6 @@ import Course3AppStoreReview from './screens/course_3/30_app_store_review'
 import Course3Email from './screens/course_3/31_email'
 import Course3Promotion from './screens/course_3/32_promotion'
 
-
 import Course4Intro from './screens/course_4/section1/1.1_intro'
 import Course4IntroRealLifeApplications from './screens/course_4/section1/1.2_nn'
 import Course4InteractiveCaptcha from './screens/course_4/section1/1.3_captcha'
@@ -132,7 +130,7 @@ import Course4ProcessInfo from './screens/course_4/section2/2.1_process_info'
 import Course4NNLayers from './screens/course_4/section2/2.2_layers'
 import Course4LayerInteractive from './screens/course_4/section2/2.3_numerical_values'
 import Course4SelectDNN from './screens/course_4/section2/2.4_hidden_layer_interactive'
-import Course4SelectDNN_correct from './screens/course_4/section2/2.4_hidden_layer_interactive_follow_up'
+import Course4SelectDNNCorrect from './screens/course_4/section2/2.4_hidden_layer_interactive_follow_up'
 import Course4BPInteracticeIntro2 from './screens/course_4/section2/2.8_adjustment'
 import Course4BPInteracticeIntro from './screens/course_4/section2/2.9_backprop_intro'
 import Course4BPInteractive from './screens/course_4/section2/2.10_backprop_initial_match'
@@ -153,10 +151,8 @@ import Course4Review from './screens/course_4/3_review'
 import Course4End from './screens/course_4/End'
 import Course4Email from './screens/course_4/Email'
 import Course4Promo from './screens/course_4/Promo'
-// quiz screen imports 
+// quiz screen imports
 import ComingSoon from './screens/quizzes/quizzes_coming_soon'
-
-
 
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
@@ -292,21 +288,21 @@ export default function App () {
 
           {/* course 4 screen stack */}
           <Stack.Screen name='Course4Intro' component={Course4Intro} />
-          <Stack.Screen name='Course4IntroRealLifeApplications' component={Course4IntroRealLifeApplications} /> 
+          <Stack.Screen name='Course4IntroRealLifeApplications' component={Course4IntroRealLifeApplications} />
           <Stack.Screen name='Course4InteractiveCaptcha' component={Course4InteractiveCaptcha} />
           <Stack.Screen name='CaptchaRight' component={CaptchaRight} />
           <Stack.Screen name='CaptchaWrong' component={CaptchaWrong} />
           <Stack.Screen name='Course4CaptchaExplanation' component={Course4CaptchaExplanation} />
           <Stack.Screen name='Course4NNInfo1' component={Course4NNInfo1} />
-          <Stack.Screen name='Course4NNInfo2' component={Course4NNInfo2} />        
+          <Stack.Screen name='Course4NNInfo2' component={Course4NNInfo2} />
           <Stack.Screen name='Course4CompToBrain' component={Course4CompToBrain} />
           <Stack.Screen name='Course4Sect1End' component={Course4Sect1End} />
 
-          <Stack.Screen name='Course4ProcessInfo' component={Course4ProcessInfo} /> 
+          <Stack.Screen name='Course4ProcessInfo' component={Course4ProcessInfo} />
           <Stack.Screen name='Course4NNLayers' component={Course4NNLayers} />
           <Stack.Screen name='Course4LayerInteractive' component={Course4LayerInteractive} />
           <Stack.Screen name='Course4SelectDNN' component={Course4SelectDNN} />
-          <Stack.Screen name='Course4SelectDNN_correct' component={Course4SelectDNN_correct} />
+          <Stack.Screen name='Course4SelectDNNCorrect' component={Course4SelectDNNCorrect} />
           <Stack.Screen name='Course4BPInteracticeIntro' component={Course4BPInteracticeIntro} />
           <Stack.Screen name='Course4BPInteracticeIntro2' component={Course4BPInteracticeIntro2} />
           <Stack.Screen name='Course4BPInteractive' component={Course4BPInteractive} />
@@ -316,10 +312,9 @@ export default function App () {
           <Stack.Screen name='Course4BPExplanation1' component={Course4BPExplanation1} />
           <Stack.Screen name='Course4page2_15' component={Course4BPExplanation2} />
           <Stack.Screen name='Course4Sect2End' component={Course4Sect2End} />
-          
 
           <Stack.Screen name='Course4RealWorldIntro' component={Course4RealWorldIntro} />
-          <Stack.Screen name='Course4RWInteractive' component={Course4RWInteractive} /> 
+          <Stack.Screen name='Course4RWInteractive' component={Course4RWInteractive} />
           <Stack.Screen name='Course4RWInteractiveCorrect' component={Course4RWInteractiveCorrect} />
           <Stack.Screen name='Course4RWInteractiveIncorrect' component={Course4RWInteractiveIncorrect} />
           <Stack.Screen name='Course4RealWorldExplanation' component={Course4RealWorldExplanation} />

@@ -2,23 +2,21 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 1 Screen 18: Face Parts Screen')
 
 export default function Course1FaceParts ({ navigation }) {
-  let screenSection = screen_list.course1;
-  let screenName = 'Course1FaceParts';
+  const screenSection = ScreenList.course1
+  const screenName = 'Course1FaceParts'
 
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>20/22</Text>
       </View>
       <Text style={styles.bigText}>Our faces have some unique features that stand out and make them recognizable.</Text>
@@ -26,8 +24,8 @@ export default function Course1FaceParts ({ navigation }) {
         <Image style={styles.image} source={require('../../assets/course_1/markcubanface.png')} />
       </View>
       <View style={styles.footerButtons}>
-        {/*<LessonButton navigation={navigation} nextScreen='Course1Info9' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1FaceParts2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />*/}
+        {/* <LessonButton navigation={navigation} nextScreen='Course1Info9' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1FaceParts2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>

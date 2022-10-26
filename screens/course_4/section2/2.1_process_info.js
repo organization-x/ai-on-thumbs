@@ -1,24 +1,21 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-
 import colors from '../../../config/colors'
-import screen_list from '../../../config/screen_list'
+import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 4 Screen 1 Section 2: NNs Process Info')
 
-
 const height = Dimensions.get('window').height
-const width = Dimensions.get('window').width
 
 export default function Course4ProcessInfo ({ navigation }) {
-  let screenSection = screen_list.section2;
-  let screenName = 'Course4ProcessInfo';
+  const screenSection = ScreenList.section2
+  const screenName = 'Course4ProcessInfo'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>1/14</Text>
       </View>
       <View style={styles.interactive}>
@@ -44,7 +41,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15,
-    backgroundColor: colors.background,
+    backgroundColor: colors.background
   },
   number: {
     color: 'white',
@@ -67,13 +64,6 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center'
-  },
-  text: {
-    marginTop: '10%',
-    textAlign: 'center',
-    color: 'white',
-    fontSize: 55,
-    fontWeight: 'bold'
   },
   secondText: {
     padding: 15,
@@ -107,14 +97,14 @@ const styles = StyleSheet.create({
   },
   progressBar: {
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   rectangle: {
     backgroundColor: colors.primary,
     borderRadius: 20,
     width: 320,
     height: 215,
-    alignItems: "center",
+    alignItems: 'center',
     marginTop: 15,
     marginBottom: 10
   }

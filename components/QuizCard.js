@@ -1,4 +1,4 @@
-//change this stuff to link it to different quizzes and chnage colors and theme
+// change this stuff to link it to different quizzes and chnage colors and theme
 
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'

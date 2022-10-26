@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import GridMCQ from '../../components/GridMCQ'
@@ -15,8 +15,8 @@ const width = Dimensions.get('window').width
 const imageSide = width > 400 ? width / 2 : width / 1.6
 
 export default function Course2ContrastMCQ ({ navigation }) {
-  let screenSection = screen_list.course2;
-  let screenName = 'Course2ContrastMCQ';
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2ContrastMCQ'
 
   const [paraText, setParaText] = useState('Select an answer')
 
@@ -31,7 +31,7 @@ export default function Course2ContrastMCQ ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
+        <HomeButton navigation={navigation} />
         <Text style={styles.pagenumber}>15/26</Text>
       </View>
       <View style={styles.textSection}>

@@ -2,12 +2,9 @@
 
 import React from 'react'
 import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
 import colors from '../../config/colors'
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 29: Algorithm Review 4')
@@ -15,13 +12,11 @@ Analytics.setCurrentScreen('Course 3 Screen 29: Algorithm Review 4')
 const height = Dimensions.get('window').height
 
 export default function Course3AlgorithmReview4 ({ navigation }) {
-  let screenSection = screen_list.course3;
-  let screenName = 'Course3AlgorithmReview4';
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation}/>
-        <Text style={styles.pageNum}></Text>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.pageNum} />
       </View>
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Algorithm Review</LessonHeader>
@@ -59,10 +54,9 @@ export default function Course3AlgorithmReview4 ({ navigation }) {
         </View>
       </View>
 
-      <View style={[styles.footerButtons, {marginBottom: height / 30}]}>
+      <View style={[styles.footerButtons, { marginBottom: height / 30 }]}>
         <LessonButton navigation={navigation} nextScreen='Course3AppStoreReview' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
-      
 
       <StatusBar style='auto' />
     </View>
@@ -70,7 +64,7 @@ export default function Course3AlgorithmReview4 ({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-   container: {
+  container: {
     backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
@@ -84,7 +78,7 @@ const styles = StyleSheet.create({
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center',
+    alignContent: 'center'
   },
 
   textSection: {
