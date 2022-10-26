@@ -9,7 +9,7 @@ const height = Dimensions.get('window').height
 export default function Wrong({navigation, context}) {
   const section = screen_list.section1
   const try_again = () =>{
-    navigation.navigate('Course4_third', {context})
+    navigation.navigate('Course4page1_3', {context})
   }
   const move_on = () => {
     navigation.navigate('Course4page2_1', {context})

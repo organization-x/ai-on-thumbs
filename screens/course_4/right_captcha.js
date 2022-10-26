@@ -9,6 +9,7 @@ const height = Dimensions.get('window').height
 const images = [require('../../assets/bus_1.jpg'),require('../../assets/bus_2.jpg'),require('../../assets/bus.jpg'),require('../../assets/car.jpg'),require('../../assets/house.jpg'),require('../../assets/street.jpg'),require('../../assets/streets.jpg'),require('../../assets/traf.jpg'),require('../../assets/van.jpg')]
 export default function Right ({navigation}) {
   const section = screen_list.section1
+  const screenName = 'Course4page1_3';
   return (
     <View style={styles.container}>
       <Text style={styles.num}>3/8</Text>
@@ -29,7 +30,7 @@ export default function Right ({navigation}) {
       </View>
 
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={'Course4_third'} section={section}  />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={section}  />
       </View>
     </View>
   )
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     paddingLeft: 5
   },
   footerButtons: {
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'space-between'
   },

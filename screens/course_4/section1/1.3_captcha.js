@@ -7,14 +7,14 @@ import screen_list from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import ImageContainer from '../../../components/Images'
 import Imagel from '../../../components/Image'
-
+import HomeButton from '../../../components/HomeButton'
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 
-export default function Course4_third ({ navigation, context }) {
-  const [images, setImages] = useState([require('../../assets/bus_1.jpg'),require('../../assets/bus_2.jpg'),require('../../assets/bus.jpg'),require('../../assets/car.jpg'),require('../../assets/house.jpg'),require('../../assets/street.jpg'),require('../../assets/streets.jpg'),require('../../assets/traf.jpg'),require('../../assets/van.jpg')])
-  const name = 'Course4_third'
+export default function Course4page3_1 ({ navigation, context }) {
+  const [images, setImages] = useState([require('../../../assets/bus_1.jpg'),require('../../../assets/bus_2.jpg'),require('../../../assets/bus.jpg'),require('../../../assets/car.jpg'),require('../../../assets/house.jpg'),require('../../../assets/street.jpg'),require('../../../assets/streets.jpg'),require('../../../assets/traf.jpg'),require('../../../assets/van.jpg')])
+  const name = 'Course4page1_3'
   const section=screen_list.section1
   const [pressed, setPressed] = useState([])
   const [full, setFull] = useState([])
@@ -74,7 +74,7 @@ export default function Course4_third ({ navigation, context }) {
         <Imagel link={images[8]} press={pressed} presser={setPressed} one={false} ind={8} fill={full} filler={setFull}/>
 
       </View>
-      <Text style={styles.verify} onPress={verify}>Verify!</Text>
+        <Text style={styles.verify} onPress={verify}>Verify!</Text>
 
       </View>
       <View style={styles.footerButtons}>

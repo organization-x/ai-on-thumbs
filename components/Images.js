@@ -7,7 +7,7 @@ const height = Dimensions.get('window').height
 
 
 export default function ImageContainer () {
-  const [images, setImages] = useState([require('../screens/course_4/bus_1.jpg'),require('../screens/course_4/bus_2.jpg'),require('../screens/course_4/bus.jpg'),require('../screens/course_4/car.jpg'),require('../screens/course_4/house.jpg'),require('../screens/course_4/street.jpg'),require('../screens/course_4/streets.jpg'),require('../screens/course_4/traf.jpg'),require('../screens/course_4/van.jpg')])
+  const [images, setImages] = useState([require('../assets/bus_1.jpg'),require('../assets/bus_2.jpg'),require('../assets/bus.jpg'),require('../assets/car.jpg'),require('../assets/house.jpg'),require('../assets/street.jpg'),require('../assets/streets.jpg'),require('../assets/traf.jpg'),require('../assets/van.jpg')])
   const [col, setCol] = useState(false)
   const [pressed, setPressed] = useState([])
   const pressHandler = () => {

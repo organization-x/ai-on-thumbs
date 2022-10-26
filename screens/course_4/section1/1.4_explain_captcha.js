@@ -16,8 +16,8 @@ const width = Dimensions.get('window').width
 export default function Course4page1_4 ({ navigation, context, enabled = true }) {
     //set variables for section the screen is in and the screen name
     //These variables are passed into the progress bar
-    let section = screen_list.section1;
-    let screenName = 'Course4CaptExplain';
+    let screenSection = screen_list.section1;
+    let screenName = 'Course4page1_4';
     return (
     <View style={styles.container}>
         <Text style={styles.number}>4/8</Text>
@@ -25,11 +25,6 @@ export default function Course4page1_4 ({ navigation, context, enabled = true })
             <Text style={styles.text}>Tasks like the captcha you just completed aren't hard for humans because of the way we take in information and recognize patterns.</Text>
             <Text style={styles.text}>However, these tasks cause a big problem for computers, which <Text style={styles.underlineText}>can't process things the same way.</Text></Text>
         </View>
-
-        <View style={styles.footerButtons}>
-          <ProgressBar navigation={navigation} currentScreen={'Course4page1_4'} section={section}  />
-        </View>
-
             <View style={styles.footerButtons}>
                 <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
             </View>

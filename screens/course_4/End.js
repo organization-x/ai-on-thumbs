@@ -93,8 +93,8 @@ export default function End ({ navigation }) {
         </View>
       </Modal>
       <View style={styles.footerButtons}>
-        <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course3AlgorithmReview4' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3Email' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton style={{ marginRight: 20 }} navigation={navigation} nextScreen='Course4Review' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Email' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </View>
   )

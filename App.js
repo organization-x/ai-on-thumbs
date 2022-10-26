@@ -13,19 +13,6 @@ import YesThumbs from './screens/YesThumbs'
 
 import * as Sentry from 'sentry-expo'
 
-<<<<<<< HEAD
-import QuizzesScreen from './screens/quizzes/Quiz_landingpage'
-
-//testing
-// import Test from './screens/course_4/test'
-// import Course4S3Intro from './screens/course_4/3.1'
-// import Course4S3Recommendation from './screens/course_4/3.2'
-// import Course4S3Correct from './screens/course_4/3.2-2'
-// import Course4S3Incorrect from './screens/course_4/3.2-3'
-// import Course4S3Info from './screens/course_4/3.3'
-// import Course4S3End from './screens/course_4/3.4'
-=======
->>>>>>> nr_neural_network
 
 // course 1 imports
 import Course1Intro from './screens/course_1/1_intro'
@@ -132,11 +119,11 @@ import Course3Promotion from './screens/course_3/32_promotion'
 import Course4page1_1 from './screens/course_4/section1/1.1_intro'
 import Course4page1_2 from './screens/course_4/section1/1.2_nn'
 import Course4page1_3 from './screens/course_4/section1/1.3_captcha'
+import Right from './screens/course_4/right_captcha'
+import Wrong from './screens/course_4/wrong_captcha'
 import Course4page1_4 from './screens/course_4/section1/1.4_explain_captcha'
 import Course4page1_5 from './screens/course_4/section1/1.5_nn_info_1'
 import Course4page1_6 from './screens/course_4/section1/1.6_nn_info_2'
-// import Course4page1_7 from './screens/course_4/2.3_numerical_values'
-
 import Course4page1_7 from './screens/course_4/section1/1.7_nn_to_brains'
 import Course4page1_8 from './screens/course_4/section1/1.8_section1_end'
 
@@ -162,8 +149,10 @@ import Course4page3_2_2 from './screens/course_4/section3/3.2-2'
 import Course4page3_2_3 from './screens/course_4/section3/3.2-3'
 import Course4page3_3 from './screens/course_4/section3/3.3'
 import Course4page3_4 from './screens/course_4/section3/3.4'
-
-
+import Course4Review from './screens/course_4/3_review'
+import End from './screens/course_4/End'
+import Email from './screens/course_4/Email'
+import Promo from './screens/course_4/Promo'
 // quiz screen imports 
 import ComingSoon from './screens/quizzes/quizzes_coming_soon'
 
@@ -305,6 +294,8 @@ export default function App () {
           <Stack.Screen name='Course4page1_1' component={Course4page1_1} />
           <Stack.Screen name='Course4page1_2' component={Course4page1_2} /> 
           <Stack.Screen name='Course4page1_3' component={Course4page1_3} />
+          <Stack.Screen name='Right' component={Right} />
+          <Stack.Screen name='Wrong' component={Wrong} />
           <Stack.Screen name='Course4page1_4' component={Course4page1_4} />
           <Stack.Screen name='Course4page1_5' component={Course4page1_5} />
           <Stack.Screen name='Course4page1_6' component={Course4page1_6} />        
@@ -333,6 +324,11 @@ export default function App () {
           <Stack.Screen name='Course4page3_2_3' component={Course4page3_2_3} />
           <Stack.Screen name='Course4page3_3' component={Course4page3_3} />
           <Stack.Screen name='Course4page3_4' component={Course4page3_4} />
+          <Stack.Screen name='Course4Review' component={Course4Review} />
+          <Stack.Screen name='End' component={End} />
+          <Stack.Screen name='Email' component={Email} />
+          <Stack.Screen name='Promo' component={Promo} />
+
 
           <Stack.Screen name='ComingSoon' component={ComingSoon} />
 

@@ -44,14 +44,12 @@ export default function Course4Review ({ navigation }) {
           <Text style={styles.numberFont}>4</Text>
         </View>
 
-        <View style={styles.information3}>
-          <Text style={styles.textFont}>We base our characteristics on the characteristics of our nearest neighbors.</Text>
-        </View>
+        
       </View>
 
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course4page3_4' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='End' buttonColor={['#32B59D', '#3AC55B']} buttonText='Sure Why Not?' />
+        <LessonButton navigation={navigation} nextScreen='End' buttonColor={['#32B59D', '#3AC55B']} buttonText='Awesome!' />
       </View>
 
       <StatusBar style='auto' />
