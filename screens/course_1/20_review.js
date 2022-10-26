@@ -4,6 +4,9 @@ import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
+import colors from '../../config/colors'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 20: Review Screen')
@@ -11,8 +14,11 @@ import { LinearGradient } from 'expo-linear-gradient'
 const height = Dimensions.get('window').height
 
 export default function Course1Review ({ navigation }) {
+  let screenSection = screen_list.course1;
+  let screenName = 'Course1Review';
+
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.interactive}>
         <Text style={styles.bigText}>Lesson Review</Text>
         <Text style={styles.boldText}>1</Text>
@@ -22,16 +28,21 @@ export default function Course1Review ({ navigation }) {
         <Text style={styles.boldText}>3</Text>
         <Text style={styles.text}>Computers use facial features to help them detect faces.</Text>
       </View>
-      <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1Congrats' buttonColor='#8976C2' buttonText='Back' />
+      <View style={[styles.footerButtons, {marginBottom: 30}]}>
         <LessonButton navigation={navigation} nextScreen='Course1Rating' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
-    </LinearGradient>
+      <View style={styles.footerButtons}>
+        {/*<LessonButton navigation={navigation} nextScreen='Course1Congrats' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Rating' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />*/}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+      </View>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -75,6 +86,6 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

@@ -5,11 +5,11 @@ import { StyleSheet, View, Text, Dimensions} from 'react-native'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
-import HomeButton from '../../components/HomeButton'
-import colors from '../../config/colors'
+import HomeButton from '../../../components/HomeButton'
+import colors from '../../../config/colors'
 
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../../config/screen_list'
+import ProgressBar from '../../../components/ProgressBar'
 const width = Dimensions.get('window').width
 
 

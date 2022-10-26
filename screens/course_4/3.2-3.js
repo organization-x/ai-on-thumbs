@@ -4,13 +4,11 @@ import React from 'react'
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity} from 'react-native'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
-import HomeButton from '../../components/HomeButton'
-
+import HomeButton from '../../../components/HomeButton'
+import colors from '../../../config/colors'
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
-
-import colors from '../../config/colors'
 
 export default function Course4page3_2_3({navigation}) {
     return (

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.14.8",
+    "@expo/ngrok": "^4.1.0",
     "@openspacelabs/react-native-zoomable-view": "^2.0.4",
     "@react-native-community/masked-view": "0.1.11",
     "@react-native-community/slider": "4.2.1",
