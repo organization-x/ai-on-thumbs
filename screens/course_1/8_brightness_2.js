@@ -1,7 +1,7 @@
 // Now, slide the bar to change pixel value and see its brightness change!
 
 import React, { useState } from 'react'
-import { StyleSheet, View, Dimensions } from 'react-native'
+import { StyleSheet, View, Dimensions, Text } from 'react-native'
 import PixelSlider from '../../components/Pixel'
 import LessonButton from '../../components/LessonButton'
 import BottomLessonParagraph from '../../components/BottomLessonParagraph'
@@ -10,6 +10,7 @@ import TopLessonParagraph from '../../components/TopLessonParagraph'
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 8: Brightness 2 Screen')
@@ -23,6 +24,10 @@ export default function Course1Brightness2 ({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>9/22</Text>
+      </View>
       <TopLessonParagraph style={styles.text}>Now, slide the bar to change pixel value and see its brightness change!</TopLessonParagraph>
 
       <View style={{ flex: 1 }}>
@@ -46,6 +51,18 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  number: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   footerButtons: {
     marginBottom: 10,

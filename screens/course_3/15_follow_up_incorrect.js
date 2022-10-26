@@ -4,6 +4,10 @@ import React from 'react'
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+import colors from '../../config/colors'
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 15: Follow Up II (Incorrect)')
 
@@ -11,8 +15,10 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course3FollowUpIIIncorrect ({ navigation }) {
+  let screenSection = screen_list.course3;
+  let screenName = 'Course3FollowUpIIIncorrect';
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}>Oh Snap!</Text>
         <Image style={styles.image} source={require('../../assets/course_3/NeighborsFighting.png')} />
@@ -34,15 +40,26 @@ export default function Course3FollowUpIIIncorrect ({ navigation }) {
           buttonText='Gotcha!'
         />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
+   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
   },
   footerButtons: {
     marginBottom: 10,

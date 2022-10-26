@@ -5,6 +5,10 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import ConfettiCannon from 'react-native-confetti-cannon'
+import colors from '../../config/colors'
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 25: Congratulations')
 
@@ -12,8 +16,14 @@ const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 export default function Course3Congratulations ({ navigation }) {
+  let screenSection = screen_list.course3;
+  let screenName = 'Course3Congratulations';
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.pagenumber}>21/21</Text>
+      </View>
       <ConfettiCannon
         count={100}
         origin={{ x: width / 2, y: -100 }}
@@ -28,28 +38,34 @@ export default function Course3Congratulations ({ navigation }) {
         <Text style={styles.boldText}>Let’s review!</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton
-          navigation={navigation}
-          nextScreen='Course3KNNMainIdeaVI'
-          buttonColor='#8976C2'
-          buttonText='Back'
-        />
-        <LessonButton
-          navigation={navigation}
-          nextScreen='Course3AlgorithmReview1'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText="Can't Wait!"
-        />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
+   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
   },
   interactive: {
     flex: 1,
@@ -89,6 +105,6 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

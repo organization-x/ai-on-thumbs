@@ -1,6 +1,9 @@
 import React from 'react'
 import { StyleSheet, View, Image, Text, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 2 Screen 18.3: Draggable Explanation Screen')
@@ -9,8 +12,14 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course2DraggableExplanation ({ navigation }) {
+  let screenSection = screen_list.course2;
+  let screenName = 'Course2DraggableExplanation';
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.pagenumber}>18/26</Text>
+      </View>
       <View style={{ flex: 1 }}>
         <Text style={styles.topText}>How does the computer use contrast to help?</Text>
         <View style={styles.image}>
@@ -24,29 +33,40 @@ export default function Course2DraggableExplanation ({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course2DraggableCompleted' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton
-          navigation={navigation}
-          nextScreen='Course2ScanAll1'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Continue'
-          actOpacity={1}
-        />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
   },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
+  },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '1%'
   },
   topText: {
     marginTop: height / 20,
@@ -66,7 +86,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
     fontSize: height / 34
   },
   image: {

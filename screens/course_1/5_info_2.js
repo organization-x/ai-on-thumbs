@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
-
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 5: Info 2 Screen')
 
@@ -19,6 +19,10 @@ export default function Course1Info2 ({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>6/22</Text>
+      </View>
       <View style={styles.interactive}>
         <Text style={styles.bigText}>Yes they can!</Text>
         <Text style={styles.text}>Computers “see” pixels as numbers because each pixel in an image can be represented by a number.</Text>
@@ -38,6 +42,18 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  number: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   interactive: {
     flex: 1,

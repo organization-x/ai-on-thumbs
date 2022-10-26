@@ -3,17 +3,14 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions} from 'react-native'
 
-import LessonButton from '../../components/LessonButton'
-import ProgressBar from '../../components/ProgressBar'
-import screen_list from '../../config/screen_list'
+
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
-import HomeButton from '../../components/HomeButton'
-import colors from '../../config/colors'
+import HomeButton from '../../../components/HomeButton'
+import colors from '../../../config/colors'
 
-import screen_list from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
-const height = Dimensions.get('window').height
+import screen_list from '../../../config/screen_list'
+import ProgressBar from '../../../components/ProgressBar'
 const width = Dimensions.get('window').width
 
 export default function Course4S3Info ({navigation}) {
@@ -69,11 +66,11 @@ const styles = StyleSheet.create({
       textAlign: 'center'
     },
     textContainer: {
+      flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
       width: width * 0.8,
       alignSelf: 'center',
-      justifyContent: 'center'
     },
     top: {
       flexDirection: 'row',

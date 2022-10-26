@@ -2,8 +2,10 @@
 
 import React from 'react'
 import { StyleSheet, Text, View, Image, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import LessonButton from '../../components/LessonButton'
+import ProgressBar from '../../components/ProgressBar'
+import screen_list from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 2 Screen 16: Contrast 3 Screen')
 
@@ -11,8 +13,14 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course2Contrast3 ({ navigation }) {
+  let screenSection = screen_list.course2;
+  let screenName = 'Course2Contrast3';
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.pagenumber}>14/26</Text>
+      </View>
       <View style={styles.interactive}>
         <Text style={styles.header}>Remember:</Text>
         <Text style={styles.textFont}>Brighter pixels are higher in value and darker pixels are lower in value.</Text>
@@ -20,20 +28,25 @@ export default function Course2Contrast3 ({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course2Contrast2' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course2ContrastMCQ' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
+  },
   interactive: {
     flex: 1,
     paddingHorizontal: 20,
@@ -50,6 +63,19 @@ const styles = StyleSheet.create({
     fontSize: height / 20,
     color: 'white',
     fontWeight: 'bold'
+  },
+
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '1%'
   },
 
   textFont: {
@@ -71,6 +97,6 @@ const styles = StyleSheet.create({
     marginTop: 30,
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

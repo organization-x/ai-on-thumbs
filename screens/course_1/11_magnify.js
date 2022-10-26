@@ -8,7 +8,7 @@ import LessonButton from '../../components/LessonButton'
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
-
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 11: Magnify Screen')
 
@@ -20,6 +20,10 @@ export default function Course1Magnify ({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>12/22</Text>
+      </View>
       <View style={styles.mainContent}>
         <Text style={smallScreen ? smallStyles.instructTxt : styles.instructTxt}>To get the feeling of a computer when it sees a photo, use the magnifier over the photo.</Text>
 
@@ -63,6 +67,18 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'center'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  number: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   instructTxt: {
     textAlign: 'center',

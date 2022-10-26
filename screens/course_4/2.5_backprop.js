@@ -22,7 +22,7 @@ export default function Course4page2_5 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation}/>
-        <Text style={styles.number}>5/9</Text>
+        <Text style={styles.number}>5/13</Text>
       </View>
       {/* <View style={styles.interactive}></View> */}
       <View style={styles.interactive}>

@@ -3,14 +3,22 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
+import colors from '../../config/colors'
+import screen_list from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 
 import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 3 Screen 4: Nearest Neighbor')
 
 const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
 
 export default function Course3SelectClosestHouse ({ navigation }) {
+  let screenSection = screen_list.course3;
+  let screenName = 'Course3SelectClosestHouse';
+
   const [redHouseDisabled, setDisableRedHouse] = React.useState(false)
   const [blueHouseDisabled, setDisableBlueHouse] = React.useState(false)
   const [lowerScreenText, setLowerScreenText] = React.useState('Select the house that is closest to the black house.')
@@ -26,7 +34,11 @@ export default function Course3SelectClosestHouse ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.pagenumber}>4/</Text>
+      </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.text}>That's more like it.</Text>
         <View style={styles.rowContainer}>
@@ -66,15 +78,32 @@ export default function Course3SelectClosestHouse ({ navigation }) {
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3HouseIntroduction' buttonColor='#8976C2' buttonText='Back' />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  pagenumber: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
   },
   rowContainer: {
     flex: 1.5,

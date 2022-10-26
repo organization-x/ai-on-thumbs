@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
-
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 9: Info 3 Screen')
 
@@ -19,6 +19,10 @@ export default function Course1Info3 ({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>10/22</Text>
+      </View>
       <View style={styles.interactive}>
         <Text style={styles.bigText}>SO</Text>
         <Text style={styles.text}>does this mean computers see photos as just a large list of numbers?</Text>
@@ -54,6 +58,18 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 20,
     fontWeight: 'bold'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  number: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

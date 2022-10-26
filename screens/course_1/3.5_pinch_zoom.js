@@ -1,7 +1,7 @@
 // It turns out each picture is composed by tiny color squares - pixels!
 
 import React, { useState } from 'react'
-import { StyleSheet, View, Dimensions } from 'react-native'
+import { StyleSheet, View, Dimensions, Text } from 'react-native'
 import Zoom from '../../components/Zoom'
 import TopLessonParagraph from '../../components/TopLessonParagraph'
 import BottomLessonParagraph from '../../components/BottomLessonParagraph'
@@ -10,7 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import ProgressBar from '../../components/ProgressBar'
 import screen_list from '../../config/screen_list'
 import colors from '../../config/colors'
-
+import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 1 Screen 3.5: Pinch Zoom Screen')
 
@@ -24,6 +24,10 @@ export default function Course1PinchZoom ({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation}/>
+        <Text style={styles.number}>4/22</Text>
+      </View>
       <TopLessonParagraph style={styles.text}>It turns out each picture is composed of tiny color squares - pixels! {'\n\n'} Pinch the photo to see pixels. </TopLessonParagraph>
 
       <View style={styles.zoomView}>
@@ -55,6 +59,18 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'center'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  number: {
+    color: 'white',
+    fontSize: 30,
+    textAlign: 'right',
+    marginTop: 10
   },
   text: {
     fontSize: height / 35,

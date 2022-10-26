@@ -12,6 +12,8 @@ import * as FileSystem from 'expo-file-system'
 import { manipulateAsync, SaveFormat } from 'expo-image-manipulator'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 2 Screen 34: Selfie Screen')
@@ -134,7 +136,8 @@ export default function Course2Selfie ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#FFFFFF']} style={styles.container}>
+    <View style={styles.container}>
+      
 
       <View style={{ alignItems: 'center' }}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
@@ -182,7 +185,7 @@ export default function Course2Selfie ({ navigation }) {
       </View>
 
       <Toast {...toast} onDismiss={() => setToast({ value: '', type: toast.type })} />
-    </LinearGradient>
+    </View>
   )
 }
 
@@ -204,6 +207,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end'
   },
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 27,
     paddingVertical: 17
@@ -222,6 +226,17 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 20,
     fontWeight: 'bold'
+  },
+  number: {
+    color: colors.background,
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '1%'
   },
   secondText: {
     marginTop: '5%',
