@@ -4,8 +4,7 @@ import CourseCard from '../components/CourseCard'
 import CourseAd from '../components/CourseAd'
 import { LinearGradient } from 'expo-linear-gradient'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Courses Screen')
+// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Courses Screen')
 
 export default function CoursesScreen ({ navigation }) {
   return (
@@ -46,7 +45,7 @@ export default function CoursesScreen ({ navigation }) {
         />
         <CourseCard
           navigation={navigation}
-          lessonScreen='ComingSoon'
+          lessonScreen='QuizzesScreen'
           gradColors={['#8233C5', '#3C4687']}
           title='Quizzes'
           desc='Test your knowledge with questions from each lesson!'

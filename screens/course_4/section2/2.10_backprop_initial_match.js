@@ -3,8 +3,7 @@ import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions, TextInput,
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 8 Section 2: Backpropagation Matching')
+// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 8 Section 2: Backpropagation Matching')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height

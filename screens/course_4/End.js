@@ -5,8 +5,7 @@ import StarRating from 'react-native-star-rating'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Section 3 Screen 5: Rating Screen')
+// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Section 3 Screen 5: Rating Screen')
 
 const height = Dimensions.get('window').height
 

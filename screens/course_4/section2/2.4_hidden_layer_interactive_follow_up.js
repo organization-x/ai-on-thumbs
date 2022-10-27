@@ -4,8 +4,7 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 4 Section 2: NNs Layers Interactive Follow Up')
+// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 4 Section 2: NNs Layers Interactive Follow Up')
 
 const height = Dimensions.get('window').height
 

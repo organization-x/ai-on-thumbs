@@ -6,8 +6,7 @@ import LessonButton from '../../components/LessonButton'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 31: Promotion')
+// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 3 Screen 31: Promotion')
 
 const height = Dimensions.get('window').height
 

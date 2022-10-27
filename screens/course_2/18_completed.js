@@ -4,11 +4,10 @@ import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-
+// import * as Analytics from 'expo-firebase-analytics'
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
-Analytics.setCurrentScreen('Course 2 Screen 18.2: Draggable Completed Screen')
+// Analytics.setCurrentScreen('Course 2 Screen 18.2: Draggable Completed Screen')
 
 export default function Course2DraggableCompleted ({ navigation }) {
   const screenSection = ScreenList.course2

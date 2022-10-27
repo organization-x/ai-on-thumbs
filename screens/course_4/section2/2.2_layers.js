@@ -6,9 +6,7 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 2 Section 2: NNs Layers')
-// Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
+// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 2 Section 2: NNs Layers')
 const height = Dimensions.get('window').height
 
 export default function Course4NNLayers ({ navigation }) {

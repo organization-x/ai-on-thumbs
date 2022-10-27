@@ -9,8 +9,7 @@ import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 21: Rating Screen')
+// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 1 Screen 21: Rating Screen')
 
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {

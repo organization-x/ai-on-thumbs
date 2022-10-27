@@ -6,8 +6,7 @@ import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 18: Face Parts Screen')
+// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 1 Screen 18: Face Parts Screen')
 
 export default function Course1FaceParts ({ navigation }) {
   const screenSection = ScreenList.course1

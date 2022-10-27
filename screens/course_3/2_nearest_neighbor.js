@@ -6,8 +6,7 @@ import colors from '../../config/colors'
 import ScreenList from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 2: Nearest Neighbor')
+// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 3 Screen 2: Nearest Neighbor')
 
 const height = Dimensions.get('window').height
 

@@ -151,8 +151,39 @@ import Course4Review from './screens/course_4/3_review'
 import Course4End from './screens/course_4/End'
 import Course4Email from './screens/course_4/Email'
 import Course4Promo from './screens/course_4/Promo'
+
 // quiz screen imports
-import ComingSoon from './screens/quizzes/quizzes_coming_soon'
+import QuizzesScreen from './screens/quizzes/quizzeshome' 
+import Quiz1Start from './screens/quizzes/quiz1/1_start'
+import Quiz1Question1 from './screens/quizzes/quiz1/2_question1'
+import Quiz1Question1Wrong from './screens/quizzes/quiz1/3_question1Wrong'
+import Quiz1Question2 from './screens/quizzes/quiz1/4_question2'
+import Quiz1Question2Wrong from './screens/quizzes/quiz1/5_question2Wrong'
+import Quiz1Question3 from './screens/quizzes/quiz1/6_question3'
+import Quiz1Question3Wrong from './screens/quizzes/quiz1/7_question3Wrong'
+import Quiz1Score from './screens/quizzes/quiz1/8_score'
+import Quiz2Start from './screens/quizzes/quiz2/1_start'
+import Quiz2Question1 from './screens/quizzes/quiz2/2_question1'
+import Quiz2Question1Wrong from './screens/quizzes/quiz2/3_question1Wrong'
+import Quiz2Question2 from './screens/quizzes/quiz2/4_question2'
+import Quiz2Question2Wrong from './screens/quizzes/quiz2/5_question2Wrong'
+import Quiz2Score from './screens/quizzes/quiz2/6_score'
+import Quiz3Start from './screens/quizzes/quiz3/start'
+import Quiz3Question1 from './screens/quizzes/quiz3/question1'
+import Quiz3Question1Wrong from './screens/quizzes/quiz3/question1Wrong'
+import Quiz3Question2 from './screens/quizzes/quiz3/question2'
+import Quiz3Question2Wrong from './screens/quizzes/quiz3/question2Wrong'
+import Quiz3Score from './screens/quizzes/quiz3/score'
+import Quiz4Start from './screens/quizzes/quiz4/start'
+import Quiz4Question1 from './screens/quizzes/quiz4/question1'
+import Quiz4Question1Wrong from './screens/quizzes/quiz4/question1Wrong'
+import Quiz4Question2 from './screens/quizzes/quiz4/question2'
+import Quiz4Question2Wrong from './screens/quizzes/quiz4/question2Wrong'
+import Quiz4Question3 from './screens/quizzes/quiz4/question3'
+import Quiz4Question3Wrong from './screens/quizzes/quiz4/question3Wrong'
+import Quiz4Score from  './screens/quizzes/quiz4/score'
+
+
 
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
@@ -325,7 +356,40 @@ export default function App () {
           <Stack.Screen name='Course4Promo' component={Course4Promo} />
 
           {/* quiz screen stack */}
-          <Stack.Screen name='ComingSoon' component={ComingSoon} />
+          <Stack.Screen name='QuizzesScreen' component={QuizzesScreen} />
+          {/* Quiz 1 */}
+          <Stack.Screen name='Quiz1Start' component={Quiz1Start} />
+          <Stack.Screen name='Quiz1Question1' component={Quiz1Question1} />
+          <Stack.Screen name='Quiz1Question1Wrong' component={Quiz1Question1Wrong} />
+          <Stack.Screen name='Quiz1Question2' component={Quiz1Question2} />
+          <Stack.Screen name='Quiz1Question2Wrong' component={Quiz1Question2Wrong} />
+          <Stack.Screen name='Quiz1Question3' component={Quiz1Question3} />
+          <Stack.Screen name='Quiz1Question3Wrong' component={Quiz1Question3Wrong} />
+          <Stack.Screen name='Quiz1Score' component={Quiz1Score} />
+          {/* Quiz 2 */}
+          <Stack.Screen name='Quiz2Start' component={Quiz2Start} />
+          <Stack.Screen name='Quiz2Question1' component={Quiz2Question1} />
+          <Stack.Screen name='Quiz2Question1Wrong' component={Quiz2Question1Wrong} />
+          <Stack.Screen name='Quiz2Question2' component={Quiz2Question2} />
+          <Stack.Screen name='Quiz2Question2Wrong' component={Quiz2Question2Wrong} />
+          <Stack.Screen name='Quiz2Score' component={Quiz2Score} />
+          {/* Quiz 3 */}
+          <Stack.Screen name='Quiz3Start' component={Quiz3Start} />
+          <Stack.Screen name='Quiz3Question1' component={Quiz3Question1} />
+          <Stack.Screen name='Quiz3Question1Wrong' component={Quiz3Question1Wrong} />
+          <Stack.Screen name='Quiz3Question2' component={Quiz3Question2} />
+          <Stack.Screen name='Quiz3Question2Wrong' component={Quiz3Question2Wrong} />
+          <Stack.Screen name='Quiz3Score' component={Quiz3Score} />
+          {/* Quiz 4 */}
+          <Stack.Screen name='Quiz4Start' component={Quiz4Start} />
+          <Stack.Screen name='Quiz4Question1' component={Quiz4Question1} />
+          <Stack.Screen name='Quiz4Question1Wrong' component={Quiz4Question1Wrong} />
+          <Stack.Screen name='Quiz4Question2' component={Quiz4Question2} />
+          <Stack.Screen name='Quiz4Question2Wrong' component={Quiz4Question2Wrong} />
+          <Stack.Screen name='Quiz4Question3' component={Quiz4Question3} />
+          <Stack.Screen name='Quiz4Question3Wrong' component={Quiz4Question3Wrong} />
+          <Stack.Screen name='Quiz4Score' component={Quiz4Score} />
+
 
         </Stack.Navigator>
       </NavigationContainer>
