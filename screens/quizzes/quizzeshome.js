@@ -1,13 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, ScrollView } from 'react-native'
+import { StyleSheet, Text, ScrollView, View } from 'react-native'
 import QuizCard from '../../components/QuizCard'
-import { LinearGradient } from 'expo-linear-gradient'
+import colors from '../../config/colors'
 
 // // import * as Analytics from 'expo-firebase-analytics'// Analytics.setCurrentScreen('Courses Screen')
 
 export default function QuizzesScreen ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
         <Text style={styles.header}>Your Quiz Journey</Text>
         <QuizCard
@@ -15,7 +15,7 @@ export default function QuizzesScreen ({ navigation }) {
           lessonScreen='Quiz1Start'
           gradColors={[`#b8860b`]}
           title='Facial Recognition I Quiz'
-          desc='This Quiz will challenge you to demonstrate what you learned in Facial Recognition I. Take the time to compelete the quizzes as a fun and beneficial step in this course!'
+          desc='This Quiz will challenge you to demonstrate what you learned in Facial Recognition I'
           ratingandduration='Beginner: 5 minutes'
         />
         <QuizCard
@@ -40,10 +40,10 @@ export default function QuizzesScreen ({ navigation }) {
           gradColors={[`#00008b`]}
           title='Neural Networks I'
           desc="This Quiz will test your knowledge on what you learned in Neural Networks I."
-          ratingandduration='Beginner: 10 minutes'
+          ratingandduration='Beginner: 5 minutes'
         />
       </ScrollView>
-    </LinearGradient>
+    </View>
   )
 }
 
@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 27,
-    paddingVertical: 17
+    paddingVertical: 17,
+    backgroundColor: colors.primary
   },
   header: {
     textAlign: 'center',

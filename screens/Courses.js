@@ -1,14 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, ScrollView } from 'react-native'
+import { StyleSheet, Text, ScrollView, View } from 'react-native'
 import CourseCard from '../components/CourseCard'
 import CourseAd from '../components/CourseAd'
-import { LinearGradient } from 'expo-linear-gradient'
+import colors from '../config/colors'
 
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Courses Screen')
 
 export default function CoursesScreen ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
         <Text style={styles.header}>Your AI Journey</Text>
         <CourseCard
@@ -57,7 +57,7 @@ export default function CoursesScreen ({ navigation }) {
           desc='Immerse yourself in artificial intelligence and learn to build incredible real-world AI products at ai-camp.org. No prior experience necessary!'
         />
       </ScrollView>
-    </LinearGradient>
+    </View>
   )
 }
 
@@ -65,7 +65,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 27,
-    paddingVertical: 17
+    paddingVertical: 17,
+    backgroundColor: colors.background
   },
   header: {
     textAlign: 'center',

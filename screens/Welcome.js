@@ -4,7 +4,7 @@ import LessonButton from '../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 import * as SecureStore from 'expo-secure-store'
 import * as Sentry from 'sentry-expo'
-
+import colors from '../config/colors'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Welcome Screen')
 
 const height = Dimensions.get('window').height
@@ -36,7 +36,7 @@ export default function Welcome ({ navigation }) {
   }, [])
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <LinearGradient colors={['#8976C2', colors.background]} style={styles.container}>
       <Modal
         animationType='slide'
         transparent
