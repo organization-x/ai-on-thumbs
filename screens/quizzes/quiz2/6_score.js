@@ -13,7 +13,15 @@ const AppButton = ({ onPress, title }) => (
 )
 
 export default function Quiz2Score ({ navigation }) {
-  const correct = 1
+  let correct = 0
+  { /* calculate how many questions the user got correct */ }
+  if (global.q2q1Choice === 1) {
+    correct++
+  }
+  if (global.q2q2Choice === 2) {
+    correct++
+  }
+
   const total = 2
   const score = correct / total
   return (

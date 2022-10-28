@@ -23,6 +23,7 @@ export default function Quiz2Question2 ({ navigation }) {
     setStyle1(selected === 1 ? '#1FBD67' : '#D9D9D9')
     setStyle2(selected === 2 ? '#1FBD67' : '#D9D9D9')
     setStyle3(selected === 3 ? '#1FBD67' : '#D9D9D9')
+    global.q2q2Choice = selected
   }
 
   return (

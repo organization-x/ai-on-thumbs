@@ -26,7 +26,7 @@ export default function Quiz4Question3 ({ navigation }) {
     setStyle2(selected === 2 ? '#1FBD67' : '#D9D9D9')
     setStyle3(selected === 3 ? '#1FBD67' : '#D9D9D9')
     setStyle4(selected === 4 ? '#1FBD67' : '#D9D9D9')
-    global.q3Choice = selected
+    global.q4q3Choice = selected
   }
 
   return (
