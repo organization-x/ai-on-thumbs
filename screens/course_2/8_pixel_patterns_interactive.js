@@ -62,19 +62,16 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
 
   let src
   let darkOrLightBoldStyle
-  let backgroundColor
   let darkOrLightRegularStyle
 
   if (isEnabled === true) {
     src = require('../../assets/course_2/colorlessEyes.png')
     darkOrLightBoldStyle = styles.lightSmallBoldText
     darkOrLightRegularStyle = styles.lightSmallRegularText
-    backgroundColor = ['#370098', '#160535']
   } else {
     src = require('../../assets/course_2/eyesWithColor.png')
     darkOrLightBoldStyle = styles.darkSmallBoldText
     darkOrLightRegularStyle = styles.darkSmallRegularText
-    backgroundColor = ['#8976C2', '#E6E8FB']
   }
 
   return (

@@ -13,7 +13,7 @@ export default function QuizzesScreen ({ navigation }) {
         <QuizCard
           navigation={navigation}
           lessonScreen='Quiz1Start'
-          gradColors={[`#b8860b`]}
+          gradColors={['#b8860b']}
           title='Facial Recognition I Quiz'
           desc='This Quiz will challenge you to demonstrate what you learned in Facial Recognition I'
           ratingandduration='Beginner: 5 minutes'
@@ -21,7 +21,7 @@ export default function QuizzesScreen ({ navigation }) {
         <QuizCard
           navigation={navigation}
           lessonScreen='Quiz2Start'
-          gradColors={[`#fff8dc`]}
+          gradColors={['#fff8dc']}
           title='Facial Recognition II'
           desc='This Quiz on Facial Recognition II will test the skills you learned about computer filters and pixels.'
           ratingandduration='Beginner: 5 minutes'
@@ -29,7 +29,7 @@ export default function QuizzesScreen ({ navigation }) {
         <QuizCard
           navigation={navigation}
           lessonScreen='Quiz3Start'
-          gradColors={[`#d3d3d3`]}
+          gradColors={['#d3d3d3']}
           title='K Nearest Neighbors I'
           desc='This Quiz will help you cement the information you learned on KNN.'
           ratingandduration='Beginner: 5 minutes'
@@ -37,9 +37,9 @@ export default function QuizzesScreen ({ navigation }) {
         <QuizCard
           navigation={navigation}
           lessonScreen='Quiz4Start'
-          gradColors={[`#00008b`]}
+          gradColors={['#00008b']}
           title='Neural Networks I'
-          desc="This Quiz will test your knowledge on what you learned in Neural Networks I."
+          desc='This Quiz will test your knowledge on what you learned in Neural Networks I.'
           ratingandduration='Beginner: 5 minutes'
         />
       </ScrollView>
@@ -65,5 +65,5 @@ const styles = StyleSheet.create({
   courseList: {
     flexDirection: 'column',
     minHeight: 200
-  },
+  }
 })

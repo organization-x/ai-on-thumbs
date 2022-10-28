@@ -1,27 +1,27 @@
 import React from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Dimensions } from 'react-native'
-TouchableOpacity.defaultProps = { activeOpacity: 0.8 };
+TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 
-const height = Dimensions.get('window').height;
-const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 const AppButton = ({ onPress, title }) => (
   <TouchableOpacity onPress={onPress} style={styles.startButton}>
     <Text style={styles.startButtonText}>{title}</Text>
   </TouchableOpacity>
-);
+)
 
 export default function Quiz4Start ({ navigation }) {
   return (
     <View style={styles.container}>
-        <View style={styles.textContainer}>
-            <Text style={styles.titleText}>NN I Quiz</Text>
-            <Text style={styles.subText}>3 Questions</Text>
-        </View> 
-    <AppButton 
-        title="Let's Get Started!" 
+      <View style={styles.textContainer}>
+        <Text style={styles.titleText}>NN I Quiz</Text>
+        <Text style={styles.subText}>3 Questions</Text>
+      </View>
+      <AppButton
+        title="Let's Get Started!"
         onPress={() => navigation.navigate('Quiz4Question1')}
-    />
+      />
     </View>
   )
 }
@@ -31,14 +31,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#1FBD67',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   titleText: {
-    marginBottom: height/40,
+    marginBottom: height / 40,
     fontWeight: '500',
     fontSize: 60,
     textAlign: 'center',
-    color: "#FFF"
+    color: '#FFF'
   },
   subText: {
     fontStyle: 'normal',
@@ -48,14 +48,14 @@ const styles = StyleSheet.create({
     color: '#FFF'
   },
   startButton: {
-    marginBottom: height/20,
+    marginBottom: height / 20,
     backgroundColor: '#0f89ce',
-    height: height/10,
-    width: width/1.2,
+    height: height / 10,
+    width: width / 1.2,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 15,
-    alignSelf: 'center',
+    alignSelf: 'center'
   },
   startButtonText: {
     fontStyle: 'normal',
@@ -69,6 +69,6 @@ const styles = StyleSheet.create({
   textContainer: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-  },
+    alignItems: 'center'
+  }
 })

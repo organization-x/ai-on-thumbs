@@ -153,7 +153,7 @@ import Course4Email from './screens/course_4/Email'
 import Course4Promo from './screens/course_4/Promo'
 
 // quiz screen imports
-import QuizzesScreen from './screens/quizzes/quizzeshome' 
+import QuizzesScreen from './screens/quizzes/quizzeshome'
 import Quiz1Start from './screens/quizzes/quiz1/1_start'
 import Quiz1Question1 from './screens/quizzes/quiz1/2_question1'
 import Quiz1Question1Wrong from './screens/quizzes/quiz1/3_question1Wrong'
@@ -181,9 +181,7 @@ import Quiz4Question2 from './screens/quizzes/quiz4/question2'
 import Quiz4Question2Wrong from './screens/quizzes/quiz4/question2Wrong'
 import Quiz4Question3 from './screens/quizzes/quiz4/question3'
 import Quiz4Question3Wrong from './screens/quizzes/quiz4/question3Wrong'
-import Quiz4Score from  './screens/quizzes/quiz4/score'
-
-
+import Quiz4Score from './screens/quizzes/quiz4/score'
 
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
@@ -389,7 +387,6 @@ export default function App () {
           <Stack.Screen name='Quiz4Question3' component={Quiz4Question3} />
           <Stack.Screen name='Quiz4Question3Wrong' component={Quiz4Question3Wrong} />
           <Stack.Screen name='Quiz4Score' component={Quiz4Score} />
-
 
         </Stack.Navigator>
       </NavigationContainer>

@@ -1,52 +1,52 @@
-import React from "react";
+import React from 'react'
 import {
   StyleSheet,
   View,
   Text,
   TouchableOpacity,
-  Dimensions,
-} from "react-native";
-import { useRoute } from '@react-navigation/native';
+  Dimensions
+} from 'react-native'
+import { useRoute } from '@react-navigation/native'
 
-TouchableOpacity.defaultProps = { activeOpacity: 0.8 };
+TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 
-const height = Dimensions.get("window").height;
-const width = Dimensions.get("window").width;
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
-export default function Quiz4Question3Wrong({ navigation }) {
-  const route = useRoute(); 
-  const correctAnswer = 2;
-  const incorrectAnswer = route.params.selected;
+export default function Quiz4Question3Wrong ({ navigation }) {
+  const route = useRoute()
+  const correctAnswer = 2
+  const incorrectAnswer = route.params.selected
 
-  const textColor1 = incorrectAnswer === 1 ? "white" : "";
-  const textColor2 = incorrectAnswer === 2 ? "white" : "";
-  const textColor3 = incorrectAnswer === 3 ? "white" : "";
-  const textColor4 = incorrectAnswer === 4 ? "white" : "";
+  const textColor1 = incorrectAnswer === 1 ? 'white' : ''
+  const textColor2 = incorrectAnswer === 2 ? 'white' : ''
+  const textColor3 = incorrectAnswer === 3 ? 'white' : ''
+  const textColor4 = incorrectAnswer === 4 ? 'white' : ''
 
   const answerStyle1 =
     correctAnswer === 1
-      ? "#1FBD67"
+      ? '#1FBD67'
       : incorrectAnswer === 1
-      ? "#BD1F1F"
-      : "#D9D9D9";
+        ? '#BD1F1F'
+        : '#D9D9D9'
   const answerStyle2 =
     correctAnswer === 2
-      ? "#1FBD67"
+      ? '#1FBD67'
       : incorrectAnswer === 2
-      ? "#BD1F1F"
-      : "#D9D9D9";
+        ? '#BD1F1F'
+        : '#D9D9D9'
   const answerStyle3 =
     correctAnswer === 3
-      ? "#1FBD67"
+      ? '#1FBD67'
       : incorrectAnswer === 3
-      ? "#BD1F1F"
-      : "#D9D9D9";
+        ? '#BD1F1F'
+        : '#D9D9D9'
   const answerStyle4 =
     correctAnswer === 4
-      ? "#1FBD67"
+      ? '#1FBD67'
       : incorrectAnswer === 4
-      ? "#BD1F1F"
-      : "#D9D9D9";
+        ? '#BD1F1F'
+        : '#D9D9D9'
 
   return (
     <View style={styles.container}>
@@ -57,34 +57,34 @@ export default function Quiz4Question3Wrong({ navigation }) {
         Close, but answer #{correctAnswer} is correct. Swipe up to review the lesson.
       </Text>
       <View style={styles.answerContainer}>
-        {/*answer option 1*/}
-          <View style={[styles.answer, { backgroundColor: answerStyle1 }]}>
-            <Text style={[styles.answerText, {color: textColor1}]}>
+        {/* answer option 1 */}
+        <View style={[styles.answer, { backgroundColor: answerStyle1 }]}>
+          <Text style={[styles.answerText, { color: textColor1 }]}>
             Neural networks are only used for coding as there are NO real-life applications
-            </Text>
-          </View>
-        {/*answer option 2*/}
-          <View style={[styles.answer, { backgroundColor: answerStyle2 }]}>
-            <Text style={[styles.answerText, {color: textColor2}]}>
-              They are used to find patterns in data to predict future data for the recommendation systems such as the YouTube algorithm
-            </Text>
-          </View>
-        {/*answer option 3*/}
-          <View style={[styles.answer, { backgroundColor: answerStyle3 }]}>
-            <Text style={[styles.answerText, {color: textColor3}]}>
-              Neural networks are used to operate games in a computer
-            </Text>
-          </View>
-        {/*answer option 4*/}
-          <View style={[styles.answer, { backgroundColor: answerStyle4 }]}>
-            <Text style={[styles.answerText, {color: textColor4}]}>
-              They are used for multiple situations including determining whether a person is a good artist or not
-            </Text>
-          </View>
+          </Text>
+        </View>
+        {/* answer option 2 */}
+        <View style={[styles.answer, { backgroundColor: answerStyle2 }]}>
+          <Text style={[styles.answerText, { color: textColor2 }]}>
+            They are used to find patterns in data to predict future data for the recommendation systems such as the YouTube algorithm
+          </Text>
+        </View>
+        {/* answer option 3 */}
+        <View style={[styles.answer, { backgroundColor: answerStyle3 }]}>
+          <Text style={[styles.answerText, { color: textColor3 }]}>
+            Neural networks are used to operate games in a computer
+          </Text>
+        </View>
+        {/* answer option 4 */}
+        <View style={[styles.answer, { backgroundColor: answerStyle4 }]}>
+          <Text style={[styles.answerText, { color: textColor4 }]}>
+            They are used for multiple situations including determining whether a person is a good artist or not
+          </Text>
+        </View>
       </View>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("Quiz4Score");
+          navigation.navigate('Quiz4Score')
         }}
       >
         <View style={styles.submitButton}>
@@ -92,78 +92,78 @@ export default function Quiz4Question3Wrong({ navigation }) {
         </View>
       </TouchableOpacity>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#202020",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: width/100,
+    backgroundColor: '#202020',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: width / 100
   },
   headerText: {
     borderRadius: 15,
     fontSize: 30,
-    color: "white",
+    color: 'white'
   },
   headerBackground: {
-    width: width,
+    width,
     height: height / 10,
-    backgroundColor: "#1FBD67",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: height / 20,
+    backgroundColor: '#1FBD67',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: height / 20
   },
   question: {
-    color: "white",
-    fontWeight: "500",
+    color: 'white',
+    fontWeight: '500',
     fontSize: 30,
-    alignItems: "center",
-    textAlign: "center",
-    marginBottom: height / 20,
+    alignItems: 'center',
+    textAlign: 'center',
+    marginBottom: height / 20
   },
   answer: {
     marginBottom: height / 40,
-    backgroundColor: "#D9D9D9",
+    backgroundColor: '#D9D9D9',
     height: height / 10,
     width: width / 1.2,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: 45,
-    alignSelf: "center",
-    padding: width / 50,
+    alignSelf: 'center',
+    padding: width / 50
   },
   answerText: {
-    fontStyle: "normal",
-    fontWeight: "bold",
+    fontStyle: 'normal',
+    fontWeight: 'bold',
     fontSize: 15,
-    display: "flex",
-    alignItems: "center",
-    textAlign: "center",
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'center'
   },
   answerContainer: {
     flex: 1,
-    alignItems: "center",
+    alignItems: 'center'
   },
   submitButton: {
     marginBottom: height / 20,
-    backgroundColor: "#1fbd67",
+    backgroundColor: '#1fbd67',
     height: height / 10,
     width: width / 1.2,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: 15,
-    alignSelf: "center",
+    alignSelf: 'center'
   },
   submitButtonText: {
-    fontStyle: "normal",
-    fontWeight: "500",
+    fontStyle: 'normal',
+    fontWeight: '500',
     fontSize: 25,
-    display: "flex",
-    alignItems: "center",
-    textAlign: "center",
-    color: "white",
-  },
-});
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'center',
+    color: 'white'
+  }
+})

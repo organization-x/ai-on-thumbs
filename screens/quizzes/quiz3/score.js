@@ -1,57 +1,56 @@
 import React from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Dimensions, Image } from 'react-native'
-import colors from '../../../config/colors';
-TouchableOpacity.defaultProps = { activeOpacity: 0.8 };
+import colors from '../../../config/colors'
+TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 
-const height = Dimensions.get('window').height;
-const width = Dimensions.get('window').width;
-
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 const AppButton = ({ onPress, title }) => (
   <TouchableOpacity onPress={onPress} style={styles.returnButton}>
     <Text style={styles.returnButtonText}>{title}</Text>
   </TouchableOpacity>
-);
+)
 
 export default function Quiz3Score ({ navigation }) {
-  let correct = 0;
-  {/* calculate how many questions the user got correct */}
-  if(global.q1Choice === 1){
-    correct++;
+  let correct = 0
+  { /* calculate how many questions the user got correct */ }
+  if (global.q1Choice === 1) {
+    correct++
   }
-  if(global.q2Choice === 3){
-    correct++;
+  if (global.q2Choice === 3) {
+    correct++
   }
 
-  const total = 2;
-  const score = correct/total;
+  const total = 2
+  const score = correct / total
 
   return (
     <View style={styles.container}>
-    <View style={styles.headerBackground}>
+      <View style={styles.headerBackground}>
         <Text style={styles.headerText}>Quiz KNN I</Text>
-    </View>
-    <View style={styles.scoreContainer}>
+      </View>
+      <View style={styles.scoreContainer}>
         <View style={styles.scoreBox}>
-            <Image source={require('../../../assets/quizzes/score_icon.png')} style={styles.image}/>
-            <Text style={styles.congratsText}>Congrats!</Text>
-            <Text style={styles.scoreText}>{Math.floor(score*100)}% Score</Text>
-            <Text style={styles.resultsText}>
-                You correctly answered{' '}
-                <Text style={[styles.resultsText, {color: "#1FBD67"}]}>
-                    {correct}
-                </Text>
-                {' '}out of{' '}
-                <Text style={[styles.resultsText, {color: "#0f89ce"}]}>
-                    {total} questions
-                </Text>
+          <Image source={require('../../../assets/quizzes/score_icon.png')} style={styles.image} />
+          <Text style={styles.congratsText}>Congrats!</Text>
+          <Text style={styles.scoreText}>{Math.floor(score * 100)}% Score</Text>
+          <Text style={styles.resultsText}>
+            You correctly answered{' '}
+            <Text style={[styles.resultsText, { color: '#1FBD67' }]}>
+              {correct}
             </Text>
+            {' '}out of{' '}
+            <Text style={[styles.resultsText, { color: '#0f89ce' }]}>
+              {total} questions
+            </Text>
+          </Text>
         </View>
-    </View>
-    <AppButton 
-        title="Return home" 
+      </View>
+      <AppButton
+        title='Return home'
         onPress={() => navigation.navigate('Courses')}
-    />
+      />
     </View>
   )
 }
@@ -61,30 +60,30 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   headerText: {
     borderRadius: 15,
     fontSize: 30,
-    color: "white",
+    color: 'white'
   },
   headerBackground: {
-    width: width,
+    width,
     height: height / 10,
-    backgroundColor: "#1FBD67",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: height / 10,
+    backgroundColor: '#1FBD67',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: height / 10
   },
   returnButton: {
-    marginBottom: height/20,
+    marginBottom: height / 20,
     backgroundColor: '#0f89ce',
-    height: height/10,
-    width: width/1.2,
+    height: height / 10,
+    width: width / 1.2,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 15,
-    alignSelf: 'center',
+    alignSelf: 'center'
   },
   returnButtonText: {
     fontStyle: 'normal',
@@ -94,40 +93,40 @@ const styles = StyleSheet.create({
     color: '#FFF'
   },
   scoreContainer: {
-    flex: 1,
+    flex: 1
   },
   scoreBox: {
-    padding: width/30,
+    padding: width / 30,
     width: width / 1.2,
     height: height / 1.75,
-    backgroundColor: "#D9D9D9",
-    borderRadius: 25,
+    backgroundColor: '#D9D9D9',
+    borderRadius: 25
   },
   image: {
-    resizeMode: "contain",
+    resizeMode: 'contain',
     height: width / 2.5,
     width: width / 2.5,
     aspectRatio: 1,
-    alignSelf: "center",
-    marginBottom: height / 100,
+    alignSelf: 'center',
+    marginBottom: height / 100
   },
   congratsText: {
     fontStyle: 'normal',
     fontWeight: 'bold',
     fontSize: 40,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   scoreText: {
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 60,
     textAlign: 'center',
-    color: "#1FBD67"
+    color: '#1FBD67'
   },
   resultsText: {
     fontStyle: 'normal',
     fontWeight: '500',
     fontSize: 20,
-    textAlign: 'center',
-  },
+    textAlign: 'center'
+  }
 })
