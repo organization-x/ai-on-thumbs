@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '50%',
+    marginTop: '40%',
     textAlign: 'center',
     color: 'white',
     fontSize: height / 20,

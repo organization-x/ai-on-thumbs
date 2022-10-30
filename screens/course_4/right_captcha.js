@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   },
   btm: {
     color: 'white',

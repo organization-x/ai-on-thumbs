@@ -23,9 +23,7 @@ export default function Course4CompToBrain ({ navigation }) {
         <Text style={styles.secondText}>As you can see in the image, <Text style={styles.underlinedText}>NNs are made of nodes (the purple circles) </Text>
         </Text>
 
-        <View style={styles.container}>
-          <Image style={styles.image} source={require('../../../assets/course_4/nn_layers.gif')} />
-        </View>
+        <Image style={styles.image} source={require('../../../assets/course_4/nn_layers.gif')} />
 
         <Text style={styles.thirdText}>Information is sent from node to node, similarly to the transmission of signals between neurons in the brain, in the form of numbers.</Text>
       </View>

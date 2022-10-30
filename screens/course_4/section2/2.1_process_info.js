@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   },
   progressBar: {
     alignItems: 'center',
@@ -101,10 +101,12 @@ const styles = StyleSheet.create({
   rectangle: {
     backgroundColor: colors.primary,
     borderRadius: 20,
-    width: 320,
-    height: 215,
-    alignItems: 'center',
+    width: height / 2.15,
+    height: height / 5,
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
     marginTop: 15,
-    marginBottom: 10
+    marginBottom: 8
   }
 })
