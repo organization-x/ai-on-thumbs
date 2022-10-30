@@ -48,8 +48,8 @@ export default function Quiz3Score ({ navigation }) {
         </View>
       </View>
       <AppButton
-        title='Return home'
-        onPress={() => navigation.navigate('Courses')}
+        title='Return to quizzes'
+        onPress={() => navigation.navigate('QuizzesScreen')}
       />
     </View>
   )

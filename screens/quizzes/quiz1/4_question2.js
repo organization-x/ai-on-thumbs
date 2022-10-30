@@ -73,7 +73,8 @@ export default function Quiz1Question2 ({ navigation }) {
         onPress={() => {
           if (selected > 0) {
             navigation.navigate(
-              selected === 1 ? 'Quiz1Question3' : 'Quiz1Question2Wrong'
+              selected === 1 ? 'Quiz1Question3' : 'Quiz1Question2Wrong',
+              { selected }
             )
           }
         }}

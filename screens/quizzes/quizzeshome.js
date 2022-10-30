@@ -2,13 +2,16 @@ import React from 'react'
 import { StyleSheet, Text, ScrollView, View } from 'react-native'
 import QuizCard from '../../components/QuizCard'
 import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 
 // // import * as Analytics from 'expo-firebase-analytics'// Analytics.setCurrentScreen('Courses Screen')
 
 export default function QuizzesScreen ({ navigation }) {
   return (
     <View style={styles.container}>
+      
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
+        <HomeButton navigation={navigation} />
         <Text style={styles.header}>Your Quiz Journey</Text>
         <QuizCard
           navigation={navigation}

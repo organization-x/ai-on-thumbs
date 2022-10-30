@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Dimensions
 } from 'react-native'
+import { useRoute } from '@react-navigation/native'
 
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 
@@ -13,8 +14,9 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Quiz1Question3Wrong ({ navigation }) {
+  const route = useRoute()
   const correctAnswer = 2
-  const incorrectAnswer = 4
+  const incorrectAnswer = route.params.selected
 
   const answerStyle1 =
     correctAnswer === 1
