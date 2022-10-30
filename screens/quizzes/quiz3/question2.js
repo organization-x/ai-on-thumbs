@@ -19,7 +19,7 @@ export default function Quiz3Question2 ({ navigation }) {
   const [answerStyle3, setStyle3] = React.useState('#D9D9D9')
 
   const optionPress = (selected) => {
-    { /* change option colors according to which option the user chose */ }
+    /* change option colors according to which option the user chose */
     setSelected(selected)
     setStyle1(selected === 1 ? '#1FBD67' : '#D9D9D9')
     setStyle2(selected === 2 ? '#1FBD67' : '#D9D9D9')

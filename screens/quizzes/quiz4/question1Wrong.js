@@ -23,7 +23,7 @@ export default function Quiz4Question1Wrong ({ navigation }) {
   const textColor3 = incorrectAnswer === 3 ? 'white' : ''
   const textColor4 = incorrectAnswer === 4 ? 'white' : ''
 
-  { /* change option colors according to the incorrect answer chosen */ }
+  /* change option colors according to the incorrect answer chosen */
   const answerStyle1 =
     correctAnswer === 1
       ? '#1FBD67'

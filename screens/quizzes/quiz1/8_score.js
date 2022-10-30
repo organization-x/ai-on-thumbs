@@ -14,7 +14,7 @@ const AppButton = ({ onPress, title }) => (
 
 export default function Quiz1Score ({ navigation }) {
   let correct = 0
-  { /* calculate how many questions the user got correct */ }
+  /* calculate how many questions the user got correct */
   if (global.q1q1Choice === 1) {
     correct++
   }
