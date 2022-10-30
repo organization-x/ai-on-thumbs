@@ -14,14 +14,14 @@ const AppButton = ({ onPress, title }) => (
 
 export default function Quiz1Score ({ navigation }) {
   let correct = 0
-  { /* calculate how many questions the user got correct */ }
+  /* calculate how many questions the user got correct */
   if (global.q1q1Choice === 1) {
     correct++
   }
-  if (global.q1q2Choice === 2) {
+  if (global.q1q2Choice === 1) {
     correct++
   }
-  if (global.q1q3Choice === 3) {
+  if (global.q1q3Choice === 2) {
     correct++
   }
   const total = 3
@@ -49,8 +49,8 @@ export default function Quiz1Score ({ navigation }) {
         </View>
       </View>
       <AppButton
-        title='Return home'
-        onPress={() => navigation.navigate('Courses')}
+        title='Return to quizzes'
+        onPress={() => navigation.navigate('QuizzesScreen')}
       />
     </View>
   )

@@ -14,7 +14,7 @@ const AppButton = ({ onPress, title }) => (
 
 export default function Quiz2Score ({ navigation }) {
   let correct = 0
-  { /* calculate how many questions the user got correct */ }
+  /* calculate how many questions the user got correct */
   if (global.q2q1Choice === 1) {
     correct++
   }
@@ -47,8 +47,8 @@ export default function Quiz2Score ({ navigation }) {
         </View>
       </View>
       <AppButton
-        title='Return home'
-        onPress={() => navigation.navigate('Courses')}
+        title='Return to quizzes'
+        onPress={() => navigation.navigate('QuizzesScreen')}
       />
     </View>
   )

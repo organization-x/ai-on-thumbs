@@ -15,7 +15,7 @@ const width = Dimensions.get('window').width
 
 export default function Quiz1Question1Wrong ({ navigation }) {
   const route = useRoute()
-  const correctAnswer = 1
+  const correctAnswer = 2
   const incorrectAnswer = route.params.selected
 
   const answerStyle1 =
