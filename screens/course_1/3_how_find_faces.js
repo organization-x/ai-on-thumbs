@@ -54,8 +54,7 @@ const styles = StyleSheet.create({
   number: {
     color: 'white',
     fontSize: 30,
-    textAlign: 'right',
-    marginTop: 10
+    textAlign: 'right'
   },
   zoomView: {
     flex: 1,

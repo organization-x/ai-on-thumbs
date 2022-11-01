@@ -30,11 +30,11 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
     if (currentScreenIdx < 4){
         firstScreenIdx = 0;
     }
-    else if (currentScreenIdx > screens.length-3) {
-        firstScreenIdx = screens.length-6;
+    else if (currentScreenIdx > screens.length-2) {
+        firstScreenIdx = screens.length-5;
     }
     else {
-        firstScreenIdx = currentScreenIdx-2;
+        firstScreenIdx = currentScreenIdx-3;
     }
 
     for (let i=firstScreenIdx; i<firstScreenIdx+5; i++){

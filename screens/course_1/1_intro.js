@@ -1,12 +1,14 @@
 // To understand how facial recognition works, we will first learn about how computers interpret faces.
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 1 Screen 1: Intro Screen')
+
+const height = Dimensions.get('window').height
 
 export default function Course1Intro ({ navigation }) {
   const screenSection = ScreenList.course1
@@ -44,9 +46,8 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: 30,
-    textAlign: 'right',
-    marginTop: 10
+    fontSize: height / 25,
+    textAlign: 'right'
   },
   interactive: {
     flex: 1,
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
     marginTop: '50%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 36,
+    fontSize: height / 20,
     fontWeight: 'bold'
   },
   footerButtons: {

@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   box: {
-    backgroundColor: '#1FBD67',
+    backgroundColor: colors.primary,
     color: 'white',
     width: '100%',
     borderRadius: 20,

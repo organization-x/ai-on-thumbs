@@ -29,7 +29,7 @@ export default function Course3SelectClosestHouse ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>4/</Text>
+        <Text style={styles.pagenumber}>4/21</Text>
       </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.text}>That's more like it.</Text>
@@ -89,8 +89,7 @@ const styles = StyleSheet.create({
   pagenumber: {
     color: 'white',
     fontSize: 30,
-    textAlign: 'right',
-    marginTop: 10
+    textAlign: 'right'
   },
   top: {
     flexDirection: 'row',

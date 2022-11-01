@@ -164,8 +164,7 @@ const styles = StyleSheet.create({
   pagenumber: {
     color: 'white',
     fontSize: 30,
-    textAlign: 'right',
-    marginTop: 10
+    textAlign: 'right'
   },
   interactive: {
     flex: 1,
@@ -202,16 +201,11 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     position: 'relative'
   },
-  number: {
-    color: 'white',
-    fontSize: windowHeight / 28,
-    textAlign: 'right'
-  },
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '1%'
+    marginTop: '2%'
   },
   headerText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

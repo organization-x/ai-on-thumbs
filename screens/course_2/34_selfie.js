@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '1%'
+    marginTop: '2%'
   },
   secondText: {
     marginTop: '5%',

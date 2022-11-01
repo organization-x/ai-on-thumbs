@@ -119,7 +119,7 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '1%'
+    marginTop: '2%'
   },
   footerButtons: {
     marginBottom: 10,

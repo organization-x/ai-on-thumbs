@@ -55,8 +55,7 @@ const styles = StyleSheet.create({
   number: {
     color: 'white',
     fontSize: 30,
-    textAlign: 'right',
-    marginTop: 10
+    textAlign: 'right'
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

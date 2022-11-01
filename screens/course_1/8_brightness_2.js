@@ -58,8 +58,7 @@ const styles = StyleSheet.create({
   number: {
     color: 'white',
     fontSize: 30,
-    textAlign: 'right',
-    marginTop: 10
+    textAlign: 'right'
   },
   footerButtons: {
     marginBottom: 10,

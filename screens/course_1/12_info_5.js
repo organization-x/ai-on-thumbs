@@ -54,8 +54,7 @@ const styles = StyleSheet.create({
   number: {
     color: 'white',
     fontSize: 30,
-    textAlign: 'right',
-    marginTop: 10
+    textAlign: 'right'
   },
   backgroundImage: {
     flex: 1,
@@ -80,7 +79,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '40%',
+    marginTop: '35%',
     textAlign: 'center',
     color: 'white',
     fontSize: height / 20,

@@ -14,7 +14,7 @@ export default function Course4InteractiveCaptcha ({ navigation, context }) {
   const verify = () => {
     let count = 0
     for (let i = 0; i < pressed.length; i++) {
-      if (pressed[i] === false || pressed[i] == null) {
+      if (pressed[i] != true) {
         navigation.navigate('CaptchaWrong', { context })
       } else if (pressed[i] === true) {
         count += 1

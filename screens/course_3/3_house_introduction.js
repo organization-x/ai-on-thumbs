@@ -65,8 +65,7 @@ const styles = StyleSheet.create({
   pagenumber: {
     color: 'white',
     fontSize: 30,
-    textAlign: 'right',
-    marginTop: 10
+    textAlign: 'right'
   },
   number: {
     color: 'white',

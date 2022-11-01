@@ -63,7 +63,8 @@ const styles = StyleSheet.create({
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center'
+    alignContent: 'center',
+    marginTop: '2%'
   },
   underlineText: {
     textDecorationLine: 'underline'

@@ -47,8 +47,7 @@ const styles = StyleSheet.create({
   pagenumber: {
     color: 'white',
     fontSize: 30,
-    textAlign: 'right',
-    marginTop: 10
+    textAlign: 'right'
   },
   footerButtons: {
     marginBottom: 10,
@@ -64,7 +63,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '1%'
+    marginTop: '2%'
   },
   topText: {
     marginTop: height / 20,

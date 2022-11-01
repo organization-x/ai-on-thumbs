@@ -26,7 +26,7 @@ export default function Course1Review ({ navigation }) {
         <Text style={styles.boldText}>3</Text>
         <Text style={styles.text}>Computers use facial features to help them detect faces.</Text>
       </View>
-      <View style={[styles.footerButtons, { marginBottom: 30 }]}>
+      <View style={[styles.footerButtons, { marginTop: 20, marginBottom: 25 }]}>
         <LessonButton navigation={navigation} nextScreen='Course1Rating' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
       <View style={styles.footerButtons}>
@@ -74,8 +74,8 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '15%',
-    marginBottom: '10%',
+    marginTop: '12%',
+    marginBottom: '6%',
     textAlign: 'center',
     color: 'white',
     fontSize: height / 18,

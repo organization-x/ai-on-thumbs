@@ -56,14 +56,13 @@ const styles = StyleSheet.create({
   pagenumber: {
     color: 'white',
     fontSize: 30,
-    textAlign: 'right',
-    marginTop: 10
+    textAlign: 'right'
   },
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '1%'
+    marginTop: '2%'
   },
   interactive: {
     flex: 1,
