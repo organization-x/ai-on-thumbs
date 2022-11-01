@@ -36,7 +36,7 @@ export default function Welcome ({ navigation }) {
   }, [])
 
   return (
-    <LinearGradient colors={['#8976C2', colors.background]} style={styles.container}>
+    <View style={styles.container}>
       <Modal
         animationType='slide'
         transparent
@@ -108,7 +108,7 @@ export default function Welcome ({ navigation }) {
           style={styles.welcomeBtn}
         />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
@@ -184,7 +184,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    flex: 1
+    flex: 1,
+    backgroundColor: colors.background,
   },
   welcomeBtn: {
     width: 150

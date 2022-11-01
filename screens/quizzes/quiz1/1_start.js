@@ -5,11 +5,12 @@ TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-const AppButton = ({ onPress, title }) => (
-  <TouchableOpacity onPress={onPress} style={styles.startButton}>
+const AppButton = ({ onPress, title }) => {
+
+  return ( <TouchableOpacity onPress={onPress} style={styles.startButton}>
     <Text style={styles.startButtonText}>{title}</Text>
-  </TouchableOpacity>
-)
+  </TouchableOpacity> )
+}
 
 export default function Quiz1Start ({ navigation }) {
   return (
