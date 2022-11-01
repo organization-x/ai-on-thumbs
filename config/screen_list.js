@@ -66,7 +66,6 @@ export default {
       'Course3Introduction',
       'Course3NearestNeighbor',
       'Course3HouseIntroduction',
-      'Course3Distance',
       'Course3Neighborhoods',
       'Course3BlackHouseNeighborhood',
       'Course3NearestNeighborsReveal',

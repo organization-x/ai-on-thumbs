@@ -9,6 +9,7 @@ import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 3 Screen 31: Promotion')
 
 const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Promotion ({ navigation }) {
   async function handlePress () {
@@ -18,15 +19,13 @@ export default function Promotion ({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation} />
-        <Text style={styles.number} />
-      </View>
       <View style={styles.interactive}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.text}>If you had fun here, you'll certainly want to check out our after-school and summer programs at AI Camp.</Text>
         <Text style={styles.text}>At AI Camp, you will make lifelong friends and connections and we will teach you how to build amazing AI products!</Text>
-        <Text style={styles.promoText} onPress={handlePress}>Click here to see what else AI Camp has to offer!</Text>
+        <View style={styles.rectangle} onPress={handlePress}>
+          <Text style={styles.promoText} onPress={handlePress}>Click here to see what else AI Camp has to offer!</Text>
+        </View>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3Email' buttonColor='#8976C2' buttonText='Back' />
@@ -47,6 +46,16 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 28,
     textAlign: 'right'
+  },
+  rectangle: {
+    backgroundColor: colors.primary,
+    marginTop: height/20,
+    borderRadius: 20,
+    width: width/1.5,
+    height: height/6,
+    alignItems: 'center',
+    marginBottom: height / 2,
+    justifyContent: 'center'
   },
   top: {
     flexDirection: 'row',
@@ -77,10 +86,10 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: height / 15,
+    marginTop: height / 1000,
     textAlign: 'center',
     color: 'rgba(255, 255, 255, 0.7)',
-    fontSize: height / 30,
+    fontSize: height / 35,
     fontWeight: 'bold'
   },
   footerButtons: {

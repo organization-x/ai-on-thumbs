@@ -17,7 +17,7 @@ export default function Course3NearestNeighbor ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>2/21</Text>
+        <Text style={styles.pageNumber}>2/21</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>To understand how KNN works, we need to first understand</Text>
@@ -37,17 +37,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
-    textAlign: 'right'
-  },
-  number: {
-    color: 'white',
-    fontSize: height / 28,
+    fontSize: height/25,
     textAlign: 'right'
   },
   top: {
+    marginTop:'2%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'
@@ -62,13 +58,13 @@ const styles = StyleSheet.create({
     marginTop: '50%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
-    fontWeight: 'bold'
+    fontSize: height/22,
+    fontWeight: '500'
   },
   boldText: {
     textAlign: 'center',
     color: 'rgba(255, 255, 255, 0.6)',
-    fontSize: 40,
+    fontSize: height/22,
     fontWeight: 'bold'
   },
   footerButtons: {

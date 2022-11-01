@@ -14,7 +14,7 @@ export default function Course3FollowUpIIB ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>10/21</Text>
+        <Text style={styles.pageNumber}>10/21</Text>
       </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
@@ -50,17 +50,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
-    textAlign: 'right'
-  },
-  number: {
-    color: 'white',
-    fontSize: height / 28,
+    fontSize: height/25,
     textAlign: 'right'
   },
   top: {
+    marginTop:'2%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'

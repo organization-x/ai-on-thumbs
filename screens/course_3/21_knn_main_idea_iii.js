@@ -18,7 +18,7 @@ export default function Course3KNNMainIdeaIII ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>17/21</Text>
+        <Text style={styles.pageNumber}>17/21</Text>
       </View>
       <View style={styles.interactive}>
         <Image style={styles.image} source={require('../../assets/course_3/KNNVisualization.png')} />
@@ -38,9 +38,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   number: {
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     textAlign: 'right'
   },
   top: {
+    marginTop:'2%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'
