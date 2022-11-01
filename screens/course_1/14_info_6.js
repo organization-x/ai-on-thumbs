@@ -66,14 +66,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 25,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   bigText: {
     marginTop: height / 8,
     textAlign: 'center',
     color: 'white',
     fontSize: height / 15,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   smallText: {
     marginTop: height / 30,

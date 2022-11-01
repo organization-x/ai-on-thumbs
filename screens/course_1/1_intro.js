@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 20,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   footerButtons: {
     marginBottom: 10,

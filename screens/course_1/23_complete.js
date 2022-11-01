@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 36,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   footerButtons: {
     marginTop: 20,

@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 30,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   smallText: {
     fontSize: 20,

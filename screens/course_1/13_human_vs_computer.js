@@ -122,10 +122,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 30,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   smallText: {
-    fontWeight: 'bold',
+    fontWeight: '500',
     fontSize: 15,
     color: 'white',
     textAlign: 'center'

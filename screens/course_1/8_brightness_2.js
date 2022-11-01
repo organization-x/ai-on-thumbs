@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
   text: {
     color: 'white',
     marginTop: height / 20,
-    fontSize: height / 35
+    fontSize: height / 35,
+    fontWeight: '500'
   }
 })

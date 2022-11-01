@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     color: 'white',
     marginTop: '0%',
     fontSize: height / 40,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 30,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   footerButtons: {
     marginTop: 60,

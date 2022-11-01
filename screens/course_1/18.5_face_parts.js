@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 25,
-    fontWeight: 'bold',
+    fontWeight: '500',
     flex: 2,
     marginTop: height / 15
   },

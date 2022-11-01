@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   instructTxt: {
     textAlign: 'center',
     fontSize: 23,
-    fontWeight: '600',
+    fontWeight: '500',
     marginTop: 40,
     marginBottom: '10%',
     color: '#fff'
@@ -102,13 +102,15 @@ const smallStyles = StyleSheet.create({
     fontWeight: '500',
     marginTop: 30,
     marginBottom: '7%',
-    color: '#fff'
+    color: '#fff',
+    fontWeight: '500'
   },
   captionTxt: {
     textAlign: 'center',
     fontSize: 17,
     marginVertical: '7%',
     fontWeight: '400',
-    color: '#fff'
+    color: '#fff',
+    fontWeight: '500'
   }
 })

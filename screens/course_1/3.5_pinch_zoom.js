@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: height / 35,
-    color: 'white'
+    color: 'white',
+    fontWeight: '500'
   }
 })

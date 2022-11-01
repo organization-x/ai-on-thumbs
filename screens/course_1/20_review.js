@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 25,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 18,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   footerButtons: {
     marginBottom: 10,
