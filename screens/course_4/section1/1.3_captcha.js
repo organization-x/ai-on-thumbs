@@ -15,11 +15,11 @@ export default function Course4InteractiveCaptcha ({ navigation, context }) {
     let count = 0
     for (let i = 0; i < pressed.length; i++) {
       if (pressed[i] === false || pressed[i] == null) {
-        navigation.navigate('Wrong', { context })
+        navigation.navigate('CaptchaWrong', { context })
       } else if (pressed[i] === true) {
         count += 1
         if (count === 3) {
-          navigation.navigate('Right', { context })
+          navigation.navigate('CaptchaRight', { context })
         }
       }
     }

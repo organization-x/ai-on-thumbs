@@ -28,10 +28,10 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
   // setting first button screen
   if (currentScreenIdx < 4) {
     firstScreenIdx = 0
-  } else if (currentScreenIdx > screens.length - 3) {
+  } else if (currentScreenIdx > screens.length - 2) {
     firstScreenIdx = screens.length - 5
   } else {
-    firstScreenIdx = currentScreenIdx - 2
+    firstScreenIdx = currentScreenIdx - 3
   }
 
   for (let i = firstScreenIdx; i < firstScreenIdx + 5; i++) {
@@ -39,7 +39,7 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
     if (progressBar.length === 0 && i > 0) {
       buttonWidth = 20
     // the last button is small when you're farther from the end
-    } else if (progressBar.length > 4 && i < screens.length - 1) {
+    } else if (progressBar.length === 4 && i < screens.length - 1) {
       buttonWidth = 20
     } else if (progressBar.length === screens.length && screens.length < 5) {
       break

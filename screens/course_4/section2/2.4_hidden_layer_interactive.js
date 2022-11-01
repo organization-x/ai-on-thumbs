@@ -31,7 +31,7 @@ export default function Course4SelectDNN ({ navigation }) {
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.boldText}>Out of the following, which one has 2 or more hidden layers?</Text>
         <View style={styles.rowContainer}>
-          <TouchableOpacity style={styles.cell} onPress={() => navigation.navigate('Course4page2_4_correct')} disabled={false}>
+          <TouchableOpacity style={styles.cell} onPress={() => navigation.navigate('Course4SelectDNNCorrect')} disabled={false}>
             <Image style={styles.image} source={require('../../../assets/course_4/deep_nn.png')} />
           </TouchableOpacity>
           <TouchableOpacity style={styles.cell} onPress={() => handlePress(0)} disabled={singleLayerDisabled}>
