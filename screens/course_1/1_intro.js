@@ -17,7 +17,7 @@ export default function Course1Intro ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>1/22</Text>
+        <Text style={styles.pageNumber}>1/22</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>To understand how facial recognition works, we will first learn about how computers interpret faces.</Text>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
     fontSize: height / 25,
     textAlign: 'right'

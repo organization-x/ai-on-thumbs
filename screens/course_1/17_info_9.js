@@ -20,7 +20,7 @@ export default function Course1Info9 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>19/22</Text>
+        <Text style={styles.pageNumber}>19/22</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>First, computers need to know what <Text style={styles.italicText}>features</Text> compose a face.</Text>
@@ -47,9 +47,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   interactive: {

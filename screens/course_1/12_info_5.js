@@ -18,7 +18,7 @@ export default function Course1Info5 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>13/22</Text>
+        <Text style={styles.pageNumber}>13/22</Text>
       </View>
       <Image resizeMode='cover' source={require('../../assets/course_1/ocean.png')} style={styles.backgroundImage} />
       <View style={styles.interactive}>
@@ -51,9 +51,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   backgroundImage: {

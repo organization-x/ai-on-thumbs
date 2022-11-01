@@ -63,7 +63,7 @@ export default function Course1FaceFinder ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>2/22</Text>
+        <Text style={styles.pageNumber}>2/22</Text>
       </View>
       <Text style={styles.bigText}>To show computers how facial recognition is done, tap on all the faces in the pictures below. </Text>
       <View style={{ flex: 1 }}>
@@ -123,9 +123,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   text: {

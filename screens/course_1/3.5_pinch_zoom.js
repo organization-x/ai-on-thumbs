@@ -23,7 +23,7 @@ export default function Course1PinchZoom ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>4/22</Text>
+        <Text style={styles.pageNumber}>4/22</Text>
       </View>
       <TopLessonParagraph style={styles.text}>It turns out each picture is composed of tiny color squares - pixels! {'\n\n'} Pinch the photo to see pixels. </TopLessonParagraph>
 
@@ -63,9 +63,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   text: {

@@ -18,7 +18,7 @@ export default function Course1Info6 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>16/22</Text>
+        <Text style={styles.pageNumber}>16/22</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.bigText}>R. I. P.</Text>
@@ -50,9 +50,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   interactive: {
