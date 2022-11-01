@@ -13,13 +13,19 @@ export default function Course4InteractiveCaptcha ({ navigation, context }) {
 
   const verify = () => {
     let count = 0
-    for (let i = 0; i < pressed.length; i++) {
-      if (pressed[i] === false || pressed[i] == null) {
-        navigation.navigate('CaptchaWrong', { context })
-      } else if (pressed[i] === true) {
-        count += 1
-        if (count === 3) {
-          navigation.navigate('CaptchaCaptchaRight', { context })
+    if (pressed.length == 0) {
+      navigation.navigate('CaptchaWrong', { context })
+    } else {
+      for (let i = 0; i < pressed.length; i++) {
+        if (pressed[i] === false || pressed[i] == null) {
+          navigation.navigate('CaptchaWrong', { context })
+        } else if (pressed[i] === true) {
+          count += 1
+          if (count === 3) {
+            navigation.navigate('CaptchaCaptchaRight', { context })
+          }
+        } else {
+          navigation.navigate('CaptchaWrong', { context })
         }
       }
     }
