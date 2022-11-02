@@ -18,8 +18,7 @@ export default function Course2DraggableCompleted ({ navigation }) {
         <HomeButton navigation={navigation} />
         <Text style={styles.pageNumber}>19/28</Text>
       </View>
-      <View style={{ flex: 1 }}>
-        <Text style={styles.topText}>Drag and release the filter around the face to find a matching pixel pattern.</Text>
+      <View style={styles.middle}>
         <View style={styles.image}>
           <Image
             style={(width <= 400) ? { width: width / 1.63, height: width / 1.63, borderRadius: 7 } : { width: width / 2, height: width / 2, borderRadius: 7 }}
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingVertical: 15,
   },
   pageNumber: {
     color: 'white',
@@ -52,6 +51,13 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 28,
     textAlign: 'right'
+  },
+  middle: {
+    felx: 1,
+    justifyContent:'center',
+    marginTop: '50%',
+    marginBottom:'63%',
+    alignContent:'center'
   },
   top: {
     flexDirection: 'row',
