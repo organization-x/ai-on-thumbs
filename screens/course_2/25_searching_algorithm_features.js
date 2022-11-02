@@ -123,7 +123,7 @@ export default function Course2SearchingAlgorithmFeatures ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>23/26</Text>
+        <Text style={styles.pageNumber}>25/28</Text>
       </View>
       <View style={styles.lessonContent}>
         <Text style={styles.textFont}>{upperScreenText}</Text>
@@ -152,9 +152,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   lessonContent: {

@@ -16,7 +16,7 @@ export default function App ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>4/26</Text>
+        <Text style={styles.pageNumber}>6/28</Text>
       </View>
       <View style={styles.lowPicture}>
         <TouchableOpacity>
@@ -49,9 +49,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 10
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   footerButtons: {

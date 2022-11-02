@@ -19,7 +19,7 @@ export default function Course2Contrast1 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>12/26</Text>
+        <Text style={styles.pageNumber}>14/28</Text>
       </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>The secret ingredient is called contrast.</Text>
@@ -41,9 +41,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   footerButtons: {

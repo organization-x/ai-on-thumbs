@@ -17,7 +17,7 @@ export default function Course2GettingHangAlgorithms ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>24/26</Text>
+        <Text style={styles.pageNumber}>26/28</Text>
       </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
@@ -42,9 +42,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   footerButtons: {

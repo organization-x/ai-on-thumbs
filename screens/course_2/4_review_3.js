@@ -18,7 +18,7 @@ export default function Course2Review3 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>2/26</Text>
+        <Text style={styles.pageNumber}>4/28</Text>
       </View>
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Facial Recognition Review</LessonHeader>
@@ -64,9 +64,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   textSection: {
@@ -78,12 +78,6 @@ const styles = StyleSheet.create({
   header: {
     textAlign: 'center',
     marginBottom: 5
-  },
-
-  num: {
-    color: 'white',
-    fontSize: height / 28,
-    textAlign: 'right'
   },
 
   number: {
