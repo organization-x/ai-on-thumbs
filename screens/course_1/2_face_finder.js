@@ -55,7 +55,7 @@ export default function Course1FaceFinder ({ navigation }) {
     } else if (facesLeft === 1) {
       setLowerScreenText('Nice one! There is ' + facesLeft + ' face remaining.')
     } else if (facesLeft === 0) {
-      setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap continue to learn why.')
+      setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap on the progress bar to learn why.')
     }
   }
 

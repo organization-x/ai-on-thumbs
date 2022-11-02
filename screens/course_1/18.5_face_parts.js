@@ -107,7 +107,7 @@ export default function Course1FaceParts2 ({ navigation }) {
       setSelectedAreaId([...selectedAreaId, item.id])
       if (selectedAreaId.length === 5) {
         setUpperScreenText('Eyes + Nose + Ears + Mouth = Face!')
-        setLowerScreenText('It turns out computers use these important facial features to detect a face, just like we do! \n\n Tap to continue.')
+        setLowerScreenText('It turns out computers use these important facial features to detect a face, just like we do! \n\n Tap on the progress bar to continue.')
       } else {
         if (idx === 0) {
           setLowerScreenText('Yes, the left eye is important in recognizing a face. Have you found the other eye?')
