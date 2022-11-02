@@ -122,6 +122,7 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     marginTop: 20,
+    color:'white',
     fontSize: Dimensions.get('window').height / 40,
     fontWeight: 'bold',
     textAlign: 'center'

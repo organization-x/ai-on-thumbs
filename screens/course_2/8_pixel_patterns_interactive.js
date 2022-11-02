@@ -6,8 +6,8 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 2 Screen 8: Pixel Patterns Interactive Screen')
 
-const windowHeight = Dimensions.get('window').height
-const windowWidth = Dimensions.get('window').width
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course2PixelPatternsInteractive ({ navigation }) {
   const screenSection = ScreenList.course2
@@ -78,7 +78,7 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>6/26</Text>
+        <Text style={styles.pageNumber}>8/28</Text>
       </View>
       <ScrollView scrollEnabled={false}>
         <SafeAreaView style={styles.container}>
@@ -161,9 +161,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   interactive: {
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
   image: {
     flexDirection: 'column',
     alignItems: 'center',
-    height: windowHeight / 5,
+    height: height / 5,
     resizeMode: 'contain',
     top: 0,
     marginBottom: 5,
@@ -214,28 +214,28 @@ const styles = StyleSheet.create({
     marginTop: '3%',
     textAlign: 'center',
     color: 'white',
-    fontSize: windowHeight / 33,
+    fontSize: height / 33,
     fontWeight: 'bold'
   },
   lightSmallBoldText: {
     fontWeight: 'bold',
-    fontSize: windowHeight / 42,
+    fontSize: height / 42,
     color: 'white',
     textAlign: 'center'
   },
   darkSmallBoldText: {
     fontWeight: 'bold',
-    fontSize: windowHeight / 42,
+    fontSize: height / 42,
     color: 'white',
     textAlign: 'center'
   },
   lightSmallRegularText: {
-    fontSize: windowHeight / 42,
+    fontSize: height / 42,
     color: 'white',
     textAlign: 'center'
   },
   darkSmallRegularText: {
-    fontSize: windowHeight / 42,
+    fontSize: height / 42,
     color: 'white',
     textAlign: 'center'
   },
@@ -264,40 +264,40 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start'
   },
   eyeButton1: {
-    height: windowHeight / 7.5 / 3,
-    width: windowWidth / 2.75 / 1.5,
+    height: height / 7.5 / 3,
+    width: width/ 2.75 / 1.5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   eyeButton2: {
-    height: windowHeight / 3.75 / 1.35,
-    width: windowWidth / 2.75 / 3.5,
+    height: height / 3.75 / 1.35,
+    width: width / 2.75 / 3.5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   eyeButton3: {
-    height: windowHeight / 7.5 / 1.85,
-    width: windowWidth / 2.75 / 1.75,
+    height: height / 7.5 / 1.85,
+    width: width / 2.75 / 1.75,
     justifyContent: 'center',
     alignItems: 'center'
   },
   button1Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth / 2.6,
-    height: windowHeight / 7.5
+    width: width / 2.6,
+    height: height / 7.5
   },
   button2Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth / 2.6,
-    height: windowHeight / 3.75
+    width: width / 2.6,
+    height: height / 3.75
   },
   button3Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth / 2.6,
-    height: windowHeight / 7.5
+    width: width / 2.6,
+    height: height / 7.5
   },
   switch: {
     bottom: 0,

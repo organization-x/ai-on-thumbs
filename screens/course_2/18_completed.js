@@ -16,7 +16,7 @@ export default function Course2DraggableCompleted ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>17/26</Text>
+        <Text style={styles.pageNumber}>19/28</Text>
       </View>
       <View style={{ flex: 1 }}>
         <Text style={styles.topText}>Drag and release the filter around the face to find a matching pixel pattern.</Text>
@@ -43,9 +43,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   number: {

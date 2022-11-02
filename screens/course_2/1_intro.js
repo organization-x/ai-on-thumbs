@@ -16,11 +16,11 @@ export default function Course2Intro ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>1/26</Text>
+        <Text style={styles.pageNumber}>1/28</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>Welcome to your second lesson in facial recognition!</Text>
-        <Text style={styles.text}>Let's review what we learned last time.</Text>
+        <Text style={styles.secondText}>Let's review what we learned last time.</Text>
       </View>
       <View style={styles.footerButtons}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
@@ -42,9 +42,9 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     alignItems: 'center'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   text: {
@@ -53,6 +53,13 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 15,
     fontWeight: 'bold'
+  },
+  secondText: {
+    marginTop: height / 18,
+    textAlign: 'center',
+    color: 'white',
+    fontSize: height / 20,
+    fontWeight: '500'
   },
   top: {
     flexDirection: 'row',

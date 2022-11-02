@@ -19,7 +19,7 @@ export default function Course2DraggableFilter ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>16/26</Text>
+        <Text style={styles.pageNumber}>18/28</Text>
       </View>
       <Text style={styles.topText}>Drag and release the filter around the face to find a matching pixel pattern.</Text>
       <View
@@ -57,9 +57,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   component: {

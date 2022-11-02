@@ -17,7 +17,7 @@ export default function Course2ScanAll5 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>22/26</Text>
+        <Text style={styles.pageNumber}>24/28</Text>
       </View>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}>So, how can we scan less of the image and save our computer friends some time?</Text>
@@ -43,9 +43,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center'
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   lessonContent: {

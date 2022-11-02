@@ -14,7 +14,7 @@ export default function Course2ScanAll1 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>19/26</Text>
+        <Text style={styles.pageNumber}>21/28</Text>
       </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
@@ -83,9 +83,9 @@ const styles = StyleSheet.create({
     fontSize: height / 20, // ~40px
     fontWeight: 'bold'
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   secondText: {

@@ -31,7 +31,7 @@ export default function Course2ContrastMCQ ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>15/26</Text>
+        <Text style={styles.pageNumber}>17/28</Text>
       </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>Find the difference between all of the bright pixels and dark pixels, then select the correct contrast value.</Text>
@@ -54,9 +54,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   footerButtons: {
