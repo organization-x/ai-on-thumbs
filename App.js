@@ -88,7 +88,7 @@ import Course3SelectClosestHouse from './screens/course_3/4_closest_house'
 import Course3FollowUp from './screens/course_3/5_follow_up'
 import Course3FollowUpCorrect from './screens/course_3/6_follow_up_correct'
 import Course3FollowUpIncorrect from './screens/course_3/7_follow_up_incorrect'
-import Course3DistanceRole from './screens/course_3/8_distance.js'
+import Course3Distance from './screens/course_3/8_distance.js'
 import Course3Neighborhoods from './screens/course_3/9_neighborhoods.js'
 import Course3BlackHouseNeighborhood from './screens/course_3/10_neighborhoods.js'
 import Course3GreenHouseNeighborhood from './screens/course_3/11_neighborhoods.js'
@@ -289,7 +289,7 @@ export default function App () {
           <Stack.Screen name='Course3FollowUp' component={Course3FollowUp} />
           <Stack.Screen name='Course3FollowUpCorrect' component={Course3FollowUpCorrect} />
           <Stack.Screen name='Course3FollowUpIncorrect' component={Course3FollowUpIncorrect} />
-          <Stack.Screen name='Course3DistanceRole' component={Course3DistanceRole} />
+          <Stack.Screen name='Course3Distance' component={Course3Distance} />
           <Stack.Screen name='Course3Neighborhoods' component={Course3Neighborhoods} />
           <Stack.Screen name='Course3BlackHouseNeighborhood' component={Course3BlackHouseNeighborhood} />
           <Stack.Screen name='Course3GreenHouseNeighborhood' component={Course3GreenHouseNeighborhood} />

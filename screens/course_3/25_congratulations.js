@@ -19,7 +19,7 @@ export default function Course3Congratulations ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>21/21</Text>
+        <Text style={styles.pageNumber}>21/21</Text>
       </View>
       <ConfettiCannon
         count={100}
@@ -31,7 +31,6 @@ export default function Course3Congratulations ({ navigation }) {
       <View style={styles.interactive}>
         <Text style={styles.bigText}>Congratulations!</Text>
         <Text style={styles.text}>This lesson was all about using distance to make observations about the world around you and you did amazing!</Text>
-        <Text style={styles.text}>In the next lesson, we will see exactly how KNN uses distance to make observations.</Text>
         <Text style={styles.boldText}>Let’s review!</Text>
       </View>
       <View style={styles.footerButtons}>
@@ -48,17 +47,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
-    textAlign: 'right'
-  },
-  number: {
-    color: 'white',
-    fontSize: height / 28,
+    fontSize: height/25,
     textAlign: 'right'
   },
   top: {
+    marginTop: '2%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'
@@ -67,7 +62,8 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent:'center'
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

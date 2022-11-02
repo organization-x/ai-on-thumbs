@@ -18,7 +18,7 @@ export default function Course3Neighborhoods ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>7/21</Text>
+        <Text style={styles.pageNumber}>7/21</Text>
       </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.text}>What if we separate the area into three neighborhoods?</Text>
@@ -75,17 +75,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
-    textAlign: 'right'
-  },
-  number: {
-    color: 'white',
-    fontSize: height / 28,
+    fontSize: height/25,
     textAlign: 'right'
   },
   top: {
+    marginTop:'2%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'

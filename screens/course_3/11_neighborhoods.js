@@ -15,7 +15,7 @@ export default function Course3GreenHouseNeighborhood ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>9/21</Text>
+        <Text style={styles.pageNumber}>9/21</Text>
       </View>
       <View style={{ flex: 1, marginTop: '5%' }}>
         <Text style={styles.boldText}>That's right! The black house is part of Neighborhood A.</Text>
@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   number: {
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 32,
+    fontSize: height/30,
     fontWeight: '500',
     opacity: 0.8,
     marginTop: '30%'

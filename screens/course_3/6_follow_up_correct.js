@@ -14,7 +14,7 @@ export default function Course3FollowUpCorrect ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>6/21</Text>
+        <Text style={styles.pageNumber}>6/21</Text>
       </View>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}> You're absolutely right!</Text>
@@ -47,17 +47,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: height / 28,
-    textAlign: 'right'
-  },
-  pagenumber: {
-    color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   top: {
+    marginTop:'2%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'

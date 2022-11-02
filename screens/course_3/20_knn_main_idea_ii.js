@@ -17,7 +17,7 @@ export default function Course3KNNMainIdeaII ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>16/21</Text>
+        <Text style={styles.pageNumber}>16/21</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>That's the idea of</Text>
@@ -37,12 +37,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  number: {
-    color: 'white',
-    fontSize: height / 28,
-    textAlign: 'right'
-  },
   top: {
+    marginTop:'2%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'
@@ -53,9 +49,9 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     alignItems: 'center'
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   text: {

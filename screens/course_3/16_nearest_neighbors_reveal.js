@@ -18,7 +18,7 @@ export default function Course3NearestNeighborsReveal ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>12/21</Text>
+        <Text style={styles.pageNumber}>12/21</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>The people that live closest to you are your</Text>
@@ -39,17 +39,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  pagenumber: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
-    textAlign: 'right'
-  },
-  number: {
-    color: 'white',
-    fontSize: height / 28,
+    fontSize: height/25,
     textAlign: 'right'
   },
   top: {
+    marginTop:'2%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'

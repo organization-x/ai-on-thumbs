@@ -17,7 +17,7 @@ export default function Course3CommonTraitQuestion ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pagenumber}>13/21</Text>
+        <Text style={styles.pageNumber}>13/21</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>What's one thing you share in common with your neighbors?</Text>
@@ -36,17 +36,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: height / 28,
-    textAlign: 'right'
-  },
-  pagenumber: {
-    color: 'white',
-    fontSize: 30,
+    fontSize: height/25,
     textAlign: 'right'
   },
   top: {
+    marginTop:'2%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'
