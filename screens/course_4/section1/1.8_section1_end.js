@@ -20,16 +20,13 @@ export default function Course4Sect1End ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} style={{marginTop:height/50}}/>
-        <Text style={styles.number}>8/8</Text>
+        <Text style={styles.number}>9/9</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>Now let's dive further into neural networks to better understand how they are able to process information!</Text>
       </View>
       <View style={styles.sectionButton}>
         <SectionButton navigation={navigation} nextSection goSection={nextSection} />
-      </View>
-      <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
   )

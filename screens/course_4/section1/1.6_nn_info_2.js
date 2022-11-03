@@ -18,7 +18,7 @@ export default function Course4NNInfo2 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
-        <Text style={styles.number}>6/8</Text>
+        <Text style={styles.number}>7/9</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>The brain is composed of roughly 86 billion neurons, which <Text style={styles.underlineText}>communicate through electrical signals.</Text></Text>

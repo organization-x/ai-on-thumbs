@@ -18,7 +18,7 @@ export default function Course4NNInfo1 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} style={{marginTop:height/120}} />
-        <Text style={styles.number}>5/8</Text>
+        <Text style={styles.number}>6/9</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>To solve this problem, developers created <Text style={styles.underlineText}>NNs</Text> to <Text style={styles.underlineText}>mimic the human brain.</Text></Text>

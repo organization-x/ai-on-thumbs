@@ -16,7 +16,7 @@ export default function Course4IntroRealLifeApplications ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
-        <Text style={styles.number}>2/8</Text>
+        <Text style={styles.number}>2/9</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>Neural networks are used in many real life applications, such as in speech recognition, text generation, and image-recognition.</Text>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     paddingVertical: height/25
   },
   number: {
-    fontSize: height/27,
+    fontSize: height/25,
     color: 'white',
     textAlign: 'right'
   },

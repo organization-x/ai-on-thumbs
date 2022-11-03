@@ -35,7 +35,7 @@ export default function Course4InteractiveCaptcha ({ navigation, context }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} style={{marginTop:height/50}}/>
-        <Text style={styles.number}>3/8</Text>
+        <Text style={styles.number}>3/9</Text>
       </View>
 
       <View style={styles.interactive}>
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: height/27,
+    fontSize: height/25,
     textAlign: 'right',
     marginTop: height/100
   },
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
 
   bold: {
     fontSize: height/20,
-    textAlign: 'left'
+    textAlign: 'center'
   },
   interactive: {
     flex: 1,

@@ -11,7 +11,6 @@ export default function CaptchaWrong ({ navigation, context }) {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.num}>3/8</Text>
       <View style={styles.interactive}>
         <Text style={{ color: 'white', fontSize: 32, fontWeight: 'bold', textAlign: 'center', lineHeight: 50, marginTop: width / 5 }}>{'\t'}Uh oh!{'\n'}Let's try that again{'\n'}🙂</Text>
         <View style={styles.group}>

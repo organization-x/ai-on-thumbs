@@ -17,7 +17,7 @@ export default function Course4CompToBrain ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} style={{marginTop:height/50}} />
-        <Text style={styles.number}>7/8</Text>
+        <Text style={styles.number}>8/9</Text>
       </View>
       <View style={styles.lessonContent}>
         <Text style={styles.secondText}>As you can see in the image, <Text style={styles.underlinedText}>NNs are made of nodes (the purple circles) </Text>
@@ -25,7 +25,7 @@ export default function Course4CompToBrain ({ navigation }) {
 
         <Image style={styles.image} source={require('../../../assets/course_4/nn_layers.gif')} />
 
-        <Text style={styles.thirdText}>Information is sent from node to node, similarly to the transmission of signals between neurons in the brain, in the form of numbers.</Text>
+        <Text style={styles.thirdText}>Information is sent from node to node, (similarly to the transmission of signals between neurons in the brain), in the form of numbers.</Text>
       </View>
       <View style={styles.footerButtons}>
         {/* <LessonButton navigation={navigation} nextScreen='Course4page1_6' buttonColor='#8976C2' buttonText='Back' /> */}

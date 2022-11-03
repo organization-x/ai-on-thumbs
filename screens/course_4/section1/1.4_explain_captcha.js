@@ -18,7 +18,7 @@ export default function Course4CaptchaExplanation ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
-        <Text style={styles.number}>4/8</Text>
+        <Text style={styles.number}>5/9</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>Tasks like the captcha you just completed aren't hard for humans because of the way we take in information and recognize patterns.</Text>
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: height / 28,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   text: {

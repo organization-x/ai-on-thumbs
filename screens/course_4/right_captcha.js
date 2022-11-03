@@ -17,10 +17,10 @@ export default function CaptchaRight ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
-        <Text style={styles.number}></Text>
+        <Text style={styles.number}>4/9</Text>
       </View>
       <View style={styles.interactive}>
-        <Text style={styles.box}>See how you're{'\n'} able to identify{'\n'}what a bus is!</Text>
+        <Text style={styles.box}>Awesome, you were{'\n'} able to identify{'\n'}all busses correctly!</Text>
         <View style={styles.img_container}>
           <Imagel link={images[0]} style={styles.show} />
           <Imagel link={images[1]} style={styles.show} />
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     paddingVertical: height/35
   },
   number: {
-    fontSize: height/30,
+    fontSize: height/25,
     color: 'white'
   },
   interactive: {

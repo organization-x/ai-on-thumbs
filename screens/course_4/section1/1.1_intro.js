@@ -17,7 +17,7 @@ export default function Course4Intro ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>1/8</Text>
+        <Text style={styles.number}>1/9</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.box}>Neural{'\n'}networks</Text>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   number: {
     color: 'white',
     textAlign: 'right',
-    fontSize: height/27,
+    fontSize: height/25,
     marginTop: height/40
   },
   box: {
@@ -75,7 +75,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: height/200
+    // marginTop: height/200
+    marginTop: '2%'
   },
   footerButtons: {
     marginBottom: height/40,
