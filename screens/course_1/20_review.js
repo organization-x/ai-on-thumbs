@@ -26,13 +26,8 @@ export default function Course1Review ({ navigation }) {
         <Text style={styles.boldText}>3</Text>
         <Text style={styles.text}>Computers use facial features to help them detect faces.</Text>
       </View>
-      <View style={[styles.footerButtons, { marginTop: 20, marginBottom: 25 }]}>
-        <LessonButton navigation={navigation} nextScreen='Course1Rating' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
-      </View>
       <View style={styles.footerButtons}>
-        {/* <LessonButton navigation={navigation} nextScreen='Course1Congrats' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Rating' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+        <LessonButton navigation={navigation} nextScreen='Course1Rating' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </View>
   )
