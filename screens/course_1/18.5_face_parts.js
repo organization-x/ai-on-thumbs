@@ -10,8 +10,8 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 1 Screen 18.5: Face Parts 2 Screen')
 
-const deviceHeight = Dimensions.get('window').height
-const imageDimension = deviceHeight * 0.35
+const height = Dimensions.get('window').height
+const imageDimension = height * 0.35
 
 export default function Course1FaceParts2 ({ navigation }) {
   const screenSection = ScreenList.course1
@@ -107,7 +107,7 @@ export default function Course1FaceParts2 ({ navigation }) {
       setSelectedAreaId([...selectedAreaId, item.id])
       if (selectedAreaId.length === 5) {
         setUpperScreenText('Eyes + Nose + Ears + Mouth = Face!')
-        setLowerScreenText('It turns out computers use these important facial features to detect a face, just like we do! \n\n Tap to continue.')
+        setLowerScreenText('It turns out computers use these important facial features to detect a face, just like we do! \n\n Tap on the progress bar to continue.')
       } else {
         if (idx === 0) {
           setLowerScreenText('Yes, the left eye is important in recognizing a face. Have you found the other eye?')
@@ -136,7 +136,7 @@ export default function Course1FaceParts2 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>21/22</Text>
+        <Text style={styles.pageNumber}>21/22</Text>
       </View>
       <View style={{ flex: 1 }}>
         <Text style={styles.bigText}>{upperScreenText} </Text>
@@ -182,9 +182,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   text: {
@@ -205,9 +205,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 25,
-    fontWeight: 'bold',
+    fontWeight: '500',
     flex: 2,
-    marginTop: deviceHeight / 15
+    marginTop: height / 15
   },
   footerButtons: {
     marginBottom: 10,

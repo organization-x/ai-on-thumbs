@@ -9,6 +9,8 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 1 Screen 11: Magnify Screen')
 
+const height = Dimensions.get('window').height
+
 export default function Course1Magnify ({ navigation }) {
   const smallScreen = Dimensions.get('window').height < 700
 
@@ -19,7 +21,7 @@ export default function Course1Magnify ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>12/22</Text>
+        <Text style={styles.pageNumber}>12/22</Text>
       </View>
       <View style={styles.mainContent}>
         <Text style={smallScreen ? smallStyles.instructTxt : styles.instructTxt}>To get the feeling of a computer when it sees a photo, use the magnifier over the photo.</Text>
@@ -71,15 +73,15 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   instructTxt: {
     textAlign: 'center',
     fontSize: 23,
-    fontWeight: '600',
+    fontWeight: '500',
     marginTop: 40,
     marginBottom: '10%',
     color: '#fff'
@@ -100,13 +102,15 @@ const smallStyles = StyleSheet.create({
     fontWeight: '500',
     marginTop: 30,
     marginBottom: '7%',
-    color: '#fff'
+    color: '#fff',
+    fontWeight: '500'
   },
   captionTxt: {
     textAlign: 'center',
     fontSize: 17,
     marginVertical: '7%',
     fontWeight: '400',
-    color: '#fff'
+    color: '#fff',
+    fontWeight: '500'
   }
 })

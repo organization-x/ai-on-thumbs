@@ -10,6 +10,8 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 1 Screen 13.5: Human vs Computer 2 Screen')
 
+const height = Dimensions.get('window').height
+
 export default function Course1HumanVsComputer2 ({ navigation }) {
   const screenSection = ScreenList.course1
   const screenName = 'Course1HumanVsComputer2'
@@ -18,7 +20,7 @@ export default function Course1HumanVsComputer2 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>15/22</Text>
+        <Text style={styles.pageNumber}>15/22</Text>
       </View>
       <ScrollView scrollEnabled={false}>
         <View style={styles.interactive}>
@@ -56,9 +58,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   image: {
@@ -74,7 +76,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 30,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   smallText: {
     fontSize: 20,

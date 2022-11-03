@@ -21,7 +21,7 @@ export default function Course1Info8 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>18/22</Text>
+        <Text style={styles.pageNumber}>18/22</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.bigText}>That’s a great question!</Text>
@@ -55,9 +55,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   text: {
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 19,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   footerButtons: {
     marginBottom: 10,

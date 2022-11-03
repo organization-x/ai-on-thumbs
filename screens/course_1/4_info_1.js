@@ -18,7 +18,7 @@ export default function Course1Info1 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>5/22</Text>
+        <Text style={styles.pageNumber}>5/22</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>But now, do you think computers can also see tiny pixels?</Text>
@@ -51,9 +51,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   text: {
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 40,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   footerButtons: {
     marginBottom: 10,

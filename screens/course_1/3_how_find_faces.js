@@ -20,7 +20,7 @@ export default function Course1HowFindFaces ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>3/22</Text>
+        <Text style={styles.pageNumber}>3/22</Text>
       </View>
       <TopLessonParagraph style={styles.text}>So how does a {'\n'} computer detect a face? </TopLessonParagraph>
 
@@ -51,9 +51,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   zoomView: {
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: height / 35
+    fontSize: height / 30,
+    fontWeight: '500'
   }
 })

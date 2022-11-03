@@ -1,12 +1,14 @@
 // Our faces have some unique features that stand out and make them recognizable.
 
 import React from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
+import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
 import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 1 Screen 18: Face Parts Screen')
+
+const height = Dimensions.get('window').height
 
 export default function Course1FaceParts ({ navigation }) {
   const screenSection = ScreenList.course1
@@ -16,7 +18,7 @@ export default function Course1FaceParts ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>20/22</Text>
+        <Text style={styles.pageNumber}>20/22</Text>
       </View>
       <Text style={styles.bigText}>Our faces have some unique features that stand out and make them recognizable.</Text>
       <View style={styles.interactive}>
@@ -50,9 +52,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   image: {
@@ -78,7 +80,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 25,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   footerButtons: {
     marginBottom: 10,

@@ -23,7 +23,7 @@ export default function Course1Brightness2 ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>9/22</Text>
+        <Text style={styles.pageNumber}>9/22</Text>
       </View>
       <TopLessonParagraph style={styles.text}>Now, slide the bar to change pixel value and see its brightness change!</TopLessonParagraph>
 
@@ -55,9 +55,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   footerButtons: {
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
   text: {
     color: 'white',
     marginTop: height / 20,
-    fontSize: height / 35
+    fontSize: height / 35,
+    fontWeight: '500'
   }
 })

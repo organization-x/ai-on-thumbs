@@ -30,7 +30,7 @@ export default function Course1HumanVsComputer ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>14/22</Text>
+        <Text style={styles.pageNumber}>14/22</Text>
       </View>
       <ScrollView scrollEnabled={false}>
         <View style={styles.interactive}>
@@ -80,9 +80,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   interactive: {
@@ -122,10 +122,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 30,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   smallText: {
-    fontWeight: 'bold',
+    fontWeight: '500',
     fontSize: 15,
     color: 'white',
     textAlign: 'center'

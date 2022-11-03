@@ -55,7 +55,7 @@ export default function Course1FaceFinder ({ navigation }) {
     } else if (facesLeft === 1) {
       setLowerScreenText('Nice one! There is ' + facesLeft + ' face remaining.')
     } else if (facesLeft === 0) {
-      setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap continue to learn why.')
+      setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap on the progress bar to learn why.')
     }
   }
 
@@ -63,7 +63,7 @@ export default function Course1FaceFinder ({ navigation }) {
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.number}>2/22</Text>
+        <Text style={styles.pageNumber}>2/22</Text>
       </View>
       <Text style={styles.bigText}>To show computers how facial recognition is done, tap on all the faces in the pictures below. </Text>
       <View style={{ flex: 1 }}>
@@ -123,9 +123,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginTop: '2%'
   },
-  number: {
+  pageNumber: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   text: {
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     color: 'white',
     marginTop: '0%',
     fontSize: height / 40,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 30,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   footerButtons: {
     marginTop: 60,

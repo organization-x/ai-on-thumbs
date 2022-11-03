@@ -129,6 +129,7 @@ const styles = {
     color: 'white',
     fontStyle: 'italic',
     fontSize: height / 35,
+    fontWeight: '500',
     textAlign: 'center',
     marginTop: height / 30
   },

@@ -27,14 +27,14 @@ export default function ProgressBar ({ navigation, section, currentScreen, conte
         }
     }
     //setting first button screen
-    if (currentScreenIdx < 4){
+    if (currentScreenIdx < 2){
         firstScreenIdx = 0;
     }
-    else if (currentScreenIdx > screens.length-2) {
+    else if (currentScreenIdx > screens.length-3) {
         firstScreenIdx = screens.length-5;
     }
     else {
-        firstScreenIdx = currentScreenIdx-3;
+        firstScreenIdx = currentScreenIdx-2;
     }
 
     for (let i=firstScreenIdx; i<firstScreenIdx+5; i++){
