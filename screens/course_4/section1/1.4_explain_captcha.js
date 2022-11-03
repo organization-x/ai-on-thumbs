@@ -6,9 +6,9 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
-
+import HomeButton from '../../../components/HomeButton'
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4CaptchaExplanation ({ navigation }) {
   // set variables for section the screen is in and the screen name
   // These variables are passed into the progress bar
@@ -16,7 +16,10 @@ export default function Course4CaptchaExplanation ({ navigation }) {
   const screenName = 'Course4CaptchaExplanation'
   return (
     <View style={styles.container}>
-      <Text style={styles.number}>4/8</Text>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <Text style={styles.number}>4/8</Text>
+      </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>Tasks like the captcha you just completed aren't hard for humans because of the way we take in information and recognize patterns.</Text>
         <Text style={styles.text}>However, these tasks cause a big problem for computers, which <Text style={styles.underlineText}>can't process things the same way.</Text></Text>
@@ -31,12 +34,12 @@ export default function Course4CaptchaExplanation ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width/20,
+    paddingVertical: height/30,
     backgroundColor: colors.background
   },
   footerButtons: {
-    marginBottom: 20,
+    marginBottom: height/40,
     flexDirection: 'row',
     justifyContent: 'center'
   },

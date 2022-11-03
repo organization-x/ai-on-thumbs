@@ -104,7 +104,7 @@ export default function Course4LayerInteractive ({ navigation }) {
 const styles = StyleSheet.create({
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    opacity: '50%',
+    opacity: 0.5,
     backgroundColor: colors.primary
   },
   container: {

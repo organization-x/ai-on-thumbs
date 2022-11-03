@@ -9,6 +9,7 @@ import HomeButton from '../../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 6: NN Info Part 2')
 
 const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course4NNInfo2 ({ navigation }) {
   const section = ScreenList.section1
@@ -16,7 +17,7 @@ export default function Course4NNInfo2 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>6/8</Text>
       </View>
       <View style={styles.interactive}>
@@ -42,8 +43,8 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width/20,
+    paddingVertical: height/30,
     backgroundColor: colors.background
   },
   currentButton: {
@@ -86,13 +87,14 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 30,
+    fontSize: height/27,
     marginTop: 12
   },
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center'
+    alignContent: 'center',
+    marginTop: '2%'
   },
   underlineText: {
     textDecorationLine: 'underline'

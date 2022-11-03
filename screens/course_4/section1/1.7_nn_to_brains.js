@@ -9,14 +9,14 @@ import HomeButton from '../../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 7: Comparison to Brains')
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4CompToBrain ({ navigation }) {
   const screenSection = ScreenList.section1
   const screenName = 'Course4CompToBrain'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/50}} />
         <Text style={styles.number}>7/8</Text>
       </View>
       <View style={styles.lessonContent}>
@@ -45,22 +45,22 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 24
+    fontSize: height / 27
   },
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 30,
+    paddingHorizontal: width/20,
+    paddingVertical: height/30,
     backgroundColor: colors.background
   },
   number: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/27,
     textAlign: 'right',
     marginTop: 10
   },
   footerButtons: {
-    marginBottom: 20,
+    marginBottom: height/40,
     flexDirection: 'row',
     justifyContent: 'center'
   },
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   mainText: {
-    padding: 15,
+    padding: height/40,
     marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
@@ -86,14 +86,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   secondText: {
-    padding: 20,
-    marginVertical: 10,
+    padding: height/40,
+    marginVertical: height/30,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 24
+    fontSize: height / 27
   },
   progressBar: {
     alignItems: 'center',

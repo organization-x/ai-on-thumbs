@@ -1,18 +1,21 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-analytics'
 // Analytics.setCurrentScreen('Course 4 Screen 2: Real Life Applications')
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
+
 export default function Course4IntroRealLifeApplications ({ navigation }) {
   const screenSection = ScreenList.section1
   const screenName = 'Course4IntroRealLifeApplications'
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>2/8</Text>
       </View>
       <View style={styles.interactive}>
@@ -31,11 +34,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
-    paddingHorizontal: 20,
-    paddingVertical: 30
+    paddingHorizontal: width/20,
+    paddingVertical: height/25
   },
   number: {
-    fontSize: 28,
+    fontSize: height/27,
     color: 'white',
     textAlign: 'right'
   },
@@ -44,9 +47,9 @@ const styles = StyleSheet.create({
     color: 'white',
     width: '100%',
     borderRadius: 20,
-    paddingHorizontal: 10,
-    paddingVertical: 15,
-    fontSize: 45,
+    paddingHorizontal: width/20,
+    paddingVertical: height/10,
+    fontSize: 50,
     textAlign: 'center'
   },
   interactive: {
@@ -56,35 +59,35 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    marginTop: 50
+    marginTop: height/12
   },
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 24,
+    fontSize: height/32,
     width: '100%',
-    fontWeight: 'bold',
-    lineHeight: 35,
+    fontWeight: '600',
+    lineHeight: height/23,
     marginBottom: 25
   },
   textund: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 24,
+    fontSize: height/32,
     width: '100%',
-    fontWeight: 'bold',
-    marginTop: 25,
-    lineHeight: 35,
+    fontWeight: '600',
+    marginTop: height/30,
+    lineHeight: height/23,
     textDecorationLine: 'underline'
   },
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: height/100
   },
   footerButtons: {
-    marginBottom: 20,
+    marginBottom: height/100,
     flexDirection: 'row',
     justifyContent: 'center'
   }

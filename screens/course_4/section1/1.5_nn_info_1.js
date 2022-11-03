@@ -9,6 +9,7 @@ import HomeButton from '../../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 5: NN Info Part 1')
 
 const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course4NNInfo1 ({ navigation }) {
   const screenSection = ScreenList.section1
@@ -16,7 +17,7 @@ export default function Course4NNInfo1 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}} />
         <Text style={styles.number}>5/8</Text>
       </View>
       <View style={styles.interactive}>
@@ -45,8 +46,8 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 30,
+    paddingHorizontal: width/20,
+    paddingVertical: height/25,
     backgroundColor: colors.background
   },
   currentButton: {
@@ -57,13 +58,13 @@ const styles = StyleSheet.create({
     width: 35
   },
   footerButtons: {
-    marginBottom: 20,
+    marginBottom: height/40,
     flexDirection: 'row',
     justifyContent: 'center'
   },
   image: {
-    width: 350,
-    height: 200
+    width: width-50,
+    height: height/4
   },
   interactive: {
     flex: 1,
@@ -85,8 +86,8 @@ const styles = StyleSheet.create({
   rectangle: {
     backgroundColor: colors.primary,
     borderRadius: 20,
-    width: 350,
-    height: 225,
+    width: width-50,
+    height: height/3.5,
     alignItems: 'center',
     marginBottom: height / 5,
     justifyContent: 'center'
@@ -98,13 +99,14 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 30,
+    fontSize: height/30,
     paddingVertical: 10
   },
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center'
+    alignContent: 'center',
+    marginTop: '2%'
   },
   underlineText: {
     textDecorationLine: 'underline'

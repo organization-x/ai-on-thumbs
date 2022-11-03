@@ -10,6 +10,7 @@ import SectionButton from '../../../components/SectionButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 8: Section 1 End')
 
 const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course4Sect1End ({ navigation }) {
   const screenSection = ScreenList.section1
@@ -18,7 +19,7 @@ export default function Course4Sect1End ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/50}}/>
         <Text style={styles.number}>8/8</Text>
       </View>
       <View style={styles.interactive}>
@@ -37,12 +38,12 @@ export default function Course4Sect1End ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width/20,
+    paddingVertical: height/30,
     backgroundColor: colors.background
   },
   footerButtons: {
-    marginBottom: 20,
+    marginBottom: height/40,
     flexDirection: 'row',
     justifyContent: 'center'
   },
@@ -54,14 +55,14 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/27,
     textAlign: 'right',
-    marginTop: 10
+    marginTop: height/60
   },
   sectionButton: {
-    marginBottom: 160,
+    marginBottom: height/5,
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   top: {
     flexDirection: 'row',
@@ -76,6 +77,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 30
+    fontSize: height/27
   }
 })

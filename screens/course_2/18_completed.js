@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     textAlign: 'right'
   },
   middle: {
-    felx: 1,
+    flex: 1,
     justifyContent:'center',
     marginTop: '50%',
     marginBottom:'63%',

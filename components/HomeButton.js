@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: height / 18,
     width: height / 18,
+    marginTop: height/30,
     resizeMode: 'contain'
   }
 })

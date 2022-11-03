@@ -5,6 +5,7 @@ import HomeButton from '../../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 3: Interactive Captcha')
 
 const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
 
 export default function Course4InteractiveCaptcha ({ navigation, context }) {
   const [images] = useState([require('../../../assets/bus_1.jpg'), require('../../../assets/bus_2.jpg'), require('../../../assets/bus.jpg'), require('../../../assets/car.jpg'), require('../../../assets/house.jpg'), require('../../../assets/street.jpg'), require('../../../assets/streets.jpg'), require('../../../assets/traf.jpg'), require('../../../assets/van.jpg')])
@@ -22,7 +23,7 @@ export default function Course4InteractiveCaptcha ({ navigation, context }) {
         } else if (pressed[i] === true) {
           count += 1
           if (count === 3) {
-            navigation.navigate('CaptchaCaptchaRight', { context })
+            navigation.navigate('CaptchaRight', { context })
           }
         } else {
           navigation.navigate('CaptchaWrong', { context })
@@ -33,7 +34,7 @@ export default function Course4InteractiveCaptcha ({ navigation, context }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/50}}/>
         <Text style={styles.number}>3/8</Text>
       </View>
 
@@ -55,7 +56,7 @@ export default function Course4InteractiveCaptcha ({ navigation, context }) {
         <Text style={styles.verify} onPress={verify}>Verify!</Text>
 
       </View>
-      <View style={styles.footerButtons} />
+      {/* <View style={styles.footerButtons} /> */}
     </View>
   )
 }
@@ -67,42 +68,42 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'center',
     width: width - 50,
-    paddingTop: 10,
+    paddingTop: height/70,
     marginHorizontal: 3,
     borderColor: '#1FBD67',
     borderWidth: 4,
     borderRadius: 10,
     height: '55%',
-    marginVertical: 10,
+    marginVertical: height/20,
     paddingLeft: 5
   },
   container: {
     flex: 1,
     backgroundColor: '#202020',
-    paddingHorizontal: 20,
-    paddingVertical: 30
+    paddingHorizontal: width/15,
+    paddingVertical: height/30
   },
   num: {
-    fontSize: 28,
+    fontSize: height/40,
     color: 'white',
     marginLeft: width - 90,
-    marginTop: 10,
-    marginBottom: -10
+    marginTop: height/50,
+    marginBottom: -height/50
   },
   number: {
     color: 'white',
-    fontSize: 30,
+    fontSize: height/27,
     textAlign: 'right',
-    marginTop: 10
+    marginTop: height/100
   },
   verify: {
     backgroundColor: '#1FBD67',
     borderRadius: 20,
-    paddingVertical: 10,
+    paddingVertical: height/70,
     width: '75%',
-    marginBottom: 50,
+    marginBottom: height/60,
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: height/35,
     fontWeight: 'bold',
     color: 'white'
   },
@@ -113,18 +114,18 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingVertical: 15,
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: height/40,
     fontWeight: 'bold'
   },
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: height/200
   },
 
   bold: {
-    fontSize: 40,
+    fontSize: height/20,
     textAlign: 'left'
   },
   interactive: {
@@ -134,12 +135,12 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: 50
+    marginTop: height/15
   },
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 24,
+    fontSize: height/40,
     width: '100%',
     fontWeight: 'bold',
     lineHeight: 35,
