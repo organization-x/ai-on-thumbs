@@ -16,13 +16,11 @@ export default function Course4BPInteractiveIntro2 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>7/14</Text>
       </View>
       <View style={styles.interactive}>
         <Text style={styles.secondText}>We can learn about this process by playing a matching game. But wait, this game comes with a catch! </Text>
-      </View>
-      <View style={styles.interactive}>
         <Text style={styles.secondText}>You will not be given a chance to look at the matches prior to starting, and will have to guess randomly the first round! Are you ready to start? </Text>
       </View>
       <View style={styles.footerButtons}>
@@ -67,7 +65,7 @@ const styles = StyleSheet.create({
   },
   interactive: {
     flex: 1,
-    paddingTop: 5,
+    paddingTop: 2,
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center',
@@ -77,7 +75,7 @@ const styles = StyleSheet.create({
     marginTop: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 35,
+    fontSize: height/20,
     fontWeight: 'bold'
   },
   boldText: {
@@ -91,7 +89,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: '4%'
   },
   footerButtons: {
     marginBottom: 20,

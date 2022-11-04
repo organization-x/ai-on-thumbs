@@ -16,7 +16,7 @@ export default function Course4RealWorldIntro ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>1/4</Text>
       </View>
       {/* <Text style={styles.number}>1/4</Text> */}
@@ -46,9 +46,8 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: 35,
+    fontSize: height/25,
     textAlign: 'right',
-    paddingVertical: 30
   },
   text: {
     color: 'white',
@@ -89,6 +88,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: '4%'
   }
 })

@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   cardTouchableContainer: {
     borderRadius: 12,
     overflow: 'hidden',
-    marginBottom: 20
+    marginBottom: 5
   },
   cardGradientContainer: {
     padding: 20

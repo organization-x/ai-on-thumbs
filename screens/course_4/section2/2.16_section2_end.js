@@ -1,17 +1,19 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import HomeButton from '../../../components/HomeButton'
 import SectionButton from '../../../components/SectionButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 14 Section 2: Section 2 End')
 
+const height = Dimensions.get('window').height
+
 export default function Course4Sect2End ({ navigation }) {
   const nextSection = ScreenList.section3
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>14/14</Text>
       </View>
       <View style={styles.interactive}>
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
     paddingVertical: 30
   },
   number: {
-    fontSize: 28,
+    fontSize: height/25,
     color: 'white',
     textAlign: 'right'
   },

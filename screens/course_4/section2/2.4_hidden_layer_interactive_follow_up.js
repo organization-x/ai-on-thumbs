@@ -10,12 +10,9 @@ const height = Dimensions.get('window').height
 
 export default function Course4SelectDNNCorrect ({ navigation }) {
   const screenSection = ScreenList.section2
-  const screenName = 'Course4SelectDNN_correct'
+  const screenName = 'Course4SelectDNNCorrect'
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation} />
-      </View>
       <View style={styles.interactive}>
         <Text style={styles.boldText}>Correct!</Text>
         <Text style={styles.secondText}>A NN with two or more layers is called a <Text styles={styles.underlinedText}>deep neural network.</Text></Text>

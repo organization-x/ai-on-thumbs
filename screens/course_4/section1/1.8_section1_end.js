@@ -13,9 +13,7 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 export default function Course4Sect1End ({ navigation }) {
-  const screenSection = ScreenList.section1
   const nextSection = ScreenList.section2
-  const screenName = 'Course4Sect1End'
   return (
     <View style={styles.container}>
       <View style={styles.top}>

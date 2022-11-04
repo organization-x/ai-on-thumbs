@@ -16,7 +16,7 @@ export default function Course4Intro ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>1/9</Text>
       </View>
       <View style={styles.interactive}>
@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'right',
     fontSize: height/25,
-    marginTop: height/40
   },
   box: {
     backgroundColor: colors.primary,

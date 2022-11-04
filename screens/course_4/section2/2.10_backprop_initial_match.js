@@ -63,7 +63,7 @@ export default function Course4BPInteractive ({ navigation }) {
     <DismissKeyboard>
       <View style={styles.container}>
         <View style={styles.top}>
-          <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
           <Text style={styles.number}>8/14</Text>
         </View>
         <View style={styles.container}>
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: '4%'
   },
   number: {
     color: 'white',

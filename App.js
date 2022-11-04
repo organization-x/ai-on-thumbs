@@ -6,6 +6,7 @@ import { useFonts } from 'expo-font'
 import { LinearGradient } from 'expo-linear-gradient'
 import Welcome from './screens/Welcome'
 import Courses from './screens/Courses'
+import CoursesScreen from './screens/NCourses'
 
 import Thumbs from './screens/Thumbs'
 import NoThumbs from './screens/NoThumbs'
@@ -131,8 +132,8 @@ import Course4NNLayers from './screens/course_4/section2/2.2_layers'
 import Course4LayerInteractive from './screens/course_4/section2/2.3_numerical_values'
 import Course4SelectDNN from './screens/course_4/section2/2.4_hidden_layer_interactive'
 import Course4SelectDNNCorrect from './screens/course_4/section2/2.4_hidden_layer_interactive_follow_up'
-import Course4BPInteracticeIntro2 from './screens/course_4/section2/2.8_adjustment'
-import Course4BPInteracticeIntro from './screens/course_4/section2/2.9_backprop_intro'
+import Course4BPInteractiveIntro2 from './screens/course_4/section2/2.8_adjustment'
+import Course4BPInteractiveIntro from './screens/course_4/section2/2.9_backprop_intro'
 import Course4BPInteractive from './screens/course_4/section2/2.10_backprop_initial_match'
 import Course4BPInteractiveReveal from './screens/course_4/section2/2.11_reveal_matches'
 import Course4Rematch from './screens/course_4/section2/2.12_matching2'
@@ -208,7 +209,8 @@ export default function App () {
         >
 
           <Stack.Screen name='Welcome' component={Welcome} />
-          <Stack.Screen name='Courses' component={Courses} />
+          {/* <Stack.Screen name='Courses' component={Courses} /> */}
+          <Stack.Screen name='Courses' component={CoursesScreen} />
 
           <Stack.Screen name='Thumbs' component={Thumbs} />
           <Stack.Screen name='NoThumbs' component={NoThumbs} />
@@ -332,14 +334,14 @@ export default function App () {
           <Stack.Screen name='Course4LayerInteractive' component={Course4LayerInteractive} />
           <Stack.Screen name='Course4SelectDNN' component={Course4SelectDNN} />
           <Stack.Screen name='Course4SelectDNNCorrect' component={Course4SelectDNNCorrect} />
-          <Stack.Screen name='Course4BPInteracticeIntro' component={Course4BPInteracticeIntro} />
-          <Stack.Screen name='Course4BPInteracticeIntro2' component={Course4BPInteracticeIntro2} />
+          <Stack.Screen name='Course4BPInteractiveIntro' component={Course4BPInteractiveIntro} />
+          <Stack.Screen name='Course4BPInteractiveIntro2' component={Course4BPInteractiveIntro2} />
           <Stack.Screen name='Course4BPInteractive' component={Course4BPInteractive} />
-          <Stack.Screen name='CCourse4BPInteractiveReveal' component={Course4BPInteractiveReveal} />
+          <Stack.Screen name='Course4BPInteractiveReveal' component={Course4BPInteractiveReveal} />
           <Stack.Screen name='Course4Rematch' component={Course4Rematch} />
           <Stack.Screen name='Course4BPInteractiveCongrats' component={Course4BPInteractiveCongrats} />
           <Stack.Screen name='Course4BPExplanation1' component={Course4BPExplanation1} />
-          <Stack.Screen name='Course4page2_15' component={Course4BPExplanation2} />
+          <Stack.Screen name='Course4BPExplanation2' component={Course4BPExplanation2} />
           <Stack.Screen name='Course4Sect2End' component={Course4Sect2End} />
 
           <Stack.Screen name='Course4RealWorldIntro' component={Course4RealWorldIntro} />

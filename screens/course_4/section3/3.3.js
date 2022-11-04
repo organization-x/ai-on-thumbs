@@ -10,6 +10,7 @@ import HomeButton from '../../../components/HomeButton'
 // Analytics.setCurrentScreen('Course 4 Section 3 Screen 3: Real World Example Explanation')
 
 const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
 
 export default function Course4RealWorldExplanation ({ navigation }) {
   const screenSection = ScreenList.section3
@@ -17,15 +18,15 @@ export default function Course4RealWorldExplanation ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>3/4</Text>
       </View>
 
       <View style={styles.textContainer}>
         <Text style={styles.text}>
-          After looking at a user's preferences, the computer{' '}
+          After looking at a user's preferences, the Neural Networks{' '}
           <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
-            can start recognizing patterns
+            can start recognizing patterns to generate
           </Text>
         </Text>
         <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
@@ -33,11 +34,11 @@ export default function Course4RealWorldExplanation ({ navigation }) {
         </Text>
         {/* and{' '}00k */}
         <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
-          great recommendations!
+          and great recommendations!
         </Text>
 
       </View>
-      <View style={[styles.footerButtons, { marginTop: 50 }]}>
+      <View style={[styles.footerButtons]}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: 35,
+    fontSize: height/25,
     textAlign: 'right'
   },
   text: {
@@ -71,12 +72,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: '4%', 
+    marginBottom: '5%'
   },
   footerButtons: {
-    marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'center',
-    paddingTop: 400
+    justifyContent: 'center', 
+    marginTop:'100%'
   }
 })

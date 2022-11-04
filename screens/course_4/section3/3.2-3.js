@@ -13,10 +13,8 @@ export default function Course4RWInteractiveIncorrect ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
-
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
       </View>
-
       <View style={styles.textContainer}>
         <Text style={styles.text}>
           Not quite... Amazon’s NN would select the soccer ball based on John’s interests
@@ -32,7 +30,7 @@ export default function Course4RWInteractiveIncorrect ({ navigation }) {
       </View>
       <View style={[styles.footerButtons, { marginTop: 50 }]}>
         <TouchableOpacity
-          onPress={() => { navigation.navigate('Course4page3_2') }}
+          onPress={() => { navigation.navigate('Course4RWInteractive') }}
           underlayColor='#fff'
           activeOpacity={0.3}
         >

@@ -34,8 +34,8 @@ export default function Course4Email ({ navigation }) {
         </ScrollView>
       </KeyboardAvoidingView>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='End' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Promo' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <LessonButton navigation={navigation} nextScreen='Course4End' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course4Promo' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </View>
   )

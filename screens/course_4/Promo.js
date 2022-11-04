@@ -23,7 +23,7 @@ export default function Course4Promo ({ navigation }) {
         <Text style={styles.promoText} onPress={handlePress}>Click here to see what else AI Camp has to offer!</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Email' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course4Email' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Courses' buttonColor={['#32B59D', '#3AC55B']} buttonText='Back to Home' />
       </View>
     </View>

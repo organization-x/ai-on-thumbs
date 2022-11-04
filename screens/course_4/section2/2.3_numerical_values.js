@@ -76,7 +76,7 @@ export default function Course4LayerInteractive ({ navigation }) {
       setCurrentLayer(2)
       setPartsLeft(1)
     } else if (partsLeft === 1) {
-      setUpperScreenText('Great job! Now you know all the different types of layers in a neural network!')
+      setUpperScreenText('Great job! You were able to recognize the different types of layers in a neural network!')
       setLowerScreenText('The hidden layer manipulates the numbers it receives from the input layer through calculations and feeds the results to the output layer.')
       setPartsLeft(0)
     }
@@ -85,7 +85,7 @@ export default function Course4LayerInteractive ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>3/14</Text>
       </View>
       <Text style={styles.textFont}>{upperScreenText}</Text>
@@ -104,7 +104,7 @@ export default function Course4LayerInteractive ({ navigation }) {
 const styles = StyleSheet.create({
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    opacity: 0.5,
+    opacity: '50%',
     backgroundColor: colors.primary
   },
   container: {
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: '4%'
   },
   footerButtons: {
     marginBottom: 10,
@@ -171,8 +171,7 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: 30,
-    textAlign: 'right',
-    marginTop: 5
+    fontSize: height/25,
+    textAlign: 'right'
   }
 })

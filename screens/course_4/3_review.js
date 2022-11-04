@@ -45,8 +45,8 @@ export default function Course4Review ({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course4page3_4' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='End' buttonColor={['#32B59D', '#3AC55B']} buttonText='Awesome!' />
+        <LessonButton navigation={navigation} nextScreen='Course4Sect3End' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course4End' buttonColor={['#32B59D', '#3AC55B']} buttonText='Awesome!' />
       </View>
 
       <StatusBar style='auto' />

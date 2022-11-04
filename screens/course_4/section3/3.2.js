@@ -17,7 +17,7 @@ export default function Course4RWInteractive ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>2/4</Text>
       </View>
 
@@ -95,7 +95,7 @@ export default function Course4RWInteractive ({ navigation }) {
         onPress={() => {
           if (choice !== '') {
             navigation.navigate(
-              choice === 'soccer' ? 'Course4page3_2_2' : 'Course4page3_2_3'
+              choice === 'soccer' ? 'Course4RWInteractiveCorrect' : 'Course4RWInteractiveIncorrect'
             )
           }
         }}
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: 35,
+    fontSize: height/25,
     textAlign: 'right'
   },
   text: {
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: '4%'
   },
   footerButtons: {
     marginBottom: 20,

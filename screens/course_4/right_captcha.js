@@ -32,7 +32,7 @@ export default function CaptchaRight ({ navigation }) {
           <Imagel link={images[7]} />
           <Imagel link={images[8]} />
         </View>
-        <Text style={styles.btm}>Humans are easily able to identify buses by finding their characteristics, since we have seen them multiple times</Text>
+        <Text style={styles.btm}>Humans are easily able to find the buses by in this scenario by identifying their characteristics</Text>
       </View>
 
       <View style={styles.footerButtons}>

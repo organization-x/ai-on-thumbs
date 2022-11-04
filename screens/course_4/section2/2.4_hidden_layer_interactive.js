@@ -25,7 +25,7 @@ export default function Course4SelectDNN ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>4/14</Text>
       </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     marginBottom: '10%'
-    // width: "80%"
   },
   cell: {
     width: height * 0.18,
@@ -114,7 +113,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: '6%'
   },
   footerButtons: {
     marginBottom: 20,

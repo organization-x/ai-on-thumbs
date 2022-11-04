@@ -1,10 +1,12 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 12 Section 2: Backpropagation Explanation')
+
+const height = Dimensions.get('window').height
 
 export default function Course4BPExplanation1 ({ navigation }) {
   const screenSection = ScreenList.section2
@@ -12,7 +14,7 @@ export default function Course4BPExplanation1 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+      <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>12/14</Text>
       </View>
       <View style={styles.interactive}>
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15
   },
   number: {
-    fontSize: 28,
+    fontSize: height/25,
     color: 'white',
     textAlign: 'right'
   },
@@ -61,16 +63,16 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 24,
+    fontSize: height/40,
     width: '100%',
-    fontWeight: 'bold',
+    fontWeight: '500',
     lineHeight: 35,
     marginBottom: 25
   },
   textund: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 24,
+    fontSize: height/35,
     width: '100%',
     fontWeight: 'bold',
     marginTop: 25,
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: '4%'
   },
   footerButtons: {
     marginBottom: 20,

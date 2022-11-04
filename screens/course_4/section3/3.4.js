@@ -14,7 +14,7 @@ export default function Course4Sect3End ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>4/4</Text>
       </View>
 
@@ -49,9 +49,9 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: 35,
+    fontSize: height/25,
     textAlign: 'right',
-    paddingVertical: 30
+    paddingVertical: 4
   },
   text: {
     color: 'white',
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: '4%'
   },
   returnText: {
     color: 'white',

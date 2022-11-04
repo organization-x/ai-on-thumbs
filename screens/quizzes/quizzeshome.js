@@ -13,7 +13,7 @@ export default function QuizzesScreen ({ navigation }) {
     <View style={styles.container}>
       
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.header}>Your Quiz Journey</Text>
         <QuizCard
           navigation={navigation}

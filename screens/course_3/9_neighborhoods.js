@@ -17,7 +17,7 @@ export default function Course3Neighborhoods ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} />
+        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.pageNumber}>7/21</Text>
       </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     textAlign: 'right'
   },
   top: {
-    marginTop:'2%',
+    marginTop:'4%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'

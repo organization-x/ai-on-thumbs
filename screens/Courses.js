@@ -30,7 +30,7 @@ export default function CoursesScreen ({ navigation }) {
         <CourseCard
           navigation={navigation}
           lessonScreen='Course3Introduction'
-          gradColors={['#8233C5', '#3C4687']}
+          gradColors={['#8233C5', '#F02FE2']}
           title='K Nearest Neighbors I'
           desc='This lesson will teach how distance influences our observations of the world around us, an important part of the KNN algorithm.'
           ratingandduration='Beginner: 5 minutes'
@@ -46,7 +46,7 @@ export default function CoursesScreen ({ navigation }) {
         <CourseCard
           navigation={navigation}
           lessonScreen='QuizzesScreen'
-          gradColors={['#8233C5', '#3C4687']}
+          gradColors={['#0F89CE', '#3C4687']}
           title='Quizzes'
           desc='Test your knowledge with questions from each lesson!'
           ratingandduration='Intermediate: 15 minutes'
