@@ -15,7 +15,7 @@ export default function Quiz3Start ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
-        <Text style={styles.titleText}>KNN Quiz</Text>
+        <Text style={styles.titleText}>KNN Quiz I</Text>
         <Text style={styles.subText}>2 Questions</Text>
       </View>
       <AppButton

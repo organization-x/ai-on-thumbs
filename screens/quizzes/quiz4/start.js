@@ -15,7 +15,7 @@ export default function Quiz4Start ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
-        <Text style={styles.titleText}>NN I Quiz</Text>
+        <Text style={styles.titleText}>NN Quiz I</Text>
         <Text style={styles.subText}>3 Questions</Text>
       </View>
       <AppButton

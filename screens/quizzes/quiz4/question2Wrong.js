@@ -52,7 +52,7 @@ export default function Quiz4Question2Wrong ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.headerBackground}>
-        <Text style={styles.headerText}>Quiz NN I</Text>
+        <Text style={styles.headerText}>NN Quiz I</Text>
       </View>
       <Text style={styles.question}>
         Close, but answer #{correctAnswer} is correct. Swipe up to review the lesson.

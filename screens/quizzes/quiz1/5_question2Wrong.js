@@ -18,6 +18,11 @@ export default function Quiz1Question2Wrong ({ navigation }) {
   const correctAnswer = 1
   const incorrectAnswer = route.params.selected
 
+  const textColor1 = incorrectAnswer === 1 ? 'white' : ''
+  const textColor2 = incorrectAnswer === 2 ? 'white' : ''
+  const textColor3 = incorrectAnswer === 3 ? 'white' : ''
+  const textColor4 = incorrectAnswer === 4 ? 'white' : ''
+
   const answerStyle1 =
     correctAnswer === 1
       ? '#1FBD67'
@@ -54,25 +59,25 @@ export default function Quiz1Question2Wrong ({ navigation }) {
       <View style={styles.answerContainer}>
         {/* answer option 1 */}
         <View style={[styles.answer, { backgroundColor: answerStyle1 }]}>
-          <Text style={styles.answerText}>
+          <Text style={[styles.answerText, {color: textColor1}]}>
             They interpret the numerical values of each pixel
           </Text>
         </View>
         {/* answer option 2 */}
         <View style={[styles.answer, { backgroundColor: answerStyle2 }]}>
-          <Text style={styles.answerText}>
+          <Text style={[styles.answerText, {color: textColor2}]}>
             They compare the photo to a database of photos it has
           </Text>
         </View>
         {/* answer option 3 */}
         <View style={[styles.answer, { backgroundColor: answerStyle3 }]}>
-          <Text style={styles.answerText}>
+          <Text style={[styles.answerText, {color: textColor3}]}>
             They interpret photos through the colors of each pixel
           </Text>
         </View>
         {/* answer option 4 */}
         <View style={[styles.answer, { backgroundColor: answerStyle4 }]}>
-          <Text style={styles.answerText}>
+          <Text style={[styles.answerText, {color: textColor4}]}>
             They interpret the text value of each pixel
           </Text>
         </View>

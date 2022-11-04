@@ -28,7 +28,7 @@ export default function Quiz3Score ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.headerBackground}>
-        <Text style={styles.headerText}>Quiz KNN I</Text>
+        <Text style={styles.headerText}>KNN Quiz I</Text>
       </View>
       <View style={styles.scoreContainer}>
         <View style={styles.scoreBox}>

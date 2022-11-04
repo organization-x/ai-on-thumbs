@@ -32,7 +32,7 @@ export default function Quiz4Question2 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.headerBackground}>
-        <Text style={styles.headerText}>NN I</Text>
+        <Text style={styles.headerText}>NN Quiz I</Text>
       </View>
       <Text style={styles.question}>
         #2. How do neural networks work?

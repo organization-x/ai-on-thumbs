@@ -30,7 +30,7 @@ export default function Quiz4Score ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.headerBackground}>
-        <Text style={styles.headerText}>Quiz NN I</Text>
+        <Text style={styles.headerText}>NN Quiz I</Text>
       </View>
       <View style={styles.scoreContainer}>
         <View style={styles.scoreBox}>

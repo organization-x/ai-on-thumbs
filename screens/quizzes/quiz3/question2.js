@@ -30,7 +30,7 @@ export default function Quiz3Question2 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.headerBackground}>
-        <Text style={styles.headerText}>Quiz KNN I</Text>
+        <Text style={styles.headerText}>KNN Quiz I</Text>
       </View>
       <Text style={styles.question}>
         #2. How do KNNs work?
