@@ -58,16 +58,17 @@ const styles = StyleSheet.create({
     textAlign: 'right'
   },
   image: {
-    height: 300,
-    width: 300,
+    height: height / 2.75,
+    width: height / 2.75,
     marginTop: 15,
-    alignItems: 'center'
+    alignItems: 'center',
+    borderRadius: 5
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '15%',
+    marginTop: '25%',
     textAlign: 'center',
     color: 'white',
     fontSize: 40
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
-    marginTop: '15%',
+    marginTop: '28%',
     textAlign: 'center',
     color: 'white',
     fontSize: 25,

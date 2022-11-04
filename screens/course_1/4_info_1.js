@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    marginTop: height / 5
+    marginTop: height / 20
   },
   top: {
     flexDirection: 'row',
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     textAlignVertical: 'center',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height / 18,
     fontWeight: '500'
   },
   footerButtons: {

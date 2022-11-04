@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     marginTop: '30%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 52,
+    fontSize: height / 14,
     fontWeight: '500'
   },
   footerButtons: {

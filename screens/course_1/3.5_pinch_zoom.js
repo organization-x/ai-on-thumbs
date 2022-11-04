@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     textAlign: 'right'
   },
   text: {
-    fontSize: height / 35,
+    fontSize: height / 33,
     color: 'white',
     fontWeight: '500'
   }

@@ -34,9 +34,8 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    height: height / 18,
-    width: height / 18,
-    marginTop: height/30,
+    height: height / 16,
+    width: height / 16,
     resizeMode: 'contain'
   }
 })
