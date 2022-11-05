@@ -13,6 +13,7 @@ export default function CoursesScreen ({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
+
         <View style={styles.top}>
           <Image style={styles.logo} resizeMode='contain' source={require('../assets/stock/ai-on-thumbs-logo.png')} />
           <Text style={styles.header}>Your AI Journey</Text>
@@ -75,6 +76,7 @@ export default function CoursesScreen ({ navigation }) {
           title='Want to learn more about AI?'
           desc='Immerse yourself in artificial intelligence and learn to build incredible real-world AI products at ai-camp.org. No prior experience necessary!'
         />
+
       </ScrollView>
     </View>
   )
