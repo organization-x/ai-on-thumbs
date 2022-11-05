@@ -1,8 +1,9 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course Card')
 
+const width = Dimensions.get('window').width
 export default function CourseCardHorizontal ({ navigation, lessonScreen, gradColors, title, desc, ratingandduration, disabled }) {
   return (
     <TouchableOpacity
@@ -30,9 +31,8 @@ const styles = StyleSheet.create({
   cardTouchableContainer: {
     borderRadius: 15,
     overflow: 'hidden',
-    width:'7%',
-    height:'85%',
-    marginRight:5
+    marginRight:5,
+    width: width/1.2
   },
   cardGradientContainer: {
     padding: 20

@@ -7,17 +7,18 @@ import colors from '../config/colors'
 
 // import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Courses Screen')
 const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 export default function CoursesScreen ({ navigation }) {
   return (
     <View style={styles.container}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.top}>
                 <Image style={styles.logo} resizeMode='contain' source={require('../assets/stock/ai-on-thumbs-logo.png')} />
                 <Text style={styles.header}>Your AI Journey</Text>
             </View>
             <Text style={styles.header2}>Lessons</Text>
-            <View style={{marginBottom:10}}>
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
+              <View style={{marginBottom:height/20}}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                     <CourseCardHorizontal
                     navigation={navigation}
                     lessonScreen='Course1Intro'
@@ -81,18 +82,18 @@ export default function CoursesScreen ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 22,
-    paddingVertical: 17,
+    paddingHorizontal: width/20,
+    paddingVertical: height/40,
     backgroundColor: colors.background
   },
   top:{
     marginTop:1,
     justifyContent:'center',
     alignContent:'center',
-    height:'22%'
+    height:height/3,
   },
   logo: {
-    height: '45%',
+    height: height/7,
     width:'100%',
     marginTop: 5,
     justifyContent:'center', 
