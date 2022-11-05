@@ -5,7 +5,8 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 3 Screen 11: Green House Neighborhood')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 3 Screen 11: Green House Neighborhood')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -14,7 +15,7 @@ export default function Course3GreenHouseNeighborhood ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.pageNumber}>9/21</Text>
       </View>
       <View style={{ flex: 1, marginTop: '5%' }}>
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
   },
   pageNumber: {
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   number: {
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     textAlign: 'right'
   },
   top: {
-    marginTop:'4%',
+    marginTop: '4%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: height/30,
+    fontSize: height / 30,
     fontWeight: '500',
     opacity: 0.8,
     marginTop: '30%'

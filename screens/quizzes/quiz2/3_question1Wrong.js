@@ -7,7 +7,8 @@ import {
   Dimensions
 } from 'react-native'
 import { useRoute } from '@react-navigation/native'
-
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Quiz 2 Question 1 Wrong')
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 
 const height = Dimensions.get('window').height
@@ -52,19 +53,19 @@ export default function Quiz2Question1Wrong ({ navigation }) {
       <View style={styles.answerContainer}>
         {/* answer option 1 */}
         <View style={[styles.answer, { backgroundColor: answerStyle1 }]}>
-          <Text style={[styles.answerText, {color: textColor1}]}>
+          <Text style={[styles.answerText, { color: textColor1 }]}>
             Patterns of pixels
           </Text>
         </View>
         {/* answer option 2 */}
         <View style={[styles.answer, { backgroundColor: answerStyle2 }]}>
-          <Text style={[styles.answerText, {color: textColor2}]}>
+          <Text style={[styles.answerText, { color: textColor2 }]}>
             Patterns of colors and brightness
           </Text>
         </View>
         {/* answer option 3 */}
         <View style={[styles.answer, { backgroundColor: answerStyle3 }]}>
-          <Text style={[styles.answerText, {color: textColor3}]}>
+          <Text style={[styles.answerText, { color: textColor3 }]}>
             Image components that allows the user to detect features of image
           </Text>
         </View>

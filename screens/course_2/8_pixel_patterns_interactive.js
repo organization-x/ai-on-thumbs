@@ -4,7 +4,8 @@ import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 2 Screen 8: Pixel Patterns Interactive Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 8: Pixel Patterns Interactive Screen')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -163,7 +164,7 @@ const styles = StyleSheet.create({
   },
   pageNumber: {
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   interactive: {
@@ -265,7 +266,7 @@ const styles = StyleSheet.create({
   },
   eyeButton1: {
     height: height / 7.5 / 3,
-    width: width/ 2.75 / 1.5,
+    width: width / 2.75 / 1.5,
     justifyContent: 'center',
     alignItems: 'center'
   },

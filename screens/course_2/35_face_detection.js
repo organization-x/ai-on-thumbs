@@ -1,14 +1,15 @@
 // Share your results to show that you know how AI works!
-
+/* eslint react/jsx-indent: "off" */
+/* eslint 'react/jsx-closing-tag-location': "off" */
 import React, { useState } from 'react'
 import { StyleSheet, View, Image, Text, Dimensions, TouchableOpacity, Modal, Alert } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import * as Sharing from 'expo-sharing'
 import * as FileSystem from 'expo-file-system'
 import colors from '../../config/colors'
-// import * as Analytics from 'expo-firebase-analytics'
+import * as Analytics from 'expo-firebase-analytics'
 import * as Sentry from 'sentry-expo'
-// Analytics.setCurrentScreen('Course 2 Screen 35: Face Detection Screen')
+Analytics.setCurrentScreen('Course 2 Screen 35: Face Detection Screen')
 
 const windowHeight = Dimensions.get('window').height
 

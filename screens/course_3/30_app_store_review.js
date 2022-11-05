@@ -9,7 +9,8 @@ import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 2 Screen 32: Rating Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 32: Rating Screen')
 
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {

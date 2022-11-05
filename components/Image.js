@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { TouchableOpacity, Image, Dimensions } from 'react-native'
 
 const width = Dimensions.get('window').width
-const height = Dimensions.get('window').height
 
 export default function Imagel (props) {
   const [col, setCol] = useState(true)
@@ -32,7 +31,7 @@ export default function Imagel (props) {
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          width: width/4
+          width: width / 4
         }}
       />
     </TouchableOpacity>

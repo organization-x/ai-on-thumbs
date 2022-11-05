@@ -7,7 +7,8 @@ import {
   Dimensions
 } from 'react-native'
 import { useRoute } from '@react-navigation/native'
-
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Quiz 1 Question 1 Wrong')
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 
 const height = Dimensions.get('window').height
@@ -59,25 +60,25 @@ export default function Quiz1Question1Wrong ({ navigation }) {
       <View style={styles.answerContainer}>
         {/* answer option 1 */}
         <View style={[styles.answer, { backgroundColor: answerStyle1 }]}>
-          <Text style={[styles.answerText, {color: textColor1}]}>
+          <Text style={[styles.answerText, { color: textColor1 }]}>
             They are tiny squares that compose an image
           </Text>
         </View>
         {/* answer option 2 */}
         <View style={[styles.answer, { backgroundColor: answerStyle2 }]}>
-          <Text style={[styles.answerText, {color: textColor2}]}>
+          <Text style={[styles.answerText, { color: textColor2 }]}>
             They are a special type of computer chips
           </Text>
         </View>
         {/* answer option 3 */}
         <View style={[styles.answer, { backgroundColor: answerStyle3 }]}>
-          <Text style={[styles.answerText, {color: textColor3}]}>
+          <Text style={[styles.answerText, { color: textColor3 }]}>
             They are pieces of code that compose programs
           </Text>
         </View>
         {/* answer option 4 */}
         <View style={[styles.answer, { backgroundColor: answerStyle4 }]}>
-          <Text style={[styles.answerText, {color: textColor4}]}>
+          <Text style={[styles.answerText, { color: textColor4 }]}>
             They are machine learning models that are designed to imitate a human brain
           </Text>
         </View>

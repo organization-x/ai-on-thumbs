@@ -4,7 +4,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 11 Section 2: Backpropagation Matching Congrats')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 11 Section 2: Backpropagation Matching Congrats')
 
 const height = Dimensions.get('window').height
 
@@ -14,7 +15,7 @@ export default function Course4BPInteractiveCongrats ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>11/14</Text>
       </View>
       <View style={styles.interactive}>
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15
   },
   number: {
-    fontSize: height/25,
+    fontSize: height / 25,
     color: 'white',
     textAlign: 'right'
   },
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: height/30,
+    fontSize: height / 30,
     width: '100%',
     fontWeight: 'bold',
     lineHeight: 35,

@@ -4,16 +4,17 @@ import QuizCard from '../../components/QuizCard'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
-const height = Dimensions.get('window').height
+import * as Analytics from 'expo-firebase-analytics'
 
-// // import * as Analytics from 'expo-firebase-analytics'// Analytics.setCurrentScreen('Courses Screen')
+const height = Dimensions.get('window').height
+Analytics.setCurrentScreen('Quizzes Home Screen')
 
 export default function QuizzesScreen ({ navigation }) {
   return (
     <View style={styles.container}>
-      
+
       <ScrollView style={styles.courseList} showsVerticalScrollIndicator={false}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.header}>Your Quiz Journey</Text>
         <QuizCard
           navigation={navigation}
@@ -64,8 +65,8 @@ const styles = StyleSheet.create({
     fontSize: 35,
     color: 'white',
     fontWeight: 'bold',
-    marginTop: height/50,
-    marginBottom: height/40
+    marginTop: height / 50,
+    marginBottom: height / 40
   },
   courseList: {
     flexDirection: 'column',

@@ -2,12 +2,12 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-// import * as Analytics from 'expo-firebase-analytics'
+import * as Analytics from 'expo-firebase-analytics'
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 3: Real World Example Explanation')
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 3: Real World Example Explanation')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -18,7 +18,7 @@ export default function Course4RealWorldExplanation ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>3/4</Text>
       </View>
 
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   text: {
@@ -72,12 +72,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '4%', 
+    marginTop: '4%',
     marginBottom: '5%'
   },
   footerButtons: {
     flexDirection: 'row',
-    justifyContent: 'center', 
-    marginTop:'100%'
+    justifyContent: 'center',
+    marginTop: '100%'
   }
 })

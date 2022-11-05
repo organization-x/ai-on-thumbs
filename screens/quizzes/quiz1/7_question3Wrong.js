@@ -7,9 +7,10 @@ import {
   Dimensions
 } from 'react-native'
 import { useRoute } from '@react-navigation/native'
+import * as Analytics from 'expo-firebase-analytics'
 
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
-
+Analytics.setCurrentScreen('Quiz 1 Question 3 Wrong')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
@@ -59,25 +60,25 @@ export default function Quiz1Question3Wrong ({ navigation }) {
       <View style={styles.answerContainer}>
         {/* answer option 1 */}
         <View style={[styles.answer, { backgroundColor: answerStyle1 }]}>
-          <Text style={[styles.answerText, {color: textColor1}]}>
+          <Text style={[styles.answerText, { color: textColor1 }]}>
             They interpret the colors of the image to determine a face
           </Text>
         </View>
         {/* answer option 2 */}
         <View style={[styles.answer, { backgroundColor: answerStyle2 }]}>
-          <Text style={[styles.answerText, {color: textColor2}]}>
+          <Text style={[styles.answerText, { color: textColor2 }]}>
             They organize the numerical values of the pixels to shape a face
           </Text>
         </View>
         {/* answer option 3 */}
         <View style={[styles.answer, { backgroundColor: answerStyle3 }]}>
-          <Text style={[styles.answerText, {color: textColor3}]}>
+          <Text style={[styles.answerText, { color: textColor3 }]}>
             They detect the eyes, nose, mouth, and ears humans have
           </Text>
         </View>
         {/* answer option 4 */}
         <View style={[styles.answer, { backgroundColor: answerStyle4 }]}>
-          <Text style={[styles.answerText, {color: textColor4}]}>
+          <Text style={[styles.answerText, { color: textColor4 }]}>
             They can naturally understand human faces
           </Text>
         </View>

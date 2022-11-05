@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Section 1 Screen 3B: Incorrect Captcha Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 1 Screen 3B: Incorrect Captcha Screen')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height

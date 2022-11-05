@@ -6,7 +6,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 6: NN Info Part 2')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 6: NN Info Part 2')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -17,7 +18,7 @@ export default function Course4NNInfo2 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>7/9</Text>
       </View>
       <View style={styles.interactive}>
@@ -43,8 +44,8 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    paddingHorizontal: width/20,
-    paddingVertical: height/30,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 30,
     backgroundColor: colors.background
   },
   currentButton: {
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/27,
+    fontSize: height / 27,
     marginTop: 12
   },
   top: {

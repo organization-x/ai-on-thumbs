@@ -6,7 +6,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 7: Comparison to Brains')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 7: Comparison to Brains')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -16,7 +17,7 @@ export default function Course4CompToBrain ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/50}} />
+        <HomeButton navigation={navigation} style={{ marginTop: height / 50 }} />
         <Text style={styles.number}>8/9</Text>
       </View>
       <View style={styles.lessonContent}>
@@ -49,18 +50,18 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    paddingHorizontal: width/20,
-    paddingVertical: height/30,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 30,
     backgroundColor: colors.background
   },
   number: {
     color: 'white',
-    fontSize: height/27,
+    fontSize: height / 27,
     textAlign: 'right',
     marginTop: 10
   },
   footerButtons: {
-    marginBottom: height/40,
+    marginBottom: height / 40,
     flexDirection: 'row',
     justifyContent: 'center'
   },
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   mainText: {
-    padding: height/40,
+    padding: height / 40,
     marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
@@ -86,8 +87,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   secondText: {
-    padding: height/40,
-    marginVertical: height/30,
+    padding: height / 40,
+    marginVertical: height / 30,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,

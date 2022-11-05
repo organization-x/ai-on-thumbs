@@ -1,5 +1,5 @@
 // Pending Refactor
-
+/* eslint react/jsx-indent: "off" */
 import React, { useEffect, useState, useRef } from 'react'
 import { StyleSheet, View, ActivityIndicator, Image } from 'react-native'
 import Background from '../components/Background'

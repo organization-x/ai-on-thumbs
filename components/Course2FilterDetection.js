@@ -1,3 +1,4 @@
+/* eslint react/jsx-indent: "off" */
 import React, { useState, useEffect } from 'react'
 import { Text, View, StyleSheet, Image, Platform, Dimensions } from 'react-native'
 import Draggable from 'react-native-draggable'
@@ -122,7 +123,7 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     marginTop: 20,
-    color:'white',
+    color: 'white',
     fontSize: Dimensions.get('window').height / 40,
     fontWeight: 'bold',
     textAlign: 'center'

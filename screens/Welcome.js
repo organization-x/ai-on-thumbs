@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { StyleSheet, View, Image, Text, TouchableOpacity, Modal, Dimensions, ScrollView } from 'react-native'
 import LessonButton from '../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import * as SecureStore from 'expo-secure-store'
 import * as Sentry from 'sentry-expo'
 import colors from '../config/colors'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Welcome Screen')
+// //import * as Analytics from 'expo-firebase-// analytics'//Analytics.setCurrentScreen('Welcome Screen')
 
 const height = Dimensions.get('window').height
 
@@ -185,7 +184,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'center',
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.background
   },
   welcomeBtn: {
     width: 150

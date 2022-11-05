@@ -3,24 +3,20 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import ProgressBar from '../../components/ProgressBar'
-import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 1 Screen 20: Review Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 20: Review Screen')
 
 const height = Dimensions.get('window').height
 
 export default function Course1Review ({ navigation }) {
-  const screenSection = ScreenList.course1
-  const screenName = 'Course1Review'
-
   return (
     <View style={styles.container}>
       <View style={styles.top}>
         <HomeButton navigation={navigation} />
-        <Text style={styles.pageNumber}></Text>
+        <Text style={styles.pageNumber} />
       </View>
       <View style={styles.interactive}>
         <Text style={styles.bigText}>Lesson Review</Text>
@@ -32,7 +28,7 @@ export default function Course1Review ({ navigation }) {
         <Text style={styles.text}>Computers use facial features to help them detect faces.</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1Congrats' buttonColor={'#8976C2'} buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Congrats' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course1Rating' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
     </View>

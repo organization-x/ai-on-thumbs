@@ -5,7 +5,8 @@ import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 9 Section 2: Backpropagation Matching Reveal')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 9 Section 2: Backpropagation Matching Reveal')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -17,7 +18,7 @@ export default function Course4BPInteractiveReveal ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>9/14</Text>
       </View>
       <View style={styles.rowcontainer}>

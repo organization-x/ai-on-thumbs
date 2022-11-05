@@ -4,7 +4,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 3 Section 2: NNs Layers Interactive')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 3 Section 2: NNs Layers Interactive')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -85,7 +86,7 @@ export default function Course4LayerInteractive ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>3/14</Text>
       </View>
       <Text style={styles.textFont}>{upperScreenText}</Text>
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     textAlign: 'right'
   }
 })

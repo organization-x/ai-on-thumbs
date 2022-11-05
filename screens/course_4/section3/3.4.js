@@ -5,7 +5,8 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import HomeButton from '../../../components/HomeButton'
 import colors from '../../../config/colors'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Section 3 Screen 4: Section 3 NN Lesson End')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 4: Section 3 NN Lesson End')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -14,7 +15,7 @@ export default function Course4Sect3End ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>4/4</Text>
       </View>
 
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     textAlign: 'right',
     paddingVertical: 4
   },

@@ -4,7 +4,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 1: Intro')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 1: Intro')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -16,7 +17,7 @@ export default function Course4Intro ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>1/9</Text>
       </View>
       <View style={styles.interactive}>
@@ -34,22 +35,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
-    paddingHorizontal: width/20,
-    paddingVertical: height/35
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 35
   },
   number: {
     color: 'white',
     textAlign: 'right',
-    fontSize: height/25,
+    fontSize: height / 25
   },
   box: {
     backgroundColor: colors.primary,
     color: 'white',
     width: '100%',
     borderRadius: 20,
-    paddingHorizontal: width/20,
-    paddingVertical: height/40,
-    fontSize: height/15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
+    fontSize: height / 15,
     textAlign: 'center'
   },
   interactive: {
@@ -59,16 +60,16 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: height/30
+    marginBottom: height / 30
   },
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     width: '80%',
     fontWeight: '600',
-    lineHeight: height/20,
-    marginTop: height/50
+    lineHeight: height / 20,
+    marginTop: height / 50
   },
   top: {
     flexDirection: 'row',
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
     marginTop: '2%'
   },
   footerButtons: {
-    marginBottom: height/40,
+    marginBottom: height / 40,
     flexDirection: 'row',
     justifyContent: 'center'
   }

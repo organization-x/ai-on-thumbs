@@ -5,7 +5,8 @@ import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 2 Screen 3: Review 2 Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 3: Review 2 Screen')
 
 const height = Dimensions.get('window').height
 
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
   },
   pageNumber: {
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   textSection: {

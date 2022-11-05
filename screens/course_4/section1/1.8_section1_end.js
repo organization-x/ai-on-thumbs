@@ -4,10 +4,10 @@ import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
-import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 import SectionButton from '../../../components/SectionButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 8: Section 1 End')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 8: Section 1 End')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -17,7 +17,7 @@ export default function Course4Sect1End ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/50}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 50 }} />
         <Text style={styles.number}>9/9</Text>
       </View>
       <View style={styles.interactive}>
@@ -33,12 +33,12 @@ export default function Course4Sect1End ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: width/20,
-    paddingVertical: height/30,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 30,
     backgroundColor: colors.background
   },
   footerButtons: {
-    marginBottom: height/40,
+    marginBottom: height / 40,
     flexDirection: 'row',
     justifyContent: 'center'
   },
@@ -50,14 +50,14 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: height/27,
+    fontSize: height / 27,
     textAlign: 'right',
-    marginTop: height/60
+    marginTop: height / 60
   },
   sectionButton: {
-    marginBottom: height/5,
+    marginBottom: height / 5,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   top: {
     flexDirection: 'row',
@@ -72,6 +72,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/27
+    fontSize: height / 27
   }
 })

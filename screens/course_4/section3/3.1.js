@@ -2,12 +2,12 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-// import * as Analytics from 'expo-firebase-analytics'
+import * as Analytics from 'expo-firebase-analytics'
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 1: Intro')
 
 const height = Dimensions.get('window').height
 export default function Course4RealWorldIntro ({ navigation }) {
@@ -16,7 +16,7 @@ export default function Course4RealWorldIntro ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>1/4</Text>
       </View>
       {/* <Text style={styles.number}>1/4</Text> */}
@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: height/25,
-    textAlign: 'right',
+    fontSize: height / 25,
+    textAlign: 'right'
   },
   text: {
     color: 'white',

@@ -6,7 +6,8 @@ import LessonHeader from '../../components/LessonHeader'
 import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 2 Screen 30: Algo Review 2')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 30: Algo Review 2')
 
 const height = Dimensions.get('window').height
 

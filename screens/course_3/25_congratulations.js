@@ -7,7 +7,8 @@ import colors from '../../config/colors'
 import ScreenList from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 3 Screen 25: Congratulations')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 3 Screen 25: Congratulations')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -18,7 +19,7 @@ export default function Course3Congratulations ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.pageNumber}>21/21</Text>
       </View>
       <ConfettiCannon
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
   },
   pageNumber: {
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   top: {
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center',
-    justifyContent:'center'
+    justifyContent: 'center'
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

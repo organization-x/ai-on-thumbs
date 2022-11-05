@@ -7,9 +7,10 @@ import {
   Dimensions
 } from 'react-native'
 import { useRoute } from '@react-navigation/native'
+import * as Analytics from 'expo-firebase-analytics'
 
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
-
+Analytics.setCurrentScreen('Quiz 2 Question 2 Wrong')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
@@ -52,19 +53,19 @@ export default function Quiz2Question2Wrong ({ navigation }) {
       <View style={styles.answerContainer}>
         {/* answer option 1 */}
         <View style={[styles.answer, { backgroundColor: answerStyle1 }]}>
-          <Text style={[styles.answerText, {color: textColor1}]}>
+          <Text style={[styles.answerText, { color: textColor1 }]}>
             They interpret the numerical values of each pixel
           </Text>
         </View>
         {/* answer option 2 */}
         <View style={[styles.answer, { backgroundColor: answerStyle2 }]}>
-          <Text style={[styles.answerText, {color: textColor2}]}>
+          <Text style={[styles.answerText, { color: textColor2 }]}>
             They compare the photo to a database of photos it has
           </Text>
         </View>
         {/* answer option 3 */}
         <View style={[styles.answer, { backgroundColor: answerStyle3 }]}>
-          <Text style={[styles.answerText, {color: textColor3}]}>
+          <Text style={[styles.answerText, { color: textColor3 }]}>
             They interpret photos through the colors of each pixel
           </Text>
         </View>

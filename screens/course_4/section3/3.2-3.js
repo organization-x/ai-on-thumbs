@@ -2,10 +2,10 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native'
-// import * as Analytics from 'expo-firebase-analytics'
+import * as Analytics from 'expo-firebase-analytics'
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 2A: RW Example Incorrect')
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 2A: RW Example Incorrect')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
@@ -13,7 +13,7 @@ export default function Course4RWInteractiveIncorrect ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>

@@ -7,7 +7,8 @@ import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import ConfettiCannon from 'react-native-confetti-cannon'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 2 Screen 28: Congrats')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 28: Congrats')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
   },
   pageNumber: {
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   top: {

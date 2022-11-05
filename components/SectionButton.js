@@ -3,7 +3,6 @@ import { TouchableOpacity, Text, StyleSheet, Dimensions } from 'react-native'
 
 import colors from '../config/colors'
 
-
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
@@ -40,20 +39,20 @@ export default function SectionButton ({ navigation, nextSection = false, goSect
 const styles = StyleSheet.create({
   button: {
     backgroundColor: colors.secondary,
-    padding: height/70,
+    padding: height / 70,
     borderRadius: 15,
-    height: height/10,
-    width: width-100,
+    height: height / 10,
+    width: width - 100,
     justifyContent: 'center'
   },
   buttonText: {
     color: '#fff',
     textAlign: 'center',
-    fontSize: height/40,
+    fontSize: height / 40,
     fontWeight: 'bold'
   },
   container: {
-    marginBottom: height/60,
+    marginBottom: height / 60,
     flexDirection: 'row',
     justifyContent: 'center'
   }

@@ -6,7 +6,8 @@ import colors from '../../config/colors'
 import ScreenList from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 3 Screen 2: Nearest Neighbor')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 3 Screen 2: Nearest Neighbor')
 
 const height = Dimensions.get('window').height
 
@@ -16,7 +17,7 @@ export default function Course3NearestNeighbor ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.pageNumber}>2/21</Text>
       </View>
       <View style={styles.interactive}>
@@ -39,11 +40,11 @@ const styles = StyleSheet.create({
   },
   pageNumber: {
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   top: {
-    marginTop:'4%',
+    marginTop: '4%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center'
@@ -58,13 +59,13 @@ const styles = StyleSheet.create({
     marginTop: '50%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/22,
+    fontSize: height / 22,
     fontWeight: '500'
   },
   boldText: {
     textAlign: 'center',
     color: 'rgba(255, 255, 255, 0.6)',
-    fontSize: height/22,
+    fontSize: height / 22,
     fontWeight: 'bold'
   },
   footerButtons: {

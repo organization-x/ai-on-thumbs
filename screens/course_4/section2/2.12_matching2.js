@@ -2,7 +2,8 @@ import React from 'react'
 import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native'
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 10 Section 2: Backpropagation Matching Round 2')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 10 Section 2: Backpropagation Matching Round 2')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -68,7 +69,7 @@ export default function Course4Rematch ({ navigation }) {
     <DismissKeyboard>
       <View style={styles.container}>
         <View style={styles.top}>
-          <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+          <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
           <Text style={styles.number}>10/14</Text>
         </View>
         <View style={styles.container}>

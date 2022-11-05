@@ -4,7 +4,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 1 Section 2: NNs Process Info')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 1 Section 2: NNs Process Info')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -15,7 +16,7 @@ export default function Course4ProcessInfo ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>1/14</Text>
       </View>
       <View style={styles.interactive}>
@@ -45,8 +46,8 @@ const styles = StyleSheet.create({
   },
   number: {
     color: 'white',
-    fontSize: height/25,
-    textAlign: 'right',
+    fontSize: height / 25,
+    textAlign: 'right'
   },
   text: {
     flex: 1,
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/30,
+    fontSize: height / 30,
     fontWeight: 'bold'
   },
   interactive: {
@@ -101,9 +102,9 @@ const styles = StyleSheet.create({
   rectangle: {
     backgroundColor: colors.primary,
     borderRadius: 20,
-    width: width/2,
-    height:height/10,
-    justifyContent:'center',
+    width: width / 2,
+    height: height / 10,
+    justifyContent: 'center',
     alignItems: 'center',
     marginTop: 15,
     marginBottom: 10

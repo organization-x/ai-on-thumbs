@@ -5,8 +5,9 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
+import * as Analytics from 'expo-firebase-analytics'
 import HomeButton from '../../../components/HomeButton'
+Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 export default function Course4CaptchaExplanation ({ navigation }) {
@@ -17,7 +18,7 @@ export default function Course4CaptchaExplanation ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>5/9</Text>
       </View>
       <View style={styles.interactive}>
@@ -34,12 +35,12 @@ export default function Course4CaptchaExplanation ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: width/20,
-    paddingVertical: height/30,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 30,
     backgroundColor: colors.background
   },
   footerButtons: {
-    marginBottom: height/40,
+    marginBottom: height / 40,
     flexDirection: 'row',
     justifyContent: 'center'
   },

@@ -3,7 +3,8 @@ import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions, TextInput,
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
 
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 8 Section 2: Backpropagation Matching')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 8 Section 2: Backpropagation Matching')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -63,7 +64,7 @@ export default function Course4BPInteractive ({ navigation }) {
     <DismissKeyboard>
       <View style={styles.container}>
         <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+          <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
           <Text style={styles.number}>8/14</Text>
         </View>
         <View style={styles.container}>

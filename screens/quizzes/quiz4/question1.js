@@ -6,9 +6,10 @@ import {
   TouchableOpacity,
   Dimensions
 } from 'react-native'
+import * as Analytics from 'expo-firebase-analytics'
 
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
-
+Analytics.setCurrentScreen('Quiz 4 Question 1')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 

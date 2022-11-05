@@ -7,7 +7,8 @@ import {
   Dimensions
 } from 'react-native'
 import { useRoute } from '@react-navigation/native'
-
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Quiz 4 Question 1 Wrong')
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 
 const height = Dimensions.get('window').height

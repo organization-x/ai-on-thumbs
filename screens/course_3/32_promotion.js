@@ -5,8 +5,8 @@ import { StyleSheet, View, Text, Image, Dimensions, Linking } from 'react-native
 import LessonButton from '../../components/LessonButton'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
-import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 3 Screen 31: Promotion')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 3 Screen 31: Promotion')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -49,10 +49,10 @@ const styles = StyleSheet.create({
   },
   rectangle: {
     backgroundColor: colors.primary,
-    marginTop: height/20,
+    marginTop: height / 20,
     borderRadius: 20,
-    width: width/1.5,
-    height: height/6,
+    width: width / 1.5,
+    height: height / 6,
     alignItems: 'center',
     marginBottom: height / 2,
     justifyContent: 'center'

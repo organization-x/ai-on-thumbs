@@ -1,10 +1,11 @@
 import React from 'react'
-import { StyleSheet, View, Text, Dimensions} from 'react-native'
+import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Screen 13 Section 2: Backpropagation Explanation 2')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 13 Section 2: Backpropagation Explanation 2')
 const height = Dimensions.get('window').height
 
 export default function Course4BPExplanation2 ({ navigation }) {
@@ -13,7 +14,7 @@ export default function Course4BPExplanation2 ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>13/14</Text>
       </View>
       <View style={styles.interactive}>
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15
   },
   number: {
-    fontSize: height/25,
+    fontSize: height / 25,
     color: 'white',
     textAlign: 'right'
   },

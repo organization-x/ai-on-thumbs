@@ -4,7 +4,8 @@ import React from 'react'
 import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
-// // import * as Analytics from 'expo-firebase-analytics'// Analytics.setCurrentScreen('Course 3 Screen 29: Algorithm Review 4')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 3 Screen 29: Algorithm Review 4')
 
 const height = Dimensions.get('window').height
 

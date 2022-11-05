@@ -6,7 +6,8 @@ import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 2 Screen 16: Contrast 3 Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 2 Screen 16: Contrast 3 Screen')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
   },
   pageNumber: {
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     textAlign: 'right'
   },
   interactive: {

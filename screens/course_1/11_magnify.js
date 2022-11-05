@@ -7,7 +7,8 @@ import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 1 Screen 11: Magnify Screen')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 1 Screen 11: Magnify Screen')
 
 const height = Dimensions.get('window').height
 
@@ -102,15 +103,13 @@ const smallStyles = StyleSheet.create({
     fontWeight: '500',
     marginTop: 30,
     marginBottom: '7%',
-    color: '#fff',
-    fontWeight: '500'
+    color: '#fff'
   },
   captionTxt: {
     textAlign: 'center',
     fontSize: 17,
     marginVertical: '7%',
-    fontWeight: '400',
-    color: '#fff',
-    fontWeight: '500'
+    fontWeight: '500',
+    color: '#fff'
   }
 })

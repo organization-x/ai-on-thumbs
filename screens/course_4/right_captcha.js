@@ -4,7 +4,8 @@ import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import Imagel from '../../components/Image'
 import HomeButton from '../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-// analytics'Analytics.setCurrentScreen('Course 4 Section 1 Screen 3A: Captcha Correct')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 1 Screen 3A: Captcha Correct')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -16,7 +17,7 @@ export default function CaptchaRight ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>4/9</Text>
       </View>
       <View style={styles.interactive}>
@@ -24,7 +25,7 @@ export default function CaptchaRight ({ navigation }) {
         <View style={styles.img_container}>
           <Imagel link={images[0]} style={styles.show} />
           <Imagel link={images[1]} style={styles.show} />
-          <Imagel link={images[2]} style={{opacity:0.3}} />
+          <Imagel link={images[2]} style={{ opacity: 0.3 }} />
           <Imagel link={images[3]} />
           <Imagel link={images[4]} />
           <Imagel link={images[5]} />
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: height/100
+    marginTop: height / 100
   },
   img_container: {
     flexDirection: 'row',
@@ -67,18 +68,18 @@ const styles = StyleSheet.create({
     paddingLeft: 5
   },
   footerButtons: {
-    marginBottom: height/50,
+    marginBottom: height / 50,
     flexDirection: 'row',
     justifyContent: 'center'
   },
   btm: {
     color: 'white',
-    fontSize: height/37,
+    fontSize: height / 37,
     fontWeight: 'bold',
     width: '90%',
     textAlign: 'center',
-    lineHeight: height/30,
-    marginTop: height/45
+    lineHeight: height / 30,
+    marginTop: height / 45
 
   },
   img: {
@@ -101,11 +102,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#202020',
-    paddingHorizontal: width/20,
-    paddingVertical: height/35
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 35
   },
   number: {
-    fontSize: height/25,
+    fontSize: height / 25,
     color: 'white'
   },
   interactive: {
