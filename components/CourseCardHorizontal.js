@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     overflow: 'hidden',
     marginRight:5,
-    width: width/1.2
+    width: width/1.2,
+    height: '95%',
   },
   cardGradientContainer: {
     padding: 20
