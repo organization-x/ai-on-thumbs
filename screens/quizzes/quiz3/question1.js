@@ -6,10 +6,10 @@ import {
   TouchableOpacity,
   Dimensions
 } from 'react-native'
-import * as Analytics from 'expo-firebase-analytics'
+// import * as Analytics from 'expo-firebase-analytics'
 
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
-Analytics.setCurrentScreen('Quiz 3 Question 1')
+// Analytics.setCurrentScreen('Quiz 3 Question 1')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     borderRadius: 15,
-    fontSize: 30,
+    fontSize: height / 20,
     color: 'white'
   },
   headerBackground: {
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   question: {
     color: 'white',
     fontWeight: '500',
-    fontSize: 30,
+    fontSize: height / 30,
     alignItems: 'center',
     textAlign: 'center',
     marginBottom: height / 20
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   answerText: {
     fontStyle: 'normal',
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: height / 50,
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center'
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
   submitButtonText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: 25,
+    fontSize: height / 30,
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center',

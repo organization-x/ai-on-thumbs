@@ -6,8 +6,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 6: NN Info Part 2')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 4 Screen 6: NN Info Part 2')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   image: {
-    width: 200,
-    height: 200,
+    width: width / 2,
+    height: width / 2,
     borderRadius: 20
   },
   interactive: {

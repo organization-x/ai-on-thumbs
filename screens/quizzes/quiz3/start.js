@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Dimensions } from 'react-native'
-import * as Analytics from 'expo-firebase-analytics'
+// import * as Analytics from 'expo-firebase-analytics'
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
-Analytics.setCurrentScreen('Quiz 3 Start')
+// Analytics.setCurrentScreen('Quiz 3 Start')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
@@ -32,19 +32,20 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#1FBD67',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: width / 100
   },
   titleText: {
     marginBottom: height / 40,
     fontWeight: '500',
-    fontSize: 60,
+    fontSize: height / 17,
     textAlign: 'center',
     color: '#FFF'
   },
   subText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: 25,
+    fontSize: height / 25,
     textAlign: 'center',
     color: '#FFF'
   },
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
   startButtonText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: 25,
+    fontSize: height / 30,
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center',

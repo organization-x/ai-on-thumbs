@@ -4,7 +4,7 @@ import LessonButton from '../components/LessonButton'
 import * as SecureStore from 'expo-secure-store'
 import * as Sentry from 'sentry-expo'
 import colors from '../config/colors'
-// //import * as Analytics from 'expo-firebase-// analytics'//Analytics.setCurrentScreen('Welcome Screen')
+// //import * as Analytics from 'expo-firebase-// analytics'////Analytics.setCurrentScreen('Welcome Screen')
 
 const height = Dimensions.get('window').height
 

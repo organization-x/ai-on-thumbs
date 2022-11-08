@@ -4,8 +4,8 @@ import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import Imagel from '../../components/Image'
 import HomeButton from '../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Section 1 Screen 3A: Captcha Correct')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 4 Section 1 Screen 3A: Captcha Correct')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height

@@ -5,8 +5,8 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import ParagraphBox from '../../components/ParagraphBox'
 import LessonButton from '../../components/LessonButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 18.1: Draggable Filter Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 2 Screen 18.1: Draggable Filter Screen')
 
 const height = Dimensions.get('window').height
 

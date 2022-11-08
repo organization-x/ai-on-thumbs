@@ -7,8 +7,8 @@ import StarRating from 'react-native-star-rating'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 32: Rating Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 2 Screen 32: Rating Screen')
 
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {

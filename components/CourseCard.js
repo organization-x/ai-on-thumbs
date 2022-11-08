@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-// //import * as Analytics from 'expo-firebase-// analytics'//Analytics.setCurrentScreen('Course Card')
+// //import * as Analytics from 'expo-firebase-// analytics'////Analytics.setCurrentScreen('Course Card')
 
 export default function CourseCard ({ navigation, lessonScreen, gradColors, title, desc, ratingandduration, disabled }) {
   return (

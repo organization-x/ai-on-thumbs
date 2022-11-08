@@ -5,8 +5,8 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import HomeButton from '../../../components/HomeButton'
 import colors from '../../../config/colors'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Section 3 Screen 4: Section 3 NN Lesson End')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 4 Section 3 Screen 4: Section 3 NN Lesson End')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -18,13 +18,14 @@ export default function Course4Sect3End ({ navigation }) {
         <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
         <Text style={styles.number}>4/4</Text>
       </View>
-
-      <View style={styles.textContainer}>
-        <Text style={[styles.title]}>Congrats!</Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>You've now completed a brief introduction to neural networks</Text>
-        <Text style={styles.text}>Let's review what we learned</Text>
+      <View style={{ flex: 1, justifyContent: 'center' }}>
+        <View style={styles.textContainer}>
+          <Text style={[styles.title]}>Congrats!</Text>
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>You've now completed a brief introduction to neural networks</Text>
+          <Text style={styles.text}>Let's review what we learned</Text>
+        </View>
       </View>
       <TouchableOpacity
         onPress={() => {
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   returnButton: {
-    marginTop: 150,
+    marginBottom: height / 100,
     backgroundColor: '#0f89ce',
     height: height / 10,
     width: width / 1.5,

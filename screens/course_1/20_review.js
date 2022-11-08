@@ -6,8 +6,8 @@ import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 20: Review Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 1 Screen 20: Review Screen')
 
 const height = Dimensions.get('window').height
 

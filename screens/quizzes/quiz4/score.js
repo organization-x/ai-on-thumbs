@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Dimensions, Image } from 'react-native'
 import colors from '../../../config/colors'
-import * as Analytics from 'expo-firebase-analytics'
+// import * as Analytics from 'expo-firebase-analytics'
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
-Analytics.setCurrentScreen('Quiz 4 Score')
+// Analytics.setCurrentScreen('Quiz 4 Score')
 const AppButton = ({ onPress, title }) => (
   <TouchableOpacity onPress={onPress} style={styles.returnButton}>
     <Text style={styles.returnButtonText}>{title}</Text>
@@ -63,11 +63,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: width / 100
   },
   headerText: {
     borderRadius: 15,
-    fontSize: 30,
+    fontSize: height / 20,
     color: 'white'
   },
   headerBackground: {
@@ -99,7 +100,6 @@ const styles = StyleSheet.create({
     flex: 1
   },
   scoreBox: {
-    padding: width / 30,
     width: width / 1.2,
     height: height / 1.75,
     backgroundColor: '#D9D9D9',
@@ -116,20 +116,20 @@ const styles = StyleSheet.create({
   congratsText: {
     fontStyle: 'normal',
     fontWeight: 'bold',
-    fontSize: 40,
+    fontSize: height / 30,
     textAlign: 'center'
   },
   scoreText: {
     fontStyle: 'normal',
     fontWeight: '400',
-    fontSize: 60,
+    fontSize: height / 10,
     textAlign: 'center',
     color: '#1FBD67'
   },
   resultsText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: 20,
+    fontSize: height / 30,
     textAlign: 'center'
   }
 })

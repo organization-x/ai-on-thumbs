@@ -2,12 +2,12 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-import * as Analytics from 'expo-firebase-analytics'
+// import * as Analytics from 'expo-firebase-analytics'
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-Analytics.setCurrentScreen('Course 4 Section 3 Screen 3: Real World Example Explanation')
+// Analytics.setCurrentScreen('Course 4 Section 3 Screen 3: Real World Example Explanation')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   textContainer: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     width: width * 0.8,
@@ -72,12 +73,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '4%',
-    marginBottom: '5%'
+    marginTop: '4%'
   },
   footerButtons: {
+    marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: '100%'
+    justifyContent: 'center'
   }
 })

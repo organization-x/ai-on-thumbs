@@ -4,8 +4,8 @@ import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions, Linking } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import * as Sentry from 'sentry-expo'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Section 3 Screen 7: Promo')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 4 Section 3 Screen 7: Promo')
 
 const height = Dimensions.get('window').height
 

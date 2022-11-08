@@ -7,10 +7,10 @@ import {
   Dimensions
 } from 'react-native'
 import { useRoute } from '@react-navigation/native'
-import * as Analytics from 'expo-firebase-analytics'
+// import * as Analytics from 'expo-firebase-analytics'
 
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
-Analytics.setCurrentScreen('Quiz 2 Question 2 Wrong')
+// Analytics.setCurrentScreen('Quiz 2 Question 2 Wrong')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
@@ -54,19 +54,19 @@ export default function Quiz2Question2Wrong ({ navigation }) {
         {/* answer option 1 */}
         <View style={[styles.answer, { backgroundColor: answerStyle1 }]}>
           <Text style={[styles.answerText, { color: textColor1 }]}>
-            They interpret the numerical values of each pixel
+            The computer looks for parts of facial features
           </Text>
         </View>
         {/* answer option 2 */}
         <View style={[styles.answer, { backgroundColor: answerStyle2 }]}>
           <Text style={[styles.answerText, { color: textColor2 }]}>
-            They compare the photo to a database of photos it has
+            The computer scans for pixel patterns of facial features in the photo such as nose, eyes, and ears
           </Text>
         </View>
         {/* answer option 3 */}
         <View style={[styles.answer, { backgroundColor: answerStyle3 }]}>
           <Text style={[styles.answerText, { color: textColor3 }]}>
-            They interpret photos through the colors of each pixel
+            The computer finds images of human face in the internet and compares similarity
           </Text>
         </View>
       </View>
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     borderRadius: 15,
-    fontSize: 30,
+    fontSize: height / 20,
     color: 'white'
   },
   headerBackground: {
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   question: {
     color: 'white',
     fontWeight: '500',
-    fontSize: 30,
+    fontSize: height / 30,
     alignItems: 'center',
     textAlign: 'center',
     marginBottom: height / 20
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   answerText: {
     fontStyle: 'normal',
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: height / 50,
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center'
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   submitButtonText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: 25,
+    fontSize: height / 30,
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center',

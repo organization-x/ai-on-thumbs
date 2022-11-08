@@ -2,10 +2,10 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native'
-import * as Analytics from 'expo-firebase-analytics'
+// import * as Analytics from 'expo-firebase-analytics'
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
-Analytics.setCurrentScreen('Course 4 Section 3 Screen 2A: RW Example Incorrect')
+// Analytics.setCurrentScreen('Course 4 Section 3 Screen 2A: RW Example Incorrect')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
@@ -15,18 +15,20 @@ export default function Course4RWInteractiveIncorrect ({ navigation }) {
       <View style={styles.top}>
         <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
       </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          Not quite... Amazon’s NN would select the soccer ball based on John’s interests
-        </Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          This is a simple example, but a neural network{' '}
-          <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
-            can do this on a much larger scale
+      <View style={{ flex: 1 }}>
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>
+            Not quite... Amazon’s NN would select the soccer ball based on John’s interests
           </Text>
-        </Text>
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>
+            This is a simple example, but a neural network{' '}
+            <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
+              can do this on a much larger scale
+            </Text>
+          </Text>
+        </View>
       </View>
       <View style={[styles.footerButtons, { marginTop: 50 }]}>
         <TouchableOpacity
@@ -108,7 +110,6 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'center',
-    paddingTop: 150
+    justifyContent: 'center'
   }
 })

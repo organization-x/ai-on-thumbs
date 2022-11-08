@@ -3,8 +3,8 @@ import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions, TextInput,
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 8 Section 2: Backpropagation Matching')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 4 Screen 8 Section 2: Backpropagation Matching')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -76,6 +76,7 @@ export default function Course4BPInteractive ({ navigation }) {
             <TextInput
               editable={requireguessDog}
               style={styles.input}
+              placeholderTextColor='#fff'
               placeholder={inputdog}
               clearTextOnFocus
               onChangeText={(value) => handleInput(1, value)}
@@ -89,6 +90,7 @@ export default function Course4BPInteractive ({ navigation }) {
             <TextInput
               editable={requireguessBlanket}
               style={styles.input}
+              placeholderTextColor='#fff'
               placeholder={inputblanket}
               clearTextOnFocus
               onChangeText={(value) => handleInput(2, value)}
@@ -102,6 +104,7 @@ export default function Course4BPInteractive ({ navigation }) {
             <TextInput
               editable={requireguessGuitar}
               style={styles.input}
+              placeholderTextColor='#fff'
               placeholder={inputguitar}
               clearTextOnFocus
               onChangeText={(value) => handleInput(3, value)}
@@ -115,6 +118,7 @@ export default function Course4BPInteractive ({ navigation }) {
             <TextInput
               editable={requireguessFloppyDisc}
               style={styles.input}
+              placeholderTextColor='#fff'
               placeholder={inputfloppydisc}
               clearTextOnFocus
               onChangeText={(value) => handleInput(4, value)}

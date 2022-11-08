@@ -5,8 +5,8 @@ import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 13: Follow Up II B')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 3 Screen 13: Follow Up II B')
 
 const height = Dimensions.get('window').height
 

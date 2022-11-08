@@ -4,8 +4,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import HomeButton from '../../../components/HomeButton'
 import SectionButton from '../../../components/SectionButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 14 Section 2: Section 2 End')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 4 Screen 14 Section 2: Section 2 End')
 
 const height = Dimensions.get('window').height
 
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     textAlign: 'right'
   },
   sectionButton: {
-    marginBottom: 160,
+    marginBottom: height / 100,
     flexDirection: 'row',
     justifyContent: 'center'
   },
@@ -67,10 +67,9 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 24,
+    fontSize: height / 30,
     width: '100%',
     fontWeight: 'bold',
-    lineHeight: 35,
     marginBottom: 25
   },
   textund: {

@@ -4,8 +4,8 @@ import { StyleSheet, View, Image, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 1 Screen 23: Complete Screen')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 1 Screen 23: Complete Screen')
 
 export default function Course1Complete ({ navigation }) {
   return (

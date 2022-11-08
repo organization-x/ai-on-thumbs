@@ -4,8 +4,8 @@ import React from 'react'
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 20: Scan all wrong ')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 2 Screen 20: Scan all wrong ')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width

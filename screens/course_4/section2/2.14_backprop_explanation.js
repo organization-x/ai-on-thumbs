@@ -4,8 +4,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 12 Section 2: Backpropagation Explanation')
+// import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 4 Screen 12 Section 2: Backpropagation Explanation')
 
 const height = Dimensions.get('window').height
 
@@ -21,7 +21,6 @@ export default function Course4BPExplanation1 ({ navigation }) {
       <View style={styles.interactive}>
         <Text style={styles.textund}>In short, backpropagation allows NNs to make more accurate predictions. </Text>
         <Text style={styles.text}>This process compares the predictions the NN makes to the expected outputs, and from there adjusts the values of the nodes in the hidden layers to generate more accurate predictions.</Text>
-
       </View>
       <View style={styles.footerButtons}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
@@ -58,7 +57,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     marginTop: 50
   },
   text: {
