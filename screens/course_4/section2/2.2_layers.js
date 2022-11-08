@@ -56,12 +56,11 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // marginLeft: 55,
     width: '100%',
     height: '20%'
   },
   secondText: {
-    padding: 20,
+    marginTop: height/30,
     marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },

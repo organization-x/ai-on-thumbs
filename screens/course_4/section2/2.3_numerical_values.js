@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   textFont: {
-    paddingTop: 40,
+    marginTop: height/20,
     color: 'white',
     fontSize: height / 30,
     fontWeight: 'bold',

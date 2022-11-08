@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     padding: width / 100
   },
   titleText: {
-    marginBottom: height / 40,
+    marginBottom: width/12,
     fontWeight: '500',
     fontSize: 60,
     textAlign: 'center',
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   subText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: height / 25,
+    fontSize: width / 14,
     textAlign: 'center',
     color: '#FFF'
   },

@@ -38,14 +38,14 @@ const styles = StyleSheet.create({
   titleText: {
     marginBottom: height / 40,
     fontWeight: '500',
-    fontSize: height / 17,
+    fontSize:  width / 12,
     textAlign: 'center',
     color: '#FFF'
   },
   subText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: height / 25,
+    fontSize: width / 14,
     textAlign: 'center',
     color: '#FFF'
   },

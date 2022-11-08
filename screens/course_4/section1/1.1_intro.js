@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     color: 'white',
     width: '100%',
     borderRadius: 20,
+    overflow:'hidden',
     paddingHorizontal: width / 20,
     paddingVertical: height / 40,
     fontSize: height / 15,

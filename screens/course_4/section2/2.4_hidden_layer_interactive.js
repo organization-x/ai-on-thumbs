@@ -26,10 +26,10 @@ export default function Course4SelectDNN ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
+        <HomeButton navigation={navigation} style={{ marginTop: height / 20 }} />
         <Text style={styles.number}>4/14</Text>
       </View>
-      <View style={{ flex: 1, marginTop: '15%' }}>
+      <View style={{ flex: 1, marginTop: height/100}}>
         <Text style={styles.boldText}>Out of the following, which one has 2 or more hidden layers?</Text>
         <View style={styles.rowContainer}>
           <TouchableOpacity style={styles.cell} onPress={() => navigation.navigate('Course4SelectDNNCorrect')} disabled={false}>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    marginBottom: '10%'
+    marginBottom: height/100
   },
   cell: {
     width: height * 0.18,

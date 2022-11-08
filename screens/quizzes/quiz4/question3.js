@@ -51,7 +51,7 @@ export default function Quiz4Question3 ({ navigation }) {
         <TouchableOpacity onPress={() => optionPress(2)}>
           <View style={[styles.answer, { backgroundColor: answerStyle2 }]}>
             <Text style={styles.answerText}>
-              They are used to find patterns in data to predict future data for the recommendation systems such as the YouTube algorithm
+              They are used to find patterns in data to predict future data for the recommendation systems
             </Text>
           </View>
         </TouchableOpacity>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     borderRadius: 15,
-    fontSize: height / 20,
+    fontSize: width / 14,
     color: 'white'
   },
   headerBackground: {

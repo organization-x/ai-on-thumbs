@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     borderRadius: 15,
-    fontSize: height / 20,
+    fontSize: width / 14,
     color: 'white'
   },
   headerBackground: {

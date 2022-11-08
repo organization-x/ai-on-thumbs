@@ -10,6 +10,7 @@ import HomeButton from '../../../components/HomeButton'
 // Analytics.setCurrentScreen('Course 4 Screen 6 Section 2: Backpropagation Matching Intro')
 
 const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course4BPInteractiveIntro ({ navigation }) {
   const screenSection = ScreenList.section2
@@ -22,7 +23,7 @@ export default function Course4BPInteractiveIntro ({ navigation }) {
       </View>
       <View style={{ flex: 1, justifyContent: 'center' }}>
         <View style={styles.rectangle}>
-          <Text style={styles.text}>Now let's learn about backpropagation, a key element in how natural networks learn patterns!</Text>
+          <Text style={styles.text}>Now let's learn about backpropagation, a key element in how neural networks learn patterns!</Text>
         </View>
       </View>
       <View style={styles.footerButtons}>
@@ -68,7 +69,8 @@ const styles = StyleSheet.create({
     height: '45%',
     alignItems: 'center',
     marginBottom: height / 5,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: width/70
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -78,8 +80,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     color: 'white',
-    fontSize: height / 20,
-    padding: 16
+    fontSize: height / 25
   },
   top: {
     flexDirection: 'row',

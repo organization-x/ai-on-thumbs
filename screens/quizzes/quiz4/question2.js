@@ -67,7 +67,7 @@ export default function Quiz4Question2 ({ navigation }) {
         <TouchableOpacity onPress={() => optionPress(4)}>
           <View style={[styles.answer, { backgroundColor: answerStyle4 }]}>
             <Text style={styles.answerText}>
-              Neural networks work by combining information in each node to create a main node that contains all the information
+              Neural networks work by combining information in each node to create a main node containing all of that info
             </Text>
           </View>
         </TouchableOpacity>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     borderRadius: 15,
-    fontSize: height / 20,
+    fontSize: width / 14,
     color: 'white'
   },
   headerBackground: {
