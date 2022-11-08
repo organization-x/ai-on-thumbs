@@ -3,8 +3,8 @@ import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions, TouchableOpacity } from 'react-native'
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Screen 5 Section 2: NNs Hidden Layers Interactive')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 5 Section 2: NNs Hidden Layers Interactive')
 
 const height = Dimensions.get('window').height
 
@@ -29,7 +29,7 @@ export default function Course4SelectDNN ({ navigation }) {
         <HomeButton navigation={navigation} style={{ marginTop: height / 20 }} />
         <Text style={styles.number}>4/14</Text>
       </View>
-      <View style={{ flex: 1, marginTop: height/100}}>
+      <View style={{ flex: 1, marginTop: height / 100 }}>
         <Text style={styles.boldText}>Out of the following, which one has 2 or more hidden layers?</Text>
         <View style={styles.rowContainer}>
           <TouchableOpacity style={styles.cell} onPress={() => navigation.navigate('Course4SelectDNNCorrect')} disabled={false}>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    marginBottom: height/100
+    marginBottom: height / 100
   },
   cell: {
     width: height * 0.18,

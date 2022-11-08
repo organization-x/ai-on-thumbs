@@ -6,8 +6,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Screen 6 Section 2: Backpropagation Matching Intro')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 6 Section 2: Backpropagation Matching Intro')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: height / 5,
     justifyContent: 'center',
-    padding: width/70
+    padding: width / 70
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

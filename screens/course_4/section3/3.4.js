@@ -5,8 +5,8 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import HomeButton from '../../../components/HomeButton'
 import colors from '../../../config/colors'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 4: Section 3 NN Lesson End')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 4: Section 3 NN Lesson End')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width

@@ -6,8 +6,8 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Screen 2 Section 2: NNs Layers')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 2 Section 2: NNs Layers')
 const height = Dimensions.get('window').height
 
 export default function Course4NNLayers ({ navigation }) {
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     height: '20%'
   },
   secondText: {
-    marginTop: height/30,
+    marginTop: height / 30,
     marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },

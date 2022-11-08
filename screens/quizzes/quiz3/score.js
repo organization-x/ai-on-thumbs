@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Dimensions, Image } from 'react-native'
 import colors from '../../../config/colors'
-// import * as Analytics from 'expo-firebase-analytics'
+import * as Analytics from 'expo-firebase-analytics'
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
-// Analytics.setCurrentScreen('Quiz 3 Score')
+Analytics.setCurrentScreen('Quiz 3 Score')
 const AppButton = ({ onPress, title }) => (
   <TouchableOpacity onPress={onPress} style={styles.returnButton}>
     <Text style={styles.returnButtonText}>{title}</Text>

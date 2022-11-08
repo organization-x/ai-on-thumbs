@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import Imagel from '../../../components/Image'
 import HomeButton from '../../../components/HomeButton'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 4 Screen 3: Interactive Captcha')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 4 Screen 3: Interactive Captcha')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height

@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, Image } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-// import * as Analytics from 'expo-firebase-analytics'
+import * as Analytics from 'expo-firebase-analytics'
 import HomeButton from '../../../components/HomeButton'
 import colors from '../../../config/colors'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 2: Real World Interactive')
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 2: Real World Interactive')
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width

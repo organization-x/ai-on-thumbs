@@ -5,8 +5,8 @@ import { StyleSheet, View, Dimensions, Text } from 'react-native'
 import colors from '../../config/colors'
 import ScreenList from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
-// import * as Analytics from 'expo-firebase-analytics'
-// Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
+import * as Analytics from 'expo-firebase-analytics'
+Analytics.setCurrentScreen('Course 3 Screen 8: Distance Role')
 
 const height = Dimensions.get('window').height
 

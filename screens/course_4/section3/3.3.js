@@ -2,12 +2,12 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-// import * as Analytics from 'expo-firebase-analytics'
+import * as Analytics from 'expo-firebase-analytics'
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
-// Analytics.setCurrentScreen('Course 4 Section 3 Screen 3: Real World Example Explanation')
+Analytics.setCurrentScreen('Course 4 Section 3 Screen 3: Real World Example Explanation')
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height

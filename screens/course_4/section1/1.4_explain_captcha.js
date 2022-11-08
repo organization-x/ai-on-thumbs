@@ -5,9 +5,9 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
-// import * as Analytics from 'expo-firebase-analytics'
+import * as Analytics from 'expo-firebase-analytics'
 import HomeButton from '../../../components/HomeButton'
-// Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
+Analytics.setCurrentScreen('Course 4 Screen 4: Captcha Explanation Screen')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 export default function Course4CaptchaExplanation ({ navigation }) {
