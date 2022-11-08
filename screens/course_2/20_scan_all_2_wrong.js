@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+import colors from '../../config/colors'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 20: Scan all wrong ')
 
@@ -12,7 +12,7 @@ const width = Dimensions.get('window').width
 
 export default function Course2ScanAll2Wrong ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}>Error 404</Text>
         <Image style={styles.image} source={require('../../assets/course_2/scan.png')} />
@@ -20,25 +20,16 @@ export default function Course2ScanAll2Wrong ({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        <LessonButton
-          navigation={navigation}
-          nextScreen='Course2ScanAll1'
-          buttonColor='#8976C2'
-          buttonText='Back'
-        />
-        <LessonButton
-          navigation={navigation}
-          nextScreen='Course2ScanAll3'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Continue'
-        />
+        <LessonButton navigation={navigation} nextScreen='Course2ScanAll1' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course2ScanAll3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -47,6 +38,17 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
   },
   lessonContent: {
     flex: 1,

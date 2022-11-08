@@ -4,9 +4,10 @@
 
 import React, { useState } from 'react'
 import { StyleSheet, View, Text, Image, Switch, ScrollView, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
-
+import ProgressBar from '../../components/ProgressBar'
+import ScreenList from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 1 Screen 13: Human vs Computer Screen')
 
@@ -15,7 +16,11 @@ const height = Dimensions.get('window').height
 export default function Course1HumanVsComputer ({ navigation }) {
   const [isEnabled, setIsEnabled] = useState(false)
   const toggleSwitch = () => setIsEnabled(previousState => !previousState)
+
   let src
+  const screenSection = ScreenList.course1
+  const screenName = 'Course1HumanVsComputer'
+
   if (isEnabled === true) {
     src = require('../../assets/course_1/pixelizedlincoln.png')
   } else {
@@ -23,7 +28,11 @@ export default function Course1HumanVsComputer ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.pageNumber}>14/22</Text>
+      </View>
       <ScrollView scrollEnabled={false}>
         <View style={styles.interactive}>
           <Text style={styles.text}>Toggle the switch to shift between human vision and computer vision.</Text>
@@ -51,18 +60,31 @@ export default function Course1HumanVsComputer ({ navigation }) {
       </ScrollView>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1Info5' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        {/* <LessonButton navigation={navigation} nextScreen='Course1Info5' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1HumanVsComputer2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
   },
   interactive: {
     borderRadius: 7,
@@ -101,17 +123,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 30,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   smallText: {
-    fontWeight: 'bold',
+    fontWeight: '500',
     fontSize: 15,
-    color: 'black',
+    color: 'white',
     textAlign: 'center'
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

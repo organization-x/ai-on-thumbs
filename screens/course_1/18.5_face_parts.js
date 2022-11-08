@@ -3,17 +3,21 @@
 import React from 'react'
 
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import ImageMapper from 'react-native-image-mapper'
-
+import ProgressBar from '../../components/ProgressBar'
+import ScreenList from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 1 Screen 18.5: Face Parts 2 Screen')
 
-const deviceHeight = Dimensions.get('window').height
-const imageDimension = deviceHeight * 0.35
+const height = Dimensions.get('window').height
+const imageDimension = height * 0.35
 
 export default function Course1FaceParts2 ({ navigation }) {
+  const screenSection = ScreenList.course1
+  const screenName = 'Course1FaceParts2'
+
   const [lowerScreenText, setLowerScreenText] = React.useState(' ')
   const [upperScreenText, setUpperScreenText] = React.useState('Tap to identify which features you think are important to recognize a face.')
   const [selectedAreaId, setSelectedAreaId] = React.useState([])
@@ -104,7 +108,7 @@ export default function Course1FaceParts2 ({ navigation }) {
       setSelectedAreaId([...selectedAreaId, item.id])
       if (selectedAreaId.length === 5) {
         setUpperScreenText('Eyes + Nose + Ears + Mouth = Face!')
-        setLowerScreenText('It turns out computers use these important facial features to detect a face, just like we do! \n\n Tap to continue.')
+        setLowerScreenText('It turns out computers use these important facial features to detect a face, just like we do! \n\n Tap on the progress bar to continue.')
       } else {
         if (idx === 0) {
           setLowerScreenText('Yes, the left eye is important in recognizing a face. Have you found the other eye?')
@@ -130,7 +134,11 @@ export default function Course1FaceParts2 ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.pageNumber}>21/22</Text>
+      </View>
       <View style={{ flex: 1 }}>
         <Text style={styles.bigText}>{upperScreenText} </Text>
       </View>
@@ -149,15 +157,17 @@ export default function Course1FaceParts2 ({ navigation }) {
         <Text style={styles.text}> {lowerScreenText} </Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1FaceParts' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Congrats' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        {/* <LessonButton navigation={navigation} nextScreen='Course1FaceParts' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Congrats' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -167,12 +177,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
+  },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
     marginTop: '20%',
     marginBottom: '5%',
     fontSize: 18,
@@ -185,13 +206,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: 25,
-    fontWeight: 'bold',
+    fontWeight: '500',
     flex: 2,
-    marginTop: deviceHeight / 15
+    marginTop: height / 15
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

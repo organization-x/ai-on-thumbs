@@ -19,6 +19,8 @@ module.exports = {
   ignorePatterns: ['node_modules/'],
   rules: {
     'react/prop-types': 0,
+    'react/jsx-indent': 0,
+    'react/jsx-closing-tag-location': 0,
     camelcase: 0
   },
   settings: {

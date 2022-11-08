@@ -2,17 +2,25 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-
-import { LinearGradient } from 'expo-linear-gradient'
+import colors from '../../config/colors'
+import ScreenList from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 9: Neighborhoods')
 
 const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
 
 export default function Course3Neighborhoods ({ navigation }) {
+  const screenSection = ScreenList.course3
+  const screenName = 'Course3Neighborhoods'
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
+        <Text style={styles.pageNumber}>7/21</Text>
+      </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.text}>What if we separate the area into three neighborhoods?</Text>
         <View style={styles.rowContainer}>
@@ -55,18 +63,29 @@ export default function Course3Neighborhoods ({ navigation }) {
         </View>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course3FollowUp' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3BlackHouseNeighborhood' buttonColor={['#32B59D', '#3AC55B']} buttonText="I'm Listening" />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
+  },
+  top: {
+    marginTop: '4%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center'
   },
   rowContainer: {
     flex: 1.5,
@@ -110,6 +129,6 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

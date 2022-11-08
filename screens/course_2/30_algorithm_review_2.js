@@ -2,17 +2,21 @@
 
 import React from 'react'
 import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
+import ProgressBar from '../../components/ProgressBar'
+import ScreenList from '../../config/screen_list'
+import colors from '../../config/colors'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 30: Algo Review 2')
 
 const height = Dimensions.get('window').height
 
 export default function Course2AlgorithmReview2 ({ navigation }) {
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2AlgorithmReview2'
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
+
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Algorithm Review</LessonHeader>
 
@@ -34,20 +38,32 @@ export default function Course2AlgorithmReview2 ({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course2AlgorithmReview1' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course2AlgorithmReview3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
 
       <StatusBar style='auto' />
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+
+  pageNum: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
   },
 
   textSection: {
@@ -101,7 +117,7 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 
 })

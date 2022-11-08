@@ -3,12 +3,13 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-
-import { LinearGradient } from 'expo-linear-gradient'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 10: Black House Neighborhood')
 
 const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
 
 export default function Course3BlackHouseNeighborhood ({ navigation }) {
   const [neighborhoodBDisabled, setDisableNeighborhoodB] = React.useState(false)
@@ -26,7 +27,11 @@ export default function Course3BlackHouseNeighborhood ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
+        <Text style={styles.pageNumber}>8/21</Text>
+      </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.text}>{lowerScreenText}</Text>
         <View style={styles.rowContainer}>
@@ -71,15 +76,27 @@ export default function Course3BlackHouseNeighborhood ({ navigation }) {
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3Neighborhoods' buttonColor='#8976C2' buttonText='Back' />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
+  },
+  top: {
+    marginTop: '4%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center'
   },
   rowContainer: {
     flex: 1.5,

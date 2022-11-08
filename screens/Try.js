@@ -1,5 +1,5 @@
 // Pending Refactor
-
+/* eslint react/jsx-indent: "off" */
 import React, { useEffect, useState, useRef } from 'react'
 import { StyleSheet, View, ActivityIndicator, Image } from 'react-native'
 import Background from '../components/Background'
@@ -35,14 +35,14 @@ export default function Try ({ navigation }) {
     return result.uri
   }
 
-  const sendFaceRequest = async (image_string) => {
+  const sendFaceRequest = async (ImageString) => {
     let res
     try {
       res = await fetch('https://app.ai-camp.org/image',
         {
           method: 'POST',
           body: JSON.stringify(
-            { base_64: image_string }
+            { base_64: ImageString }
           ),
           headers: {
             'Content-type': 'application/json'

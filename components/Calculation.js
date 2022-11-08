@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { View, StyleSheet, Image, Platform, Dimensions, Animated } from 'react-native'
 import Draggable from 'react-native-draggable'
-import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView'
+import ReactNativeZoomableView from '@openspacelabs/react-native-zoomable-view/src/ReactNativeZoomableView'
 
 export default function Calculation ({ calculations, setCalculations, imageXOffset, imageYOffset }) {
   const moveToCoords = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current

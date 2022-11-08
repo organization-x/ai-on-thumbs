@@ -1,3 +1,4 @@
+/* eslint react/jsx-indent: "off" */
 import React, { useState, useEffect } from 'react'
 import { Text, View, StyleSheet, Image, Platform, Dimensions } from 'react-native'
 import Draggable from 'react-native-draggable'
@@ -94,7 +95,7 @@ export default function NoseDetection ({ found, setFound, setFilterText, imageXO
               : null
             }
 
-          </Draggable>
+            </Draggable>
           : null
 
         }

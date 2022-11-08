@@ -2,10 +2,11 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
 import ConfettiCannon from 'react-native-confetti-cannon'
-
+import ProgressBar from '../../components/ProgressBar'
+import ScreenList from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 1 Screen 19: Congrats Screen')
 
@@ -13,8 +14,15 @@ const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
 export default function Course1Congrats ({ navigation }) {
+  const screenSection = ScreenList.course1
+  const screenName = 'Course1Congrats'
+
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.pageNumber}>22/22</Text>
+      </View>
       <ConfettiCannon
         count={100}
         origin={{ x: width / 2, y: -100 }}
@@ -28,18 +36,31 @@ export default function Course1Congrats ({ navigation }) {
         <Text style={styles.boldText}>Now let’s review.</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course1FaceParts2' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course1Review' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        {/* <LessonButton navigation={navigation} nextScreen='Course1FaceParts2' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course1Review' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
   },
   interactive: {
     flex: 1,
@@ -64,7 +85,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 25,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -73,12 +94,12 @@ const styles = StyleSheet.create({
     marginTop: '30%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 52,
-    fontWeight: 'bold'
+    fontSize: height / 14,
+    fontWeight: '500'
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
 import { StyleSheet, View, Text, Image, Switch, ScrollView, Dimensions, TouchableOpacity, ImageBackground, SafeAreaView } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
+import ProgressBar from '../../components/ProgressBar'
+import ScreenList from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 8: Pixel Patterns Interactive Screen')
 
-const windowHeight = Dimensions.get('window').height
-const windowWidth = Dimensions.get('window').width
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 
 export default function Course2PixelPatternsInteractive ({ navigation }) {
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2PixelPatternsInteractive'
+
   const [isEnabled, setIsEnabled] = useState(false)
   const toggleSwitch = () => setIsEnabled(previousState => !previousState)
 
@@ -58,23 +63,24 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
 
   let src
   let darkOrLightBoldStyle
-  let backgroundColor
   let darkOrLightRegularStyle
 
   if (isEnabled === true) {
     src = require('../../assets/course_2/colorlessEyes.png')
     darkOrLightBoldStyle = styles.lightSmallBoldText
     darkOrLightRegularStyle = styles.lightSmallRegularText
-    backgroundColor = ['#370098', '#160535']
   } else {
     src = require('../../assets/course_2/eyesWithColor.png')
     darkOrLightBoldStyle = styles.darkSmallBoldText
     darkOrLightRegularStyle = styles.darkSmallRegularText
-    backgroundColor = ['#8976C2', '#E6E8FB']
   }
 
   return (
-    <LinearGradient colors={backgroundColor} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.pageNumber}>8/28</Text>
+      </View>
       <ScrollView scrollEnabled={false}>
         <SafeAreaView style={styles.container}>
 
@@ -143,18 +149,23 @@ export default function Course2PixelPatternsInteractive ({ navigation }) {
       </ScrollView>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course2PixelPatternsText' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course2FilterFeatures1' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
   },
   interactive: {
     flex: 1,
@@ -185,11 +196,17 @@ const styles = StyleSheet.create({
   image: {
     flexDirection: 'column',
     alignItems: 'center',
-    height: windowHeight / 5,
+    height: height / 5,
     resizeMode: 'contain',
     top: 0,
     marginBottom: 5,
     position: 'relative'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
   },
   headerText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -198,35 +215,35 @@ const styles = StyleSheet.create({
     marginTop: '3%',
     textAlign: 'center',
     color: 'white',
-    fontSize: windowHeight / 33,
+    fontSize: height / 33,
     fontWeight: 'bold'
   },
   lightSmallBoldText: {
     fontWeight: 'bold',
-    fontSize: windowHeight / 42,
+    fontSize: height / 42,
     color: 'white',
     textAlign: 'center'
   },
   darkSmallBoldText: {
     fontWeight: 'bold',
-    fontSize: windowHeight / 42,
-    color: 'black',
+    fontSize: height / 42,
+    color: 'white',
     textAlign: 'center'
   },
   lightSmallRegularText: {
-    fontSize: windowHeight / 42,
+    fontSize: height / 42,
     color: 'white',
     textAlign: 'center'
   },
   darkSmallRegularText: {
-    fontSize: windowHeight / 42,
-    color: 'black',
+    fontSize: height / 42,
+    color: 'white',
     textAlign: 'center'
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   },
   button1and3Area: {
     flex: 1,
@@ -248,40 +265,40 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start'
   },
   eyeButton1: {
-    height: windowHeight / 7.5 / 3,
-    width: windowWidth / 2.75 / 1.5,
+    height: height / 7.5 / 3,
+    width: width / 2.75 / 1.5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   eyeButton2: {
-    height: windowHeight / 3.75 / 1.35,
-    width: windowWidth / 2.75 / 3.5,
+    height: height / 3.75 / 1.35,
+    width: width / 2.75 / 3.5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   eyeButton3: {
-    height: windowHeight / 7.5 / 1.85,
-    width: windowWidth / 2.75 / 1.75,
+    height: height / 7.5 / 1.85,
+    width: width / 2.75 / 1.75,
     justifyContent: 'center',
     alignItems: 'center'
   },
   button1Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth / 2.6,
-    height: windowHeight / 7.5
+    width: width / 2.6,
+    height: height / 7.5
   },
   button2Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth / 2.6,
-    height: windowHeight / 3.75
+    width: width / 2.6,
+    height: height / 3.75
   },
   button3Background: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: windowWidth / 2.6,
-    height: windowHeight / 7.5
+    width: width / 2.6,
+    height: height / 7.5
   },
   switch: {
     bottom: 0,

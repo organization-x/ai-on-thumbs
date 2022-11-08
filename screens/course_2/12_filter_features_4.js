@@ -2,16 +2,24 @@
 
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import LessonButton from '../../components/LessonButton'
+import ProgressBar from '../../components/ProgressBar'
+import ScreenList from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 12: Filter Features 4 Screen')
 
 const height = Dimensions.get('window').height
 
 export default function Course2FilterFeatures4 ({ navigation }) {
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2FilterFeatures4'
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.pageNumber}>12/28</Text>
+      </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           Ok, how about the long answer?
@@ -19,39 +27,43 @@ export default function Course2FilterFeatures4 ({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-
-        <LessonButton
-          navigation={navigation}
-          nextScreen='Course2FilterFeatures3'
-          buttonColor='#8976C2'
-          buttonText='Back'
-        />
-
-        <LessonButton
-          navigation={navigation}
-          nextScreen='Course2FilterFeatures5'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText="Let's find out!"
-        />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
   },
-  footerButtons: {
-    marginBottom: 10,
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
   },
   textSection: {
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center'
+  },
+  footerButtons: {
+    marginBottom: 10,
+    flexDirection: 'row',
     justifyContent: 'center'
   },
   mainText: {

@@ -1,8 +1,9 @@
 import React from 'react'
 import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
-
+import ProgressBar from '../../components/ProgressBar'
+import ScreenList from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 1 Screen 2: Face Finder Screen')
 
@@ -19,6 +20,9 @@ export default function Course1FaceFinder ({ navigation }) {
   const [sourceBottomLeft, setSourceBottomLeft] = React.useState(require('../../assets/course_1/moonface.png'))
   const [sourceBottomRight, setSourceBottomRight] = React.useState(require('../../assets/course_1/veggieface.png'))
   const [lowerScreenText, setLowerScreenText] = React.useState('There are 3 faces remaining.')
+
+  const screenSection = ScreenList.course1
+  const screenName = 'Course1FaceFinder'
 
   const handlePress = (num) => {
     if (num === 0) {
@@ -52,12 +56,16 @@ export default function Course1FaceFinder ({ navigation }) {
     } else if (facesLeft === 1) {
       setLowerScreenText('Nice one! There is ' + facesLeft + ' face remaining.')
     } else if (facesLeft === 0) {
-      setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap continue to learn why.')
+      setLowerScreenText('Great job! It took you no time! But this job is a very difficult task for computers. Tap on the progress bar to learn why.')
     }
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.pageNumber}>2/22</Text>
+      </View>
       <Text style={styles.bigText}>To show computers how facial recognition is done, tap on all the faces in the pictures below. </Text>
       <View style={{ flex: 1 }}>
         <View style={styles.rowContainer}>
@@ -83,16 +91,18 @@ export default function Course1FaceFinder ({ navigation }) {
           <Text style={styles.text}> {lowerScreenText} </Text>
         </View>
         <View style={styles.footerButtons}>
-          <LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
-          <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
+          {/* <LessonButton navigation={navigation} nextScreen='Course1Intro' buttonColor='#8976C2' buttonText='Back' />
+          <LessonButton navigation={navigation} nextScreen='Course1HowFindFaces' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' /> */}
+          <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
         </View>
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -108,15 +118,26 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
     margin: 10
   },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
+  },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
     marginTop: '0%',
     fontSize: height / 40,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   bigText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -127,12 +148,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 30,
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
   footerButtons: {
     marginTop: 60,
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

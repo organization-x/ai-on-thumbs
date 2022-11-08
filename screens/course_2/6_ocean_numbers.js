@@ -1,16 +1,24 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, Dimensions, TouchableOpacity } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import LessonButton from '../../components/LessonButton'
+import ProgressBar from '../../components/ProgressBar'
+import ScreenList from '../../config/screen_list'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 6: Ocean Numbers Screen')
 
-const screenHeight = Dimensions.get('screen').height
+const height = Dimensions.get('screen').height
 const screenWidth = Dimensions.get('screen').width
 
 export default function App ({ navigation }) {
+  const screenSection = ScreenList.course2
+  const screenName = 'Course2OceanNumbers'
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.pageNumber}>6/28</Text>
+      </View>
       <View style={styles.lowPicture}>
         <TouchableOpacity>
           <Image
@@ -27,35 +35,30 @@ export default function App ({ navigation }) {
         </View>
 
         <View style={styles.footerButtons}>
-          <LessonButton
-            navigation={navigation}
-            nextScreen='Course2InterpretPictures'
-            buttonColor='#8976C2'
-            buttonText='Back'
-          />
-          <LessonButton
-            navigation={navigation}
-            nextScreen='Course2PixelPatternsText'
-            buttonColor={['#32B59D', '#3AC55B']}
-            buttonText='Continue'
-          />
+          <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
         </View>
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     flexDirection: 'column',
     paddingHorizontal: 10,
     paddingVertical: 10
   },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
+  },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   },
   lessonContent: {
     flex: 1,
@@ -64,10 +67,21 @@ const styles = StyleSheet.create({
     paddingVertical: 0,
     justifyContent: 'flex-start'
   },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
+  },
   textSection: {
     flex: 1,
     paddingHorizontal: 10,
-    paddingVertical: screenHeight * 0.05,
+    paddingVertical: height * 0.05,
     alignItems: 'center'
   },
   mainText: {
@@ -79,7 +93,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: screenHeight * 0.2
+    fontSize: height * 0.2
   },
   secondaryText: {
     marginVertical: 0,
@@ -90,7 +104,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: screenHeight * 0.04,
+    fontSize: height * 0.04,
     fontWeight: 'bold'
   },
   lowPicture: {
@@ -99,6 +113,6 @@ const styles = StyleSheet.create({
     flex: 1,
     position: 'absolute',
     width: screenWidth,
-    height: screenHeight * 0.4
+    height: height * 0.4
   }
 })

@@ -2,7 +2,8 @@
 
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import LessonButton from '../../components/LessonButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 19: Scan all question ')
@@ -11,7 +12,11 @@ const height = Dimensions.get('window').height
 
 export default function Course2ScanAll1 ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.pageNumber}>21/28</Text>
+      </View>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           Ok, now we can find different parts of a face.
@@ -36,12 +41,13 @@ export default function Course2ScanAll1 ({ navigation }) {
           buttonText='No! 👎'
         />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -50,6 +56,17 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
   },
   textSection: {
     flex: 1,
@@ -66,6 +83,11 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 20, // ~40px
     fontWeight: 'bold'
+  },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
   },
   secondText: {
     marginVertical: 10,

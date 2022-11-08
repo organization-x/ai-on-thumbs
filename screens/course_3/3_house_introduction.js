@@ -3,16 +3,21 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-
-import { LinearGradient } from 'expo-linear-gradient'
+import colors from '../../config/colors'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 3: House Introduction')
 
 const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
 
 export default function Course3HouseIntroduction ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
+        <Text style={styles.pageNumber}>3/21</Text>
+      </View>
       <View style={{ flex: 1, marginTop: '15%' }}>
         <Text style={styles.text}>Here is the black house.</Text>
         <View style={styles.rowContainer}>
@@ -47,15 +52,27 @@ export default function Course3HouseIntroduction ({ navigation }) {
         <LessonButton navigation={navigation} nextScreen='Course3NearestNeighbor' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course3SelectClosestHouse' buttonColor={['#32B59D', '#3AC55B']} buttonText='Add Houses' />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
+  },
+  top: {
+    marginTop: '4%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center'
   },
   rowContainer: {
     flex: 1.5,
@@ -72,7 +89,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 27,
+    fontSize: height / 34,
     fontWeight: '500',
     opacity: 0.8,
     marginBottom: '10%'

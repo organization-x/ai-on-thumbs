@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+import colors from '../../config/colors'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 21: Scan all correct')
 
@@ -11,7 +11,7 @@ const height = Dimensions.get('window').height
 
 export default function Course2ScanAll2Correct ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.lessonContent}>
         <Text style={styles.mainText}> You're right, we don't!</Text>
         <Text style={styles.secondText}>But do you know why?</Text>
@@ -19,25 +19,16 @@ export default function Course2ScanAll2Correct ({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        <LessonButton
-          navigation={navigation}
-          nextScreen='Course2ScanAll1'
-          buttonColor='#8976C2'
-          buttonText='Back'
-        />
-        <LessonButton
-          navigation={navigation}
-          nextScreen='Course2ScanAll3'
-          buttonColor={['#32B59D', '#3AC55B']}
-          buttonText='Continue'
-        />
+        <LessonButton navigation={navigation} nextScreen='Course2ScanAll1' buttonColor='#8976C2' buttonText='Back' />
+        <LessonButton navigation={navigation} nextScreen='Course2ScanAll3' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
@@ -62,6 +53,17 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 16, // ~60px
     fontWeight: 'bold'
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
   },
   secondText: {
     padding: 15,

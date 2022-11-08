@@ -1,33 +1,53 @@
 // To understand how KNN works, we need to first understand nearest neighbors.
 
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
-import LessonButton from '../../components/LessonButton'
-
-import { LinearGradient } from 'expo-linear-gradient'
+import { StyleSheet, View, Dimensions, Text } from 'react-native'
+import colors from '../../config/colors'
+import ScreenList from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 2: Nearest Neighbor')
 
+const height = Dimensions.get('window').height
+
 export default function Course3NearestNeighbor ({ navigation }) {
+  const screenSection = ScreenList.course3
+  const screenName = 'Course3NearestNeighbor'
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
+        <Text style={styles.pageNumber}>2/21</Text>
+      </View>
       <View style={styles.interactive}>
         <Text style={styles.text}>To understand how KNN works, we need to first understand</Text>
         <Text style={styles.boldText}>nearest neighbors</Text>
       </View>
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course3Introduction' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3HouseIntroduction' buttonColor={['#32B59D', '#3AC55B']} buttonText="Let's Do It!" />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  pageNumber: {
+    color: 'white',
+    fontSize: height / 25,
+    textAlign: 'right'
+  },
+  top: {
+    marginTop: '4%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center'
   },
   interactive: {
     flex: 1,
@@ -39,18 +59,18 @@ const styles = StyleSheet.create({
     marginTop: '50%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
-    fontWeight: 'bold'
+    fontSize: height / 22,
+    fontWeight: '500'
   },
   boldText: {
     textAlign: 'center',
-    color: 'rgba(0, 0, 0, 0.6)',
-    fontSize: 40,
+    color: 'rgba(255, 255, 255, 0.6)',
+    fontSize: height / 22,
     fontWeight: 'bold'
   },
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

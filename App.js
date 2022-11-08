@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { useFonts } from 'expo-font'
 import { LinearGradient } from 'expo-linear-gradient'
 import Welcome from './screens/Welcome'
-import Courses from './screens/Courses'
+import CoursesScreen from './screens/Courses'
 
 import Thumbs from './screens/Thumbs'
 import NoThumbs from './screens/NoThumbs'
@@ -88,7 +88,7 @@ import Course3SelectClosestHouse from './screens/course_3/4_closest_house'
 import Course3FollowUp from './screens/course_3/5_follow_up'
 import Course3FollowUpCorrect from './screens/course_3/6_follow_up_correct'
 import Course3FollowUpIncorrect from './screens/course_3/7_follow_up_incorrect'
-import Course3DistanceRole from './screens/course_3/8_distance.js'
+import Course3Distance from './screens/course_3/8_distance.js'
 import Course3Neighborhoods from './screens/course_3/9_neighborhoods.js'
 import Course3BlackHouseNeighborhood from './screens/course_3/10_neighborhoods.js'
 import Course3GreenHouseNeighborhood from './screens/course_3/11_neighborhoods.js'
@@ -114,6 +114,75 @@ import Course3AppStoreReview from './screens/course_3/30_app_store_review'
 import Course3Email from './screens/course_3/31_email'
 import Course3Promotion from './screens/course_3/32_promotion'
 
+import Course4Intro from './screens/course_4/section1/1.1_intro'
+import Course4IntroRealLifeApplications from './screens/course_4/section1/1.2_nn'
+import Course4InteractiveCaptcha from './screens/course_4/section1/1.3_captcha'
+import CaptchaRight from './screens/course_4/right_captcha'
+import CaptchaWrong from './screens/course_4/wrong_captcha'
+import Course4CaptchaExplanation from './screens/course_4/section1/1.4_explain_captcha'
+import Course4NNInfo1 from './screens/course_4/section1/1.5_nn_info_1'
+import Course4NNInfo2 from './screens/course_4/section1/1.6_nn_info_2'
+import Course4CompToBrain from './screens/course_4/section1/1.7_nn_to_brains'
+import Course4Sect1End from './screens/course_4/section1/1.8_section1_end'
+
+// import Course4page1_8 from './screens/course_4/8'
+import Course4ProcessInfo from './screens/course_4/section2/2.1_process_info'
+import Course4NNLayers from './screens/course_4/section2/2.2_layers'
+import Course4LayerInteractive from './screens/course_4/section2/2.3_numerical_values'
+import Course4SelectDNN from './screens/course_4/section2/2.4_hidden_layer_interactive'
+import Course4SelectDNNCorrect from './screens/course_4/section2/2.4_hidden_layer_interactive_follow_up'
+import Course4BPInteractiveIntro2 from './screens/course_4/section2/2.8_adjustment'
+import Course4BPInteractiveIntro from './screens/course_4/section2/2.9_backprop_intro'
+import Course4BPInteractive from './screens/course_4/section2/2.10_backprop_initial_match'
+import Course4BPInteractiveReveal from './screens/course_4/section2/2.11_reveal_matches'
+import Course4Rematch from './screens/course_4/section2/2.12_matching2'
+import Course4BPInteractiveCongrats from './screens/course_4/section2/2.13_congrats_comparison'
+import Course4BPExplanation1 from './screens/course_4/section2/2.14_backprop_explanation'
+import Course4BPExplanation2 from './screens/course_4/section2/2.15_explanation_cont'
+import Course4Sect2End from './screens/course_4/section2/2.16_section2_end'
+
+import Course4RealWorldIntro from './screens/course_4/section3/3.1'
+import Course4RWInteractive from './screens/course_4/section3/3.2'
+import Course4RWInteractiveCorrect from './screens/course_4/section3/3.2-2'
+import Course4RWInteractiveIncorrect from './screens/course_4/section3/3.2-3'
+import Course4RealWorldExplanation from './screens/course_4/section3/3.3'
+import Course4Sect3End from './screens/course_4/section3/3.4'
+import Course4Review from './screens/course_4/3_review'
+import Course4End from './screens/course_4/End'
+import Course4Email from './screens/course_4/Email'
+import Course4Promo from './screens/course_4/Promo'
+
+// quiz screen imports
+import QuizzesScreen from './screens/quizzes/quizzeshome'
+import Quiz1Start from './screens/quizzes/quiz1/1_start'
+import Quiz1Question1 from './screens/quizzes/quiz1/2_question1'
+import Quiz1Question1Wrong from './screens/quizzes/quiz1/3_question1Wrong'
+import Quiz1Question2 from './screens/quizzes/quiz1/4_question2'
+import Quiz1Question2Wrong from './screens/quizzes/quiz1/5_question2Wrong'
+import Quiz1Question3 from './screens/quizzes/quiz1/6_question3'
+import Quiz1Question3Wrong from './screens/quizzes/quiz1/7_question3Wrong'
+import Quiz1Score from './screens/quizzes/quiz1/8_score'
+import Quiz2Start from './screens/quizzes/quiz2/1_start'
+import Quiz2Question1 from './screens/quizzes/quiz2/2_question1'
+import Quiz2Question1Wrong from './screens/quizzes/quiz2/3_question1Wrong'
+import Quiz2Question2 from './screens/quizzes/quiz2/4_question2'
+import Quiz2Question2Wrong from './screens/quizzes/quiz2/5_question2Wrong'
+import Quiz2Score from './screens/quizzes/quiz2/6_score'
+import Quiz3Start from './screens/quizzes/quiz3/start'
+import Quiz3Question1 from './screens/quizzes/quiz3/question1'
+import Quiz3Question1Wrong from './screens/quizzes/quiz3/question1Wrong'
+import Quiz3Question2 from './screens/quizzes/quiz3/question2'
+import Quiz3Question2Wrong from './screens/quizzes/quiz3/question2Wrong'
+import Quiz3Score from './screens/quizzes/quiz3/score'
+import Quiz4Start from './screens/quizzes/quiz4/start'
+import Quiz4Question1 from './screens/quizzes/quiz4/question1'
+import Quiz4Question1Wrong from './screens/quizzes/quiz4/question1Wrong'
+import Quiz4Question2 from './screens/quizzes/quiz4/question2'
+import Quiz4Question2Wrong from './screens/quizzes/quiz4/question2Wrong'
+import Quiz4Question3 from './screens/quizzes/quiz4/question3'
+import Quiz4Question3Wrong from './screens/quizzes/quiz4/question3Wrong'
+import Quiz4Score from './screens/quizzes/quiz4/score'
+
 Sentry.init({
   dsn: 'https://9415b4e7e301441385f00f60d32cd895@o445453.ingest.sentry.io/6000018',
   enableInExpoDevelopment: false,
@@ -137,8 +206,10 @@ export default function App () {
           initialRouteName='Welcome'
           screenOptions={{ headerShown: false }}
         >
+
           <Stack.Screen name='Welcome' component={Welcome} />
-          <Stack.Screen name='Courses' component={Courses} />
+          {/* <Stack.Screen name='Courses' component={Courses} /> */}
+          <Stack.Screen name='Courses' component={CoursesScreen} />
 
           <Stack.Screen name='Thumbs' component={Thumbs} />
           <Stack.Screen name='NoThumbs' component={NoThumbs} />
@@ -219,7 +290,7 @@ export default function App () {
           <Stack.Screen name='Course3FollowUp' component={Course3FollowUp} />
           <Stack.Screen name='Course3FollowUpCorrect' component={Course3FollowUpCorrect} />
           <Stack.Screen name='Course3FollowUpIncorrect' component={Course3FollowUpIncorrect} />
-          <Stack.Screen name='Course3DistanceRole' component={Course3DistanceRole} />
+          <Stack.Screen name='Course3Distance' component={Course3Distance} />
           <Stack.Screen name='Course3Neighborhoods' component={Course3Neighborhoods} />
           <Stack.Screen name='Course3BlackHouseNeighborhood' component={Course3BlackHouseNeighborhood} />
           <Stack.Screen name='Course3GreenHouseNeighborhood' component={Course3GreenHouseNeighborhood} />
@@ -244,6 +315,80 @@ export default function App () {
           <Stack.Screen name='Course3AppStoreReview' component={Course3AppStoreReview} />
           <Stack.Screen name='Course3Email' component={Course3Email} />
           <Stack.Screen name='Course3Promotion' component={Course3Promotion} />
+
+          {/* course 4 screen stack */}
+          <Stack.Screen name='Course4Intro' component={Course4Intro} />
+          <Stack.Screen name='Course4IntroRealLifeApplications' component={Course4IntroRealLifeApplications} />
+          <Stack.Screen name='Course4InteractiveCaptcha' component={Course4InteractiveCaptcha} />
+          <Stack.Screen name='CaptchaRight' component={CaptchaRight} />
+          <Stack.Screen name='CaptchaWrong' component={CaptchaWrong} />
+          <Stack.Screen name='Course4CaptchaExplanation' component={Course4CaptchaExplanation} />
+          <Stack.Screen name='Course4NNInfo1' component={Course4NNInfo1} />
+          <Stack.Screen name='Course4NNInfo2' component={Course4NNInfo2} />
+          <Stack.Screen name='Course4CompToBrain' component={Course4CompToBrain} />
+          <Stack.Screen name='Course4Sect1End' component={Course4Sect1End} />
+
+          <Stack.Screen name='Course4ProcessInfo' component={Course4ProcessInfo} />
+          <Stack.Screen name='Course4NNLayers' component={Course4NNLayers} />
+          <Stack.Screen name='Course4LayerInteractive' component={Course4LayerInteractive} />
+          <Stack.Screen name='Course4SelectDNN' component={Course4SelectDNN} />
+          <Stack.Screen name='Course4SelectDNNCorrect' component={Course4SelectDNNCorrect} />
+          <Stack.Screen name='Course4BPInteractiveIntro' component={Course4BPInteractiveIntro} />
+          <Stack.Screen name='Course4BPInteractiveIntro2' component={Course4BPInteractiveIntro2} />
+          <Stack.Screen name='Course4BPInteractive' component={Course4BPInteractive} />
+          <Stack.Screen name='Course4BPInteractiveReveal' component={Course4BPInteractiveReveal} />
+          <Stack.Screen name='Course4Rematch' component={Course4Rematch} />
+          <Stack.Screen name='Course4BPInteractiveCongrats' component={Course4BPInteractiveCongrats} />
+          <Stack.Screen name='Course4BPExplanation1' component={Course4BPExplanation1} />
+          <Stack.Screen name='Course4BPExplanation2' component={Course4BPExplanation2} />
+          <Stack.Screen name='Course4Sect2End' component={Course4Sect2End} />
+
+          <Stack.Screen name='Course4RealWorldIntro' component={Course4RealWorldIntro} />
+          <Stack.Screen name='Course4RWInteractive' component={Course4RWInteractive} />
+          <Stack.Screen name='Course4RWInteractiveCorrect' component={Course4RWInteractiveCorrect} />
+          <Stack.Screen name='Course4RWInteractiveIncorrect' component={Course4RWInteractiveIncorrect} />
+          <Stack.Screen name='Course4RealWorldExplanation' component={Course4RealWorldExplanation} />
+          <Stack.Screen name='Course4Sect3End' component={Course4Sect3End} />
+          <Stack.Screen name='Course4Review' component={Course4Review} />
+          <Stack.Screen name='Course4End' component={Course4End} />
+          <Stack.Screen name='Course4Email' component={Course4Email} />
+          <Stack.Screen name='Course4Promo' component={Course4Promo} />
+
+          {/* quiz screen stack */}
+          <Stack.Screen name='QuizzesScreen' component={QuizzesScreen} />
+          {/* Quiz 1 */}
+          <Stack.Screen name='Quiz1Start' component={Quiz1Start} />
+          <Stack.Screen name='Quiz1Question1' component={Quiz1Question1} />
+          <Stack.Screen name='Quiz1Question1Wrong' component={Quiz1Question1Wrong} />
+          <Stack.Screen name='Quiz1Question2' component={Quiz1Question2} />
+          <Stack.Screen name='Quiz1Question2Wrong' component={Quiz1Question2Wrong} />
+          <Stack.Screen name='Quiz1Question3' component={Quiz1Question3} />
+          <Stack.Screen name='Quiz1Question3Wrong' component={Quiz1Question3Wrong} />
+          <Stack.Screen name='Quiz1Score' component={Quiz1Score} />
+          {/* Quiz 2 */}
+          <Stack.Screen name='Quiz2Start' component={Quiz2Start} />
+          <Stack.Screen name='Quiz2Question1' component={Quiz2Question1} />
+          <Stack.Screen name='Quiz2Question1Wrong' component={Quiz2Question1Wrong} />
+          <Stack.Screen name='Quiz2Question2' component={Quiz2Question2} />
+          <Stack.Screen name='Quiz2Question2Wrong' component={Quiz2Question2Wrong} />
+          <Stack.Screen name='Quiz2Score' component={Quiz2Score} />
+          {/* Quiz 3 */}
+          <Stack.Screen name='Quiz3Start' component={Quiz3Start} />
+          <Stack.Screen name='Quiz3Question1' component={Quiz3Question1} />
+          <Stack.Screen name='Quiz3Question1Wrong' component={Quiz3Question1Wrong} />
+          <Stack.Screen name='Quiz3Question2' component={Quiz3Question2} />
+          <Stack.Screen name='Quiz3Question2Wrong' component={Quiz3Question2Wrong} />
+          <Stack.Screen name='Quiz3Score' component={Quiz3Score} />
+          {/* Quiz 4 */}
+          <Stack.Screen name='Quiz4Start' component={Quiz4Start} />
+          <Stack.Screen name='Quiz4Question1' component={Quiz4Question1} />
+          <Stack.Screen name='Quiz4Question1Wrong' component={Quiz4Question1Wrong} />
+          <Stack.Screen name='Quiz4Question2' component={Quiz4Question2} />
+          <Stack.Screen name='Quiz4Question2Wrong' component={Quiz4Question2Wrong} />
+          <Stack.Screen name='Quiz4Question3' component={Quiz4Question3} />
+          <Stack.Screen name='Quiz4Question3Wrong' component={Quiz4Question3Wrong} />
+          <Stack.Screen name='Quiz4Score' component={Quiz4Score} />
+
         </Stack.Navigator>
       </NavigationContainer>
     </LinearGradient>

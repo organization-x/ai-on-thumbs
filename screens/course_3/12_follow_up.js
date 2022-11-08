@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
 import LessonButton from '../../components/LessonButton'
+import colors from '../../config/colors'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 12: Follow Up II A')
 
@@ -11,7 +11,7 @@ const height = Dimensions.get('window').height
 
 export default function Course3FollowUpIIA ({ navigation }) {
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.textSection}>
         <Text style={styles.mainText}>
           Actually, the black and green houses both belong to Neighborhood A.
@@ -35,15 +35,26 @@ export default function Course3FollowUpIIA ({ navigation }) {
           buttonText='Friendship'
         />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  number: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center'
   },
   footerButtons: {
     marginBottom: 10,

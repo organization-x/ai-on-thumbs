@@ -1,3 +1,4 @@
+/* eslint react/jsx-indent: "off" */
 import React, { useState, useEffect } from 'react'
 import { Text, View, StyleSheet, Image, Platform, Dimensions } from 'react-native'
 import Draggable from 'react-native-draggable'
@@ -96,7 +97,7 @@ export default function DetectingFeatures ({ found, setFound, setSimilarity, ima
                 ? (<Image style={styles.filterImage} source={require('../assets/course_2/horizontal_filter.png')} />)
                 : null
               }
-          </Draggable>
+            </Draggable>
           : null
         }
 

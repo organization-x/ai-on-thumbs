@@ -3,16 +3,24 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, StatusBar } from 'react-native'
 import LessonHeader from '../../components/LessonHeader'
-import LessonButton from '../../components/LessonButton'
-import { LinearGradient } from 'expo-linear-gradient'
+import colors from '../../config/colors'
+import ScreenList from '../../config/screen_list'
+import ProgressBar from '../../components/ProgressBar'
+import HomeButton from '../../components/HomeButton'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 3 Screen 26: Algorithm Review 1')
 
 const height = Dimensions.get('window').height
 
 export default function Course3AlgorithmReview1 ({ navigation }) {
+  const screenSection = ScreenList.course3
+  const screenName = 'Course3AlgorithmReview1'
   return (
-    <LinearGradient colors={['#8976C2', '#a3acff']} style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.top}>
+        <HomeButton navigation={navigation} />
+        <Text style={styles.pageNum} />
+      </View>
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Algorithm Review</LessonHeader>
 
@@ -26,20 +34,30 @@ export default function Course3AlgorithmReview1 ({ navigation }) {
       </View>
 
       <View style={styles.footerButtons}>
-        <LessonButton navigation={navigation} nextScreen='Course3Congratulations' buttonColor='#8976C2' buttonText='Back' />
-        <LessonButton navigation={navigation} nextScreen='Course3AlgorithmReview2' buttonColor={['#32B59D', '#3AC55B']} buttonText='Yeah It Is!' />
+        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
 
       <StatusBar style='auto' />
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  pageNum: {
+    color: 'white',
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center'
   },
 
   textSection: {
@@ -65,7 +83,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 14,
+    fontSize: height / 18,
     fontWeight: 'bold',
     opacity: 0.5
   },
@@ -86,6 +104,6 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })

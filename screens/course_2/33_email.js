@@ -4,8 +4,8 @@ import React from 'react'
 import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollView, Dimensions, Linking } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
-import { LinearGradient } from 'expo-linear-gradient'
 import * as Sentry from 'sentry-expo'
+import colors from '../../config/colors'
 import * as Analytics from 'expo-firebase-analytics'
 Analytics.setCurrentScreen('Course 2 Screen 33: Email Prompt Screen')
 
@@ -18,7 +18,8 @@ export default function Course2Email ({ navigation }) {
   }
 
   return (
-    <LinearGradient colors={['#8976C2', '#E6E8FB']} style={styles.container}>
+    <View style={styles.container}>
+
       <View style={styles.interactive}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.text} onPress={handlePress}>Continue your journey by going to ai-camp.org</Text>
@@ -39,15 +40,27 @@ export default function Course2Email ({ navigation }) {
         <LessonButton navigation={navigation} nextScreen='Course2AppStoreReview' buttonColor='#8976C2' buttonText='Back' />
         <LessonButton navigation={navigation} nextScreen='Course2Selfie' buttonColor={['#32B59D', '#3AC55B']} buttonText='Continue' />
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     flex: 1,
     paddingHorizontal: 20,
     paddingVertical: 15
+  },
+  number: {
+    color: colors.background,
+    fontSize: height / 28,
+    textAlign: 'right'
+  },
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginTop: '2%'
   },
   interactive: {
     flex: 1,
