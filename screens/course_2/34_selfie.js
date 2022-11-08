@@ -13,7 +13,6 @@ import { manipulateAsync, SaveFormat } from 'expo-image-manipulator'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
 
-
 const height = Dimensions.get('window').height
 
 export default function Course2Selfie ({ navigation }) {

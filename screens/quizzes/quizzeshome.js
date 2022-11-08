@@ -4,8 +4,6 @@ import QuizCard from '../../components/QuizCard'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
-
-
 const height = Dimensions.get('window').height
 
 export default function QuizzesScreen ({ navigation }) {

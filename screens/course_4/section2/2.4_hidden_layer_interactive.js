@@ -4,7 +4,6 @@ import { StyleSheet, View, Text, Image, Dimensions, TouchableOpacity } from 'rea
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
 
-
 const height = Dimensions.get('window').height
 
 export default function Course4SelectDNN ({ navigation }) {

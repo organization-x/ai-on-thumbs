@@ -7,7 +7,6 @@ import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 
-
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 export default function Course4CompToBrain ({ navigation }) {

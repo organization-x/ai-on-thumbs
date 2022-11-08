@@ -6,7 +6,6 @@ import HomeButton from '../../components/HomeButton'
 import ParagraphBox from '../../components/ParagraphBox'
 import LessonButton from '../../components/LessonButton'
 
-
 const height = Dimensions.get('window').height
 
 export default function Course2DraggableFilter ({ navigation }) {

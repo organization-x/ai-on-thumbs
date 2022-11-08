@@ -4,8 +4,6 @@ import { StyleSheet, View, Image, Text } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
 
-
-
 export default function Course1Complete ({ navigation }) {
   return (
     <View style={styles.container}>

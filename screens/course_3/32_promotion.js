@@ -3,9 +3,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions, Linking } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
-
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -13,7 +11,6 @@ const width = Dimensions.get('window').width
 export default function Promotion ({ navigation }) {
   async function handlePress () {
     Linking.openURL('https://www.ai-camp.org/virtual-summer-camp')
-    await Analytics.logEvent('Webpage Visit').catch(err => { Sentry.Native.captureException(err.response.data) })
   }
 
   return (

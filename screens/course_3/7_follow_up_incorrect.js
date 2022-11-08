@@ -5,7 +5,6 @@ import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
 
-
 const height = Dimensions.get('window').height
 
 export default function Course3FollowUpIncorrect ({ navigation }) {

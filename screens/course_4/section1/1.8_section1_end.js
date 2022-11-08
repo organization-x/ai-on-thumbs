@@ -7,7 +7,6 @@ import ScreenList from '../../../config/screen_list'
 import HomeButton from '../../../components/HomeButton'
 import SectionButton from '../../../components/SectionButton'
 
-
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 

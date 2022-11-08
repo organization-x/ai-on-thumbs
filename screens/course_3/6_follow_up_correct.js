@@ -6,7 +6,6 @@ import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
-
 const height = Dimensions.get('window').height
 
 export default function Course3FollowUpCorrect ({ navigation }) {

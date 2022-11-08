@@ -5,7 +5,6 @@ import CourseCard from '../components/CourseCard'
 import CourseAd from '../components/CourseAd'
 import colors from '../config/colors'
 
-
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 export default function CoursesScreen ({ navigation }) {

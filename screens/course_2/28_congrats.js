@@ -8,7 +8,6 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import ConfettiCannon from 'react-native-confetti-cannon'
 
-
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 

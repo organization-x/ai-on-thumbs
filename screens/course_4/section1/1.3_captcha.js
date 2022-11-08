@@ -3,7 +3,6 @@ import { StyleSheet, View, Text, Dimensions } from 'react-native'
 import Imagel from '../../../components/Image'
 import HomeButton from '../../../components/HomeButton'
 
-
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 

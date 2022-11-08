@@ -9,7 +9,6 @@ import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
-
 const height = Dimensions.get('window').height
 const imageDimension = height * 0.35
 

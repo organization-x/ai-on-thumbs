@@ -8,7 +8,6 @@ import {
 } from 'react-native'
 import { useRoute } from '@react-navigation/native'
 
-
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width

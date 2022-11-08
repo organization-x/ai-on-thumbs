@@ -4,16 +4,13 @@ import React from 'react'
 import { Platform, StyleSheet, View, Text, Image, KeyboardAvoidingView, ScrollView, Dimensions, Linking } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
-import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
-
 
 const height = Dimensions.get('window').height
 
 export default function Course1EmailPrompt ({ navigation }) {
   async function handlePress () {
     Linking.openURL('https://ai-camp.org')
-    await Analytics.logEvent('Webpage Visit').catch(err => { Sentry.Native.captureException(err.response.data) })
   }
 
   return (

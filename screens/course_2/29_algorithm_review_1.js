@@ -5,7 +5,6 @@ import ProgressBar from '../../components/ProgressBar'
 import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 
-
 const height = Dimensions.get('window').height
 
 export default function Course2AlgorithmReview1 ({ navigation }) {

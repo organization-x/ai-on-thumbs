@@ -5,8 +5,6 @@ import StarRating from 'react-native-star-rating'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 
-
-
 const height = Dimensions.get('window').height
 
 export default function Course4End ({ navigation }) {

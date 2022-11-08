@@ -1,7 +1,6 @@
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
 
-
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 

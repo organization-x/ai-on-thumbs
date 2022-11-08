@@ -6,7 +6,6 @@ import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
 import colors from '../../config/colors'
 
-
 const height = Dimensions.get('window').height
 
 export default function Course2AlgorithmReview3 ({ navigation }) {

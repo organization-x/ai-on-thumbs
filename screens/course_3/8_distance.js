@@ -6,7 +6,6 @@ import colors from '../../config/colors'
 import ScreenList from '../../config/screen_list'
 import ProgressBar from '../../components/ProgressBar'
 
-
 const height = Dimensions.get('window').height
 
 export default function Course3Distance ({ navigation }) {

@@ -6,7 +6,6 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import HomeButton from '../../../components/HomeButton'
 import colors from '../../../config/colors'
 
-
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 

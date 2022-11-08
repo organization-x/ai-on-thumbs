@@ -7,7 +7,6 @@ import {
   Dimensions
 } from 'react-native'
 
-
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 }
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width

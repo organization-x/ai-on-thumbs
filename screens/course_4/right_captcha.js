@@ -5,7 +5,6 @@ import ScreenList from '../../config/screen_list'
 import Imagel from '../../components/Image'
 import HomeButton from '../../components/HomeButton'
 
-
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 const images = [require('../../assets/bus_1.jpg'), require('../../assets/bus_2.jpg'), require('../../assets/bus.jpg'), require('../../assets/car.jpg'), require('../../assets/house.jpg'), require('../../assets/street.jpg'), require('../../assets/streets.jpg'), require('../../assets/traf.jpg'), require('../../assets/van.jpg')]

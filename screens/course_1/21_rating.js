@@ -9,8 +9,6 @@ import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
 
-
-
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {
     method: 'POST',

@@ -8,7 +8,6 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import GridMCQ from '../../components/GridMCQ'
 
-
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 const imageSide = width > 400 ? width / 2 : width / 1.6

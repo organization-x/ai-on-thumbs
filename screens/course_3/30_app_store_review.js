@@ -9,8 +9,6 @@ import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
-
-
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {
     method: 'POST',

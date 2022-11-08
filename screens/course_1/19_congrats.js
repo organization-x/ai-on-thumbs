@@ -8,7 +8,6 @@ import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
-
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 

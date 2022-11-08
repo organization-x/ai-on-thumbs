@@ -3,15 +3,12 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions, Linking } from 'react-native'
 import LessonButton from '../../components/LessonButton'
-import * as Sentry from 'sentry-expo'
-
 
 const height = Dimensions.get('window').height
 
 export default function Course4Promo ({ navigation }) {
   async function handlePress () {
     Linking.openURL('https://www.ai-camp.org/virtual-summer-camp')
-    await Analytics.logEvent('Webpage Visit').catch(err => { Sentry.Native.captureException(err.response.data) })
   }
 
   return (

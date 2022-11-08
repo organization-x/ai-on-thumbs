@@ -3,8 +3,6 @@ import { StyleSheet, View, Image, Text, TouchableOpacity, Dimensions, TextInput,
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
 
-
-
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 

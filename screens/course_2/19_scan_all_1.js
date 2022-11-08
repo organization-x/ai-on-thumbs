@@ -6,7 +6,6 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 import LessonButton from '../../components/LessonButton'
 
-
 const height = Dimensions.get('window').height
 
 export default function Course2ScanAll1 ({ navigation }) {
