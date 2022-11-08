@@ -6,8 +6,7 @@ import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import HomeButton from '../../../components/HomeButton'
 import SectionButton from '../../../components/SectionButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 8: Section 1 End')
+
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width

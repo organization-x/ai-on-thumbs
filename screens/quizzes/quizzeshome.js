@@ -4,10 +4,9 @@ import QuizCard from '../../components/QuizCard'
 import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
-import * as Analytics from 'expo-firebase-analytics'
+
 
 const height = Dimensions.get('window').height
-Analytics.setCurrentScreen('Quizzes Home Screen')
 
 export default function QuizzesScreen ({ navigation }) {
   return (

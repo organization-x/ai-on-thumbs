@@ -2,10 +2,9 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native'
-import * as Analytics from 'expo-firebase-analytics'
+
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
-Analytics.setCurrentScreen('Course 4 Section 3 Screen 2A: RW Example Incorrect')
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 

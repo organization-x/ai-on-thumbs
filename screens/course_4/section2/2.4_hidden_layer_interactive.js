@@ -3,8 +3,7 @@ import React from 'react'
 import { StyleSheet, View, Text, Image, Dimensions, TouchableOpacity } from 'react-native'
 import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 5 Section 2: NNs Hidden Layers Interactive')
+
 
 const height = Dimensions.get('window').height
 

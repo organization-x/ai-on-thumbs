@@ -12,8 +12,7 @@ import * as FileSystem from 'expo-file-system'
 import { manipulateAsync, SaveFormat } from 'expo-image-manipulator'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 34: Selfie Screen')
+
 
 const height = Dimensions.get('window').height
 

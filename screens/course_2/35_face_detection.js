@@ -7,9 +7,8 @@ import LessonButton from '../../components/LessonButton'
 import * as Sharing from 'expo-sharing'
 import * as FileSystem from 'expo-file-system'
 import colors from '../../config/colors'
-import * as Analytics from 'expo-firebase-analytics'
+
 import * as Sentry from 'sentry-expo'
-Analytics.setCurrentScreen('Course 2 Screen 35: Face Detection Screen')
 
 const windowHeight = Dimensions.get('window').height
 

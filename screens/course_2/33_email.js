@@ -6,8 +6,7 @@ import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 2 Screen 33: Email Prompt Screen')
+
 
 const height = Dimensions.get('window').height
 

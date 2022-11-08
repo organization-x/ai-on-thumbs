@@ -5,8 +5,7 @@ import CourseCard from '../components/CourseCard'
 import CourseAd from '../components/CourseAd'
 import colors from '../config/colors'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Courses Screen')
+
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 export default function CoursesScreen ({ navigation }) {

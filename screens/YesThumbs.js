@@ -5,8 +5,6 @@ import { StyleSheet, View, Text, Image, Dimensions } from 'react-native'
 import LessonButton from '../components/LessonButton'
 import { LinearGradient } from 'expo-linear-gradient'
 
-// //import * as Analytics from 'expo-firebase-// analytics'////Analytics.setCurrentScreen('YesThumbs Screen')
-
 const height = Dimensions.get('window').height
 
 export default function YesThumbs ({ navigation }) {

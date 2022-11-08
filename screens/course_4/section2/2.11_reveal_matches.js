@@ -5,8 +5,7 @@ import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 4 Screen 9 Section 2: Backpropagation Matching Reveal')
+
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height

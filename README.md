@@ -4,7 +4,7 @@ Explore AI concepts using just your thumbs!!
 ### Available in the App Store and Google Play Store
 
 ## **Directory Structure**
-**Assets** - media, images, fonts, etc. organized by which lesson they are used for. 
+**Assets** - media, images, fonts, etc. organized by which lesson they are used for.
 * Stock is for media used across multiple lessons
 
 **Components** - contains all the components that are used for advanced functionality (mutliple choice boxes, email prompt, magnifying glass, etc.)
@@ -26,6 +26,11 @@ Explore AI concepts using just your thumbs!!
 * All code should be reviewed by an EM
 * EVEN IF IT IS A COMMA, MAKE THE PR
 
+## **Installation**
+* Clone the repo
+* Install dependencies with `yarn`
+* Run the app with `yarn start`
+
 ## **Course 1: Facial Recognition Algorithm I**
 Explore the beginning concepts of facial recognition with interactice tutorials and games! See how computers SEE images and recognize patterns.
 
@@ -39,7 +44,7 @@ Explore the beginning concepts of facial recognition with interactice tutorials 
 
 
 ## **Course 2: Facial Recognition Algorithm II**
-Delve deeper into the world of facial recognition and its advanced ideas! 
+Delve deeper into the world of facial recognition and its advanced ideas!
 ### Authors
 * Advay Aravind
 * Alexander Zhou
