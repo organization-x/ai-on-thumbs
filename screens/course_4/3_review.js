@@ -4,8 +4,8 @@ import React from 'react'
 import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
-import * as Analytics from 'expo-firebase-analytics'
-Analytics.setCurrentScreen('Course 3 Screen 29: Algorithm Review 4')
+//import * as Analytics from 'expo-firebase-analytics'
+// Analytics.setCurrentScreen('Course 3 Screen 29: Algorithm Review 4')
 
 const height = Dimensions.get('window').height
 
@@ -38,11 +38,6 @@ export default function Course4Review ({ navigation }) {
         <View style={styles.information2}>
           <Text style={styles.textFont}>It then compares its output to the correct answer and corrects itself by adjusting the values at each node.</Text>
         </View>
-
-        <View style={styles.number}>
-          <Text style={styles.numberFont}>4</Text>
-        </View>
-
       </View>
 
       <View style={styles.footerButtons}>
