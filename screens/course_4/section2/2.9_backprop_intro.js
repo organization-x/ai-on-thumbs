@@ -19,8 +19,10 @@ export default function Course4BPInteractiveIntro ({ navigation }) {
         <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>6/14</Text>
       </View>
-      <View style={styles.rectangle}>
-        <Text style={styles.text}>Now let's learn about backpropagation, a key element in how natural networks learn patterns!</Text>
+      <View style={{flex: 1, justifyContent: 'center'}}>
+        <View style={styles.rectangle}>
+          <Text style={styles.text}>Now let's learn about backpropagation, a key element in how natural networks learn patterns!</Text>
+        </View>
       </View>
       <View style={styles.footerButtons}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
@@ -40,7 +42,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingTop: 150
   },
   interactive: {
     flex: 1,
@@ -66,10 +67,9 @@ const styles = StyleSheet.create({
     height: '45%',
     alignItems: 'center',
     marginBottom: height / 5,
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   text: {
-    flex: 1,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,

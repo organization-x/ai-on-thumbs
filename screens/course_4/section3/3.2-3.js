@@ -15,18 +15,20 @@ export default function Course4RWInteractiveIncorrect ({ navigation }) {
       <View style={styles.top}>
         <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
       </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          Not quite... Amazon’s NN would select the soccer ball based on John’s interests
-        </Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          This is a simple example, but a neural network{' '}
-          <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
-            can do this on a much larger scale
+      <View style={{flex: 1}}>
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>
+            Not quite... Amazon’s NN would select the soccer ball based on John’s interests
           </Text>
-        </Text>
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>
+            This is a simple example, but a neural network{' '}
+            <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
+              can do this on a much larger scale
+            </Text>
+          </Text>
+        </View>
       </View>
       <View style={[styles.footerButtons, { marginTop: 50 }]}>
         <TouchableOpacity
@@ -109,6 +111,5 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingTop: 150
   }
 })

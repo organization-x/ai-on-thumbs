@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     flexGrow: 1,
     justifyContent: 'center',
+    alignItems: 'center',
     // marginLeft: 55,
     width: '100%',
     height: '20%'

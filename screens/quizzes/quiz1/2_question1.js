@@ -92,11 +92,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#202020',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: width/100
   },
   headerText: {
     borderRadius: 15,
-    fontSize: 30,
+    fontSize: height/20,
     color: 'white'
   },
   headerBackground: {
@@ -110,7 +111,7 @@ const styles = StyleSheet.create({
   question: {
     color: 'white',
     fontWeight: '500',
-    fontSize: 30,
+    fontSize: height/30,
     alignItems: 'center',
     textAlign: 'center',
     marginBottom: height / 20
@@ -129,7 +130,7 @@ const styles = StyleSheet.create({
   answerText: {
     fontStyle: 'normal',
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: height/50,
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center'
@@ -151,7 +152,7 @@ const styles = StyleSheet.create({
   submitButtonText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: 25,
+    fontSize: height/30,
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center',

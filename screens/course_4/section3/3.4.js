@@ -17,13 +17,14 @@ export default function Course4Sect3End ({ navigation }) {
         <HomeButton navigation={navigation} style={{marginTop:height/120}}/>
         <Text style={styles.number}>4/4</Text>
       </View>
-
-      <View style={styles.textContainer}>
-        <Text style={[styles.title]}>Congrats!</Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>You've now completed a brief introduction to neural networks</Text>
-        <Text style={styles.text}>Let's review what we learned</Text>
+      <View style={{flex: 1, justifyContent: 'center'}}>
+        <View style={styles.textContainer}>
+          <Text style={[styles.title]}>Congrats!</Text>
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>You've now completed a brief introduction to neural networks</Text>
+          <Text style={styles.text}>Let's review what we learned</Text>
+        </View>
       </View>
       <TouchableOpacity
         onPress={() => {
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   returnButton: {
-    marginTop: 150,
+    marginBottom: height/100,
     backgroundColor: '#0f89ce',
     height: height / 10,
     width: width / 1.5,

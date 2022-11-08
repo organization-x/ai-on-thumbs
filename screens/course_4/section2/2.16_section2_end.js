@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     textAlign: 'right'
   },
   sectionButton: {
-    marginBottom: 160,
+    marginBottom: height/100,
     flexDirection: 'row',
     justifyContent: 'center'
   },
@@ -66,10 +66,9 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 24,
+    fontSize: height/30,
     width: '100%',
     fontWeight: 'bold',
-    lineHeight: 35,
     marginBottom: 25
   },
   textund: {

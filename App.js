@@ -6,7 +6,7 @@ import { useFonts } from 'expo-font'
 import { LinearGradient } from 'expo-linear-gradient'
 import Welcome from './screens/Welcome'
 import Courses from './screens/Courses'
-import CoursesScreen from './screens/NCourses'
+import CoursesScreen from './screens/Courses'
 
 import Thumbs from './screens/Thumbs'
 import NoThumbs from './screens/NoThumbs'

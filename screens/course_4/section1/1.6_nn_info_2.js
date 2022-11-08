@@ -60,8 +60,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   image: {
-    width: 200,
-    height: 200,
+    width: width/2,
+    height: width/2,
     borderRadius: 20
   },
   interactive: {

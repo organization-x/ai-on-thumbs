@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: width-50,
+    resizeMode: 'contain',
     height: height/4
   },
   interactive: {

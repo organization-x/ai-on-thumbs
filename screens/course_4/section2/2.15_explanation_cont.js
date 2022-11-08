@@ -54,27 +54,16 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     marginTop: 50
   },
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 24,
+    fontSize: height/30,
     width: '100%',
     fontWeight: 'bold',
-    lineHeight: 35,
     marginBottom: 25
-  },
-  textund: {
-    textAlign: 'center',
-    color: 'white',
-    fontSize: 24,
-    width: '100%',
-    fontWeight: 'bold',
-    marginTop: 25,
-    lineHeight: 35,
-    textDecorationLine: 'underline'
   },
   top: {
     flexDirection: 'row',

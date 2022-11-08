@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   textContainer: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     width: width * 0.8,
@@ -72,12 +73,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '4%', 
-    marginBottom: '5%'
+    marginTop: '4%',
   },
   footerButtons: {
+    marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center', 
-    marginTop:'100%'
   }
 })

@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
     fontSize: height/30,
     width: '100%',
     fontWeight: 'bold',
-    lineHeight: 35,
     marginBottom: 25
   },
   textund: {

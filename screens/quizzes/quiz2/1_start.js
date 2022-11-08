@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#1FBD67',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: width/100
   },
   titleText: {
     marginBottom: height / 40,
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
   subText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: 25,
+    fontSize: height/25,
     textAlign: 'center',
     color: '#FFF'
   },
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
   startButtonText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: 25,
+    fontSize: height/30,
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center',

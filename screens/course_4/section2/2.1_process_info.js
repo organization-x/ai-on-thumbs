@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   text: {
-    flex: 1,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,

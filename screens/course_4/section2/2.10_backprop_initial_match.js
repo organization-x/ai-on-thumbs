@@ -75,6 +75,7 @@ export default function Course4BPInteractive ({ navigation }) {
             <TextInput
               editable={requireguessDog}
               style={styles.input}
+              placeholderTextColor={'#fff'}
               placeholder={inputdog}
               clearTextOnFocus
               onChangeText={(value) => handleInput(1, value)}
@@ -88,6 +89,7 @@ export default function Course4BPInteractive ({ navigation }) {
             <TextInput
               editable={requireguessBlanket}
               style={styles.input}
+              placeholderTextColor={'#fff'}
               placeholder={inputblanket}
               clearTextOnFocus
               onChangeText={(value) => handleInput(2, value)}
@@ -101,6 +103,7 @@ export default function Course4BPInteractive ({ navigation }) {
             <TextInput
               editable={requireguessGuitar}
               style={styles.input}
+              placeholderTextColor={'#fff'}
               placeholder={inputguitar}
               clearTextOnFocus
               onChangeText={(value) => handleInput(3, value)}
@@ -114,6 +117,7 @@ export default function Course4BPInteractive ({ navigation }) {
             <TextInput
               editable={requireguessFloppyDisc}
               style={styles.input}
+              placeholderTextColor={'#fff'}
               placeholder={inputfloppydisc}
               clearTextOnFocus
               onChangeText={(value) => handleInput(4, value)}

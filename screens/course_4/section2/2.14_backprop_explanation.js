@@ -20,7 +20,6 @@ export default function Course4BPExplanation1 ({ navigation }) {
       <View style={styles.interactive}>
         <Text style={styles.textund}>In short, backpropagation allows NNs to make more accurate predictions. </Text>
         <Text style={styles.text}>This process compares the predictions the NN makes to the expected outputs, and from there adjusts the values of the nodes in the hidden layers to generate more accurate predictions.</Text>
-
       </View>
       <View style={styles.footerButtons}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
@@ -57,7 +56,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     marginTop: 50
   },
   text: {

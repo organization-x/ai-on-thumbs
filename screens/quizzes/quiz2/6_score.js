@@ -59,11 +59,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: width/100
   },
   headerText: {
     borderRadius: 15,
-    fontSize: 30,
+    fontSize: height/20,
     color: 'white'
   },
   headerBackground: {
@@ -92,10 +93,9 @@ const styles = StyleSheet.create({
     color: '#FFF'
   },
   scoreContainer: {
-    flex: 1
+    flex: 1,
   },
   scoreBox: {
-    padding: width / 30,
     width: width / 1.2,
     height: height / 1.75,
     backgroundColor: '#D9D9D9',
@@ -112,20 +112,20 @@ const styles = StyleSheet.create({
   congratsText: {
     fontStyle: 'normal',
     fontWeight: 'bold',
-    fontSize: 40,
+    fontSize: height/30,
     textAlign: 'center'
   },
   scoreText: {
     fontStyle: 'normal',
     fontWeight: '400',
-    fontSize: 60,
+    fontSize: height/10,
     textAlign: 'center',
     color: '#1FBD67'
   },
   resultsText: {
     fontStyle: 'normal',
     fontWeight: '500',
-    fontSize: 20,
+    fontSize: height/30,
     textAlign: 'center'
   }
 })
