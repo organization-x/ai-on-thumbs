@@ -61,13 +61,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    marginTop: 20,
-    marginBottom: 50
+    marginTop: 20
   },
   submitText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 30,
+    fontSize: height/36,
     fontWeight: 'bold'
   },
   textBox: {
