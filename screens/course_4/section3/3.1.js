@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: height/20,
+    fontSize: height / 20,
     textAlign: 'center'
   },
   textContainer: {
@@ -78,9 +78,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center'
   },
   footerButtons: {
-    marginBottom: height/60,
+    marginBottom: height / 60,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   top: {
     flexDirection: 'row',

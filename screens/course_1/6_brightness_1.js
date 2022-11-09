@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontSize: height / 35,
-    fontWeight: '500',
+    fontWeight: '500'
     // marginTop: '5%'
   },
   biggestText: {

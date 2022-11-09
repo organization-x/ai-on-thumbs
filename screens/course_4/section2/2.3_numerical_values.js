@@ -137,11 +137,11 @@ const styles = StyleSheet.create({
   textFont2: {
     color: 'white',
     // paddingBottom: 40,
-    fontSize: height / 40, //changed
+    fontSize: height / 40, // changed
     justifyContent: 'center',
     textAlign: 'center',
-    marginTop: height /40,  // changed
-    marginBottom: height/40 // added
+    marginTop: height / 40, // changed
+    marginBottom: height / 40 // added
 
   },
   interactive: {

@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: height/34,
+    fontSize: height / 34,
     fontWeight: '500',
     opacity: 0.8,
     marginBottom: '5%'
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
   boldText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: height/45,
+    fontSize: height / 45,
     fontWeight: '400',
     marginBottom: '10%'
   },

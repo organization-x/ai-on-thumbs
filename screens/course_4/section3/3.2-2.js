@@ -2,11 +2,9 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Dimensions } from 'react-native'
-
 import colors from '../../../config/colors'
 import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
-import HomeButton from '../../../components/HomeButton'
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
@@ -16,7 +14,7 @@ export default function Course4RWInteractiveCorrect ({ navigation }) {
   const screenName = 'Course4RWInteractiveCorrect'
   return (
     <View style={styles.container}>
-      
+
       <View style={styles.textContainer}>
         <Text style={styles.text}>
           That’s correct! Amazon’s NN would also select the soccer ball based on John’s interests
@@ -51,11 +49,11 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: height/28,
-    textAlign: 'center',
+    fontSize: height / 28,
+    textAlign: 'center'
   },
   textContainer: {
-    flex: 1, 
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     width: width * 0.8,
@@ -71,7 +69,7 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 20,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'center'
     // paddingTop: 300
   }
 })

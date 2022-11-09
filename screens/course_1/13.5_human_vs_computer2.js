@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     fontWeight: '500'
   },
   smallText: {
-    fontSize: height/40,
+    fontSize: height / 40,
     color: 'white',
     textAlign: 'center'
   },

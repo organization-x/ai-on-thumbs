@@ -28,7 +28,7 @@ export default function Course4RWInteractive ({ navigation }) {
       </View>
       <View style={styles.textBox}>
         <View style={[styles.textContainer, { width: width * 0.75 }]}>
-          <Text style={[styles.text, { fontSize: height/30 }]}>
+          <Text style={[styles.text, { fontSize: height / 30 }]}>
             If a user named John loves to play soccer, which product would he be
             the most likely to buy?
           </Text>
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: height/30,
+    fontSize: height / 30,
     textAlign: 'center'
   },
   textContainer: {
@@ -198,12 +198,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     // marginTop: 20,
-    marginBottom: height/60
+    marginBottom: height / 60
   },
   submitText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   top: {

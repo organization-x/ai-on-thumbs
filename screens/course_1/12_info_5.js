@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   altText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: height/35,
+    fontSize: height / 35,
     fontWeight: '500'
   },
   footerButtons: {

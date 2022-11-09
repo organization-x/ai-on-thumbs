@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   submitText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: height/36,
+    fontSize: height / 36,
     fontWeight: 'bold'
   },
   textBox: {

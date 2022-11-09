@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
     color: 'white',
     marginTop: '20%',
     marginBottom: '5%',
-    fontSize: height/42,
+    fontSize: height / 42,
     flex: 1
   },
   bigText: {
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     fontWeight: '500',
     flex: 2,
     marginTop: height / 15

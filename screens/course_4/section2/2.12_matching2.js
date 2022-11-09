@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
   },
   rowContainer: {
     flex: 1.5,
-    marginTop: height/50,
+    marginTop: height / 50,
     flexDirection: 'row',
     alignContent: 'center',
     justifyContent: 'center'
@@ -194,12 +194,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     // marginTop: 20,
-    marginBottom: height/60
+    marginBottom: height / 60
   },
   submitText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: height/25,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   bigText: {
@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
     marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: height/40
+    fontSize: height / 40
   },
   footerButtons: {
     marginTop: 60,

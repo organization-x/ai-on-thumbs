@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingVertical: 15,
     textAlign: 'center',
-    fontSize: height/25,
+    fontSize: height / 25,
     fontWeight: '700',
     lineHeight: 35,
     marginBottom: 10

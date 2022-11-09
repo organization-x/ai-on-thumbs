@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: height/5
+    height: height / 5
   },
   secondText: {
     marginTop: height / 30,

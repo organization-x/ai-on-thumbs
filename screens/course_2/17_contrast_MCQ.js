@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   image: {
     resizeMode: 'contain',
     width: imageSide,
-    height: imageSide/1.3
+    height: imageSide / 1.3
   },
   MCQ: {
     marginTop: height / 40,

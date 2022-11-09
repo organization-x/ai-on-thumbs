@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     fontSize: height / 12,
     textAlign: 'center',
-    color: '#1FBD67', 
+    color: '#1FBD67'
   },
   resultsText: {
     fontStyle: 'normal',

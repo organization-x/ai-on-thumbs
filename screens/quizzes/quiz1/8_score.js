@@ -120,9 +120,9 @@ const styles = StyleSheet.create({
   scoreText: {
     fontStyle: 'normal',
     fontWeight: '400',
-    fontSize: height / 12, //changed
+    fontSize: height / 12, // changed
     textAlign: 'center',
-    color: '#1FBD67', 
+    color: '#1FBD67'
   },
   resultsText: {
     fontStyle: 'normal',
