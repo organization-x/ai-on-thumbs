@@ -19,9 +19,9 @@ export default function Course4RWInteractiveCorrect ({ navigation }) {
         <Text style={styles.text}>
           That’s correct! Amazon’s NN would also select the soccer ball based on John’s interests
         </Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>
+        {/* </View>
+      <View style={styles.textContainer}> */}
+        <Text style={[styles.text, { marginTop: height / 20 }]}>
           This is a simple example, but a neural network{' '}
           <Text style={[styles.text, { textDecorationLine: 'underline' }]}>
             can do this on a much larger scale

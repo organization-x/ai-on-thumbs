@@ -55,8 +55,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    marginTop: 50
+    justifyContent: 'center'
   },
   text: {
     textAlign: 'center',
