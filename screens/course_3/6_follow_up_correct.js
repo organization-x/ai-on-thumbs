@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   mainText: {
-    padding: 15,
     marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
@@ -79,8 +78,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   secondText: {
-    padding: 15,
-    marginVertical: 10,
+    marginVertical: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
@@ -89,7 +87,6 @@ const styles = StyleSheet.create({
     fontSize: height / 18
   },
   thirdText: {
-    padding: 15,
     marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },

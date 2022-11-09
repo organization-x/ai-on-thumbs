@@ -16,9 +16,7 @@ export default function Course4RWInteractiveCorrect ({ navigation }) {
   const screenName = 'Course4RWInteractiveCorrect'
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{ marginTop: height / 120 }} />
-      </View>
+      
       <View style={styles.textContainer}>
         <Text style={styles.text}>
           That’s correct! Amazon’s NN would also select the soccer ball based on John’s interests
@@ -32,7 +30,7 @@ export default function Course4RWInteractiveCorrect ({ navigation }) {
           </Text>
         </Text>
       </View>
-      <View style={[styles.footerButtons, { marginTop: 50 }]}>
+      <View style={styles.footerButtons}>
         <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
       </View>
     </View>
@@ -53,16 +51,16 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 35,
-    textAlign: 'center'
+    fontSize: height/28,
+    textAlign: 'center',
   },
   textContainer: {
-    flex: 1,
+    flex: 1, 
     justifyContent: 'center',
     alignItems: 'center',
     width: width * 0.8,
     alignSelf: 'center',
-    marginTop: height / 30
+    marginTop: height / 20
   },
   top: {
     flexDirection: 'row',
@@ -74,6 +72,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingTop: 300
+    // paddingTop: 300
   }
 })

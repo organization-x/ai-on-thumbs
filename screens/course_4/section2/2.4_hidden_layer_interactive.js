@@ -24,7 +24,7 @@ export default function Course4SelectDNN ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{ marginTop: height / 20 }} />
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>4/14</Text>
       </View>
       <View style={{ flex: 1, marginTop: height / 100 }}>
@@ -105,14 +105,14 @@ const styles = StyleSheet.create({
     marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height/25,
     fontWeight: '800'
   },
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '6%'
+    marginTop: '4%'
   },
   footerButtons: {
     marginBottom: 20,

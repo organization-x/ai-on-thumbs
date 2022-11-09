@@ -68,14 +68,14 @@ const styles = StyleSheet.create({
     fontWeight: '500'
   },
   bigText: {
-    marginTop: height / 8,
+    marginTop: height / 20,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 15,
+    fontSize: height / 16,
     fontWeight: '500'
   },
   smallText: {
-    marginTop: height / 30,
+    // marginTop: height / 30,
     textAlign: 'center',
     color: 'white',
     fontSize: height / 35
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   hand: {
     marginBottom: height / 8,
     alignSelf: 'center',
-    height: (Dimensions.get('window').width / 1.5)
+    height: (Dimensions.get('window').width / 1.75)
   },
   footerButtons: {
     marginBottom: 10,

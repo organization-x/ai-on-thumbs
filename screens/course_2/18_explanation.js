@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     marginBottom: height / 25
   },
   secondText: {
-    marginTop: '5%',
+    marginTop: '2%',
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,

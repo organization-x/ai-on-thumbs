@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
   rowContainer: {
     flex: 1.5,
-    marginTop: 40,
+    marginTop: height/50,
     flexDirection: 'row',
     alignContent: 'center',
     justifyContent: 'center'
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     aspectRatio: 1,
-    margin: 10
+    // margin: 10
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

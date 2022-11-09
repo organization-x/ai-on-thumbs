@@ -106,15 +106,16 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: width / 15,
+    fontSize: height/34,
     fontWeight: '500',
     opacity: 0.8,
-    marginBottom: '10%'
+    marginBottom: '5%'
   },
   cell: {
     width: width * 0.2,
     height: width * 0.2,
     marginRight: 5,
+    // margin: height/50,
     backgroundColor: '#E6E8FB',
     borderRadius: 5
   },
@@ -126,7 +127,7 @@ const styles = StyleSheet.create({
   boldText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 35,
+    fontSize: height/45,
     fontWeight: '400',
     marginBottom: '10%'
   },

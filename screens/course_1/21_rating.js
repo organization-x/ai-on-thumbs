@@ -86,8 +86,8 @@ export default function Course1Rating ({ navigation }) {
 
 const styles = {
   logo: {
-    height: height / 7,
-    marginTop: height / 12
+    height: height / 6.5,
+    marginTop: height / 20
   },
   container: {
     backgroundColor: colors.background,

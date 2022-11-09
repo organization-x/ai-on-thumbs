@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 35,
+    fontSize: height/25,
     textAlign: 'center'
   },
   textContainer: {

@@ -18,7 +18,7 @@ export default function Course4Review ({ navigation }) {
         </View>
 
         <View style={styles.information}>
-          <Text style={styles.textFont}>Neural networks mimic the human and are made up of different layers of nodes.</Text>
+          <Text style={styles.textFont}>Neural networks mimic the human brain and are made up of different layers of nodes.</Text>
         </View>
 
         <View styles={styles.number}>
@@ -26,7 +26,7 @@ export default function Course4Review ({ navigation }) {
         </View>
 
         <View style={styles.information}>
-          <Text style={styles.textFont}>They take in numbers as information and peform calculations at each node.</Text>
+          <Text style={styles.textFont}>They take in information as numbers and peform calculations at each node.</Text>
         </View>
 
         <View style={styles.number}>
@@ -34,7 +34,7 @@ export default function Course4Review ({ navigation }) {
         </View>
 
         <View style={styles.information2}>
-          <Text style={styles.textFont}>It then compares its output to the correct answer and corrects itself by adjusting the values at each node.</Text>
+          <Text style={styles.textFont}>It then compares its output to the correct answer and corrects itself through backpropagation.</Text>
         </View>
       </View>
 

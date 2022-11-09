@@ -1,4 +1,4 @@
-// Members of each group are close to other members of the group.
+4// Members of each group are close to other members of the group.
 
 import React from 'react'
 import { StyleSheet, View, Dimensions, Text } from 'react-native'
@@ -57,14 +57,14 @@ const styles = StyleSheet.create({
     marginTop: '40%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height/20,
     fontWeight: '600'
   },
   bottomText: {
     marginTop: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 35,
+    fontSize: height/25,
     fontWeight: 'bold'
   },
   boldText: {

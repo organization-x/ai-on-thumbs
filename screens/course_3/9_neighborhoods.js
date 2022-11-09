@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 27,
+    fontSize: height/30,
     fontWeight: '500',
     opacity: 0.8,
     marginBottom: '5%'

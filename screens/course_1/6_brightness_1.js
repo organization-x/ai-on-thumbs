@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 35,
     fontWeight: '500',
-    marginTop: '5%'
+    // marginTop: '5%'
   },
   biggestText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

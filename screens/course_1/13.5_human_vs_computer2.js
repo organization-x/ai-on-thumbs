@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   image: {
     alignSelf: 'center',
     marginVertical: '10%',
-    height: (Dimensions.get('window').width / 1.5)
+    height: (Dimensions.get('window').width / 1.75)
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     fontWeight: '500'
   },
   smallText: {
-    fontSize: 20,
+    fontSize: height/40,
     color: 'white',
     textAlign: 'center'
   },

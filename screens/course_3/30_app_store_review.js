@@ -47,10 +47,6 @@ export default function Course3AppStoreReview ({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation} />
-        <Text style={styles.number}>1</Text>
-      </View>
       <View style={styles.centeredContainer}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.mainText}> Did you have fun learning AI with us?</Text>
@@ -93,7 +89,7 @@ export default function Course3AppStoreReview ({ navigation }) {
 
 const styles = {
   logo: {
-    height: height / 6.5,
+    height: height / 7,
     marginTop: height / 20
   },
   container: {

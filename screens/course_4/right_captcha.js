@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     width: '90%',
     textAlign: 'center',
-    lineHeight: height / 30,
-    marginTop: height / 45
+    // lineHeight: height / 30,
+    marginTop: height / 100
 
   },
   img: {
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingVertical: 15,
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: height/25,
     fontWeight: '700',
     lineHeight: 35,
     marginBottom: 10

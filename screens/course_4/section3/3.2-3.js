@@ -81,14 +81,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center'
   },
   number: {
-    fontFamily: 'AppleSDGothicNeo-Light',
     color: 'white',
     fontSize: 35,
     textAlign: 'right',
     paddingVertical: 30
   },
   text: {
-    fontFamily: 'AppleSDGothicNeo-Light',
     color: 'white',
     fontSize: 35,
     textAlign: 'center'

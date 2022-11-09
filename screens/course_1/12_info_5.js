@@ -23,7 +23,6 @@ export default function Course1Info5 ({ navigation }) {
       <View style={styles.interactive}>
         <Text style={styles.text}>We really need to appreciate the computer world.</Text>
       </View>
-
       <View style={styles.bottomText}>
         <Text style={styles.altText}>An ocean of numbers, numbers, and numbers...</Text>
       </View>
@@ -87,7 +86,7 @@ const styles = StyleSheet.create({
   altText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 30,
+    fontSize: height/35,
     fontWeight: '500'
   },
   footerButtons: {
