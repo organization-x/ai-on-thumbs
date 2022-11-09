@@ -6,7 +6,7 @@ import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course3FollowUpIncorrect ({ navigation }) {
   return (
     <View style={styles.container}>
@@ -25,7 +25,7 @@ export default function Course3FollowUpIncorrect ({ navigation }) {
         />
         <LessonButton
           navigation={navigation}
-          nextScreen='Course3DistanceRole'
+          nextScreen='Course3Distance'
           buttonColor={['#32B59D', '#3AC55B']}
           buttonText='You Got Me!'
         />
@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   number: {
     color: 'white',

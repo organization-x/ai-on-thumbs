@@ -24,7 +24,7 @@ async function sendFeedback (rating) {
 }
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course2AppStoreReview ({ navigation }) {
   const [starCount, setStarCount] = useState(0)
   const [modalVisible, setModalVisible] = useState(false)
@@ -95,8 +95,8 @@ const styles = {
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   centeredContainer: {
     flex: 1,

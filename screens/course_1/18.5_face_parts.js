@@ -10,6 +10,7 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
 const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 const imageDimension = height * 0.35
 
 export default function Course1FaceParts2 ({ navigation }) {
@@ -167,8 +168,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   interactive: {
     flex: 1,

@@ -6,7 +6,7 @@ import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course3FollowUpIIA ({ navigation }) {
   return (
     <View style={styles.container}>
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   number: {
     color: 'white',

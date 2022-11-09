@@ -6,7 +6,7 @@ import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4Review ({ navigation }) {
   return (
     <View style={styles.container}>
@@ -51,8 +51,8 @@ export default function Course4Review ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: '#202020'
   },
 

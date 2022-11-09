@@ -5,17 +5,12 @@ import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import LessonHeader from '../../components/LessonHeader'
 import colors from '../../config/colors'
-import HomeButton from '../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course3AlgorithmReview4 ({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation} />
-        <Text style={styles.pageNum} />
-      </View>
       <View style={styles.textSection}>
         <LessonHeader style={styles.header}>Algorithm Review</LessonHeader>
 
@@ -65,8 +60,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   pageNum: {
     color: 'white',

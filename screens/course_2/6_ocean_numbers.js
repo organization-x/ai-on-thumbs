@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
     flex: 1,
     flexDirection: 'column',
-    paddingHorizontal: 10,
-    paddingVertical: 10
+    paddingHorizontal: screenWidth / 20,
+    paddingVertical: height / 40
   },
   pageNumber: {
     color: 'white',

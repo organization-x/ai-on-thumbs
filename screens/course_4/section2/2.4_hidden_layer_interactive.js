@@ -5,7 +5,7 @@ import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4SelectDNN ({ navigation }) {
   const [singleLayerDisabled, setsingleLayerDisabled] = React.useState(false)
   const [dogDisabled, setdogDisabled] = React.useState(false)
@@ -53,8 +53,8 @@ export default function Course4SelectDNN ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: colors.background
   },
   number: {

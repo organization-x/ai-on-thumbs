@@ -14,7 +14,7 @@ import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course2Selfie ({ navigation }) {
   const [hasPermission, setHasPermission] = useState(null)
   const [toast, setToast] = useState({ value: '', type: '' })
@@ -203,8 +203,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 27,
-    paddingVertical: 17
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   footerButtons: {
     marginBottom: 10,

@@ -3,14 +3,11 @@
 import React from 'react'
 import { StyleSheet, View, Dimensions, Text } from 'react-native'
 import colors from '../../config/colors'
-import ScreenList from '../../config/screen_list'
-import ProgressBar from '../../components/ProgressBar'
+import LessonButton from '../../components/LessonButton'
 
 const height = Dimensions.get('window').height
 
 export default function Course3Distance ({ navigation }) {
-  const screenSection = ScreenList.course3
-  const screenName = 'Course3Distance'
   return (
     <View style={styles.container}>
       <View style={styles.interactive}>
@@ -18,7 +15,18 @@ export default function Course3Distance ({ navigation }) {
         <Text style={styles.text}>Let's take another look at the role it plays!</Text>
       </View>
       <View style={styles.footerButtons}>
-        <ProgressBar navigation={navigation} currentScreen={screenName} section={screenSection} />
+        <LessonButton
+          navigation={navigation}
+          nextScreen='Course3FollowUpIncorrect'
+          buttonColor='#8976C2'
+          buttonText='Back'
+        />
+        <LessonButton
+          navigation={navigation}
+          nextScreen='Course3Neighborhoods'
+          buttonColor={['#32B59D', '#3AC55B']}
+          buttonText='Keep going!'
+        />
       </View>
     </View>
   )
@@ -64,6 +72,6 @@ const styles = StyleSheet.create({
   footerButtons: {
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'space-between'
   }
 })

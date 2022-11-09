@@ -6,7 +6,7 @@ import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4End ({ navigation }) {
   const [starCount, setStarCount] = useState(0)
   const [modalVisible, setModalVisible] = useState(false)
@@ -87,8 +87,8 @@ const styles = {
   },
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     alignItems: 'center',
     backgroundColor: '#202020'
   },

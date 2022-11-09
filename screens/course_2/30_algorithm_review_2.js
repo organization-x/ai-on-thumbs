@@ -8,7 +8,7 @@ import ScreenList from '../../config/screen_list'
 import colors from '../../config/colors'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course2AlgorithmReview2 ({ navigation }) {
   const screenSection = ScreenList.course2
   const screenName = 'Course2AlgorithmReview2'
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
 
   pageNum: {

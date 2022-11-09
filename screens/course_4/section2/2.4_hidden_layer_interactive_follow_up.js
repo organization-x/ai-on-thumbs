@@ -5,7 +5,7 @@ import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4SelectDNNCorrect ({ navigation }) {
   const screenSection = ScreenList.section2
   const screenName = 'Course4SelectDNNCorrect'
@@ -26,8 +26,8 @@ export default function Course4SelectDNNCorrect ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: colors.background
   },
   secondText: {
