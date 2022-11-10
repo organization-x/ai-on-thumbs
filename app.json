@@ -38,6 +38,11 @@
     "githubUrl": "https://github.com/organization-x/ai-on-thumbs",
     "plugins": [
       "sentry-expo"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0882194b-939d-4ead-a8fa-35115017c054"
+      }
+    }
   }
 }
