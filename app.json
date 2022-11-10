@@ -37,7 +37,15 @@
     "description": "Learn AI with just your thumbs!",
     "githubUrl": "https://github.com/organization-x/ai-on-thumbs",
     "plugins": [
-      "sentry-expo"
+      "sentry-expo",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
     ],
     "extra": {
       "eas": {
