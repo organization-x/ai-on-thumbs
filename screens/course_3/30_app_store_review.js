@@ -7,7 +7,6 @@ import StarRating from 'react-native-star-rating'
 import LottieView from 'lottie-react-native'
 import * as Sentry from 'sentry-expo'
 import colors from '../../config/colors'
-import HomeButton from '../../components/HomeButton'
 
 async function sendFeedback (rating) {
   const res = await fetch('https://app.ai-camp.org/set-rating', {
@@ -25,7 +24,7 @@ async function sendFeedback (rating) {
 }
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course3AppStoreReview ({ navigation }) {
   const [starCount, setStarCount] = useState(0)
   const [modalVisible, setModalVisible] = useState(false)
@@ -47,10 +46,6 @@ export default function Course3AppStoreReview ({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <HomeButton navigation={navigation} />
-        <Text style={styles.number}>1</Text>
-      </View>
       <View style={styles.centeredContainer}>
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.mainText}> Did you have fun learning AI with us?</Text>
@@ -93,14 +88,14 @@ export default function Course3AppStoreReview ({ navigation }) {
 
 const styles = {
   logo: {
-    height: height / 6.5,
+    height: height / 7,
     marginTop: height / 20
   },
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   centeredContainer: {
     flex: 1,

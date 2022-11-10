@@ -7,7 +7,7 @@ import EmailPrompt from '../../components/EmailPrompt'
 import colors from '../../config/colors'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course1EmailPrompt ({ navigation }) {
   async function handlePress () {
     Linking.openURL('https://ai-camp.org')
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   interactive: {
     flex: 1,

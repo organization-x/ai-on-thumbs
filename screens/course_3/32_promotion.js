@@ -19,9 +19,7 @@ export default function Promotion ({ navigation }) {
         <Image style={styles.logo} resizeMode='contain' source={require('../../assets/stock/ai-on-thumbs-logo.png')} />
         <Text style={styles.text}>If you had fun here, you'll certainly want to check out our after-school and summer programs at AI Camp.</Text>
         <Text style={styles.text}>At AI Camp, you will make lifelong friends and connections and we will teach you how to build amazing AI products!</Text>
-        <View style={styles.rectangle} onPress={handlePress}>
-          <Text style={styles.promoText} onPress={handlePress}>Click here to see what else AI Camp has to offer!</Text>
-        </View>
+        <Text style={styles.promoText} onPress={handlePress}>Click here to see what else AI Camp has to offer!</Text>
       </View>
       <View style={styles.footerButtons}>
         <LessonButton navigation={navigation} nextScreen='Course3Email' buttonColor='#8976C2' buttonText='Back' />
@@ -35,8 +33,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   number: {
     color: 'white',
@@ -48,7 +46,7 @@ const styles = StyleSheet.create({
     marginTop: height / 20,
     borderRadius: 20,
     width: width / 1.5,
-    height: height / 6,
+    height: height / 9,
     alignItems: 'center',
     marginBottom: height / 2,
     justifyContent: 'center'
@@ -73,6 +71,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     marginTop: height / 15,
+    marginBottom: height / 15,
     textAlign: 'center',
     color: 'white',
     fontSize: height / 35,

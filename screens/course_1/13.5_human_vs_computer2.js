@@ -10,7 +10,7 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course1HumanVsComputer2 ({ navigation }) {
   const screenSection = ScreenList.course1
   const screenName = 'Course1HumanVsComputer2'
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   interactive: {
     borderRadius: 7,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   image: {
     alignSelf: 'center',
     marginVertical: '10%',
-    height: (Dimensions.get('window').width / 1.5)
+    height: (Dimensions.get('window').width / 1.75)
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     fontWeight: '500'
   },
   smallText: {
-    fontSize: 20,
+    fontSize: height / 40,
     color: 'white',
     textAlign: 'center'
   },

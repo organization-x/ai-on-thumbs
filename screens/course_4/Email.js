@@ -6,7 +6,7 @@ import LessonButton from '../../components/LessonButton'
 import EmailPrompt from '../../components/EmailPrompt'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4Email ({ navigation }) {
   async function handlePress () {
     Linking.openURL('https://ai-camp.org')
@@ -41,8 +41,8 @@ export default function Course4Email ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: '#202020'
   },
   interactive: {

@@ -49,8 +49,8 @@ export default function Course4RWInteractiveIncorrect ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: colors.background
   },
   submitBox: {
@@ -61,13 +61,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    marginTop: 20,
-    marginBottom: 50
+    marginTop: 20
   },
   submitText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 36,
     fontWeight: 'bold'
   },
   textBox: {
@@ -81,14 +80,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center'
   },
   number: {
-    fontFamily: 'AppleSDGothicNeo-Light',
     color: 'white',
     fontSize: 35,
     textAlign: 'right',
     paddingVertical: 30
   },
   text: {
-    fontFamily: 'AppleSDGothicNeo-Light',
     color: 'white',
     fontSize: 35,
     textAlign: 'center'

@@ -11,7 +11,7 @@ import colors from '../../config/colors'
 import * as Sentry from 'sentry-expo'
 
 const windowHeight = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course2FaceDetection ({ route, navigation }) {
   const { context } = route.params
   const [modalVisible, setModalVisible] = useState(false)
@@ -118,8 +118,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 27,
-    paddingVertical: 17
+    paddingHorizontal: width / 20,
+    paddingVertical: windowHeight / 40
   },
   number: {
     color: colors.background,

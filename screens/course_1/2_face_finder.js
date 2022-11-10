@@ -6,7 +6,7 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course1FaceFinder ({ navigation }) {
   const [numCorrectFaces, setNumCorrectFaces] = React.useState(0)
   const [disableTopLeft, setDisableTopLeft] = React.useState(false)
@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   rowContainer: {
     flex: 1.5,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '2%'
+    marginTop: '4%'
   },
   pageNumber: {
     color: 'white',

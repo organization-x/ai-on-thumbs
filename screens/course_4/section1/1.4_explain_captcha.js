@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 30
+    fontSize: height / 25
   },
   top: {
     flexDirection: 'row',

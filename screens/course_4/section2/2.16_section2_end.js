@@ -6,7 +6,7 @@ import HomeButton from '../../../components/HomeButton'
 import SectionButton from '../../../components/SectionButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4Sect2End ({ navigation }) {
   const nextSection = ScreenList.section3
   return (
@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
-    paddingHorizontal: 20,
-    paddingVertical: 30
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 30
   },
   number: {
     fontSize: height / 25,

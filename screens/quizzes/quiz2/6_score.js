@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   scoreText: {
     fontStyle: 'normal',
     fontWeight: '400',
-    fontSize: height / 10,
+    fontSize: height / 12,
     textAlign: 'center',
     color: '#1FBD67'
   },

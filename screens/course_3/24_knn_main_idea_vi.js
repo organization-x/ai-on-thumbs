@@ -8,7 +8,7 @@ import ProgressBar from '../../components/ProgressBar'
 import HomeButton from '../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course3KNNMainIdeaVI ({ navigation }) {
   const screenSection = ScreenList.course3
   const screenName = 'Course3KNNMainIdeaVI'
@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   pageNumber: {
     color: 'white',
@@ -57,14 +57,14 @@ const styles = StyleSheet.create({
     marginTop: '40%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height / 20,
     fontWeight: '600'
   },
   bottomText: {
     marginTop: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 35,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   boldText: {

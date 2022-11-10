@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 
 const width = Dimensions.get('window').width
+const height = Dimensions.get('window').height
 export default function CourseCardHorizontal ({ navigation, lessonScreen, gradColors, title, desc, ratingandduration, disabled }) {
   return (
     <TouchableOpacity
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
   cardTouchableContainer: {
     borderRadius: 20,
     overflow: 'hidden',
-    height: '95%',
+    height: height / 3.5,
     width: width / 1.2,
     marginRight: 5
   },
@@ -38,21 +39,19 @@ const styles = StyleSheet.create({
     padding: 20
   },
   courseTitle: {
-    fontSize: 30,
+    fontSize: height / 40,
     fontWeight: 'bold',
     color: 'white',
-    marginBottom: 10
+    marginBottom: height / 100
   },
   courseDesc: {
     fontFamily: 'Avenir',
-    fontSize: 20,
-    lineHeight: 30,
+    fontSize: height / 45,
     color: 'white'
   },
   courseRating: {
-    paddingTop: 10,
-    paddingBottom: 50,
-    fontSize: 15,
+    marginBottom: height / 15,
+    fontSize: height / 45,
     fontWeight: 'bold',
     color: 'white'
   }

@@ -60,8 +60,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   top: {
     flexDirection: 'row',
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: height / 30,
     fontWeight: '500',
-    marginTop: '20%'
+    marginTop: '10%'
   },
   smallestText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -96,9 +96,10 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: height / 35,
+    fontSize: height / 40,
     fontWeight: '500',
-    marginTop: '15%'
+    // marginTop: '15%',
+    marginBottom: '15%'
   },
   biggestText: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

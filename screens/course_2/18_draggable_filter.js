@@ -7,7 +7,7 @@ import ParagraphBox from '../../components/ParagraphBox'
 import LessonButton from '../../components/LessonButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course2DraggableFilter ({ navigation }) {
   const [imageXOffset, setImageXOffset] = useState(0)
   const [imageYOffset, setImageYOffset] = useState(0)
@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   pageNumber: {
     color: 'white',

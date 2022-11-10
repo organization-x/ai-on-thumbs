@@ -10,6 +10,7 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
 const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 const imageDimension = height * 0.35
 
 export default function Course1FaceParts2 ({ navigation }) {
@@ -167,8 +168,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   interactive: {
     flex: 1,
@@ -194,7 +195,7 @@ const styles = StyleSheet.create({
     color: 'white',
     marginTop: '20%',
     marginBottom: '5%',
-    fontSize: 18,
+    fontSize: height / 42,
     flex: 1
   },
   bigText: {
@@ -203,7 +204,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textAlign: 'center',
     color: 'white',
-    fontSize: 25,
+    fontSize: height / 25,
     fontWeight: '500',
     flex: 2,
     marginTop: height / 15

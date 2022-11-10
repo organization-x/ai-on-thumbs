@@ -43,8 +43,8 @@ export default function Course4Sect3End ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: colors.background
   },
   number: {
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 35,
+    fontSize: height / 25,
     textAlign: 'center'
   },
   textContainer: {
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 50,
+    fontSize: height / 15,
     fontWeight: 'bold'
   },
   returnButton: {

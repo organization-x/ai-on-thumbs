@@ -7,7 +7,7 @@ import HomeButton from '../../components/HomeButton'
 import LessonButton from '../../components/LessonButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course2ScanAll1 ({ navigation }) {
   return (
     <View style={styles.container}>
@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   footerButtons: {
     marginBottom: 10,

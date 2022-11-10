@@ -6,7 +6,7 @@ import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4BPInteractiveCongrats ({ navigation }) {
   const screenSection = ScreenList.section2
   const screenName = 'Course4BPInteractiveCongrats'
@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   number: {
     fontSize: height / 25,
@@ -55,8 +55,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     overflow: 'hidden',
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    marginTop: 50
+    justifyContent: 'center'
   },
   text: {
     textAlign: 'center',

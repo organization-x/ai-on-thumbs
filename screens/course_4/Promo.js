@@ -5,7 +5,7 @@ import { StyleSheet, View, Text, Image, Dimensions, Linking } from 'react-native
 import LessonButton from '../../components/LessonButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4Promo ({ navigation }) {
   async function handlePress () {
     Linking.openURL('https://www.ai-camp.org/virtual-summer-camp')
@@ -30,8 +30,8 @@ export default function Course4Promo ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: '#202020'
   },
   interactive: {

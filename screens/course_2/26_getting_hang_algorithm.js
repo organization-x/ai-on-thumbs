@@ -8,7 +8,7 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course2GettingHangAlgorithms ({ navigation }) {
   const screenSection = ScreenList.course2
   const screenName = 'Course2GettingHangAlgorithms'
@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   pageNumber: {
     color: 'white',

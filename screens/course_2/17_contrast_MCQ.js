@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   pageNumber: {
     color: 'white',
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   image: {
     resizeMode: 'contain',
     width: imageSide,
-    height: imageSide
+    height: imageSide / 1.3
   },
   MCQ: {
     marginTop: height / 40,

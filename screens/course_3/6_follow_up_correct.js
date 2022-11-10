@@ -7,7 +7,7 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course3FollowUpCorrect ({ navigation }) {
   return (
     <View style={styles.container}>
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   pageNumber: {
     color: 'white',
@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   mainText: {
-    padding: 15,
     marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
@@ -79,8 +78,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   secondText: {
-    padding: 15,
-    marginVertical: 10,
+    marginVertical: 15,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
@@ -89,7 +87,6 @@ const styles = StyleSheet.create({
     fontSize: height / 18
   },
   thirdText: {
-    padding: 15,
     marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },

@@ -8,7 +8,7 @@ import colors from '../../config/colors'
 import HomeButton from '../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course1Info5 ({ navigation }) {
   const screenSection = ScreenList.course1
   const screenName = 'Course1Info5'
@@ -23,7 +23,6 @@ export default function Course1Info5 ({ navigation }) {
       <View style={styles.interactive}>
         <Text style={styles.text}>We really need to appreciate the computer world.</Text>
       </View>
-
       <View style={styles.bottomText}>
         <Text style={styles.altText}>An ocean of numbers, numbers, and numbers...</Text>
       </View>
@@ -41,8 +40,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   top: {
     flexDirection: 'row',
@@ -87,7 +86,7 @@ const styles = StyleSheet.create({
   altText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 35,
     fontWeight: '500'
   },
   footerButtons: {

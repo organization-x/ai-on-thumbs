@@ -8,7 +8,7 @@ import ProgressBar from '../../../components/ProgressBar'
 import HomeButton from '../../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4NNLayers ({ navigation }) {
   const screenSection = ScreenList.section2
   const screenName = 'Course4NNLayers'
@@ -41,8 +41,8 @@ export default function Course4NNLayers ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: colors.background
   },
   number: {
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: '20%'
+    height: height / 5
   },
   secondText: {
     marginTop: height / 30,
@@ -69,7 +69,6 @@ const styles = StyleSheet.create({
     fontSize: height / 24
   },
   thirdText: {
-    padding: 15,
     marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
@@ -105,8 +104,6 @@ const styles = StyleSheet.create({
   },
   underlinedText: {
     textDecorationLine: 'underline',
-    // padding: 15,
-    // marginVertical: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,

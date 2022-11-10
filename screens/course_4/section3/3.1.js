@@ -9,6 +9,7 @@ import ScreenList from '../../../config/screen_list'
 import ProgressBar from '../../../components/ProgressBar'
 
 const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 export default function Course4RealWorldIntro ({ navigation }) {
   const screenSection = ScreenList.section3
   const screenName = 'Course4RealWorldIntro'
@@ -39,8 +40,8 @@ export default function Course4RealWorldIntro ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: colors.background
   },
   number: {
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 35,
+    fontSize: height / 20,
     textAlign: 'center'
   },
   textContainer: {
@@ -78,10 +79,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center'
   },
   footerButtons: {
-    marginBottom: 20,
+    marginBottom: height / 60,
     flexDirection: 'row',
-    justifyContent: 'center',
-    paddingTop: 150
+    justifyContent: 'center'
   },
   top: {
     flexDirection: 'row',

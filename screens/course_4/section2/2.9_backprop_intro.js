@@ -34,8 +34,8 @@ export default function Course4BPInteractiveIntro ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: colors.background
   },
   footerButtons: {

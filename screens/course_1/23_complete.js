@@ -1,9 +1,10 @@
 // You’ve completed your first lesson!
 import React from 'react'
-import { StyleSheet, View, Image, Text } from 'react-native'
+import { StyleSheet, View, Image, Text, Dimensions } from 'react-native'
 import LessonButton from '../../components/LessonButton'
 import colors from '../../config/colors'
-
+const height = Dimensions.get('window').height
+const width = Dimensions.get('window').width
 export default function Course1Complete ({ navigation }) {
   return (
     <View style={styles.container}>
@@ -33,8 +34,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',

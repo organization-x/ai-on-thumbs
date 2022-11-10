@@ -145,12 +145,12 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40
   },
   rowContainer: {
     flex: 1.5,
-    marginTop: 40,
+    marginTop: height / 50,
     flexDirection: 'row',
     alignContent: 'center',
     justifyContent: 'center'
@@ -166,8 +166,8 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    aspectRatio: 1,
-    margin: 10
+    aspectRatio: 1
+    // margin: 10
   },
   text: {
     textShadowColor: 'rgba(0, 0, 0, 0.1)',
@@ -187,14 +187,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    marginTop: 20,
-    marginBottom: 50
+    // marginTop: 20,
+    marginBottom: height / 60
   },
   submitText: {
-    fontFamily: 'AppleSDGothicNeo-Light',
     textAlign: 'center',
     color: 'white',
-    fontSize: 30,
+    fontSize: height / 25,
     fontWeight: 'bold'
   },
   bigText: {

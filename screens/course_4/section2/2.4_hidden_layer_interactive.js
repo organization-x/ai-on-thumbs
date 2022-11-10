@@ -5,7 +5,7 @@ import colors from '../../../config/colors'
 import HomeButton from '../../../components/HomeButton'
 
 const height = Dimensions.get('window').height
-
+const width = Dimensions.get('window').width
 export default function Course4SelectDNN ({ navigation }) {
   const [singleLayerDisabled, setsingleLayerDisabled] = React.useState(false)
   const [dogDisabled, setdogDisabled] = React.useState(false)
@@ -24,7 +24,7 @@ export default function Course4SelectDNN ({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <HomeButton navigation={navigation} style={{ marginTop: height / 20 }} />
+        <HomeButton navigation={navigation} />
         <Text style={styles.number}>4/14</Text>
       </View>
       <View style={{ flex: 1, marginTop: height / 100 }}>
@@ -53,8 +53,8 @@ export default function Course4SelectDNN ({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingHorizontal: width / 20,
+    paddingVertical: height / 40,
     backgroundColor: colors.background
   },
   number: {
@@ -105,14 +105,14 @@ const styles = StyleSheet.create({
     marginBottom: '10%',
     textAlign: 'center',
     color: 'white',
-    fontSize: 40,
+    fontSize: height / 25,
     fontWeight: '800'
   },
   top: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    marginTop: '6%'
+    marginTop: '4%'
   },
   footerButtons: {
     marginBottom: 20,
